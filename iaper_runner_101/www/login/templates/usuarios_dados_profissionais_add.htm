@@ -1,0 +1,805 @@
+<!doctype html><p align=center><font size=+1 color=red>This website was created by evaluation version of PHPRunner Trial.</font></p>
+<p align=center><font size=+1 color=red>This warning message will not appear on website created by a paid-for version of PHPRunner Trial.</font></p>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="add_header" data-itemid="add_header" {$item_add_header} data-pageid="{$pageid}" >{$pagetitlelabel usuarios_dados_profissionais add}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		{BEGIN message_block}
+<div data-itemtype="add_message" data-itemid="add_message" {$item_add_message} data-pageid="{$pageid}" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		
+	<button class="btn btn-sm btn-default" {$backbutton_attrs}>Back to list</button>
+	{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>View</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>Edit</button>
+{END edit_page_button}
+</div>
+</div>
+{END message_block}	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN udp_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_udp_id}  r-vertical-field" 
+	data-fieldname="udp_id" 
+	data-signal-error-for="udp_id{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="udp_id" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_udp_id}">
+		{BEGIN udp_id_label}{$label usuarios_dados_profissionais udp_id }{END udp_id_label}
+	</label>
+	<div class="r-edit-field">
+		{$udp_id_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="udp_id">
+		<div class="text-muted" >
+		{$tooltip usuarios_dados_profissionais udp_id }		</div>
+	</div>
+</div>
+
+
+{END udp_id_fieldblock}
+											
+{BEGIN udp_usu_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_udp_usu_id}  r-vertical-field" 
+	data-fieldname="udp_usu_id" 
+	data-signal-error-for="udp_usu_id{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="udp_usu_id" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_udp_usu_id}">
+		{BEGIN udp_usu_id_label}{$label usuarios_dados_profissionais udp_usu_id }{END udp_usu_id_label}
+	</label>
+	<div class="r-edit-field">
+		{$udp_usu_id_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="udp_usu_id">
+		<div class="text-muted" >
+		{$tooltip usuarios_dados_profissionais udp_usu_id }		</div>
+	</div>
+</div>
+
+
+{END udp_usu_id_fieldblock}
+											
+{BEGIN email_profissional_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_email_profissional}  r-vertical-field" 
+	data-fieldname="email_profissional" 
+	data-signal-error-for="email_profissional{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="email_profissional" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_email_profissional}">
+		{BEGIN email_profissional_label}{$label usuarios_dados_profissionais email_profissional }{END email_profissional_label}
+	</label>
+	<div class="r-edit-field">
+		{$email_profissional_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="email_profissional">
+		<div class="text-muted" >
+		{$tooltip usuarios_dados_profissionais email_profissional }		</div>
+	</div>
+</div>
+
+
+{END email_profissional_fieldblock}
+											
+{BEGIN avaliacao_usuarios_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_avaliacao_usuarios}  r-vertical-field" 
+	data-fieldname="avaliacao_usuarios" 
+	data-signal-error-for="avaliacao_usuarios{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="avaliacao_usuarios" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_avaliacao_usuarios}">
+		{BEGIN avaliacao_usuarios_label}{$label usuarios_dados_profissionais avaliacao_usuarios }{END avaliacao_usuarios_label}
+	</label>
+	<div class="r-edit-field">
+		{$avaliacao_usuarios_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="avaliacao_usuarios">
+		<div class="text-muted" >
+		{$tooltip usuarios_dados_profissionais avaliacao_usuarios }		</div>
+	</div>
+</div>
+
+
+{END avaliacao_usuarios_fieldblock}
+											
+{BEGIN sobre_profissional_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_sobre_profissional}  r-vertical-field" 
+	data-fieldname="sobre_profissional" 
+	data-signal-error-for="sobre_profissional{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="sobre_profissional" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_sobre_profissional}">
+		{BEGIN sobre_profissional_label}{$label usuarios_dados_profissionais sobre_profissional }{END sobre_profissional_label}
+	</label>
+	<div class="r-edit-field">
+		{$sobre_profissional_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="sobre_profissional">
+		<div class="text-muted" >
+		{$tooltip usuarios_dados_profissionais sobre_profissional }		</div>
+	</div>
+</div>
+
+
+{END sobre_profissional_fieldblock}
+											
+{BEGIN resumo_formacao_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_resumo_formacao}  r-vertical-field" 
+	data-fieldname="resumo_formacao" 
+	data-signal-error-for="resumo_formacao{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="resumo_formacao" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_resumo_formacao}">
+		{BEGIN resumo_formacao_label}{$label usuarios_dados_profissionais resumo_formacao }{END resumo_formacao_label}
+	</label>
+	<div class="r-edit-field">
+		{$resumo_formacao_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="resumo_formacao">
+		<div class="text-muted" >
+		{$tooltip usuarios_dados_profissionais resumo_formacao }		</div>
+	</div>
+</div>
+
+
+{END resumo_formacao_fieldblock}
+											
+{BEGIN yt_code_apresentacao_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_yt_code_apresentacao}  r-vertical-field" 
+	data-fieldname="yt_code_apresentacao" 
+	data-signal-error-for="yt_code_apresentacao{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="yt_code_apresentacao" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_yt_code_apresentacao}">
+		{BEGIN yt_code_apresentacao_label}{$label usuarios_dados_profissionais yt_code_apresentacao }{END yt_code_apresentacao_label}
+	</label>
+	<div class="r-edit-field">
+		{$yt_code_apresentacao_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="yt_code_apresentacao">
+		<div class="text-muted" >
+		{$tooltip usuarios_dados_profissionais yt_code_apresentacao }		</div>
+	</div>
+</div>
+
+
+{END yt_code_apresentacao_fieldblock}
+											
+{BEGIN diferencial_profissional_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_diferencial_profissional}  r-vertical-field" 
+	data-fieldname="diferencial_profissional" 
+	data-signal-error-for="diferencial_profissional{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="diferencial_profissional" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_diferencial_profissional}">
+		{BEGIN diferencial_profissional_label}{$label usuarios_dados_profissionais diferencial_profissional }{END diferencial_profissional_label}
+	</label>
+	<div class="r-edit-field">
+		{$diferencial_profissional_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="diferencial_profissional">
+		<div class="text-muted" >
+		{$tooltip usuarios_dados_profissionais diferencial_profissional }		</div>
+	</div>
+</div>
+
+
+{END diferencial_profissional_fieldblock}
+											
+{BEGIN atendimento_presencial_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_atendimento_presencial}  r-vertical-field" 
+	data-fieldname="atendimento_presencial" 
+	data-signal-error-for="atendimento_presencial{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="atendimento_presencial" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_atendimento_presencial}">
+		{BEGIN atendimento_presencial_label}{$label usuarios_dados_profissionais atendimento_presencial }{END atendimento_presencial_label}
+	</label>
+	<div class="r-edit-field">
+		{$atendimento_presencial_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="atendimento_presencial">
+		<div class="text-muted" >
+		{$tooltip usuarios_dados_profissionais atendimento_presencial }		</div>
+	</div>
+</div>
+
+
+{END atendimento_presencial_fieldblock}
+											
+{BEGIN atendimento_online_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_atendimento_online}  r-vertical-field" 
+	data-fieldname="atendimento_online" 
+	data-signal-error-for="atendimento_online{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="atendimento_online" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_atendimento_online}">
+		{BEGIN atendimento_online_label}{$label usuarios_dados_profissionais atendimento_online }{END atendimento_online_label}
+	</label>
+	<div class="r-edit-field">
+		{$atendimento_online_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="atendimento_online">
+		<div class="text-muted" >
+		{$tooltip usuarios_dados_profissionais atendimento_online }		</div>
+	</div>
+</div>
+
+
+{END atendimento_online_fieldblock}
+											
+{BEGIN mini_curriculo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_mini_curriculo}  r-vertical-field" 
+	data-fieldname="mini_curriculo" 
+	data-signal-error-for="mini_curriculo{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="mini_curriculo" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_mini_curriculo}">
+		{BEGIN mini_curriculo_label}{$label usuarios_dados_profissionais mini_curriculo }{END mini_curriculo_label}
+	</label>
+	<div class="r-edit-field">
+		{$mini_curriculo_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="mini_curriculo">
+		<div class="text-muted" >
+		{$tooltip usuarios_dados_profissionais mini_curriculo }		</div>
+	</div>
+</div>
+
+
+{END mini_curriculo_fieldblock}
+											
+{BEGIN resumo_formacao_academica_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_resumo_formacao_academica}  r-vertical-field" 
+	data-fieldname="resumo_formacao_academica" 
+	data-signal-error-for="resumo_formacao_academica{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field11" {$item_integrated_edit_field11} data-pageid="{$pageid}" data-field="resumo_formacao_academica" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_resumo_formacao_academica}">
+		{BEGIN resumo_formacao_academica_label}{$label usuarios_dados_profissionais resumo_formacao_academica }{END resumo_formacao_academica_label}
+	</label>
+	<div class="r-edit-field">
+		{$resumo_formacao_academica_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="resumo_formacao_academica">
+		<div class="text-muted" >
+		{$tooltip usuarios_dados_profissionais resumo_formacao_academica }		</div>
+	</div>
+</div>
+
+
+{END resumo_formacao_academica_fieldblock}
+											
+{BEGIN resumo_formacao_cursos_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_resumo_formacao_cursos}  r-vertical-field" 
+	data-fieldname="resumo_formacao_cursos" 
+	data-signal-error-for="resumo_formacao_cursos{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field12" {$item_integrated_edit_field12} data-pageid="{$pageid}" data-field="resumo_formacao_cursos" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_resumo_formacao_cursos}">
+		{BEGIN resumo_formacao_cursos_label}{$label usuarios_dados_profissionais resumo_formacao_cursos }{END resumo_formacao_cursos_label}
+	</label>
+	<div class="r-edit-field">
+		{$resumo_formacao_cursos_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="resumo_formacao_cursos">
+		<div class="text-muted" >
+		{$tooltip usuarios_dados_profissionais resumo_formacao_cursos }		</div>
+	</div>
+</div>
+
+
+{END resumo_formacao_cursos_fieldblock}
+											
+{BEGIN curriculo_lattes_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_curriculo_lattes}  r-vertical-field" 
+	data-fieldname="curriculo_lattes" 
+	data-signal-error-for="curriculo_lattes{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field13" {$item_integrated_edit_field13} data-pageid="{$pageid}" data-field="curriculo_lattes" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_curriculo_lattes}">
+		{BEGIN curriculo_lattes_label}{$label usuarios_dados_profissionais curriculo_lattes }{END curriculo_lattes_label}
+	</label>
+	<div class="r-edit-field">
+		{$curriculo_lattes_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="curriculo_lattes">
+		<div class="text-muted" >
+		{$tooltip usuarios_dados_profissionais curriculo_lattes }		</div>
+	</div>
+</div>
+
+
+{END curriculo_lattes_fieldblock}
+											
+{BEGIN nome_empresa_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_nome_empresa}  r-vertical-field" 
+	data-fieldname="nome_empresa" 
+	data-signal-error-for="nome_empresa{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field14" {$item_integrated_edit_field14} data-pageid="{$pageid}" data-field="nome_empresa" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_nome_empresa}">
+		{BEGIN nome_empresa_label}{$label usuarios_dados_profissionais nome_empresa }{END nome_empresa_label}
+	</label>
+	<div class="r-edit-field">
+		{$nome_empresa_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="nome_empresa">
+		<div class="text-muted" >
+		{$tooltip usuarios_dados_profissionais nome_empresa }		</div>
+	</div>
+</div>
+
+
+{END nome_empresa_fieldblock}
+											
+{BEGIN cnpj_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_cnpj}  r-vertical-field" 
+	data-fieldname="cnpj" 
+	data-signal-error-for="cnpj{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field15" {$item_integrated_edit_field15} data-pageid="{$pageid}" data-field="cnpj" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_cnpj}">
+		{BEGIN cnpj_label}{$label usuarios_dados_profissionais cnpj }{END cnpj_label}
+	</label>
+	<div class="r-edit-field">
+		{$cnpj_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="cnpj">
+		<div class="text-muted" >
+		{$tooltip usuarios_dados_profissionais cnpj }		</div>
+	</div>
+</div>
+
+
+{END cnpj_fieldblock}
+											
+{BEGIN ramo_empresa_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ramo_empresa}  r-vertical-field" 
+	data-fieldname="ramo_empresa" 
+	data-signal-error-for="ramo_empresa{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field16" {$item_integrated_edit_field16} data-pageid="{$pageid}" data-field="ramo_empresa" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_ramo_empresa}">
+		{BEGIN ramo_empresa_label}{$label usuarios_dados_profissionais ramo_empresa }{END ramo_empresa_label}
+	</label>
+	<div class="r-edit-field">
+		{$ramo_empresa_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="ramo_empresa">
+		<div class="text-muted" >
+		{$tooltip usuarios_dados_profissionais ramo_empresa }		</div>
+	</div>
+</div>
+
+
+{END ramo_empresa_fieldblock}
+											
+{BEGIN tipo_empresa_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_tipo_empresa}  r-vertical-field" 
+	data-fieldname="tipo_empresa" 
+	data-signal-error-for="tipo_empresa{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field17" {$item_integrated_edit_field17} data-pageid="{$pageid}" data-field="tipo_empresa" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_tipo_empresa}">
+		{BEGIN tipo_empresa_label}{$label usuarios_dados_profissionais tipo_empresa }{END tipo_empresa_label}
+	</label>
+	<div class="r-edit-field">
+		{$tipo_empresa_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="tipo_empresa">
+		<div class="text-muted" >
+		{$tooltip usuarios_dados_profissionais tipo_empresa }		</div>
+	</div>
+</div>
+
+
+{END tipo_empresa_fieldblock}
+											
+{BEGIN cep_profissional_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_cep_profissional}  r-vertical-field" 
+	data-fieldname="cep_profissional" 
+	data-signal-error-for="cep_profissional{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field18" {$item_integrated_edit_field18} data-pageid="{$pageid}" data-field="cep_profissional" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_cep_profissional}">
+		{BEGIN cep_profissional_label}{$label usuarios_dados_profissionais cep_profissional }{END cep_profissional_label}
+	</label>
+	<div class="r-edit-field">
+		{$cep_profissional_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="cep_profissional">
+		<div class="text-muted" >
+		{$tooltip usuarios_dados_profissionais cep_profissional }		</div>
+	</div>
+</div>
+
+
+{END cep_profissional_fieldblock}
+											
+{BEGIN endereco_profissional_rua_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_endereco_profissional_rua}  r-vertical-field" 
+	data-fieldname="endereco_profissional_rua" 
+	data-signal-error-for="endereco_profissional_rua{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field19" {$item_integrated_edit_field19} data-pageid="{$pageid}" data-field="endereco_profissional_rua" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_endereco_profissional_rua}">
+		{BEGIN endereco_profissional_rua_label}{$label usuarios_dados_profissionais endereco_profissional_rua }{END endereco_profissional_rua_label}
+	</label>
+	<div class="r-edit-field">
+		{$endereco_profissional_rua_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="endereco_profissional_rua">
+		<div class="text-muted" >
+		{$tooltip usuarios_dados_profissionais endereco_profissional_rua }		</div>
+	</div>
+</div>
+
+
+{END endereco_profissional_rua_fieldblock}
+											
+{BEGIN endereco_profissional_numero_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_endereco_profissional_numero}  r-vertical-field" 
+	data-fieldname="endereco_profissional_numero" 
+	data-signal-error-for="endereco_profissional_numero{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field20" {$item_integrated_edit_field20} data-pageid="{$pageid}" data-field="endereco_profissional_numero" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_endereco_profissional_numero}">
+		{BEGIN endereco_profissional_numero_label}{$label usuarios_dados_profissionais endereco_profissional_numero }{END endereco_profissional_numero_label}
+	</label>
+	<div class="r-edit-field">
+		{$endereco_profissional_numero_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="endereco_profissional_numero">
+		<div class="text-muted" >
+		{$tooltip usuarios_dados_profissionais endereco_profissional_numero }		</div>
+	</div>
+</div>
+
+
+{END endereco_profissional_numero_fieldblock}
+											
+{BEGIN endereco_profissional_complemento_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_endereco_profissional_complemento}  r-vertical-field" 
+	data-fieldname="endereco_profissional_complemento" 
+	data-signal-error-for="endereco_profissional_complemento{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field21" {$item_integrated_edit_field21} data-pageid="{$pageid}" data-field="endereco_profissional_complemento" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_endereco_profissional_complemento}">
+		{BEGIN endereco_profissional_complemento_label}{$label usuarios_dados_profissionais endereco_profissional_complemento }{END endereco_profissional_complemento_label}
+	</label>
+	<div class="r-edit-field">
+		{$endereco_profissional_complemento_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="endereco_profissional_complemento">
+		<div class="text-muted" >
+		{$tooltip usuarios_dados_profissionais endereco_profissional_complemento }		</div>
+	</div>
+</div>
+
+
+{END endereco_profissional_complemento_fieldblock}
+											
+{BEGIN endereco_profissional_latitude_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_endereco_profissional_latitude}  r-vertical-field" 
+	data-fieldname="endereco_profissional_latitude" 
+	data-signal-error-for="endereco_profissional_latitude{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field22" {$item_integrated_edit_field22} data-pageid="{$pageid}" data-field="endereco_profissional_latitude" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_endereco_profissional_latitude}">
+		{BEGIN endereco_profissional_latitude_label}{$label usuarios_dados_profissionais endereco_profissional_latitude }{END endereco_profissional_latitude_label}
+	</label>
+	<div class="r-edit-field">
+		{$endereco_profissional_latitude_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="endereco_profissional_latitude">
+		<div class="text-muted" >
+		{$tooltip usuarios_dados_profissionais endereco_profissional_latitude }		</div>
+	</div>
+</div>
+
+
+{END endereco_profissional_latitude_fieldblock}
+											
+{BEGIN endereco_profissional_longitude_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_endereco_profissional_longitude}  r-vertical-field" 
+	data-fieldname="endereco_profissional_longitude" 
+	data-signal-error-for="endereco_profissional_longitude{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field23" {$item_integrated_edit_field23} data-pageid="{$pageid}" data-field="endereco_profissional_longitude" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_endereco_profissional_longitude}">
+		{BEGIN endereco_profissional_longitude_label}{$label usuarios_dados_profissionais endereco_profissional_longitude }{END endereco_profissional_longitude_label}
+	</label>
+	<div class="r-edit-field">
+		{$endereco_profissional_longitude_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="endereco_profissional_longitude">
+		<div class="text-muted" >
+		{$tooltip usuarios_dados_profissionais endereco_profissional_longitude }		</div>
+	</div>
+</div>
+
+
+{END endereco_profissional_longitude_fieldblock}
+											
+{BEGIN pais_empresa_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_pais_empresa}  r-vertical-field" 
+	data-fieldname="pais_empresa" 
+	data-signal-error-for="pais_empresa{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field24" {$item_integrated_edit_field24} data-pageid="{$pageid}" data-field="pais_empresa" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_pais_empresa}">
+		{BEGIN pais_empresa_label}{$label usuarios_dados_profissionais pais_empresa }{END pais_empresa_label}
+	</label>
+	<div class="r-edit-field">
+		{$pais_empresa_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="pais_empresa">
+		<div class="text-muted" >
+		{$tooltip usuarios_dados_profissionais pais_empresa }		</div>
+	</div>
+</div>
+
+
+{END pais_empresa_fieldblock}
+											
+{BEGIN estado_empresa_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_estado_empresa}  r-vertical-field" 
+	data-fieldname="estado_empresa" 
+	data-signal-error-for="estado_empresa{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field25" {$item_integrated_edit_field25} data-pageid="{$pageid}" data-field="estado_empresa" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_estado_empresa}">
+		{BEGIN estado_empresa_label}{$label usuarios_dados_profissionais estado_empresa }{END estado_empresa_label}
+	</label>
+	<div class="r-edit-field">
+		{$estado_empresa_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="estado_empresa">
+		<div class="text-muted" >
+		{$tooltip usuarios_dados_profissionais estado_empresa }		</div>
+	</div>
+</div>
+
+
+{END estado_empresa_fieldblock}
+											
+{BEGIN municipio_empresa_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_municipio_empresa}  r-vertical-field" 
+	data-fieldname="municipio_empresa" 
+	data-signal-error-for="municipio_empresa{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field26" {$item_integrated_edit_field26} data-pageid="{$pageid}" data-field="municipio_empresa" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_municipio_empresa}">
+		{BEGIN municipio_empresa_label}{$label usuarios_dados_profissionais municipio_empresa }{END municipio_empresa_label}
+	</label>
+	<div class="r-edit-field">
+		{$municipio_empresa_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="municipio_empresa">
+		<div class="text-muted" >
+		{$tooltip usuarios_dados_profissionais municipio_empresa }		</div>
+	</div>
+</div>
+
+
+{END municipio_empresa_fieldblock}
+											
+{BEGIN udp_deletado_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_udp_deletado}  r-vertical-field" 
+	data-fieldname="udp_deletado" 
+	data-signal-error-for="udp_deletado{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field27" {$item_integrated_edit_field27} data-pageid="{$pageid}" data-field="udp_deletado" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_udp_deletado}">
+		{BEGIN udp_deletado_label}{$label usuarios_dados_profissionais udp_deletado }{END udp_deletado_label}
+	</label>
+	<div class="r-edit-field">
+		{$udp_deletado_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="udp_deletado">
+		<div class="text-muted" >
+		{$tooltip usuarios_dados_profissionais udp_deletado }		</div>
+	</div>
+</div>
+
+
+{END udp_deletado_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="add_save" data-itemid="add_save" {$item_add_save} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$savebutton_attrs} >
+							Save			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="add_back_list" data-itemid="add_back_list" {$item_add_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="backButton{$id}" >
+							Back to list			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="add_cancel" data-itemid="add_cancel" {$item_add_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancel			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>
