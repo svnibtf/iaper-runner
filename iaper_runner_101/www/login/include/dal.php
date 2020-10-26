@@ -56,8 +56,8 @@ class tDAL
 	{
 		if($this->lstTables)
 			return;
-		$this->lstTables[] = array("name" => "usuarios", "varname" => "iaper_runner_db_at_localhost__usuarios", "altvarname" => "usuarios", "connId" => "iaper_runner_db_at_localhost", "schema" => "", "connName" => "iaper_runner_db at localhost");
-		$this->lstTables[] = array("name" => "usuarios_dados_profissionais", "varname" => "iaper_runner_db_at_localhost__usuarios_dados_profissionais", "altvarname" => "usuarios_dados_profissionais", "connId" => "iaper_runner_db_at_localhost", "schema" => "", "connName" => "iaper_runner_db at localhost");
+		$this->lstTables[] = array("name" => "usuarios", "varname" => "iaper_runner_db_at_localhost__usuarios", "altvarname" => "usuarios", "connId" => "iaper_runner_db_at_localhost", "schema" => "", "connName" => "iaper_sistemas at localhost");
+		$this->lstTables[] = array("name" => "usuarios_dados_profissionais", "varname" => "iaper_runner_db_at_localhost__usuarios_dados_profissionais", "altvarname" => "usuarios_dados_profissionais", "connId" => "iaper_runner_db_at_localhost", "schema" => "", "connName" => "iaper_sistemas at localhost");
 	}
 
 	/**

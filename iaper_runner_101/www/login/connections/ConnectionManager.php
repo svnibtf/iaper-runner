@@ -121,11 +121,11 @@ class ConnectionManager extends ConnectionManager_Base
 		$data = array();
 		$data["dbType"] = 0;
 		$data["connId"] = "iaper_runner_db_at_localhost";
-		$data["connName"] = "iaper_runner_db at localhost";
+		$data["connName"] = "iaper_sistemas at localhost";
 		$data["connStringType"] = "mysql";
-		$data["connectionString"] = "mysql;localhost;root;Aq1Sw2De3;;iaper_runner_db;;1"; //currently unused
+		$data["connectionString"] = "mysql;localhost;root;Aq1Sw2De3;;iaper_sistemas;;1"; //currently unused
 
-		$this->_connectionsIdByName["iaper_runner_db at localhost"] = "iaper_runner_db_at_localhost";
+		$this->_connectionsIdByName["iaper_sistemas at localhost"] = "iaper_runner_db_at_localhost";
 
 		$data["connInfo"] = array();
 		$data["ODBCUID"] = "root";
@@ -140,10 +140,10 @@ class ConnectionManager extends ConnectionManager_Base
 		$data["connInfo"][1] = "root";
 		$data["connInfo"][2] = "Aq1Sw2De3";
 		$data["connInfo"][3] = "";
-		$data["connInfo"][4] = "iaper_runner_db";
+		$data["connInfo"][4] = "iaper_sistemas";
 		$data["connInfo"][5] = ""; //currently unused
 		$data["connInfo"][6] = "1"; //currently unused
-		$data["ODBCString"] = "DRIVER={MySQL ODBC 3.51 Driver};Server=localhost;Uid=root;Pwd=Aq1Sw2De3;Database=iaper_runner_db;OPTION=3";
+		$data["ODBCString"] = "DRIVER={MySQL ODBC 3.51 Driver};Server=localhost;Uid=root;Pwd=Aq1Sw2De3;Database=iaper_sistemas;OPTION=3";
 		// encription set
 		$data["EncryptInfo"] = array();
 		$data["EncryptInfo"]["mode"] = 0;
