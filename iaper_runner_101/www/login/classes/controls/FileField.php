@@ -128,9 +128,9 @@ class FileField extends EditControl
  				<SPAN class="btn btn-primary btn-sm fileinput-button filesUpload">
 					<!--<A class="rnr-button filesUpload button" href="#" >-->
 					<input class="fileinput-button-input" type="file" accept="'.$this->pageObject->pSetEdit->getAcceptFileTypesHtml($this->field).'" name="files[]" value="'
-				."Add files"
+				."Adicionar arquivos"
 				.'" '. $multiple .' />'
-				."Add files"
+				."Adicionar arquivos"
 				.'<!--</A>-->
 				</SPAN>'
 		.'
@@ -182,7 +182,7 @@ class FileField extends EditControl
 				{% if (!file.error) { %}
 				<SPAN class="btn btn-xs btn-default delete" data-type="{%=file.delete_type%}" data-url="{%=file.delete_url%}" data-name="{%=file.name%}">
 				<!--<A href="#" >-->'
-				."Delete"
+				."Elimina Selecionados"
 				.'<!--</A>-->
 					</SPAN>
 				{% } %}
@@ -214,7 +214,7 @@ class FileField extends EditControl
         	{% if (!file.error) { %}
         	<SPAN class="btn btn-default btn-xs">
 			<!--<A href="#" >-->'
-			."Cancel"
+			."Cancela"
 			.'<!--</A>-->
 				</SPAN>
 			{% } %}

@@ -126,7 +126,7 @@ function getFilenameFromURI( $uri )
 function getLangFileName($langName)
 {
 	$langArr = array();
-	$langArr["English"] = "English";
+	$langArr["Portuguese(Brazil)"] = "Portuguese";
 	return $langArr[$langName];
 }
 
@@ -188,6 +188,14 @@ function checkTableName($shortTName )
 	if ("usuarios" == $shortTName )
 		return true;
 	if ("usuarios_dados_profissionais" == $shortTName )
+		return true;
+	if ("ibge_municipios" == $shortTName )
+		return true;
+	if ("ibge_pais" == $shortTName )
+		return true;
+	if ("adm_ramos" == $shortTName )
+		return true;
+	if ("adm_tipousuario" == $shortTName )
 		return true;
 	return false;
 }
@@ -257,6 +265,42 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="usuarios_dados_profissionais";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("ibge_municipios");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="ibge_municipios";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("ibge_pais");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="ibge_pais";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("adm_ramos");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="adm_ramos";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("adm_tipousuario");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="adm_tipousuario";
+	}
 	return $arr;
 }
 
@@ -268,6 +312,10 @@ function GetTablesListWithoutSecurity()
 	$arr = array();
 	$arr[]="usuarios";
 	$arr[]="usuarios_dados_profissionais";
+	$arr[]="ibge_municipios";
+	$arr[]="ibge_pais";
+	$arr[]="adm_ramos";
+	$arr[]="adm_tipousuario";
 	return $arr;
 }
 
@@ -983,13 +1031,31 @@ function GetUserPermissionsStatic( $table )
 	if( $table=="usuarios" )
 	{
 //	default permissions
-		// grant all by default
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="usuarios_dados_profissionais" )
 	{
 //	default permissions
-		// grant all by default
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="ibge_municipios" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="ibge_pais" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="adm_ramos" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="adm_tipousuario" )
+	{
+//	default permissions
 		return "ADESPI".$extraPerm;
 	}
 	// grant nothing by default
@@ -1126,6 +1192,9 @@ function SetAuthSessionData($pUsername, &$data, $password, &$pageObject = null, 
 	}
 
 
+		$_SESSION["OwnerID"] = $data["idEmpresa"];
+	$_SESSION["_usuarios_OwnerID"] = $data["idEmpresa"];
+		$_SESSION["_usuarios_dados_profissionais_OwnerID"] = $data["usu_id"];
 
 	$_SESSION["UserData"] = $data;
 
@@ -1143,7 +1212,7 @@ function DoLogin($callAfterLoginEvent = false, $userID = "Guest", $userName = ""
 	global $globalEvents;
 
 	if($userID == "Guest" && $userName == "")
-		$userName = "Guest";
+		$userName = "Visitante";
 
 	if( !GetGlobalData("bTwoFactorAuth", false) || inRestApi() || $userID == "Guest" )
 	{
@@ -1190,6 +1259,12 @@ function CheckSecurity($strValue, $strAction, $table = "")
 	$strPerm = GetUserPermissions();
 	if( strpos($strPerm, "M") === false )
 	{
+		if($table=="usuarios_dados_profissionais")
+		{
+
+				if(!($pSet->getCaseSensitiveUsername((string)$_SESSION["_".$table."_OwnerID"])===$pSet->getCaseSensitiveUsername((string)$strValue)))
+				return false;
+		}
 	}
 	if( Security::permissionsAvailable() )
 	{
@@ -1249,6 +1324,30 @@ function SecuritySQL($strAction, $table, $strPerm="")
 
 	$pSet = new ProjectSettings($table);
 
+   	$ownerid = @$_SESSION["_".$table."_OwnerID"];
+	$ret="";
+	if(@$_SESSION["AccessLevel"]==ACCESS_LEVEL_ADMIN)
+		return "";
+
+	$ret="";
+	if(!strlen($strPerm))
+		$strPerm = GetUserPermissions($table);
+
+	if( strpos($strPerm, "M") === false )
+	{
+		if($table=="usuarios_dados_profissionais")
+		{
+				$ret = GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);
+		}
+	}
+
+	if($strAction=="Edit" && !(strpos($strPerm, "E")===false) ||
+	   $strAction=="Delete" && !(strpos($strPerm, "D")===false) ||
+	   $strAction=="Search" && !(strpos($strPerm, "S")===false) ||
+	   $strAction=="Export" && !(strpos($strPerm, "P")===false) )
+		return $ret;
+	else
+		return "1=0";
 	return "";
 }
 
@@ -1956,7 +2055,7 @@ function SetLangVars($xt, $prefix, $pageName = "", $extraparams = "")
 
 	$xt->assign($currentLang . "LANGLINK_ACTIVE", true);
 
-	$xt->assign("EnglishLANGLINK", "English" != $currentLang);
+	$xt->assign("Portuguese(Brazil)LANGLINK", "Portuguese(Brazil)" != $currentLang);
 
 	if( isEnableSection508() )
 		$xt->assign_section("lang_label", "<label for=\"languageSelector\">","</label>");
@@ -2114,18 +2213,18 @@ function mlang_getlanglist()
 function getMountNames()
 {
 	$mounts = array();
-		$mounts[1] = "January";
-	$mounts[2] = "February";
-	$mounts[3] = "March";
-	$mounts[4] = "April";
-	$mounts[5] = "May";
-	$mounts[6] = "June";
-	$mounts[7] = "July";
-	$mounts[8] = "August";
-	$mounts[9] = "September";
-	$mounts[10] = "October";
-	$mounts[11] = "November";
-	$mounts[12] = "December";
+		$mounts[1] = "Janeiro";
+	$mounts[2] = "Fevereiro";
+	$mounts[3] = "Março";
+	$mounts[4] = "Abril";
+	$mounts[5] = "Maio";
+	$mounts[6] = "Junho";
+	$mounts[7] = "Julho";
+	$mounts[8] = "Agosto";
+	$mounts[9] = "Setembro";
+	$mounts[10] = "Outubro";
+	$mounts[11] = "Novembro";
+	$mounts[12] = "Dezembro";
 
 	return $mounts;
 }
@@ -3267,7 +3366,7 @@ function getDefaultLanguage()
 	if( strlen($_SESSION["language"]) == 0 && $_SERVER['HTTP_ACCEPT_LANGUAGE'] )
 	{
 		$arrWizardLang = array();
-		$arrWizardLang[] = "English";
+		$arrWizardLang[] = "Portuguese(Brazil)";
 		$arrLang = array();
 		$arrLang["af"] = "Afrikaans";
 		$arrLang["ar"] = "Arabic";
@@ -3321,7 +3420,7 @@ function getDefaultLanguage()
 				return $arrLang[$lang];
 		}
 	}
-	return "English";
+	return "Portuguese(Brazil)";
 }
 
 
@@ -3635,8 +3734,8 @@ function verifyRecaptchaResponse( $response ) {
 	$verifyUrl = "https://www.google.com/recaptcha/api/siteverify?";
 
 	$errors = array();
-	$errors["missing-input-response"] = "Invalid security code.";
-	$errors["invalid-input-response"] = "Invalid security code.";
+	$errors["missing-input-response"] = "Código de segurança inválido";
+	$errors["invalid-input-response"] = "Código de segurança inválido";
 	$errors["missing-input-secret"] = "The secret parameter is missing";
 	$errors["invalid-input-secret"] = "The secret parameter is invalid or malformed";
 	$errors["bad-request"] = "The request is invalid or malformed";

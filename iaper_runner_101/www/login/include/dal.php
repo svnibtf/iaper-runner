@@ -10,7 +10,7 @@ function UsersTableName()
 {
 	global $cman;
 	$connection = $cman->getForLogin();
-	return $connection->addTableWrappers("");
+	return $connection->addTableWrappers("usuarios");
 }
 
 /**
@@ -47,8 +47,13 @@ function DBLookup($sql)
   */
 class tDAL
 {
-	var $tbliaper_runner_db_at_localhost__usuarios;
-	var $tbliaper_runner_db_at_localhost__usuarios_dados_profissionais;
+	var $tbliaperdbatrobb0254publiccloudco__adm_plano_profissional;
+	var $tbliaperdbatrobb0254publiccloudco__adm_ramos;
+	var $tbliaperdbatrobb0254publiccloudco__adm_tipousuario;
+	var $tbliaperdbatrobb0254publiccloudco__ibge_municipios;
+	var $tbliaperdbatrobb0254publiccloudco__ibge_pais;
+	var $tbliaperdbatrobb0254publiccloudco__usuarios;
+	var $tbliaperdbatrobb0254publiccloudco__usuarios_dados_profissionais;
 	var $lstTables;
 	var $Table = array();
 
@@ -56,8 +61,13 @@ class tDAL
 	{
 		if($this->lstTables)
 			return;
-		$this->lstTables[] = array("name" => "usuarios", "varname" => "iaper_runner_db_at_localhost__usuarios", "altvarname" => "usuarios", "connId" => "iaper_runner_db_at_localhost", "schema" => "", "connName" => "iaper_sistemas at localhost");
-		$this->lstTables[] = array("name" => "usuarios_dados_profissionais", "varname" => "iaper_runner_db_at_localhost__usuarios_dados_profissionais", "altvarname" => "usuarios_dados_profissionais", "connId" => "iaper_runner_db_at_localhost", "schema" => "", "connName" => "iaper_sistemas at localhost");
+		$this->lstTables[] = array("name" => "adm_plano_profissional", "varname" => "iaperdbatrobb0254publiccloudco__adm_plano_profissional", "altvarname" => "adm_plano_profissional", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
+		$this->lstTables[] = array("name" => "adm_ramos", "varname" => "iaperdbatrobb0254publiccloudco__adm_ramos", "altvarname" => "adm_ramos", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
+		$this->lstTables[] = array("name" => "adm_tipousuario", "varname" => "iaperdbatrobb0254publiccloudco__adm_tipousuario", "altvarname" => "adm_tipousuario", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
+		$this->lstTables[] = array("name" => "ibge_municipios", "varname" => "iaperdbatrobb0254publiccloudco__ibge_municipios", "altvarname" => "ibge_municipios", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
+		$this->lstTables[] = array("name" => "ibge_pais", "varname" => "iaperdbatrobb0254publiccloudco__ibge_pais", "altvarname" => "ibge_pais", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
+		$this->lstTables[] = array("name" => "usuarios", "varname" => "iaperdbatrobb0254publiccloudco__usuarios", "altvarname" => "usuarios", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
+		$this->lstTables[] = array("name" => "usuarios_dados_profissionais", "varname" => "iaperdbatrobb0254publiccloudco__usuarios_dados_profissionais", "altvarname" => "usuarios_dados_profissionais", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
 	}
 
 	/**

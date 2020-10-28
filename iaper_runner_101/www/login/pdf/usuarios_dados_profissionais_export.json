@@ -105,25 +105,10 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_export_field}","text":{$udp_id_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_export_field1}","text":{$udp_usu_id_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_export_field2}","text":{$email_profissional_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_export_field3}","text":{$avaliacao_usuarios_pdfvalue}},
-				
-				
 			{"hidden":"{$item_hide_export_field4}","text":{$sobre_profissional_pdfvalue}},
 				
 				
 			{"hidden":"{$item_hide_export_field5}","text":{$resumo_formacao_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_export_field6}","text":{$yt_code_apresentacao_pdfvalue}},
 				
 				
 			{"hidden":"{$item_hide_export_field7}","text":{$diferencial_profissional_pdfvalue}},
@@ -142,9 +127,6 @@ pdfDocument = {
 				
 				
 			{"hidden":"{$item_hide_export_field12}","text":{$resumo_formacao_cursos_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_export_field13}","text":{$curriculo_lattes_pdfvalue}},
 				
 				
 			{"hidden":"{$item_hide_export_field14}","text":{$nome_empresa_pdfvalue}},
@@ -171,12 +153,6 @@ pdfDocument = {
 			{"hidden":"{$item_hide_export_field21}","text":{$endereco_profissional_complemento_pdfvalue}},
 				
 				
-			{"hidden":"{$item_hide_export_field22}","text":{$endereco_profissional_latitude_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_export_field23}","text":{$endereco_profissional_longitude_pdfvalue}},
-				
-				
 			{"hidden":"{$item_hide_export_field24}","text":{$pais_empresa_pdfvalue}},
 				
 				
@@ -184,9 +160,6 @@ pdfDocument = {
 				
 				
 			{"hidden":"{$item_hide_export_field26}","text":{$municipio_empresa_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_export_field27}","text":{$udp_deletado_pdfvalue}},
 				
 		  ],
   "border": [ false, false, false, false ],

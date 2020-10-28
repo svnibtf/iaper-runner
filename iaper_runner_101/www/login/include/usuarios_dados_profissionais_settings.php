@@ -2,7 +2,7 @@
 $tdatausuarios_dados_profissionais = array();
 $tdatausuarios_dados_profissionais[".searchableFields"] = array();
 $tdatausuarios_dados_profissionais[".ShortName"] = "usuarios_dados_profissionais";
-$tdatausuarios_dados_profissionais[".OwnerID"] = "";
+$tdatausuarios_dados_profissionais[".OwnerID"] = "udp_usu_id";
 $tdatausuarios_dados_profissionais[".OriginalTable"] = "usuarios_dados_profissionais";
 
 
@@ -19,97 +19,97 @@ $fieldToolTipsusuarios_dados_profissionais = array();
 $pageTitlesusuarios_dados_profissionais = array();
 $placeHoldersusuarios_dados_profissionais = array();
 
-if(mlang_getcurrentlang()=="English")
+if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 {
-	$fieldLabelsusuarios_dados_profissionais["English"] = array();
-	$fieldToolTipsusuarios_dados_profissionais["English"] = array();
-	$placeHoldersusuarios_dados_profissionais["English"] = array();
-	$pageTitlesusuarios_dados_profissionais["English"] = array();
-	$fieldLabelsusuarios_dados_profissionais["English"]["udp_id"] = "Udp Id";
-	$fieldToolTipsusuarios_dados_profissionais["English"]["udp_id"] = "";
-	$placeHoldersusuarios_dados_profissionais["English"]["udp_id"] = "";
-	$fieldLabelsusuarios_dados_profissionais["English"]["udp_usu_id"] = "Udp Usu Id";
-	$fieldToolTipsusuarios_dados_profissionais["English"]["udp_usu_id"] = "";
-	$placeHoldersusuarios_dados_profissionais["English"]["udp_usu_id"] = "";
-	$fieldLabelsusuarios_dados_profissionais["English"]["email_profissional"] = "Email Profissional";
-	$fieldToolTipsusuarios_dados_profissionais["English"]["email_profissional"] = "";
-	$placeHoldersusuarios_dados_profissionais["English"]["email_profissional"] = "";
-	$fieldLabelsusuarios_dados_profissionais["English"]["avaliacao_usuarios"] = "Avaliacao Usuarios";
-	$fieldToolTipsusuarios_dados_profissionais["English"]["avaliacao_usuarios"] = "";
-	$placeHoldersusuarios_dados_profissionais["English"]["avaliacao_usuarios"] = "";
-	$fieldLabelsusuarios_dados_profissionais["English"]["sobre_profissional"] = "Sobre Profissional";
-	$fieldToolTipsusuarios_dados_profissionais["English"]["sobre_profissional"] = "";
-	$placeHoldersusuarios_dados_profissionais["English"]["sobre_profissional"] = "";
-	$fieldLabelsusuarios_dados_profissionais["English"]["resumo_formacao"] = "Resumo Formacao";
-	$fieldToolTipsusuarios_dados_profissionais["English"]["resumo_formacao"] = "";
-	$placeHoldersusuarios_dados_profissionais["English"]["resumo_formacao"] = "";
-	$fieldLabelsusuarios_dados_profissionais["English"]["yt_code_apresentacao"] = "Yt Code Apresentacao";
-	$fieldToolTipsusuarios_dados_profissionais["English"]["yt_code_apresentacao"] = "";
-	$placeHoldersusuarios_dados_profissionais["English"]["yt_code_apresentacao"] = "";
-	$fieldLabelsusuarios_dados_profissionais["English"]["diferencial_profissional"] = "Diferencial Profissional";
-	$fieldToolTipsusuarios_dados_profissionais["English"]["diferencial_profissional"] = "";
-	$placeHoldersusuarios_dados_profissionais["English"]["diferencial_profissional"] = "";
-	$fieldLabelsusuarios_dados_profissionais["English"]["atendimento_presencial"] = "Atendimento Presencial";
-	$fieldToolTipsusuarios_dados_profissionais["English"]["atendimento_presencial"] = "";
-	$placeHoldersusuarios_dados_profissionais["English"]["atendimento_presencial"] = "";
-	$fieldLabelsusuarios_dados_profissionais["English"]["atendimento_online"] = "Atendimento Online";
-	$fieldToolTipsusuarios_dados_profissionais["English"]["atendimento_online"] = "";
-	$placeHoldersusuarios_dados_profissionais["English"]["atendimento_online"] = "";
-	$fieldLabelsusuarios_dados_profissionais["English"]["mini_curriculo"] = "Mini Curriculo";
-	$fieldToolTipsusuarios_dados_profissionais["English"]["mini_curriculo"] = "";
-	$placeHoldersusuarios_dados_profissionais["English"]["mini_curriculo"] = "";
-	$fieldLabelsusuarios_dados_profissionais["English"]["resumo_formacao_academica"] = "Resumo Formacao Academica";
-	$fieldToolTipsusuarios_dados_profissionais["English"]["resumo_formacao_academica"] = "";
-	$placeHoldersusuarios_dados_profissionais["English"]["resumo_formacao_academica"] = "";
-	$fieldLabelsusuarios_dados_profissionais["English"]["resumo_formacao_cursos"] = "Resumo Formacao Cursos";
-	$fieldToolTipsusuarios_dados_profissionais["English"]["resumo_formacao_cursos"] = "";
-	$placeHoldersusuarios_dados_profissionais["English"]["resumo_formacao_cursos"] = "";
-	$fieldLabelsusuarios_dados_profissionais["English"]["curriculo_lattes"] = "Curriculo Lattes";
-	$fieldToolTipsusuarios_dados_profissionais["English"]["curriculo_lattes"] = "";
-	$placeHoldersusuarios_dados_profissionais["English"]["curriculo_lattes"] = "";
-	$fieldLabelsusuarios_dados_profissionais["English"]["nome_empresa"] = "Nome Empresa";
-	$fieldToolTipsusuarios_dados_profissionais["English"]["nome_empresa"] = "";
-	$placeHoldersusuarios_dados_profissionais["English"]["nome_empresa"] = "";
-	$fieldLabelsusuarios_dados_profissionais["English"]["cnpj"] = "Cnpj";
-	$fieldToolTipsusuarios_dados_profissionais["English"]["cnpj"] = "";
-	$placeHoldersusuarios_dados_profissionais["English"]["cnpj"] = "";
-	$fieldLabelsusuarios_dados_profissionais["English"]["ramo_empresa"] = "Ramo Empresa";
-	$fieldToolTipsusuarios_dados_profissionais["English"]["ramo_empresa"] = "";
-	$placeHoldersusuarios_dados_profissionais["English"]["ramo_empresa"] = "";
-	$fieldLabelsusuarios_dados_profissionais["English"]["tipo_empresa"] = "Tipo Empresa";
-	$fieldToolTipsusuarios_dados_profissionais["English"]["tipo_empresa"] = "";
-	$placeHoldersusuarios_dados_profissionais["English"]["tipo_empresa"] = "";
-	$fieldLabelsusuarios_dados_profissionais["English"]["cep_profissional"] = "Cep Profissional";
-	$fieldToolTipsusuarios_dados_profissionais["English"]["cep_profissional"] = "";
-	$placeHoldersusuarios_dados_profissionais["English"]["cep_profissional"] = "";
-	$fieldLabelsusuarios_dados_profissionais["English"]["endereco_profissional_rua"] = "Endereco Profissional Rua";
-	$fieldToolTipsusuarios_dados_profissionais["English"]["endereco_profissional_rua"] = "";
-	$placeHoldersusuarios_dados_profissionais["English"]["endereco_profissional_rua"] = "";
-	$fieldLabelsusuarios_dados_profissionais["English"]["endereco_profissional_numero"] = "Endereco Profissional Numero";
-	$fieldToolTipsusuarios_dados_profissionais["English"]["endereco_profissional_numero"] = "";
-	$placeHoldersusuarios_dados_profissionais["English"]["endereco_profissional_numero"] = "";
-	$fieldLabelsusuarios_dados_profissionais["English"]["endereco_profissional_complemento"] = "Endereco Profissional Complemento";
-	$fieldToolTipsusuarios_dados_profissionais["English"]["endereco_profissional_complemento"] = "";
-	$placeHoldersusuarios_dados_profissionais["English"]["endereco_profissional_complemento"] = "";
-	$fieldLabelsusuarios_dados_profissionais["English"]["endereco_profissional_latitude"] = "Endereco Profissional Latitude";
-	$fieldToolTipsusuarios_dados_profissionais["English"]["endereco_profissional_latitude"] = "";
-	$placeHoldersusuarios_dados_profissionais["English"]["endereco_profissional_latitude"] = "";
-	$fieldLabelsusuarios_dados_profissionais["English"]["endereco_profissional_longitude"] = "Endereco Profissional Longitude";
-	$fieldToolTipsusuarios_dados_profissionais["English"]["endereco_profissional_longitude"] = "";
-	$placeHoldersusuarios_dados_profissionais["English"]["endereco_profissional_longitude"] = "";
-	$fieldLabelsusuarios_dados_profissionais["English"]["pais_empresa"] = "Pais Empresa";
-	$fieldToolTipsusuarios_dados_profissionais["English"]["pais_empresa"] = "";
-	$placeHoldersusuarios_dados_profissionais["English"]["pais_empresa"] = "";
-	$fieldLabelsusuarios_dados_profissionais["English"]["estado_empresa"] = "Estado Empresa";
-	$fieldToolTipsusuarios_dados_profissionais["English"]["estado_empresa"] = "";
-	$placeHoldersusuarios_dados_profissionais["English"]["estado_empresa"] = "";
-	$fieldLabelsusuarios_dados_profissionais["English"]["municipio_empresa"] = "Municipio Empresa";
-	$fieldToolTipsusuarios_dados_profissionais["English"]["municipio_empresa"] = "";
-	$placeHoldersusuarios_dados_profissionais["English"]["municipio_empresa"] = "";
-	$fieldLabelsusuarios_dados_profissionais["English"]["udp_deletado"] = "Udp Deletado";
-	$fieldToolTipsusuarios_dados_profissionais["English"]["udp_deletado"] = "";
-	$placeHoldersusuarios_dados_profissionais["English"]["udp_deletado"] = "";
-	if (count($fieldToolTipsusuarios_dados_profissionais["English"]))
+	$fieldLabelsusuarios_dados_profissionais["Portuguese(Brazil)"] = array();
+	$fieldToolTipsusuarios_dados_profissionais["Portuguese(Brazil)"] = array();
+	$placeHoldersusuarios_dados_profissionais["Portuguese(Brazil)"] = array();
+	$pageTitlesusuarios_dados_profissionais["Portuguese(Brazil)"] = array();
+	$fieldLabelsusuarios_dados_profissionais["Portuguese(Brazil)"]["udp_id"] = "Id";
+	$fieldToolTipsusuarios_dados_profissionais["Portuguese(Brazil)"]["udp_id"] = "";
+	$placeHoldersusuarios_dados_profissionais["Portuguese(Brazil)"]["udp_id"] = "";
+	$fieldLabelsusuarios_dados_profissionais["Portuguese(Brazil)"]["udp_usu_id"] = "Usu Id";
+	$fieldToolTipsusuarios_dados_profissionais["Portuguese(Brazil)"]["udp_usu_id"] = "";
+	$placeHoldersusuarios_dados_profissionais["Portuguese(Brazil)"]["udp_usu_id"] = "";
+	$fieldLabelsusuarios_dados_profissionais["Portuguese(Brazil)"]["email_profissional"] = "Email ";
+	$fieldToolTipsusuarios_dados_profissionais["Portuguese(Brazil)"]["email_profissional"] = "";
+	$placeHoldersusuarios_dados_profissionais["Portuguese(Brazil)"]["email_profissional"] = "";
+	$fieldLabelsusuarios_dados_profissionais["Portuguese(Brazil)"]["avaliacao_usuarios"] = "Avaliacao ";
+	$fieldToolTipsusuarios_dados_profissionais["Portuguese(Brazil)"]["avaliacao_usuarios"] = "";
+	$placeHoldersusuarios_dados_profissionais["Portuguese(Brazil)"]["avaliacao_usuarios"] = "";
+	$fieldLabelsusuarios_dados_profissionais["Portuguese(Brazil)"]["sobre_profissional"] = "Sobre ";
+	$fieldToolTipsusuarios_dados_profissionais["Portuguese(Brazil)"]["sobre_profissional"] = "";
+	$placeHoldersusuarios_dados_profissionais["Portuguese(Brazil)"]["sobre_profissional"] = "";
+	$fieldLabelsusuarios_dados_profissionais["Portuguese(Brazil)"]["resumo_formacao"] = "Resumo ";
+	$fieldToolTipsusuarios_dados_profissionais["Portuguese(Brazil)"]["resumo_formacao"] = "";
+	$placeHoldersusuarios_dados_profissionais["Portuguese(Brazil)"]["resumo_formacao"] = "";
+	$fieldLabelsusuarios_dados_profissionais["Portuguese(Brazil)"]["yt_code_apresentacao"] = "Yt Code Apresentacao";
+	$fieldToolTipsusuarios_dados_profissionais["Portuguese(Brazil)"]["yt_code_apresentacao"] = "";
+	$placeHoldersusuarios_dados_profissionais["Portuguese(Brazil)"]["yt_code_apresentacao"] = "";
+	$fieldLabelsusuarios_dados_profissionais["Portuguese(Brazil)"]["diferencial_profissional"] = "Diferencial Profissional";
+	$fieldToolTipsusuarios_dados_profissionais["Portuguese(Brazil)"]["diferencial_profissional"] = "";
+	$placeHoldersusuarios_dados_profissionais["Portuguese(Brazil)"]["diferencial_profissional"] = "";
+	$fieldLabelsusuarios_dados_profissionais["Portuguese(Brazil)"]["atendimento_presencial"] = "Atendimento Presencial";
+	$fieldToolTipsusuarios_dados_profissionais["Portuguese(Brazil)"]["atendimento_presencial"] = "";
+	$placeHoldersusuarios_dados_profissionais["Portuguese(Brazil)"]["atendimento_presencial"] = "";
+	$fieldLabelsusuarios_dados_profissionais["Portuguese(Brazil)"]["atendimento_online"] = "Atendimento Online";
+	$fieldToolTipsusuarios_dados_profissionais["Portuguese(Brazil)"]["atendimento_online"] = "";
+	$placeHoldersusuarios_dados_profissionais["Portuguese(Brazil)"]["atendimento_online"] = "";
+	$fieldLabelsusuarios_dados_profissionais["Portuguese(Brazil)"]["mini_curriculo"] = "Mini Curriculo";
+	$fieldToolTipsusuarios_dados_profissionais["Portuguese(Brazil)"]["mini_curriculo"] = "";
+	$placeHoldersusuarios_dados_profissionais["Portuguese(Brazil)"]["mini_curriculo"] = "";
+	$fieldLabelsusuarios_dados_profissionais["Portuguese(Brazil)"]["resumo_formacao_academica"] = "Resumo Formacao Academica";
+	$fieldToolTipsusuarios_dados_profissionais["Portuguese(Brazil)"]["resumo_formacao_academica"] = "";
+	$placeHoldersusuarios_dados_profissionais["Portuguese(Brazil)"]["resumo_formacao_academica"] = "";
+	$fieldLabelsusuarios_dados_profissionais["Portuguese(Brazil)"]["resumo_formacao_cursos"] = "Resumo Formacao Cursos";
+	$fieldToolTipsusuarios_dados_profissionais["Portuguese(Brazil)"]["resumo_formacao_cursos"] = "";
+	$placeHoldersusuarios_dados_profissionais["Portuguese(Brazil)"]["resumo_formacao_cursos"] = "";
+	$fieldLabelsusuarios_dados_profissionais["Portuguese(Brazil)"]["curriculo_lattes"] = "Curriculo Lattes";
+	$fieldToolTipsusuarios_dados_profissionais["Portuguese(Brazil)"]["curriculo_lattes"] = "";
+	$placeHoldersusuarios_dados_profissionais["Portuguese(Brazil)"]["curriculo_lattes"] = "";
+	$fieldLabelsusuarios_dados_profissionais["Portuguese(Brazil)"]["nome_empresa"] = "Empresa";
+	$fieldToolTipsusuarios_dados_profissionais["Portuguese(Brazil)"]["nome_empresa"] = "";
+	$placeHoldersusuarios_dados_profissionais["Portuguese(Brazil)"]["nome_empresa"] = "";
+	$fieldLabelsusuarios_dados_profissionais["Portuguese(Brazil)"]["cnpj"] = "Cnpj";
+	$fieldToolTipsusuarios_dados_profissionais["Portuguese(Brazil)"]["cnpj"] = "";
+	$placeHoldersusuarios_dados_profissionais["Portuguese(Brazil)"]["cnpj"] = "";
+	$fieldLabelsusuarios_dados_profissionais["Portuguese(Brazil)"]["ramo_empresa"] = "Ramo ";
+	$fieldToolTipsusuarios_dados_profissionais["Portuguese(Brazil)"]["ramo_empresa"] = "";
+	$placeHoldersusuarios_dados_profissionais["Portuguese(Brazil)"]["ramo_empresa"] = "";
+	$fieldLabelsusuarios_dados_profissionais["Portuguese(Brazil)"]["tipo_empresa"] = "Tipo ";
+	$fieldToolTipsusuarios_dados_profissionais["Portuguese(Brazil)"]["tipo_empresa"] = "";
+	$placeHoldersusuarios_dados_profissionais["Portuguese(Brazil)"]["tipo_empresa"] = "";
+	$fieldLabelsusuarios_dados_profissionais["Portuguese(Brazil)"]["cep_profissional"] = "Cep ";
+	$fieldToolTipsusuarios_dados_profissionais["Portuguese(Brazil)"]["cep_profissional"] = "";
+	$placeHoldersusuarios_dados_profissionais["Portuguese(Brazil)"]["cep_profissional"] = "";
+	$fieldLabelsusuarios_dados_profissionais["Portuguese(Brazil)"]["endereco_profissional_rua"] = "Rua";
+	$fieldToolTipsusuarios_dados_profissionais["Portuguese(Brazil)"]["endereco_profissional_rua"] = "";
+	$placeHoldersusuarios_dados_profissionais["Portuguese(Brazil)"]["endereco_profissional_rua"] = "";
+	$fieldLabelsusuarios_dados_profissionais["Portuguese(Brazil)"]["endereco_profissional_numero"] = "Numero";
+	$fieldToolTipsusuarios_dados_profissionais["Portuguese(Brazil)"]["endereco_profissional_numero"] = "";
+	$placeHoldersusuarios_dados_profissionais["Portuguese(Brazil)"]["endereco_profissional_numero"] = "";
+	$fieldLabelsusuarios_dados_profissionais["Portuguese(Brazil)"]["endereco_profissional_complemento"] = "Complemento";
+	$fieldToolTipsusuarios_dados_profissionais["Portuguese(Brazil)"]["endereco_profissional_complemento"] = "";
+	$placeHoldersusuarios_dados_profissionais["Portuguese(Brazil)"]["endereco_profissional_complemento"] = "";
+	$fieldLabelsusuarios_dados_profissionais["Portuguese(Brazil)"]["endereco_profissional_latitude"] = "Endereco Profissional Latitude";
+	$fieldToolTipsusuarios_dados_profissionais["Portuguese(Brazil)"]["endereco_profissional_latitude"] = "";
+	$placeHoldersusuarios_dados_profissionais["Portuguese(Brazil)"]["endereco_profissional_latitude"] = "";
+	$fieldLabelsusuarios_dados_profissionais["Portuguese(Brazil)"]["endereco_profissional_longitude"] = "Endereco Profissional Longitude";
+	$fieldToolTipsusuarios_dados_profissionais["Portuguese(Brazil)"]["endereco_profissional_longitude"] = "";
+	$placeHoldersusuarios_dados_profissionais["Portuguese(Brazil)"]["endereco_profissional_longitude"] = "";
+	$fieldLabelsusuarios_dados_profissionais["Portuguese(Brazil)"]["pais_empresa"] = "Pais ";
+	$fieldToolTipsusuarios_dados_profissionais["Portuguese(Brazil)"]["pais_empresa"] = "";
+	$placeHoldersusuarios_dados_profissionais["Portuguese(Brazil)"]["pais_empresa"] = "";
+	$fieldLabelsusuarios_dados_profissionais["Portuguese(Brazil)"]["estado_empresa"] = "Estado ";
+	$fieldToolTipsusuarios_dados_profissionais["Portuguese(Brazil)"]["estado_empresa"] = "";
+	$placeHoldersusuarios_dados_profissionais["Portuguese(Brazil)"]["estado_empresa"] = "";
+	$fieldLabelsusuarios_dados_profissionais["Portuguese(Brazil)"]["municipio_empresa"] = "Municipio ";
+	$fieldToolTipsusuarios_dados_profissionais["Portuguese(Brazil)"]["municipio_empresa"] = "";
+	$placeHoldersusuarios_dados_profissionais["Portuguese(Brazil)"]["municipio_empresa"] = "";
+	$fieldLabelsusuarios_dados_profissionais["Portuguese(Brazil)"]["udp_deletado"] = "Udp Deletado";
+	$fieldToolTipsusuarios_dados_profissionais["Portuguese(Brazil)"]["udp_deletado"] = "";
+	$placeHoldersusuarios_dados_profissionais["Portuguese(Brazil)"]["udp_deletado"] = "";
+	if (count($fieldToolTipsusuarios_dados_profissionais["Portuguese(Brazil)"]))
 		$tdatausuarios_dados_profissionais[".isUseToolTips"] = true;
 }
 
@@ -119,11 +119,11 @@ if(mlang_getcurrentlang()=="English")
 
 
 $tdatausuarios_dados_profissionais[".shortTableName"] = "usuarios_dados_profissionais";
-$tdatausuarios_dados_profissionais[".nSecOptions"] = 0;
+$tdatausuarios_dados_profissionais[".nSecOptions"] = 1;
 
-$tdatausuarios_dados_profissionais[".mainTableOwnerID"] = "";
+$tdatausuarios_dados_profissionais[".mainTableOwnerID"] = "udp_usu_id";
 $tdatausuarios_dados_profissionais[".entityType"] = 0;
-$tdatausuarios_dados_profissionais[".connId"] = "iaper_runner_db_at_localhost";
+$tdatausuarios_dados_profissionais[".connId"] = "iaperdbatrobb0254publiccloudco";
 
 
 $tdatausuarios_dados_profissionais[".strOriginalTableName"] = "usuarios_dados_profissionais";
@@ -156,7 +156,7 @@ $pages = $tdatausuarios_dados_profissionais[".defaultPages"];
 
 if( $pages[PAGE_EDIT] ) {
 	$tdatausuarios_dados_profissionais[".edit"] = true;
-	$tdatausuarios_dados_profissionais[".afterEditAction"] = 1;
+	$tdatausuarios_dados_profissionais[".afterEditAction"] = 0;
 	$tdatausuarios_dados_profissionais[".closePopupAfterEdit"] = 1;
 	$tdatausuarios_dados_profissionais[".afterEditActionDetTable"] = "";
 }
@@ -225,7 +225,7 @@ $tdatausuarios_dados_profissionais[".addPageEvents"] = false;
 $tdatausuarios_dados_profissionais[".isUseTimeForSearch"] = false;
 
 
-$tdatausuarios_dados_profissionais[".badgeColor"] = "2F4F4F";
+$tdatausuarios_dados_profissionais[".badgeColor"] = "c0c0c0";
 
 
 $tdatausuarios_dados_profissionais[".allSearchFields"] = array();
@@ -951,7 +951,7 @@ $tdatausuarios_dados_profissionais[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Text area");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -975,12 +975,11 @@ $tdatausuarios_dados_profissionais[".hideMobileList"] = array();
 	
 	
 	
+				$edata["nRows"] = 200;
+			$edata["nCols"] = 200;
+
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=1023";
-
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -1088,7 +1087,7 @@ $tdatausuarios_dados_profissionais[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Text area");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1112,12 +1111,11 @@ $tdatausuarios_dados_profissionais[".hideMobileList"] = array();
 	
 	
 	
+				$edata["nRows"] = 200;
+			$edata["nCols"] = 200;
+
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=1023";
-
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -1362,7 +1360,7 @@ $tdatausuarios_dados_profissionais[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Text area");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1386,12 +1384,11 @@ $tdatausuarios_dados_profissionais[".hideMobileList"] = array();
 	
 	
 	
+				$edata["nRows"] = 200;
+			$edata["nCols"] = 200;
+
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=511";
-
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -1499,7 +1496,7 @@ $tdatausuarios_dados_profissionais[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1509,6 +1506,22 @@ $tdatausuarios_dados_profissionais[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+		$edata["LookupType"] = 0;
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+	
+		$edata["LookupValues"] = array();
+	$edata["LookupValues"][] = "S";
+	$edata["LookupValues"][] = "N";
+
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -1524,17 +1537,14 @@ $tdatausuarios_dados_profissionais[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 							
 	
 	//	End validation
@@ -1554,7 +1564,7 @@ $tdatausuarios_dados_profissionais[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1636,7 +1646,7 @@ $tdatausuarios_dados_profissionais[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1646,6 +1656,22 @@ $tdatausuarios_dados_profissionais[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+		$edata["LookupType"] = 0;
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+	
+		$edata["LookupValues"] = array();
+	$edata["LookupValues"][] = "S";
+	$edata["LookupValues"][] = "N";
+
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -1661,17 +1687,14 @@ $tdatausuarios_dados_profissionais[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 							
 	
 	//	End validation
@@ -1691,7 +1714,7 @@ $tdatausuarios_dados_profissionais[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1773,7 +1796,7 @@ $tdatausuarios_dados_profissionais[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Text area");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1797,12 +1820,11 @@ $tdatausuarios_dados_profissionais[".hideMobileList"] = array();
 	
 	
 	
+				$edata["nRows"] = 200;
+			$edata["nCols"] = 200;
+
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=511";
-
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -1910,7 +1932,7 @@ $tdatausuarios_dados_profissionais[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Text area");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1934,12 +1956,11 @@ $tdatausuarios_dados_profissionais[".hideMobileList"] = array();
 	
 	
 	
+				$edata["nRows"] = 200;
+			$edata["nCols"] = 200;
+
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=1023";
-
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -2047,7 +2068,7 @@ $tdatausuarios_dados_profissionais[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Text area");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -2071,12 +2092,11 @@ $tdatausuarios_dados_profissionais[".hideMobileList"] = array();
 	
 	
 	
+				$edata["nRows"] = 200;
+			$edata["nCols"] = 200;
+
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=1023";
-
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -2184,7 +2204,7 @@ $tdatausuarios_dados_profissionais[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Text area");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -2208,12 +2228,11 @@ $tdatausuarios_dados_profissionais[".hideMobileList"] = array();
 	
 	
 	
+				$edata["nRows"] = 200;
+			$edata["nCols"] = 200;
+
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=1023";
-
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -2595,7 +2614,7 @@ $tdatausuarios_dados_profissionais[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -2605,6 +2624,35 @@ $tdatausuarios_dados_profissionais[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "adm_ramos";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+			$edata["LookupUnique"] = true;
+
+	$edata["LinkField"] = "idRamo";
+	$edata["LinkFieldType"] = 3;
+	$edata["DisplayField"] = "Ramo";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "Ramo";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -2620,17 +2668,14 @@ $tdatausuarios_dados_profissionais[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 							
 	
 	//	End validation
@@ -2650,7 +2695,7 @@ $tdatausuarios_dados_profissionais[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -2732,7 +2777,7 @@ $tdatausuarios_dados_profissionais[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -2742,6 +2787,34 @@ $tdatausuarios_dados_profissionais[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "adm_tipousuario";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "idtipo";
+	$edata["LinkFieldType"] = 3;
+	$edata["DisplayField"] = "Tipo";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -2757,17 +2830,14 @@ $tdatausuarios_dados_profissionais[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 							
 	
 	//	End validation
@@ -2787,7 +2857,7 @@ $tdatausuarios_dados_profissionais[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -4201,6 +4271,22 @@ $masterTablesData["usuarios_dados_profissionais"] = array();
 
 
 
+	
+				$strOriginalDetailsTable="usuarios";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="usuarios";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "usuarios";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["usuarios_dados_profissionais"][0] = $masterParams;
+				$masterTablesData["usuarios_dados_profissionais"][0]["masterKeys"] = array();
+	$masterTablesData["usuarios_dados_profissionais"][0]["masterKeys"][]="usu_id";
+				$masterTablesData["usuarios_dados_profissionais"][0]["detailKeys"] = array();
+	$masterTablesData["usuarios_dados_profissionais"][0]["detailKeys"][]="udp_usu_id";
+		
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 

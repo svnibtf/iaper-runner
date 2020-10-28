@@ -21,6 +21,8 @@ require_once('include/lookuplinks.php');
 //  Verify the eligibility of such a call.
 
 InitLookupLinks();
+if( !ListPage::processListPageSecurity( $strTableName ) )
+	return;
 
 if( ListPage::processSaveParams( $strTableName ) )
 	return;

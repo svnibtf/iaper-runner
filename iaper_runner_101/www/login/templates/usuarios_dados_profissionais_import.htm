@@ -1,5 +1,5 @@
-<!doctype html><p align=center><font size=+1 color=red>This website was created by evaluation version of PHPRunner Trial.</font></p>
-<p align=center><font size=+1 color=red>This warning message will not appear on website created by a paid-for version of PHPRunner Trial.</font></p>
+<!doctype html><p align=center><font size=+1 color=red></font></p>
+<p align=center><font size=+1 color=red></font></p>
 <html  {$html_attrs}>
 	<head>
 				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -55,7 +55,7 @@
 					<div class="panel-body">
 													<!-- bsimportheader_text data-brick="importheader_text" data-pageid="{$pageid}" {$importheader_text_hiddenattr}-->
 	<div id="importheaderText{$id}" class="form-group">
-		Drag and drop a comma-separated (.csv) or Excel (.xlsx) file or choose an option below.	</div>
+		Arrastar e soltar um arquivo (.csv) ou Excel (.xlsx) ou escolha uma opção abaixo.	</div>
 
 	<!-- bsimportfields data-brick="importfields" data-pageid="{$pageid}" {$importfields_hiddenattr}-->
 	<div id="importFields{$id}" class="form-group">
@@ -63,7 +63,7 @@
 			<table class="fieldGrid">
 				<tr>
 					<td>
-						Select file with data.					</td>
+						Selecione arquivo com dados.					</td>
 					<td>
 						<input type="File" id="importFile{$id}" name="importFile{$id}">
 					</td>
@@ -72,21 +72,21 @@
 		</div>
 
 		<div class="rnr-import-settings">
-			<button type="button" class="btn btn-default" id="uploadImportFile{$id}">Browse...</button>
+			<button type="button" class="btn btn-default" id="uploadImportFile{$id}">Navegar...</button>
 		</div>
 
 		<div id="importDropzone{$id}" class="rnr-dragndrop-area" style="display: none;">
-			<div class="rnr-dragtext"> Drag files here </div>
+			<div class="rnr-dragtext"> Arraste os arquivos aqui </div>
 		</div>
 
 		<div class="rnr-import-settings">
-			<button type="button" class="btn btn-default" id="switchToTextInsertion{$id}">Copy and paste text</button>
+			<button type="button" class="btn btn-default" id="switchToTextInsertion{$id}">Copie e Cole texto</button>
 		</div>
 	</div>
 
 	<!-- bsimport_rawtext_control brickname_attr data-brick="import_rawtext_control" data-pageid="{$pageid}" {$import_rawtext_control_hiddenattr}-->
 	<div id="copyAndPasteText{$id}" class="form-group" style="display:none;">
-		<div>Copy and Paste your text data here:</div>
+		<div>Copie e Cole seu texto aqui:</div>
 		<textarea class="rnr-import-textarea" id="importText{$id}">
 		</textarea>
 	</div>
@@ -96,30 +96,30 @@
 		<div id="importSettings{$id}" class="rnr-import-settings form-group">
 			<div class="rnr-is-control checkbox">
 	    		<label>
-	    			<input class="rnr-checkbox" checked="checked" id="columnsInFirstLine{$id}" name="columnsInFirstLine" type="checkbox">Column headers in the first line	    		</label>
+	    			<input class="rnr-checkbox" checked="checked" id="columnsInFirstLine{$id}" name="columnsInFirstLine" type="checkbox">Primeira linha contém nome das colunas	    		</label>
 	  		</div>
 
 			<ul id="delimiterSettings{$id}" style="display:none;" class="rnr-is-control list-inline">
 				<li class="radio">
 					<label>
 						<input name="importDelimiter" class="importDelimiters" type="radio" value=",">
-						Comma					</label>
+						Vírgula					</label>
 				</li>
 				<li class="radio">
 					<label>
 						<input name="importDelimiter" class="importDelimiters" type="radio" value="&#9;">
-						Tab					</label>
+						Delimitador de argumentos					</label>
 				</li>
 				<li class="radio">
 					<label>
 						<input name="importDelimiter" class="importDelimiters" type="radio" value="other">
-						Other					</label>
+						Outro					</label>
 					<input id="customDelimiter{$id}" value=";" type="text">
 				</li>
 			</ul>
 
 			<div id="dateFormatSettings{$id}" class="rnr-is-control" style="display:none;">
-				<label>Date format:</label>
+				<label>Formato de data</label>
 				<input id="importDateFormat{$id}" type="text">
 			</div>
 		</div>
@@ -144,23 +144,23 @@
 	<div id="importButtons{$id}">
 		<div class="rnr-buttons-right">
 			<button type="button" class="btn btn-default" id="backToList{$id}">
-				Back to list			</button>
+				Voltar à Lista			</button>
 			<button type="button" class="btn btn-default" id="newImport{$id}" style="display: none;">
-				New import			</button>
+				Nova importação de dados			</button>
 		</div>
 		<div class="rnr-buttons-left">
 			<button type="button" class="btn btn-primary disabled" id="continueTextImport{$id}" style="display: none;">
-				Continue			</button>
+				Continuar			</button>
 			<button type="button" class="btn btn-primary" id="importButton{$id}" style="display: none;">
-				Import Data			</button>
+				Importar Dados			</button>
 			<button type="button" class="btn btn-default" id="backTo{$id}" style="display: none;">
-				Back			</button>
+				Voltar			</button>
 			<button type="button" class="btn btn-default" id="saveReport{$id}" style="display: none;">
-				Save Report			</button>
+				Salvar Relatório			</button>
 			<button type="button" class="btn btn-default errorReportButtons{$id}" id="saveUnprocessedData{$id}" style="display: none;">
-				Download unprocessed data			</button>
+				Download de dados não processados			</button>
 			<button type="button" class="btn btn-default errorReportButtons{$id}" id="saveErrorReport{$id}" style="display: none;">
-				Download error log			</button>
+				Download do log de erros			</button>
 		</div>
 	</div>
 											</div>

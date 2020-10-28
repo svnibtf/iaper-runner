@@ -13,6 +13,8 @@ add_nocache_headers();
 
 InitLookupLinks();
 
+if( !AddPage::processAddPageSecurity( $strTableName ) )
+	return;
 
 AddPage::handleBrokenRequest();
 

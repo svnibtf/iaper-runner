@@ -924,6 +924,11 @@ function CustomExpression($value, $data, $field, $ptype, $table="")
 function fileCustomExpression($file, $data, $field, $ptype, $table )
 {
 	$value = "";
+				if($table=="usuarios" && $field=="avatar")
+	{
+		;
+		return $value;
+	}
 	return $value;
 }
 

@@ -1,5 +1,5 @@
-<!doctype html><p align=center><font size=+1 color=red>This website was created by evaluation version of PHPRunner Trial.</font></p>
-<p align=center><font size=+1 color=red>This warning message will not appear on website created by a paid-for version of PHPRunner Trial.</font></p>
+<!doctype html><p align=center><font size=+1 color=red></font></p>
+<p align=center><font size=+1 color=red></font></p>
 <html  {$html_attrs}>
 	<head>
 				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -59,424 +59,6 @@
 			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
 				{$menu main}			</div>
 		
- 
-
-			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="search_panel" {$item_search_panel} data-topcell-item-type="search_panel" >
-				<!-- Begin Search panel content -->
-<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}" >
-
-	<div class="panel-heading">
-		<div class="btn-group" id="addSearchFieldButton{$id}">
-			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			Search in			<span class="caret"></span>
-			</button>
-		</div>
-
-
-		<div class="btn-group searchpanel-options" id="searchPanelOptions{$id}">
-			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
-			</button>
-			<ul class="dropdown-menu dropdown-left">
-				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Show options</a></li>
-				<li role="separator" class="divider"></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>all conditions</label></a></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>any condition</label></a></li>
-				<li role="separator" class="divider"></li>
-				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>hide</a></li>
-			</ul>
-		</div>
-
-
-		</div>
-	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
-
-
-		
-		{BEGIN searchCtrlBlock}
-		<div class="srchPanelRow form-group" {$filterRow_attrs}>
-			<label>{$fLabel}</label>	{$delCtrlButt}
-				<span class="rnr-searchtype">{$searchtype}</span>
-				<span class="rnr-searchcontrol">{$searchcontrol}</span>
-				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
-		</div>
-		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_atendimento_online}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_atendimento_online}" {$filterRow_attrs_atendimento_online}>
-			<label>{$label usuarios_dados_profissionais atendimento_online }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_atendimento_online}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_atendimento_online}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_atendimento_online}</span>
-						</div>
-		{END searchCtrlBlock_atendimento_online}
-																{BEGIN searchCtrlBlock_yt_code_apresentacao}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_yt_code_apresentacao}" {$filterRow_attrs_yt_code_apresentacao}>
-			<label>{$label usuarios_dados_profissionais yt_code_apresentacao }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_yt_code_apresentacao}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_yt_code_apresentacao}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_yt_code_apresentacao}</span>
-						</div>
-		{END searchCtrlBlock_yt_code_apresentacao}
-																{BEGIN searchCtrlBlock_udp_usu_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_udp_usu_id}" {$filterRow_attrs_udp_usu_id}>
-			<label>{$label usuarios_dados_profissionais udp_usu_id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_udp_usu_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_udp_usu_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_udp_usu_id}</span>
-						</div>
-		{END searchCtrlBlock_udp_usu_id}
-																{BEGIN searchCtrlBlock_udp_id}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_udp_id}" {$filterRow_attrs_udp_id}>
-			<label>{$label usuarios_dados_profissionais udp_id }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_udp_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_udp_id}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_udp_id}</span>
-						</div>
-		{END searchCtrlBlock_udp_id}
-																{BEGIN searchCtrlBlock_udp_deletado}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_udp_deletado}" {$filterRow_attrs_udp_deletado}>
-			<label>{$label usuarios_dados_profissionais udp_deletado }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_udp_deletado}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_udp_deletado}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_udp_deletado}</span>
-						</div>
-		{END searchCtrlBlock_udp_deletado}
-																{BEGIN searchCtrlBlock_tipo_empresa}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_tipo_empresa}" {$filterRow_attrs_tipo_empresa}>
-			<label>{$label usuarios_dados_profissionais tipo_empresa }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_tipo_empresa}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_tipo_empresa}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_tipo_empresa}</span>
-						</div>
-		{END searchCtrlBlock_tipo_empresa}
-																{BEGIN searchCtrlBlock_sobre_profissional}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_sobre_profissional}" {$filterRow_attrs_sobre_profissional}>
-			<label>{$label usuarios_dados_profissionais sobre_profissional }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_sobre_profissional}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_sobre_profissional}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_sobre_profissional}</span>
-						</div>
-		{END searchCtrlBlock_sobre_profissional}
-																{BEGIN searchCtrlBlock_resumo_formacao_cursos}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_resumo_formacao_cursos}" {$filterRow_attrs_resumo_formacao_cursos}>
-			<label>{$label usuarios_dados_profissionais resumo_formacao_cursos }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_resumo_formacao_cursos}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_resumo_formacao_cursos}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_resumo_formacao_cursos}</span>
-						</div>
-		{END searchCtrlBlock_resumo_formacao_cursos}
-																{BEGIN searchCtrlBlock_resumo_formacao_academica}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_resumo_formacao_academica}" {$filterRow_attrs_resumo_formacao_academica}>
-			<label>{$label usuarios_dados_profissionais resumo_formacao_academica }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_resumo_formacao_academica}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_resumo_formacao_academica}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_resumo_formacao_academica}</span>
-						</div>
-		{END searchCtrlBlock_resumo_formacao_academica}
-																{BEGIN searchCtrlBlock_resumo_formacao}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_resumo_formacao}" {$filterRow_attrs_resumo_formacao}>
-			<label>{$label usuarios_dados_profissionais resumo_formacao }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_resumo_formacao}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_resumo_formacao}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_resumo_formacao}</span>
-						</div>
-		{END searchCtrlBlock_resumo_formacao}
-																{BEGIN searchCtrlBlock_ramo_empresa}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_ramo_empresa}" {$filterRow_attrs_ramo_empresa}>
-			<label>{$label usuarios_dados_profissionais ramo_empresa }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_ramo_empresa}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_ramo_empresa}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_ramo_empresa}</span>
-						</div>
-		{END searchCtrlBlock_ramo_empresa}
-																{BEGIN searchCtrlBlock_pais_empresa}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_pais_empresa}" {$filterRow_attrs_pais_empresa}>
-			<label>{$label usuarios_dados_profissionais pais_empresa }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_pais_empresa}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_pais_empresa}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_pais_empresa}</span>
-						</div>
-		{END searchCtrlBlock_pais_empresa}
-																{BEGIN searchCtrlBlock_nome_empresa}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_nome_empresa}" {$filterRow_attrs_nome_empresa}>
-			<label>{$label usuarios_dados_profissionais nome_empresa }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_nome_empresa}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_nome_empresa}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_nome_empresa}</span>
-						</div>
-		{END searchCtrlBlock_nome_empresa}
-																{BEGIN searchCtrlBlock_municipio_empresa}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_municipio_empresa}" {$filterRow_attrs_municipio_empresa}>
-			<label>{$label usuarios_dados_profissionais municipio_empresa }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_municipio_empresa}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_municipio_empresa}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_municipio_empresa}</span>
-						</div>
-		{END searchCtrlBlock_municipio_empresa}
-																{BEGIN searchCtrlBlock_mini_curriculo}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_mini_curriculo}" {$filterRow_attrs_mini_curriculo}>
-			<label>{$label usuarios_dados_profissionais mini_curriculo }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_mini_curriculo}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_mini_curriculo}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_mini_curriculo}</span>
-						</div>
-		{END searchCtrlBlock_mini_curriculo}
-																{BEGIN searchCtrlBlock_estado_empresa}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_estado_empresa}" {$filterRow_attrs_estado_empresa}>
-			<label>{$label usuarios_dados_profissionais estado_empresa }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_estado_empresa}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_estado_empresa}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_estado_empresa}</span>
-						</div>
-		{END searchCtrlBlock_estado_empresa}
-																{BEGIN searchCtrlBlock_endereco_profissional_rua}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_endereco_profissional_rua}" {$filterRow_attrs_endereco_profissional_rua}>
-			<label>{$label usuarios_dados_profissionais endereco_profissional_rua }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_endereco_profissional_rua}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_endereco_profissional_rua}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_endereco_profissional_rua}</span>
-						</div>
-		{END searchCtrlBlock_endereco_profissional_rua}
-																{BEGIN searchCtrlBlock_endereco_profissional_numero}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_endereco_profissional_numero}" {$filterRow_attrs_endereco_profissional_numero}>
-			<label>{$label usuarios_dados_profissionais endereco_profissional_numero }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_endereco_profissional_numero}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_endereco_profissional_numero}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_endereco_profissional_numero}</span>
-						</div>
-		{END searchCtrlBlock_endereco_profissional_numero}
-																{BEGIN searchCtrlBlock_endereco_profissional_longitude}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_endereco_profissional_longitude}" {$filterRow_attrs_endereco_profissional_longitude}>
-			<label>{$label usuarios_dados_profissionais endereco_profissional_longitude }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_endereco_profissional_longitude}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_endereco_profissional_longitude}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_endereco_profissional_longitude}</span>
-						</div>
-		{END searchCtrlBlock_endereco_profissional_longitude}
-																{BEGIN searchCtrlBlock_endereco_profissional_latitude}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_endereco_profissional_latitude}" {$filterRow_attrs_endereco_profissional_latitude}>
-			<label>{$label usuarios_dados_profissionais endereco_profissional_latitude }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_endereco_profissional_latitude}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_endereco_profissional_latitude}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_endereco_profissional_latitude}</span>
-						</div>
-		{END searchCtrlBlock_endereco_profissional_latitude}
-																{BEGIN searchCtrlBlock_endereco_profissional_complemento}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_endereco_profissional_complemento}" {$filterRow_attrs_endereco_profissional_complemento}>
-			<label>{$label usuarios_dados_profissionais endereco_profissional_complemento }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_endereco_profissional_complemento}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_endereco_profissional_complemento}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_endereco_profissional_complemento}</span>
-						</div>
-		{END searchCtrlBlock_endereco_profissional_complemento}
-																{BEGIN searchCtrlBlock_email_profissional}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_email_profissional}" {$filterRow_attrs_email_profissional}>
-			<label>{$label usuarios_dados_profissionais email_profissional }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_email_profissional}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_email_profissional}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_email_profissional}</span>
-						</div>
-		{END searchCtrlBlock_email_profissional}
-																{BEGIN searchCtrlBlock_diferencial_profissional}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_diferencial_profissional}" {$filterRow_attrs_diferencial_profissional}>
-			<label>{$label usuarios_dados_profissionais diferencial_profissional }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_diferencial_profissional}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_diferencial_profissional}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_diferencial_profissional}</span>
-						</div>
-		{END searchCtrlBlock_diferencial_profissional}
-																{BEGIN searchCtrlBlock_curriculo_lattes}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_curriculo_lattes}" {$filterRow_attrs_curriculo_lattes}>
-			<label>{$label usuarios_dados_profissionais curriculo_lattes }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_curriculo_lattes}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_curriculo_lattes}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_curriculo_lattes}</span>
-						</div>
-		{END searchCtrlBlock_curriculo_lattes}
-																{BEGIN searchCtrlBlock_cnpj}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_cnpj}" {$filterRow_attrs_cnpj}>
-			<label>{$label usuarios_dados_profissionais cnpj }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_cnpj}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_cnpj}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_cnpj}</span>
-						</div>
-		{END searchCtrlBlock_cnpj}
-																{BEGIN searchCtrlBlock_cep_profissional}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_cep_profissional}" {$filterRow_attrs_cep_profissional}>
-			<label>{$label usuarios_dados_profissionais cep_profissional }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_cep_profissional}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_cep_profissional}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_cep_profissional}</span>
-						</div>
-		{END searchCtrlBlock_cep_profissional}
-																{BEGIN searchCtrlBlock_avaliacao_usuarios}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_avaliacao_usuarios}" {$filterRow_attrs_avaliacao_usuarios}>
-			<label>{$label usuarios_dados_profissionais avaliacao_usuarios }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_avaliacao_usuarios}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_avaliacao_usuarios}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_avaliacao_usuarios}</span>
-						</div>
-		{END searchCtrlBlock_avaliacao_usuarios}
-																{BEGIN searchCtrlBlock_atendimento_presencial}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_atendimento_presencial}" {$filterRow_attrs_atendimento_presencial}>
-			<label>{$label usuarios_dados_profissionais atendimento_presencial }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_atendimento_presencial}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_atendimento_presencial}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_atendimento_presencial}</span>
-						</div>
-		{END searchCtrlBlock_atendimento_presencial}
-		
-
-	</div>
-
-	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
-		<button class="btn btn-primary" id="searchButton{$id}" {$searchbutton_attrs}>Search</button>
-		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>Show all</button>
-	</div>
-</div>
-<!-- End Search panel content -->
-			</div>
-		
     {END left_block}
 </div>				</div>	
 			<div class="r-content-col" data-resize-left="leftbar">
@@ -523,7 +105,7 @@
 {END searchform_text}
 	<span class="input-group-btn">
 	{BEGIN searchform_showall}
-		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Show all">
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Mostrar Todos">
 			<span class="glyphicon glyphicon-remove"></span>
 		</button>
 	{END searchform_showall}
@@ -549,7 +131,7 @@
 	<li data-itemtype="export_selected" data-itemid="export_selected" {$item_export_selected} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$exportselectedlink_attrs} {$exportselectedlink_span}  title="" >
 				
-		Export selected		
+		Exportação selecionada		
 		</a>
 	</li>
 {END exportselected_link}
@@ -557,37 +139,21 @@
 	<li data-itemtype="delete_selected" data-itemid="delete_selected" {$item_delete_selected} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}  title="" >
 				
-		Delete selected		
+		Elimina Selecionados		
 		</a>
 	</li>
 {END deleteselected_link}
 							<li role="separator" class="divider"></li>								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
 				<a   href="usuarios_dados_profissionais_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
 				
-		Advanced search		
+		Busca Avancada		
 		</a>
 	</li>
-							{BEGIN searchPanelTopButtons}
-	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
-				<a  id="showOptPanel{$id}"  title="" >
-				
-		Show search panel		
-		</a>
-	</li>
-{END searchPanelTopButtons}
-							{BEGIN searchPanelTopButtons}
-	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
-				<a  id="hideOptPanel{$id}"  title="" >
-				
-		Hide search panel		
-		</a>
-	</li>
-{END searchPanelTopButtons}
 							<li role="separator" class="divider"></li>							{BEGIN export_link}
 	<li data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$exportlink_attrs}  title="" >
 				
-		Export results		
+		Exportar os Resultados		
 		</a>
 	</li>
 {END export_link}
@@ -595,13 +161,46 @@
 	<li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
 				<a  {$importlink_attrs} href="usuarios_dados_profissionais_import.php{$stateLink_full}"  title="" >
 				
-		Import		
+		Importar		
 		</a>
 	</li>
 {END import_link}
 					</ul>
 	</span>
 </span>
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
+				{BEGIN guestloginbutton}
+<span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" href="#" {$guestloginlink_attrs} >
+							Login			</a>
+</span>
+{END guestloginbutton}
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="username_button" {$item_username_button} data-topcell-item-type="username_button" >
+				{BEGIN loggedas_message}
+<span data-itemtype="username_button" data-itemid="username_button" {$item_username_button} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+							<span class="glyphicon glyphicon-user"></span>
+						{$username}			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN logoutbutton}
+	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$logoutlink_attrs}  title="" >
+				
+		Log Out		
+		</a>
+	</li>
+{END logoutbutton}
+					</ul>
+	</span>
+</span>
+{END loggedas_message}
 			</span>
 								</nav>
 {END supertop_block}
@@ -612,6 +211,20 @@
 					<div class="r-top">
 									{BEGIN top_block}
 <div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="leftbar" {$form_top} data-pageid="{$pageid}" >		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c2" data-pageid="{$pageid}"	{$cell_top_c2}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN mastertable_block}
+<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
+	{$showmasterfile}
+</div>
+{END mastertable_block}		</div>					</div>
 	</div>		
 {END top_block}
 						</div>
@@ -631,16 +244,24 @@
 		{BEGIN add_link}
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
-	" {$addlink_attrs} href="usuarios_dados_profissionais_add.php{$stateLink_full}" >
-							Add new			</a>
+	" {$addlink_attrs} href="usuarios_dados_profissionais_add.php{$stateLink_full}" data-popup >
+							Adicionar Novo			</a>
 </span>
 {END add_link}
+	 
+		{BEGIN inlineadd_link}
+<span data-itemtype="inline_add" data-itemid="inline_add" {$item_inline_add} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$inlineaddlink_attrs} >
+							Adicionar Novo			</a>
+</span>
+{END inlineadd_link}
 	 
 		{BEGIN deleteselected_link}
 <span data-itemtype="delete" data-itemid="delete" {$item_delete} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled >
-							Delete			</a>
+							Elimina Selecionados			</a>
 </span>
 {END deleteselected_link}
 			{END firstAboveGridCell}	
@@ -659,7 +280,7 @@
 </span>	 
 		{BEGIN print_friendly}
 <span id="printpanelblock{$id}"  data-pageid="{$pageid}" {$printpanel_hiddenattr} data-itemtype="print_panel" data-itemid="print_panel" {$item_print_panel} data-pageid="{$pageid}">
-	<button title="Print-friendly page" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+	<button title="Página Print-friendly" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 					<span class="glyphicon glyphicon-print"></span>
 				<span class="caret"></span>
 	</button>
@@ -671,13 +292,13 @@
 									<div id="print_friendly_scope{$id}">
 	<div class="row">
 		<div class="col-md-4">
-			Scope:		</div>
+			Escopo		</div>
 
 		{BEGIN print_friendly_all}
 		<div class="col-md-8">
 			<label for="printAll{$id}">
 				<input type="radio" id="printAll{$id}" data-href="usuarios_dados_profissionais_print.php?all=1&amp;{$crosstable_attrs}" name="printScope">
-									Print all pages							</label>
+									Imprimir todas as páginas							</label>
 		</div>
 		{END print_friendly_all}
 	</div>
@@ -686,7 +307,7 @@
 		<div class="col-md-8">
 			<label for="printPage{$id}">
 				<input name="printScope" id="printPage{$id}" type="radio" checked data-href="usuarios_dados_profissionais_print.php?{$crosstable_attrs}">
-				Print this page			</label>
+				Imprimir esta página			</label>
 		</div>
 	</div>
 	
@@ -697,7 +318,7 @@
 		<div class="col-md-8">
 			<label style="color: gray;" for="printSelection{$id}">
 			<input name="printScope" disabled="disabled" id="printSelection{$id}" type="radio">
-			Print selected			</label>
+			Imprimir selecionados			</label>
 		</div>
 	</div>
 	</div>				 
@@ -709,7 +330,7 @@
 										">
 									<div>
 	<label for="printPerPage{$id}">
-					Records Per Page							
+					Registros por Página							
 	</label>
 	<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
 </div>
@@ -723,7 +344,7 @@
 									<span data-itemtype="print_button" data-itemid="print_button" {$item_print_button} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" id="print_friendly_button{$id}" >
-							Print			</a>
+							Imprimir			</a>
 </span>
 				 
 					</li>
@@ -745,91 +366,19 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="udp_id"]:before {
-		content: "{$label usuarios_dados_profissionais udp_id}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="udp_usu_id"]:before {
-		content: "{$label usuarios_dados_profissionais udp_usu_id}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="email_profissional"]:before {
-		content: "{$label usuarios_dados_profissionais email_profissional}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="avaliacao_usuarios"]:before {
-		content: "{$label usuarios_dados_profissionais avaliacao_usuarios}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="sobre_profissional"]:before {
-		content: "{$label usuarios_dados_profissionais sobre_profissional}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="resumo_formacao"]:before {
-		content: "{$label usuarios_dados_profissionais resumo_formacao}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="yt_code_apresentacao"]:before {
-		content: "{$label usuarios_dados_profissionais yt_code_apresentacao}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="diferencial_profissional"]:before {
-		content: "{$label usuarios_dados_profissionais diferencial_profissional}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="atendimento_presencial"]:before {
-		content: "{$label usuarios_dados_profissionais atendimento_presencial}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="atendimento_online"]:before {
-		content: "{$label usuarios_dados_profissionais atendimento_online}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="mini_curriculo"]:before {
-		content: "{$label usuarios_dados_profissionais mini_curriculo}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="resumo_formacao_academica"]:before {
-		content: "{$label usuarios_dados_profissionais resumo_formacao_academica}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="resumo_formacao_cursos"]:before {
-		content: "{$label usuarios_dados_profissionais resumo_formacao_cursos}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="curriculo_lattes"]:before {
-		content: "{$label usuarios_dados_profissionais curriculo_lattes}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="nome_empresa"]:before {
+																[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="nome_empresa"]:before {
 		content: "{$label usuarios_dados_profissionais nome_empresa}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="cnpj"]:before {
 		content: "{$label usuarios_dados_profissionais cnpj}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ramo_empresa"]:before {
-		content: "{$label usuarios_dados_profissionais ramo_empresa}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="tipo_empresa"]:before {
-		content: "{$label usuarios_dados_profissionais tipo_empresa}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="cep_profissional"]:before {
-		content: "{$label usuarios_dados_profissionais cep_profissional}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="endereco_profissional_rua"]:before {
-		content: "{$label usuarios_dados_profissionais endereco_profissional_rua}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="endereco_profissional_numero"]:before {
-		content: "{$label usuarios_dados_profissionais endereco_profissional_numero}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="endereco_profissional_complemento"]:before {
-		content: "{$label usuarios_dados_profissionais endereco_profissional_complemento}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="endereco_profissional_latitude"]:before {
-		content: "{$label usuarios_dados_profissionais endereco_profissional_latitude}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="endereco_profissional_longitude"]:before {
-		content: "{$label usuarios_dados_profissionais endereco_profissional_longitude}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="pais_empresa"]:before {
+											[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="pais_empresa"]:before {
 		content: "{$label usuarios_dados_profissionais pais_empresa}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="estado_empresa"]:before {
-		content: "{$label usuarios_dados_profissionais estado_empresa}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="municipio_empresa"]:before {
+				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="municipio_empresa"]:before {
 		content: "{$label usuarios_dados_profissionais municipio_empresa}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="udp_deletado"]:before {
-		content: "{$label usuarios_dados_profissionais udp_deletado}";
-	}
-	}
+		}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table {$grid_classes}  r-flexgrid rnr-b-grid rnr-gridtable" 
 	cellpadding="0" 
@@ -891,22 +440,22 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$udp_id_class}
+		 r-ori-vert				{$nome_empresa_class}
 			"
 
-			data-field="udp_id"
+			data-field="nome_empresa"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN udp_id_fieldheadercolumn}
-	{BEGIN udp_id_fieldheader}
-	<SPAN {$udp_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="udp_id">
-	{$label usuarios_dados_profissionais udp_id }	{$arrow_icon_udp_id}
+		{BEGIN nome_empresa_fieldheadercolumn}
+	{BEGIN nome_empresa_fieldheader}
+	<SPAN {$nome_empresa_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nome_empresa">
+	{$label usuarios_dados_profissionais nome_empresa }	{$arrow_icon_nome_empresa}
 	</SPAN>
-	{END udp_id_fieldheader}
-{END udp_id_fieldheadercolumn}
+	{END nome_empresa_fieldheader}
+{END nome_empresa_fieldheadercolumn}
 
 	
 	</th>
@@ -918,22 +467,22 @@
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$udp_usu_id_class}
+		 r-ori-vert				{$cnpj_class}
 			"
 
-			data-field="udp_usu_id"
+			data-field="cnpj"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN udp_usu_id_fieldheadercolumn}
-	{BEGIN udp_usu_id_fieldheader}
-	<SPAN {$udp_usu_id_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="udp_usu_id">
-	{$label usuarios_dados_profissionais udp_usu_id }	{$arrow_icon_udp_usu_id}
+		{BEGIN cnpj_fieldheadercolumn}
+	{BEGIN cnpj_fieldheader}
+	<SPAN {$cnpj_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="cnpj">
+	{$label usuarios_dados_profissionais cnpj }	{$arrow_icon_cnpj}
 	</SPAN>
-	{END udp_usu_id_fieldheader}
-{END udp_usu_id_fieldheadercolumn}
+	{END cnpj_fieldheader}
+{END cnpj_fieldheadercolumn}
 
 	
 	</th>
@@ -945,22 +494,22 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$email_profissional_class}
+		 r-ori-vert				{$pais_empresa_class}
 			"
 
-			data-field="email_profissional"
+			data-field="pais_empresa"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN email_profissional_fieldheadercolumn}
-	{BEGIN email_profissional_fieldheader}
-	<SPAN {$email_profissional_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="email_profissional">
-	{$label usuarios_dados_profissionais email_profissional }	{$arrow_icon_email_profissional}
+		{BEGIN pais_empresa_fieldheadercolumn}
+	{BEGIN pais_empresa_fieldheader}
+	<SPAN {$pais_empresa_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="pais_empresa">
+	{$label usuarios_dados_profissionais pais_empresa }	{$arrow_icon_pais_empresa}
 	</SPAN>
-	{END email_profissional_fieldheader}
-{END email_profissional_fieldheadercolumn}
+	{END pais_empresa_fieldheader}
+{END pais_empresa_fieldheadercolumn}
 
 	
 	</th>
@@ -972,639 +521,18 @@
 	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$avaliacao_usuarios_class}
-			"
-
-			data-field="avaliacao_usuarios"
-	
-	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN avaliacao_usuarios_fieldheadercolumn}
-	{BEGIN avaliacao_usuarios_fieldheader}
-	<SPAN {$avaliacao_usuarios_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="avaliacao_usuarios">
-	{$label usuarios_dados_profissionais avaliacao_usuarios }	{$arrow_icon_avaliacao_usuarios}
-	</SPAN>
-	{END avaliacao_usuarios_fieldheader}
-{END avaliacao_usuarios_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field3}
-				 
-					{BEGIN cellblock_grid_headcell_field4}
-	<th
-	
-	{$cell_grid_headcell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$sobre_profissional_class}
-			"
-
-			data-field="sobre_profissional"
-	
-	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN sobre_profissional_fieldheadercolumn}
-	{BEGIN sobre_profissional_fieldheader}
-	<SPAN {$sobre_profissional_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field32" {$item_simple_grid_field32} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="sobre_profissional">
-	{$label usuarios_dados_profissionais sobre_profissional }	{$arrow_icon_sobre_profissional}
-	</SPAN>
-	{END sobre_profissional_fieldheader}
-{END sobre_profissional_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field4}
-				 
-					{BEGIN cellblock_grid_headcell_field5}
-	<th
-	
-	{$cell_grid_headcell_field5}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$resumo_formacao_class}
-			"
-
-			data-field="resumo_formacao"
-	
-	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN resumo_formacao_fieldheadercolumn}
-	{BEGIN resumo_formacao_fieldheader}
-	<SPAN {$resumo_formacao_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field33" {$item_simple_grid_field33} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="resumo_formacao">
-	{$label usuarios_dados_profissionais resumo_formacao }	{$arrow_icon_resumo_formacao}
-	</SPAN>
-	{END resumo_formacao_fieldheader}
-{END resumo_formacao_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field5}
-				 
-					{BEGIN cellblock_grid_headcell_field6}
-	<th
-	
-	{$cell_grid_headcell_field6}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$yt_code_apresentacao_class}
-			"
-
-			data-field="yt_code_apresentacao"
-	
-	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN yt_code_apresentacao_fieldheadercolumn}
-	{BEGIN yt_code_apresentacao_fieldheader}
-	<SPAN {$yt_code_apresentacao_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field34" {$item_simple_grid_field34} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="yt_code_apresentacao">
-	{$label usuarios_dados_profissionais yt_code_apresentacao }	{$arrow_icon_yt_code_apresentacao}
-	</SPAN>
-	{END yt_code_apresentacao_fieldheader}
-{END yt_code_apresentacao_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field6}
-				 
-					{BEGIN cellblock_grid_headcell_field7}
-	<th
-	
-	{$cell_grid_headcell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$diferencial_profissional_class}
-			"
-
-			data-field="diferencial_profissional"
-	
-	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN diferencial_profissional_fieldheadercolumn}
-	{BEGIN diferencial_profissional_fieldheader}
-	<SPAN {$diferencial_profissional_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field35" {$item_simple_grid_field35} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="diferencial_profissional">
-	{$label usuarios_dados_profissionais diferencial_profissional }	{$arrow_icon_diferencial_profissional}
-	</SPAN>
-	{END diferencial_profissional_fieldheader}
-{END diferencial_profissional_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field7}
-				 
-					{BEGIN cellblock_grid_headcell_field8}
-	<th
-	
-	{$cell_grid_headcell_field8}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$atendimento_presencial_class}
-			"
-
-			data-field="atendimento_presencial"
-	
-	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN atendimento_presencial_fieldheadercolumn}
-	{BEGIN atendimento_presencial_fieldheader}
-	<SPAN {$atendimento_presencial_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field36" {$item_simple_grid_field36} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="atendimento_presencial">
-	{$label usuarios_dados_profissionais atendimento_presencial }	{$arrow_icon_atendimento_presencial}
-	</SPAN>
-	{END atendimento_presencial_fieldheader}
-{END atendimento_presencial_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field8}
-				 
-					{BEGIN cellblock_grid_headcell_field9}
-	<th
-	
-	{$cell_grid_headcell_field9}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$atendimento_online_class}
-			"
-
-			data-field="atendimento_online"
-	
-	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN atendimento_online_fieldheadercolumn}
-	{BEGIN atendimento_online_fieldheader}
-	<SPAN {$atendimento_online_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field37" {$item_simple_grid_field37} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="atendimento_online">
-	{$label usuarios_dados_profissionais atendimento_online }	{$arrow_icon_atendimento_online}
-	</SPAN>
-	{END atendimento_online_fieldheader}
-{END atendimento_online_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field9}
-				 
-					{BEGIN cellblock_grid_headcell_field10}
-	<th
-	
-	{$cell_grid_headcell_field10}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$mini_curriculo_class}
-			"
-
-			data-field="mini_curriculo"
-	
-	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN mini_curriculo_fieldheadercolumn}
-	{BEGIN mini_curriculo_fieldheader}
-	<SPAN {$mini_curriculo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field38" {$item_simple_grid_field38} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="mini_curriculo">
-	{$label usuarios_dados_profissionais mini_curriculo }	{$arrow_icon_mini_curriculo}
-	</SPAN>
-	{END mini_curriculo_fieldheader}
-{END mini_curriculo_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field10}
-				 
-					{BEGIN cellblock_grid_headcell_field11}
-	<th
-	
-	{$cell_grid_headcell_field11}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$resumo_formacao_academica_class}
-			"
-
-			data-field="resumo_formacao_academica"
-	
-	data-cellId="grid_headcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN resumo_formacao_academica_fieldheadercolumn}
-	{BEGIN resumo_formacao_academica_fieldheader}
-	<SPAN {$resumo_formacao_academica_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field39" {$item_simple_grid_field39} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="resumo_formacao_academica">
-	{$label usuarios_dados_profissionais resumo_formacao_academica }	{$arrow_icon_resumo_formacao_academica}
-	</SPAN>
-	{END resumo_formacao_academica_fieldheader}
-{END resumo_formacao_academica_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field11}
-				 
-					{BEGIN cellblock_grid_headcell_field12}
-	<th
-	
-	{$cell_grid_headcell_field12}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$resumo_formacao_cursos_class}
-			"
-
-			data-field="resumo_formacao_cursos"
-	
-	data-cellId="grid_headcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN resumo_formacao_cursos_fieldheadercolumn}
-	{BEGIN resumo_formacao_cursos_fieldheader}
-	<SPAN {$resumo_formacao_cursos_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field40" {$item_simple_grid_field40} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="resumo_formacao_cursos">
-	{$label usuarios_dados_profissionais resumo_formacao_cursos }	{$arrow_icon_resumo_formacao_cursos}
-	</SPAN>
-	{END resumo_formacao_cursos_fieldheader}
-{END resumo_formacao_cursos_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field12}
-				 
-					{BEGIN cellblock_grid_headcell_field13}
-	<th
-	
-	{$cell_grid_headcell_field13}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$curriculo_lattes_class}
-			"
-
-			data-field="curriculo_lattes"
-	
-	data-cellId="grid_headcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN curriculo_lattes_fieldheadercolumn}
-	{BEGIN curriculo_lattes_fieldheader}
-	<SPAN {$curriculo_lattes_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field41" {$item_simple_grid_field41} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="curriculo_lattes">
-	{$label usuarios_dados_profissionais curriculo_lattes }	{$arrow_icon_curriculo_lattes}
-	</SPAN>
-	{END curriculo_lattes_fieldheader}
-{END curriculo_lattes_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field13}
-				 
-					{BEGIN cellblock_grid_headcell_field14}
-	<th
-	
-	{$cell_grid_headcell_field14}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$nome_empresa_class}
-			"
-
-			data-field="nome_empresa"
-	
-	data-cellId="grid_headcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN nome_empresa_fieldheadercolumn}
-	{BEGIN nome_empresa_fieldheader}
-	<SPAN {$nome_empresa_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field42" {$item_simple_grid_field42} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nome_empresa">
-	{$label usuarios_dados_profissionais nome_empresa }	{$arrow_icon_nome_empresa}
-	</SPAN>
-	{END nome_empresa_fieldheader}
-{END nome_empresa_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field14}
-				 
-					{BEGIN cellblock_grid_headcell_field15}
-	<th
-	
-	{$cell_grid_headcell_field15}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$cnpj_class}
-			"
-
-			data-field="cnpj"
-	
-	data-cellId="grid_headcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN cnpj_fieldheadercolumn}
-	{BEGIN cnpj_fieldheader}
-	<SPAN {$cnpj_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field43" {$item_simple_grid_field43} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="cnpj">
-	{$label usuarios_dados_profissionais cnpj }	{$arrow_icon_cnpj}
-	</SPAN>
-	{END cnpj_fieldheader}
-{END cnpj_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field15}
-				 
-					{BEGIN cellblock_grid_headcell_field16}
-	<th
-	
-	{$cell_grid_headcell_field16}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$ramo_empresa_class}
-			"
-
-			data-field="ramo_empresa"
-	
-	data-cellId="grid_headcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN ramo_empresa_fieldheadercolumn}
-	{BEGIN ramo_empresa_fieldheader}
-	<SPAN {$ramo_empresa_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field44" {$item_simple_grid_field44} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ramo_empresa">
-	{$label usuarios_dados_profissionais ramo_empresa }	{$arrow_icon_ramo_empresa}
-	</SPAN>
-	{END ramo_empresa_fieldheader}
-{END ramo_empresa_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field16}
-				 
-					{BEGIN cellblock_grid_headcell_field17}
-	<th
-	
-	{$cell_grid_headcell_field17}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$tipo_empresa_class}
-			"
-
-			data-field="tipo_empresa"
-	
-	data-cellId="grid_headcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN tipo_empresa_fieldheadercolumn}
-	{BEGIN tipo_empresa_fieldheader}
-	<SPAN {$tipo_empresa_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field45" {$item_simple_grid_field45} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="tipo_empresa">
-	{$label usuarios_dados_profissionais tipo_empresa }	{$arrow_icon_tipo_empresa}
-	</SPAN>
-	{END tipo_empresa_fieldheader}
-{END tipo_empresa_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field17}
-				 
-					{BEGIN cellblock_grid_headcell_field18}
-	<th
-	
-	{$cell_grid_headcell_field18}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$cep_profissional_class}
-			"
-
-			data-field="cep_profissional"
-	
-	data-cellId="grid_headcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN cep_profissional_fieldheadercolumn}
-	{BEGIN cep_profissional_fieldheader}
-	<SPAN {$cep_profissional_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field46" {$item_simple_grid_field46} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="cep_profissional">
-	{$label usuarios_dados_profissionais cep_profissional }	{$arrow_icon_cep_profissional}
-	</SPAN>
-	{END cep_profissional_fieldheader}
-{END cep_profissional_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field18}
-				 
-					{BEGIN cellblock_grid_headcell_field19}
-	<th
-	
-	{$cell_grid_headcell_field19}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$endereco_profissional_rua_class}
-			"
-
-			data-field="endereco_profissional_rua"
-	
-	data-cellId="grid_headcell_field19" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN endereco_profissional_rua_fieldheadercolumn}
-	{BEGIN endereco_profissional_rua_fieldheader}
-	<SPAN {$endereco_profissional_rua_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field47" {$item_simple_grid_field47} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="endereco_profissional_rua">
-	{$label usuarios_dados_profissionais endereco_profissional_rua }	{$arrow_icon_endereco_profissional_rua}
-	</SPAN>
-	{END endereco_profissional_rua_fieldheader}
-{END endereco_profissional_rua_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field19}
-				 
-					{BEGIN cellblock_grid_headcell_field20}
-	<th
-	
-	{$cell_grid_headcell_field20}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$endereco_profissional_numero_class}
-			"
-
-			data-field="endereco_profissional_numero"
-	
-	data-cellId="grid_headcell_field20" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN endereco_profissional_numero_fieldheadercolumn}
-	{BEGIN endereco_profissional_numero_fieldheader}
-	<SPAN {$endereco_profissional_numero_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field48" {$item_simple_grid_field48} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="endereco_profissional_numero">
-	{$label usuarios_dados_profissionais endereco_profissional_numero }	{$arrow_icon_endereco_profissional_numero}
-	</SPAN>
-	{END endereco_profissional_numero_fieldheader}
-{END endereco_profissional_numero_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field20}
-				 
-					{BEGIN cellblock_grid_headcell_field21}
-	<th
-	
-	{$cell_grid_headcell_field21}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$endereco_profissional_complemento_class}
-			"
-
-			data-field="endereco_profissional_complemento"
-	
-	data-cellId="grid_headcell_field21" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN endereco_profissional_complemento_fieldheadercolumn}
-	{BEGIN endereco_profissional_complemento_fieldheader}
-	<SPAN {$endereco_profissional_complemento_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field49" {$item_simple_grid_field49} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="endereco_profissional_complemento">
-	{$label usuarios_dados_profissionais endereco_profissional_complemento }	{$arrow_icon_endereco_profissional_complemento}
-	</SPAN>
-	{END endereco_profissional_complemento_fieldheader}
-{END endereco_profissional_complemento_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field21}
-				 
-					{BEGIN cellblock_grid_headcell_field22}
-	<th
-	
-	{$cell_grid_headcell_field22}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$endereco_profissional_latitude_class}
-			"
-
-			data-field="endereco_profissional_latitude"
-	
-	data-cellId="grid_headcell_field22" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN endereco_profissional_latitude_fieldheadercolumn}
-	{BEGIN endereco_profissional_latitude_fieldheader}
-	<SPAN {$endereco_profissional_latitude_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field50" {$item_simple_grid_field50} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="endereco_profissional_latitude">
-	{$label usuarios_dados_profissionais endereco_profissional_latitude }	{$arrow_icon_endereco_profissional_latitude}
-	</SPAN>
-	{END endereco_profissional_latitude_fieldheader}
-{END endereco_profissional_latitude_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field22}
-				 
-					{BEGIN cellblock_grid_headcell_field23}
-	<th
-	
-	{$cell_grid_headcell_field23}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$endereco_profissional_longitude_class}
-			"
-
-			data-field="endereco_profissional_longitude"
-	
-	data-cellId="grid_headcell_field23" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN endereco_profissional_longitude_fieldheadercolumn}
-	{BEGIN endereco_profissional_longitude_fieldheader}
-	<SPAN {$endereco_profissional_longitude_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field51" {$item_simple_grid_field51} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="endereco_profissional_longitude">
-	{$label usuarios_dados_profissionais endereco_profissional_longitude }	{$arrow_icon_endereco_profissional_longitude}
-	</SPAN>
-	{END endereco_profissional_longitude_fieldheader}
-{END endereco_profissional_longitude_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field23}
-				 
-					{BEGIN cellblock_grid_headcell_field24}
-	<th
-	
-	{$cell_grid_headcell_field24}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$pais_empresa_class}
-			"
-
-			data-field="pais_empresa"
-	
-	data-cellId="grid_headcell_field24" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN pais_empresa_fieldheadercolumn}
-	{BEGIN pais_empresa_fieldheader}
-	<SPAN {$pais_empresa_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field52" {$item_simple_grid_field52} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="pais_empresa">
-	{$label usuarios_dados_profissionais pais_empresa }	{$arrow_icon_pais_empresa}
-	</SPAN>
-	{END pais_empresa_fieldheader}
-{END pais_empresa_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field24}
-				 
-					{BEGIN cellblock_grid_headcell_field25}
-	<th
-	
-	{$cell_grid_headcell_field25}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$estado_empresa_class}
-			"
-
-			data-field="estado_empresa"
-	
-	data-cellId="grid_headcell_field25" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN estado_empresa_fieldheadercolumn}
-	{BEGIN estado_empresa_fieldheader}
-	<SPAN {$estado_empresa_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field53" {$item_simple_grid_field53} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="estado_empresa">
-	{$label usuarios_dados_profissionais estado_empresa }	{$arrow_icon_estado_empresa}
-	</SPAN>
-	{END estado_empresa_fieldheader}
-{END estado_empresa_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field25}
-				 
-					{BEGIN cellblock_grid_headcell_field26}
-	<th
-	
-	{$cell_grid_headcell_field26}
-	{$recordattrs}
-	class="
 		 r-ori-vert				{$municipio_empresa_class}
 			"
 
 			data-field="municipio_empresa"
 	
-	data-cellId="grid_headcell_field26" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN municipio_empresa_fieldheadercolumn}
 	{BEGIN municipio_empresa_fieldheader}
-	<SPAN {$municipio_empresa_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field54" {$item_simple_grid_field54} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="municipio_empresa">
+	<SPAN {$municipio_empresa_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="municipio_empresa">
 	{$label usuarios_dados_profissionais municipio_empresa }	{$arrow_icon_municipio_empresa}
 	</SPAN>
 	{END municipio_empresa_fieldheader}
@@ -1612,34 +540,7 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field26}
-				 
-					{BEGIN cellblock_grid_headcell_field27}
-	<th
-	
-	{$cell_grid_headcell_field27}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$udp_deletado_class}
-			"
-
-			data-field="udp_deletado"
-	
-	data-cellId="grid_headcell_field27" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN udp_deletado_fieldheadercolumn}
-	{BEGIN udp_deletado_fieldheader}
-	<SPAN {$udp_deletado_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field55" {$item_simple_grid_field55} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="udp_deletado">
-	{$label usuarios_dados_profissionais udp_deletado }	{$arrow_icon_udp_deletado}
-	</SPAN>
-	{END udp_deletado_fieldheader}
-{END udp_deletado_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field27}
+	{END cellblock_grid_headcell_field3}
 							</tr>
 					 
 					 
@@ -1673,19 +574,28 @@
 		{BEGIN edit_column}
 {BEGIN edit_link}
 <span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="Edit" class="btn-link   
-	 glyphicon glyphicon-pencil" href="usuarios_dados_profissionais_edit.php?{$editlink}" {$editlink_attrs} title="Edit" >		
+	<a type="button" title="Editar" class="btn-link   
+	 glyphicon glyphicon-pencil" href="usuarios_dados_profissionais_edit.php?{$editlink}" {$editlink_attrs} title="Editar" data-popup >		
 				
 								</a>
 </span>
 {END edit_link}
 {END edit_column}
 	 
+		{BEGIN inline_cancel}
+<span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
+	<a type="button" title="Cancela" class="btn-link   
+	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="Cancela" >		
+				
+								</a>
+</span>
+{END inline_cancel}
+	 
 		{BEGIN view_column}
 {BEGIN view_link}
 <span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-	<a type="button" title="View record" class="btn-link   
-	 glyphicon glyphicon-search" href="usuarios_dados_profissionais_view.php?{$editlink}" {$viewlink_attrs} title="View" >		
+	<a type="button" title="Exibir Registro" class="btn-link   
+	 glyphicon glyphicon-search" href="usuarios_dados_profissionais_view.php?{$editlink}" {$viewlink_attrs} title="Exibir" data-popup >		
 				
 								</a>
 </span>
@@ -1725,334 +635,12 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$udp_id_class}
-			"
-
-			data-field="udp_id"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN udp_id_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="udp_id" data-default-width >
-{$udp_id_value}
-</span>
-{END udp_id_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-				 
-					{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$udp_usu_id_class}
-			"
-
-			data-field="udp_usu_id"
-	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN udp_usu_id_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="udp_usu_id" data-default-width >
-{$udp_usu_id_value}
-</span>
-{END udp_usu_id_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field1}
-				 
-					{BEGIN cellblock_grid_cell_field2}
-	<td
-	
-	{$cell_grid_cell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$email_profissional_class}
-			"
-
-			data-field="email_profissional"
-	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN email_profissional_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="email_profissional" data-default-width >
-{$email_profissional_value}
-</span>
-{END email_profissional_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field2}
-				 
-					{BEGIN cellblock_grid_cell_field3}
-	<td
-	
-	{$cell_grid_cell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$avaliacao_usuarios_class}
-			"
-
-			data-field="avaliacao_usuarios"
-	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN avaliacao_usuarios_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="avaliacao_usuarios" data-default-width >
-{$avaliacao_usuarios_value}
-</span>
-{END avaliacao_usuarios_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field3}
-				 
-					{BEGIN cellblock_grid_cell_field4}
-	<td
-	
-	{$cell_grid_cell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$sobre_profissional_class}
-			"
-
-			data-field="sobre_profissional"
-	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN sobre_profissional_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="sobre_profissional" data-default-width >
-{$sobre_profissional_value}
-</span>
-{END sobre_profissional_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field4}
-				 
-					{BEGIN cellblock_grid_cell_field5}
-	<td
-	
-	{$cell_grid_cell_field5}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$resumo_formacao_class}
-			"
-
-			data-field="resumo_formacao"
-	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN resumo_formacao_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="resumo_formacao" data-default-width >
-{$resumo_formacao_value}
-</span>
-{END resumo_formacao_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field5}
-				 
-					{BEGIN cellblock_grid_cell_field6}
-	<td
-	
-	{$cell_grid_cell_field6}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$yt_code_apresentacao_class}
-			"
-
-			data-field="yt_code_apresentacao"
-	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN yt_code_apresentacao_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="yt_code_apresentacao" data-default-width >
-{$yt_code_apresentacao_value}
-</span>
-{END yt_code_apresentacao_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field6}
-				 
-					{BEGIN cellblock_grid_cell_field7}
-	<td
-	
-	{$cell_grid_cell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$diferencial_profissional_class}
-			"
-
-			data-field="diferencial_profissional"
-	
-	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN diferencial_profissional_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="diferencial_profissional" data-default-width >
-{$diferencial_profissional_value}
-</span>
-{END diferencial_profissional_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field7}
-				 
-					{BEGIN cellblock_grid_cell_field8}
-	<td
-	
-	{$cell_grid_cell_field8}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$atendimento_presencial_class}
-			"
-
-			data-field="atendimento_presencial"
-	
-	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN atendimento_presencial_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="atendimento_presencial" data-default-width >
-{$atendimento_presencial_value}
-</span>
-{END atendimento_presencial_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field8}
-				 
-					{BEGIN cellblock_grid_cell_field9}
-	<td
-	
-	{$cell_grid_cell_field9}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$atendimento_online_class}
-			"
-
-			data-field="atendimento_online"
-	
-	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN atendimento_online_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="atendimento_online" data-default-width >
-{$atendimento_online_value}
-</span>
-{END atendimento_online_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field9}
-				 
-					{BEGIN cellblock_grid_cell_field10}
-	<td
-	
-	{$cell_grid_cell_field10}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$mini_curriculo_class}
-			"
-
-			data-field="mini_curriculo"
-	
-	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN mini_curriculo_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="mini_curriculo" data-default-width >
-{$mini_curriculo_value}
-</span>
-{END mini_curriculo_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field10}
-				 
-					{BEGIN cellblock_grid_cell_field11}
-	<td
-	
-	{$cell_grid_cell_field11}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$resumo_formacao_academica_class}
-			"
-
-			data-field="resumo_formacao_academica"
-	
-	data-cellId="grid_cell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN resumo_formacao_academica_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="resumo_formacao_academica" data-default-width >
-{$resumo_formacao_academica_value}
-</span>
-{END resumo_formacao_academica_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field11}
-				 
-					{BEGIN cellblock_grid_cell_field12}
-	<td
-	
-	{$cell_grid_cell_field12}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$resumo_formacao_cursos_class}
-			"
-
-			data-field="resumo_formacao_cursos"
-	
-	data-cellId="grid_cell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN resumo_formacao_cursos_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="resumo_formacao_cursos" data-default-width >
-{$resumo_formacao_cursos_value}
-</span>
-{END resumo_formacao_cursos_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field12}
-				 
-					{BEGIN cellblock_grid_cell_field13}
-	<td
-	
-	{$cell_grid_cell_field13}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$curriculo_lattes_class}
-			"
-
-			data-field="curriculo_lattes"
-	
-	data-cellId="grid_cell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN curriculo_lattes_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="curriculo_lattes" data-default-width >
-{$curriculo_lattes_value}
-</span>
-{END curriculo_lattes_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field13}
-				 
-					{BEGIN cellblock_grid_cell_field14}
-	<td
-	
-	{$cell_grid_cell_field14}
-	{$recordattrs}
-	class="
 		 r-ori-vert				{$nome_empresa_class}
 			"
 
 			data-field="nome_empresa"
 	
-	data-cellId="grid_cell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2062,12 +650,12 @@
 </span>
 {END nome_empresa_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field14}
+	{END cellblock_grid_cell_field}
 				 
-					{BEGIN cellblock_grid_cell_field15}
+					{BEGIN cellblock_grid_cell_field1}
 	<td
 	
-	{$cell_grid_cell_field15}
+	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$cnpj_class}
@@ -2075,7 +663,7 @@
 
 			data-field="cnpj"
 	
-	data-cellId="grid_cell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2085,196 +673,12 @@
 </span>
 {END cnpj_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field15}
+	{END cellblock_grid_cell_field1}
 				 
-					{BEGIN cellblock_grid_cell_field16}
+					{BEGIN cellblock_grid_cell_field2}
 	<td
 	
-	{$cell_grid_cell_field16}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$ramo_empresa_class}
-			"
-
-			data-field="ramo_empresa"
-	
-	data-cellId="grid_cell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN ramo_empresa_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ramo_empresa" data-default-width >
-{$ramo_empresa_value}
-</span>
-{END ramo_empresa_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field16}
-				 
-					{BEGIN cellblock_grid_cell_field17}
-	<td
-	
-	{$cell_grid_cell_field17}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$tipo_empresa_class}
-			"
-
-			data-field="tipo_empresa"
-	
-	data-cellId="grid_cell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN tipo_empresa_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="tipo_empresa" data-default-width >
-{$tipo_empresa_value}
-</span>
-{END tipo_empresa_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field17}
-				 
-					{BEGIN cellblock_grid_cell_field18}
-	<td
-	
-	{$cell_grid_cell_field18}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$cep_profissional_class}
-			"
-
-			data-field="cep_profissional"
-	
-	data-cellId="grid_cell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN cep_profissional_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="cep_profissional" data-default-width >
-{$cep_profissional_value}
-</span>
-{END cep_profissional_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field18}
-				 
-					{BEGIN cellblock_grid_cell_field19}
-	<td
-	
-	{$cell_grid_cell_field19}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$endereco_profissional_rua_class}
-			"
-
-			data-field="endereco_profissional_rua"
-	
-	data-cellId="grid_cell_field19" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN endereco_profissional_rua_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="endereco_profissional_rua" data-default-width >
-{$endereco_profissional_rua_value}
-</span>
-{END endereco_profissional_rua_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field19}
-				 
-					{BEGIN cellblock_grid_cell_field20}
-	<td
-	
-	{$cell_grid_cell_field20}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$endereco_profissional_numero_class}
-			"
-
-			data-field="endereco_profissional_numero"
-	
-	data-cellId="grid_cell_field20" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN endereco_profissional_numero_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="endereco_profissional_numero" data-default-width >
-{$endereco_profissional_numero_value}
-</span>
-{END endereco_profissional_numero_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field20}
-				 
-					{BEGIN cellblock_grid_cell_field21}
-	<td
-	
-	{$cell_grid_cell_field21}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$endereco_profissional_complemento_class}
-			"
-
-			data-field="endereco_profissional_complemento"
-	
-	data-cellId="grid_cell_field21" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN endereco_profissional_complemento_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="endereco_profissional_complemento" data-default-width >
-{$endereco_profissional_complemento_value}
-</span>
-{END endereco_profissional_complemento_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field21}
-				 
-					{BEGIN cellblock_grid_cell_field22}
-	<td
-	
-	{$cell_grid_cell_field22}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$endereco_profissional_latitude_class}
-			"
-
-			data-field="endereco_profissional_latitude"
-	
-	data-cellId="grid_cell_field22" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN endereco_profissional_latitude_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="endereco_profissional_latitude" data-default-width >
-{$endereco_profissional_latitude_value}
-</span>
-{END endereco_profissional_latitude_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field22}
-				 
-					{BEGIN cellblock_grid_cell_field23}
-	<td
-	
-	{$cell_grid_cell_field23}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$endereco_profissional_longitude_class}
-			"
-
-			data-field="endereco_profissional_longitude"
-	
-	data-cellId="grid_cell_field23" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN endereco_profissional_longitude_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="endereco_profissional_longitude" data-default-width >
-{$endereco_profissional_longitude_value}
-</span>
-{END endereco_profissional_longitude_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field23}
-				 
-					{BEGIN cellblock_grid_cell_field24}
-	<td
-	
-	{$cell_grid_cell_field24}
+	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$pais_empresa_class}
@@ -2282,7 +686,7 @@
 
 			data-field="pais_empresa"
 	
-	data-cellId="grid_cell_field24" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2292,35 +696,12 @@
 </span>
 {END pais_empresa_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field24}
+	{END cellblock_grid_cell_field2}
 				 
-					{BEGIN cellblock_grid_cell_field25}
+					{BEGIN cellblock_grid_cell_field3}
 	<td
 	
-	{$cell_grid_cell_field25}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$estado_empresa_class}
-			"
-
-			data-field="estado_empresa"
-	
-	data-cellId="grid_cell_field25" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN estado_empresa_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="estado_empresa" data-default-width >
-{$estado_empresa_value}
-</span>
-{END estado_empresa_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field25}
-				 
-					{BEGIN cellblock_grid_cell_field26}
-	<td
-	
-	{$cell_grid_cell_field26}
+	{$cell_grid_cell_field3}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$municipio_empresa_class}
@@ -2328,7 +709,7 @@
 
 			data-field="municipio_empresa"
 	
-	data-cellId="grid_cell_field26" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -2338,30 +719,7 @@
 </span>
 {END municipio_empresa_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field26}
-				 
-					{BEGIN cellblock_grid_cell_field27}
-	<td
-	
-	{$cell_grid_cell_field27}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$udp_deletado_class}
-			"
-
-			data-field="udp_deletado"
-	
-	data-cellId="grid_cell_field27" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN udp_deletado_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="udp_deletado" data-default-width >
-{$udp_deletado_value}
-</span>
-{END udp_deletado_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field27}
+	{END cellblock_grid_cell_field3}
 							</tr>
 					 
 					
@@ -2473,390 +831,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field3}
-				 
-					{BEGIN cellblock_grid_footcell_field4}
-	<td
-	
-	{$cell_grid_footcell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field4}
-				 
-					{BEGIN cellblock_grid_footcell_field5}
-	<td
-	
-	{$cell_grid_footcell_field5}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field5}
-				 
-					{BEGIN cellblock_grid_footcell_field6}
-	<td
-	
-	{$cell_grid_footcell_field6}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field6}
-				 
-					{BEGIN cellblock_grid_footcell_field7}
-	<td
-	
-	{$cell_grid_footcell_field7}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field7}
-				 
-					{BEGIN cellblock_grid_footcell_field8}
-	<td
-	
-	{$cell_grid_footcell_field8}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field8}
-				 
-					{BEGIN cellblock_grid_footcell_field9}
-	<td
-	
-	{$cell_grid_footcell_field9}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field9}
-				 
-					{BEGIN cellblock_grid_footcell_field10}
-	<td
-	
-	{$cell_grid_footcell_field10}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field10}
-				 
-					{BEGIN cellblock_grid_footcell_field11}
-	<td
-	
-	{$cell_grid_footcell_field11}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field11}
-				 
-					{BEGIN cellblock_grid_footcell_field12}
-	<td
-	
-	{$cell_grid_footcell_field12}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field12}
-				 
-					{BEGIN cellblock_grid_footcell_field13}
-	<td
-	
-	{$cell_grid_footcell_field13}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field13}
-				 
-					{BEGIN cellblock_grid_footcell_field14}
-	<td
-	
-	{$cell_grid_footcell_field14}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field14}
-				 
-					{BEGIN cellblock_grid_footcell_field15}
-	<td
-	
-	{$cell_grid_footcell_field15}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field15}
-				 
-					{BEGIN cellblock_grid_footcell_field16}
-	<td
-	
-	{$cell_grid_footcell_field16}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field16}
-				 
-					{BEGIN cellblock_grid_footcell_field17}
-	<td
-	
-	{$cell_grid_footcell_field17}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field17}
-				 
-					{BEGIN cellblock_grid_footcell_field18}
-	<td
-	
-	{$cell_grid_footcell_field18}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field18}
-				 
-					{BEGIN cellblock_grid_footcell_field19}
-	<td
-	
-	{$cell_grid_footcell_field19}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field19" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field19}
-				 
-					{BEGIN cellblock_grid_footcell_field20}
-	<td
-	
-	{$cell_grid_footcell_field20}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field20" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field20}
-				 
-					{BEGIN cellblock_grid_footcell_field21}
-	<td
-	
-	{$cell_grid_footcell_field21}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field21" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field21}
-				 
-					{BEGIN cellblock_grid_footcell_field22}
-	<td
-	
-	{$cell_grid_footcell_field22}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field22" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field22}
-				 
-					{BEGIN cellblock_grid_footcell_field23}
-	<td
-	
-	{$cell_grid_footcell_field23}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field23" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field23}
-				 
-					{BEGIN cellblock_grid_footcell_field24}
-	<td
-	
-	{$cell_grid_footcell_field24}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field24" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field24}
-				 
-					{BEGIN cellblock_grid_footcell_field25}
-	<td
-	
-	{$cell_grid_footcell_field25}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field25" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field25}
-				 
-					{BEGIN cellblock_grid_footcell_field26}
-	<td
-	
-	{$cell_grid_footcell_field26}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field26" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field26}
-				 
-					{BEGIN cellblock_grid_footcell_field27}
-	<td
-	
-	{$cell_grid_footcell_field27}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field27" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field27}
 							</tr>
 					
 					</tfoot>

@@ -459,10 +459,10 @@ class ListPage extends RunnerPage
 			$this->body["begin"].= "<div id=\"search_suggest\" class=\"search_suggest\"></div>";
 
 		if($this->is508) {
-			$this->body["begin"].= "<a href=\"#skipdata\" title=\""."Skip to table data"."\" class=\"".$this->makeClassName("s508")."\">"."Skip to table data"."</a>";
-			$this->body["begin"].= "<a href=\"#skipmenu\" title=\""."Skip to menu"."\" class=\"".$this->makeClassName("s508")."\">"."Skip to menu"."</a>";
-			$this->body["begin"].= "<a href=\"#skipsearch\" title=\""."Skip to search"."\" class=\"".$this->makeClassName("s508")."\">"."Skip to search"."</a>";
-			$this->body["begin"].= "<a href=\"templates/helpshortcut.htm\" title=\""."Hotkeys reference"."\" class=\"".$this->makeClassName("s508")."\">"."Hotkeys reference"."</a>";
+			$this->body["begin"].= "<a href=\"#skipdata\" title=\""."Pular para dados em tabela"."\" class=\"".$this->makeClassName("s508")."\">"."Pular para dados em tabela"."</a>";
+			$this->body["begin"].= "<a href=\"#skipmenu\" title=\""."Ir para o menu"."\" class=\"".$this->makeClassName("s508")."\">"."Ir para o menu"."</a>";
+			$this->body["begin"].= "<a href=\"#skipsearch\" title=\""."Passar à pesquisa"."\" class=\"".$this->makeClassName("s508")."\">"."Passar à pesquisa"."</a>";
+			$this->body["begin"].= "<a href=\"templates/helpshortcut.htm\" title=\""."Referência de hotkeys"."\" class=\"".$this->makeClassName("s508")."\">"."Referência de hotkeys"."</a>";
 		}
 
 		//prepare for dispaly master table info on details table
@@ -2297,7 +2297,7 @@ class ListPage extends RunnerPage
 		if( $showLabelOnly )
 			return $fName;
 
-		return $fName." ". ($desc ? "High to Low" : "Low to High");
+		return $fName." ". ($desc ? "Decrescente" : "Baixo para alto");
 	}
 
 	/**

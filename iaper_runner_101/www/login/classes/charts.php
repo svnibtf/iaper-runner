@@ -487,6 +487,14 @@ class Chart
 			return true;
 		if("usuarios_dados_profissionais" == $this->chrt_array['tables'][0])
 			return true;
+		if("ibge_municipios" == $this->chrt_array['tables'][0])
+			return true;
+		if("ibge_pais" == $this->chrt_array['tables'][0])
+			return true;
+		if("adm_ramos" == $this->chrt_array['tables'][0])
+			return true;
+		if("adm_tipousuario" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 	
@@ -576,12 +584,12 @@ class Chart
 			return "";
 			
 		if( !$this->searchClauseObj )
-			return "No data yet.";
+			return "Nenhum dado ainda";
 
 		if( $this->searchClauseObj->isSearchFunctionalityActivated() )
-			return "No results found.";
+			return "Nenhum Registro Encontrado";
 		
-		return "No data yet.";
+		return "Nenhum dado ainda";
 	}
 	
 	/**

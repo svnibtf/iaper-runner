@@ -1331,7 +1331,7 @@ class EditPage extends RunnerPage
 		{
 			$returnJSON = array();
 			$returnJSON['success'] = false;
-			$returnJSON['message'] = "Error occurred";
+			$returnJSON['message'] = "Ocorreu um erro!";
 			$returnJSON['fatalError'] = true;
 			echo printJSON($returnJSON);
 			exit();
@@ -1344,7 +1344,7 @@ class EditPage extends RunnerPage
 				exit();
 			}
 			else
-				$_SESSION["message_edit"] = "<< "."Error occurred"." >>";
+				$_SESSION["message_edit"] = "<< "."Ocorreu um erro!"." >>";
 		}
 	}
 
@@ -1472,7 +1472,7 @@ class EditPage extends RunnerPage
 		if( $this->isMessageSet() )
 			return;
 
-		$this->setMessage( "<strong>&lt;&lt;&lt; "."Record updated". " &gt;&gt;&gt;</strong>" );
+		$this->setMessage( "<strong>&lt;&lt;&lt; "."Registro foi atualizado". " &gt;&gt;&gt;</strong>" );
 	}
 
 	/**
@@ -1662,10 +1662,10 @@ class EditPage extends RunnerPage
 			return true;
 		if( isLoggedAsGuest() || !isLogged() )
 		{
-			$this->setMessage( "Your session has expired." .
+			$this->setMessage( "Sua sessão expirou." .
 				"<a href='#' id='loginButtonContinue" . $this->id . "'>" .
 				"Login" . "</a>" .
-				" to save data." );
+				"para salvar dados." );
 		}
 		else
 		{
@@ -1732,7 +1732,7 @@ class EditPage extends RunnerPage
 	{
 		if($this->mode == EDIT_INLINE)
 		{
-			echo printJSON(array("success" => false, "message" => "The record is not editable"));
+			echo printJSON(array("success" => false, "message" => "O registro não é editável"));
 			exit();
 		}
 		Security::redirectToList( $this->tName );
@@ -1812,10 +1812,10 @@ class EditPage extends RunnerPage
 	{
 		if( $this->mode != EDIT_INLINE )
 		{
-			$this->message = "<strong>&lt;&lt;&lt; "."Record was NOT edited"."</strong> &gt;&gt;&gt;<br><br>".$message;
+			$this->message = "<strong>&lt;&lt;&lt; "."Registro NÃO foi editado"."</strong> &gt;&gt;&gt;<br><br>".$message;
 		}
 		else
-			$this->message = "Record was NOT edited".". ".$message;
+			$this->message = "Registro NÃO foi editado".". ".$message;
 
 		$this->messageType = MESSAGE_ERROR;
 	}

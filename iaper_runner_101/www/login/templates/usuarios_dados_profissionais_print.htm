@@ -1,5 +1,5 @@
-<!doctype html><p align=center><font size=+1 color=red>This website was created by evaluation version of PHPRunner Trial.</font></p>
-<p align=center><font size=+1 color=red>This warning message will not appear on website created by a paid-for version of PHPRunner Trial.</font></p>
+<!doctype html><p align=center><font size=+1 color=red></font></p>
+<p align=center><font size=+1 color=red></font></p>
 <html  {$html_attrs}>
 	<head>
 				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -46,6 +46,20 @@
 </span>
 {END printtabheader}
 		</div>					</div>
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c4" data-pageid="{$pageid}"	{$cell_top_c4}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN mastertable_block}
+<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
+	{$showmasterfile}
+</div>
+{END mastertable_block}		</div>					</div>
 	</div>		
 {END top_block}
 									{BEGIN above-grid_block}
@@ -55,14 +69,31 @@
 			 
 				<div 
 	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
-	class=" r-ori-vert			col-md-12
+	class="			col-md-12
 	
 ">
 		{BEGIN firstAboveGridCell}
 		 
 		<span data-itemtype="print_pages" data-itemid="print_pages" {$item_print_pages} data-pageid="{$pageid}" data-small >
 	{$print_pages_labelprint_pages}
-</span>			{END firstAboveGridCell}	
+</span>	 
+		{BEGIN inline_cancel}
+<span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Cancela" class="btn-link   
+	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="Cancela" >		
+				
+								</a>
+</span>
+{END inline_cancel}
+	 
+		{BEGIN inlineadd_link}
+<span data-itemtype="inline_add" data-itemid="inline_add" {$item_inline_add} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$inlineaddlink_attrs} >
+							Adicionar Novo			</a>
+</span>
+{END inlineadd_link}
+			{END firstAboveGridCell}	
 	</div>					</div>
 	</div>		
 {END above-grid_block}
@@ -89,20 +120,20 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$udp_id_class}
+		 r-ori-vert				{$sobre_profissional_class}
 			"
 
-			data-field="udp_id"
+			data-field="sobre_profissional"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN udp_id_fieldheadercolumn}
+		{BEGIN sobre_profissional_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="udp_id">
-	{$label usuarios_dados_profissionais udp_id }	</span>
-{END udp_id_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="sobre_profissional">
+	{$label usuarios_dados_profissionais sobre_profissional }	</span>
+{END sobre_profissional_fieldheadercolumn}
 
 	
 	</th>
@@ -114,20 +145,20 @@
 	{$cell_grid_headcell_field1}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$udp_usu_id_class}
+		 r-ori-vert				{$resumo_formacao_class}
 			"
 
-			data-field="udp_usu_id"
+			data-field="resumo_formacao"
 	
 	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN udp_usu_id_fieldheadercolumn}
+		{BEGIN resumo_formacao_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="udp_usu_id">
-	{$label usuarios_dados_profissionais udp_usu_id }	</span>
-{END udp_usu_id_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="resumo_formacao">
+	{$label usuarios_dados_profissionais resumo_formacao }	</span>
+{END resumo_formacao_fieldheadercolumn}
 
 	
 	</th>
@@ -139,20 +170,20 @@
 	{$cell_grid_headcell_field2}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$email_profissional_class}
+		 r-ori-vert				{$diferencial_profissional_class}
 			"
 
-			data-field="email_profissional"
+			data-field="diferencial_profissional"
 	
 	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN email_profissional_fieldheadercolumn}
+		{BEGIN diferencial_profissional_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="email_profissional">
-	{$label usuarios_dados_profissionais email_profissional }	</span>
-{END email_profissional_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="diferencial_profissional">
+	{$label usuarios_dados_profissionais diferencial_profissional }	</span>
+{END diferencial_profissional_fieldheadercolumn}
 
 	
 	</th>
@@ -164,20 +195,20 @@
 	{$cell_grid_headcell_field3}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$avaliacao_usuarios_class}
+		 r-ori-vert				{$atendimento_presencial_class}
 			"
 
-			data-field="avaliacao_usuarios"
+			data-field="atendimento_presencial"
 	
 	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN avaliacao_usuarios_fieldheadercolumn}
+		{BEGIN atendimento_presencial_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="avaliacao_usuarios">
-	{$label usuarios_dados_profissionais avaliacao_usuarios }	</span>
-{END avaliacao_usuarios_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="atendimento_presencial">
+	{$label usuarios_dados_profissionais atendimento_presencial }	</span>
+{END atendimento_presencial_fieldheadercolumn}
 
 	
 	</th>
@@ -189,20 +220,20 @@
 	{$cell_grid_headcell_field4}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$sobre_profissional_class}
+		 r-ori-vert				{$atendimento_online_class}
 			"
 
-			data-field="sobre_profissional"
+			data-field="atendimento_online"
 	
 	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN sobre_profissional_fieldheadercolumn}
+		{BEGIN atendimento_online_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field32" {$item_simple_grid_field32} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="sobre_profissional">
-	{$label usuarios_dados_profissionais sobre_profissional }	</span>
-{END sobre_profissional_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="atendimento_online">
+	{$label usuarios_dados_profissionais atendimento_online }	</span>
+{END atendimento_online_fieldheadercolumn}
 
 	
 	</th>
@@ -214,20 +245,20 @@
 	{$cell_grid_headcell_field5}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$resumo_formacao_class}
+		 r-ori-vert				{$mini_curriculo_class}
 			"
 
-			data-field="resumo_formacao"
+			data-field="mini_curriculo"
 	
 	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN resumo_formacao_fieldheadercolumn}
+		{BEGIN mini_curriculo_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field33" {$item_simple_grid_field33} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="resumo_formacao">
-	{$label usuarios_dados_profissionais resumo_formacao }	</span>
-{END resumo_formacao_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="mini_curriculo">
+	{$label usuarios_dados_profissionais mini_curriculo }	</span>
+{END mini_curriculo_fieldheadercolumn}
 
 	
 	</th>
@@ -239,20 +270,20 @@
 	{$cell_grid_headcell_field6}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$yt_code_apresentacao_class}
+		 r-ori-vert				{$resumo_formacao_academica_class}
 			"
 
-			data-field="yt_code_apresentacao"
+			data-field="resumo_formacao_academica"
 	
 	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN yt_code_apresentacao_fieldheadercolumn}
+		{BEGIN resumo_formacao_academica_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field34" {$item_simple_grid_field34} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="yt_code_apresentacao">
-	{$label usuarios_dados_profissionais yt_code_apresentacao }	</span>
-{END yt_code_apresentacao_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="resumo_formacao_academica">
+	{$label usuarios_dados_profissionais resumo_formacao_academica }	</span>
+{END resumo_formacao_academica_fieldheadercolumn}
 
 	
 	</th>
@@ -264,20 +295,20 @@
 	{$cell_grid_headcell_field7}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$diferencial_profissional_class}
+		 r-ori-vert				{$resumo_formacao_cursos_class}
 			"
 
-			data-field="diferencial_profissional"
+			data-field="resumo_formacao_cursos"
 	
 	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN diferencial_profissional_fieldheadercolumn}
+		{BEGIN resumo_formacao_cursos_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field35" {$item_simple_grid_field35} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="diferencial_profissional">
-	{$label usuarios_dados_profissionais diferencial_profissional }	</span>
-{END diferencial_profissional_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="resumo_formacao_cursos">
+	{$label usuarios_dados_profissionais resumo_formacao_cursos }	</span>
+{END resumo_formacao_cursos_fieldheadercolumn}
 
 	
 	</th>
@@ -289,20 +320,20 @@
 	{$cell_grid_headcell_field8}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$atendimento_presencial_class}
+		 r-ori-vert				{$nome_empresa_class}
 			"
 
-			data-field="atendimento_presencial"
+			data-field="nome_empresa"
 	
 	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN atendimento_presencial_fieldheadercolumn}
+		{BEGIN nome_empresa_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field36" {$item_simple_grid_field36} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="atendimento_presencial">
-	{$label usuarios_dados_profissionais atendimento_presencial }	</span>
-{END atendimento_presencial_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nome_empresa">
+	{$label usuarios_dados_profissionais nome_empresa }	</span>
+{END nome_empresa_fieldheadercolumn}
 
 	
 	</th>
@@ -314,20 +345,20 @@
 	{$cell_grid_headcell_field9}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$atendimento_online_class}
+		 r-ori-vert				{$cnpj_class}
 			"
 
-			data-field="atendimento_online"
+			data-field="cnpj"
 	
 	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN atendimento_online_fieldheadercolumn}
+		{BEGIN cnpj_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field37" {$item_simple_grid_field37} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="atendimento_online">
-	{$label usuarios_dados_profissionais atendimento_online }	</span>
-{END atendimento_online_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="cnpj">
+	{$label usuarios_dados_profissionais cnpj }	</span>
+{END cnpj_fieldheadercolumn}
 
 	
 	</th>
@@ -339,20 +370,20 @@
 	{$cell_grid_headcell_field10}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$mini_curriculo_class}
+		 r-ori-vert				{$ramo_empresa_class}
 			"
 
-			data-field="mini_curriculo"
+			data-field="ramo_empresa"
 	
 	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN mini_curriculo_fieldheadercolumn}
+		{BEGIN ramo_empresa_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field38" {$item_simple_grid_field38} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="mini_curriculo">
-	{$label usuarios_dados_profissionais mini_curriculo }	</span>
-{END mini_curriculo_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field32" {$item_simple_grid_field32} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ramo_empresa">
+	{$label usuarios_dados_profissionais ramo_empresa }	</span>
+{END ramo_empresa_fieldheadercolumn}
 
 	
 	</th>
@@ -364,20 +395,20 @@
 	{$cell_grid_headcell_field11}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$resumo_formacao_academica_class}
+		 r-ori-vert				{$tipo_empresa_class}
 			"
 
-			data-field="resumo_formacao_academica"
+			data-field="tipo_empresa"
 	
 	data-cellId="grid_headcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN resumo_formacao_academica_fieldheadercolumn}
+		{BEGIN tipo_empresa_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field39" {$item_simple_grid_field39} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="resumo_formacao_academica">
-	{$label usuarios_dados_profissionais resumo_formacao_academica }	</span>
-{END resumo_formacao_academica_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field33" {$item_simple_grid_field33} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="tipo_empresa">
+	{$label usuarios_dados_profissionais tipo_empresa }	</span>
+{END tipo_empresa_fieldheadercolumn}
 
 	
 	</th>
@@ -389,20 +420,20 @@
 	{$cell_grid_headcell_field12}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$resumo_formacao_cursos_class}
+		 r-ori-vert				{$cep_profissional_class}
 			"
 
-			data-field="resumo_formacao_cursos"
+			data-field="cep_profissional"
 	
 	data-cellId="grid_headcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN resumo_formacao_cursos_fieldheadercolumn}
+		{BEGIN cep_profissional_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field40" {$item_simple_grid_field40} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="resumo_formacao_cursos">
-	{$label usuarios_dados_profissionais resumo_formacao_cursos }	</span>
-{END resumo_formacao_cursos_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field34" {$item_simple_grid_field34} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="cep_profissional">
+	{$label usuarios_dados_profissionais cep_profissional }	</span>
+{END cep_profissional_fieldheadercolumn}
 
 	
 	</th>
@@ -414,20 +445,20 @@
 	{$cell_grid_headcell_field13}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$curriculo_lattes_class}
+		 r-ori-vert				{$endereco_profissional_rua_class}
 			"
 
-			data-field="curriculo_lattes"
+			data-field="endereco_profissional_rua"
 	
 	data-cellId="grid_headcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN curriculo_lattes_fieldheadercolumn}
+		{BEGIN endereco_profissional_rua_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field41" {$item_simple_grid_field41} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="curriculo_lattes">
-	{$label usuarios_dados_profissionais curriculo_lattes }	</span>
-{END curriculo_lattes_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field35" {$item_simple_grid_field35} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="endereco_profissional_rua">
+	{$label usuarios_dados_profissionais endereco_profissional_rua }	</span>
+{END endereco_profissional_rua_fieldheadercolumn}
 
 	
 	</th>
@@ -439,20 +470,20 @@
 	{$cell_grid_headcell_field14}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$nome_empresa_class}
+		 r-ori-vert				{$endereco_profissional_numero_class}
 			"
 
-			data-field="nome_empresa"
+			data-field="endereco_profissional_numero"
 	
 	data-cellId="grid_headcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN nome_empresa_fieldheadercolumn}
+		{BEGIN endereco_profissional_numero_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field42" {$item_simple_grid_field42} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nome_empresa">
-	{$label usuarios_dados_profissionais nome_empresa }	</span>
-{END nome_empresa_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field36" {$item_simple_grid_field36} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="endereco_profissional_numero">
+	{$label usuarios_dados_profissionais endereco_profissional_numero }	</span>
+{END endereco_profissional_numero_fieldheadercolumn}
 
 	
 	</th>
@@ -464,20 +495,20 @@
 	{$cell_grid_headcell_field15}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$cnpj_class}
+		 r-ori-vert				{$endereco_profissional_complemento_class}
 			"
 
-			data-field="cnpj"
+			data-field="endereco_profissional_complemento"
 	
 	data-cellId="grid_headcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN cnpj_fieldheadercolumn}
+		{BEGIN endereco_profissional_complemento_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field43" {$item_simple_grid_field43} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="cnpj">
-	{$label usuarios_dados_profissionais cnpj }	</span>
-{END cnpj_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field37" {$item_simple_grid_field37} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="endereco_profissional_complemento">
+	{$label usuarios_dados_profissionais endereco_profissional_complemento }	</span>
+{END endereco_profissional_complemento_fieldheadercolumn}
 
 	
 	</th>
@@ -489,20 +520,20 @@
 	{$cell_grid_headcell_field16}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$ramo_empresa_class}
+		 r-ori-vert				{$pais_empresa_class}
 			"
 
-			data-field="ramo_empresa"
+			data-field="pais_empresa"
 	
 	data-cellId="grid_headcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN ramo_empresa_fieldheadercolumn}
+		{BEGIN pais_empresa_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field44" {$item_simple_grid_field44} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ramo_empresa">
-	{$label usuarios_dados_profissionais ramo_empresa }	</span>
-{END ramo_empresa_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field38" {$item_simple_grid_field38} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="pais_empresa">
+	{$label usuarios_dados_profissionais pais_empresa }	</span>
+{END pais_empresa_fieldheadercolumn}
 
 	
 	</th>
@@ -514,20 +545,20 @@
 	{$cell_grid_headcell_field17}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$tipo_empresa_class}
+		 r-ori-vert				{$estado_empresa_class}
 			"
 
-			data-field="tipo_empresa"
+			data-field="estado_empresa"
 	
 	data-cellId="grid_headcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN tipo_empresa_fieldheadercolumn}
+		{BEGIN estado_empresa_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field45" {$item_simple_grid_field45} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="tipo_empresa">
-	{$label usuarios_dados_profissionais tipo_empresa }	</span>
-{END tipo_empresa_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field39" {$item_simple_grid_field39} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="estado_empresa">
+	{$label usuarios_dados_profissionais estado_empresa }	</span>
+{END estado_empresa_fieldheadercolumn}
 
 	
 	</th>
@@ -539,249 +570,24 @@
 	{$cell_grid_headcell_field18}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$cep_profissional_class}
-			"
-
-			data-field="cep_profissional"
-	
-	data-cellId="grid_headcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN cep_profissional_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field46" {$item_simple_grid_field46} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="cep_profissional">
-	{$label usuarios_dados_profissionais cep_profissional }	</span>
-{END cep_profissional_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field18}
-				 
-					{BEGIN cellblock_grid_headcell_field19}
-	<th
-	
-	{$cell_grid_headcell_field19}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$endereco_profissional_rua_class}
-			"
-
-			data-field="endereco_profissional_rua"
-	
-	data-cellId="grid_headcell_field19" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN endereco_profissional_rua_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field47" {$item_simple_grid_field47} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="endereco_profissional_rua">
-	{$label usuarios_dados_profissionais endereco_profissional_rua }	</span>
-{END endereco_profissional_rua_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field19}
-				 
-					{BEGIN cellblock_grid_headcell_field20}
-	<th
-	
-	{$cell_grid_headcell_field20}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$endereco_profissional_numero_class}
-			"
-
-			data-field="endereco_profissional_numero"
-	
-	data-cellId="grid_headcell_field20" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN endereco_profissional_numero_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field48" {$item_simple_grid_field48} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="endereco_profissional_numero">
-	{$label usuarios_dados_profissionais endereco_profissional_numero }	</span>
-{END endereco_profissional_numero_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field20}
-				 
-					{BEGIN cellblock_grid_headcell_field21}
-	<th
-	
-	{$cell_grid_headcell_field21}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$endereco_profissional_complemento_class}
-			"
-
-			data-field="endereco_profissional_complemento"
-	
-	data-cellId="grid_headcell_field21" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN endereco_profissional_complemento_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field49" {$item_simple_grid_field49} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="endereco_profissional_complemento">
-	{$label usuarios_dados_profissionais endereco_profissional_complemento }	</span>
-{END endereco_profissional_complemento_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field21}
-				 
-					{BEGIN cellblock_grid_headcell_field22}
-	<th
-	
-	{$cell_grid_headcell_field22}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$endereco_profissional_latitude_class}
-			"
-
-			data-field="endereco_profissional_latitude"
-	
-	data-cellId="grid_headcell_field22" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN endereco_profissional_latitude_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field50" {$item_simple_grid_field50} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="endereco_profissional_latitude">
-	{$label usuarios_dados_profissionais endereco_profissional_latitude }	</span>
-{END endereco_profissional_latitude_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field22}
-				 
-					{BEGIN cellblock_grid_headcell_field23}
-	<th
-	
-	{$cell_grid_headcell_field23}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$endereco_profissional_longitude_class}
-			"
-
-			data-field="endereco_profissional_longitude"
-	
-	data-cellId="grid_headcell_field23" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN endereco_profissional_longitude_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field51" {$item_simple_grid_field51} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="endereco_profissional_longitude">
-	{$label usuarios_dados_profissionais endereco_profissional_longitude }	</span>
-{END endereco_profissional_longitude_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field23}
-				 
-					{BEGIN cellblock_grid_headcell_field24}
-	<th
-	
-	{$cell_grid_headcell_field24}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$pais_empresa_class}
-			"
-
-			data-field="pais_empresa"
-	
-	data-cellId="grid_headcell_field24" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN pais_empresa_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field52" {$item_simple_grid_field52} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="pais_empresa">
-	{$label usuarios_dados_profissionais pais_empresa }	</span>
-{END pais_empresa_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field24}
-				 
-					{BEGIN cellblock_grid_headcell_field25}
-	<th
-	
-	{$cell_grid_headcell_field25}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$estado_empresa_class}
-			"
-
-			data-field="estado_empresa"
-	
-	data-cellId="grid_headcell_field25" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN estado_empresa_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field53" {$item_simple_grid_field53} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="estado_empresa">
-	{$label usuarios_dados_profissionais estado_empresa }	</span>
-{END estado_empresa_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field25}
-				 
-					{BEGIN cellblock_grid_headcell_field26}
-	<th
-	
-	{$cell_grid_headcell_field26}
-	{$recordattrs}
-	class="
 		 r-ori-vert				{$municipio_empresa_class}
 			"
 
 			data-field="municipio_empresa"
 	
-	data-cellId="grid_headcell_field26" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
 		{BEGIN municipio_empresa_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field54" {$item_simple_grid_field54} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="municipio_empresa">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field40" {$item_simple_grid_field40} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="municipio_empresa">
 	{$label usuarios_dados_profissionais municipio_empresa }	</span>
 {END municipio_empresa_fieldheadercolumn}
 
 	
 	</th>
-	{END cellblock_grid_headcell_field26}
-				 
-					{BEGIN cellblock_grid_headcell_field27}
-	<th
-	
-	{$cell_grid_headcell_field27}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$udp_deletado_class}
-			"
-
-			data-field="udp_deletado"
-	
-	data-cellId="grid_headcell_field27" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN udp_deletado_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field55" {$item_simple_grid_field55} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="udp_deletado">
-	{$label usuarios_dados_profissionais udp_deletado }	</span>
-{END udp_deletado_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field27}
+	{END cellblock_grid_headcell_field18}
 							</tr>
 					 
 					 
@@ -804,104 +610,12 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$udp_id_class}
-			"
-
-			data-field="udp_id"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN udp_id_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="udp_id" data-default-width >
-{$udp_id_value}
-</span>
-{END udp_id_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-				 
-					{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$udp_usu_id_class}
-			"
-
-			data-field="udp_usu_id"
-	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN udp_usu_id_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="udp_usu_id" data-default-width >
-{$udp_usu_id_value}
-</span>
-{END udp_usu_id_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field1}
-				 
-					{BEGIN cellblock_grid_cell_field2}
-	<td
-	
-	{$cell_grid_cell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$email_profissional_class}
-			"
-
-			data-field="email_profissional"
-	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN email_profissional_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="email_profissional" data-default-width >
-{$email_profissional_value}
-</span>
-{END email_profissional_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field2}
-				 
-					{BEGIN cellblock_grid_cell_field3}
-	<td
-	
-	{$cell_grid_cell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$avaliacao_usuarios_class}
-			"
-
-			data-field="avaliacao_usuarios"
-	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN avaliacao_usuarios_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="avaliacao_usuarios" data-default-width >
-{$avaliacao_usuarios_value}
-</span>
-{END avaliacao_usuarios_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field3}
-				 
-					{BEGIN cellblock_grid_cell_field4}
-	<td
-	
-	{$cell_grid_cell_field4}
-	{$recordattrs}
-	class="
 		 r-ori-vert				{$sobre_profissional_class}
 			"
 
 			data-field="sobre_profissional"
 	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -911,12 +625,12 @@
 </span>
 {END sobre_profissional_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field4}
+	{END cellblock_grid_cell_field}
 				 
-					{BEGIN cellblock_grid_cell_field5}
+					{BEGIN cellblock_grid_cell_field1}
 	<td
 	
-	{$cell_grid_cell_field5}
+	{$cell_grid_cell_field1}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$resumo_formacao_class}
@@ -924,7 +638,7 @@
 
 			data-field="resumo_formacao"
 	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -934,35 +648,12 @@
 </span>
 {END resumo_formacao_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field5}
+	{END cellblock_grid_cell_field1}
 				 
-					{BEGIN cellblock_grid_cell_field6}
+					{BEGIN cellblock_grid_cell_field2}
 	<td
 	
-	{$cell_grid_cell_field6}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$yt_code_apresentacao_class}
-			"
-
-			data-field="yt_code_apresentacao"
-	
-	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN yt_code_apresentacao_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="yt_code_apresentacao" data-default-width >
-{$yt_code_apresentacao_value}
-</span>
-{END yt_code_apresentacao_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field6}
-				 
-					{BEGIN cellblock_grid_cell_field7}
-	<td
-	
-	{$cell_grid_cell_field7}
+	{$cell_grid_cell_field2}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$diferencial_profissional_class}
@@ -970,7 +661,7 @@
 
 			data-field="diferencial_profissional"
 	
-	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -980,12 +671,12 @@
 </span>
 {END diferencial_profissional_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field7}
+	{END cellblock_grid_cell_field2}
 				 
-					{BEGIN cellblock_grid_cell_field8}
+					{BEGIN cellblock_grid_cell_field3}
 	<td
 	
-	{$cell_grid_cell_field8}
+	{$cell_grid_cell_field3}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$atendimento_presencial_class}
@@ -993,7 +684,7 @@
 
 			data-field="atendimento_presencial"
 	
-	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1003,12 +694,12 @@
 </span>
 {END atendimento_presencial_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field8}
+	{END cellblock_grid_cell_field3}
 				 
-					{BEGIN cellblock_grid_cell_field9}
+					{BEGIN cellblock_grid_cell_field4}
 	<td
 	
-	{$cell_grid_cell_field9}
+	{$cell_grid_cell_field4}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$atendimento_online_class}
@@ -1016,7 +707,7 @@
 
 			data-field="atendimento_online"
 	
-	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1026,12 +717,12 @@
 </span>
 {END atendimento_online_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field9}
+	{END cellblock_grid_cell_field4}
 				 
-					{BEGIN cellblock_grid_cell_field10}
+					{BEGIN cellblock_grid_cell_field5}
 	<td
 	
-	{$cell_grid_cell_field10}
+	{$cell_grid_cell_field5}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$mini_curriculo_class}
@@ -1039,7 +730,7 @@
 
 			data-field="mini_curriculo"
 	
-	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1049,12 +740,12 @@
 </span>
 {END mini_curriculo_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field10}
+	{END cellblock_grid_cell_field5}
 				 
-					{BEGIN cellblock_grid_cell_field11}
+					{BEGIN cellblock_grid_cell_field6}
 	<td
 	
-	{$cell_grid_cell_field11}
+	{$cell_grid_cell_field6}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$resumo_formacao_academica_class}
@@ -1062,7 +753,7 @@
 
 			data-field="resumo_formacao_academica"
 	
-	data-cellId="grid_cell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1072,12 +763,12 @@
 </span>
 {END resumo_formacao_academica_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field11}
+	{END cellblock_grid_cell_field6}
 				 
-					{BEGIN cellblock_grid_cell_field12}
+					{BEGIN cellblock_grid_cell_field7}
 	<td
 	
-	{$cell_grid_cell_field12}
+	{$cell_grid_cell_field7}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$resumo_formacao_cursos_class}
@@ -1085,7 +776,7 @@
 
 			data-field="resumo_formacao_cursos"
 	
-	data-cellId="grid_cell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1095,35 +786,12 @@
 </span>
 {END resumo_formacao_cursos_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field12}
+	{END cellblock_grid_cell_field7}
 				 
-					{BEGIN cellblock_grid_cell_field13}
+					{BEGIN cellblock_grid_cell_field8}
 	<td
 	
-	{$cell_grid_cell_field13}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$curriculo_lattes_class}
-			"
-
-			data-field="curriculo_lattes"
-	
-	data-cellId="grid_cell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN curriculo_lattes_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="curriculo_lattes" data-default-width >
-{$curriculo_lattes_value}
-</span>
-{END curriculo_lattes_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field13}
-				 
-					{BEGIN cellblock_grid_cell_field14}
-	<td
-	
-	{$cell_grid_cell_field14}
+	{$cell_grid_cell_field8}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$nome_empresa_class}
@@ -1131,7 +799,7 @@
 
 			data-field="nome_empresa"
 	
-	data-cellId="grid_cell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1141,12 +809,12 @@
 </span>
 {END nome_empresa_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field14}
+	{END cellblock_grid_cell_field8}
 				 
-					{BEGIN cellblock_grid_cell_field15}
+					{BEGIN cellblock_grid_cell_field9}
 	<td
 	
-	{$cell_grid_cell_field15}
+	{$cell_grid_cell_field9}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$cnpj_class}
@@ -1154,7 +822,7 @@
 
 			data-field="cnpj"
 	
-	data-cellId="grid_cell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1164,12 +832,12 @@
 </span>
 {END cnpj_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field15}
+	{END cellblock_grid_cell_field9}
 				 
-					{BEGIN cellblock_grid_cell_field16}
+					{BEGIN cellblock_grid_cell_field10}
 	<td
 	
-	{$cell_grid_cell_field16}
+	{$cell_grid_cell_field10}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$ramo_empresa_class}
@@ -1177,7 +845,7 @@
 
 			data-field="ramo_empresa"
 	
-	data-cellId="grid_cell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1187,12 +855,12 @@
 </span>
 {END ramo_empresa_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field16}
+	{END cellblock_grid_cell_field10}
 				 
-					{BEGIN cellblock_grid_cell_field17}
+					{BEGIN cellblock_grid_cell_field11}
 	<td
 	
-	{$cell_grid_cell_field17}
+	{$cell_grid_cell_field11}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$tipo_empresa_class}
@@ -1200,7 +868,7 @@
 
 			data-field="tipo_empresa"
 	
-	data-cellId="grid_cell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1210,12 +878,12 @@
 </span>
 {END tipo_empresa_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field17}
+	{END cellblock_grid_cell_field11}
 				 
-					{BEGIN cellblock_grid_cell_field18}
+					{BEGIN cellblock_grid_cell_field12}
 	<td
 	
-	{$cell_grid_cell_field18}
+	{$cell_grid_cell_field12}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$cep_profissional_class}
@@ -1223,7 +891,7 @@
 
 			data-field="cep_profissional"
 	
-	data-cellId="grid_cell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1233,12 +901,12 @@
 </span>
 {END cep_profissional_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field18}
+	{END cellblock_grid_cell_field12}
 				 
-					{BEGIN cellblock_grid_cell_field19}
+					{BEGIN cellblock_grid_cell_field13}
 	<td
 	
-	{$cell_grid_cell_field19}
+	{$cell_grid_cell_field13}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$endereco_profissional_rua_class}
@@ -1246,7 +914,7 @@
 
 			data-field="endereco_profissional_rua"
 	
-	data-cellId="grid_cell_field19" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1256,12 +924,12 @@
 </span>
 {END endereco_profissional_rua_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field19}
+	{END cellblock_grid_cell_field13}
 				 
-					{BEGIN cellblock_grid_cell_field20}
+					{BEGIN cellblock_grid_cell_field14}
 	<td
 	
-	{$cell_grid_cell_field20}
+	{$cell_grid_cell_field14}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$endereco_profissional_numero_class}
@@ -1269,7 +937,7 @@
 
 			data-field="endereco_profissional_numero"
 	
-	data-cellId="grid_cell_field20" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1279,12 +947,12 @@
 </span>
 {END endereco_profissional_numero_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field20}
+	{END cellblock_grid_cell_field14}
 				 
-					{BEGIN cellblock_grid_cell_field21}
+					{BEGIN cellblock_grid_cell_field15}
 	<td
 	
-	{$cell_grid_cell_field21}
+	{$cell_grid_cell_field15}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$endereco_profissional_complemento_class}
@@ -1292,7 +960,7 @@
 
 			data-field="endereco_profissional_complemento"
 	
-	data-cellId="grid_cell_field21" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1302,58 +970,12 @@
 </span>
 {END endereco_profissional_complemento_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field21}
+	{END cellblock_grid_cell_field15}
 				 
-					{BEGIN cellblock_grid_cell_field22}
+					{BEGIN cellblock_grid_cell_field16}
 	<td
 	
-	{$cell_grid_cell_field22}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$endereco_profissional_latitude_class}
-			"
-
-			data-field="endereco_profissional_latitude"
-	
-	data-cellId="grid_cell_field22" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN endereco_profissional_latitude_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="endereco_profissional_latitude" data-default-width >
-{$endereco_profissional_latitude_value}
-</span>
-{END endereco_profissional_latitude_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field22}
-				 
-					{BEGIN cellblock_grid_cell_field23}
-	<td
-	
-	{$cell_grid_cell_field23}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$endereco_profissional_longitude_class}
-			"
-
-			data-field="endereco_profissional_longitude"
-	
-	data-cellId="grid_cell_field23" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN endereco_profissional_longitude_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="endereco_profissional_longitude" data-default-width >
-{$endereco_profissional_longitude_value}
-</span>
-{END endereco_profissional_longitude_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field23}
-				 
-					{BEGIN cellblock_grid_cell_field24}
-	<td
-	
-	{$cell_grid_cell_field24}
+	{$cell_grid_cell_field16}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$pais_empresa_class}
@@ -1361,7 +983,7 @@
 
 			data-field="pais_empresa"
 	
-	data-cellId="grid_cell_field24" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1371,12 +993,12 @@
 </span>
 {END pais_empresa_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field24}
+	{END cellblock_grid_cell_field16}
 				 
-					{BEGIN cellblock_grid_cell_field25}
+					{BEGIN cellblock_grid_cell_field17}
 	<td
 	
-	{$cell_grid_cell_field25}
+	{$cell_grid_cell_field17}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$estado_empresa_class}
@@ -1384,7 +1006,7 @@
 
 			data-field="estado_empresa"
 	
-	data-cellId="grid_cell_field25" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1394,12 +1016,12 @@
 </span>
 {END estado_empresa_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field25}
+	{END cellblock_grid_cell_field17}
 				 
-					{BEGIN cellblock_grid_cell_field26}
+					{BEGIN cellblock_grid_cell_field18}
 	<td
 	
-	{$cell_grid_cell_field26}
+	{$cell_grid_cell_field18}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$municipio_empresa_class}
@@ -1407,7 +1029,7 @@
 
 			data-field="municipio_empresa"
 	
-	data-cellId="grid_cell_field26" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1417,30 +1039,7 @@
 </span>
 {END municipio_empresa_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field26}
-				 
-					{BEGIN cellblock_grid_cell_field27}
-	<td
-	
-	{$cell_grid_cell_field27}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$udp_deletado_class}
-			"
-
-			data-field="udp_deletado"
-	
-	data-cellId="grid_cell_field27" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN udp_deletado_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="udp_deletado" data-default-width >
-{$udp_deletado_value}
-</span>
-{END udp_deletado_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field27}
+	{END cellblock_grid_cell_field18}
 							</tr>
 					 
 					
@@ -1760,150 +1359,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field18}
-				 
-					{BEGIN cellblock_grid_footcell_field19}
-	<td
-	
-	{$cell_grid_footcell_field19}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field19" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_print"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field19}
-				 
-					{BEGIN cellblock_grid_footcell_field20}
-	<td
-	
-	{$cell_grid_footcell_field20}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field20" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_print"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field20}
-				 
-					{BEGIN cellblock_grid_footcell_field21}
-	<td
-	
-	{$cell_grid_footcell_field21}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field21" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_print"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field21}
-				 
-					{BEGIN cellblock_grid_footcell_field22}
-	<td
-	
-	{$cell_grid_footcell_field22}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field22" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_print"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field22}
-				 
-					{BEGIN cellblock_grid_footcell_field23}
-	<td
-	
-	{$cell_grid_footcell_field23}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field23" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_print"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field23}
-				 
-					{BEGIN cellblock_grid_footcell_field24}
-	<td
-	
-	{$cell_grid_footcell_field24}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field24" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_print"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field24}
-				 
-					{BEGIN cellblock_grid_footcell_field25}
-	<td
-	
-	{$cell_grid_footcell_field25}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field25" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_print"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field25}
-				 
-					{BEGIN cellblock_grid_footcell_field26}
-	<td
-	
-	{$cell_grid_footcell_field26}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field26" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_print"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field26}
-				 
-					{BEGIN cellblock_grid_footcell_field27}
-	<td
-	
-	{$cell_grid_footcell_field27}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field27" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_print"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field27}
 							</tr>
 					
 					</tfoot>

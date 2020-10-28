@@ -4,8 +4,8 @@
 	<li class="manage">
 		<div>
 			<a href="#"><img alt="*" src="images/plus.gif">
-				<span class=expand>expand all</span>
-				<span class="hide" style="display:none;">collapse all</span>
+				<span class=expand>Abrir Menu</span>
+				<span class="hide" style="display:none;">Fechar Menu</span>
 			</a>
 		</div>
 	</li>
@@ -19,15 +19,6 @@
 
 	</li>
 	{END item1_menulink}
-
-	{BEGIN item2_menulink}
-	<li id="item2" class="{$item2_groupclass} {$item2_current} menuLeaf" level=1>
-			<div>
-<a {$item2_menulink_attrs} class="{$item2_current}">{$item2_title}</a>
-</div>
-
-	</li>
-	{END item2_menulink}
 </ul>
 {END mainmenu_block}
 

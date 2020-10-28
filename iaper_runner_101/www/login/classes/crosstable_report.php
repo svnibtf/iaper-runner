@@ -657,10 +657,10 @@ class CrossTableReport
 	public function getCurrentOperationList()
 	{
 		$names = array();
-		$names["sum"] = "Sum";
+		$names["sum"] = "Soma";
 		$names["min"] = "Min";
 		$names["max"] = "Max";
-		$names["avg"] = "Avg";
+		$names["avg"] = "Média";
 
 		$opData = array();
 
@@ -825,23 +825,23 @@ class CrossTableReport
 		if( $this->pdfJsonMode() )
 			return $this->getPdfCrossHeader();
 
-		return "<div>"."Group X"
-			.":<b>".$this->fieldsTotalsData[ $this->xFName ]["label"]."</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"."Group Y"
-			.":<b>".$this->fieldsTotalsData[ $this->yFName ]["label"]."</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"."Field"
-			.":<b>".$this->fieldsTotalsData[ $this->dataField ]["label"]."</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"."Group function"
+		return "<div>"."Grupo X"
+			.":<b>".$this->fieldsTotalsData[ $this->xFName ]["label"]."</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"."Grupo Y"
+			.":<b>".$this->fieldsTotalsData[ $this->yFName ]["label"]."</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"."Campo"
+			.":<b>".$this->fieldsTotalsData[ $this->dataField ]["label"]."</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"."Função Grupo"
 			.":<b>".$this->dataGroupFunction."</b></div>";
 	}
 
 	protected function getPdfCrossHeader()
 	{
 		$parts = array();
-		$parts[] = "{ text: '"."Group X".":'}";
+		$parts[] = "{ text: '"."Grupo X".":'}";
 		$parts[] = "{ text: '". $this->getXGroupLabel() ."     ', bold: true }";
-		$parts[] = "{ text: '"."Group Y".":'}";
+		$parts[] = "{ text: '"."Grupo Y".":'}";
 		$parts[] = "{ text: '". $this->getYGroupLabel() ."     ', bold: true }";
-		$parts[] = "{ text: '"."Field".":'}";
+		$parts[] = "{ text: '"."Campo".":'}";
 		$parts[] = "{ text: '". $this->getDataFieldLabel() ."     ', bold: true }";
-		$parts[] = "{ text: '"."Group function".":'}";
+		$parts[] = "{ text: '"."Função Grupo".":'}";
 		$parts[] = "{ text: '". jsreplace( $this->dataGroupFunction ) ."', bold: true }";
 
 		return implode( $parts, "," );
@@ -876,7 +876,7 @@ class CrossTableReport
 		switch( $this->dataGroupFunction )
 		{
 			case "sum":
-				return "Sum";
+				return "Soma";
 			break;
 			case "min":
 				return "Min";
@@ -885,7 +885,7 @@ class CrossTableReport
 				return "Max";
 			break;
 			case "avg":
-				return "Average";
+				return "Média";
 			break;
 			default:
 				return "";
@@ -944,19 +944,19 @@ class CrossTableReport
 		if( IsDateFieldType( $ftype ) )
 		{
 			if($int_type == 1) // DATE_INTERVAL_YEAR
-				return "year";
+				return "ano";
 			if($int_type == 2) // DATE_INTERVAL_QUARTER
-				return "quarter";
+				return "trimestre";
 			if($int_type == 3) // DATE_INTERVAL_MONTH
-				return "month";
+				return "mês";
 			if($int_type == 4) // DATE_INTERVAL_WEEK
-				return "week";
+				return "semana";
 			if($int_type == 5) // DATE_INTERVAL_DAY
-				return "day";
+				return "dia";
 			if($int_type == 6) // DATE_INTERVAL_HOUR
-				return "hour";
+				return "hora";
 			if($int_type == 7) // DATE_INTERVAL_MINUTE
-				return "minute";
+				return "minuto";
 		}
 		return $int_type;
 	}

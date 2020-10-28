@@ -1,5 +1,5 @@
-<!doctype html><p align=center><font size=+1 color=red>This website was created by evaluation version of PHPRunner Trial.</font></p>
-<p align=center><font size=+1 color=red>This warning message will not appear on website created by a paid-for version of PHPRunner Trial.</font></p>
+<!doctype html><p align=center><font size=+1 color=red></font></p>
+<p align=center><font size=+1 color=red></font></p>
 <html  {$html_attrs}>
 	<head>
 				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -65,13 +65,13 @@
 <div>
 {BEGIN back_button}
 		
-	<button class="btn btn-sm btn-default" {$backbutton_attrs}>Back to list</button>
+	<button class="btn btn-sm btn-default" {$backbutton_attrs}>Voltar à Lista</button>
 	{END back_button}
 {BEGIN view_page_button}
-	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>View</button>
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>Exibir</button>
 {END view_page_button}
 {BEGIN edit_page_button}
-	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>Edit</button>
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>Editar</button>
 {END edit_page_button}
 </div>
 </div>
@@ -111,98 +111,6 @@
 >
 	<div edit-form-cell class="clearfix">
 				
-{BEGIN udp_id_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_udp_id}  r-vertical-field" 
-	data-fieldname="udp_id" 
-	data-signal-error-for="udp_id{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="udp_id" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_udp_id}">
-		{BEGIN udp_id_label}{$label usuarios_dados_profissionais udp_id }{END udp_id_label}
-	</label>
-	<div class="r-edit-field">
-		{$udp_id_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="udp_id">
-		<div class="text-muted" >
-		{$tooltip usuarios_dados_profissionais udp_id }		</div>
-	</div>
-</div>
-
-
-{END udp_id_fieldblock}
-											
-{BEGIN udp_usu_id_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_udp_usu_id}  r-vertical-field" 
-	data-fieldname="udp_usu_id" 
-	data-signal-error-for="udp_usu_id{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="udp_usu_id" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_udp_usu_id}">
-		{BEGIN udp_usu_id_label}{$label usuarios_dados_profissionais udp_usu_id }{END udp_usu_id_label}
-	</label>
-	<div class="r-edit-field">
-		{$udp_usu_id_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="udp_usu_id">
-		<div class="text-muted" >
-		{$tooltip usuarios_dados_profissionais udp_usu_id }		</div>
-	</div>
-</div>
-
-
-{END udp_usu_id_fieldblock}
-											
-{BEGIN email_profissional_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_email_profissional}  r-vertical-field" 
-	data-fieldname="email_profissional" 
-	data-signal-error-for="email_profissional{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="email_profissional" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_email_profissional}">
-		{BEGIN email_profissional_label}{$label usuarios_dados_profissionais email_profissional }{END email_profissional_label}
-	</label>
-	<div class="r-edit-field">
-		{$email_profissional_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="email_profissional">
-		<div class="text-muted" >
-		{$tooltip usuarios_dados_profissionais email_profissional }		</div>
-	</div>
-</div>
-
-
-{END email_profissional_fieldblock}
-											
-{BEGIN avaliacao_usuarios_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_avaliacao_usuarios}  r-vertical-field" 
-	data-fieldname="avaliacao_usuarios" 
-	data-signal-error-for="avaliacao_usuarios{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="avaliacao_usuarios" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_avaliacao_usuarios}">
-		{BEGIN avaliacao_usuarios_label}{$label usuarios_dados_profissionais avaliacao_usuarios }{END avaliacao_usuarios_label}
-	</label>
-	<div class="r-edit-field">
-		{$avaliacao_usuarios_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="avaliacao_usuarios">
-		<div class="text-muted" >
-		{$tooltip usuarios_dados_profissionais avaliacao_usuarios }		</div>
-	</div>
-</div>
-
-
-{END avaliacao_usuarios_fieldblock}
-											
 {BEGIN sobre_profissional_fieldblock}
 
 
@@ -248,29 +156,6 @@
 
 
 {END resumo_formacao_fieldblock}
-											
-{BEGIN yt_code_apresentacao_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_yt_code_apresentacao}  r-vertical-field" 
-	data-fieldname="yt_code_apresentacao" 
-	data-signal-error-for="yt_code_apresentacao{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="yt_code_apresentacao" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_yt_code_apresentacao}">
-		{BEGIN yt_code_apresentacao_label}{$label usuarios_dados_profissionais yt_code_apresentacao }{END yt_code_apresentacao_label}
-	</label>
-	<div class="r-edit-field">
-		{$yt_code_apresentacao_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="yt_code_apresentacao">
-		<div class="text-muted" >
-		{$tooltip usuarios_dados_profissionais yt_code_apresentacao }		</div>
-	</div>
-</div>
-
-
-{END yt_code_apresentacao_fieldblock}
 											
 {BEGIN diferencial_profissional_fieldblock}
 
@@ -409,29 +294,6 @@
 
 
 {END resumo_formacao_cursos_fieldblock}
-											
-{BEGIN curriculo_lattes_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_curriculo_lattes}  r-vertical-field" 
-	data-fieldname="curriculo_lattes" 
-	data-signal-error-for="curriculo_lattes{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field13" {$item_integrated_edit_field13} data-pageid="{$pageid}" data-field="curriculo_lattes" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_curriculo_lattes}">
-		{BEGIN curriculo_lattes_label}{$label usuarios_dados_profissionais curriculo_lattes }{END curriculo_lattes_label}
-	</label>
-	<div class="r-edit-field">
-		{$curriculo_lattes_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="curriculo_lattes">
-		<div class="text-muted" >
-		{$tooltip usuarios_dados_profissionais curriculo_lattes }		</div>
-	</div>
-</div>
-
-
-{END curriculo_lattes_fieldblock}
 											
 {BEGIN nome_empresa_fieldblock}
 
@@ -617,52 +479,6 @@
 
 {END endereco_profissional_complemento_fieldblock}
 											
-{BEGIN endereco_profissional_latitude_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_endereco_profissional_latitude}  r-vertical-field" 
-	data-fieldname="endereco_profissional_latitude" 
-	data-signal-error-for="endereco_profissional_latitude{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field22" {$item_integrated_edit_field22} data-pageid="{$pageid}" data-field="endereco_profissional_latitude" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_endereco_profissional_latitude}">
-		{BEGIN endereco_profissional_latitude_label}{$label usuarios_dados_profissionais endereco_profissional_latitude }{END endereco_profissional_latitude_label}
-	</label>
-	<div class="r-edit-field">
-		{$endereco_profissional_latitude_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="endereco_profissional_latitude">
-		<div class="text-muted" >
-		{$tooltip usuarios_dados_profissionais endereco_profissional_latitude }		</div>
-	</div>
-</div>
-
-
-{END endereco_profissional_latitude_fieldblock}
-											
-{BEGIN endereco_profissional_longitude_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_endereco_profissional_longitude}  r-vertical-field" 
-	data-fieldname="endereco_profissional_longitude" 
-	data-signal-error-for="endereco_profissional_longitude{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field23" {$item_integrated_edit_field23} data-pageid="{$pageid}" data-field="endereco_profissional_longitude" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_endereco_profissional_longitude}">
-		{BEGIN endereco_profissional_longitude_label}{$label usuarios_dados_profissionais endereco_profissional_longitude }{END endereco_profissional_longitude_label}
-	</label>
-	<div class="r-edit-field">
-		{$endereco_profissional_longitude_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="endereco_profissional_longitude">
-		<div class="text-muted" >
-		{$tooltip usuarios_dados_profissionais endereco_profissional_longitude }		</div>
-	</div>
-</div>
-
-
-{END endereco_profissional_longitude_fieldblock}
-											
 {BEGIN pais_empresa_fieldblock}
 
 
@@ -731,29 +547,6 @@
 
 
 {END municipio_empresa_fieldblock}
-											
-{BEGIN udp_deletado_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_udp_deletado}  r-vertical-field" 
-	data-fieldname="udp_deletado" 
-	data-signal-error-for="udp_deletado{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field27" {$item_integrated_edit_field27} data-pageid="{$pageid}" data-field="udp_deletado" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_udp_deletado}">
-		{BEGIN udp_deletado_label}{$label usuarios_dados_profissionais udp_deletado }{END udp_deletado_label}
-	</label>
-	<div class="r-edit-field">
-		{$udp_deletado_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="udp_deletado">
-		<div class="text-muted" >
-		{$tooltip usuarios_dados_profissionais udp_deletado }		</div>
-	</div>
-</div>
-
-
-{END udp_deletado_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}
@@ -777,14 +570,14 @@
 		<span data-itemtype="add_save" data-itemid="add_save" {$item_add_save} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
 	" {$savebutton_attrs} >
-							Save			</a>
+							Salvar			</a>
 </span>
 	 
 		{BEGIN back_button}
 <span data-itemtype="add_back_list" data-itemid="add_back_list" {$item_add_back_list} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" id="backButton{$id}" >
-							Back to list			</a>
+							Voltar à Lista			</a>
 </span>
 {END back_button}
 	 
@@ -792,7 +585,7 @@
 <span data-itemtype="add_cancel" data-itemid="add_cancel" {$item_add_cancel} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
 	" id="cancelButton{$id}" >
-							Cancel			</a>
+							Cancela			</a>
 </span>
 {END cancel_button}
 	</div>					</div>

@@ -4,7 +4,7 @@ class paramsLogger
 	/**
 	 * @type String
 	 */
-	protected $paramsTableName = "";
+	protected $paramsTableName = "iaper_settings";
 
 	/**
 	 * 1 - saved searches

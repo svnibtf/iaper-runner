@@ -48,14 +48,14 @@ class SearchPanelSimple extends SearchPanel {
 		$searchPanelAttrs = $this->searchClauseObj->getSrchPanelAttrs();
 		// show hide window	
 		$this->xt->assign("showHideSearchWin_attrs", ' title="Floating window"');
-		$searchOpt_mess = ($searchPanelAttrs['srchOptShowStatus'] ? "Hide search options" : "Show search options");
+		$searchOpt_mess = ($searchPanelAttrs['srchOptShowStatus'] ? "Ocultar opções de busca" : "Mostrar opções de busca");
 		$this->xt->assign("showHideSearchPanel_attrs", 'align="absmiddle" title="'.$searchOpt_mess.'" alt="'.$searchOpt_mess.'"');
 		
 		$searchforAttrs = "name=\"ctlSearchFor".$this->id."\" id=\"ctlSearchFor".$this->id."\"";
 		if($this->isUseAjaxSuggest)
 			$searchforAttrs .= " autocomplete=off ";		
 	
-		$searchforAttrs.= ' placeholder="'."search".'"';
+		$searchforAttrs.= ' placeholder="'."Buscar".'"';
 		if( $this->searchClauseObj->isUsedSrch() || strlen( $searchGlobalParams["simpleSrch"] ) )
 		{
 			$valSrchFor = $searchGlobalParams["simpleSrch"];
@@ -102,7 +102,7 @@ class SearchPanelSimple extends SearchPanel {
 		$this->xt->assignbyref("any_checkbox",$searchRadio['any_checkbox']);
 		
 		// assign the 'Show/Hide options' button 
-		$showHideOpt_mess = $this->srchPanelAttrs['ctrlTypeComboStatus'] ? "Hide options" : "Show options";		
+		$showHideOpt_mess = $this->srchPanelAttrs['ctrlTypeComboStatus'] ? "Ocultar opções" : "Mostrar opções";		
 		$this->xt->assign("showHideOpt_mess", $showHideOpt_mess);
 		$this->xt->assign("showHideCtrlsOpt_attrs", 'style="display: none;"');
 		

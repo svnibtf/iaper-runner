@@ -140,7 +140,7 @@ class ExportPage extends RunnerPage
 			$options[] = '<option value="'.runner_htmlspecialchars( $field ).'" selected="selected">'.runner_htmlspecialchars( $this->pSet->label( $field ) ).'</option>';
 		}
 
-		return '<select name="exportFields" multiple style="width: 100%;" data-placeholder="'."Please select".'" id="exportFields'. $this->id .'">'. implode( "", $options ) .'</select>';
+		return '<select name="exportFields" multiple style="width: 100%;" data-placeholder="'."Favor Selecionar".'" id="exportFields'. $this->id .'">'. implode( "", $options ) .'</select>';
 	}
 	
 	/**
@@ -475,11 +475,11 @@ class ExportPage extends RunnerPage
 				if( strlen( $data["totalsType"] ) )
 				{
 					if( $data["totalsType"] == "COUNT" )
-						echo "Count".": ";
+						echo "Contar".": ";
 					elseif( $data["totalsType"] == "TOTAL" )
 						echo "Total".": ";
 					elseif( $data["totalsType"] == "AVERAGE" )
-						echo "Average".": ";
+						echo "Média".": ";
 
 					echo runner_htmlspecialchars( GetTotals($data["fName"],
 						$totals[ $data["fName"] ]["value"],
@@ -504,7 +504,7 @@ class ExportPage extends RunnerPage
 		{
 			$fType = $this->pSet->getFieldType( $field );
 			if( IsBinaryType( $fType ) )
-				$values[ $field ] = "LONG BINARY DATA - CANNOT BE DISPLAYED";
+				$values[ $field ] = "Dados Binários longos demais, Não pode ser exibido";
 			else
 				$values[ $field ] = $this->getFormattedFieldValue( $field, $row );
 		}

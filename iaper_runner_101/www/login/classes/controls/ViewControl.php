@@ -171,7 +171,7 @@ class ViewControl
 
 		if(IsBinaryType($this->fieldType))
 		{
-			$value = "LONG BINARY DATA - CANNOT BE DISPLAYED";
+			$value = "Dados Binários longos demais, Não pode ser exibido";
 			$this->searchHighlight = false;
 		}
 
@@ -182,9 +182,9 @@ class ViewControl
 		if($this->editFormat == EDIT_FORMAT_CHECKBOX && $this->viewFormat == FORMAT_NONE)
 		{
 			if($value && $value!=0)
-				$value = "Yes";
+				$value = "Sim";
 			else
-				$value = "No";
+				$value = "Não";
 
 			$this->searchHighlight = false;
 		}
@@ -318,7 +318,7 @@ class ViewControl
 		$dataField = 'data-fieldlabel="'.runner_htmlspecialchars( $label ).'"';
 
 		return $truncatedValue.' <a href="javascript:void(0);" data-gridlink data-query="'.GetTableLink('fulltext', '', implode('&',$params)).'" '.$dataField.'>'
-			."More".'&nbsp;...</a>';
+			."Mais".'&nbsp;...</a>';
 	}
 
 	/**

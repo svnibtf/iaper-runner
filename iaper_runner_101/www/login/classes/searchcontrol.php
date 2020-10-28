@@ -190,12 +190,12 @@ class SearchControl
 	
 	function getSimpleSearchTypeCombo($selOpt, $not) 
 	{
-		$options = "<option value=\"Contains\" ".( $selOpt == "Contains" && !$not ? "selected" : "" ).">"."Contains"."</option>";
-		$options.= "<option value=\"Equals\" ".( $selOpt == "Equals" && !$not ? "selected" : "" ).">"."Equals"."</option>";
-		$options.= "<option value=\"Starts with\" ".( $selOpt == "Starts with" && !$not ? "selected" : "" ).">"."Starts with"."</option>";
-		$options.= "<option value=\"More than\" ".( $selOpt == "More than" && !$not ? "selected" : "" ).">"."More than"."</option>";
-		$options.= "<option value=\"Less than\" ".( $selOpt == "Less than" && !$not ? "selected" : "" ).">"."Less than"."</option>";
-		$options.= "<option value=\"Empty\" ".( $selOpt == "Empty" && !$not ? "selected" : "" ).">"."Empty"."</option>";
+		$options = "<option value=\"Contains\" ".( $selOpt == "Contains" && !$not ? "selected" : "" ).">"."Contém"."</option>";
+		$options.= "<option value=\"Equals\" ".( $selOpt == "Equals" && !$not ? "selected" : "" ).">"."Igual a"."</option>";
+		$options.= "<option value=\"Starts with\" ".( $selOpt == "Starts with" && !$not ? "selected" : "" ).">"."Inicia com"."</option>";
+		$options.= "<option value=\"More than\" ".( $selOpt == "More than" && !$not ? "selected" : "" ).">"."Maior que"."</option>";
+		$options.= "<option value=\"Less than\" ".( $selOpt == "Less than" && !$not ? "selected" : "" ).">"."Menor  que"."</option>";
+		$options.= "<option value=\"Empty\" ".( $selOpt == "Empty" && !$not ? "selected" : "" ).">"."Vazio"."</option>";
 		return $options;
 	}
 	
@@ -267,7 +267,7 @@ class SearchControl
 		}
 		
 		$html = '<a id = "'.$this->getDelButtonId($fName, $recId).'" ctrlId="'.$recId.'" fName="'.GoodFieldName($fName)
-			.'" class="searchPanelButton searchpanel-options" '.$iconAttr.' href="#" title="'."Delete control".'">' . $text . '</a>';
+			.'" class="searchPanelButton searchpanel-options" '.$iconAttr.' href="#" title="'."Elimina o controle".'">' . $text . '</a>';
 		return $html;
 	}
 	

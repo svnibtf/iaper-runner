@@ -364,7 +364,7 @@ class RunnerCipherer
 	 */
 	public static function getForLogin( $loginSet = null )
 	{	
-		return new RunnerCipherer( GLOBAL_PAGES, null);
+		return new RunnerCipherer( "usuarios", $loginSet);
 	}	
 }
 ?>

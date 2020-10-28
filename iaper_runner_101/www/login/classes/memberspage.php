@@ -72,6 +72,7 @@ class MembersPage extends ListPage_Simple
 		$this->xt->assign("menu_block",true);
 		
 		$this->xt->assign("grid_block", true);
+		$this->xt->assign("displayname_column", true);
 	}		
 	
 	/**
@@ -93,7 +94,7 @@ class MembersPage extends ListPage_Simple
 			$row = array();
 			$row["grid_record"] = array();
 			$row["grid_record"]["data"] = array();
-			$username = $data[""];
+			$username = $data["email"];
 			
 			$securityId = "";
 			if( ( $isFBLogin || $isGoogleLogin ) && $securityIdField ) {
@@ -158,7 +159,11 @@ class MembersPage extends ListPage_Simple
 			} 
 			$row["username"] = runner_htmlspecialchars( $formattedUsername );
 			
-					
+				$row["displayusername"] = runner_htmlspecialchars( $data["nome"] );
+			$row["displayusername_attrs"] = "id=\"cellDisplayName".runner_htmlspecialchars($userid)."\"";
+			
+			$this->users[ $userid ]["displayUserName"] = $data["nome"];
+				
 			if( $securityId )
 				$this->users[ $userid ]["userName"] = $securityId;
 			else
@@ -389,6 +394,7 @@ class MembersPage extends ListPage_Simple
 	
 	function fillFields()
 	{
+		$this->fields[] = array("name" => "DisplayName", "visible" => 1, "caption" => "Display name");
 		foreach($this->groups as $idx => $g)
 		{
 			$this->fields[] = array("name" => $g[0], "visible" => 1, "caption" => $g[1]);

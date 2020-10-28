@@ -7,6 +7,18 @@ require_once("include/dbcommon.php");
 require_once('classes/menupage.php');
 
 
+Security::processLogoutRequest();
+if( !isLogged() || isLoggedAsGuest() ) 
+{
+	Security::tryRelogin();
+}
+
+if( !isLogged() )
+{
+	HeaderRedirect("login");
+	return;
+}
+
 
 if (($_SESSION["MyURL"] == "") || (!isLoggedAsGuest())) {
 	Security::saveRedirectURL();

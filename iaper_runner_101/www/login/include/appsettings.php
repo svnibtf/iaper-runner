@@ -48,7 +48,7 @@ include(getabspath('classes/pdlayout.php'));
 
 //	custom labels
 $custom_labels = array();
-$custom_labels["English"] = array();
+$custom_labels["Portuguese(Brazil)"] = array();
 
 define('GLOBAL_PAGES_SHORT', ".global");
 define('GLOBAL_PAGES', "<global>");
@@ -512,7 +512,7 @@ $globalSettings = array();
 $g_defaultOptionValues = array();
 $g_settingsType = array();
 
-$globalSettings["nLoginMethod"] = -1;
+$globalSettings["nLoginMethod"] = 1;
 
 $twilioSID = "";
 $twilioAuth = "";
@@ -524,6 +524,11 @@ $globalSettings["bTwoFactorAuth"] = false;
 
 
 $globalSettings["popupPagesLayoutNames"] = array();
+					
+;
+$globalSettings["popupPagesLayoutNames"]["login"] = "login";
+			;
+$globalSettings["popupPagesLayoutNames"]["register"] = "login";
 
 //mail settings
 $globalSettings["useBuiltInMailer"] = false;
@@ -551,18 +556,23 @@ $globalSettings["LandingURL"] = "";
 $globalSettings["LandingPageId"] = "";
 
 $globalSettings["ProjectLogo"] = array();
-$globalSettings["ProjectLogo"]["English"] = "login";
+$globalSettings["ProjectLogo"]["Portuguese(Brazil)"] = "IAPER";
 
 $globalSettings["CookieBanner"] = array();
 
-$globalSettings["useCookieBanner"] = 0 != 0;
+$globalSettings["useCookieBanner"] = 1 != 0;
 
 
+$globalSettings["createLoginPage"] = true;
+$globalSettings["userGroupCount"] = 1;
 
 
 $globalSettings["apiGoogleMapsCode"] = "";
 
+$globalSettings["SpUserIdField"] = "";
 
+	
+	
 
 
 /**
@@ -616,15 +626,16 @@ $wr_pagestylepath = "OfficeOffice";
 $wr_is_standalone = false;
 $WRAdminPagePassword = "";
 
-$cLoginTable = "";
-$cDisplayNameField = "";
-$cUserNameField	= "";
-$cPasswordField	= "";
-$cUserGroupField = "";
-$cEmailField = "";
-$globalSettings["usersTableInProject"] = false;
+$cLoginTable = "usuarios";
+$cDisplayNameField = "nome";
+$cUserNameField	= "email";
+$cPasswordField	= "senha";
+$cUserGroupField = "email";
+$cEmailField = "email";
+$globalSettings["usersTableInProject"] = true;
+$globalSettings["usersDatasourceTable"] = "usuarios";
 
-$globalSettings["jwtSecret"] = "hhuN2wUWRANOH5nG7Ee5";
+$globalSettings["jwtSecret"] = "59g022prYpvbfbxN8ZfP";
 
 if( $cDisplayNameField == '' )
 	$cDisplayNameField = $cUserNameField;
@@ -636,7 +647,10 @@ $cEmailFieldType = 200;
 
 $arrCustomPages = array();
 
-
+																																	$cPasswordFieldType	= 3;
+						$cUserNameFieldType	= 200;
+						$cEmailFieldType = 200;
+																																																																																																																																																																																																																																	
 
 $useAJAX = true;
 $suggestAllContent = true;
@@ -644,9 +658,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "1_1603739394";
+$projectBuildKey = "32_1603830149";
 $wizardBuildKey = "35870";
-$projectBuildNumber = "1";
+$projectBuildNumber = "32";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -665,10 +679,14 @@ $menuTreelikeFlags["main"] = 1;
 
 // table captions
 $tableCaptions = array();
-$tableCaptions["English"] = array();
-$tableCaptions["English"][""] = "";
-$tableCaptions["English"]["usuarios"] = "Usuarios";
-$tableCaptions["English"]["usuarios_dados_profissionais"] = "Usuarios Dados Profissionais";
+$tableCaptions["Portuguese(Brazil)"] = array();
+$tableCaptions["Portuguese(Brazil)"][""] = "";
+$tableCaptions["Portuguese(Brazil)"]["usuarios"] = "Usuarios";
+$tableCaptions["Portuguese(Brazil)"]["usuarios_dados_profissionais"] = "Dados Profissionais";
+$tableCaptions["Portuguese(Brazil)"]["ibge_municipios"] = "Ibge Municipios";
+$tableCaptions["Portuguese(Brazil)"]["ibge_pais"] = "Ibge Pais";
+$tableCaptions["Portuguese(Brazil)"]["adm_ramos"] = "Adm Ramos";
+$tableCaptions["Portuguese(Brazil)"]["adm_tipousuario"] = "Adm Tipousuario";
 
 
 $globalEvents = new class_GlobalEvents;
@@ -717,7 +735,7 @@ $mediaType = $mediaType ? $mediaType : 0;
 
 
 $page_titles[".global"] = array();
-if(mlang_getcurrentlang()=="English")
+if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 {
 }
 
@@ -739,8 +757,22 @@ $csrfProtectionOff = false;
 $conn = $cman->getDefault()->conn;
 
 
+//	delete old username & password cookies
+if( $_COOKIE["password"] ) {
+	runner_setcookie("username", "", time() - 1, "", "", false, false);
+	runner_setcookie("password", "", time() - 1, "", "", false, false);
+}
 
-$isGroupSecurity = false;
+
+$logoutPerformed = false;
+$scriptname = getFileNameFromURL();
+	if(!isLogged() && $scriptname!="login.php" && $scriptname!="remind.php" && $scriptname!="register.php" && $scriptname!="checkduplicates.php")
+{
+	Security::doGuestLogin();
+}
+
+
+$isGroupSecurity = true;
 
 $isUseRTEBasic = true;
 

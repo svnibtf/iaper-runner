@@ -50,7 +50,7 @@ class ViewDatabaseAudioField extends ViewControl
 	 */
 	public function getExportValue(&$data, $keylink = "", $html = false )
 	{
-		return "LONG BINARY DATA - CANNOT BE DISPLAYED";
+		return "Dados Binários longos demais, Não pode ser exibido";
 	}
 }
 ?>

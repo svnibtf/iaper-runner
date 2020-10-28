@@ -158,7 +158,7 @@ class ImportPage extends RunnerPage
 		if( $returnJSON != false )
 			echo $returnJSON;
 		else
-			echo "The file you're trying to import cannot be parsed";
+			echo "O arquivo que você está tentando importar não pode ser analisada";
 		
 		exit();	
 	}
@@ -1061,16 +1061,16 @@ class ImportPage extends RunnerPage
 		}
 		else
 		{
-			$reportText .= "Import into"." ".$this->strOriginalTableName.$lineBreak.
+			$reportText .= "Importar para"." ".$this->strOriginalTableName.$lineBreak.
 				str_format_datetime( db2time( now() ) ) .$lineBreak.$lineBreak;
 		}
 		
-		$reportText .= mysprintf("%s out of %s records processed successfully.", array($boldBegin.$importedReords.$boldEnd, $boldBegin.$totalRecords.$boldEnd)) .$lineBreak.
-			mysprintf("%s records added.", array($boldBegin.$addedRecords.$boldEnd)) .$lineBreak.
-			mysprintf("%s records updated.", array($boldBegin.$updatedRecords.$boldEnd)) .$lineBreak;
+		$reportText .= mysprintf("%s de %s de registros processados com sucesso.", array($boldBegin.$importedReords.$boldEnd, $boldBegin.$totalRecords.$boldEnd)) .$lineBreak.
+			mysprintf("%s de registros adicionados.", array($boldBegin.$addedRecords.$boldEnd)) .$lineBreak.
+			mysprintf("%s de registros atualizados.", array($boldBegin.$updatedRecords.$boldEnd)) .$lineBreak;
 			
 		if( $notImportedRecords )
-			$reportText.= mysprintf("%s records processed with errors", array($boldBegin.$notImportedRecords.$boldEnd));
+			$reportText.= mysprintf("%s de registros processados com erros.", array($boldBegin.$notImportedRecords.$boldEnd));
 		
 		if( $notImportedRecords && count($errorMessages) )
 		{

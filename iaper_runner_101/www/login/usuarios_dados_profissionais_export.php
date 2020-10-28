@@ -9,6 +9,8 @@ require_once("classes/sql.php");
 
 require_once("include/usuarios_dados_profissionais_variables.php");
 
+if( !Security::processPageSecurity( $strtablename, 'P' ) )
+	return;
 
 
 require_once("include/export_functions.php");

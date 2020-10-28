@@ -310,6 +310,22 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="ibge_municipios")
+		{
+			return false;
+		}
+		if($table=="ibge_pais")
+		{
+			return false;
+		}
+		if($table=="adm_ramos")
+		{
+			return false;
+		}
+		if($table=="adm_tipousuario")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -623,6 +639,22 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="usuarios_dados_profissionais")
+		{
+			return false;
+		}
+		if($table=="ibge_municipios")
+		{
+			return false;
+		}
+		if($table=="ibge_pais")
+		{
+			return false;
+		}
+		if($table=="adm_ramos")
+		{
+			return false;
+		}
+		if($table=="adm_tipousuario")
 		{
 			return false;
 		}

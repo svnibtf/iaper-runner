@@ -11,6 +11,8 @@ require_once('classes/editpage.php');
 
 add_nocache_headers();
 
+if( !EditPage::processEditPageSecurity( $strTableName ) )
+	return;
 
 EditPage::handleBrokenRequest();
 

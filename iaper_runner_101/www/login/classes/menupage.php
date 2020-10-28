@@ -96,6 +96,24 @@ class MenuPage extends RunnerPage
 		$this->xt->assign("id", $this->id);
 		$this->xt->assign("menu_block", true);
 		
+		// The user might rewrite $_SESSION["UserName"] value with HTML code in an event, so no encoding will be performed while printing this value.
+		
+		/*
+		$this->xt->assign("username", $_SESSION["UserName"]);
+		$this->xt->assign("changepwd_link",$_SESSION["AccessLevel"] != ACCESS_LEVEL_GUEST && !$_SESSION["pluginLogin"] );
+		$this->xt->assign("changepwdlink_attrs","onclick=\"window.location.href='".GetTableLink("changepwd")."';return false;\"");
+
+		$this->xt->assign("logoutlink_attrs", 'id="logoutButton'.$this->id.'"');
+		$this->xt->assign("guestloginlink_attrs", 'id="loginButton'.$this->id.'"');
+
+		$this->xt->assign("loggedas_block", !isLoggedAsGuest());
+		$this->xt->assign("loggedas_message", !isLoggedAsGuest());
+
+		$this->xt->assign("logout_link", true);
+		$this->xt->assign("guestloginbutton", isLoggedAsGuest());
+		$this->xt->assign("logoutbutton", isSingleSign() && !isLoggedAsGuest());
+
+			*/
 
 		$this->assignBody();
 	}

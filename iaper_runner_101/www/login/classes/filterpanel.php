@@ -126,7 +126,7 @@ class FilterPanel
 		$this->xt->assign("selectAll_attrs".$postfix, $filterExtraControls["selectAllAttrs"]);
 		
 		$this->xt->assign("filter_button_showmore".$postfix, $filterState["truncated"]);
-		$this->xt->assign("show_n_more".$postfix, str_replace( "%n%", $filterExtraControls["numberOfExtraItemsToShow"], "Show %n% more" ) );
+		$this->xt->assign("show_n_more".$postfix, str_replace( "%n%", $filterExtraControls["numberOfExtraItemsToShow"], "Mostrar mais %n%" ) );
 		
 		if( $filterState["showMoreHidden"] )
 			$this->xt->assign("showMoreBtnClass".$postfix, "show-more-hidden");

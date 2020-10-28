@@ -1,8 +1,8 @@
 <?php
 
 $langfile="";
-if(mlang_getcurrentlang() == "English")
-	$langfile="English.php";
+if(mlang_getcurrentlang() == "Portuguese(Brazil)")
+	$langfile="Portuguese.php";
 
 if($langfile)
 	include(getabspath("include/lang/".$langfile));

@@ -258,7 +258,7 @@ class AddPage extends RunnerPage
 		{
 			$returnJSON = array();
 			$returnJSON['success'] = false;
-			$returnJSON['message'] = "Error occurred";
+			$returnJSON['message'] = "Ocorreu um erro!";
 			$returnJSON['fatalError'] = true;
 			echo printJSON($returnJSON);
 			exit();
@@ -454,6 +454,14 @@ class AddPage extends RunnerPage
 			$control->readWebValue($avalues, $blobfields, NULL, NULL, $afilename_values);
 		}
 
+		$securityType = $this->pSet->getAdvancedSecurityType();
+		if( !$this->isAdminTable() && ($securityType == ADVSECURITY_EDIT_OWN || $securityType == ADVSECURITY_VIEW_OWN) )
+		{
+			$tableOwnerIdField = $this->pSet->getTableOwnerIdField();
+			// insert owner id value if it exists an It hasn't already set by user
+			if( $this->checkIfToAddOwnerIdValue( $tableOwnerIdField, $avalues[ $tableOwnerIdField ] ) )
+				$avalues[ $tableOwnerIdField ] = prepare_for_db( $tableOwnerIdField, $_SESSION["_".$this->tName."_OwnerID"] );
+		}
 		$masterTables = $this->pSet->getMasterTablesArr( );
 		// insert master key value if exists and if not specified
 		foreach( $masterTables as $mTableData )
@@ -540,9 +548,9 @@ class AddPage extends RunnerPage
 
 		if( isLoggedAsGuest() || !isLogged() )
 		{
-			$this->setMessage( "Your session has expired."
+			$this->setMessage( "Sua sessão expirou."
 				. "<a href='#' id='loginButtonContinue" . $this->id . "'>" . "Login" . "</a>"
-				. " to save data." );
+				. "para salvar dados." );
 		}
 		else
 		{
@@ -675,9 +683,9 @@ class AddPage extends RunnerPage
 			return;
 
 		if( $this->mode == ADD_INLINE )
-			$infoMessage = ""."Record was added"."";
+			$infoMessage = ""."Registro foi adicionado"."";
 		else
-			$infoMessage = "<strong><<< "."Record was added"." >>></strong>";
+			$infoMessage = "<strong><<< "."Registro foi adicionado"." >>></strong>";
 
 		if( $this->mode != ADD_SIMPLE && $this->mode != ADD_MASTER || !count($this->keys) )
 		{
@@ -704,10 +712,10 @@ class AddPage extends RunnerPage
 			$infoMessage.= "<br>";
 
 			if( $this->editAvailable() )
-				$infoMessage.= "&nbsp;<a href='".GetTableLink( $this->pSet->getShortTableName(), "edit", $keylink )."'>"."Edit"."</a>&nbsp;";
+				$infoMessage.= "&nbsp;<a href='".GetTableLink( $this->pSet->getShortTableName(), "edit", $keylink )."'>"."Editar"."</a>&nbsp;";
 
 			if( $this->viewAvailable() )
-				$infoMessage.= "&nbsp;<a href='".GetTableLink( $this->pSet->getShortTableName(), "view", $keylink )."'>"."View"."</a>&nbsp;";
+				$infoMessage.= "&nbsp;<a href='".GetTableLink( $this->pSet->getShortTableName(), "view", $keylink )."'>"."Exibir"."</a>&nbsp;";
 		}
 
 		$this->setMessage( $infoMessage );
@@ -1130,6 +1138,14 @@ class AddPage extends RunnerPage
 			}
 		}
 
+		$securityType = $this->pSet->getAdvancedSecurityType();
+		if( !$this->isAdminTable() && ($securityType == ADVSECURITY_EDIT_OWN || $securityType == ADVSECURITY_VIEW_OWN) )
+		{
+			$tableOwnerIdField = $this->pSet->getTableOwnerIdField();
+			// insert default owner id value if exists
+			if( $this->checkIfToAddOwnerIdValue( $tableOwnerIdField, '' ) )
+				$this->defvalues[ $tableOwnerIdField ] = prepare_for_db( $tableOwnerIdField, $_SESSION["_".$this->tName."_OwnerID"] );
+		}
 
 		$masterTables = $this->pSet->getMasterTablesArr();
 		// set default values for the foreign keys
@@ -1646,11 +1662,11 @@ class AddPage extends RunnerPage
 	{
 		if( $this->mode != ADD_INLINE )
 		{
-			$this->message = "<strong>&lt;&lt;&lt; "."Record was NOT added"."</strong> &gt;&gt;&gt;<br><br>".$message;
+			$this->message = "<strong>&lt;&lt;&lt; "."Registro NÃO foi adicionado"."</strong> &gt;&gt;&gt;<br><br>".$message;
 		}
 		else
 		{
-			$this->message = "Record was NOT added".". ".$message;
+			$this->message = "Registro NÃO foi adicionado".". ".$message;
 		}
 
 		$this->messageType = MESSAGE_ERROR;

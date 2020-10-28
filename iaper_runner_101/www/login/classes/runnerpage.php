@@ -1633,6 +1633,7 @@ class RunnerPage
 		//build the Search panel if the "searchpanel" brick is added to the page's layout
 		$this->buildAddedSearchPanel();
 
+			$this->initLogin();
 		if( $this->pageType == PAGE_LIST && ($this->mode == LIST_AJAX || $this->mode == LIST_SIMPLE || $this->mode == LIST_LOOKUP) || $this->pageType == PAGE_DASHBOARD
 			|| ( $this->pageType == PAGE_REPORT && $this->mode === REPORT_SIMPLE || $this->pageType == PAGE_CHART && $this->mode == CHART_SIMPLE ) )
 		{
@@ -3301,7 +3302,10 @@ class RunnerPage
 		$this->xt->assign( "logo_block", true );
 		$this->xt->assign( "collapse_block", true );
 
-			}
+				$this->assignAdmin();
+		$this->xt->assign("changepwd_link", $_SESSION["AccessLevel"]!= ACCESS_LEVEL_GUEST && !$_SESSION["pluginLogin"] );
+		$this->xt->assign("changepwdlink_attrs", "href=\"".GetTableLink("changepwd")."\" onclick=\"window.location.href='".projectPath().GetTableLink("changepwd")."';return false;\"");
+	}
 
 	/**
 	 * Common assign for diferent mode on list page
@@ -4737,7 +4741,7 @@ class RunnerPage
 		if ( $captchaSettings["type"] == FLASH_CAPTCHA && @strtolower($this->captchaValue) != strtolower(@$_SESSION["captcha_" . $this->getCaptchaId()]) )
 		{
 			$this->isCaptchaOk = false;
-			$this->message = "Invalid security code.";
+			$this->message = "Código de segurança inválido";
 		}
 
 		//	check recaptcha
@@ -4797,7 +4801,7 @@ class RunnerPage
 	{
 		$captchaHTML = '<div class="captcha_block">';
 
-		$typeCodeMessage = "Type the code you see above";
+		$typeCodeMessage = "Digite o código acima";
 		$path = GetCaptchaPath();
 		$swfPath = GetCaptchaSwfPath();
 
@@ -4844,11 +4848,11 @@ class RunnerPage
 			return $this->bsCreatePerPage();
 		}
 		$classString = "";
-		$allMessage = "Show all";
+		$allMessage = "Mostrar Todos";
 		if( $this->isBootstrap() )
 		{
 			$classString = 'class="form-control"';
-			$allMessage = "All";
+			$allMessage = "Todos";
 		}
 		$rpp = "<select ".$classString." id=\"recordspp".$this->id."\">";
 
@@ -4869,7 +4873,7 @@ class RunnerPage
 	{
 		$txtVal = $this->pageSize;
 		if( $this->pageSize == -1 )
-			$txtVal = "Show all";
+			$txtVal = "Mostrar Todos";
 		$rpp = '<div class="dropdown btn-group">
 			<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><span class="dropdown-text">' . $txtVal . '</span> <span class="caret"></span></button>
 			<ul class="dropdown-menu pull-right" role="menu">';
@@ -4878,7 +4882,7 @@ class RunnerPage
 			$val = $this->arrRecsPerPage[$i];
 			$txtVal = $val;
 			if( $val == -1 )
-				$txtVal = "Show all";
+				$txtVal = "Mostrar Todos";
 			$selectedAttr = '';
 			if( $this->pageSize == $val )
 				$selectedAttr = 'aria-selected="true" class="active"';
@@ -4949,13 +4953,13 @@ class RunnerPage
 			$isSearchRun = true;
 
 		if( $this->pSetSearch->noRecordsOnFirstPage() && !$isSearchRun )
-			return "Nothing to see. Run some search.";
+			return "Nada para ver.  Execute uma busca.";
 
 		if( !$this->rowsFound && !$isSearchRun )
-			return "No data yet.";
+			return "Nenhum dado ainda";
 
 		if( $isSearchRun && !$this->rowsFound )
-			return "No results found.";
+			return "Nenhum Registro Encontrado";
 	}
 
 	function showNoRecordsMessage()
@@ -5065,8 +5069,8 @@ class RunnerPage
 					$counterend = $this->maxPages;
 				if($counterstart != 1)
 				{
-					$pagination.= $this->getPaginationLink(1,"First") . $advSeparator;
-					$pagination.= $this->getPaginationLink($counterstart - 1,"Previous").$separator;
+					$pagination.= $this->getPaginationLink(1,"Primeiro") . $advSeparator;
+					$pagination.= $this->getPaginationLink($counterstart - 1,"Anterior").$separator;
 				}
 				$pageLinks = "";
 
@@ -5092,8 +5096,8 @@ class RunnerPage
 				$pagination .= $pageLinks;
 				if($counterend != $this->maxPages)
 				{
-					$pagination.= $separator . $this->getPaginationLink($counterend + 1,"Next") . $advSeparator;
-					$pagination.= $this->getPaginationLink($this->maxPages,"Last");
+					$pagination.= $separator . $this->getPaginationLink($counterend + 1,"Próximo") . $advSeparator;
+					$pagination.= $this->getPaginationLink($this->maxPages,"Último");
 				}
 				if( $this->isBootstrap() )
 					$pagination = '<nav class="text-center"><ul class="pagination" data-function="pagination' . $this->id . '">' . $pagination . '</ul></nav>';
@@ -5136,7 +5140,7 @@ class RunnerPage
 		}
 		else
 		{
-			$template = "Displaying %first% - %last% of %total%";
+			$template = "Exibindo %first% - %last% de %total%";
 			$template = str_replace( array( '%first%', '%last%', '%total%'), array( $first, $last, $total), $template );
 			$this->xt->assign( "records_indicator", $template );
 		}
@@ -6194,7 +6198,7 @@ class RunnerPage
 
 		return '<span class="rnr-dbebrick">'
 			.'<a href="' . $this->getProceedUrl() . '" name="dp' . $this->id . '">'
-			.  "Proceed to" . ' '. GetTableCaption( GoodFieldName( $this->tName ) )
+			.  "Prossiga para" . ' '. GetTableCaption( GoodFieldName( $this->tName ) )
 			. '</a>'
 			. "&nbsp;&nbsp;</span>";
 	}
@@ -6708,17 +6712,17 @@ class RunnerPage
 	public static function getDefaultPageTitle($page, $table, $pSet)
 	{
 		if( $page == "add" )
-			return GetTableCaption($table).", "."Add new";
+			return GetTableCaption($table).", "."Adicionar Novo";
 		if( $page == "edit" )
-			return GetTableCaption($table).", "."Edit"." [". RunnerPage::getKeysTitleTemplate( $table, $pSet ). "]";
+			return GetTableCaption($table).", "."Editar"." [". RunnerPage::getKeysTitleTemplate( $table, $pSet ). "]";
 		if( $page == "view" )
 			return GetTableCaption($table)." [". RunnerPage::getKeysTitleTemplate( $table, $pSet ). "]";
 		if( $page == "export" )
-			return "Export";
+			return "Exportar";
 		if( $page == "import" )
-			return GetTableCaption($table).", "."Import";
+			return GetTableCaption($table).", "."Importar";
 		if( $page == "search" )
-			return GetTableCaption($table)." - "."Advanced search";
+			return GetTableCaption($table)." - "."Busca Avancada";
 		if( $page == "print" )
 			return GetTableCaption($table);
 		if( $page == "rprint" )
@@ -6736,17 +6740,17 @@ class RunnerPage
 		if( $page == "login" )
 			return "Login";
 		if( $page == "register" )
-			return "Register";
+			return "Registrar";
 		if( $page == "register_success" )
-			return "Registration successful!";
+			return "Registro realizado com Sucesso";
 		if( $page == "changepwd" )
-			return "Change password";
+			return "Mudar senha";
 		if( $page == "changepwd_success" )
-			return "Change password";
+			return "Mudar senha";
 		if( $page == "remind" )
-			return "Password reminder";
+			return "Lembrar a minha Senha";
 		if( $page == "remind_success" )
-			return "Password reminder";
+			return "Lembrar a minha Senha";
 		if( $page == "chart" )
 			return GetTableCaption($table);
 		if( $page == "report" )

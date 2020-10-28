@@ -910,7 +910,7 @@ class ProjectSettings
 	{
 		$connId = $this->getTableData( ".connId" );
 		if( $connId == "" ) {
-			return "iaper_runner_db_at_localhost";
+			return "iaperdbatrobb0254publiccloudco";
 		}
 		return $connId;
 	}
@@ -2834,7 +2834,7 @@ class ProjectSettings
 	 */
 	public static function getForLogin()
 	{
-		return null;
+		return new ProjectSettings("usuarios", PAGE_LIST);
 	}
 
 	/**
@@ -3242,6 +3242,14 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "usuarios" ] = "usuarios";
 	$projectEntities[ "usuarios_dados_profissionais" ] = array( "url" => "usuarios_dados_profissionais", "type" => 0 );
 	$projectEntitiesReverse[ "usuarios_dados_profissionais" ] = "usuarios_dados_profissionais";
+	$projectEntities[ "ibge_municipios" ] = array( "url" => "ibge_municipios", "type" => 0 );
+	$projectEntitiesReverse[ "ibge_municipios" ] = "ibge_municipios";
+	$projectEntities[ "ibge_pais" ] = array( "url" => "ibge_pais", "type" => 0 );
+	$projectEntitiesReverse[ "ibge_pais" ] = "ibge_pais";
+	$projectEntities[ "adm_ramos" ] = array( "url" => "adm_ramos", "type" => 0 );
+	$projectEntitiesReverse[ "adm_ramos" ] = "adm_ramos";
+	$projectEntities[ "adm_tipousuario" ] = array( "url" => "adm_tipousuario", "type" => 0 );
+	$projectEntitiesReverse[ "adm_tipousuario" ] = "adm_tipousuario";
 }
 
 function findTable( $table ) {

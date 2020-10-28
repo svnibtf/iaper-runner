@@ -20,6 +20,11 @@ if (!checkTableName($table))
 require_once("include/".$table."_variables.php");
 
 
+if(!isLogged() || !CheckSecurity(@$_SESSION["_".$strTableName."_OwnerID"],"Search"))
+{ 
+	HeaderRedirect("login"); 
+	return;
+}
 
 $field = postvalue("field");
 

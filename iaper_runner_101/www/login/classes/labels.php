@@ -5,7 +5,7 @@ class Labels {
 	public static function getLanguages()
 	{
 		$languages = array();
-		$languages[] = "English";
+		$languages[] = "Portuguese(Brazil)";
 		return $languages;
 	}
 

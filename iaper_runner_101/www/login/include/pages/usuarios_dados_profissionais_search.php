@@ -254,6 +254,7 @@
 'fixedAtClient' => false ) ),
 'width' => 1,
 'height' => 1 ) ) ),
+'loginForm' => array( 'loginForm' => 3 ),
 'page' => array( 'labeledButtons' => array( 'update_records' => array(  ),
 'print_pages' => array(  ),
 'register_activate_message' => array(  ),

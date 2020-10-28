@@ -117,25 +117,10 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel usuarios_dados_profissionais udp_id }","bold":true},{"text":{$udp_id_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel usuarios_dados_profissionais udp_usu_id }","bold":true},{"text":{$udp_usu_id_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel usuarios_dados_profissionais email_profissional }","bold":true},{"text":{$email_profissional_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel usuarios_dados_profissionais avaliacao_usuarios }","bold":true},{"text":{$avaliacao_usuarios_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel usuarios_dados_profissionais sobre_profissional }","bold":true},{"text":{$sobre_profissional_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel usuarios_dados_profissionais resumo_formacao }","bold":true},{"text":{$resumo_formacao_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel usuarios_dados_profissionais yt_code_apresentacao }","bold":true},{"text":{$yt_code_apresentacao_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel usuarios_dados_profissionais diferencial_profissional }","bold":true},{"text":{$diferencial_profissional_pdfvalue}}],"margin":[0,0,0,15]},
@@ -154,9 +139,6 @@ pdfDocument = {
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field12}","stack":[{"text":"{$jslabel usuarios_dados_profissionais resumo_formacao_cursos }","bold":true},{"text":{$resumo_formacao_cursos_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field13}","stack":[{"text":"{$jslabel usuarios_dados_profissionais curriculo_lattes }","bold":true},{"text":{$curriculo_lattes_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field14}","stack":[{"text":"{$jslabel usuarios_dados_profissionais nome_empresa }","bold":true},{"text":{$nome_empresa_pdfvalue}}],"margin":[0,0,0,15]},
@@ -183,12 +165,6 @@ pdfDocument = {
 			{"hidden":"{$item_hide_integrated_edit_field21}","stack":[{"text":"{$jslabel usuarios_dados_profissionais endereco_profissional_complemento }","bold":true},{"text":{$endereco_profissional_complemento_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field22}","stack":[{"text":"{$jslabel usuarios_dados_profissionais endereco_profissional_latitude }","bold":true},{"text":{$endereco_profissional_latitude_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field23}","stack":[{"text":"{$jslabel usuarios_dados_profissionais endereco_profissional_longitude }","bold":true},{"text":{$endereco_profissional_longitude_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field24}","stack":[{"text":"{$jslabel usuarios_dados_profissionais pais_empresa }","bold":true},{"text":{$pais_empresa_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
@@ -196,9 +172,6 @@ pdfDocument = {
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field26}","stack":[{"text":"{$jslabel usuarios_dados_profissionais municipio_empresa }","bold":true},{"text":{$municipio_empresa_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field27}","stack":[{"text":"{$jslabel usuarios_dados_profissionais udp_deletado }","bold":true},{"text":{$udp_deletado_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],

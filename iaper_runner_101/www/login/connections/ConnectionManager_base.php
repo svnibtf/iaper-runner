@@ -112,7 +112,7 @@ class ConnectionManager_Base
 	 */
 	public function getDefault()
 	{
-		return $this->byId( "iaper_runner_db_at_localhost" );
+		return $this->byId( "iaperdbatrobb0254publiccloudco" );
 	}
 
 	/**
@@ -124,7 +124,7 @@ class ConnectionManager_Base
 	}
 
 	public function getLoginConnId() {
-		return "iaper_runner_db_at_localhost";
+		return "iaperdbatrobb0254publiccloudco";
 	}
 
 
@@ -155,7 +155,7 @@ class ConnectionManager_Base
 	}
 
 	public function getUserGroupsConnId() {
-		return "iaper_runner_db_at_localhost";
+		return "iaperdbatrobb0254publiccloudco";
 	}
 
 	/**
@@ -164,7 +164,7 @@ class ConnectionManager_Base
 	 */
 	public function getForSavedSearches()
 	{
-		return $this->getDefault();
+		return $this->byId( "iaperdbatrobb0254publiccloudco" );
 	}
 
 	/**
@@ -211,8 +211,12 @@ class ConnectionManager_Base
 	protected function _setTablesConnectionIds()
 	{
 		$connectionsIds = array();
-		$connectionsIds["usuarios"] = "iaper_runner_db_at_localhost";
-		$connectionsIds["usuarios_dados_profissionais"] = "iaper_runner_db_at_localhost";
+		$connectionsIds["usuarios"] = "iaperdbatrobb0254publiccloudco";
+		$connectionsIds["usuarios_dados_profissionais"] = "iaperdbatrobb0254publiccloudco";
+		$connectionsIds["ibge_municipios"] = "iaperdbatrobb0254publiccloudco";
+		$connectionsIds["ibge_pais"] = "iaperdbatrobb0254publiccloudco";
+		$connectionsIds["adm_ramos"] = "iaperdbatrobb0254publiccloudco";
+		$connectionsIds["adm_tipousuario"] = "iaperdbatrobb0254publiccloudco";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}
