@@ -1,0 +1,30 @@
+@media (max-width: 767px){
+	[data-topcell-item-type="loginform_register"]{
+		display:none !important;
+	}
+	.fc-center{
+		padding: 6px 0px !important;
+	}
+	div.fc-widget-header{
+		height: 21px !important;
+	}
+	.bs-fullwidth-navbar{
+		margin-bottom: 0px;
+	}
+	.[data-itemid=username_button]{
+		display:none !important;
+	}
+}
+div[data-field=id]{
+	display:none;
+}
+.function-login{
+	background-image: url("../../images/calendar.jpg");
+	background-size:100%;
+	background-repeat: no-repeat;
+}
+@media (min-width: 767px) {
+	.navbar-nav {
+		 padding-left: 180px !important;
+	}
+}

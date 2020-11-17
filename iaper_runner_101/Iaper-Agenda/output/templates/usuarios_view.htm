@@ -1,0 +1,724 @@
+<!doctype html><p align=center><font size=+1 color=red></font></p>
+<p align=center><font size=+1 color=red></font></p>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="view_header" data-itemid="view_header" {$item_view_header} data-pageid="{$pageid}" >{$pagetitlelabel usuarios view}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN usu_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_usu_id}  r-vertical-field" data-fieldname="usu_id" data-signal-error-for="usu_id{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="usu_id" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_usu_id}">
+		
+		{BEGIN usu_id_label}{$label usuarios usu_id }{END usu_id_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$usu_id_value}	</div>
+
+		
+</div>
+
+
+{END usu_id_fieldblock}
+											
+{BEGIN nome_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_nome}  r-vertical-field" data-fieldname="nome" data-signal-error-for="nome{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="nome" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_nome}">
+		
+		{BEGIN nome_label}{$label usuarios nome }{END nome_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$nome_value}	</div>
+
+		
+</div>
+
+
+{END nome_fieldblock}
+											
+{BEGIN sobrenome_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_sobrenome}  r-vertical-field" data-fieldname="sobrenome" data-signal-error-for="sobrenome{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="sobrenome" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_sobrenome}">
+		
+		{BEGIN sobrenome_label}{$label usuarios sobrenome }{END sobrenome_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$sobrenome_value}	</div>
+
+		
+</div>
+
+
+{END sobrenome_fieldblock}
+											
+{BEGIN senha_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_senha}  r-vertical-field" data-fieldname="senha" data-signal-error-for="senha{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="senha" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_senha}">
+		
+		{BEGIN senha_label}{$label usuarios senha }{END senha_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$senha_value}	</div>
+
+		
+</div>
+
+
+{END senha_fieldblock}
+											
+{BEGIN email_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_email}  r-vertical-field" data-fieldname="email" data-signal-error-for="email{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="email" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_email}">
+		
+		{BEGIN email_label}{$label usuarios email }{END email_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$email_value}	</div>
+
+		
+</div>
+
+
+{END email_fieldblock}
+											
+{BEGIN email_validado_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_email_validado}  r-vertical-field" data-fieldname="email_validado" data-signal-error-for="email_validado{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="email_validado" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_email_validado}">
+		
+		{BEGIN email_validado_label}{$label usuarios email_validado }{END email_validado_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$email_validado_value}	</div>
+
+		
+</div>
+
+
+{END email_validado_fieldblock}
+											
+{BEGIN permissao_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_permissao}  r-vertical-field" data-fieldname="permissao" data-signal-error-for="permissao{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="permissao" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_permissao}">
+		
+		{BEGIN permissao_label}{$label usuarios permissao }{END permissao_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$permissao_value}	</div>
+
+		
+</div>
+
+
+{END permissao_fieldblock}
+											
+{BEGIN tipo_usuario_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_tipo_usuario}  r-vertical-field" data-fieldname="tipo_usuario" data-signal-error-for="tipo_usuario{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="tipo_usuario" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_tipo_usuario}">
+		
+		{BEGIN tipo_usuario_label}{$label usuarios tipo_usuario }{END tipo_usuario_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$tipo_usuario_value}	</div>
+
+		
+</div>
+
+
+{END tipo_usuario_fieldblock}
+											
+{BEGIN plano_tipo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_plano_tipo}  r-vertical-field" data-fieldname="plano_tipo" data-signal-error-for="plano_tipo{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="plano_tipo" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_plano_tipo}">
+		
+		{BEGIN plano_tipo_label}{$label usuarios plano_tipo }{END plano_tipo_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$plano_tipo_value}	</div>
+
+		
+</div>
+
+
+{END plano_tipo_fieldblock}
+											
+{BEGIN data_in_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_data_in}  r-vertical-field" data-fieldname="data_in" data-signal-error-for="data_in{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="data_in" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_data_in}">
+		
+		{BEGIN data_in_label}{$label usuarios data_in }{END data_in_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$data_in_value}	</div>
+
+		
+</div>
+
+
+{END data_in_fieldblock}
+											
+{BEGIN data_primeiro_acesso_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_data_primeiro_acesso}  r-vertical-field" data-fieldname="data_primeiro_acesso" data-signal-error-for="data_primeiro_acesso{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="data_primeiro_acesso" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_data_primeiro_acesso}">
+		
+		{BEGIN data_primeiro_acesso_label}{$label usuarios data_primeiro_acesso }{END data_primeiro_acesso_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$data_primeiro_acesso_value}	</div>
+
+		
+</div>
+
+
+{END data_primeiro_acesso_fieldblock}
+											
+{BEGIN data_ultimo_acesso_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_data_ultimo_acesso}  r-vertical-field" data-fieldname="data_ultimo_acesso" data-signal-error-for="data_ultimo_acesso{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field11" {$item_integrated_edit_field11} data-pageid="{$pageid}" data-field="data_ultimo_acesso" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_data_ultimo_acesso}">
+		
+		{BEGIN data_ultimo_acesso_label}{$label usuarios data_ultimo_acesso }{END data_ultimo_acesso_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$data_ultimo_acesso_value}	</div>
+
+		
+</div>
+
+
+{END data_ultimo_acesso_fieldblock}
+											
+{BEGIN cpf_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_cpf}  r-vertical-field" data-fieldname="cpf" data-signal-error-for="cpf{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field12" {$item_integrated_edit_field12} data-pageid="{$pageid}" data-field="cpf" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_cpf}">
+		
+		{BEGIN cpf_label}{$label usuarios cpf }{END cpf_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$cpf_value}	</div>
+
+		
+</div>
+
+
+{END cpf_fieldblock}
+											
+{BEGIN avatar_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_avatar}  r-vertical-field" data-fieldname="avatar" data-signal-error-for="avatar{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field13" {$item_integrated_edit_field13} data-pageid="{$pageid}" data-field="avatar" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_avatar}">
+		
+		{BEGIN avatar_label}{$label usuarios avatar }{END avatar_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$avatar_value}	</div>
+
+		
+</div>
+
+
+{END avatar_fieldblock}
+											
+{BEGIN sexo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_sexo}  r-vertical-field" data-fieldname="sexo" data-signal-error-for="sexo{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field14" {$item_integrated_edit_field14} data-pageid="{$pageid}" data-field="sexo" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_sexo}">
+		
+		{BEGIN sexo_label}{$label usuarios sexo }{END sexo_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$sexo_value}	</div>
+
+		
+</div>
+
+
+{END sexo_fieldblock}
+											
+{BEGIN info_inicial_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_info_inicial}  r-vertical-field" data-fieldname="info_inicial" data-signal-error-for="info_inicial{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field15" {$item_integrated_edit_field15} data-pageid="{$pageid}" data-field="info_inicial" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_info_inicial}">
+		
+		{BEGIN info_inicial_label}{$label usuarios info_inicial }{END info_inicial_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$info_inicial_value}	</div>
+
+		
+</div>
+
+
+{END info_inicial_fieldblock}
+											
+{BEGIN pais_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_pais}  r-vertical-field" data-fieldname="pais" data-signal-error-for="pais{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field16" {$item_integrated_edit_field16} data-pageid="{$pageid}" data-field="pais" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_pais}">
+		
+		{BEGIN pais_label}{$label usuarios pais }{END pais_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$pais_value}	</div>
+
+		
+</div>
+
+
+{END pais_fieldblock}
+											
+{BEGIN estado_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_estado}  r-vertical-field" data-fieldname="estado" data-signal-error-for="estado{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field17" {$item_integrated_edit_field17} data-pageid="{$pageid}" data-field="estado" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_estado}">
+		
+		{BEGIN estado_label}{$label usuarios estado }{END estado_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$estado_value}	</div>
+
+		
+</div>
+
+
+{END estado_fieldblock}
+											
+{BEGIN municipio_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_municipio}  r-vertical-field" data-fieldname="municipio" data-signal-error-for="municipio{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field18" {$item_integrated_edit_field18} data-pageid="{$pageid}" data-field="municipio" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_municipio}">
+		
+		{BEGIN municipio_label}{$label usuarios municipio }{END municipio_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$municipio_value}	</div>
+
+		
+</div>
+
+
+{END municipio_fieldblock}
+											
+{BEGIN cep_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_cep}  r-vertical-field" data-fieldname="cep" data-signal-error-for="cep{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field19" {$item_integrated_edit_field19} data-pageid="{$pageid}" data-field="cep" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_cep}">
+		
+		{BEGIN cep_label}{$label usuarios cep }{END cep_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$cep_value}	</div>
+
+		
+</div>
+
+
+{END cep_fieldblock}
+											
+{BEGIN rua_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_rua}  r-vertical-field" data-fieldname="rua" data-signal-error-for="rua{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field20" {$item_integrated_edit_field20} data-pageid="{$pageid}" data-field="rua" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_rua}">
+		
+		{BEGIN rua_label}{$label usuarios rua }{END rua_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$rua_value}	</div>
+
+		
+</div>
+
+
+{END rua_fieldblock}
+											
+{BEGIN numero_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_numero}  r-vertical-field" data-fieldname="numero" data-signal-error-for="numero{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field21" {$item_integrated_edit_field21} data-pageid="{$pageid}" data-field="numero" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_numero}">
+		
+		{BEGIN numero_label}{$label usuarios numero }{END numero_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$numero_value}	</div>
+
+		
+</div>
+
+
+{END numero_fieldblock}
+											
+{BEGIN complemento_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_complemento}  r-vertical-field" data-fieldname="complemento" data-signal-error-for="complemento{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field22" {$item_integrated_edit_field22} data-pageid="{$pageid}" data-field="complemento" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_complemento}">
+		
+		{BEGIN complemento_label}{$label usuarios complemento }{END complemento_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$complemento_value}	</div>
+
+		
+</div>
+
+
+{END complemento_fieldblock}
+											
+{BEGIN telefone_celular_principal_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_telefone_celular_principal}  r-vertical-field" data-fieldname="telefone_celular_principal" data-signal-error-for="telefone_celular_principal{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field23" {$item_integrated_edit_field23} data-pageid="{$pageid}" data-field="telefone_celular_principal" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_telefone_celular_principal}">
+		
+		{BEGIN telefone_celular_principal_label}{$label usuarios telefone_celular_principal }{END telefone_celular_principal_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$telefone_celular_principal_value}	</div>
+
+		
+</div>
+
+
+{END telefone_celular_principal_fieldblock}
+											
+{BEGIN telefone_celular_secundario_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_telefone_celular_secundario}  r-vertical-field" data-fieldname="telefone_celular_secundario" data-signal-error-for="telefone_celular_secundario{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field24" {$item_integrated_edit_field24} data-pageid="{$pageid}" data-field="telefone_celular_secundario" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_telefone_celular_secundario}">
+		
+		{BEGIN telefone_celular_secundario_label}{$label usuarios telefone_celular_secundario }{END telefone_celular_secundario_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$telefone_celular_secundario_value}	</div>
+
+		
+</div>
+
+
+{END telefone_celular_secundario_fieldblock}
+											
+{BEGIN telefone_residencial_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_telefone_residencial}  r-vertical-field" data-fieldname="telefone_residencial" data-signal-error-for="telefone_residencial{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field25" {$item_integrated_edit_field25} data-pageid="{$pageid}" data-field="telefone_residencial" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_telefone_residencial}">
+		
+		{BEGIN telefone_residencial_label}{$label usuarios telefone_residencial }{END telefone_residencial_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$telefone_residencial_value}	</div>
+
+		
+</div>
+
+
+{END telefone_residencial_fieldblock}
+											
+{BEGIN telefone_comercial_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_telefone_comercial}  r-vertical-field" data-fieldname="telefone_comercial" data-signal-error-for="telefone_comercial{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field26" {$item_integrated_edit_field26} data-pageid="{$pageid}" data-field="telefone_comercial" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_telefone_comercial}">
+		
+		{BEGIN telefone_comercial_label}{$label usuarios telefone_comercial }{END telefone_comercial_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$telefone_comercial_value}	</div>
+
+		
+</div>
+
+
+{END telefone_comercial_fieldblock}
+											
+{BEGIN code_trocar_senha_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_code_trocar_senha}  r-vertical-field" data-fieldname="code_trocar_senha" data-signal-error-for="code_trocar_senha{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field27" {$item_integrated_edit_field27} data-pageid="{$pageid}" data-field="code_trocar_senha" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_code_trocar_senha}">
+		
+		{BEGIN code_trocar_senha_label}{$label usuarios code_trocar_senha }{END code_trocar_senha_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$code_trocar_senha_value}	</div>
+
+		
+</div>
+
+
+{END code_trocar_senha_fieldblock}
+											
+{BEGIN deletado_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_deletado}  r-vertical-field" data-fieldname="deletado" data-signal-error-for="deletado{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field28" {$item_integrated_edit_field28} data-pageid="{$pageid}" data-field="deletado" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_deletado}">
+		
+		{BEGIN deletado_label}{$label usuarios deletado }{END deletado_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$deletado_value}	</div>
+
+		
+</div>
+
+
+{END deletado_fieldblock}
+											
+{BEGIN idEmpresa_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_idEmpresa}  r-vertical-field" data-fieldname="idEmpresa" data-signal-error-for="idEmpresa{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field29" {$item_integrated_edit_field29} data-pageid="{$pageid}" data-field="idEmpresa" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_idEmpresa}">
+		
+		{BEGIN idEmpresa_label}{$label usuarios idEmpresa }{END idEmpresa_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$idEmpresa_value}	</div>
+
+		
+</div>
+
+
+{END idEmpresa_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-6
+	">
+	 
+		{BEGIN back_button}
+<span data-itemtype="view_back_list" data-itemid="view_back_list" {$item_view_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Voltar à Lista			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN close_button}
+<span data-itemtype="view_close" data-itemid="view_close" {$item_view_close} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" href="#" {$closebutton_attrs} >
+							Fechar Janela			</a>
+</span>
+{END close_button}
+	</div>			 
+				<div 
+	data-cellId="below-grid_c2" data-pageid="{$pageid}"	{$cell_below-grid_c2}
+	class="r-align-right r-ori-vert			col-md-6
+	">
+	 
+		<span data-itemtype="hamburger" data-itemid="hamburger" {$item_hamburger} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown dropup">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+							<span class="glyphicon glyphicon-menu-hamburger"></span>
+									<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN edit_page_button}
+	<li data-itemtype="view_edit" data-itemid="view_edit" {$item_view_edit} data-pageid="{$pageid}" data-small >
+				<a  href="usuarios_edit.php?{$editlink}" {$edit_page_button_attrs}  title="" >
+				
+		Editar		
+		</a>
+	</li>
+{END edit_page_button}
+					</ul>
+	</span>
+</span>
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>
