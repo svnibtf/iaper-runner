@@ -1,3 +1,8 @@
+<?xml version="1.0"?>
+<project app="PHPRunner" version="10.3" build="34865">
+	<tables>
+		<v>
+			<m_arrEventHandlers>
 				<v>
 					<m_isRunTime>0</m_isRunTime>
 					<m_strPage>List page</m_strPage>
