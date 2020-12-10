@@ -513,7 +513,7 @@
 		</a>
 	</li>
 {END searchPanelTopButtons}
-					</ul>
+							<li role="separator" class="divider"></li>							<li role="separator" class="divider"></li>							<li role="separator" class="divider"></li>					</ul>
 	</span>
 </span>
 			</span>
@@ -592,7 +592,7 @@
 {END above-grid_block}
 						</div>
 					<div class="r-grid">
-										{BEGIN grid_block}
+										
 {BEGIN grid_tabs}
   <ul class="nav nav-tabs bsgrid_tabs">
 	{$grid_tabs_content}
@@ -600,251 +600,27 @@
 {END grid_tabs}
 {BEGIN message_block}
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
-{END message_block}	<style>
-@media screen and (max-width: 767px) {
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="nome"]:before {
-		content: "{$label buscar_profissionais nome}";
-	}
-					[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="email_profissional"]:before {
-		content: "{$label buscar_profissionais email_profissional}";
-	}
-													[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="nome_empresa"]:before {
-		content: "{$label buscar_profissionais nome_empresa}";
-	}
-													[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="municipio_empresa"]:before {
-		content: "{$label buscar_profissionais municipio_empresa}";
-	}
-							[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Foto_Fechada"]:before {
-		content: "{$label buscar_profissionais Foto_Fechada}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="endereco_profissional_bairro"]:before {
-		content: "{$label buscar_profissionais endereco_profissional_bairro}";
-	}
-					}
-</style>
-<table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table {$grid_classes}  r-flexgrid rnr-b-grid rnr-gridtable" 
-	cellpadding="0" 
-	data-body-height="1"
->
-						<thead>
-			{BEGIN grid_header}
+{END message_block}{BEGIN grid_block}
+<div data-vcolumns=2 class="r-fluid r-grid-vertical bs-grid-vertical" data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" >
+{BEGIN grid_row}
+	{BEGIN grid_record}
+	{BEGIN grid_vrecord}
+	<div class="r-record-body {$rowclass}" {$rowattrs} {$rowstyle}>
+		<div class="panel panel-default" {$recordattrs}>
+											{BEGIN grid_recordheader}
+			<div class="panel-heading">
 					
-		 
-						<tr {$rowattrs} {$row_grid_0} class="{$rowclass} 
-									{$gridHeader_class}
-									
-								r-gridrow
-							">
+	
+				<table data-width="1" class="header-table">
 				 
-					{BEGIN cellblock_grid_headcell_icons}
-	<th
-	
-	{$cell_grid_headcell_icons}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_headcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="buscar_profissionais_list"		data-control-cell
-	
-	>
-
-	
-	</th>
-	{END cellblock_grid_headcell_icons}
-				 
-					{BEGIN cellblock_grid_headcell_field}
-	<th
-	
-	{$cell_grid_headcell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$Foto_Fechada_class}
-			"
-
-			data-field="Foto_Fechada"
-	
-	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN Foto_Fechada_fieldheadercolumn}
-	{BEGIN Foto_Fechada_fieldheader}
-	<SPAN {$Foto_Fechada_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Foto_Fechada">
-	{$label buscar_profissionais Foto_Fechada }	{$arrow_icon_Foto_Fechada}
-	</SPAN>
-	{END Foto_Fechada_fieldheader}
-{END Foto_Fechada_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field}
-				 
-					{BEGIN cellblock_grid_headcell_field1}
-	<th
-	
-	{$cell_grid_headcell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$nome_empresa_class}
-			"
-
-			data-field="nome_empresa"
-	
-	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN nome_empresa_fieldheadercolumn}
-	{BEGIN nome_empresa_fieldheader}
-	<SPAN {$nome_empresa_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field45" {$item_simple_grid_field45} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nome_empresa">
-	{$label buscar_profissionais nome_empresa }	{$arrow_icon_nome_empresa}
-	</SPAN>
-	{END nome_empresa_fieldheader}
-{END nome_empresa_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field1}
-				 
-					{BEGIN cellblock_grid_headcell_field2}
-	<th
-	
-	{$cell_grid_headcell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$nome_class}
-			"
-
-			data-field="nome"
-	
-	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN nome_fieldheadercolumn}
-	{BEGIN nome_fieldheader}
-	<SPAN {$nome_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nome">
-	{$label buscar_profissionais nome }	{$arrow_icon_nome}
-	</SPAN>
-	{END nome_fieldheader}
-{END nome_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field2}
-				 
-					{BEGIN cellblock_grid_headcell_field3}
-	<th
-	
-	{$cell_grid_headcell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$email_profissional_class}
-			"
-
-			data-field="email_profissional"
-	
-	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN email_profissional_fieldheadercolumn}
-	{BEGIN email_profissional_fieldheader}
-	<SPAN {$email_profissional_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field33" {$item_simple_grid_field33} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="email_profissional">
-	{$label buscar_profissionais email_profissional }	{$arrow_icon_email_profissional}
-	</SPAN>
-	{END email_profissional_fieldheader}
-{END email_profissional_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field3}
-				 
-					{BEGIN cellblock_grid_headcell_field4}
-	<th
-	
-	{$cell_grid_headcell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$endereco_profissional_bairro_class}
-			"
-
-			data-field="endereco_profissional_bairro"
-	
-	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN endereco_profissional_bairro_fieldheadercolumn}
-	{BEGIN endereco_profissional_bairro_fieldheader}
-	<SPAN {$endereco_profissional_bairro_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="endereco_profissional_bairro">
-	{$label buscar_profissionais endereco_profissional_bairro }	{$arrow_icon_endereco_profissional_bairro}
-	</SPAN>
-	{END endereco_profissional_bairro_fieldheader}
-{END endereco_profissional_bairro_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field4}
-				 
-					{BEGIN cellblock_grid_headcell_field5}
-	<th
-	
-	{$cell_grid_headcell_field5}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$municipio_empresa_class}
-			"
-
-			data-field="municipio_empresa"
-	
-	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN municipio_empresa_fieldheadercolumn}
-	{BEGIN municipio_empresa_fieldheader}
-	<SPAN {$municipio_empresa_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="municipio_empresa">
-	{$label buscar_profissionais municipio_empresa }	{$arrow_icon_municipio_empresa}
-	</SPAN>
-	{END municipio_empresa_fieldheader}
-{END municipio_empresa_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field5}
-							</tr>
-					 
-					 
-					
-					{END grid_header}
-			</thead>
-															<tbody>
-					{BEGIN grid_row}
-									
-		 
-					 
-						<tr {$rowattrs} {$row_grid_1} class="{$rowclass} 
-								
-								r-gridrow
-							">
-				 
-					{BEGIN cellblock_grid_cell_icons}
-	<td
-	
-	{$cell_grid_cell_icons}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_cell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="buscar_profissionais_list"		data-control-cell
-	
-	>
-
-	 
-		{BEGIN view_column}
+										<tr>
+						 
+							<td 
+	class=" r-ori-vert			"
+			 
+	data-cellId="grid_cell_top" data-pageid="{$pageid}" data-record-id="{$recId}">
+ 
+{BEGIN view_column}
 {BEGIN view_link}
 <span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
 	<a type="button" title="Exibir Registro" class="btn-link   
@@ -854,278 +630,160 @@
 </span>
 {END view_link}
 {END view_column}
+</td>
+											</tr>
+									 
+									 
+									 
+									 
+									 
+									 
+									 
+									 
+													</table>
+
+					</div>
+		{END grid_recordheader}
+									
+			<div class="panel-body">					
+					
 	
-	</td>
-	{END cellblock_grid_cell_icons}
+				<table data-width="1" >
 				 
-					{BEGIN cellblock_grid_cell_field}
-	<td
-	
-	{$cell_grid_cell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$Foto_Fechada_class}
+									 
+										<tr>
+						 
+							<td 
+	class=" r-ori-vert				{$nome_empresa_class}
 			"
-
-			data-field="Foto_Fechada"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
+			 
+		data-field=""
 	 
-		{BEGIN Foto_Fechada_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Foto_Fechada" data-default-width >
-{$Foto_Fechada_value}
-</span>
-{END Foto_Fechada_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-				 
-					{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$nome_empresa_class}
-			"
-
-			data-field="nome_empresa"
-	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN nome_empresa_fieldcolumn}
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}">
+ 
+{BEGIN nome_empresa_fieldcolumn}
 <span data-itemtype="grid_field" data-itemid="simple_grid_field44" {$item_simple_grid_field44} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nome_empresa" data-default-width >
 {$nome_empresa_value}
 </span>
-{END nome_empresa_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field1}
-				 
-					{BEGIN cellblock_grid_cell_field2}
-	<td
-	
-	{$cell_grid_cell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$nome_class}
+{END nome_empresa_fieldcolumn}</td>
+											</tr>
+									 
+										<tr>
+						 
+							<td 
+	class=" r-ori-vert				{$Foto_Fechada_class}
 			"
-
-			data-field="nome"
-	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
+			 
+		data-field=""
 	 
-		{BEGIN nome_fieldcolumn}
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}">
+ 
+{BEGIN Foto_Fechada_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Foto_Fechada" data-default-width >
+{$Foto_Fechada_value}
+</span>
+{END Foto_Fechada_fieldcolumn}</td>
+											</tr>
+									 
+										<tr>
+						 
+							<td 
+	class=" r-ori-vert				{$nome_class}
+			"
+			 
+		data-field=""
+	 
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}">
+ 
+{BEGIN nome_fieldcolumn}
 <span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nome" data-default-width >
 {$nome_value}
 </span>
-{END nome_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field2}
-				 
-					{BEGIN cellblock_grid_cell_field3}
-	<td
-	
-	{$cell_grid_cell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$email_profissional_class}
+{END nome_fieldcolumn}</td>
+											</tr>
+									 
+										<tr>
+						 
+							<td 
+	class=" r-ori-vert				{$email_profissional_class}
 			"
-
-			data-field="email_profissional"
-	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
+			 
+		data-field=""
 	 
-		{BEGIN email_profissional_fieldcolumn}
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}">
+ 
+{BEGIN email_profissional_fieldcolumn}
 <span data-itemtype="grid_field" data-itemid="simple_grid_field32" {$item_simple_grid_field32} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="email_profissional" data-default-width >
 {$email_profissional_value}
 </span>
-{END email_profissional_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field3}
-				 
-					{BEGIN cellblock_grid_cell_field4}
-	<td
-	
-	{$cell_grid_cell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$endereco_profissional_bairro_class}
+{END email_profissional_fieldcolumn}</td>
+											</tr>
+									 
+										<tr>
+						 
+							<td 
+	class=" r-ori-vert				{$endereco_profissional_bairro_class}
 			"
-
-			data-field="endereco_profissional_bairro"
-	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
+			 
+		data-field=""
 	 
-		{BEGIN endereco_profissional_bairro_fieldcolumn}
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}">
+ 
+{BEGIN endereco_profissional_bairro_fieldcolumn}
 <span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="endereco_profissional_bairro" data-default-width >
 {$endereco_profissional_bairro_value}
 </span>
-{END endereco_profissional_bairro_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field4}
-				 
-					{BEGIN cellblock_grid_cell_field5}
-	<td
-	
-	{$cell_grid_cell_field5}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$municipio_empresa_class}
+{END endereco_profissional_bairro_fieldcolumn}</td>
+											</tr>
+									 
+										<tr>
+						 
+							<td 
+	class=" r-ori-vert				{$municipio_empresa_class}
 			"
-
-			data-field="municipio_empresa"
-	
-	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
+			 
+		data-field=""
 	 
-		{BEGIN municipio_empresa_fieldcolumn}
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}">
+ 
+{BEGIN municipio_empresa_fieldcolumn}
 <span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="municipio_empresa" data-default-width >
 {$municipio_empresa_value}
 </span>
-{END municipio_empresa_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field5}
-							</tr>
-					 
-					
-											{END grid_row}
-					</tbody>
-													<tfoot>
-					
-		 
-					 
-					 
-						<tr {$rowattrs} {$row_grid_2} class="{$rowclass} 
-									{$gridFooter_class}
+{END municipio_empresa_fieldcolumn}</td>
+											</tr>
+									 
+										<tr>
+						 
+							<td 
+	class=" r-ori-vert				{$sobre_profissional_class}
+			"
+			 
+		data-field=""
+	 
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}">
+ 
+{BEGIN sobre_profissional_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field" {$item_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="sobre_profissional" data-default-width >
+{$sobre_profissional_value}
+</span>
+{END sobre_profissional_fieldcolumn}</td>
+											</tr>
+									 
+													</table>
+
+				
+			</div>				
 									
-								r-gridrow
-							">
-				 
-					{BEGIN cellblock_grid_footcell_icons}
-	<td
-	
-	{$cell_grid_footcell_icons}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
+		</div>
+</div>
+		
 
-	
-	data-cellId="grid_footcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_icons}
-				 
-					{BEGIN cellblock_grid_footcell_field}
-	<td
-	
-	{$cell_grid_footcell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="buscar_profissionais_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field}
-				 
-					{BEGIN cellblock_grid_footcell_field1}
-	<td
-	
-	{$cell_grid_footcell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="buscar_profissionais_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field1}
-				 
-					{BEGIN cellblock_grid_footcell_field2}
-	<td
-	
-	{$cell_grid_footcell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="buscar_profissionais_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field2}
-				 
-					{BEGIN cellblock_grid_footcell_field3}
-	<td
-	
-	{$cell_grid_footcell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="buscar_profissionais_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field3}
-				 
-					{BEGIN cellblock_grid_footcell_field4}
-	<td
-	
-	{$cell_grid_footcell_field4}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="buscar_profissionais_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field4}
-				 
-					{BEGIN cellblock_grid_footcell_field5}
-	<td
-	
-	{$cell_grid_footcell_field5}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="buscar_profissionais_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field5}
-							</tr>
-					
-					</tfoot>
-				</table>
+ 
+			{END grid_vrecord}
+	{END grid_record}
+{END grid_row}
+</div>
 {END grid_block}
 						</div>
 					<div class="r-below">

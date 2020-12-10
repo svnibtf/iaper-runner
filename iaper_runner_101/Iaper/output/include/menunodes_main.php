@@ -36,6 +36,32 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "Busca Profissional";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "0";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = strtolower("List");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
+
+	$menuNode["icon"] = "glyphicon-calendar";
+	$menuNode["iconType"] = "2";
+	$menuNode["iconShow"] = "2";
+
+		$menuNode["color"] = "";
+
+	$menuNode["title"] = "Busca Profissional";
+
+
+
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "3";
+	$menuNode["name"] = "Buscar Empresas";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "buscar_profissionais";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
@@ -52,13 +78,13 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Buscar Profissionais";
+	$menuNode["title"] = "Buscar Empresas";
 
 
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "3";
+	$menuNode["id"] = "4";
 	$menuNode["name"] = "Buscar por Localização";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
@@ -84,7 +110,7 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "4";
+	$menuNode["id"] = "5";
 	$menuNode["name"] = "Agenda";
 		$menuNode["href"] = "external.php?url=".rawurlencode("/satehagenda/");
 	$menuNode["type"] = "Leaf";

@@ -156,11 +156,6 @@ pdfDocument = {
 	
 			"stack": [
 		
-				
-			{BEGIN mastertable_block}
-			{$showmasterfile}
-		{END mastertable_block},
-				
 						 
 		{
 		layout: 'panel',

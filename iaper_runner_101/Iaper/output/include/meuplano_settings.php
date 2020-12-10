@@ -6,11 +6,11 @@ $tdatameuplano[".OwnerID"] = "idUsuario";
 $tdatameuplano[".OriginalTable"] = "meuplano";
 
 
-$tdatameuplano[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"list\":[\"list\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdatameuplano[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdatameuplano[".originalPagesByType"] = $tdatameuplano[".pagesByType"];
-$tdatameuplano[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"list\":[\"list\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdatameuplano[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdatameuplano[".originalPages"] = $tdatameuplano[".pages"];
-$tdatameuplano[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"list\":\"list\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdatameuplano[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdatameuplano[".originalDefaultPages"] = $tdatameuplano[".defaultPages"];
 
 //	field labels
@@ -1552,6 +1552,36 @@ $page_titles["meuplano"] = &$pageTitlesmeuplano;
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
 $detailsTablesData["meuplano"] = array();
+//	usuarios_dados_profissionais
+	
+	
+
+		$dIndex = 0;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="usuarios_dados_profissionais";
+		$detailsParam["dOriginalTable"] = "usuarios_dados_profissionais";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "usuarios_dados_profissionais";
+	$detailsParam["dCaptionTable"] = GetTableCaption("usuarios_dados_profissionais");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["meuplano"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["meuplano"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["meuplano"][$dIndex]["masterKeys"][]="idMeuPlano";
+
+				$detailsTablesData["meuplano"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["meuplano"][$dIndex]["detailKeys"][]="idPlano";
 
 // tables which are master tables for current table (detail)
 $masterTablesData["meuplano"] = array();

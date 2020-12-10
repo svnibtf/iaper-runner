@@ -4594,41 +4594,11 @@ $page_titles["usuarios"] = &$pageTitlesusuarios;
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
 $detailsTablesData["usuarios"] = array();
-//	usuarios_dados_profissionais
-	
-	
-
-		$dIndex = 0;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="usuarios_dados_profissionais";
-		$detailsParam["dOriginalTable"] = "usuarios_dados_profissionais";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "usuarios_dados_profissionais";
-	$detailsParam["dCaptionTable"] = GetTableCaption("usuarios_dados_profissionais");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["usuarios"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["usuarios"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["usuarios"][$dIndex]["masterKeys"][]="usu_id";
-
-				$detailsTablesData["usuarios"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["usuarios"][$dIndex]["detailKeys"][]="udp_usu_id";
 //	meuplano
 	
 	
 
-		$dIndex = 1;
+		$dIndex = 0;
 	$detailsParam = array();
 	$detailsParam["dDataSourceTable"]="meuplano";
 		$detailsParam["dOriginalTable"] = "meuplano";

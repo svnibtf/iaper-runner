@@ -929,6 +929,11 @@ function fileCustomExpression($file, $data, $field, $ptype, $table )
 		;
 		return $value;
 	}
+				if($table=="Busca Profissional" && $field=="avatar")
+	{
+		;
+		return $value;
+	}
 	return $value;
 }
 

@@ -237,7 +237,40 @@
 </span>	 
 		<span data-itemtype="page_size" data-itemid="page_size" {$item_page_size} data-pageid="{$pageid}" >
 		{$recsPerPage}
-</span>		</div>					</div>
+</span>	 
+		{BEGIN print_friendly}
+<span id="printpanelblock{$id}"  data-pageid="{$pageid}" {$printpanel_hiddenattr} data-itemtype="print_panel" data-itemid="print_panel" {$item_print_panel} data-pageid="{$pageid}">
+	<button title="Página Print-friendly" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					<span class="glyphicon glyphicon-print"></span>
+				<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu pull-right">
+										 
+				 
+					<li class="container-fluid 
+										">
+									{BEGIN print_details}
+<div>
+	<label for="printDetailsToggler{$id}">
+		<input type="checkbox" id="printDetailsToggler{$id}">
+		Imprimir detalhes	</label>
+	<div  id="printdetailstables{$id}" style="display:none;">
+											{BEGIN print_details_usuarios_dados_profissionais}
+			<div>
+				<label for="printDetailsusuarios_dados_profissionais{$id}">
+					<input type="checkbox" value="usuarios_dados_profissionais" id="printDetailsusuarios_dados_profissionais{$id}" checked>
+					Dados Profissionais				</label>
+			</div>
+			{END print_details_usuarios_dados_profissionais}
+						</div>
+</div>
+{END print_details}
+				 
+					</li>
+															</ul>
+</span>
+{END print_friendly}
+		</div>					</div>
 	</div>		
 {END above-grid_block}
 						</div>
@@ -265,7 +298,7 @@
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table {$grid_classes}  r-flexgrid rnr-b-grid rnr-gridtable" 
 	cellpadding="0" 
-	data-body-height="1"
+	data-body-height="2"
 >
 						<thead>
 			{BEGIN grid_header}
@@ -293,6 +326,23 @@
 	
 	</th>
 	{END cellblock_grid_headcell_icons}
+				 
+					{BEGIN cellblock_grid_headcell_details}
+	<th
+	
+	{$cell_grid_headcell_details}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_headcell_details" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
+	
+	>
+
+	
+	</th>
+	{END cellblock_grid_headcell_details}
 				 
 					{BEGIN cellblock_grid_headcell_field}
 	<th
@@ -371,6 +421,7 @@
 							</tr>
 					 
 					 
+					 
 					
 					{END grid_header}
 			</thead>
@@ -420,6 +471,41 @@
 	
 	</td>
 	{END cellblock_grid_cell_icons}
+				 
+					{BEGIN cellblock_grid_cell_details}
+	<td
+	
+	{$cell_grid_cell_details}
+	{$recordattrs}
+	class="
+					"
+
+	
+	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="meuplano_list"		data-control-cell
+	
+	>
+
+	 
+			 
+		
+	{BEGIN dtables_link}
+				<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
+		<a 
+			{$usuarios_dados_profissionais_link_attrs} 
+			class="{$dtables_link_class} details-badge badge usuarios_dados_profissionais_badge" 
+			title="Mostrar detalhes"
+		>
+							<span class="glyphicon glyphicon-th-list"></span>
+									<span class="{$usuarios_dados_profissionais_cntspan_class}" {$usuarios_dados_profissionais_childnumber_attr}>
+				{$usuarios_dados_profissionais_childnumber}				
+			</span>
+		</a>
+		</span>
+	{END dtables_link}
+
+	
+	</td>
+	{END cellblock_grid_cell_details}
 				 
 					{BEGIN cellblock_grid_cell_field}
 	<td
@@ -491,6 +577,36 @@
 	{END cellblock_grid_cell_field2}
 							</tr>
 					 
+						<tr {$rowattrs} {$row_grid_2} class="{$rowclass} 
+								
+							">
+				 
+					{BEGIN cellblock_grid_cell_dpreview}
+	<td
+	
+	{$cell_grid_cell_dpreview}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_cell_dpreview" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+			<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
+	data-orders="usuarios_dados_profissionais"
+			data-details-usuarios_dados_profissionais	>
+		<span data-details-inside data-short-table="usuarios_dados_profissionais">
+			</span>
+		<div data-details-preview>
+	</div>
+</div>
+	
+	</td>
+	{END cellblock_grid_cell_dpreview}
+							</tr>
+					 
 					
 											{END grid_row}
 					</tbody>
@@ -499,7 +615,8 @@
 		 
 					 
 					 
-						<tr {$rowattrs} {$row_grid_2} class="{$rowclass} 
+					 
+						<tr {$rowattrs} {$row_grid_3} class="{$rowclass} 
 									{$gridFooter_class}
 									
 								r-gridrow
@@ -520,6 +637,22 @@
 	
 	</td>
 	{END cellblock_grid_footcell_icons}
+				 
+					{BEGIN cellblock_grid_footcell_details}
+	<td
+	
+	{$cell_grid_footcell_details}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_details" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_details}
 				 
 					{BEGIN cellblock_grid_footcell_field}
 	<td

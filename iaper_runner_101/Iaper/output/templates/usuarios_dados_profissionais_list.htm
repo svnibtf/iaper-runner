@@ -258,7 +258,7 @@
 {END above-grid_block}
 						</div>
 					<div class="r-grid">
-										{BEGIN grid_block}
+										
 {BEGIN grid_tabs}
   <ul class="nav nav-tabs bsgrid_tabs">
 	{$grid_tabs_content}
@@ -266,208 +266,33 @@
 {END grid_tabs}
 {BEGIN message_block}
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
-{END message_block}	<style>
-@media screen and (max-width: 767px) {
-														[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="nome_empresa"]:before {
-		content: "{$label usuarios_dados_profissionais nome_empresa}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="cnpj"]:before {
-		content: "{$label usuarios_dados_profissionais cnpj}";
-	}
-												[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="municipio_empresa"]:before {
-		content: "{$label usuarios_dados_profissionais municipio_empresa}";
-	}
-						[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="endereco_profissional_bairro"]:before {
-		content: "{$label usuarios_dados_profissionais endereco_profissional_bairro}";
-	}
-					}
-</style>
-<table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table {$grid_classes}  r-flexgrid rnr-b-grid rnr-gridtable" 
-	cellpadding="0" 
-	data-body-height="1"
->
-						<thead>
-			{BEGIN grid_header}
+{END message_block}{BEGIN grid_block}
+<div data-vcolumns=1 class="r-fluid r-grid-vertical bs-grid-vertical" data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" >
+{BEGIN grid_row}
+	{BEGIN grid_record}
+	{BEGIN grid_vrecord}
+	<div class="r-record-body {$rowclass}" {$rowattrs} {$rowstyle}>
+		<div class="panel panel-default" {$recordattrs}>
+											{BEGIN grid_recordheader}
+			<div class="panel-heading">
 					
-		 
-						<tr {$rowattrs} {$row_grid_0} class="{$rowclass} 
-									{$gridHeader_class}
-									
-								r-gridrow
-							">
+	
+				<table data-width="2" class="header-table">
 				 
-					{BEGIN cellblock_grid_headcell_icons}
-	<th
-	
-	{$cell_grid_headcell_icons}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_headcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_list"		data-control-cell
-	
-	>
-
-	
-	</th>
-	{END cellblock_grid_headcell_icons}
-				 
-					{BEGIN cellblock_grid_headcell_checkbox}
-	<th
-	
-	{$cell_grid_headcell_checkbox}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_headcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_list"	
-		data-checkbox-cell
-	>
-
-	 
-		{BEGIN checkbox_column}
-<span data-itemtype="grid_checkbox_head" data-itemid="grid_checkbox_head" {$item_grid_checkbox_head} data-pageid="{$pageid}" data-record-id="{$recId}" >
-	<input type="checkbox" {$checkboxheader_attrs}>
-</span>
+										<tr>
+						 
+							<td 
+	class="			"
+	colspan="2"		 
+	data-cellId="grid_cell_top" data-pageid="{$pageid}" data-record-id="{$recId}">
+ 
+{BEGIN checkbox_column}
+<span data-itemtype="grid_checkbox" data-itemid="grid_checkbox" {$item_grid_checkbox} data-pageid="{$pageid}" data-record-id="{$recId}" >
+	<input type="checkbox" {$checkbox_attrs}>
+</span>	
 {END checkbox_column}
-	
-	</th>
-	{END cellblock_grid_headcell_checkbox}
-				 
-					{BEGIN cellblock_grid_headcell_field}
-	<th
-	
-	{$cell_grid_headcell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$nome_empresa_class}
-			"
-
-			data-field="nome_empresa"
-	
-	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN nome_empresa_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nome_empresa">
-	{$label usuarios_dados_profissionais nome_empresa }	</span>
-{END nome_empresa_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field}
-				 
-					{BEGIN cellblock_grid_headcell_field1}
-	<th
-	
-	{$cell_grid_headcell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$cnpj_class}
-			"
-
-			data-field="cnpj"
-	
-	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN cnpj_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="cnpj">
-	{$label usuarios_dados_profissionais cnpj }	</span>
-{END cnpj_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field1}
-				 
-					{BEGIN cellblock_grid_headcell_field2}
-	<th
-	
-	{$cell_grid_headcell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$municipio_empresa_class}
-			"
-
-			data-field="municipio_empresa"
-	
-	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN municipio_empresa_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="municipio_empresa">
-	{$label usuarios_dados_profissionais municipio_empresa }	</span>
-{END municipio_empresa_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field2}
-				 
-					{BEGIN cellblock_grid_headcell_field3}
-	<th
-	
-	{$cell_grid_headcell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$endereco_profissional_bairro_class}
-			"
-
-			data-field="endereco_profissional_bairro"
-	
-	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN endereco_profissional_bairro_fieldheadercolumn}
-	{BEGIN endereco_profissional_bairro_fieldheader}
-	<SPAN {$endereco_profissional_bairro_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="endereco_profissional_bairro">
-	{$label usuarios_dados_profissionais endereco_profissional_bairro }	{$arrow_icon_endereco_profissional_bairro}
-	</SPAN>
-	{END endereco_profissional_bairro_fieldheader}
-{END endereco_profissional_bairro_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field3}
-							</tr>
-					 
-					 
-					
-					{END grid_header}
-			</thead>
-															<tbody>
-					{BEGIN grid_row}
-									
-		 
-					 
-						<tr {$rowattrs} {$row_grid_1} class="{$rowclass} 
-								
-								r-gridrow
-							">
-				 
-					{BEGIN cellblock_grid_cell_icons}
-	<td
-	
-	{$cell_grid_cell_icons}
-	{$recordattrs}
-	class="
-					"
-
-	
-	data-cellId="grid_cell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_list"		data-control-cell
-	
-	>
-
-	 
-		{BEGIN edit_column}
+{BEGIN edit_column}
 {BEGIN edit_link}
 <span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
 	<a type="button" title="Editar" class="btn-link   
@@ -477,8 +302,8 @@
 </span>
 {END edit_link}
 {END edit_column}
-	 
-		{BEGIN inline_cancel}
+ 
+{BEGIN inline_cancel}
 <span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
 	<a type="button" title="Cancela" class="btn-link   
 	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="Cancela" >		
@@ -486,8 +311,8 @@
 								</a>
 </span>
 {END inline_cancel}
-	 
-		{BEGIN view_column}
+ 
+{BEGIN view_column}
 {BEGIN view_link}
 <span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
 	<a type="button" title="Exibir Registro" class="btn-link   
@@ -497,240 +322,204 @@
 </span>
 {END view_link}
 {END view_column}
-	
-	</td>
-	{END cellblock_grid_cell_icons}
-				 
-					{BEGIN cellblock_grid_cell_checkbox}
-	<td
-	
-	{$cell_grid_cell_checkbox}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
+</td>
+											</tr>
+									 
+									 
+									 
+									 
+									 
+									 
+													</table>
 
+					</div>
+		{END grid_recordheader}
+									
+			<div class="panel-body">					
+					
 	
-	data-cellId="grid_cell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
-	
-		data-checkbox-cell
-	>
-
-	 
-		{BEGIN checkbox_column}
-<span data-itemtype="grid_checkbox" data-itemid="grid_checkbox" {$item_grid_checkbox} data-pageid="{$pageid}" data-record-id="{$recId}" >
-	<input type="checkbox" {$checkbox_attrs}>
-</span>	
-{END checkbox_column}
-	
-	</td>
-	{END cellblock_grid_cell_checkbox}
+				<table data-width="2" >
 				 
-					{BEGIN cellblock_grid_cell_field}
-	<td
-	
-	{$cell_grid_cell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$nome_empresa_class}
+									 
+										<tr>
+						 
+							<td 
+	class="r-align-right r-ori-vert				{$Logotipo_class}
 			"
-
-			data-field="nome_empresa"
-	
-	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
+			 
+		data-field=""
 	 
-		{BEGIN nome_empresa_fieldcolumn}
+	data-cellId="grid_cell_label" data-pageid="{$pageid}" data-record-id="{$recId}" data-label-col>
+ 
+{BEGIN Logotipo_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="grid_field1" {$item_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Logotipo">
+	{$label usuarios_dados_profissionais Logotipo }	</span>
+{END Logotipo_fieldheadercolumn}
+
+</td>
+						 
+							<td 
+	class=" r-ori-vert				{$Logotipo_class}
+			"
+			 
+		data-field=""
+	 
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-value-col>
+ 
+{BEGIN Logotipo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field" {$item_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Logotipo" data-default-width >
+{$Logotipo_value}
+</span>
+{END Logotipo_fieldcolumn}</td>
+											</tr>
+									 
+										<tr>
+						 
+							<td 
+	class="r-align-right r-ori-vert				{$nome_empresa_class}
+			"
+			 
+		data-field=""
+	 
+	data-cellId="grid_cell_label1" data-pageid="{$pageid}" data-record-id="{$recId}" data-label-col>
+ 
+{BEGIN nome_empresa_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nome_empresa">
+	{$label usuarios_dados_profissionais nome_empresa }	</span>
+{END nome_empresa_fieldheadercolumn}
+
+</td>
+						 
+							<td 
+	class=" r-ori-vert				{$nome_empresa_class}
+			"
+			 
+		data-field=""
+	 
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-value-col>
+ 
+{BEGIN nome_empresa_fieldcolumn}
 <span data-itemtype="grid_field" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nome_empresa" data-default-width >
 {$nome_empresa_value}
 </span>
-{END nome_empresa_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field}
-				 
-					{BEGIN cellblock_grid_cell_field1}
-	<td
-	
-	{$cell_grid_cell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$cnpj_class}
+{END nome_empresa_fieldcolumn}</td>
+											</tr>
+									 
+										<tr>
+						 
+							<td 
+	class="r-align-right r-ori-vert				{$cnpj_class}
 			"
-
-			data-field="cnpj"
-	
-	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
+			 
+		data-field=""
 	 
-		{BEGIN cnpj_fieldcolumn}
+	data-cellId="grid_cell_label2" data-pageid="{$pageid}" data-record-id="{$recId}" data-label-col>
+ 
+{BEGIN cnpj_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="cnpj">
+	{$label usuarios_dados_profissionais cnpj }	</span>
+{END cnpj_fieldheadercolumn}
+
+</td>
+						 
+							<td 
+	class=" r-ori-vert				{$cnpj_class}
+			"
+			 
+		data-field=""
+	 
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-value-col>
+ 
+{BEGIN cnpj_fieldcolumn}
 <span data-itemtype="grid_field" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="cnpj" data-default-width >
 {$cnpj_value}
 </span>
-{END cnpj_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field1}
-				 
-					{BEGIN cellblock_grid_cell_field2}
-	<td
-	
-	{$cell_grid_cell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$municipio_empresa_class}
+{END cnpj_fieldcolumn}</td>
+											</tr>
+									 
+										<tr>
+						 
+							<td 
+	class="r-align-right r-ori-vert				{$municipio_empresa_class}
 			"
-
-			data-field="municipio_empresa"
-	
-	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
+			 
+		data-field=""
 	 
-		{BEGIN municipio_empresa_fieldcolumn}
+	data-cellId="grid_cell_label3" data-pageid="{$pageid}" data-record-id="{$recId}" data-label-col>
+ 
+{BEGIN municipio_empresa_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="municipio_empresa">
+	{$label usuarios_dados_profissionais municipio_empresa }	</span>
+{END municipio_empresa_fieldheadercolumn}
+
+</td>
+						 
+							<td 
+	class=" r-ori-vert				{$municipio_empresa_class}
+			"
+			 
+		data-field=""
+	 
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-value-col>
+ 
+{BEGIN municipio_empresa_fieldcolumn}
 <span data-itemtype="grid_field" data-itemid="simple_grid_field26" {$item_simple_grid_field26} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="municipio_empresa" data-default-width >
 {$municipio_empresa_value}
 </span>
-{END municipio_empresa_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field2}
-				 
-					{BEGIN cellblock_grid_cell_field3}
-	<td
-	
-	{$cell_grid_cell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$endereco_profissional_bairro_class}
+{END municipio_empresa_fieldcolumn}</td>
+											</tr>
+									 
+										<tr>
+						 
+							<td 
+	class="r-align-right r-ori-vert				{$endereco_profissional_bairro_class}
 			"
-
-			data-field="endereco_profissional_bairro"
-	
-	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
+			 
+		data-field=""
 	 
-		{BEGIN endereco_profissional_bairro_fieldcolumn}
+	data-cellId="grid_cell_label4" data-pageid="{$pageid}" data-record-id="{$recId}" data-label-col>
+ 
+{BEGIN endereco_profissional_bairro_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="endereco_profissional_bairro">
+	{$label usuarios_dados_profissionais endereco_profissional_bairro }	</span>
+{END endereco_profissional_bairro_fieldheadercolumn}
+
+</td>
+						 
+							<td 
+	class=" r-ori-vert				{$endereco_profissional_bairro_class}
+			"
+			 
+		data-field=""
+	 
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-value-col>
+ 
+{BEGIN endereco_profissional_bairro_fieldcolumn}
 <span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="endereco_profissional_bairro" data-default-width >
 {$endereco_profissional_bairro_value}
 </span>
-{END endereco_profissional_bairro_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field3}
-							</tr>
-					 
-					
-											{END grid_row}
-					</tbody>
-													<tfoot>
-					
-		 
-					 
-					 
-						<tr {$rowattrs} {$row_grid_2} class="{$rowclass} 
-									{$gridFooter_class}
+{END endereco_profissional_bairro_fieldcolumn}</td>
+											</tr>
+									 
+													</table>
+
+				
+			</div>				
 									
-								r-gridrow
-							">
-				 
-					{BEGIN cellblock_grid_footcell_icons}
-	<td
-	
-	{$cell_grid_footcell_icons}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
+		</div>
+</div>
+		
 
-	
-	data-cellId="grid_footcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_icons}
-				 
-					{BEGIN cellblock_grid_footcell_checkbox}
-	<td
-	
-	{$cell_grid_footcell_checkbox}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_checkbox}
-				 
-					{BEGIN cellblock_grid_footcell_field}
-	<td
-	
-	{$cell_grid_footcell_field}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field}
-				 
-					{BEGIN cellblock_grid_footcell_field1}
-	<td
-	
-	{$cell_grid_footcell_field1}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field1}
-				 
-					{BEGIN cellblock_grid_footcell_field2}
-	<td
-	
-	{$cell_grid_footcell_field2}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field2}
-				 
-					{BEGIN cellblock_grid_footcell_field3}
-	<td
-	
-	{$cell_grid_footcell_field3}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="usuarios_dados_profissionais_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field3}
-							</tr>
-					
-					</tfoot>
-				</table>
+ 
+			{END grid_vrecord}
+	{END grid_record}
+{END grid_row}
+</div>
 {END grid_block}
 						</div>
 					<div class="r-below">

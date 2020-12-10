@@ -1,7 +1,5 @@
 <?php
-			$optionsArray = array( 'details' => array( 'usuarios_dados_profissionais' => array( 'displayPreview' => 2,
-'previewPageId' => '' ),
-'meuplano' => array( 'displayPreview' => 1,
+			$optionsArray = array( 'details' => array( 'meuplano' => array( 'displayPreview' => 1,
 'previewPageId' => 'list' ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'nome',

@@ -117,9 +117,13 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{BEGIN mastertable_block}
-			{$showmasterfile}
-		{END mastertable_block},
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel usuarios_dados_profissionais Foto_Fechada }","bold":true},{"text":{$Foto_Fechada_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel usuarios_dados_profissionais Logotipo }","bold":true},{"text":{$Logotipo_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel usuarios_dados_profissionais Mapa }","bold":true},{"text":{$Mapa_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel usuarios_dados_profissionais sobre_profissional }","bold":true},{"text":{$sobre_profissional_pdfvalue}}],"margin":[0,0,0,15]},
@@ -171,15 +175,6 @@ pdfDocument = {
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field26}","stack":[{"text":"{$jslabel usuarios_dados_profissionais municipio_empresa }","bold":true},{"text":{$municipio_empresa_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel usuarios_dados_profissionais Foto_Fechada }","bold":true},{"text":{$Foto_Fechada_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel usuarios_dados_profissionais Logotipo }","bold":true},{"text":{$Logotipo_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
-			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel usuarios_dados_profissionais Mapa }","bold":true},{"text":{$Mapa_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
 			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel usuarios_dados_profissionais endereco_profissional_bairro }","bold":true},{"text":{$endereco_profissional_bairro_pdfvalue}}],"margin":[0,0,0,15]},

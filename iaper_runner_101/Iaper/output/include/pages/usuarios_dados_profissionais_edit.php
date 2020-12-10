@@ -1,5 +1,6 @@
 <?php
-			$optionsArray = array( 'master' => array( 'usuarios' => array( 'preview' => false ) ),
+			$optionsArray = array( 'master' => array( 'meuplano' => array( 'preview' => false ),
+'Busca Profissional' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'sobre_profissional',
 'resumo_formacao',

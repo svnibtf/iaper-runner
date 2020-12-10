@@ -45,9 +45,6 @@ pdfDocument = {
 								
 			"%",
 			 
-								
-			"%",
-			 
 				],
 	
 		body: [
@@ -68,37 +65,18 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"","background":"#e3e3e3","hidden":"{$item_hide_welcome_item4}"},
-				
-				
 			{"text":"","background":"#e3e3e3","hidden":"{$item_hide_welcome_item}"},
+				
+				
+			{"text":"","background":"#e3e3e3","hidden":"{$item_hide_welcome_item2}"},
+				
+				
+			{"text":"","background":"#e3e3e3","hidden":"{$item_hide_welcome_item4}"},
 				
 				
 			{"text":"","background":"#e3e3e3","hidden":"{$item_hide_welcome_item1}"},
 				
 		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-  },
-
-											],
-								[
-												{
-	cellId: 'c',
-	col:0,
-	row:0,
-			style: 'cell',
-		
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				'',
-	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
   },

@@ -1,5 +1,7 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
+'details' => array( 'usuarios_dados_profissionais' => array( 'displayPreview' => 2,
+'previewPageId' => '' ) ),
 'master' => array( 'usuarios' => array( 'preview' => true ) ),
 'fields' => array( 'gridFields' => array( 'idPlano',
 'Data_Inicial',

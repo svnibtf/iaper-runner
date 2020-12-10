@@ -221,6 +221,7 @@ class ConnectionManager_Base
 		$connectionsIds["meuplano"] = "iaperdbatrobb0254publiccloudco";
 		$connectionsIds["login"] = "iaperdbatrobb0254publiccloudco";
 		$connectionsIds["buscar_profissionais"] = "iaperdbatrobb0254publiccloudco";
+		$connectionsIds["Busca Profissional"] = "iaperdbatrobb0254publiccloudco";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

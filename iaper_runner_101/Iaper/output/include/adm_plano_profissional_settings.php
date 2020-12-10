@@ -6,11 +6,11 @@ $tdataadm_plano_profissional[".OwnerID"] = "";
 $tdataadm_plano_profissional[".OriginalTable"] = "adm_plano_profissional";
 
 
-$tdataadm_plano_profissional[".pagesByType"] = my_json_decode( "{}" );
+$tdataadm_plano_profissional[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdataadm_plano_profissional[".originalPagesByType"] = $tdataadm_plano_profissional[".pagesByType"];
-$tdataadm_plano_profissional[".pages"] = types2pages( my_json_decode( "{}" ) );
+$tdataadm_plano_profissional[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdataadm_plano_profissional[".originalPages"] = $tdataadm_plano_profissional[".pages"];
-$tdataadm_plano_profissional[".defaultPages"] = my_json_decode( "{}" );
+$tdataadm_plano_profissional[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdataadm_plano_profissional[".originalDefaultPages"] = $tdataadm_plano_profissional[".defaultPages"];
 
 //	field labels

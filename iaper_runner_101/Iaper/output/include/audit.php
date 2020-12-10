@@ -346,6 +346,10 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="Busca Profissional")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -695,6 +699,10 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="Procurar por Profissionais")
+		{
+			return false;
+		}
+		if($table=="Busca Profissional")
 		{
 			return false;
 		}

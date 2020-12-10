@@ -36,6 +36,7 @@ $dalTableusuarios_dados_profissionais["Horarios_de_Atendimento"] = array("type"=
 $dalTableusuarios_dados_profissionais["Sobre_a_Empresa"] = array("type"=>201,"varname"=>"Sobre_a_Empresa", "name" => "Sobre_a_Empresa");
 $dalTableusuarios_dados_profissionais["Lat"] = array("type"=>14,"varname"=>"Lat", "name" => "Lat");
 $dalTableusuarios_dados_profissionais["Lng"] = array("type"=>14,"varname"=>"Lng", "name" => "Lng");
+$dalTableusuarios_dados_profissionais["idPlano"] = array("type"=>3,"varname"=>"idPlano", "name" => "idPlano");
 	$dalTableusuarios_dados_profissionais["udp_id"]["key"]=true;
 
 $dal_info["iaperdbatrobb0254publiccloudco__usuarios_dados_profissionais"] = &$dalTableusuarios_dados_profissionais;

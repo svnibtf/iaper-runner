@@ -658,9 +658,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "64_1604434893";
+$projectBuildKey = "81_1607599917";
 $wizardBuildKey = "35870";
-$projectBuildNumber = "64";
+$projectBuildNumber = "81";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -690,8 +690,9 @@ $tableCaptions["Portuguese(Brazil)"]["adm_tipousuario"] = "TipoUsuario";
 $tableCaptions["Portuguese(Brazil)"]["planos"] = "Planos";
 $tableCaptions["Portuguese(Brazil)"]["meuplano"] = "Meu Plano";
 $tableCaptions["Portuguese(Brazil)"]["login"] = "Login";
-$tableCaptions["Portuguese(Brazil)"]["buscar_profissionais"] = "Buscar Profissionais";
-$tableCaptions["Portuguese(Brazil)"]["Procurar_por_Profissionais"] = "Procurar por Profissionais";
+$tableCaptions["Portuguese(Brazil)"]["buscar_profissionais"] = "Buscar Empresas";
+$tableCaptions["Portuguese(Brazil)"]["Procurar_por_Profissionais"] = "Procurar pela Localização";
+$tableCaptions["Portuguese(Brazil)"]["Busca_Profissional"] = "Busca Profissional";
 
 
 $globalEvents = new class_GlobalEvents;

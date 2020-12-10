@@ -7,5 +7,8 @@
 [data-page=".global_menu"][data-itemid="welcome_item1"] > .bs-welcome-header {
   background-color: #e3e3e3;
 }
+[data-page=".global_menu"][data-itemid="welcome_item2"] > .bs-welcome-header {
+  background-color: #e3e3e3;
+}
 
 

@@ -206,6 +206,9 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_integrated_search_field27}","text":{$Sobre_a_Empresa_pdfvalue}},
 				
+				
+			{"hidden":"{$item_hide_integrated_search_field30}","text":{$idPlano_pdfvalue}},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

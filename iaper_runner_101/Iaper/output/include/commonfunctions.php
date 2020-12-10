@@ -207,6 +207,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("procurar_por_profissionais" == $shortTName )
 		return true;
+	if ("busca_profissional" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -356,6 +358,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="Procurar por Profissionais";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Busca Profissional");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Busca Profissional";
+	}
 	return $arr;
 }
 
@@ -376,6 +387,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="login";
 	$arr[]="buscar_profissionais";
 	$arr[]="Procurar por Profissionais";
+	$arr[]="Busca Profissional";
 	return $arr;
 }
 
@@ -1143,6 +1155,11 @@ function GetUserPermissionsStatic( $table )
 //	default permissions
 		return "S".$extraPerm;
 	}
+	if( $table=="Busca Profissional" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
 	// grant nothing by default
 	return "";
 }
@@ -1281,6 +1298,7 @@ function SetAuthSessionData($pUsername, &$data, $password, &$pageObject = null, 
 	$_SESSION["_usuarios_OwnerID"] = $data["usu_id"];
 		$_SESSION["_usuarios_dados_profissionais_OwnerID"] = $data["usu_id"];
 		$_SESSION["_meuplano_OwnerID"] = $data["usu_id"];
+		$_SESSION["_Busca Profissional_OwnerID"] = $data["usu_id"];
 
 	$_SESSION["UserData"] = $data;
 
@@ -1354,7 +1372,7 @@ function CheckSecurity($strValue, $strAction, $table = "")
 		if($table=="usuarios_dados_profissionais")
 		{
 
-				if(!($pSet->getCaseSensitiveUsername((string)$_SESSION["_".$table."_OwnerID"])===$pSet->getCaseSensitiveUsername((string)$strValue)))
+				if(( $strAction=="Edit" || $strAction=="Delete") && !($pSet->getCaseSensitiveUsername((string)$_SESSION["_".$table."_OwnerID"])===$pSet->getCaseSensitiveUsername((string)$strValue)))
 				return false;
 		}
 		if($table=="meuplano")
@@ -1439,6 +1457,7 @@ function SecuritySQL($strAction, $table, $strPerm="")
 		}
 		if($table=="usuarios_dados_profissionais")
 		{
+				if($strAction == "Edit" || $strAction == "Delete")
 				$ret = GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);
 		}
 		if($table=="meuplano")

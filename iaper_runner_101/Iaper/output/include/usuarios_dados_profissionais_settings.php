@@ -121,6 +121,10 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldLabelsusuarios_dados_profissionais["Portuguese(Brazil)"]["Lng"] = "Lng";
 	$fieldToolTipsusuarios_dados_profissionais["Portuguese(Brazil)"]["Lng"] = "";
 	$placeHoldersusuarios_dados_profissionais["Portuguese(Brazil)"]["Lng"] = "";
+	$fieldLabelsusuarios_dados_profissionais["Portuguese(Brazil)"]["idPlano"] = "Id Plano";
+	$fieldToolTipsusuarios_dados_profissionais["Portuguese(Brazil)"]["idPlano"] = "";
+	$placeHoldersusuarios_dados_profissionais["Portuguese(Brazil)"]["idPlano"] = "";
+	$pageTitlesusuarios_dados_profissionais["Portuguese(Brazil)"]["view"] = "Dados Profissionais";
 	if (count($fieldToolTipsusuarios_dados_profissionais["Portuguese(Brazil)"]))
 		$tdatausuarios_dados_profissionais[".isUseToolTips"] = true;
 }
@@ -131,7 +135,7 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 
 
 $tdatausuarios_dados_profissionais[".shortTableName"] = "usuarios_dados_profissionais";
-$tdatausuarios_dados_profissionais[".nSecOptions"] = 1;
+$tdatausuarios_dados_profissionais[".nSecOptions"] = 2;
 
 $tdatausuarios_dados_profissionais[".mainTableOwnerID"] = "udp_usu_id";
 $tdatausuarios_dados_profissionais[".entityType"] = 0;
@@ -278,6 +282,7 @@ $tdatausuarios_dados_profissionais[".googleLikeFields"][] = "Horarios_de_Atendim
 $tdatausuarios_dados_profissionais[".googleLikeFields"][] = "Sobre_a_Empresa";
 $tdatausuarios_dados_profissionais[".googleLikeFields"][] = "Lat";
 $tdatausuarios_dados_profissionais[".googleLikeFields"][] = "Lng";
+$tdatausuarios_dados_profissionais[".googleLikeFields"][] = "idPlano";
 
 
 
@@ -318,7 +323,7 @@ $tdatausuarios_dados_profissionais[".strOrderBy"] = $tstrOrderBy;
 $tdatausuarios_dados_profissionais[".orderindexes"] = array();
 
 
-$tdatausuarios_dados_profissionais[".sqlHead"] = "SELECT udp_id,  udp_usu_id,  email_profissional,  avaliacao_usuarios,  sobre_profissional,  resumo_formacao,  diferencial_profissional,  atendimento_presencial,  atendimento_online,  mini_curriculo,  resumo_formacao_academica,  resumo_formacao_cursos,  nome_empresa,  cnpj,  ramo_empresa,  cep_profissional,  endereco_profissional_rua,  endereco_profissional_numero,  endereco_profissional_complemento,  endereco_profissional_latitude,  endereco_profissional_longitude,  pais_empresa,  estado_empresa,  municipio_empresa,  Foto_Fechada,  Logotipo,  Mapa,  endereco_profissional_bairro,  Horarios_de_Atendimento,  Sobre_a_Empresa,  Lat,  Lng";
+$tdatausuarios_dados_profissionais[".sqlHead"] = "SELECT udp_id,  udp_usu_id,  email_profissional,  avaliacao_usuarios,  sobre_profissional,  resumo_formacao,  diferencial_profissional,  atendimento_presencial,  atendimento_online,  mini_curriculo,  resumo_formacao_academica,  resumo_formacao_cursos,  nome_empresa,  cnpj,  ramo_empresa,  cep_profissional,  endereco_profissional_rua,  endereco_profissional_numero,  endereco_profissional_complemento,  endereco_profissional_latitude,  endereco_profissional_longitude,  pais_empresa,  estado_empresa,  municipio_empresa,  Foto_Fechada,  Logotipo,  Mapa,  endereco_profissional_bairro,  Horarios_de_Atendimento,  Sobre_a_Empresa,  Lat,  Lng,  idPlano";
 $tdatausuarios_dados_profissionais[".sqlFrom"] = "FROM usuarios_dados_profissionais";
 $tdatausuarios_dados_profissionais[".sqlWhereExpr"] = "";
 $tdatausuarios_dados_profissionais[".sqlTail"] = "";
@@ -4813,6 +4818,143 @@ $tdatausuarios_dados_profissionais[".hideMobileList"] = array();
 
 	$tdatausuarios_dados_profissionais["Lng"] = $fdata;
 		$tdatausuarios_dados_profissionais[".searchableFields"][] = "Lng";
+//	idPlano
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 33;
+	$fdata["strName"] = "idPlano";
+	$fdata["GoodName"] = "idPlano";
+	$fdata["ownerTable"] = "usuarios_dados_profissionais";
+	$fdata["Label"] = GetFieldLabel("usuarios_dados_profissionais","idPlano");
+	$fdata["FieldType"] = 3;
+
+	
+	
+	
+			
+
+		$fdata["strField"] = "idPlano";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "idPlano";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+							
+	
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatausuarios_dados_profissionais["idPlano"] = $fdata;
+		$tdatausuarios_dados_profissionais[".searchableFields"][] = "idPlano";
 
 
 $tables_data["usuarios_dados_profissionais"]=&$tdatausuarios_dados_profissionais;
@@ -4831,20 +4973,36 @@ $masterTablesData["usuarios_dados_profissionais"] = array();
 
 
 	
-				$strOriginalDetailsTable="usuarios";
+				$strOriginalDetailsTable="meuplano";
 	$masterParams = array();
-	$masterParams["mDataSourceTable"]="usuarios";
+	$masterParams["mDataSourceTable"]="meuplano";
 	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "usuarios";
+	$masterParams["mShortTable"]= "meuplano";
 	$masterParams["masterKeys"]= array();
 	$masterParams["detailKeys"]= array();
 
 	$masterParams["type"] = PAGE_LIST;
 					$masterTablesData["usuarios_dados_profissionais"][0] = $masterParams;
 				$masterTablesData["usuarios_dados_profissionais"][0]["masterKeys"] = array();
-	$masterTablesData["usuarios_dados_profissionais"][0]["masterKeys"][]="usu_id";
+	$masterTablesData["usuarios_dados_profissionais"][0]["masterKeys"][]="idMeuPlano";
 				$masterTablesData["usuarios_dados_profissionais"][0]["detailKeys"] = array();
-	$masterTablesData["usuarios_dados_profissionais"][0]["detailKeys"][]="udp_usu_id";
+	$masterTablesData["usuarios_dados_profissionais"][0]["detailKeys"][]="idPlano";
+		
+	
+				$strOriginalDetailsTable="usuarios";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="Busca Profissional";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "busca_profissional";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["usuarios_dados_profissionais"][1] = $masterParams;
+				$masterTablesData["usuarios_dados_profissionais"][1]["masterKeys"] = array();
+	$masterTablesData["usuarios_dados_profissionais"][1]["masterKeys"][]="usu_id";
+				$masterTablesData["usuarios_dados_profissionais"][1]["detailKeys"] = array();
+	$masterTablesData["usuarios_dados_profissionais"][1]["detailKeys"][]="udp_usu_id";
 		
 // -----------------end  prepare master-details data arrays ------------------------------//
 
@@ -4866,7 +5024,7 @@ function createSqlQuery_usuarios_dados_profissionais()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "udp_id,  udp_usu_id,  email_profissional,  avaliacao_usuarios,  sobre_profissional,  resumo_formacao,  diferencial_profissional,  atendimento_presencial,  atendimento_online,  mini_curriculo,  resumo_formacao_academica,  resumo_formacao_cursos,  nome_empresa,  cnpj,  ramo_empresa,  cep_profissional,  endereco_profissional_rua,  endereco_profissional_numero,  endereco_profissional_complemento,  endereco_profissional_latitude,  endereco_profissional_longitude,  pais_empresa,  estado_empresa,  municipio_empresa,  Foto_Fechada,  Logotipo,  Mapa,  endereco_profissional_bairro,  Horarios_de_Atendimento,  Sobre_a_Empresa,  Lat,  Lng";
+$proto0["m_strFieldList"] = "udp_id,  udp_usu_id,  email_profissional,  avaliacao_usuarios,  sobre_profissional,  resumo_formacao,  diferencial_profissional,  atendimento_presencial,  atendimento_online,  mini_curriculo,  resumo_formacao_academica,  resumo_formacao_cursos,  nome_empresa,  cnpj,  ramo_empresa,  cep_profissional,  endereco_profissional_rua,  endereco_profissional_numero,  endereco_profissional_complemento,  endereco_profissional_latitude,  endereco_profissional_longitude,  pais_empresa,  estado_empresa,  municipio_empresa,  Foto_Fechada,  Logotipo,  Mapa,  endereco_profissional_bairro,  Horarios_de_Atendimento,  Sobre_a_Empresa,  Lat,  Lng,  idPlano";
 $proto0["m_strFrom"] = "FROM usuarios_dados_profissionais";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -5354,72 +5512,87 @@ $proto68["m_alias"] = "";
 $obj = new SQLFieldListItem($proto68);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto70=array();
-$proto70["m_link"] = "SQLL_MAIN";
-			$proto71=array();
-$proto71["m_strName"] = "usuarios_dados_profissionais";
-$proto71["m_srcTableName"] = "usuarios_dados_profissionais";
-$proto71["m_columns"] = array();
-$proto71["m_columns"][] = "udp_id";
-$proto71["m_columns"][] = "udp_usu_id";
-$proto71["m_columns"][] = "email_profissional";
-$proto71["m_columns"][] = "avaliacao_usuarios";
-$proto71["m_columns"][] = "sobre_profissional";
-$proto71["m_columns"][] = "resumo_formacao";
-$proto71["m_columns"][] = "yt_code_apresentacao";
-$proto71["m_columns"][] = "diferencial_profissional";
-$proto71["m_columns"][] = "atendimento_presencial";
-$proto71["m_columns"][] = "atendimento_online";
-$proto71["m_columns"][] = "mini_curriculo";
-$proto71["m_columns"][] = "resumo_formacao_academica";
-$proto71["m_columns"][] = "resumo_formacao_cursos";
-$proto71["m_columns"][] = "curriculo_lattes";
-$proto71["m_columns"][] = "nome_empresa";
-$proto71["m_columns"][] = "cnpj";
-$proto71["m_columns"][] = "ramo_empresa";
-$proto71["m_columns"][] = "tipo_empresa";
-$proto71["m_columns"][] = "cep_profissional";
-$proto71["m_columns"][] = "endereco_profissional_rua";
-$proto71["m_columns"][] = "endereco_profissional_numero";
-$proto71["m_columns"][] = "endereco_profissional_complemento";
-$proto71["m_columns"][] = "endereco_profissional_latitude";
-$proto71["m_columns"][] = "endereco_profissional_longitude";
-$proto71["m_columns"][] = "pais_empresa";
-$proto71["m_columns"][] = "estado_empresa";
-$proto71["m_columns"][] = "municipio_empresa";
-$proto71["m_columns"][] = "udp_deletado";
-$proto71["m_columns"][] = "Foto_Fechada";
-$proto71["m_columns"][] = "Logotipo";
-$proto71["m_columns"][] = "Mapa";
-$proto71["m_columns"][] = "endereco_profissional_bairro";
-$proto71["m_columns"][] = "Horarios_de_Atendimento";
-$proto71["m_columns"][] = "Sobre_a_Empresa";
-$proto71["m_columns"][] = "Lat";
-$proto71["m_columns"][] = "Lng";
-$obj = new SQLTable($proto71);
+						$proto70=array();
+			$obj = new SQLField(array(
+	"m_strName" => "idPlano",
+	"m_strTable" => "usuarios_dados_profissionais",
+	"m_srcTableName" => "usuarios_dados_profissionais"
+));
 
-$proto70["m_table"] = $obj;
-$proto70["m_sql"] = "usuarios_dados_profissionais";
-$proto70["m_alias"] = "";
+$proto70["m_sql"] = "idPlano";
 $proto70["m_srcTableName"] = "usuarios_dados_profissionais";
-$proto72=array();
-$proto72["m_sql"] = "";
-$proto72["m_uniontype"] = "SQLL_UNKNOWN";
+$proto70["m_expr"]=$obj;
+$proto70["m_alias"] = "";
+$obj = new SQLFieldListItem($proto70);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto72=array();
+$proto72["m_link"] = "SQLL_MAIN";
+			$proto73=array();
+$proto73["m_strName"] = "usuarios_dados_profissionais";
+$proto73["m_srcTableName"] = "usuarios_dados_profissionais";
+$proto73["m_columns"] = array();
+$proto73["m_columns"][] = "udp_id";
+$proto73["m_columns"][] = "udp_usu_id";
+$proto73["m_columns"][] = "email_profissional";
+$proto73["m_columns"][] = "avaliacao_usuarios";
+$proto73["m_columns"][] = "sobre_profissional";
+$proto73["m_columns"][] = "resumo_formacao";
+$proto73["m_columns"][] = "yt_code_apresentacao";
+$proto73["m_columns"][] = "diferencial_profissional";
+$proto73["m_columns"][] = "atendimento_presencial";
+$proto73["m_columns"][] = "atendimento_online";
+$proto73["m_columns"][] = "mini_curriculo";
+$proto73["m_columns"][] = "resumo_formacao_academica";
+$proto73["m_columns"][] = "resumo_formacao_cursos";
+$proto73["m_columns"][] = "curriculo_lattes";
+$proto73["m_columns"][] = "nome_empresa";
+$proto73["m_columns"][] = "cnpj";
+$proto73["m_columns"][] = "ramo_empresa";
+$proto73["m_columns"][] = "tipo_empresa";
+$proto73["m_columns"][] = "cep_profissional";
+$proto73["m_columns"][] = "endereco_profissional_rua";
+$proto73["m_columns"][] = "endereco_profissional_numero";
+$proto73["m_columns"][] = "endereco_profissional_complemento";
+$proto73["m_columns"][] = "endereco_profissional_latitude";
+$proto73["m_columns"][] = "endereco_profissional_longitude";
+$proto73["m_columns"][] = "pais_empresa";
+$proto73["m_columns"][] = "estado_empresa";
+$proto73["m_columns"][] = "municipio_empresa";
+$proto73["m_columns"][] = "udp_deletado";
+$proto73["m_columns"][] = "Foto_Fechada";
+$proto73["m_columns"][] = "Logotipo";
+$proto73["m_columns"][] = "Mapa";
+$proto73["m_columns"][] = "endereco_profissional_bairro";
+$proto73["m_columns"][] = "Horarios_de_Atendimento";
+$proto73["m_columns"][] = "Sobre_a_Empresa";
+$proto73["m_columns"][] = "Lat";
+$proto73["m_columns"][] = "Lng";
+$proto73["m_columns"][] = "idPlano";
+$obj = new SQLTable($proto73);
+
+$proto72["m_table"] = $obj;
+$proto72["m_sql"] = "usuarios_dados_profissionais";
+$proto72["m_alias"] = "";
+$proto72["m_srcTableName"] = "usuarios_dados_profissionais";
+$proto74=array();
+$proto74["m_sql"] = "";
+$proto74["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto72["m_column"]=$obj;
-$proto72["m_contained"] = array();
-$proto72["m_strCase"] = "";
-$proto72["m_havingmode"] = false;
-$proto72["m_inBrackets"] = false;
-$proto72["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto72);
+$proto74["m_column"]=$obj;
+$proto74["m_contained"] = array();
+$proto74["m_strCase"] = "";
+$proto74["m_havingmode"] = false;
+$proto74["m_inBrackets"] = false;
+$proto74["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto74);
 
-$proto70["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto70);
+$proto72["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto72);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -5435,7 +5608,7 @@ $queryData_usuarios_dados_profissionais = createSqlQuery_usuarios_dados_profissi
 	
 		;
 
-																																
+																																	
 
 $tdatausuarios_dados_profissionais[".sqlquery"] = $queryData_usuarios_dados_profissionais;
 

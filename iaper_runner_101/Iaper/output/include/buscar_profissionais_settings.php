@@ -136,6 +136,7 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldLabelsbuscar_profissionais["Portuguese(Brazil)"]["Lat"] = "Lat";
 	$fieldToolTipsbuscar_profissionais["Portuguese(Brazil)"]["Lat"] = "";
 	$placeHoldersbuscar_profissionais["Portuguese(Brazil)"]["Lat"] = "";
+	$pageTitlesbuscar_profissionais["Portuguese(Brazil)"]["view"] = "Buscar Empresas";
 	if (count($fieldToolTipsbuscar_profissionais["Portuguese(Brazil)"]))
 		$tdatabuscar_profissionais[".isUseToolTips"] = true;
 }
@@ -1264,9 +1265,7 @@ $tdatabuscar_profissionais[".hideMobileList"] = array();
 		$vdata["NeedEncode"] = true;
 
 	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
+	
 	$fdata["ViewFormats"]["view"] = $vdata;
 //  End View Formats
 

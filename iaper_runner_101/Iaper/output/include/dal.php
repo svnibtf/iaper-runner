@@ -47,6 +47,7 @@ function DBLookup($sql)
   */
 class tDAL
 {
+	var $tbliaperdbatrobb0254publiccloudco__adm_modulos_habilitados;
 	var $tbliaperdbatrobb0254publiccloudco__adm_plano_profissional;
 	var $tbliaperdbatrobb0254publiccloudco__adm_ramos;
 	var $tbliaperdbatrobb0254publiccloudco__adm_tipousuario;
@@ -65,6 +66,7 @@ class tDAL
 	{
 		if($this->lstTables)
 			return;
+		$this->lstTables[] = array("name" => "adm_modulos_habilitados", "varname" => "iaperdbatrobb0254publiccloudco__adm_modulos_habilitados", "altvarname" => "adm_modulos_habilitados", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
 		$this->lstTables[] = array("name" => "adm_plano_profissional", "varname" => "iaperdbatrobb0254publiccloudco__adm_plano_profissional", "altvarname" => "adm_plano_profissional", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
 		$this->lstTables[] = array("name" => "adm_ramos", "varname" => "iaperdbatrobb0254publiccloudco__adm_ramos", "altvarname" => "adm_ramos", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
 		$this->lstTables[] = array("name" => "adm_tipousuario", "varname" => "iaperdbatrobb0254publiccloudco__adm_tipousuario", "altvarname" => "adm_tipousuario", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");

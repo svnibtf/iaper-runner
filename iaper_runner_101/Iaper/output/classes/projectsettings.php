@@ -3260,6 +3260,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "buscar_profissionais" ] = "buscar_profissionais";
 	$projectEntities[ "Procurar por Profissionais" ] = array( "url" => "procurar_por_profissionais", "type" => 4 );
 	$projectEntitiesReverse[ "procurar_por_profissionais" ] = "Procurar por Profissionais";
+	$projectEntities[ "Busca Profissional" ] = array( "url" => "busca_profissional", "type" => 1 );
+	$projectEntitiesReverse[ "busca_profissional" ] = "Busca Profissional";
 }
 
 function findTable( $table ) {
