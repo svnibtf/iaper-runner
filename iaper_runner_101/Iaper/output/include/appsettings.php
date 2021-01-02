@@ -658,9 +658,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "82_1607599917";
+$projectBuildKey = "88_1609588534";
 $wizardBuildKey = "35870";
-$projectBuildNumber = "82";
+$projectBuildNumber = "88";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -693,6 +693,10 @@ $tableCaptions["Portuguese(Brazil)"]["login"] = "Login";
 $tableCaptions["Portuguese(Brazil)"]["buscar_profissionais"] = "Buscar Empresas";
 $tableCaptions["Portuguese(Brazil)"]["Procurar_por_Profissionais"] = "Procurar pela Localização";
 $tableCaptions["Portuguese(Brazil)"]["Busca_Profissional"] = "Busca Profissional";
+$tableCaptions["Portuguese(Brazil)"]["pacientes"] = "Pacientes
+";
+$tableCaptions["Portuguese(Brazil)"]["tratamento"] = "Tratamentos";
+$tableCaptions["Portuguese(Brazil)"]["Fluxo_de_Recebimentos"] = "Fluxo de Recebimentos";
 
 
 $globalEvents = new class_GlobalEvents;

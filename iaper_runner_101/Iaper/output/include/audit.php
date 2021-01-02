@@ -350,6 +350,18 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="pacientes")
+		{
+			return false;
+		}
+		if($table=="tratamento")
+		{
+			return false;
+		}
+		if($table=="Fluxo de Recebimentos")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -703,6 +715,18 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="Busca Profissional")
+		{
+			return false;
+		}
+		if($table=="pacientes")
+		{
+			return false;
+		}
+		if($table=="tratamento")
+		{
+			return false;
+		}
+		if($table=="Fluxo de Recebimentos")
 		{
 			return false;
 		}

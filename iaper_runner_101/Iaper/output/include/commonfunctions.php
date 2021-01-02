@@ -209,6 +209,12 @@ function checkTableName($shortTName )
 		return true;
 	if ("busca_profissional" == $shortTName )
 		return true;
+	if ("pacientes" == $shortTName )
+		return true;
+	if ("tratamento" == $shortTName )
+		return true;
+	if ("fluxo_de_recebimentos" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -367,6 +373,33 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="Busca Profissional";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("pacientes");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="pacientes";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("tratamento");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="tratamento";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("Fluxo de Recebimentos");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="Fluxo de Recebimentos";
+	}
 	return $arr;
 }
 
@@ -388,6 +421,9 @@ function GetTablesListWithoutSecurity()
 	$arr[]="buscar_profissionais";
 	$arr[]="Procurar por Profissionais";
 	$arr[]="Busca Profissional";
+	$arr[]="pacientes";
+	$arr[]="tratamento";
+	$arr[]="Fluxo de Recebimentos";
 	return $arr;
 }
 
@@ -1156,6 +1192,21 @@ function GetUserPermissionsStatic( $table )
 		return "S".$extraPerm;
 	}
 	if( $table=="Busca Profissional" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="pacientes" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="tratamento" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="Fluxo de Recebimentos" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

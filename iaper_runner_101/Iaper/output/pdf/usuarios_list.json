@@ -83,6 +83,7 @@ pdfDocument = {
 		
 		widths: [
 								"*", 
+											"*", 
 					 ],	
 		
 	
@@ -91,6 +92,35 @@ pdfDocument = {
 					[
 												{
 	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+					colSpan: 2,
+		
+			
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+  },
+
+																		{ 
+				cellId: 'c1',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
+								[
+												{
+	cellId: 'c',
 	col:0,
 	row:0,
 			style: 'cell',
@@ -107,6 +137,28 @@ pdfDocument = {
 	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
+  },
+
+																			{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_print_panel}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
   },
 
 											],
@@ -187,6 +239,18 @@ pdfDocument = {
 		
 				
 			{"text":"","hidden":"{$item_hide_grid_edit}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_alldetails_link}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link1}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link2}"},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -339,10 +403,19 @@ pdfDocument = {
 	
 	
 	
-			"text": [
+			"stack": [
 		
-				'',
-	  ],
+				
+			 {BEGIN details_pacientes}
+			{$displayDetailTable_pacientes }
+		{END details_pacientes},
+				
+				
+			 {BEGIN details_tratamento}
+			{$displayDetailTable_tratamento }
+		{END details_tratamento},
+				
+		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
   },

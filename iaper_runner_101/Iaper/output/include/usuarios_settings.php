@@ -4624,6 +4624,66 @@ $detailsTablesData["usuarios"] = array();
 				$detailsTablesData["usuarios"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["usuarios"][$dIndex]["detailKeys"][]="idUsuario";
+//	pacientes
+	
+	
+
+		$dIndex = 1;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="pacientes";
+		$detailsParam["dOriginalTable"] = "pacientes";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "pacientes";
+	$detailsParam["dCaptionTable"] = GetTableCaption("pacientes");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["usuarios"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["usuarios"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["usuarios"][$dIndex]["masterKeys"][]="usu_id";
+
+				$detailsTablesData["usuarios"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["usuarios"][$dIndex]["detailKeys"][]="idProfissional";
+//	tratamento
+	
+	
+
+		$dIndex = 2;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="tratamento";
+		$detailsParam["dOriginalTable"] = "tratamento";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "tratamento";
+	$detailsParam["dCaptionTable"] = GetTableCaption("tratamento");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["usuarios"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["usuarios"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["usuarios"][$dIndex]["masterKeys"][]="usu_id";
+
+				$detailsTablesData["usuarios"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["usuarios"][$dIndex]["detailKeys"][]="idProfissional";
 
 // tables which are master tables for current table (detail)
 $masterTablesData["usuarios"] = array();

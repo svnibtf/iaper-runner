@@ -59,6 +59,489 @@
 			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
 				{$menu main}			</div>
 		
+ 
+
+			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="search_panel" {$item_search_panel} data-topcell-item-type="search_panel" >
+				<!-- Begin Search panel content -->
+<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}" >
+
+	<div class="panel-heading">
+		<div class="btn-group" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Buscar em			<span class="caret"></span>
+			</button>
+		</div>
+
+
+		<div class="btn-group searchpanel-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Mostrar opções</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>todas as condições</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>qualquer condição</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>ocultar</a></li>
+			</ul>
+		</div>
+
+
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+																		{BEGIN searchCtrlBlock_udp_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_udp_id}" {$filterRow_attrs_udp_id}>
+			<label>{$label usuarios_dados_profissionais udp_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_udp_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_udp_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_udp_id}</span>
+						</div>
+		{END searchCtrlBlock_udp_id}
+																{BEGIN searchCtrlBlock_idPlano}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_idPlano}" {$filterRow_attrs_idPlano}>
+			<label>{$label usuarios_dados_profissionais idPlano }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_idPlano}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_idPlano}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_idPlano}</span>
+						</div>
+		{END searchCtrlBlock_idPlano}
+																{BEGIN searchCtrlBlock_Lng}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Lng}" {$filterRow_attrs_Lng}>
+			<label>{$label usuarios_dados_profissionais Lng }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Lng}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Lng}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Lng}</span>
+						</div>
+		{END searchCtrlBlock_Lng}
+																{BEGIN searchCtrlBlock_Lat}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Lat}" {$filterRow_attrs_Lat}>
+			<label>{$label usuarios_dados_profissionais Lat }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Lat}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Lat}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Lat}</span>
+						</div>
+		{END searchCtrlBlock_Lat}
+																{BEGIN searchCtrlBlock_Sobre_a_Empresa}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Sobre_a_Empresa}" {$filterRow_attrs_Sobre_a_Empresa}>
+			<label>{$label usuarios_dados_profissionais Sobre_a_Empresa }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Sobre_a_Empresa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Sobre_a_Empresa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Sobre_a_Empresa}</span>
+						</div>
+		{END searchCtrlBlock_Sobre_a_Empresa}
+																{BEGIN searchCtrlBlock_Horarios_de_Atendimento}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Horarios_de_Atendimento}" {$filterRow_attrs_Horarios_de_Atendimento}>
+			<label>{$label usuarios_dados_profissionais Horarios_de_Atendimento }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Horarios_de_Atendimento}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Horarios_de_Atendimento}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Horarios_de_Atendimento}</span>
+						</div>
+		{END searchCtrlBlock_Horarios_de_Atendimento}
+																{BEGIN searchCtrlBlock_endereco_profissional_bairro}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_endereco_profissional_bairro}" {$filterRow_attrs_endereco_profissional_bairro}>
+			<label>{$label usuarios_dados_profissionais endereco_profissional_bairro }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_endereco_profissional_bairro}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_endereco_profissional_bairro}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_endereco_profissional_bairro}</span>
+						</div>
+		{END searchCtrlBlock_endereco_profissional_bairro}
+																{BEGIN searchCtrlBlock_Mapa}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Mapa}" {$filterRow_attrs_Mapa}>
+			<label>{$label usuarios_dados_profissionais Mapa }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Mapa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Mapa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Mapa}</span>
+						</div>
+		{END searchCtrlBlock_Mapa}
+																{BEGIN searchCtrlBlock_Logotipo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Logotipo}" {$filterRow_attrs_Logotipo}>
+			<label>{$label usuarios_dados_profissionais Logotipo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Logotipo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Logotipo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Logotipo}</span>
+						</div>
+		{END searchCtrlBlock_Logotipo}
+																{BEGIN searchCtrlBlock_Foto_Fechada}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Foto_Fechada}" {$filterRow_attrs_Foto_Fechada}>
+			<label>{$label usuarios_dados_profissionais Foto_Fechada }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Foto_Fechada}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Foto_Fechada}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Foto_Fechada}</span>
+						</div>
+		{END searchCtrlBlock_Foto_Fechada}
+																{BEGIN searchCtrlBlock_municipio_empresa}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_municipio_empresa}" {$filterRow_attrs_municipio_empresa}>
+			<label>{$label usuarios_dados_profissionais municipio_empresa }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_municipio_empresa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_municipio_empresa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_municipio_empresa}</span>
+						</div>
+		{END searchCtrlBlock_municipio_empresa}
+																{BEGIN searchCtrlBlock_estado_empresa}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_estado_empresa}" {$filterRow_attrs_estado_empresa}>
+			<label>{$label usuarios_dados_profissionais estado_empresa }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_estado_empresa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_estado_empresa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_estado_empresa}</span>
+						</div>
+		{END searchCtrlBlock_estado_empresa}
+																{BEGIN searchCtrlBlock_pais_empresa}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_pais_empresa}" {$filterRow_attrs_pais_empresa}>
+			<label>{$label usuarios_dados_profissionais pais_empresa }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_pais_empresa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_pais_empresa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_pais_empresa}</span>
+						</div>
+		{END searchCtrlBlock_pais_empresa}
+																{BEGIN searchCtrlBlock_endereco_profissional_longitude}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_endereco_profissional_longitude}" {$filterRow_attrs_endereco_profissional_longitude}>
+			<label>{$label usuarios_dados_profissionais endereco_profissional_longitude }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_endereco_profissional_longitude}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_endereco_profissional_longitude}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_endereco_profissional_longitude}</span>
+						</div>
+		{END searchCtrlBlock_endereco_profissional_longitude}
+																{BEGIN searchCtrlBlock_endereco_profissional_latitude}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_endereco_profissional_latitude}" {$filterRow_attrs_endereco_profissional_latitude}>
+			<label>{$label usuarios_dados_profissionais endereco_profissional_latitude }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_endereco_profissional_latitude}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_endereco_profissional_latitude}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_endereco_profissional_latitude}</span>
+						</div>
+		{END searchCtrlBlock_endereco_profissional_latitude}
+																{BEGIN searchCtrlBlock_endereco_profissional_complemento}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_endereco_profissional_complemento}" {$filterRow_attrs_endereco_profissional_complemento}>
+			<label>{$label usuarios_dados_profissionais endereco_profissional_complemento }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_endereco_profissional_complemento}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_endereco_profissional_complemento}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_endereco_profissional_complemento}</span>
+						</div>
+		{END searchCtrlBlock_endereco_profissional_complemento}
+																{BEGIN searchCtrlBlock_endereco_profissional_numero}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_endereco_profissional_numero}" {$filterRow_attrs_endereco_profissional_numero}>
+			<label>{$label usuarios_dados_profissionais endereco_profissional_numero }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_endereco_profissional_numero}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_endereco_profissional_numero}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_endereco_profissional_numero}</span>
+						</div>
+		{END searchCtrlBlock_endereco_profissional_numero}
+																{BEGIN searchCtrlBlock_endereco_profissional_rua}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_endereco_profissional_rua}" {$filterRow_attrs_endereco_profissional_rua}>
+			<label>{$label usuarios_dados_profissionais endereco_profissional_rua }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_endereco_profissional_rua}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_endereco_profissional_rua}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_endereco_profissional_rua}</span>
+						</div>
+		{END searchCtrlBlock_endereco_profissional_rua}
+																{BEGIN searchCtrlBlock_cep_profissional}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_cep_profissional}" {$filterRow_attrs_cep_profissional}>
+			<label>{$label usuarios_dados_profissionais cep_profissional }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_cep_profissional}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_cep_profissional}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_cep_profissional}</span>
+						</div>
+		{END searchCtrlBlock_cep_profissional}
+																{BEGIN searchCtrlBlock_ramo_empresa}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ramo_empresa}" {$filterRow_attrs_ramo_empresa}>
+			<label>{$label usuarios_dados_profissionais ramo_empresa }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ramo_empresa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ramo_empresa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ramo_empresa}</span>
+						</div>
+		{END searchCtrlBlock_ramo_empresa}
+																{BEGIN searchCtrlBlock_cnpj}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_cnpj}" {$filterRow_attrs_cnpj}>
+			<label>{$label usuarios_dados_profissionais cnpj }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_cnpj}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_cnpj}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_cnpj}</span>
+						</div>
+		{END searchCtrlBlock_cnpj}
+																{BEGIN searchCtrlBlock_nome_empresa}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_nome_empresa}" {$filterRow_attrs_nome_empresa}>
+			<label>{$label usuarios_dados_profissionais nome_empresa }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_nome_empresa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_nome_empresa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_nome_empresa}</span>
+						</div>
+		{END searchCtrlBlock_nome_empresa}
+																{BEGIN searchCtrlBlock_resumo_formacao_cursos}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_resumo_formacao_cursos}" {$filterRow_attrs_resumo_formacao_cursos}>
+			<label>{$label usuarios_dados_profissionais resumo_formacao_cursos }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_resumo_formacao_cursos}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_resumo_formacao_cursos}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_resumo_formacao_cursos}</span>
+						</div>
+		{END searchCtrlBlock_resumo_formacao_cursos}
+																{BEGIN searchCtrlBlock_resumo_formacao_academica}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_resumo_formacao_academica}" {$filterRow_attrs_resumo_formacao_academica}>
+			<label>{$label usuarios_dados_profissionais resumo_formacao_academica }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_resumo_formacao_academica}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_resumo_formacao_academica}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_resumo_formacao_academica}</span>
+						</div>
+		{END searchCtrlBlock_resumo_formacao_academica}
+																{BEGIN searchCtrlBlock_mini_curriculo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_mini_curriculo}" {$filterRow_attrs_mini_curriculo}>
+			<label>{$label usuarios_dados_profissionais mini_curriculo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_mini_curriculo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_mini_curriculo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_mini_curriculo}</span>
+						</div>
+		{END searchCtrlBlock_mini_curriculo}
+																{BEGIN searchCtrlBlock_atendimento_online}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_atendimento_online}" {$filterRow_attrs_atendimento_online}>
+			<label>{$label usuarios_dados_profissionais atendimento_online }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_atendimento_online}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_atendimento_online}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_atendimento_online}</span>
+						</div>
+		{END searchCtrlBlock_atendimento_online}
+																{BEGIN searchCtrlBlock_atendimento_presencial}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_atendimento_presencial}" {$filterRow_attrs_atendimento_presencial}>
+			<label>{$label usuarios_dados_profissionais atendimento_presencial }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_atendimento_presencial}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_atendimento_presencial}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_atendimento_presencial}</span>
+						</div>
+		{END searchCtrlBlock_atendimento_presencial}
+																{BEGIN searchCtrlBlock_diferencial_profissional}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_diferencial_profissional}" {$filterRow_attrs_diferencial_profissional}>
+			<label>{$label usuarios_dados_profissionais diferencial_profissional }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_diferencial_profissional}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_diferencial_profissional}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_diferencial_profissional}</span>
+						</div>
+		{END searchCtrlBlock_diferencial_profissional}
+																{BEGIN searchCtrlBlock_resumo_formacao}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_resumo_formacao}" {$filterRow_attrs_resumo_formacao}>
+			<label>{$label usuarios_dados_profissionais resumo_formacao }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_resumo_formacao}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_resumo_formacao}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_resumo_formacao}</span>
+						</div>
+		{END searchCtrlBlock_resumo_formacao}
+																{BEGIN searchCtrlBlock_sobre_profissional}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_sobre_profissional}" {$filterRow_attrs_sobre_profissional}>
+			<label>{$label usuarios_dados_profissionais sobre_profissional }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_sobre_profissional}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_sobre_profissional}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_sobre_profissional}</span>
+						</div>
+		{END searchCtrlBlock_sobre_profissional}
+																{BEGIN searchCtrlBlock_avaliacao_usuarios}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_avaliacao_usuarios}" {$filterRow_attrs_avaliacao_usuarios}>
+			<label>{$label usuarios_dados_profissionais avaliacao_usuarios }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_avaliacao_usuarios}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_avaliacao_usuarios}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_avaliacao_usuarios}</span>
+						</div>
+		{END searchCtrlBlock_avaliacao_usuarios}
+																{BEGIN searchCtrlBlock_email_profissional}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_email_profissional}" {$filterRow_attrs_email_profissional}>
+			<label>{$label usuarios_dados_profissionais email_profissional }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_email_profissional}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_email_profissional}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_email_profissional}</span>
+						</div>
+		{END searchCtrlBlock_email_profissional}
+																{BEGIN searchCtrlBlock_udp_usu_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_udp_usu_id}" {$filterRow_attrs_udp_usu_id}>
+			<label>{$label usuarios_dados_profissionais udp_usu_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_udp_usu_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_udp_usu_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_udp_usu_id}</span>
+						</div>
+		{END searchCtrlBlock_udp_usu_id}
+		
+
+	</div>
+
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary" id="searchButton{$id}" {$searchbutton_attrs}>Buscar</button>
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>Mostrar Todos</button>
+	</div>
+</div>
+<!-- End Search panel content -->
+			</div>
+		
     {END left_block}
 </div>				</div>	
 			<div class="r-content-col" data-resize-left="leftbar">
@@ -141,6 +624,22 @@
 		Busca Avancada		
 		</a>
 	</li>
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="showOptPanel{$id}"  title="" >
+				
+		Mostrar painel de busca		
+		</a>
+	</li>
+{END searchPanelTopButtons}
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="hideOptPanel{$id}"  title="" >
+				
+		Ocultar painel de busca		
+		</a>
+	</li>
+{END searchPanelTopButtons}
 					</ul>
 	</span>
 </span>
@@ -220,7 +719,7 @@
 		{BEGIN add_link}
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
-	" {$addlink_attrs} href="usuarios_dados_profissionais_add.php{$stateLink_full}" >
+	" {$addlink_attrs} href="usuarios_dados_profissionais_add.php{$stateLink_full}" data-popup >
 							Meus Dados Profissionais			</a>
 </span>
 {END add_link}
@@ -316,7 +815,7 @@
 {BEGIN view_link}
 <span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
 	<a type="button" title="Exibir Registro" class="btn-link   
-	 glyphicon glyphicon-search" href="usuarios_dados_profissionais_view.php?{$editlink}" {$viewlink_attrs} title="Exibir" >		
+	 glyphicon glyphicon-search" href="usuarios_dados_profissionais_view.php?{$editlink}" {$viewlink_attrs} title="Exibir" data-popup >		
 				
 								</a>
 </span>

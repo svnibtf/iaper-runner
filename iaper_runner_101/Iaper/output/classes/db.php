@@ -405,7 +405,6 @@ class DB
 		$dalTables[ $conn->connId ] = array();
 		if( "iaperdbatrobb0254publiccloudco" == $conn->connId )
 		{
-			$dalTables[$conn->connId][] = array("name" => "adm_modulos_habilitados", "varname" => "iaperdbatrobb0254publiccloudco__adm_modulos_habilitados", "altvarname" => "adm_modulos_habilitados", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
 			$dalTables[$conn->connId][] = array("name" => "adm_plano_profissional", "varname" => "iaperdbatrobb0254publiccloudco__adm_plano_profissional", "altvarname" => "adm_plano_profissional", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
 			$dalTables[$conn->connId][] = array("name" => "adm_ramos", "varname" => "iaperdbatrobb0254publiccloudco__adm_ramos", "altvarname" => "adm_ramos", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
 			$dalTables[$conn->connId][] = array("name" => "adm_tipousuario", "varname" => "iaperdbatrobb0254publiccloudco__adm_tipousuario", "altvarname" => "adm_tipousuario", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
@@ -414,7 +413,9 @@ class DB
 			$dalTables[$conn->connId][] = array("name" => "ibge_pais", "varname" => "iaperdbatrobb0254publiccloudco__ibge_pais", "altvarname" => "ibge_pais", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
 			$dalTables[$conn->connId][] = array("name" => "login", "varname" => "iaperdbatrobb0254publiccloudco__login", "altvarname" => "login", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
 			$dalTables[$conn->connId][] = array("name" => "meuplano", "varname" => "iaperdbatrobb0254publiccloudco__meuplano", "altvarname" => "meuplano", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
+			$dalTables[$conn->connId][] = array("name" => "pacientes", "varname" => "iaperdbatrobb0254publiccloudco__pacientes", "altvarname" => "pacientes", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
 			$dalTables[$conn->connId][] = array("name" => "planos", "varname" => "iaperdbatrobb0254publiccloudco__planos", "altvarname" => "planos", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
+			$dalTables[$conn->connId][] = array("name" => "tratamento", "varname" => "iaperdbatrobb0254publiccloudco__tratamento", "altvarname" => "tratamento", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
 			$dalTables[$conn->connId][] = array("name" => "usuarios", "varname" => "iaperdbatrobb0254publiccloudco__usuarios", "altvarname" => "usuarios", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
 			$dalTables[$conn->connId][] = array("name" => "usuarios_dados_profissionais", "varname" => "iaperdbatrobb0254publiccloudco__usuarios_dados_profissionais", "altvarname" => "usuarios_dados_profissionais", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
 		}

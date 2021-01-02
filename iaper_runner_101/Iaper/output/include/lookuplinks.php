@@ -117,6 +117,13 @@ function InitLookupLinks()
 			$lookupTableLinks["usuarios_dados_profissionais"]["busca_profissional.idEmpresa"] = array();
 		}
 		$lookupTableLinks["usuarios_dados_profissionais"]["busca_profissional.idEmpresa"]["edit"] = array("table" => "Busca Profissional", "field" => "idEmpresa", "page" => "edit");
+		if( !isset( $lookupTableLinks["pacientes"] ) ) {
+			$lookupTableLinks["pacientes"] = array();
+		}
+		if( !isset( $lookupTableLinks["pacientes"]["tratamento.idPaciente"] )) {
+			$lookupTableLinks["pacientes"]["tratamento.idPaciente"] = array();
+		}
+		$lookupTableLinks["pacientes"]["tratamento.idPaciente"]["edit"] = array("table" => "tratamento", "field" => "idPaciente", "page" => "edit");
 }
 
 ?>

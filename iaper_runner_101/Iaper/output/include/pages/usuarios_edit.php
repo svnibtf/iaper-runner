@@ -1,6 +1,10 @@
 <?php
 			$optionsArray = array( 'details' => array( 'meuplano' => array( 'displayPreview' => 1,
-'previewPageId' => 'list' ) ),
+'previewPageId' => 'list' ),
+'pacientes' => array( 'displayPreview' => 2,
+'previewPageId' => '' ),
+'tratamento' => array( 'displayPreview' => 2,
+'previewPageId' => '' ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'nome',
 'sobrenome',

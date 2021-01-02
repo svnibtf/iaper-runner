@@ -59,6 +59,125 @@
 			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
 				{$menu main}			</div>
 		
+ 
+
+			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="search_panel" {$item_search_panel} data-topcell-item-type="search_panel" >
+				<!-- Begin Search panel content -->
+<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}" >
+
+	<div class="panel-heading">
+		<div class="btn-group" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Buscar em			<span class="caret"></span>
+			</button>
+		</div>
+
+
+		<div class="btn-group searchpanel-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Mostrar opções</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>todas as condições</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>qualquer condição</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>ocultar</a></li>
+			</ul>
+		</div>
+
+
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+																		{BEGIN searchCtrlBlock_idPlano}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_idPlano}" {$filterRow_attrs_idPlano}>
+			<label>{$label planos idPlano }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_idPlano}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_idPlano}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_idPlano}</span>
+						</div>
+		{END searchCtrlBlock_idPlano}
+																{BEGIN searchCtrlBlock_Combo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Combo}" {$filterRow_attrs_Combo}>
+			<label>{$label planos Combo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Combo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Combo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Combo}</span>
+						</div>
+		{END searchCtrlBlock_Combo}
+																{BEGIN searchCtrlBlock_Quantidade_Dia}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Quantidade_Dia}" {$filterRow_attrs_Quantidade_Dia}>
+			<label>{$label planos Quantidade_Dia }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Quantidade_Dia}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Quantidade_Dia}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Quantidade_Dia}</span>
+						</div>
+		{END searchCtrlBlock_Quantidade_Dia}
+																{BEGIN searchCtrlBlock_Valor}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Valor}" {$filterRow_attrs_Valor}>
+			<label>{$label planos Valor }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Valor}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Valor}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Valor}</span>
+						</div>
+		{END searchCtrlBlock_Valor}
+																{BEGIN searchCtrlBlock_Plano}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Plano}" {$filterRow_attrs_Plano}>
+			<label>{$label planos Plano }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Plano}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Plano}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Plano}</span>
+						</div>
+		{END searchCtrlBlock_Plano}
+		
+
+	</div>
+
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary" id="searchButton{$id}" {$searchbutton_attrs}>Buscar</button>
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>Mostrar Todos</button>
+	</div>
+</div>
+<!-- End Search panel content -->
+			</div>
+		
     {END left_block}
 </div>				</div>	
 			<div class="r-content-col" data-resize-left="leftbar">
@@ -141,6 +260,22 @@
 		Busca Avancada		
 		</a>
 	</li>
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="showOptPanel{$id}"  title="" >
+				
+		Mostrar painel de busca		
+		</a>
+	</li>
+{END searchPanelTopButtons}
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="hideOptPanel{$id}"  title="" >
+				
+		Ocultar painel de busca		
+		</a>
+	</li>
+{END searchPanelTopButtons}
 					</ul>
 	</span>
 </span>
@@ -206,7 +341,7 @@
 		{BEGIN add_link}
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
-	" {$addlink_attrs} href="planos_add.php{$stateLink_full}" >
+	" {$addlink_attrs} href="planos_add.php{$stateLink_full}" data-popup >
 							Adicionar Novo			</a>
 </span>
 {END add_link}
@@ -330,9 +465,11 @@
 
 	 
 		{BEGIN Plano_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Plano">
-	{$label planos Plano }	</span>
+	{BEGIN Plano_fieldheader}
+	<SPAN {$Plano_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Plano">
+	{$label planos Plano }	{$arrow_icon_Plano}
+	</SPAN>
+	{END Plano_fieldheader}
 {END Plano_fieldheadercolumn}
 
 	
@@ -355,9 +492,11 @@
 
 	 
 		{BEGIN Valor_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Valor">
-	{$label planos Valor }	</span>
+	{BEGIN Valor_fieldheader}
+	<SPAN {$Valor_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Valor">
+	{$label planos Valor }	{$arrow_icon_Valor}
+	</SPAN>
+	{END Valor_fieldheader}
 {END Valor_fieldheadercolumn}
 
 	
@@ -380,9 +519,11 @@
 
 	 
 		{BEGIN Quantidade_Dia_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Quantidade_Dia">
-	{$label planos Quantidade_Dia }	</span>
+	{BEGIN Quantidade_Dia_fieldheader}
+	<SPAN {$Quantidade_Dia_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Quantidade_Dia">
+	{$label planos Quantidade_Dia }	{$arrow_icon_Quantidade_Dia}
+	</SPAN>
+	{END Quantidade_Dia_fieldheader}
 {END Quantidade_Dia_fieldheadercolumn}
 
 	
@@ -405,9 +546,11 @@
 
 	 
 		{BEGIN Combo_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Combo">
-	{$label planos Combo }	</span>
+	{BEGIN Combo_fieldheader}
+	<SPAN {$Combo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Combo">
+	{$label planos Combo }	{$arrow_icon_Combo}
+	</SPAN>
+	{END Combo_fieldheader}
 {END Combo_fieldheadercolumn}
 
 	

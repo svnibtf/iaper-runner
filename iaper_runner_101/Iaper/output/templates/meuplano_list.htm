@@ -59,6 +59,177 @@
 			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
 				{$menu main}			</div>
 		
+ 
+
+			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="search_panel" {$item_search_panel} data-topcell-item-type="search_panel" >
+				<!-- Begin Search panel content -->
+<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}" >
+
+	<div class="panel-heading">
+		<div class="btn-group" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Buscar em			<span class="caret"></span>
+			</button>
+		</div>
+
+
+		<div class="btn-group searchpanel-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Mostrar opções</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>todas as condições</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>qualquer condição</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>ocultar</a></li>
+			</ul>
+		</div>
+
+
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+																		{BEGIN searchCtrlBlock_idMeuPlano}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_idMeuPlano}" {$filterRow_attrs_idMeuPlano}>
+			<label>{$label meuplano idMeuPlano }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_idMeuPlano}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_idMeuPlano}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_idMeuPlano}</span>
+						</div>
+		{END searchCtrlBlock_idMeuPlano}
+																{BEGIN searchCtrlBlock_CVV}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_CVV}" {$filterRow_attrs_CVV}>
+			<label>{$label meuplano CVV }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_CVV}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_CVV}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_CVV}</span>
+						</div>
+		{END searchCtrlBlock_CVV}
+																{BEGIN searchCtrlBlock_Vencimento}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Vencimento}" {$filterRow_attrs_Vencimento}>
+			<label>{$label meuplano Vencimento }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Vencimento}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Vencimento}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Vencimento}</span>
+						</div>
+		{END searchCtrlBlock_Vencimento}
+																{BEGIN searchCtrlBlock_Nome}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Nome}" {$filterRow_attrs_Nome}>
+			<label>{$label meuplano Nome }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Nome}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Nome}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Nome}</span>
+						</div>
+		{END searchCtrlBlock_Nome}
+																{BEGIN searchCtrlBlock_Cartao}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Cartao}" {$filterRow_attrs_Cartao}>
+			<label>{$label meuplano Cartao }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Cartao}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Cartao}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Cartao}</span>
+						</div>
+		{END searchCtrlBlock_Cartao}
+																{BEGIN searchCtrlBlock_Valor}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Valor}" {$filterRow_attrs_Valor}>
+			<label>{$label meuplano Valor }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Valor}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Valor}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Valor}</span>
+						</div>
+		{END searchCtrlBlock_Valor}
+																{BEGIN searchCtrlBlock_Data_Inicial}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Data_Inicial}" {$filterRow_attrs_Data_Inicial}>
+			<label>{$label meuplano Data_Inicial }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Data_Inicial}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Data_Inicial}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Data_Inicial}</span>
+						</div>
+		{END searchCtrlBlock_Data_Inicial}
+																{BEGIN searchCtrlBlock_idPlano}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_idPlano}" {$filterRow_attrs_idPlano}>
+			<label>{$label meuplano idPlano }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_idPlano}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_idPlano}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_idPlano}</span>
+						</div>
+		{END searchCtrlBlock_idPlano}
+																{BEGIN searchCtrlBlock_idUsuario}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_idUsuario}" {$filterRow_attrs_idUsuario}>
+			<label>{$label meuplano idUsuario }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_idUsuario}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_idUsuario}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_idUsuario}</span>
+						</div>
+		{END searchCtrlBlock_idUsuario}
+		
+
+	</div>
+
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary" id="searchButton{$id}" {$searchbutton_attrs}>Buscar</button>
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>Mostrar Todos</button>
+	</div>
+</div>
+<!-- End Search panel content -->
+			</div>
+		
     {END left_block}
 </div>				</div>	
 			<div class="r-content-col" data-resize-left="leftbar">
@@ -133,6 +304,22 @@
 		Busca Avancada		
 		</a>
 	</li>
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="showOptPanel{$id}"  title="" >
+				
+		Mostrar painel de busca		
+		</a>
+	</li>
+{END searchPanelTopButtons}
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="hideOptPanel{$id}"  title="" >
+				
+		Ocultar painel de busca		
+		</a>
+	</li>
+{END searchPanelTopButtons}
 					</ul>
 	</span>
 </span>
@@ -212,7 +399,7 @@
 		{BEGIN add_link}
 <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
-	" {$addlink_attrs} href="meuplano_add.php{$stateLink_full}" >
+	" {$addlink_attrs} href="meuplano_add.php{$stateLink_full}" data-popup >
 							Novo Plano			</a>
 </span>
 {END add_link}
@@ -360,9 +547,11 @@
 
 	 
 		{BEGIN idPlano_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="idPlano">
-	{$label meuplano idPlano }	</span>
+	{BEGIN idPlano_fieldheader}
+	<SPAN {$idPlano_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="idPlano">
+	{$label meuplano idPlano }	{$arrow_icon_idPlano}
+	</SPAN>
+	{END idPlano_fieldheader}
 {END idPlano_fieldheadercolumn}
 
 	
@@ -385,9 +574,11 @@
 
 	 
 		{BEGIN Data_Inicial_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Data_Inicial">
-	{$label meuplano Data_Inicial }	</span>
+	{BEGIN Data_Inicial_fieldheader}
+	<SPAN {$Data_Inicial_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Data_Inicial">
+	{$label meuplano Data_Inicial }	{$arrow_icon_Data_Inicial}
+	</SPAN>
+	{END Data_Inicial_fieldheader}
 {END Data_Inicial_fieldheadercolumn}
 
 	
@@ -410,9 +601,11 @@
 
 	 
 		{BEGIN Valor_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Valor">
-	{$label meuplano Valor }	</span>
+	{BEGIN Valor_fieldheader}
+	<SPAN {$Valor_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Valor">
+	{$label meuplano Valor }	{$arrow_icon_Valor}
+	</SPAN>
+	{END Valor_fieldheader}
 {END Valor_fieldheadercolumn}
 
 	
@@ -462,7 +655,7 @@
 {BEGIN view_link}
 <span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
 	<a type="button" title="Exibir Registro" class="btn-link   
-	 glyphicon glyphicon-search" href="meuplano_view.php?{$editlink}" {$viewlink_attrs} title="Exibir" >		
+	 glyphicon glyphicon-search" href="meuplano_view.php?{$editlink}" {$viewlink_attrs} title="Exibir" data-popup >		
 				
 								</a>
 </span>

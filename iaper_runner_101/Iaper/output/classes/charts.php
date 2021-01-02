@@ -507,6 +507,12 @@ class Chart
 			return true;
 		if("usuarios" == $this->chrt_array['tables'][0])
 			return true;
+		if("pacientes" == $this->chrt_array['tables'][0])
+			return true;
+		if("tratamento" == $this->chrt_array['tables'][0])
+			return true;
+		if("tratamento" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 	

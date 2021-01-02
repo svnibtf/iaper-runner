@@ -3262,6 +3262,12 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "procurar_por_profissionais" ] = "Procurar por Profissionais";
 	$projectEntities[ "Busca Profissional" ] = array( "url" => "busca_profissional", "type" => 1 );
 	$projectEntitiesReverse[ "busca_profissional" ] = "Busca Profissional";
+	$projectEntities[ "pacientes" ] = array( "url" => "pacientes", "type" => 0 );
+	$projectEntitiesReverse[ "pacientes" ] = "pacientes";
+	$projectEntities[ "tratamento" ] = array( "url" => "tratamento", "type" => 0 );
+	$projectEntitiesReverse[ "tratamento" ] = "tratamento";
+	$projectEntities[ "Fluxo de Recebimentos" ] = array( "url" => "fluxo_de_recebimentos", "type" => 1 );
+	$projectEntitiesReverse[ "fluxo_de_recebimentos" ] = "Fluxo de Recebimentos";
 }
 
 function findTable( $table ) {
