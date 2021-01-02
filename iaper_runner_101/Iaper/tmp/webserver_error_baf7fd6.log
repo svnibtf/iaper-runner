@@ -1,0 +1,11 @@
+[Sat Jan 02 07:03:11.584609 2021] [core:warn] [pid 3488:tid 172] AH00117: Ignoring deprecated use of DefaultType in line 21 of C:/Users/Rubens/Desktop/Iaper/tmp/webserver.conf.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using ::1. Set the 'ServerName' directive globally to suppress this message
+[Sat Jan 02 07:03:18.631012 2021] [mpm_winnt:notice] [pid 3488:tid 172] AH00455: Apache/2.4.37 (Win32) PHP/5.6.40 configured -- resuming normal operations
+[Sat Jan 02 07:03:18.632012 2021] [mpm_winnt:notice] [pid 3488:tid 172] AH00456: Apache Lounge VC11 Server built: Oct 22 2018 14:14:30
+[Sat Jan 02 07:03:18.632012 2021] [core:notice] [pid 3488:tid 172] AH00094: Command line: 'C:\\Program Files\\PHPRunner10.4\\EmbeddedServer\\bin\\httpd.exe -d C:/Program Files/PHPRunner10.4/EmbeddedServer -d C:\\Program Files\\PHPRunner10.4\\EmbeddedServer -f C:\\Users\\Rubens\\Desktop\\Iaper\\tmp\\webserver.conf'
+[Sat Jan 02 07:03:18.637012 2021] [mpm_winnt:notice] [pid 3488:tid 172] AH00418: Parent: Created child process 5632
+[Sat Jan 02 07:03:19.106039 2021] [core:warn] [pid 5632:tid 184] AH00117: Ignoring deprecated use of DefaultType in line 21 of C:/Users/Rubens/Desktop/Iaper/tmp/webserver.conf.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using ::1. Set the 'ServerName' directive globally to suppress this message
+[Sat Jan 02 07:03:19.748076 2021] [core:warn] [pid 5632:tid 184] AH00117: Ignoring deprecated use of DefaultType in line 21 of C:/Users/Rubens/Desktop/Iaper/tmp/webserver.conf.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using ::1. Set the 'ServerName' directive globally to suppress this message
+[Sat Jan 02 07:03:19.823080 2021] [mpm_winnt:notice] [pid 5632:tid 184] AH00354: Child: Starting 64 worker threads.
