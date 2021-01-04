@@ -302,11 +302,11 @@ class AuditTrailTable
 
 	function logValueEnable($table)
 	{
-		if($table=="usuarios")
+		if($table=="adm_usuarios")
 		{
 			return false;
 		}
-		if($table=="usuarios_dados_profissionais")
+		if($table=="adm_usuarios_dados_profissionais")
 		{
 			return false;
 		}
@@ -326,11 +326,11 @@ class AuditTrailTable
 		{
 			return false;
 		}
-		if($table=="planos")
+		if($table=="adm_planos")
 		{
 			return false;
 		}
-		if($table=="meuplano")
+		if($table=="adm_meuplano")
 		{
 			return false;
 		}
@@ -350,11 +350,11 @@ class AuditTrailTable
 		{
 			return false;
 		}
-		if($table=="pacientes")
+		if($table=="adm_pacientes")
 		{
 			return false;
 		}
-		if($table=="tratamento")
+		if($table=="adm_tratamento")
 		{
 			return false;
 		}
@@ -670,11 +670,11 @@ class AuditTrailFile
 
 	function logValueEnable($table)
 	{
-		if($table=="usuarios")
+		if($table=="adm_usuarios")
 		{
 			return false;
 		}
-		if($table=="usuarios_dados_profissionais")
+		if($table=="adm_usuarios_dados_profissionais")
 		{
 			return false;
 		}
@@ -694,11 +694,11 @@ class AuditTrailFile
 		{
 			return false;
 		}
-		if($table=="planos")
+		if($table=="adm_planos")
 		{
 			return false;
 		}
-		if($table=="meuplano")
+		if($table=="adm_meuplano")
 		{
 			return false;
 		}
@@ -718,11 +718,11 @@ class AuditTrailFile
 		{
 			return false;
 		}
-		if($table=="pacientes")
+		if($table=="adm_pacientes")
 		{
 			return false;
 		}
-		if($table=="tratamento")
+		if($table=="adm_tratamento")
 		{
 			return false;
 		}

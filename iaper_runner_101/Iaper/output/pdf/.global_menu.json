@@ -65,25 +65,22 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"","background":"#e3e3e3","hidden":"{$item_hide_welcome_item}"},
+			{"text":"","background":"#dadada","hidden":"{$item_hide_welcome_item1}"},
 				
 				
-			{"text":"","background":"#e3e3e3","hidden":"{$item_hide_welcome_item2}"},
+			{"text":"","hidden":"{$item_hide_welcome_item5}"},
 				
 				
-			{"text":"","background":"#e3e3e3","hidden":"{$item_hide_welcome_item4}"},
+			{"text":"","background":"#dadada","hidden":"{$item_hide_welcome_item}"},
 				
 				
-			{"text":"","background":"#e3e3e3","hidden":"{$item_hide_welcome_item1}"},
+			{"text":"","background":"#dadada","hidden":"{$item_hide_welcome_item2}"},
 				
 				
-			{"text":"","background":"#e3e3e3","hidden":"{$item_hide_welcome_item3}"},
+			{"text":"","background":"#dadada","hidden":"{$item_hide_welcome_item3}"},
 				
 				
-			{"text":"","background":"#e3e3e3","hidden":"{$item_hide_welcome_item5}"},
-				
-				
-			{"text":"","background":"#008B8B","hidden":"{$item_hide_welcome_item6}"},
+			{"text":"","background":"#dadada","hidden":"{$item_hide_welcome_item4}"},
 				
 		  ],
   "border": [ false, false, false, false ],

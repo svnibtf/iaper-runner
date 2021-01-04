@@ -2,7 +2,7 @@
 $strTableName="Busca Profissional";
 $_SESSION["OwnerID"] = $_SESSION["_".$strTableName."_OwnerID"];
 
-$strOriginalTableName="usuarios";
+$strOriginalTableName="adm_usuarios";
 
 $gstrOrderBy="";
 if(strlen($gstrOrderBy) && strtolower(substr($gstrOrderBy,0,8))!="order by")

@@ -500,6 +500,14 @@
 		</a>
 	</li>
 {END logoutbutton}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$changepwdlink_attrs}  title="" >
+				
+		Mudar senha		
+		</a>
+	</li>
+{END changepwd_link}
 					</ul>
 	</span>
 </span>
@@ -768,11 +776,9 @@
 
 	 
 		{BEGIN idPaciente_fieldheadercolumn}
-	{BEGIN idPaciente_fieldheader}
-	<SPAN {$idPaciente_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="idPaciente">
-	{$label tratamento idPaciente }	{$arrow_icon_idPaciente}
-	</SPAN>
-	{END idPaciente_fieldheader}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="idPaciente">
+	{$label tratamento idPaciente }	</span>
 {END idPaciente_fieldheadercolumn}
 
 	
@@ -795,11 +801,9 @@
 
 	 
 		{BEGIN Data_fieldheadercolumn}
-	{BEGIN Data_fieldheader}
-	<SPAN {$Data_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Data">
-	{$label tratamento Data }	{$arrow_icon_Data}
-	</SPAN>
-	{END Data_fieldheader}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Data">
+	{$label tratamento Data }	</span>
 {END Data_fieldheadercolumn}
 
 	
@@ -822,11 +826,9 @@
 
 	 
 		{BEGIN Hora_fieldheadercolumn}
-	{BEGIN Hora_fieldheader}
-	<SPAN {$Hora_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Hora">
-	{$label tratamento Hora }	{$arrow_icon_Hora}
-	</SPAN>
-	{END Hora_fieldheader}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Hora">
+	{$label tratamento Hora }	</span>
 {END Hora_fieldheadercolumn}
 
 	
@@ -849,11 +851,9 @@
 
 	 
 		{BEGIN Confirmado_fieldheadercolumn}
-	{BEGIN Confirmado_fieldheader}
-	<SPAN {$Confirmado_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Confirmado">
-	{$label tratamento Confirmado }	{$arrow_icon_Confirmado}
-	</SPAN>
-	{END Confirmado_fieldheader}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Confirmado">
+	{$label tratamento Confirmado }	</span>
 {END Confirmado_fieldheadercolumn}
 
 	
@@ -876,11 +876,9 @@
 
 	 
 		{BEGIN Pago_fieldheadercolumn}
-	{BEGIN Pago_fieldheader}
-	<SPAN {$Pago_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Pago">
-	{$label tratamento Pago }	{$arrow_icon_Pago}
-	</SPAN>
-	{END Pago_fieldheader}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Pago">
+	{$label tratamento Pago }	</span>
 {END Pago_fieldheadercolumn}
 
 	
@@ -903,11 +901,9 @@
 
 	 
 		{BEGIN Forma_Pagamento_fieldheadercolumn}
-	{BEGIN Forma_Pagamento_fieldheader}
-	<SPAN {$Forma_Pagamento_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Forma_Pagamento">
-	{$label tratamento Forma_Pagamento }	{$arrow_icon_Forma_Pagamento}
-	</SPAN>
-	{END Forma_Pagamento_fieldheader}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Forma_Pagamento">
+	{$label tratamento Forma_Pagamento }	</span>
 {END Forma_Pagamento_fieldheadercolumn}
 
 	
@@ -930,11 +926,9 @@
 
 	 
 		{BEGIN Online_fieldheadercolumn}
-	{BEGIN Online_fieldheader}
-	<SPAN {$Online_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Online">
-	{$label tratamento Online }	{$arrow_icon_Online}
-	</SPAN>
-	{END Online_fieldheader}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Online">
+	{$label tratamento Online }	</span>
 {END Online_fieldheadercolumn}
 
 	
@@ -957,11 +951,9 @@
 
 	 
 		{BEGIN Link_Consulta_fieldheadercolumn}
-	{BEGIN Link_Consulta_fieldheader}
-	<SPAN {$Link_Consulta_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Link_Consulta">
-	{$label tratamento Link_Consulta }	{$arrow_icon_Link_Consulta}
-	</SPAN>
-	{END Link_Consulta_fieldheader}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Link_Consulta">
+	{$label tratamento Link_Consulta }	</span>
 {END Link_Consulta_fieldheadercolumn}
 
 	
@@ -984,11 +976,9 @@
 
 	 
 		{BEGIN Valor_Consulta_fieldheadercolumn}
-	{BEGIN Valor_Consulta_fieldheader}
-	<SPAN {$Valor_Consulta_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Valor_Consulta">
-	{$label tratamento Valor_Consulta }	{$arrow_icon_Valor_Consulta}
-	</SPAN>
-	{END Valor_Consulta_fieldheader}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Valor_Consulta">
+	{$label tratamento Valor_Consulta }	</span>
 {END Valor_Consulta_fieldheadercolumn}
 
 	

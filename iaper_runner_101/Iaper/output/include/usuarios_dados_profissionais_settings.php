@@ -4973,11 +4973,11 @@ $masterTablesData["usuarios_dados_profissionais"] = array();
 
 
 	
-				$strOriginalDetailsTable="meuplano";
+				$strOriginalDetailsTable="adm_meuplano";
 	$masterParams = array();
-	$masterParams["mDataSourceTable"]="meuplano";
+	$masterParams["mDataSourceTable"]="adm_meuplano";
 	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "meuplano";
+	$masterParams["mShortTable"]= "adm_meuplano1";
 	$masterParams["masterKeys"]= array();
 	$masterParams["detailKeys"]= array();
 
@@ -4989,7 +4989,7 @@ $masterTablesData["usuarios_dados_profissionais"] = array();
 	$masterTablesData["usuarios_dados_profissionais"][0]["detailKeys"][]="idPlano";
 		
 	
-				$strOriginalDetailsTable="usuarios";
+				$strOriginalDetailsTable="adm_usuarios";
 	$masterParams = array();
 	$masterParams["mDataSourceTable"]="Busca Profissional";
 	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;

@@ -454,7 +454,7 @@ class ChangePasswordPage extends RunnerPage
 		if( !$this->token )
 			return true;
 			
-		$sqlSelect = "select ".$this->connection->addFieldWrappers( "" )." from".$this->connection->addTableWrappers("usuarios")
+		$sqlSelect = "select ".$this->connection->addFieldWrappers( "" )." from".$this->connection->addTableWrappers("login")
 			." where".$this->connection->addFieldWrappers( "" )."=". $this->connection->prepareString( $this->token );
 			
 		$data = $this->cipherer->DecryptFetchedArray( $this->connection->query( $sqlSelect )->fetchAssoc() );

@@ -1,0 +1,529 @@
+<!doctype html><p align=center><font size=+1 color=red></font></p>
+<p align=center><font size=+1 color=red></font></p>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="add_header" data-itemid="add_header" {$item_add_header} data-pageid="{$pageid}" >{$pagetitlelabel adm_pacientes add}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		{BEGIN message_block}
+<div data-itemtype="add_message" data-itemid="add_message" {$item_add_message} data-pageid="{$pageid}" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		
+	<button class="btn btn-sm btn-default" {$backbutton_attrs}>Voltar à Lista</button>
+	{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>Exibir</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>Editar</button>
+{END edit_page_button}
+</div>
+</div>
+{END message_block}	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Nome_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Nome}  r-vertical-field" 
+	data-fieldname="Nome" 
+	data-signal-error-for="Nome{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="Nome" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Nome}">
+		{BEGIN Nome_label}{$label adm_pacientes Nome }{END Nome_label}
+	</label>
+	<div class="r-edit-field">
+		{$Nome_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Nome">
+		<div class="text-muted" >
+		{$tooltip adm_pacientes Nome }		</div>
+	</div>
+</div>
+
+
+{END Nome_fieldblock}
+											
+{BEGIN Email_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Email}  r-vertical-field" 
+	data-fieldname="Email" 
+	data-signal-error-for="Email{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="Email" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Email}">
+		{BEGIN Email_label}{$label adm_pacientes Email }{END Email_label}
+	</label>
+	<div class="r-edit-field">
+		{$Email_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Email">
+		<div class="text-muted" >
+		{$tooltip adm_pacientes Email }		</div>
+	</div>
+</div>
+
+
+{END Email_fieldblock}
+											
+{BEGIN Senha_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Senha}  r-vertical-field" 
+	data-fieldname="Senha" 
+	data-signal-error-for="Senha{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="Senha" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Senha}">
+		{BEGIN Senha_label}{$label adm_pacientes Senha }{END Senha_label}
+	</label>
+	<div class="r-edit-field">
+		{$Senha_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Senha">
+		<div class="text-muted" >
+		{$tooltip adm_pacientes Senha }		</div>
+	</div>
+</div>
+
+
+{END Senha_fieldblock}
+											
+{BEGIN Endereco_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Endereco}  r-vertical-field" 
+	data-fieldname="Endereco" 
+	data-signal-error-for="Endereco{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="Endereco" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Endereco}">
+		{BEGIN Endereco_label}{$label adm_pacientes Endereco }{END Endereco_label}
+	</label>
+	<div class="r-edit-field">
+		{$Endereco_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Endereco">
+		<div class="text-muted" >
+		{$tooltip adm_pacientes Endereco }		</div>
+	</div>
+</div>
+
+
+{END Endereco_fieldblock}
+											
+{BEGIN Bairro_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Bairro}  r-vertical-field" 
+	data-fieldname="Bairro" 
+	data-signal-error-for="Bairro{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="Bairro" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Bairro}">
+		{BEGIN Bairro_label}{$label adm_pacientes Bairro }{END Bairro_label}
+	</label>
+	<div class="r-edit-field">
+		{$Bairro_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Bairro">
+		<div class="text-muted" >
+		{$tooltip adm_pacientes Bairro }		</div>
+	</div>
+</div>
+
+
+{END Bairro_fieldblock}
+											
+{BEGIN Cidade_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Cidade}  r-vertical-field" 
+	data-fieldname="Cidade" 
+	data-signal-error-for="Cidade{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="Cidade" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Cidade}">
+		{BEGIN Cidade_label}{$label adm_pacientes Cidade }{END Cidade_label}
+	</label>
+	<div class="r-edit-field">
+		{$Cidade_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Cidade">
+		<div class="text-muted" >
+		{$tooltip adm_pacientes Cidade }		</div>
+	</div>
+</div>
+
+
+{END Cidade_fieldblock}
+											
+{BEGIN Estado_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Estado}  r-vertical-field" 
+	data-fieldname="Estado" 
+	data-signal-error-for="Estado{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="Estado" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Estado}">
+		{BEGIN Estado_label}{$label adm_pacientes Estado }{END Estado_label}
+	</label>
+	<div class="r-edit-field">
+		{$Estado_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Estado">
+		<div class="text-muted" >
+		{$tooltip adm_pacientes Estado }		</div>
+	</div>
+</div>
+
+
+{END Estado_fieldblock}
+											
+{BEGIN Cep_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Cep}  r-vertical-field" 
+	data-fieldname="Cep" 
+	data-signal-error-for="Cep{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="Cep" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Cep}">
+		{BEGIN Cep_label}{$label adm_pacientes Cep }{END Cep_label}
+	</label>
+	<div class="r-edit-field">
+		{$Cep_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Cep">
+		<div class="text-muted" >
+		{$tooltip adm_pacientes Cep }		</div>
+	</div>
+</div>
+
+
+{END Cep_fieldblock}
+											
+{BEGIN Celular_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Celular}  r-vertical-field" 
+	data-fieldname="Celular" 
+	data-signal-error-for="Celular{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="Celular" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Celular}">
+		{BEGIN Celular_label}{$label adm_pacientes Celular }{END Celular_label}
+	</label>
+	<div class="r-edit-field">
+		{$Celular_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Celular">
+		<div class="text-muted" >
+		{$tooltip adm_pacientes Celular }		</div>
+	</div>
+</div>
+
+
+{END Celular_fieldblock}
+											
+{BEGIN Tel_Residencial_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Tel_Residencial}  r-vertical-field" 
+	data-fieldname="Tel_Residencial" 
+	data-signal-error-for="Tel_Residencial{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="Tel_Residencial" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Tel_Residencial}">
+		{BEGIN Tel_Residencial_label}{$label adm_pacientes Tel_Residencial }{END Tel_Residencial_label}
+	</label>
+	<div class="r-edit-field">
+		{$Tel_Residencial_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Tel_Residencial">
+		<div class="text-muted" >
+		{$tooltip adm_pacientes Tel_Residencial }		</div>
+	</div>
+</div>
+
+
+{END Tel_Residencial_fieldblock}
+											
+{BEGIN Data_Inicio_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Data_Inicio}  r-vertical-field" 
+	data-fieldname="Data_Inicio" 
+	data-signal-error-for="Data_Inicio{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="Data_Inicio" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Data_Inicio}">
+		{BEGIN Data_Inicio_label}{$label adm_pacientes Data_Inicio }{END Data_Inicio_label}
+	</label>
+	<div class="r-edit-field">
+		{$Data_Inicio_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Data_Inicio">
+		<div class="text-muted" >
+		{$tooltip adm_pacientes Data_Inicio }		</div>
+	</div>
+</div>
+
+
+{END Data_Inicio_fieldblock}
+											
+{BEGIN Sexo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Sexo}  r-vertical-field" 
+	data-fieldname="Sexo" 
+	data-signal-error-for="Sexo{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field11" {$item_integrated_edit_field11} data-pageid="{$pageid}" data-field="Sexo" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Sexo}">
+		{BEGIN Sexo_label}{$label adm_pacientes Sexo }{END Sexo_label}
+	</label>
+	<div class="r-edit-field">
+		{$Sexo_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Sexo">
+		<div class="text-muted" >
+		{$tooltip adm_pacientes Sexo }		</div>
+	</div>
+</div>
+
+
+{END Sexo_fieldblock}
+											
+{BEGIN Sintomas_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Sintomas}  r-vertical-field" 
+	data-fieldname="Sintomas" 
+	data-signal-error-for="Sintomas{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field12" {$item_integrated_edit_field12} data-pageid="{$pageid}" data-field="Sintomas" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Sintomas}">
+		{BEGIN Sintomas_label}{$label adm_pacientes Sintomas }{END Sintomas_label}
+	</label>
+	<div class="r-edit-field">
+		{$Sintomas_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Sintomas">
+		<div class="text-muted" >
+		{$tooltip adm_pacientes Sintomas }		</div>
+	</div>
+</div>
+
+
+{END Sintomas_fieldblock}
+											
+{BEGIN Tratamento_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Tratamento}  r-vertical-field" 
+	data-fieldname="Tratamento" 
+	data-signal-error-for="Tratamento{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field13" {$item_integrated_edit_field13} data-pageid="{$pageid}" data-field="Tratamento" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Tratamento}">
+		{BEGIN Tratamento_label}{$label adm_pacientes Tratamento }{END Tratamento_label}
+	</label>
+	<div class="r-edit-field">
+		{$Tratamento_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Tratamento">
+		<div class="text-muted" >
+		{$tooltip adm_pacientes Tratamento }		</div>
+	</div>
+</div>
+
+
+{END Tratamento_fieldblock}
+											
+{BEGIN CPF_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_CPF}  r-vertical-field" 
+	data-fieldname="CPF" 
+	data-signal-error-for="CPF{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field14" {$item_integrated_edit_field14} data-pageid="{$pageid}" data-field="CPF" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_CPF}">
+		{BEGIN CPF_label}{$label adm_pacientes CPF }{END CPF_label}
+	</label>
+	<div class="r-edit-field">
+		{$CPF_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="CPF">
+		<div class="text-muted" >
+		{$tooltip adm_pacientes CPF }		</div>
+	</div>
+</div>
+
+
+{END CPF_fieldblock}
+											
+{BEGIN RG_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_RG}  r-vertical-field" 
+	data-fieldname="RG" 
+	data-signal-error-for="RG{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field15" {$item_integrated_edit_field15} data-pageid="{$pageid}" data-field="RG" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_RG}">
+		{BEGIN RG_label}{$label adm_pacientes RG }{END RG_label}
+	</label>
+	<div class="r-edit-field">
+		{$RG_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="RG">
+		<div class="text-muted" >
+		{$tooltip adm_pacientes RG }		</div>
+	</div>
+</div>
+
+
+{END RG_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="add_save" data-itemid="add_save" {$item_add_save} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$savebutton_attrs} >
+							Salvar			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="add_back_list" data-itemid="add_back_list" {$item_add_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="backButton{$id}" >
+							Voltar à Lista			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="add_cancel" data-itemid="add_cancel" {$item_add_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancela			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

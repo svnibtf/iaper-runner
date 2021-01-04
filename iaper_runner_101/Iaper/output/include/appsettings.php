@@ -564,7 +564,7 @@ $globalSettings["useCookieBanner"] = 1 != 0;
 
 
 $globalSettings["createLoginPage"] = true;
-$globalSettings["userGroupCount"] = 1;
+$globalSettings["userGroupCount"] = 2;
 
 
 $globalSettings["apiGoogleMapsCode"] = "AIzaSyA_vMPvnIDcrFEAdCssJrsLnSQApQ8774w";
@@ -630,7 +630,7 @@ $cLoginTable = "login";
 $cDisplayNameField = "nome";
 $cUserNameField	= "email";
 $cPasswordField	= "senha";
-$cUserGroupField = "email";
+$cUserGroupField = "tipo_usuario";
 $cEmailField = "email";
 $globalSettings["usersTableInProject"] = true;
 $globalSettings["usersDatasourceTable"] = "login";
@@ -650,7 +650,7 @@ $arrCustomPages = array();
 																																	$cPasswordFieldType	= 200;
 						$cUserNameFieldType	= 200;
 						$cEmailFieldType = 200;
-																																																																																																																																																																																																																																	
+																																																																																																																																																																																																																																										
 
 $useAJAX = true;
 $suggestAllContent = true;
@@ -658,9 +658,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "88_1609588534";
+$projectBuildKey = "101_1609760947";
 $wizardBuildKey = "35870";
-$projectBuildNumber = "88";
+$projectBuildNumber = "101";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -681,22 +681,22 @@ $menuTreelikeFlags["main"] = 1;
 $tableCaptions = array();
 $tableCaptions["Portuguese(Brazil)"] = array();
 $tableCaptions["Portuguese(Brazil)"][""] = "";
-$tableCaptions["Portuguese(Brazil)"]["usuarios"] = "Cadastro";
-$tableCaptions["Portuguese(Brazil)"]["usuarios_dados_profissionais"] = "Dados Profissionais";
+$tableCaptions["Portuguese(Brazil)"]["adm_usuarios"] = "Cadastro";
+$tableCaptions["Portuguese(Brazil)"]["adm_usuarios_dados_profissionais"] = "Dados Profissionais";
 $tableCaptions["Portuguese(Brazil)"]["ibge_municipios"] = "Ibge";
 $tableCaptions["Portuguese(Brazil)"]["ibge_pais"] = "Ibge Pais";
 $tableCaptions["Portuguese(Brazil)"]["adm_ramos"] = "Adm Ramos";
 $tableCaptions["Portuguese(Brazil)"]["adm_tipousuario"] = "TipoUsuario";
-$tableCaptions["Portuguese(Brazil)"]["planos"] = "Planos";
-$tableCaptions["Portuguese(Brazil)"]["meuplano"] = "Meu Plano";
+$tableCaptions["Portuguese(Brazil)"]["adm_planos"] = "Adm Planos";
+$tableCaptions["Portuguese(Brazil)"]["adm_meuplano"] = "Meu Plano";
 $tableCaptions["Portuguese(Brazil)"]["login"] = "Login";
 $tableCaptions["Portuguese(Brazil)"]["buscar_profissionais"] = "Buscar Empresas";
 $tableCaptions["Portuguese(Brazil)"]["Procurar_por_Profissionais"] = "Procurar pela Localização";
 $tableCaptions["Portuguese(Brazil)"]["Busca_Profissional"] = "Busca Profissional";
-$tableCaptions["Portuguese(Brazil)"]["pacientes"] = "Pacientes
+$tableCaptions["Portuguese(Brazil)"]["adm_pacientes"] = "Pacientes
 ";
-$tableCaptions["Portuguese(Brazil)"]["tratamento"] = "Tratamentos";
-$tableCaptions["Portuguese(Brazil)"]["Fluxo_de_Recebimentos"] = "Fluxo de Recebimentos";
+$tableCaptions["Portuguese(Brazil)"]["adm_tratamento"] = "Tratamentos";
+$tableCaptions["Portuguese(Brazil)"]["Fluxo_de_Recebimentos"] = "Administrativo";
 
 
 $globalEvents = new class_GlobalEvents;

@@ -3238,10 +3238,10 @@ function fillProjectEntites()
 	global $projectEntities, $projectEntitiesReverse, $tablesByGoodName, $tablesByUpperCase, $tablesByUpperGoodname;
 	if( count( $projectEntities ) )
 		return;
-	$projectEntities[ "usuarios" ] = array( "url" => "usuarios", "type" => 0 );
-	$projectEntitiesReverse[ "usuarios" ] = "usuarios";
-	$projectEntities[ "usuarios_dados_profissionais" ] = array( "url" => "usuarios_dados_profissionais", "type" => 0 );
-	$projectEntitiesReverse[ "usuarios_dados_profissionais" ] = "usuarios_dados_profissionais";
+	$projectEntities[ "adm_usuarios" ] = array( "url" => "adm_usuarios1", "type" => 0 );
+	$projectEntitiesReverse[ "adm_usuarios1" ] = "adm_usuarios";
+	$projectEntities[ "adm_usuarios_dados_profissionais" ] = array( "url" => "adm_usuarios_dados_profissionais1", "type" => 0 );
+	$projectEntitiesReverse[ "adm_usuarios_dados_profissionais1" ] = "adm_usuarios_dados_profissionais";
 	$projectEntities[ "ibge_municipios" ] = array( "url" => "ibge_municipios", "type" => 0 );
 	$projectEntitiesReverse[ "ibge_municipios" ] = "ibge_municipios";
 	$projectEntities[ "ibge_pais" ] = array( "url" => "ibge_pais", "type" => 0 );
@@ -3250,10 +3250,10 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "adm_ramos" ] = "adm_ramos";
 	$projectEntities[ "adm_tipousuario" ] = array( "url" => "adm_tipousuario", "type" => 0 );
 	$projectEntitiesReverse[ "adm_tipousuario" ] = "adm_tipousuario";
-	$projectEntities[ "planos" ] = array( "url" => "planos", "type" => 0 );
-	$projectEntitiesReverse[ "planos" ] = "planos";
-	$projectEntities[ "meuplano" ] = array( "url" => "meuplano", "type" => 0 );
-	$projectEntitiesReverse[ "meuplano" ] = "meuplano";
+	$projectEntities[ "adm_planos" ] = array( "url" => "adm_planos1", "type" => 0 );
+	$projectEntitiesReverse[ "adm_planos1" ] = "adm_planos";
+	$projectEntities[ "adm_meuplano" ] = array( "url" => "adm_meuplano1", "type" => 0 );
+	$projectEntitiesReverse[ "adm_meuplano1" ] = "adm_meuplano";
 	$projectEntities[ "login" ] = array( "url" => "login", "type" => 0 );
 	$projectEntitiesReverse[ "login" ] = "login";
 	$projectEntities[ "buscar_profissionais" ] = array( "url" => "buscar_profissionais", "type" => 0 );
@@ -3262,10 +3262,10 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "procurar_por_profissionais" ] = "Procurar por Profissionais";
 	$projectEntities[ "Busca Profissional" ] = array( "url" => "busca_profissional", "type" => 1 );
 	$projectEntitiesReverse[ "busca_profissional" ] = "Busca Profissional";
-	$projectEntities[ "pacientes" ] = array( "url" => "pacientes", "type" => 0 );
-	$projectEntitiesReverse[ "pacientes" ] = "pacientes";
-	$projectEntities[ "tratamento" ] = array( "url" => "tratamento", "type" => 0 );
-	$projectEntitiesReverse[ "tratamento" ] = "tratamento";
+	$projectEntities[ "adm_pacientes" ] = array( "url" => "adm_pacientes1", "type" => 0 );
+	$projectEntitiesReverse[ "adm_pacientes1" ] = "adm_pacientes";
+	$projectEntities[ "adm_tratamento" ] = array( "url" => "adm_tratamento1", "type" => 0 );
+	$projectEntitiesReverse[ "adm_tratamento1" ] = "adm_tratamento";
 	$projectEntities[ "Fluxo de Recebimentos" ] = array( "url" => "fluxo_de_recebimentos", "type" => 1 );
 	$projectEntitiesReverse[ "fluxo_de_recebimentos" ] = "Fluxo de Recebimentos";
 }

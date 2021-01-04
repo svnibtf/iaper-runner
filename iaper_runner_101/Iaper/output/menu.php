@@ -28,8 +28,8 @@ if (($_SESSION["MyURL"] == "") || (!isLoggedAsGuest())) {
 require_once('include/xtempl.php');
 require_once(getabspath("classes/cipherer.php"));
 
-include_once(getabspath("include/meuplano_events.php"));
-$tableEvents["meuplano"] = new eventclass_meuplano;
+include_once(getabspath("include/adm_meuplano1_events.php"));
+$tableEvents["adm_meuplano"] = new eventclass_adm_meuplano1;
 
 $xt = new Xtempl();
 

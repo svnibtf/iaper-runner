@@ -30,6 +30,7 @@ $dalTableusuarios["telefone_comercial"] = array("type"=>200,"varname"=>"telefone
 $dalTableusuarios["code_trocar_senha"] = array("type"=>200,"varname"=>"code_trocar_senha", "name" => "code_trocar_senha");
 $dalTableusuarios["deletado"] = array("type"=>3,"varname"=>"deletado", "name" => "deletado");
 $dalTableusuarios["idEmpresa"] = array("type"=>3,"varname"=>"idEmpresa", "name" => "idEmpresa");
+$dalTableusuarios["Confirma"] = array("type"=>200,"varname"=>"Confirma", "name" => "Confirma");
 	$dalTableusuarios["usu_id"]["key"]=true;
 
 $dal_info["iaperdbatrobb0254publiccloudco__usuarios"] = &$dalTableusuarios;

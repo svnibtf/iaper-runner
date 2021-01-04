@@ -206,6 +206,9 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_integrated_search_field29}","text":{$idEmpresa_pdfvalue}},
 				
+				
+			{"hidden":"{$item_hide_integrated_search_field30}","text":{$Confirma_pdfvalue}},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

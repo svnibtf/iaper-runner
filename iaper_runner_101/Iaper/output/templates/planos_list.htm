@@ -308,6 +308,14 @@
 		</a>
 	</li>
 {END logoutbutton}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$changepwdlink_attrs}  title="" >
+				
+		Mudar senha		
+		</a>
+	</li>
+{END changepwd_link}
 					</ul>
 	</span>
 </span>
@@ -465,11 +473,9 @@
 
 	 
 		{BEGIN Plano_fieldheadercolumn}
-	{BEGIN Plano_fieldheader}
-	<SPAN {$Plano_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Plano">
-	{$label planos Plano }	{$arrow_icon_Plano}
-	</SPAN>
-	{END Plano_fieldheader}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Plano">
+	{$label planos Plano }	</span>
 {END Plano_fieldheadercolumn}
 
 	
@@ -492,11 +498,9 @@
 
 	 
 		{BEGIN Valor_fieldheadercolumn}
-	{BEGIN Valor_fieldheader}
-	<SPAN {$Valor_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Valor">
-	{$label planos Valor }	{$arrow_icon_Valor}
-	</SPAN>
-	{END Valor_fieldheader}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Valor">
+	{$label planos Valor }	</span>
 {END Valor_fieldheadercolumn}
 
 	
@@ -519,11 +523,9 @@
 
 	 
 		{BEGIN Quantidade_Dia_fieldheadercolumn}
-	{BEGIN Quantidade_Dia_fieldheader}
-	<SPAN {$Quantidade_Dia_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Quantidade_Dia">
-	{$label planos Quantidade_Dia }	{$arrow_icon_Quantidade_Dia}
-	</SPAN>
-	{END Quantidade_Dia_fieldheader}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Quantidade_Dia">
+	{$label planos Quantidade_Dia }	</span>
 {END Quantidade_Dia_fieldheadercolumn}
 
 	
@@ -546,11 +548,9 @@
 
 	 
 		{BEGIN Combo_fieldheadercolumn}
-	{BEGIN Combo_fieldheader}
-	<SPAN {$Combo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Combo">
-	{$label planos Combo }	{$arrow_icon_Combo}
-	</SPAN>
-	{END Combo_fieldheader}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Combo">
+	{$label planos Combo }	</span>
 {END Combo_fieldheadercolumn}
 
 	

@@ -352,6 +352,14 @@
 		</a>
 	</li>
 {END logoutbutton}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$changepwdlink_attrs}  title="" >
+				
+		Mudar senha		
+		</a>
+	</li>
+{END changepwd_link}
 					</ul>
 	</span>
 </span>
@@ -547,11 +555,9 @@
 
 	 
 		{BEGIN idPlano_fieldheadercolumn}
-	{BEGIN idPlano_fieldheader}
-	<SPAN {$idPlano_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="idPlano">
-	{$label meuplano idPlano }	{$arrow_icon_idPlano}
-	</SPAN>
-	{END idPlano_fieldheader}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="idPlano">
+	{$label meuplano idPlano }	</span>
 {END idPlano_fieldheadercolumn}
 
 	
@@ -574,11 +580,9 @@
 
 	 
 		{BEGIN Data_Inicial_fieldheadercolumn}
-	{BEGIN Data_Inicial_fieldheader}
-	<SPAN {$Data_Inicial_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Data_Inicial">
-	{$label meuplano Data_Inicial }	{$arrow_icon_Data_Inicial}
-	</SPAN>
-	{END Data_Inicial_fieldheader}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Data_Inicial">
+	{$label meuplano Data_Inicial }	</span>
 {END Data_Inicial_fieldheadercolumn}
 
 	
@@ -601,11 +605,9 @@
 
 	 
 		{BEGIN Valor_fieldheadercolumn}
-	{BEGIN Valor_fieldheader}
-	<SPAN {$Valor_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Valor">
-	{$label meuplano Valor }	{$arrow_icon_Valor}
-	</SPAN>
-	{END Valor_fieldheader}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Valor">
+	{$label meuplano Valor }	</span>
 {END Valor_fieldheadercolumn}
 
 	

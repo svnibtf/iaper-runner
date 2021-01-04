@@ -160,10 +160,22 @@ pdfDocument = {
 			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel _global nome }","bold":true},{"text":{$nome_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
+			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel _global sobrenome }","bold":true},{"text":{$sobrenome_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
 			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel _global email }","bold":true},{"text":{$email_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
+			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel _global telefone_celular_principal }","bold":true},{"text":{$telefone_celular_principal_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
 			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel _global senha }","bold":true},{"text":{$senha_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel _global Confirma }","bold":true},{"text":{$Confirma_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel _global tipo_usuario }","bold":true},{"text":{$tipo_usuario_pdfvalue}}],"margin":[0,0,0,15]},
 				
 		  ],
   "border": [ false, false, false, false ],

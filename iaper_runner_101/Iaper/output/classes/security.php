@@ -857,6 +857,9 @@ class Security
 
 	public static function _staticRestrictedPages( $table ) {
 		$group = Security::getUserGroup();
+		if( $group == "Empresa" )	{
+			return array();
+		}
 		//	default permissions
 		return array();
 	}

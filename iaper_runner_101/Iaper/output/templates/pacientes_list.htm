@@ -501,6 +501,14 @@
 		</a>
 	</li>
 {END logoutbutton}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$changepwdlink_attrs}  title="" >
+				
+		Mudar senha		
+		</a>
+	</li>
+{END changepwd_link}
 					</ul>
 	</span>
 </span>
@@ -790,11 +798,9 @@
 
 	 
 		{BEGIN Nome_fieldheadercolumn}
-	{BEGIN Nome_fieldheader}
-	<SPAN {$Nome_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Nome">
-	{$label pacientes Nome }	{$arrow_icon_Nome}
-	</SPAN>
-	{END Nome_fieldheader}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Nome">
+	{$label pacientes Nome }	</span>
 {END Nome_fieldheadercolumn}
 
 	
@@ -817,11 +823,9 @@
 
 	 
 		{BEGIN Email_fieldheadercolumn}
-	{BEGIN Email_fieldheader}
-	<SPAN {$Email_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Email">
-	{$label pacientes Email }	{$arrow_icon_Email}
-	</SPAN>
-	{END Email_fieldheader}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Email">
+	{$label pacientes Email }	</span>
 {END Email_fieldheadercolumn}
 
 	
@@ -844,11 +848,9 @@
 
 	 
 		{BEGIN Cidade_fieldheadercolumn}
-	{BEGIN Cidade_fieldheader}
-	<SPAN {$Cidade_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Cidade">
-	{$label pacientes Cidade }	{$arrow_icon_Cidade}
-	</SPAN>
-	{END Cidade_fieldheader}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Cidade">
+	{$label pacientes Cidade }	</span>
 {END Cidade_fieldheadercolumn}
 
 	

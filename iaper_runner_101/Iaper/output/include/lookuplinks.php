@@ -43,45 +43,52 @@ function InitLookupLinks()
 		if( !isset( $lookupTableLinks["adm_tipousuario"] ) ) {
 			$lookupTableLinks["adm_tipousuario"] = array();
 		}
-		if( !isset( $lookupTableLinks["adm_tipousuario"]["usuarios.tipo_usuario"] )) {
-			$lookupTableLinks["adm_tipousuario"]["usuarios.tipo_usuario"] = array();
+		if( !isset( $lookupTableLinks["adm_tipousuario"]["adm_usuarios1.tipo_usuario"] )) {
+			$lookupTableLinks["adm_tipousuario"]["adm_usuarios1.tipo_usuario"] = array();
 		}
-		$lookupTableLinks["adm_tipousuario"]["usuarios.tipo_usuario"]["edit"] = array("table" => "usuarios", "field" => "tipo_usuario", "page" => "edit");
+		$lookupTableLinks["adm_tipousuario"]["adm_usuarios1.tipo_usuario"]["edit"] = array("table" => "adm_usuarios", "field" => "tipo_usuario", "page" => "edit");
 		if( !isset( $lookupTableLinks["adm_plano_profissional"] ) ) {
 			$lookupTableLinks["adm_plano_profissional"] = array();
 		}
-		if( !isset( $lookupTableLinks["adm_plano_profissional"]["usuarios.plano_tipo"] )) {
-			$lookupTableLinks["adm_plano_profissional"]["usuarios.plano_tipo"] = array();
+		if( !isset( $lookupTableLinks["adm_plano_profissional"]["adm_usuarios1.plano_tipo"] )) {
+			$lookupTableLinks["adm_plano_profissional"]["adm_usuarios1.plano_tipo"] = array();
 		}
-		$lookupTableLinks["adm_plano_profissional"]["usuarios.plano_tipo"]["edit"] = array("table" => "usuarios", "field" => "plano_tipo", "page" => "edit");
+		$lookupTableLinks["adm_plano_profissional"]["adm_usuarios1.plano_tipo"]["edit"] = array("table" => "adm_usuarios", "field" => "plano_tipo", "page" => "edit");
 		if( !isset( $lookupTableLinks["ibge_pais"] ) ) {
 			$lookupTableLinks["ibge_pais"] = array();
 		}
-		if( !isset( $lookupTableLinks["ibge_pais"]["usuarios.pais"] )) {
-			$lookupTableLinks["ibge_pais"]["usuarios.pais"] = array();
+		if( !isset( $lookupTableLinks["ibge_pais"]["adm_usuarios1.pais"] )) {
+			$lookupTableLinks["ibge_pais"]["adm_usuarios1.pais"] = array();
 		}
-		$lookupTableLinks["ibge_pais"]["usuarios.pais"]["edit"] = array("table" => "usuarios", "field" => "pais", "page" => "edit");
+		$lookupTableLinks["ibge_pais"]["adm_usuarios1.pais"]["edit"] = array("table" => "adm_usuarios", "field" => "pais", "page" => "edit");
 		if( !isset( $lookupTableLinks["ibge_municipios"] ) ) {
 			$lookupTableLinks["ibge_municipios"] = array();
 		}
-		if( !isset( $lookupTableLinks["ibge_municipios"]["usuarios.municipio"] )) {
-			$lookupTableLinks["ibge_municipios"]["usuarios.municipio"] = array();
+		if( !isset( $lookupTableLinks["ibge_municipios"]["adm_usuarios1.municipio"] )) {
+			$lookupTableLinks["ibge_municipios"]["adm_usuarios1.municipio"] = array();
 		}
-		$lookupTableLinks["ibge_municipios"]["usuarios.municipio"]["edit"] = array("table" => "usuarios", "field" => "municipio", "page" => "edit");
-		if( !isset( $lookupTableLinks["usuarios_dados_profissionais"] ) ) {
-			$lookupTableLinks["usuarios_dados_profissionais"] = array();
+		$lookupTableLinks["ibge_municipios"]["adm_usuarios1.municipio"]["edit"] = array("table" => "adm_usuarios", "field" => "municipio", "page" => "edit");
+		if( !isset( $lookupTableLinks["adm_usuarios_dados_profissionais"] ) ) {
+			$lookupTableLinks["adm_usuarios_dados_profissionais"] = array();
 		}
-		if( !isset( $lookupTableLinks["usuarios_dados_profissionais"]["usuarios.idEmpresa"] )) {
-			$lookupTableLinks["usuarios_dados_profissionais"]["usuarios.idEmpresa"] = array();
+		if( !isset( $lookupTableLinks["adm_usuarios_dados_profissionais"]["adm_usuarios1.idEmpresa"] )) {
+			$lookupTableLinks["adm_usuarios_dados_profissionais"]["adm_usuarios1.idEmpresa"] = array();
 		}
-		$lookupTableLinks["usuarios_dados_profissionais"]["usuarios.idEmpresa"]["edit"] = array("table" => "usuarios", "field" => "idEmpresa", "page" => "edit");
-		if( !isset( $lookupTableLinks["planos"] ) ) {
-			$lookupTableLinks["planos"] = array();
+		$lookupTableLinks["adm_usuarios_dados_profissionais"]["adm_usuarios1.idEmpresa"]["edit"] = array("table" => "adm_usuarios", "field" => "idEmpresa", "page" => "edit");
+		if( !isset( $lookupTableLinks["adm_planos"] ) ) {
+			$lookupTableLinks["adm_planos"] = array();
 		}
-		if( !isset( $lookupTableLinks["planos"]["meuplano.idPlano"] )) {
-			$lookupTableLinks["planos"]["meuplano.idPlano"] = array();
+		if( !isset( $lookupTableLinks["adm_planos"]["adm_meuplano1.idPlano"] )) {
+			$lookupTableLinks["adm_planos"]["adm_meuplano1.idPlano"] = array();
 		}
-		$lookupTableLinks["planos"]["meuplano.idPlano"]["edit"] = array("table" => "meuplano", "field" => "idPlano", "page" => "edit");
+		$lookupTableLinks["adm_planos"]["adm_meuplano1.idPlano"]["edit"] = array("table" => "adm_meuplano", "field" => "idPlano", "page" => "edit");
+		if( !isset( $lookupTableLinks["adm_tipousuario"] ) ) {
+			$lookupTableLinks["adm_tipousuario"] = array();
+		}
+		if( !isset( $lookupTableLinks["adm_tipousuario"]["login.tipo_usuario"] )) {
+			$lookupTableLinks["adm_tipousuario"]["login.tipo_usuario"] = array();
+		}
+		$lookupTableLinks["adm_tipousuario"]["login.tipo_usuario"]["edit"] = array("table" => "login", "field" => "tipo_usuario", "page" => "edit");
 		if( !isset( $lookupTableLinks["adm_tipousuario"] ) ) {
 			$lookupTableLinks["adm_tipousuario"] = array();
 		}
@@ -110,20 +117,20 @@ function InitLookupLinks()
 			$lookupTableLinks["ibge_municipios"]["busca_profissional.municipio"] = array();
 		}
 		$lookupTableLinks["ibge_municipios"]["busca_profissional.municipio"]["edit"] = array("table" => "Busca Profissional", "field" => "municipio", "page" => "edit");
-		if( !isset( $lookupTableLinks["usuarios_dados_profissionais"] ) ) {
-			$lookupTableLinks["usuarios_dados_profissionais"] = array();
+		if( !isset( $lookupTableLinks["adm_usuarios_dados_profissionais"] ) ) {
+			$lookupTableLinks["adm_usuarios_dados_profissionais"] = array();
 		}
-		if( !isset( $lookupTableLinks["usuarios_dados_profissionais"]["busca_profissional.idEmpresa"] )) {
-			$lookupTableLinks["usuarios_dados_profissionais"]["busca_profissional.idEmpresa"] = array();
+		if( !isset( $lookupTableLinks["adm_usuarios_dados_profissionais"]["busca_profissional.idEmpresa"] )) {
+			$lookupTableLinks["adm_usuarios_dados_profissionais"]["busca_profissional.idEmpresa"] = array();
 		}
-		$lookupTableLinks["usuarios_dados_profissionais"]["busca_profissional.idEmpresa"]["edit"] = array("table" => "Busca Profissional", "field" => "idEmpresa", "page" => "edit");
-		if( !isset( $lookupTableLinks["pacientes"] ) ) {
-			$lookupTableLinks["pacientes"] = array();
+		$lookupTableLinks["adm_usuarios_dados_profissionais"]["busca_profissional.idEmpresa"]["edit"] = array("table" => "Busca Profissional", "field" => "idEmpresa", "page" => "edit");
+		if( !isset( $lookupTableLinks["adm_pacientes"] ) ) {
+			$lookupTableLinks["adm_pacientes"] = array();
 		}
-		if( !isset( $lookupTableLinks["pacientes"]["tratamento.idPaciente"] )) {
-			$lookupTableLinks["pacientes"]["tratamento.idPaciente"] = array();
+		if( !isset( $lookupTableLinks["adm_pacientes"]["adm_tratamento1.idPaciente"] )) {
+			$lookupTableLinks["adm_pacientes"]["adm_tratamento1.idPaciente"] = array();
 		}
-		$lookupTableLinks["pacientes"]["tratamento.idPaciente"]["edit"] = array("table" => "tratamento", "field" => "idPaciente", "page" => "edit");
+		$lookupTableLinks["adm_pacientes"]["adm_tratamento1.idPaciente"]["edit"] = array("table" => "adm_tratamento", "field" => "idPaciente", "page" => "edit");
 }
 
 ?>

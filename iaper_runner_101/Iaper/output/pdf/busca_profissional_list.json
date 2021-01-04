@@ -272,7 +272,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": '{$avatar_align}',
+              "alignment": 'left',
   },
 
 {END cellblock_grid_cell_field}
@@ -302,7 +302,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": '{$nome_align}',
+              "alignment": 'left',
   },
 
 {END cellblock_grid_cell_field1}
@@ -332,7 +332,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": '{$email_validado_align}',
+              "alignment": 'left',
   },
 
 {END cellblock_grid_cell_field2}
@@ -395,7 +395,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": '{$telefone_celular_principal_align}',
+              "alignment": 'left',
   },
 
 {END cellblock_grid_cell_field5}
@@ -421,9 +421,9 @@ pdfDocument = {
 			"stack": [
 		
 				
-			 {BEGIN details_usuarios_dados_profissionais}
-			{$displayDetailTable_usuarios_dados_profissionais }
-		{END details_usuarios_dados_profissionais},
+			 {BEGIN details_undefined}
+			{$displayDetailTable_undefined }
+		{END details_undefined},
 				
 		  ],
   "border": [ false, false, false, false ],

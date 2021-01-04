@@ -185,9 +185,9 @@ function checkTableName($shortTName )
 	if (!$shortTName)
 		return false;
 
-	if ("usuarios" == $shortTName )
+	if ("adm_usuarios1" == $shortTName )
 		return true;
-	if ("usuarios_dados_profissionais" == $shortTName )
+	if ("adm_usuarios_dados_profissionais1" == $shortTName )
 		return true;
 	if ("ibge_municipios" == $shortTName )
 		return true;
@@ -197,9 +197,9 @@ function checkTableName($shortTName )
 		return true;
 	if ("adm_tipousuario" == $shortTName )
 		return true;
-	if ("planos" == $shortTName )
+	if ("adm_planos1" == $shortTName )
 		return true;
-	if ("meuplano" == $shortTName )
+	if ("adm_meuplano1" == $shortTName )
 		return true;
 	if ("login" == $shortTName )
 		return true;
@@ -209,9 +209,9 @@ function checkTableName($shortTName )
 		return true;
 	if ("busca_profissional" == $shortTName )
 		return true;
-	if ("pacientes" == $shortTName )
+	if ("adm_pacientes1" == $shortTName )
 		return true;
-	if ("tratamento" == $shortTName )
+	if ("adm_tratamento1" == $shortTName )
 		return true;
 	if ("fluxo_de_recebimentos" == $shortTName )
 		return true;
@@ -267,21 +267,21 @@ function GetTablesList($pdfMode = false)
 	$checkPermissions = Security::permissionsAvailable();
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("usuarios");
+		$strPerm = GetUserPermissions("adm_usuarios");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
 	}
 	if( $tableAvailable ) {
-		$arr[]="usuarios";
+		$arr[]="adm_usuarios";
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("usuarios_dados_profissionais");
+		$strPerm = GetUserPermissions("adm_usuarios_dados_profissionais");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
 	}
 	if( $tableAvailable ) {
-		$arr[]="usuarios_dados_profissionais";
+		$arr[]="adm_usuarios_dados_profissionais";
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
@@ -321,21 +321,21 @@ function GetTablesList($pdfMode = false)
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("planos");
+		$strPerm = GetUserPermissions("adm_planos");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
 	}
 	if( $tableAvailable ) {
-		$arr[]="planos";
+		$arr[]="adm_planos";
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("meuplano");
+		$strPerm = GetUserPermissions("adm_meuplano");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
 	}
 	if( $tableAvailable ) {
-		$arr[]="meuplano";
+		$arr[]="adm_meuplano";
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
@@ -375,21 +375,21 @@ function GetTablesList($pdfMode = false)
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("pacientes");
+		$strPerm = GetUserPermissions("adm_pacientes");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
 	}
 	if( $tableAvailable ) {
-		$arr[]="pacientes";
+		$arr[]="adm_pacientes";
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("tratamento");
+		$strPerm = GetUserPermissions("adm_tratamento");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
 	}
 	if( $tableAvailable ) {
-		$arr[]="tratamento";
+		$arr[]="adm_tratamento";
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
@@ -409,20 +409,20 @@ function GetTablesList($pdfMode = false)
 function GetTablesListWithoutSecurity()
 {
 	$arr = array();
-	$arr[]="usuarios";
-	$arr[]="usuarios_dados_profissionais";
+	$arr[]="adm_usuarios";
+	$arr[]="adm_usuarios_dados_profissionais";
 	$arr[]="ibge_municipios";
 	$arr[]="ibge_pais";
 	$arr[]="adm_ramos";
 	$arr[]="adm_tipousuario";
-	$arr[]="planos";
-	$arr[]="meuplano";
+	$arr[]="adm_planos";
+	$arr[]="adm_meuplano";
 	$arr[]="login";
 	$arr[]="buscar_profissionais";
 	$arr[]="Procurar por Profissionais";
 	$arr[]="Busca Profissional";
-	$arr[]="pacientes";
-	$arr[]="tratamento";
+	$arr[]="adm_pacientes";
+	$arr[]="adm_tratamento";
 	$arr[]="Fluxo de Recebimentos";
 	return $arr;
 }
@@ -1136,80 +1136,140 @@ function GetUserPermissionsStatic( $table )
 
 	$extraPerm = $_SESSION["AccessLevel"] == ACCESS_LEVEL_ADMINGROUP ? 'M' : '';
 	$sUserGroup = @$_SESSION["GroupID"];
-	if( $table=="usuarios" )
+	if( $table=="adm_usuarios" )
 	{
+		if( $sUserGroup=="Empresa" )
+		{
+			return "AEDSPI".$extraPerm;
+		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
-	if( $table=="usuarios_dados_profissionais" )
+	if( $table=="adm_usuarios_dados_profissionais" )
 	{
+		if( $sUserGroup=="Empresa" )
+		{
+			return "AEDSPI".$extraPerm;
+		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "".$extraPerm;
 	}
 	if( $table=="ibge_municipios" )
 	{
+		if( $sUserGroup=="Empresa" )
+		{
+			return "".$extraPerm;
+		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "".$extraPerm;
 	}
 	if( $table=="ibge_pais" )
 	{
+		if( $sUserGroup=="Empresa" )
+		{
+			return "".$extraPerm;
+		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "".$extraPerm;
 	}
 	if( $table=="adm_ramos" )
 	{
+		if( $sUserGroup=="Empresa" )
+		{
+			return "".$extraPerm;
+		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "".$extraPerm;
 	}
 	if( $table=="adm_tipousuario" )
 	{
+		if( $sUserGroup=="Empresa" )
+		{
+			return "".$extraPerm;
+		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "".$extraPerm;
 	}
-	if( $table=="planos" )
+	if( $table=="adm_planos" )
 	{
+		if( $sUserGroup=="Empresa" )
+		{
+			return "AEDSPI".$extraPerm;
+		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "".$extraPerm;
 	}
-	if( $table=="meuplano" )
+	if( $table=="adm_meuplano" )
 	{
+		if( $sUserGroup=="Empresa" )
+		{
+			return "AEDSPI".$extraPerm;
+		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "".$extraPerm;
 	}
 	if( $table=="login" )
 	{
+		if( $sUserGroup=="Empresa" )
+		{
+			return "AEDSPI".$extraPerm;
+		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="buscar_profissionais" )
 	{
+		if( $sUserGroup=="Empresa" )
+		{
+			return "AEDSPI".$extraPerm;
+		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="Procurar por Profissionais" )
 	{
+		if( $sUserGroup=="Empresa" )
+		{
+			return "S".$extraPerm;
+		}
 //	default permissions
 		return "S".$extraPerm;
 	}
 	if( $table=="Busca Profissional" )
 	{
+		if( $sUserGroup=="Empresa" )
+		{
+			return "AEDSPI".$extraPerm;
+		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
-	if( $table=="pacientes" )
+	if( $table=="adm_pacientes" )
 	{
+		if( $sUserGroup=="Empresa" )
+		{
+			return "AEDSPI".$extraPerm;
+		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
-	if( $table=="tratamento" )
+	if( $table=="adm_tratamento" )
 	{
+		if( $sUserGroup=="Empresa" )
+		{
+			return "AEDSPI".$extraPerm;
+		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="Fluxo de Recebimentos" )
 	{
+		if( $sUserGroup=="Empresa" )
+		{
+			return "AEDSPI".$extraPerm;
+		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "".$extraPerm;
 	}
 	// grant nothing by default
 	return "";
@@ -1346,10 +1406,11 @@ function SetAuthSessionData($pUsername, &$data, $password, &$pageObject = null, 
 
 
 		$_SESSION["OwnerID"] = $data["usu_id"];
-	$_SESSION["_usuarios_OwnerID"] = $data["usu_id"];
-		$_SESSION["_usuarios_dados_profissionais_OwnerID"] = $data["usu_id"];
-		$_SESSION["_meuplano_OwnerID"] = $data["usu_id"];
+	$_SESSION["_adm_usuarios_OwnerID"] = $data["usu_id"];
+		$_SESSION["_adm_usuarios_dados_profissionais_OwnerID"] = $data["usu_id"];
+		$_SESSION["_adm_meuplano_OwnerID"] = $data["usu_id"];
 		$_SESSION["_Busca Profissional_OwnerID"] = $data["usu_id"];
+		$_SESSION["_adm_pacientes_OwnerID"] = $data["avatar"];
 
 	$_SESSION["UserData"] = $data;
 
@@ -1414,19 +1475,19 @@ function CheckSecurity($strValue, $strAction, $table = "")
 	$strPerm = GetUserPermissions();
 	if( strpos($strPerm, "M") === false )
 	{
-		if($table=="usuarios")
+		if($table=="adm_usuarios")
 		{
 
 				if(!($pSet->getCaseSensitiveUsername((string)$_SESSION["_".$table."_OwnerID"])===$pSet->getCaseSensitiveUsername((string)$strValue)))
 				return false;
 		}
-		if($table=="usuarios_dados_profissionais")
+		if($table=="adm_usuarios_dados_profissionais")
 		{
 
 				if(( $strAction=="Edit" || $strAction=="Delete") && !($pSet->getCaseSensitiveUsername((string)$_SESSION["_".$table."_OwnerID"])===$pSet->getCaseSensitiveUsername((string)$strValue)))
 				return false;
 		}
-		if($table=="meuplano")
+		if($table=="adm_meuplano")
 		{
 
 				if(!($pSet->getCaseSensitiveUsername((string)$_SESSION["_".$table."_OwnerID"])===$pSet->getCaseSensitiveUsername((string)$strValue)))
@@ -1502,16 +1563,16 @@ function SecuritySQL($strAction, $table, $strPerm="")
 
 	if( strpos($strPerm, "M") === false )
 	{
-		if($table=="usuarios")
+		if($table=="adm_usuarios")
 		{
 				$ret = GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);
 		}
-		if($table=="usuarios_dados_profissionais")
+		if($table=="adm_usuarios_dados_profissionais")
 		{
 				if($strAction == "Edit" || $strAction == "Delete")
 				$ret = GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);
 		}
-		if($table=="meuplano")
+		if($table=="adm_meuplano")
 		{
 				$ret = GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);
 		}

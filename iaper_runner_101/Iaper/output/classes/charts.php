@@ -483,9 +483,9 @@ class Chart
 		if( !$this->webchart )
 			return true;
 			
-		if("usuarios" == $this->chrt_array['tables'][0])
+		if("adm_usuarios" == $this->chrt_array['tables'][0])
 			return true;
-		if("usuarios_dados_profissionais" == $this->chrt_array['tables'][0])
+		if("adm_usuarios_dados_profissionais" == $this->chrt_array['tables'][0])
 			return true;
 		if("ibge_municipios" == $this->chrt_array['tables'][0])
 			return true;
@@ -495,9 +495,9 @@ class Chart
 			return true;
 		if("adm_tipousuario" == $this->chrt_array['tables'][0])
 			return true;
-		if("planos" == $this->chrt_array['tables'][0])
+		if("adm_planos" == $this->chrt_array['tables'][0])
 			return true;
-		if("meuplano" == $this->chrt_array['tables'][0])
+		if("adm_meuplano" == $this->chrt_array['tables'][0])
 			return true;
 		if("login" == $this->chrt_array['tables'][0])
 			return true;
@@ -505,13 +505,13 @@ class Chart
 			return true;
 		if("" == $this->chrt_array['tables'][0])
 			return true;
-		if("usuarios" == $this->chrt_array['tables'][0])
+		if("adm_usuarios" == $this->chrt_array['tables'][0])
 			return true;
-		if("pacientes" == $this->chrt_array['tables'][0])
+		if("adm_pacientes" == $this->chrt_array['tables'][0])
 			return true;
-		if("tratamento" == $this->chrt_array['tables'][0])
+		if("adm_tratamento" == $this->chrt_array['tables'][0])
 			return true;
-		if("tratamento" == $this->chrt_array['tables'][0])
+		if("adm_tratamento" == $this->chrt_array['tables'][0])
 			return true;
 		return false;
 	}

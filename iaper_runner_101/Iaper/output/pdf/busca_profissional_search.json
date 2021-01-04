@@ -122,6 +122,9 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_integrated_search_field1}","text":{$numero_pdfvalue}},
 				
+				
+			{"hidden":"{$item_hide_integrated_search_field2}","text":{$Confirma_pdfvalue}},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

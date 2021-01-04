@@ -3,7 +3,7 @@ $tdatafluxo_de_recebimentos = array();
 $tdatafluxo_de_recebimentos[".searchableFields"] = array();
 $tdatafluxo_de_recebimentos[".ShortName"] = "fluxo_de_recebimentos";
 $tdatafluxo_de_recebimentos[".OwnerID"] = "";
-$tdatafluxo_de_recebimentos[".OriginalTable"] = "tratamento";
+$tdatafluxo_de_recebimentos[".OriginalTable"] = "adm_tratamento";
 
 
 $tdatafluxo_de_recebimentos[".pagesByType"] = my_json_decode( "{\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"]}" );
@@ -48,7 +48,7 @@ $tdatafluxo_de_recebimentos[".entityType"] = 1;
 $tdatafluxo_de_recebimentos[".connId"] = "iaperdbatrobb0254publiccloudco";
 
 
-$tdatafluxo_de_recebimentos[".strOriginalTableName"] = "tratamento";
+$tdatafluxo_de_recebimentos[".strOriginalTableName"] = "adm_tratamento";
 
 	
 

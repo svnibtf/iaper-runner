@@ -211,19 +211,19 @@ class ConnectionManager_Base
 	protected function _setTablesConnectionIds()
 	{
 		$connectionsIds = array();
-		$connectionsIds["usuarios"] = "iaperdbatrobb0254publiccloudco";
-		$connectionsIds["usuarios_dados_profissionais"] = "iaperdbatrobb0254publiccloudco";
+		$connectionsIds["adm_usuarios"] = "iaperdbatrobb0254publiccloudco";
+		$connectionsIds["adm_usuarios_dados_profissionais"] = "iaperdbatrobb0254publiccloudco";
 		$connectionsIds["ibge_municipios"] = "iaperdbatrobb0254publiccloudco";
 		$connectionsIds["ibge_pais"] = "iaperdbatrobb0254publiccloudco";
 		$connectionsIds["adm_ramos"] = "iaperdbatrobb0254publiccloudco";
 		$connectionsIds["adm_tipousuario"] = "iaperdbatrobb0254publiccloudco";
-		$connectionsIds["planos"] = "iaperdbatrobb0254publiccloudco";
-		$connectionsIds["meuplano"] = "iaperdbatrobb0254publiccloudco";
+		$connectionsIds["adm_planos"] = "iaperdbatrobb0254publiccloudco";
+		$connectionsIds["adm_meuplano"] = "iaperdbatrobb0254publiccloudco";
 		$connectionsIds["login"] = "iaperdbatrobb0254publiccloudco";
 		$connectionsIds["buscar_profissionais"] = "iaperdbatrobb0254publiccloudco";
 		$connectionsIds["Busca Profissional"] = "iaperdbatrobb0254publiccloudco";
-		$connectionsIds["pacientes"] = "iaperdbatrobb0254publiccloudco";
-		$connectionsIds["tratamento"] = "iaperdbatrobb0254publiccloudco";
+		$connectionsIds["adm_pacientes"] = "iaperdbatrobb0254publiccloudco";
+		$connectionsIds["adm_tratamento"] = "iaperdbatrobb0254publiccloudco";
 		$connectionsIds["Fluxo de Recebimentos"] = "iaperdbatrobb0254publiccloudco";
 
 		$this->_tablesConnectionIds = &$connectionsIds;

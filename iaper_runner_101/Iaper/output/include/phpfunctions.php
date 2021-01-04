@@ -924,7 +924,7 @@ function CustomExpression($value, $data, $field, $ptype, $table="")
 function fileCustomExpression($file, $data, $field, $ptype, $table )
 {
 	$value = "";
-				if($table=="usuarios" && $field=="avatar")
+				if($table=="adm_usuarios" && $field=="avatar")
 	{
 		;
 		return $value;
@@ -958,11 +958,11 @@ function GetDefaultValue($field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table=$strTableName;
-				if($table=="meuplano" && $field=="Data_Inicial")
+				if($table=="adm_meuplano" && $field=="Data_Inicial")
 	{
 		return now();
 	}
-				if($table=="meuplano" && $field=="Valor")
+				if($table=="adm_meuplano" && $field=="Valor")
 	{
 		return 50;
 	}

@@ -81,6 +81,14 @@
 		</a>
 	</li>
 {END logoutbutton}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$changepwdlink_attrs}  title="" >
+				
+		Mudar senha		
+		</a>
+	</li>
+{END changepwd_link}
 					</ul>
 	</span>
 </span>
@@ -112,34 +120,34 @@
 			 
 	data-cellId="grid_c1" data-pageid="{$pageid}">
  
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item1" {$item_welcome_item1} data-pageid="{$pageid}" data-page=".global_menu">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="http://site.sateh.com.br/#benefits-grid-images-left">
+							Quem Somos					</a>
+	</div>
+
+				
+	<div class="bs-welcome-content" data-comment-len="43">
+		Conheça quem somos e tudo o que oferecemos.	</div>
+	</div>
+
+ 
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item5" {$item_welcome_item5} data-pageid="{$pageid}">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="adm_usuarios1_list.php">
+							Completar meu Cadastro					</a>
+	</div>
+
+				
+	<div class="bs-welcome-content" data-comment-len="32">
+		Por favor complete seu cadastro.	</div>
+	</div>
+
+ 
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item" {$item_welcome_item} data-pageid="{$pageid}" data-page=".global_menu">
 	<div class="bs-welcome-header">
-		<a id="itemlink" href="usuarios_list.php">
-							<span class="glyphicon glyphicon-user"></span>Meu Cadastro					</a>
-	</div>
-
-				
-	<div class="bs-welcome-content" data-comment-len="53">
-		Permite atualizar meus dados pessoais e profissionais	</div>
-	</div>
-
- 
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item2" {$item_welcome_item2} data-pageid="{$pageid}" data-page=".global_menu">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="busca_profissional_list.php">
-							<span class="glyphicon glyphicon-calendar"></span>Busca Profissional					</a>
-	</div>
-
-				
-	<div class="bs-welcome-content" data-comment-len="47">
-		Permite procurar por profissionais cadastrados.	</div>
-	</div>
-
- 
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item4" {$item_welcome_item4} data-pageid="{$pageid}" data-page=".global_menu">
-	<div class="bs-welcome-header">
 		<a id="itemlink" href="buscar_profissionais_list.php">
-							<span class="glyphicon glyphicon-ok"></span>Buscar Empresas					</a>
+							Buscar Profissionais					</a>
 	</div>
 
 				
@@ -148,50 +156,40 @@
 	</div>
 
  
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item1" {$item_welcome_item1} data-pageid="{$pageid}" data-page=".global_menu">
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item2" {$item_welcome_item2} data-pageid="{$pageid}" data-page=".global_menu">
 	<div class="bs-welcome-header">
-		<a id="itemlink" href="procurar_por_profissionais_dashboard.php">
-							<span class="glyphicon glyphicon-map-marker"></span>Procurar pela Localização					</a>
+		<a id="itemlink" href="adm_tratamento1_list.php">
+							Minha Agenda					</a>
 	</div>
 
 				
-	<div class="bs-welcome-content" data-comment-len="43">
-		Procurar por Profissionais através do Mapa.	</div>
+	<div class="bs-welcome-content" data-comment-len="42">
+		Permite acessar a sua agenda de consultas.	</div>
 	</div>
 
  
 <div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item3" {$item_welcome_item3} data-pageid="{$pageid}" data-page=".global_menu">
 	<div class="bs-welcome-header">
-		<a id="itemlink" href="pacientes_list.php">
-							<span class="glyphicon glyphicon-user"></span>Pacientes
-					</a>
-	</div>
-
-				
-	<div class="bs-welcome-content" data-comment-len="27">
-		Cadastro dos seus Pacientes	</div>
-	</div>
-
- 
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item5" {$item_welcome_item5} data-pageid="{$pageid}" data-page=".global_menu">
-	<div class="bs-welcome-header">
-		<a id="itemlink" href="tratamento_list.php">
-							<span class="glyphicon glyphicon-hand-right"></span>Tratamentos					</a>
-	</div>
-
-				
-	<div class="bs-welcome-content" data-comment-len="52">
-		Histórico de Tratamento dos seus pacientes e Agenda.	</div>
-	</div>
-
- 
-<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item6" {$item_welcome_item6} data-pageid="{$pageid}" data-page=".global_menu">
-	<div class="bs-welcome-header">
 		<a id="itemlink" href="fluxo_de_recebimentos_list.php">
-							<span class="glyphicon glyphicon-camera"></span>Fluxo de Recebimentos					</a>
+							Administrativo					</a>
 	</div>
 
-		</div>
+				
+	<div class="bs-welcome-content" data-comment-len="44">
+		Permite acessar informações administrativas.	</div>
+	</div>
+
+ 
+<div class="bs-welcome-item" data-itemtype="welcome_item" data-itemid="welcome_item4" {$item_welcome_item4} data-pageid="{$pageid}" data-page=".global_menu">
+	<div class="bs-welcome-header">
+		<a id="itemlink" href="adm_pacientes1_list.php">
+							Meus Pacientes					</a>
+	</div>
+
+				
+	<div class="bs-welcome-content" data-comment-len="45">
+		Permite acessar o Cadastro de seus Pacientes.	</div>
+	</div>
 
 </td>
 							</tr>
