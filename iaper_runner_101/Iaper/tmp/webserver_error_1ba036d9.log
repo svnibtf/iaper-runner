@@ -1,0 +1,8 @@
+[Tue Jan 05 09:20:14.215197 2021] [core:warn] [pid 7668:tid 172] AH00117: Ignoring deprecated use of DefaultType in line 21 of C:/Users/Rubens/Desktop/Iaper/tmp/webserver.conf.
+[Tue Jan 05 09:20:19.015471 2021] [mpm_winnt:notice] [pid 7668:tid 172] AH00455: Apache/2.4.37 (Win32) PHP/5.6.40 configured -- resuming normal operations
+[Tue Jan 05 09:20:19.015471 2021] [mpm_winnt:notice] [pid 7668:tid 172] AH00456: Apache Lounge VC11 Server built: Oct 22 2018 14:14:30
+[Tue Jan 05 09:20:19.015471 2021] [core:notice] [pid 7668:tid 172] AH00094: Command line: 'C:\\Program Files\\PHPRunner10.4\\EmbeddedServer\\bin\\httpd.exe -d C:/Program Files/PHPRunner10.4/EmbeddedServer -d C:\\Program Files\\PHPRunner10.4\\EmbeddedServer -f C:\\Users\\Rubens\\Desktop\\Iaper\\tmp\\webserver.conf'
+[Tue Jan 05 09:20:19.020471 2021] [mpm_winnt:notice] [pid 7668:tid 172] AH00418: Parent: Created child process 4900
+[Tue Jan 05 09:20:19.427495 2021] [core:warn] [pid 4900:tid 184] AH00117: Ignoring deprecated use of DefaultType in line 21 of C:/Users/Rubens/Desktop/Iaper/tmp/webserver.conf.
+[Tue Jan 05 09:20:19.450496 2021] [core:warn] [pid 4900:tid 184] AH00117: Ignoring deprecated use of DefaultType in line 21 of C:/Users/Rubens/Desktop/Iaper/tmp/webserver.conf.
+[Tue Jan 05 09:20:19.491498 2021] [mpm_winnt:notice] [pid 4900:tid 184] AH00354: Child: Starting 64 worker threads.

@@ -65,9 +65,6 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"","background":"#dadada","hidden":"{$item_hide_welcome_item1}"},
-				
-				
 			{"text":"","hidden":"{$item_hide_welcome_item5}"},
 				
 				
@@ -81,6 +78,9 @@ pdfDocument = {
 				
 				
 			{"text":"","background":"#dadada","hidden":"{$item_hide_welcome_item4}"},
+				
+				
+			{"text":"","background":"#dadada","hidden":"{$item_hide_welcome_item1}"},
 				
 		  ],
   "border": [ false, false, false, false ],

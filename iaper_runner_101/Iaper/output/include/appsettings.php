@@ -564,7 +564,7 @@ $globalSettings["useCookieBanner"] = 1 != 0;
 
 
 $globalSettings["createLoginPage"] = true;
-$globalSettings["userGroupCount"] = 2;
+$globalSettings["userGroupCount"] = 3;
 
 
 $globalSettings["apiGoogleMapsCode"] = "AIzaSyA_vMPvnIDcrFEAdCssJrsLnSQApQ8774w";
@@ -658,9 +658,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "101_1609760947";
+$projectBuildKey = "103_1609760947";
 $wizardBuildKey = "35870";
-$projectBuildNumber = "101";
+$projectBuildNumber = "103";
 
 $mlang_messages = array();
 $mlang_charsets = array();
