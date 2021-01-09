@@ -117,16 +117,10 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_search_field}","text":{$idPaciente_pdfvalue}},
-				
-				
 			{"hidden":"{$item_hide_integrated_search_field1}","text":{$Nome_pdfvalue}},
 				
 				
 			{"hidden":"{$item_hide_integrated_search_field2}","text":{$Email_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_integrated_search_field3}","text":{$Senha_pdfvalue}},
 				
 				
 			{"hidden":"{$item_hide_integrated_search_field4}","text":{$Endereco_pdfvalue}},
@@ -139,36 +133,6 @@ pdfDocument = {
 				
 				
 			{"hidden":"{$item_hide_integrated_search_field7}","text":{$Estado_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_integrated_search_field8}","text":{$Cep_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_integrated_search_field9}","text":{$Celular_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_integrated_search_field10}","text":{$Tel_Residencial_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_integrated_search_field11}","text":{$Data_Inicio_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_integrated_search_field12}","text":{$Sexo_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_integrated_search_field13}","text":{$Sintomas_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_integrated_search_field14}","text":{$Tratamento_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_integrated_search_field15}","text":{$idProfissional_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_integrated_search_field16}","text":{$CPF_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_integrated_search_field17}","text":{$RG_pdfvalue}},
 				
 		  ],
   "border": [ false, false, false, false ],

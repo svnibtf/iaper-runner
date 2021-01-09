@@ -1,7 +1,5 @@
 <?php
-			$optionsArray = array( 'details' => array( 'adm_usuarios_dados_profissionais' => array( 'displayPreview' => 2,
-'previewPageId' => '' ) ),
-'master' => array( 'adm_usuarios' => array( 'preview' => false ) ),
+			$optionsArray = array( 'master' => array( 'adm_usuarios' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'idPlano',
 'Data_Inicial',

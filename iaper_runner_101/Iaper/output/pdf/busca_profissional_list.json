@@ -189,8 +189,11 @@ pdfDocument = {
 							tableForm: true,
 							widths: [
 																{BEGIN col_grid_0}
-								"*",
+								"33%",
 								{END col_grid_0}
+																{BEGIN col_grid_1}
+								"66%",
+								{END col_grid_1}
 															],
 													heights: [
 															{BEGIN row_grid_0}			
@@ -214,6 +217,9 @@ pdfDocument = {
 															{BEGIN row_grid_6}			
 								"%",
 								{END row_grid_6}
+															{BEGIN row_grid_7}			
+								"%",
+								{END row_grid_7}
 														],
 													
 							body: [
@@ -230,6 +236,9 @@ pdfDocument = {
 		
 	//	dynamic colspan/rowspan
 
+					{BEGIN colspan_grid_cell_top}
+			colSpan: {$colspan_grid_cell_top},
+			{END colspan_grid_cell_top}
 		
 						
 	
@@ -246,11 +255,43 @@ pdfDocument = {
   },
 
 {END cellblock_grid_cell_top}
-											],
+																		{ 
+				cellId: 'cell_top',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
 				{END row_grid_0}
 								{BEGIN row_grid_1}
 				[
-												{BEGIN cellblock_grid_cell_field}
+												{BEGIN cellblock_grid_cell_label}
+{
+	cellId: 'cell_label',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_simple_grid_field}","text":"{$jslabel Busca_Profissional avatar }","bold":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
+  },
+
+{END cellblock_grid_cell_label}
+																			{BEGIN cellblock_grid_cell_field}
 {
 	cellId: 'cell_field',
 	col:0,
@@ -280,7 +321,33 @@ pdfDocument = {
 				{END row_grid_1}
 								{BEGIN row_grid_2}
 				[
-												{BEGIN cellblock_grid_cell_field1}
+												{BEGIN cellblock_grid_cell_label1}
+{
+	cellId: 'cell_label1',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_simple_grid_field2}","text":"{$jslabel Busca_Profissional nome }","bold":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
+  },
+
+{END cellblock_grid_cell_label1}
+																			{BEGIN cellblock_grid_cell_field1}
 {
 	cellId: 'cell_field1',
 	col:0,
@@ -310,7 +377,33 @@ pdfDocument = {
 				{END row_grid_2}
 								{BEGIN row_grid_3}
 				[
-												{BEGIN cellblock_grid_cell_field2}
+												{BEGIN cellblock_grid_cell_label2}
+{
+	cellId: 'cell_label2',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_grid_field4}","text":"{$jslabel Busca_Profissional email_validado }","bold":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
+  },
+
+{END cellblock_grid_cell_label2}
+																			{BEGIN cellblock_grid_cell_field2}
 {
 	cellId: 'cell_field2',
 	col:0,
@@ -340,7 +433,33 @@ pdfDocument = {
 				{END row_grid_3}
 								{BEGIN row_grid_4}
 				[
-												{BEGIN cellblock_grid_cell_field3}
+												{BEGIN cellblock_grid_cell_label3}
+{
+	cellId: 'cell_label3',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_grid_field5}","text":"{$jslabel Busca_Profissional municipio }","bold":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
+  },
+
+{END cellblock_grid_cell_label3}
+																			{BEGIN cellblock_grid_cell_field3}
 {
 	cellId: 'cell_field3',
 	col:0,
@@ -360,9 +479,6 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_grid_field2}","text":{$municipio_pdfvalue}},
 				
-				
-			{"hidden":"{$item_hide_grid_field1}","text":{$estado_pdfvalue}},
-				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
@@ -373,7 +489,89 @@ pdfDocument = {
 				{END row_grid_4}
 								{BEGIN row_grid_5}
 				[
-												{BEGIN cellblock_grid_cell_field5}
+												{BEGIN cellblock_grid_cell_label4}
+{
+	cellId: 'cell_label4',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_grid_field6}","text":"{$jslabel Busca_Profissional estado }","bold":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
+  },
+
+{END cellblock_grid_cell_label4}
+																			{BEGIN cellblock_grid_cell_field4}
+{
+	cellId: 'cell_field4',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_grid_field1}","text":{$estado_pdfvalue}},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+  },
+
+{END cellblock_grid_cell_field4}
+											],
+				{END row_grid_5}
+								{BEGIN row_grid_6}
+				[
+												{BEGIN cellblock_grid_cell_label5}
+{
+	cellId: 'cell_label5',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_grid_field7}","text":"{$jslabel Busca_Profissional telefone_celular_principal }","bold":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
+  },
+
+{END cellblock_grid_cell_label5}
+																			{BEGIN cellblock_grid_cell_field5}
 {
 	cellId: 'cell_field5',
 	col:0,
@@ -400,8 +598,8 @@ pdfDocument = {
 
 {END cellblock_grid_cell_field5}
 											],
-				{END row_grid_5}
-								{BEGIN row_grid_6}
+				{END row_grid_6}
+								{BEGIN row_grid_7}
 				[
 												{BEGIN cellblock_grid_cell_dpreview}
 {
@@ -413,6 +611,9 @@ pdfDocument = {
 		
 	//	dynamic colspan/rowspan
 
+					{BEGIN colspan_grid_cell_dpreview}
+			colSpan: {$colspan_grid_cell_dpreview},
+			{END colspan_grid_cell_dpreview}
 		
 						
 	
@@ -431,8 +632,14 @@ pdfDocument = {
   },
 
 {END cellblock_grid_cell_dpreview}
-											],
-				{END row_grid_6}
+																		{ 
+				cellId: 'cell_dpreview',
+				row:  0,
+				col:  1,
+				text: ''
+			},
+							],
+				{END row_grid_7}
 										]
 						}
 					}

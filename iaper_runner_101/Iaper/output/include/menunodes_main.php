@@ -7,7 +7,7 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNode = array();
 	$menuNode["id"] = "1";
-	$menuNode["name"] = "Meus Dados";
+	$menuNode["name"] = "Completar Cadastro";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "adm_usuarios";
@@ -26,7 +26,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Meus Dados";
+	$menuNode["title"] = "Completar Cadastro";
 
 
 
@@ -36,13 +36,13 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNode["name"] = "Buscar Profissional";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "buscar_profissionais";
+	$menuNode["table"] = "Procurar por Profissionais";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
 	$menuNode["parent"] = "0";
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "Internal";
-	$menuNode["pageType"] = strtolower("List");//
+	$menuNode["pageType"] = strtolower("Dashboard");//
 	$menuNode["pageId"] = "";
 	$menuNode["openType"] = "None";
 
@@ -137,7 +137,7 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "6";
-	$menuNode["name"] = "Quem Somos";
+	$menuNode["name"] = "Quem Somos e Planos";
 	$menuNode["href"] = "http://site.sateh.com.br/#benefits-grid-images-left";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "";
@@ -147,7 +147,7 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNode["nameType"] = "Text";
 	$menuNode["linkType"] = "External";
 	$menuNode["pageType"] = strtolower("");//
-	$menuNode["pageId"] = "list";
+	$menuNode["pageId"] = "";
 	$menuNode["openType"] = "NewWindow";
 
 	$menuNode["icon"] = "";
@@ -156,7 +156,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Quem Somos";
+	$menuNode["title"] = "Quem Somos e Planos";
 
 
 

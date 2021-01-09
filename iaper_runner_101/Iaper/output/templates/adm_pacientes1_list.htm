@@ -120,23 +120,40 @@
                         </span>
                       </div>
                     {END searchCtrlBlock}
-                    {BEGIN searchCtrlBlock_Tratamento}
-                      <DIV class="form-group srchPanelRow {$filterRow_class_Tratamento}" {$filterRow_attrs_Tratamento}>
+                    {BEGIN searchCtrlBlock_CPF}
+                      <DIV class="form-group srchPanelRow {$filterRow_class_CPF}" {$filterRow_attrs_CPF}>
                         <label>
-                          {$label adm_pacientes Tratamento}
+                          {$label adm_pacientes CPF}
                         </label>
                         {$delCtrlButt}
                         <SPAN class="rnr-searchtype">
-                          {$searchtype_Tratamento}
+                          {$searchtype_CPF}
                         </span>
                         <SPAN class="rnr-searchcontrol">
-                          {$searchcontrol_Tratamento}
+                          {$searchcontrol_CPF}
                         </span>
                         <SPAN class="rnr-searchcontrol">
-                          {$searchcontrol1_Tratamento}
+                          {$searchcontrol1_CPF}
                         </span>
                       </div>
-                    {END searchCtrlBlock_Tratamento}
+                    {END searchCtrlBlock_CPF}
+                    {BEGIN searchCtrlBlock_RG}
+                      <DIV class="form-group srchPanelRow {$filterRow_class_RG}" {$filterRow_attrs_RG}>
+                        <label>
+                          {$label adm_pacientes RG}
+                        </label>
+                        {$delCtrlButt}
+                        <SPAN class="rnr-searchtype">
+                          {$searchtype_RG}
+                        </span>
+                        <SPAN class="rnr-searchcontrol">
+                          {$searchcontrol_RG}
+                        </span>
+                        <SPAN class="rnr-searchcontrol">
+                          {$searchcontrol1_RG}
+                        </span>
+                      </div>
+                    {END searchCtrlBlock_RG}
                     {BEGIN searchCtrlBlock_idProfissional}
                       <DIV class="form-group srchPanelRow {$filterRow_class_idProfissional}" {$filterRow_attrs_idProfissional}>
                         <label>
@@ -154,6 +171,74 @@
                         </span>
                       </div>
                     {END searchCtrlBlock_idProfissional}
+                    {BEGIN searchCtrlBlock_Tratamento}
+                      <DIV class="form-group srchPanelRow {$filterRow_class_Tratamento}" {$filterRow_attrs_Tratamento}>
+                        <label>
+                          {$label adm_pacientes Tratamento}
+                        </label>
+                        {$delCtrlButt}
+                        <SPAN class="rnr-searchtype">
+                          {$searchtype_Tratamento}
+                        </span>
+                        <SPAN class="rnr-searchcontrol">
+                          {$searchcontrol_Tratamento}
+                        </span>
+                        <SPAN class="rnr-searchcontrol">
+                          {$searchcontrol1_Tratamento}
+                        </span>
+                      </div>
+                    {END searchCtrlBlock_Tratamento}
+                    {BEGIN searchCtrlBlock_Sintomas}
+                      <DIV class="form-group srchPanelRow {$filterRow_class_Sintomas}" {$filterRow_attrs_Sintomas}>
+                        <label>
+                          {$label adm_pacientes Sintomas}
+                        </label>
+                        {$delCtrlButt}
+                        <SPAN class="rnr-searchtype">
+                          {$searchtype_Sintomas}
+                        </span>
+                        <SPAN class="rnr-searchcontrol">
+                          {$searchcontrol_Sintomas}
+                        </span>
+                        <SPAN class="rnr-searchcontrol">
+                          {$searchcontrol1_Sintomas}
+                        </span>
+                      </div>
+                    {END searchCtrlBlock_Sintomas}
+                    {BEGIN searchCtrlBlock_Sexo}
+                      <DIV class="form-group srchPanelRow {$filterRow_class_Sexo}" {$filterRow_attrs_Sexo}>
+                        <label>
+                          {$label adm_pacientes Sexo}
+                        </label>
+                        {$delCtrlButt}
+                        <SPAN class="rnr-searchtype">
+                          {$searchtype_Sexo}
+                        </span>
+                        <SPAN class="rnr-searchcontrol">
+                          {$searchcontrol_Sexo}
+                        </span>
+                        <SPAN class="rnr-searchcontrol">
+                          {$searchcontrol1_Sexo}
+                        </span>
+                      </div>
+                    {END searchCtrlBlock_Sexo}
+                    {BEGIN searchCtrlBlock_Data_Inicio}
+                      <DIV class="form-group srchPanelRow {$filterRow_class_Data_Inicio}" {$filterRow_attrs_Data_Inicio}>
+                        <label>
+                          {$label adm_pacientes Data_Inicio}
+                        </label>
+                        {$delCtrlButt}
+                        <SPAN class="rnr-searchtype">
+                          {$searchtype_Data_Inicio}
+                        </span>
+                        <SPAN class="rnr-searchcontrol">
+                          {$searchcontrol_Data_Inicio}
+                        </span>
+                        <SPAN class="rnr-searchcontrol">
+                          {$searchcontrol1_Data_Inicio}
+                        </span>
+                      </div>
+                    {END searchCtrlBlock_Data_Inicio}
                     {BEGIN searchCtrlBlock_Cep}
                       <DIV class="form-group srchPanelRow {$filterRow_class_Cep}" {$filterRow_attrs_Cep}>
                         <label>
@@ -188,6 +273,23 @@
                         </span>
                       </div>
                     {END searchCtrlBlock_Estado}
+                    {BEGIN searchCtrlBlock_Cidade}
+                      <DIV class="form-group srchPanelRow {$filterRow_class_Cidade}" {$filterRow_attrs_Cidade}>
+                        <label>
+                          {$label adm_pacientes Cidade}
+                        </label>
+                        {$delCtrlButt}
+                        <SPAN class="rnr-searchtype">
+                          {$searchtype_Cidade}
+                        </span>
+                        <SPAN class="rnr-searchcontrol">
+                          {$searchcontrol_Cidade}
+                        </span>
+                        <SPAN class="rnr-searchcontrol">
+                          {$searchcontrol1_Cidade}
+                        </span>
+                      </div>
+                    {END searchCtrlBlock_Cidade}
                     {BEGIN searchCtrlBlock_Bairro}
                       <DIV class="form-group srchPanelRow {$filterRow_class_Bairro}" {$filterRow_attrs_Bairro}>
                         <label>
@@ -256,40 +358,6 @@
                         </span>
                       </div>
                     {END searchCtrlBlock_idPaciente}
-                    {BEGIN searchCtrlBlock_RG}
-                      <DIV class="form-group srchPanelRow {$filterRow_class_RG}" {$filterRow_attrs_RG}>
-                        <label>
-                          {$label adm_pacientes RG}
-                        </label>
-                        {$delCtrlButt}
-                        <SPAN class="rnr-searchtype">
-                          {$searchtype_RG}
-                        </span>
-                        <SPAN class="rnr-searchcontrol">
-                          {$searchcontrol_RG}
-                        </span>
-                        <SPAN class="rnr-searchcontrol">
-                          {$searchcontrol1_RG}
-                        </span>
-                      </div>
-                    {END searchCtrlBlock_RG}
-                    {BEGIN searchCtrlBlock_CPF}
-                      <DIV class="form-group srchPanelRow {$filterRow_class_CPF}" {$filterRow_attrs_CPF}>
-                        <label>
-                          {$label adm_pacientes CPF}
-                        </label>
-                        {$delCtrlButt}
-                        <SPAN class="rnr-searchtype">
-                          {$searchtype_CPF}
-                        </span>
-                        <SPAN class="rnr-searchcontrol">
-                          {$searchcontrol_CPF}
-                        </span>
-                        <SPAN class="rnr-searchcontrol">
-                          {$searchcontrol1_CPF}
-                        </span>
-                      </div>
-                    {END searchCtrlBlock_CPF}
                     {BEGIN searchCtrlBlock_Tel_Residencial}
                       <DIV class="form-group srchPanelRow {$filterRow_class_Tel_Residencial}" {$filterRow_attrs_Tel_Residencial}>
                         <label>
@@ -307,40 +375,6 @@
                         </span>
                       </div>
                     {END searchCtrlBlock_Tel_Residencial}
-                    {BEGIN searchCtrlBlock_Sintomas}
-                      <DIV class="form-group srchPanelRow {$filterRow_class_Sintomas}" {$filterRow_attrs_Sintomas}>
-                        <label>
-                          {$label adm_pacientes Sintomas}
-                        </label>
-                        {$delCtrlButt}
-                        <SPAN class="rnr-searchtype">
-                          {$searchtype_Sintomas}
-                        </span>
-                        <SPAN class="rnr-searchcontrol">
-                          {$searchcontrol_Sintomas}
-                        </span>
-                        <SPAN class="rnr-searchcontrol">
-                          {$searchcontrol1_Sintomas}
-                        </span>
-                      </div>
-                    {END searchCtrlBlock_Sintomas}
-                    {BEGIN searchCtrlBlock_Sexo}
-                      <DIV class="form-group srchPanelRow {$filterRow_class_Sexo}" {$filterRow_attrs_Sexo}>
-                        <label>
-                          {$label adm_pacientes Sexo}
-                        </label>
-                        {$delCtrlButt}
-                        <SPAN class="rnr-searchtype">
-                          {$searchtype_Sexo}
-                        </span>
-                        <SPAN class="rnr-searchcontrol">
-                          {$searchcontrol_Sexo}
-                        </span>
-                        <SPAN class="rnr-searchcontrol">
-                          {$searchcontrol1_Sexo}
-                        </span>
-                      </div>
-                    {END searchCtrlBlock_Sexo}
                     {BEGIN searchCtrlBlock_Nome}
                       <DIV class="form-group srchPanelRow {$filterRow_class_Nome}" {$filterRow_attrs_Nome}>
                         <label>
@@ -375,40 +409,6 @@
                         </span>
                       </div>
                     {END searchCtrlBlock_Email}
-                    {BEGIN searchCtrlBlock_Data_Inicio}
-                      <DIV class="form-group srchPanelRow {$filterRow_class_Data_Inicio}" {$filterRow_attrs_Data_Inicio}>
-                        <label>
-                          {$label adm_pacientes Data_Inicio}
-                        </label>
-                        {$delCtrlButt}
-                        <SPAN class="rnr-searchtype">
-                          {$searchtype_Data_Inicio}
-                        </span>
-                        <SPAN class="rnr-searchcontrol">
-                          {$searchcontrol_Data_Inicio}
-                        </span>
-                        <SPAN class="rnr-searchcontrol">
-                          {$searchcontrol1_Data_Inicio}
-                        </span>
-                      </div>
-                    {END searchCtrlBlock_Data_Inicio}
-                    {BEGIN searchCtrlBlock_Cidade}
-                      <DIV class="form-group srchPanelRow {$filterRow_class_Cidade}" {$filterRow_attrs_Cidade}>
-                        <label>
-                          {$label adm_pacientes Cidade}
-                        </label>
-                        {$delCtrlButt}
-                        <SPAN class="rnr-searchtype">
-                          {$searchtype_Cidade}
-                        </span>
-                        <SPAN class="rnr-searchcontrol">
-                          {$searchcontrol_Cidade}
-                        </span>
-                        <SPAN class="rnr-searchcontrol">
-                          {$searchcontrol1_Cidade}
-                        </span>
-                      </div>
-                    {END searchCtrlBlock_Cidade}
                     {BEGIN searchCtrlBlock_Celular}
                       <DIV class="form-group srchPanelRow {$filterRow_class_Celular}" {$filterRow_attrs_Celular}>
                         <label>
@@ -437,6 +437,77 @@
                   </div>
                 </div>
                 <!-- End Search panel content -->
+              </div>
+              <DIV class="clearfix r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="filter_panel" {$item_filter_panel} data-topcell-item-type="filter_panel">
+                <div data-itemtype="filter_panel" data-itemid="filter_panel" {$item_filter_panel} data-pageid="{$pageid}">
+                  <!--
+	<button type="button" class="btn btn-info bs-togglebutton bottom-margin collapsed" data-runner-toggle="collapse" data-target=".filterPanelContainer">	
+		<span class="glyphicon glyphicon-filter"><span> Filter	
+	</button>
+-->
+                  <DIV class="filterPanelContainer {$filterPanelStateClass}">
+                    {BEGIN filter_control_Cidade}
+                      <DIV class="panel panel-info filter-field filter-Cidade-container">
+                        <DIV class="panel-heading filter-expander">
+                          <SPAN class="filter-indicator glyphicon glyphicon-triangle-bottom">
+                          </span>
+                          <label>
+                            {$label adm_pacientes Cidade}
+                          </label>
+                          {BEGIN clearLink_Cidade}
+                            <A href="#" class="filter-clear filter-clear-Cidade">
+                              limpar
+                            </a>
+                          {END clearLink_Cidade}
+                        </div>
+                        <UL class="list-group">
+                          {BEGIN filterCtrlBlock_Cidade}
+                            <LI class="list-group-item filter-values filter-values-Cidade {$collapsedClass_Cidade} {$visibilityClass_Cidade}">
+                              {$Cidade_filter}
+                            </li>
+                          {END filterCtrlBlock_Cidade}
+                          {BEGIN filter_button_showmore_Cidade}
+                            <LI class="list-group-item filter-show-more {$collapsedClass_Cidade} {$showMoreBtnClass_Cidade}">
+                              <A class="filter-show-more-link filterShowMore_Cidade" href="#">
+                                {$show_n_more_Cidade}
+                              </a>
+                            </li>
+                          {END filter_button_showmore_Cidade}
+                        </ul>
+                      </div>
+                    {END filter_control_Cidade}
+                    {BEGIN filter_control_Estado}
+                      <DIV class="panel panel-info filter-field filter-Estado-container">
+                        <DIV class="panel-heading filter-expander">
+                          <SPAN class="filter-indicator glyphicon glyphicon-triangle-bottom">
+                          </span>
+                          <label>
+                            {$label adm_pacientes Estado}
+                          </label>
+                          {BEGIN clearLink_Estado}
+                            <A href="#" class="filter-clear filter-clear-Estado">
+                              limpar
+                            </a>
+                          {END clearLink_Estado}
+                        </div>
+                        <UL class="list-group">
+                          {BEGIN filterCtrlBlock_Estado}
+                            <LI class="list-group-item filter-values filter-values-Estado {$collapsedClass_Estado} {$visibilityClass_Estado}">
+                              {$Estado_filter}
+                            </li>
+                          {END filterCtrlBlock_Estado}
+                          {BEGIN filter_button_showmore_Estado}
+                            <LI class="list-group-item filter-show-more {$collapsedClass_Estado} {$showMoreBtnClass_Estado}">
+                              <A class="filter-show-more-link filterShowMore_Estado" href="#">
+                                {$show_n_more_Estado}
+                              </a>
+                            </li>
+                          {END filter_button_showmore_Estado}
+                        </ul>
+                      </div>
+                    {END filter_control_Estado}
+                  </div>
+                </div>
               </div>
             {END left_block}
           </div>
@@ -478,96 +549,6 @@
                       {END crumb}
                     </ol>
                   {END breadcrumb}
-                </span>
-                <SPAN class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search" {$item_simple_search} data-topcell-item-type="simple_search">
-                  <SPAN data-itemtype="simple_search" data-itemid="simple_search" {$item_simple_search} data-pageid="{$pageid}" class="form-group">
-                    <DIV class="input-group">
-                      {BEGIN searchform_text}
-                        <INPUT type="search" class="form-control" {$searchfor_attrs} size="25">
-                      {END searchform_text}
-                      <SPAN class="input-group-btn">
-                        {BEGIN searchform_showall}
-                          <BUTTON class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Mostrar Todos">
-                            <SPAN class="glyphicon glyphicon-remove">
-                            </span>
-                          </button>
-                        {END searchform_showall}
-                        {BEGIN searchform_search}
-                          <BUTTON {$searchbutton_attrs} class="btn btn-primary">
-                            <SPAN class="glyphicon glyphicon-search">
-                            </span>
-                          </button>
-                        {END searchform_search}
-                      </span>
-                    </div>
-                  </span>
-                </span>
-                <SPAN class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options">
-                  <span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
-                    <SPAN class="dropdown">
-                      <BUTTON type="button" title class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <SPAN class="glyphicon glyphicon-cog">
-                        </span>
-                        <SPAN class="caret">
-                        </span>
-                      </button>
-                      <UL class="dropdown-menu">
-                        {BEGIN exportselected_link}
-                          <li data-itemtype="export_selected" data-itemid="export_selected" {$item_export_selected} data-pageid="{$pageid}" data-small >
-                            <a  href="#" {$exportselectedlink_attrs} {$exportselectedlink_span}  title="" >
-                              Exportação selecionada
-                            </a>
-                          </li>
-                        {END exportselected_link}
-                        {BEGIN deleteselected_link}
-                          <li data-itemtype="delete_selected" data-itemid="delete_selected" {$item_delete_selected} data-pageid="{$pageid}" data-small >
-                            <a  href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}  title="" >
-                              Elimina Selecionados
-                            </a>
-                          </li>
-                        {END deleteselected_link}
-                        <LI role="separator" class="divider">
-                        </li>
-                        <li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
-                          <a   href="adm_pacientes1_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
-                            Busca Avancada
-                          </a>
-                        </li>
-                        {BEGIN searchPanelTopButtons}
-                          <li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
-                            <a  id="showOptPanel{$id}"  title="" >
-                              Mostrar painel de busca
-                            </a>
-                          </li>
-                        {END searchPanelTopButtons}
-                        {BEGIN searchPanelTopButtons}
-                          <li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
-                            <a  id="hideOptPanel{$id}"  title="" >
-                              Ocultar painel de busca
-                            </a>
-                          </li>
-                        {END searchPanelTopButtons}
-                        <LI role="separator" class="divider">
-                        </li>
-                        {BEGIN export_link}
-                          <li data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small >
-                            <a  href="#" {$exportlink_attrs}  title="" >
-                              Exportar os Resultados
-                            </a>
-                          </li>
-                        {END export_link}
-                        <LI role="separator" class="divider">
-                        </li>
-                        {BEGIN import_link}
-                          <li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
-                            <a  {$importlink_attrs} href="adm_pacientes1_import.php{$stateLink_full}"  title="" >
-                              Importar
-                            </a>
-                          </li>
-                        {END import_link}
-                      </ul>
-                    </span>
-                  </span>
                 </span>
                 <SPAN class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login">
                   {BEGIN guestloginbutton}
@@ -643,13 +624,27 @@
                             </a>
                           </span>
                         {END add_link}
+                        {BEGIN searchPanelTopButtons}
+                          <span data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small data-button-item>
+                            <A type="button" title class="btn btn-default" id="showOptPanel{$id}">
+                              Buscar
+                            </a>
+                          </span>
+                        {END searchPanelTopButtons}
                         {BEGIN deleteselected_link}
-                          <span data-itemtype="delete" data-itemid="delete" {$item_delete} data-pageid="{$pageid}" data-small data-button-item>
-                            <A type="button" title class="btn btn-default" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled>
+                          <span data-itemtype="delete_selected" data-itemid="delete_selected" {$item_delete_selected} data-pageid="{$pageid}" data-small data-button-item>
+                            <A type="button" title class="btn btn-default" href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>
                               Elimina Selecionados
                             </a>
                           </span>
                         {END deleteselected_link}
+                        {BEGIN searchPanelTopButtons}
+                          <span data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small data-button-item>
+                            <A type="button" title class="btn btn-default" id="hideOptPanel{$id}">
+                              Ocultar painel de busca
+                            </a>
+                          </span>
+                        {END searchPanelTopButtons}
                       {END firstAboveGridCell}
                     </div>
                     <DIV data-cellId="above-grid_c2" data-pageid="{$pageid}" {$cell_above-grid_c2} class="r-align-right col-md-6">
@@ -718,10 +713,10 @@
                                   </label>
                                   <div  id="printdetailstables{$id}" style="display:none;">
                                     {BEGIN print_details_adm_tratamento1}
-                                      <div class="btn btn-primary">
+                                      <div>
                                         <label for="printDetailsadm_tratamento1{$id}">
                                           <input type="checkbox" value="adm_tratamento1" id="printDetailsadm_tratamento1{$id}" checked>
-                                          Consultas
+                                          Tratamentos
                                         </label>
                                       </div>
                                     {END print_details_adm_tratamento1}
@@ -781,6 +776,9 @@
                   }
                   }
                 </style>
+
+
+
                 <TABLE data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class="table {$grid_classes} r-flexgrid rnr-b-grid rnr-gridtable" cellpadding="0" data-body-height="2">
                   <thead>
                     {BEGIN grid_header}
@@ -798,10 +796,7 @@
                             {END checkbox_column}
                           </th>
                         {END cellblock_grid_headcell_checkbox}
-                        {BEGIN cellblock_grid_headcell_details}
-                          <TH {$cell_grid_headcell_details} {$recordattrs} class="r-ori-vert" data-cellId="grid_headcell_details" data-pageid="{$pageid}" data-record-id="{$recId}">
-                          </th>
-                        {END cellblock_grid_headcell_details}
+
                         {BEGIN cellblock_grid_headcell_field}
                           <TH {$cell_grid_headcell_field} {$recordattrs} class="r-ori-vert {$Nome_class}" data-field="Nome" data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}">
                             {BEGIN Nome_fieldheadercolumn}
@@ -841,7 +836,7 @@
                             {BEGIN edit_column}
                               {BEGIN edit_link}
                                 <span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-                                  <A type="button" class="btn btn-primary" title="Editar" href="adm_pacientes1_edit.php?{$editlink}" {$editlink_attrs} title="Editar" data-popup>
+                                  <A type="button" title="Editar" class="btn btn-primary" href="adm_pacientes1_edit.php?{$editlink}" {$editlink_attrs} title="Editar" data-popup>
                                     Editar
                                   </a>
                                 </span>
@@ -851,11 +846,18 @@
                               {BEGIN view_link}
                                 <span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
                                   <A type="button" title="Exibir Registro" class="btn btn-primary" href="adm_pacientes1_view.php?{$editlink}" {$viewlink_attrs} title="Exibir" data-popup>
-                                    Visualizar
+                                    Prontuário
                                   </a>
                                 </span>
                               {END view_link}
                             {END view_column}
+                            {BEGIN adm_tratamento1_dtable_link}
+                              <span data-itemtype="grid_details_link" data-itemid="grid_details_link1" {$item_grid_details_link1} data-pageid="{$pageid}" data-record-id="{$recId}">
+                                <A {$adm_tratamento1_link_attrs} data-short-details="adm_tratamento1" class="btn btn-primary">
+                                  Consultas
+                                </a>
+                              </span>
+                            {END adm_tratamento1_dtable_link}
                           </td>
                         {END cellblock_grid_cell_icons}
                         {BEGIN cellblock_grid_cell_checkbox}
@@ -867,31 +869,6 @@
                             {END checkbox_column}
                           </td>
                         {END cellblock_grid_cell_checkbox}
-                        {BEGIN cellblock_grid_cell_details}
-                          <TD {$cell_grid_cell_details} {$recordattrs} class="
-" data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="adm_pacientes1_list" data-control-cell>
-                            {BEGIN _dtable_link}
-                              <span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
-                                <A {$_link_attrs} data-short-details class="{$_dlink_class}" title="{$caption tratamento }">
-                                  {BEGIN _childcount}
-                                    <SPAN class="details-badge badge _badge" {$_childnumber_attr}>
-                                      {$_childnumber}
-                                    </span>
-                                  {END _childcount}
-                                </a>
-                              </span>
-                            {END _dtable_link}
-                            {BEGIN adm_tratamento1_dtable_link}
-                              <span data-itemtype="grid_details_link" data-itemid="grid_details_link1" {$item_grid_details_link1} data-pageid="{$pageid}" data-record-id="{$recId}">
-                                <a  {$adm_tratamento1_link_attrs} data-short-details="adm_tratamento1"
-		 
-			>
-                                  Tratamentos
-                                </a>
-                              </span>
-                            {END adm_tratamento1_dtable_link}
-                          </td>
-                        {END cellblock_grid_cell_details}
                         {BEGIN cellblock_grid_cell_field}
                           <TD {$cell_grid_cell_field} {$recordattrs} class="r-ori-vert {$Nome_class}" data-field="Nome" data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}">
                             {BEGIN Nome_fieldcolumn}

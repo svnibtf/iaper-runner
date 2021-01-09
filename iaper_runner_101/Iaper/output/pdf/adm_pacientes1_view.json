@@ -123,9 +123,6 @@ pdfDocument = {
 			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel adm_pacientes Email }","bold":true},{"text":{$Email_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				
-			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel adm_pacientes Senha }","bold":true},{"text":{$Senha_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel adm_pacientes Endereco }","bold":true},{"text":{$Endereco_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				

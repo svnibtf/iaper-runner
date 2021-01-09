@@ -117,10 +117,22 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_search_field}","text":{$Lat_pdfvalue}},
+			{"hidden":"{$item_hide_integrated_search_field3}","text":{$nome_empresa_pdfvalue}},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field1}","text":{$Lng_pdfvalue}},
+			{"hidden":"{$item_hide_integrated_search_field5}","text":{$estado_empresa_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field6}","text":{$municipio_empresa_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field}","text":{$atendimento_presencial_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field1}","text":{$atendimento_online_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field2}","text":{$ramo_empresa_pdfvalue}},
 				
 		  ],
   "border": [ false, false, false, false ],

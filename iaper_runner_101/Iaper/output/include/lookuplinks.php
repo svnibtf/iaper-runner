@@ -89,6 +89,41 @@ function InitLookupLinks()
 			$lookupTableLinks["adm_tipousuario"]["login.tipo_usuario"] = array();
 		}
 		$lookupTableLinks["adm_tipousuario"]["login.tipo_usuario"]["edit"] = array("table" => "login", "field" => "tipo_usuario", "page" => "edit");
+		if( !isset( $lookupTableLinks["buscar_profissionais"] ) ) {
+			$lookupTableLinks["buscar_profissionais"] = array();
+		}
+		if( !isset( $lookupTableLinks["buscar_profissionais"]["buscar_profissionais.atendimento_presencial"] )) {
+			$lookupTableLinks["buscar_profissionais"]["buscar_profissionais.atendimento_presencial"] = array();
+		}
+		$lookupTableLinks["buscar_profissionais"]["buscar_profissionais.atendimento_presencial"]["edit"] = array("table" => "buscar_profissionais", "field" => "atendimento_presencial", "page" => "edit");
+		if( !isset( $lookupTableLinks["buscar_profissionais"] ) ) {
+			$lookupTableLinks["buscar_profissionais"] = array();
+		}
+		if( !isset( $lookupTableLinks["buscar_profissionais"]["buscar_profissionais.nome_empresa"] )) {
+			$lookupTableLinks["buscar_profissionais"]["buscar_profissionais.nome_empresa"] = array();
+		}
+		$lookupTableLinks["buscar_profissionais"]["buscar_profissionais.nome_empresa"]["search"] = array("table" => "buscar_profissionais", "field" => "nome_empresa", "page" => "search");
+		if( !isset( $lookupTableLinks["buscar_profissionais"] ) ) {
+			$lookupTableLinks["buscar_profissionais"] = array();
+		}
+		if( !isset( $lookupTableLinks["buscar_profissionais"]["buscar_profissionais.ramo_empresa"] )) {
+			$lookupTableLinks["buscar_profissionais"]["buscar_profissionais.ramo_empresa"] = array();
+		}
+		$lookupTableLinks["buscar_profissionais"]["buscar_profissionais.ramo_empresa"]["edit"] = array("table" => "buscar_profissionais", "field" => "ramo_empresa", "page" => "edit");
+		if( !isset( $lookupTableLinks["Busca Profissional"] ) ) {
+			$lookupTableLinks["Busca Profissional"] = array();
+		}
+		if( !isset( $lookupTableLinks["Busca Profissional"]["buscar_profissionais.estado_empresa"] )) {
+			$lookupTableLinks["Busca Profissional"]["buscar_profissionais.estado_empresa"] = array();
+		}
+		$lookupTableLinks["Busca Profissional"]["buscar_profissionais.estado_empresa"]["search"] = array("table" => "buscar_profissionais", "field" => "estado_empresa", "page" => "search");
+		if( !isset( $lookupTableLinks["buscar_profissionais"] ) ) {
+			$lookupTableLinks["buscar_profissionais"] = array();
+		}
+		if( !isset( $lookupTableLinks["buscar_profissionais"]["buscar_profissionais.municipio_empresa"] )) {
+			$lookupTableLinks["buscar_profissionais"]["buscar_profissionais.municipio_empresa"] = array();
+		}
+		$lookupTableLinks["buscar_profissionais"]["buscar_profissionais.municipio_empresa"]["search"] = array("table" => "buscar_profissionais", "field" => "municipio_empresa", "page" => "search");
 		if( !isset( $lookupTableLinks["adm_tipousuario"] ) ) {
 			$lookupTableLinks["adm_tipousuario"] = array();
 		}

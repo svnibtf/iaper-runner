@@ -91,7 +91,7 @@ pdfDocument = {
 				
 					[
 												{
-	cellId: 'c1',
+	cellId: 'c',
 	col:0,
 	row:0,
 			style: 'cell',
@@ -112,7 +112,7 @@ pdfDocument = {
   },
 
 																		{ 
-				cellId: 'c1',
+				cellId: 'c',
 				row:  0,
 				col:  1,
 				text: ''
@@ -120,7 +120,7 @@ pdfDocument = {
 							],
 								[
 												{
-	cellId: 'c',
+	cellId: 'c1',
 	col:0,
 	row:0,
 			style: 'cell',
@@ -234,15 +234,6 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_grid_edit}"},
 				
-				
-			{"text":"","hidden":"{$item_hide_grid_details_link}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_details_link1}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_details_link2}"},
-				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
@@ -333,6 +324,12 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_simple_grid_field4}","text":{$email_pdfvalue}},
 				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link6}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_grid_details_link}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
@@ -360,16 +357,6 @@ pdfDocument = {
 	
 			"stack": [
 		
-				
-			 {BEGIN details_undefined}
-			{$displayDetailTable_undefined }
-		{END details_undefined},
-				
-				
-			 {BEGIN details_undefined}
-			{$displayDetailTable_undefined }
-		{END details_undefined},
-				
 				
 			 {BEGIN details_undefined}
 			{$displayDetailTable_undefined }

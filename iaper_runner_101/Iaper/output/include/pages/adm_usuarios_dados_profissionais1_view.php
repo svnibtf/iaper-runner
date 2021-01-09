@@ -1,7 +1,7 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
-'master' => array( 'adm_meuplano' => array( 'preview' => false ),
-'Busca Profissional' => array( 'preview' => false ) ),
+'master' => array( 'Busca Profissional' => array( 'preview' => false ),
+'adm_usuarios' => array( 'preview' => false ) ),
 'fields' => array( 'gridFields' => array( 'sobre_profissional',
 'resumo_formacao',
 'diferencial_profissional',

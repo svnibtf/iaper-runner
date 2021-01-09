@@ -177,13 +177,13 @@ $tdataadm_pacientes1[".allowShowHideFields"] = true; // temp fix #13449
 $tdataadm_pacientes1[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdataadm_pacientes1[".isUseAjaxSuggest"] = true;
+$tdataadm_pacientes1[".isUseAjaxSuggest"] = false;
 
 $tdataadm_pacientes1[".rowHighlite"] = true;
 
 
 
-
+			
 
 $tdataadm_pacientes1[".ajaxCodeSnippetAdded"] = false;
 
@@ -203,24 +203,12 @@ $tdataadm_pacientes1[".filterFields"] = array();
 $tdataadm_pacientes1[".requiredSearchFields"] = array();
 
 $tdataadm_pacientes1[".googleLikeFields"] = array();
-$tdataadm_pacientes1[".googleLikeFields"][] = "idPaciente";
 $tdataadm_pacientes1[".googleLikeFields"][] = "Nome";
 $tdataadm_pacientes1[".googleLikeFields"][] = "Email";
-$tdataadm_pacientes1[".googleLikeFields"][] = "Senha";
 $tdataadm_pacientes1[".googleLikeFields"][] = "Endereco";
 $tdataadm_pacientes1[".googleLikeFields"][] = "Bairro";
 $tdataadm_pacientes1[".googleLikeFields"][] = "Cidade";
 $tdataadm_pacientes1[".googleLikeFields"][] = "Estado";
-$tdataadm_pacientes1[".googleLikeFields"][] = "Cep";
-$tdataadm_pacientes1[".googleLikeFields"][] = "Celular";
-$tdataadm_pacientes1[".googleLikeFields"][] = "Tel_Residencial";
-$tdataadm_pacientes1[".googleLikeFields"][] = "Data_Inicio";
-$tdataadm_pacientes1[".googleLikeFields"][] = "Sexo";
-$tdataadm_pacientes1[".googleLikeFields"][] = "Sintomas";
-$tdataadm_pacientes1[".googleLikeFields"][] = "Tratamento";
-$tdataadm_pacientes1[".googleLikeFields"][] = "idProfissional";
-$tdataadm_pacientes1[".googleLikeFields"][] = "CPF";
-$tdataadm_pacientes1[".googleLikeFields"][] = "RG";
 
 
 
@@ -292,7 +280,6 @@ $arrGPP[] = 100;
 $arrGPP[] = -1;
 $tdataadm_pacientes1[".arrGroupsPerPage"] = $arrGPP;
 
-$tdataadm_pacientes1[".highlightSearchResults"] = true;
 
 $tableKeysadm_pacientes1 = array();
 $tableKeysadm_pacientes1[] = "idPaciente";
@@ -419,8 +406,9 @@ $tdataadm_pacientes1[".hideMobileList"] = array();
 // the field's search options settings
 		$fdata["defaultSearchOption"] = "Contains";
 
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+			// the user's search options list
+		$fdata["searchOptionsList"] = array();
+		$fdata["searchOptionsList"][] = "Contains";
 // the end of search options settings
 
 
@@ -556,8 +544,9 @@ $tdataadm_pacientes1[".hideMobileList"] = array();
 // the field's search options settings
 		$fdata["defaultSearchOption"] = "Contains";
 
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+			// the user's search options list
+		$fdata["searchOptionsList"] = array();
+		$fdata["searchOptionsList"][] = "Contains";
 // the end of search options settings
 
 
@@ -693,8 +682,9 @@ $tdataadm_pacientes1[".hideMobileList"] = array();
 // the field's search options settings
 		$fdata["defaultSearchOption"] = "Contains";
 
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+			// the user's search options list
+		$fdata["searchOptionsList"] = array();
+		$fdata["searchOptionsList"][] = "Contains";
 // the end of search options settings
 
 
@@ -829,8 +819,9 @@ $tdataadm_pacientes1[".hideMobileList"] = array();
 // the field's search options settings
 		$fdata["defaultSearchOption"] = "Contains";
 
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+			// the user's search options list
+		$fdata["searchOptionsList"] = array();
+		$fdata["searchOptionsList"][] = "Contains";
 // the end of search options settings
 
 
@@ -966,8 +957,9 @@ $tdataadm_pacientes1[".hideMobileList"] = array();
 // the field's search options settings
 		$fdata["defaultSearchOption"] = "Contains";
 
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+			// the user's search options list
+		$fdata["searchOptionsList"] = array();
+		$fdata["searchOptionsList"][] = "Contains";
 // the end of search options settings
 
 
@@ -1103,8 +1095,9 @@ $tdataadm_pacientes1[".hideMobileList"] = array();
 // the field's search options settings
 		$fdata["defaultSearchOption"] = "Contains";
 
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+			// the user's search options list
+		$fdata["searchOptionsList"] = array();
+		$fdata["searchOptionsList"][] = "Contains";
 // the end of search options settings
 
 
@@ -1240,8 +1233,9 @@ $tdataadm_pacientes1[".hideMobileList"] = array();
 // the field's search options settings
 		$fdata["defaultSearchOption"] = "Contains";
 
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+			// the user's search options list
+		$fdata["searchOptionsList"] = array();
+		$fdata["searchOptionsList"][] = "Contains";
 // the end of search options settings
 
 
@@ -1377,8 +1371,9 @@ $tdataadm_pacientes1[".hideMobileList"] = array();
 // the field's search options settings
 		$fdata["defaultSearchOption"] = "Contains";
 
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+			// the user's search options list
+		$fdata["searchOptionsList"] = array();
+		$fdata["searchOptionsList"][] = "Contains";
 // the end of search options settings
 
 
@@ -1514,8 +1509,9 @@ $tdataadm_pacientes1[".hideMobileList"] = array();
 // the field's search options settings
 		$fdata["defaultSearchOption"] = "Contains";
 
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+			// the user's search options list
+		$fdata["searchOptionsList"] = array();
+		$fdata["searchOptionsList"][] = "Contains";
 // the end of search options settings
 
 
@@ -1651,8 +1647,9 @@ $tdataadm_pacientes1[".hideMobileList"] = array();
 // the field's search options settings
 		$fdata["defaultSearchOption"] = "Contains";
 
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+			// the user's search options list
+		$fdata["searchOptionsList"] = array();
+		$fdata["searchOptionsList"][] = "Contains";
 // the end of search options settings
 
 
@@ -1788,8 +1785,9 @@ $tdataadm_pacientes1[".hideMobileList"] = array();
 // the field's search options settings
 		$fdata["defaultSearchOption"] = "Contains";
 
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+			// the user's search options list
+		$fdata["searchOptionsList"] = array();
+		$fdata["searchOptionsList"][] = "Contains";
 // the end of search options settings
 
 
@@ -1923,10 +1921,11 @@ $tdataadm_pacientes1[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
+		$fdata["defaultSearchOption"] = "Contains";
 
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Equals", "More than", "Less than", "Between", EMPTY_SEARCH, NOT_EMPTY );
+			// the user's search options list
+		$fdata["searchOptionsList"] = array();
+		$fdata["searchOptionsList"][] = "Contains";
 // the end of search options settings
 
 
@@ -2072,10 +2071,11 @@ $tdataadm_pacientes1[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
+		$fdata["defaultSearchOption"] = "Contains";
 
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+			// the user's search options list
+		$fdata["searchOptionsList"] = array();
+		$fdata["searchOptionsList"][] = "Contains";
 // the end of search options settings
 
 
@@ -2213,8 +2213,9 @@ $tdataadm_pacientes1[".hideMobileList"] = array();
 // the field's search options settings
 		$fdata["defaultSearchOption"] = "Contains";
 
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+			// the user's search options list
+		$fdata["searchOptionsList"] = array();
+		$fdata["searchOptionsList"][] = "Contains";
 // the end of search options settings
 
 
@@ -2352,8 +2353,9 @@ $tdataadm_pacientes1[".hideMobileList"] = array();
 // the field's search options settings
 		$fdata["defaultSearchOption"] = "Contains";
 
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+			// the user's search options list
+		$fdata["searchOptionsList"] = array();
+		$fdata["searchOptionsList"][] = "Contains";
 // the end of search options settings
 
 
@@ -2489,8 +2491,9 @@ $tdataadm_pacientes1[".hideMobileList"] = array();
 // the field's search options settings
 		$fdata["defaultSearchOption"] = "Contains";
 
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+			// the user's search options list
+		$fdata["searchOptionsList"] = array();
+		$fdata["searchOptionsList"][] = "Contains";
 // the end of search options settings
 
 
@@ -2626,8 +2629,9 @@ $tdataadm_pacientes1[".hideMobileList"] = array();
 // the field's search options settings
 		$fdata["defaultSearchOption"] = "Contains";
 
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+			// the user's search options list
+		$fdata["searchOptionsList"] = array();
+		$fdata["searchOptionsList"][] = "Contains";
 // the end of search options settings
 
 
@@ -2763,8 +2767,9 @@ $tdataadm_pacientes1[".hideMobileList"] = array();
 // the field's search options settings
 		$fdata["defaultSearchOption"] = "Contains";
 
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+			// the user's search options list
+		$fdata["searchOptionsList"] = array();
+		$fdata["searchOptionsList"][] = "Contains";
 // the end of search options settings
 
 
@@ -2835,22 +2840,6 @@ $masterTablesData["adm_pacientes"] = array();
 
 
 
-	
-				$strOriginalDetailsTable="adm_usuarios";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="adm_usuarios";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "adm_usuarios1";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["adm_pacientes"][0] = $masterParams;
-				$masterTablesData["adm_pacientes"][0]["masterKeys"] = array();
-	$masterTablesData["adm_pacientes"][0]["masterKeys"][]="usu_id";
-				$masterTablesData["adm_pacientes"][0]["detailKeys"] = array();
-	$masterTablesData["adm_pacientes"][0]["detailKeys"][]="idProfissional";
-		
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 

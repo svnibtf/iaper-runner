@@ -1,7 +1,6 @@
 <?php
 			$optionsArray = array( 'details' => array( 'adm_tratamento' => array( 'displayPreview' => 2,
 'previewPageId' => '' ) ),
-'master' => array( 'adm_usuarios' => array( 'preview' => false ) ),
 'captcha' => array( 'captcha' => false ),
 'fields' => array( 'gridFields' => array( 'Nome',
 'Email',

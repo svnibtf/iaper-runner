@@ -129,13 +129,13 @@ $tdatafluxo_de_recebimentos[".allowShowHideFields"] = true; // temp fix #13449
 $tdatafluxo_de_recebimentos[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdatafluxo_de_recebimentos[".isUseAjaxSuggest"] = true;
+$tdatafluxo_de_recebimentos[".isUseAjaxSuggest"] = false;
 
 $tdatafluxo_de_recebimentos[".rowHighlite"] = true;
 
 
 
-
+			
 
 $tdatafluxo_de_recebimentos[".ajaxCodeSnippetAdded"] = false;
 
@@ -193,7 +193,7 @@ $tdatafluxo_de_recebimentos[".orderindexes"] = array();
 
 
 $tdatafluxo_de_recebimentos[".sqlHead"] = "SELECT `Data`,  sum(Valor_Consulta) as Valor_a_Receber";
-$tdatafluxo_de_recebimentos[".sqlFrom"] = "FROM tratamento";
+$tdatafluxo_de_recebimentos[".sqlFrom"] = "FROM adm_tratamento";
 $tdatafluxo_de_recebimentos[".sqlWhereExpr"] = "";
 $tdatafluxo_de_recebimentos[".sqlTail"] = "";
 
@@ -228,7 +228,6 @@ $arrGPP[] = 100;
 $arrGPP[] = -1;
 $tdatafluxo_de_recebimentos[".arrGroupsPerPage"] = $arrGPP;
 
-$tdatafluxo_de_recebimentos[".highlightSearchResults"] = true;
 
 $tableKeysfluxo_de_recebimentos = array();
 $tdatafluxo_de_recebimentos[".Keys"] = $tableKeysfluxo_de_recebimentos;
@@ -245,7 +244,7 @@ $tdatafluxo_de_recebimentos[".hideMobileList"] = array();
 	$fdata["Index"] = 1;
 	$fdata["strName"] = "Data";
 	$fdata["GoodName"] = "Data";
-	$fdata["ownerTable"] = "tratamento";
+	$fdata["ownerTable"] = "adm_tratamento";
 	$fdata["Label"] = GetFieldLabel("Fluxo_de_Recebimentos","Data");
 	$fdata["FieldType"] = 135;
 
@@ -412,7 +411,7 @@ $tdatafluxo_de_recebimentos[".hideMobileList"] = array();
 	
 	
 	
-		$vdata["DecimalDigits"] = 0;
+		$vdata["DecimalDigits"] = 2;
 
 	
 	
@@ -554,7 +553,7 @@ function createSqlQuery_fluxo_de_recebimentos()
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
 $proto0["m_strFieldList"] = "`Data`,  sum(Valor_Consulta) as Valor_a_Receber";
-$proto0["m_strFrom"] = "FROM tratamento";
+$proto0["m_strFrom"] = "FROM adm_tratamento";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
@@ -596,7 +595,7 @@ $proto0["m_fieldlist"] = array();
 						$proto6=array();
 			$obj = new SQLField(array(
 	"m_strName" => "Data",
-	"m_strTable" => "tratamento",
+	"m_strTable" => "adm_tratamento",
 	"m_srcTableName" => "Fluxo de Recebimentos"
 ));
 
@@ -613,7 +612,7 @@ $proto9["m_functiontype"] = "SQLF_SUM";
 $proto9["m_arguments"] = array();
 						$obj = new SQLField(array(
 	"m_strName" => "Valor_Consulta",
-	"m_strTable" => "tratamento",
+	"m_strTable" => "adm_tratamento",
 	"m_srcTableName" => "Fluxo de Recebimentos"
 ));
 
@@ -632,7 +631,7 @@ $proto0["m_fromlist"] = array();
 												$proto11=array();
 $proto11["m_link"] = "SQLL_MAIN";
 			$proto12=array();
-$proto12["m_strName"] = "tratamento";
+$proto12["m_strName"] = "adm_tratamento";
 $proto12["m_srcTableName"] = "Fluxo de Recebimentos";
 $proto12["m_columns"] = array();
 $proto12["m_columns"][] = "idTratamento";
@@ -651,7 +650,7 @@ $proto12["m_columns"][] = "Valor_Consulta";
 $obj = new SQLTable($proto12);
 
 $proto11["m_table"] = $obj;
-$proto11["m_sql"] = "tratamento";
+$proto11["m_sql"] = "adm_tratamento";
 $proto11["m_alias"] = "";
 $proto11["m_srcTableName"] = "Fluxo de Recebimentos";
 $proto13=array();
@@ -677,7 +676,7 @@ $proto0["m_groupby"] = array();
 												$proto15=array();
 						$obj = new SQLField(array(
 	"m_strName" => "Data",
-	"m_strTable" => "tratamento",
+	"m_strTable" => "adm_tratamento",
 	"m_srcTableName" => "Fluxo de Recebimentos"
 ));
 

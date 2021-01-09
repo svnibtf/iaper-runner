@@ -381,126 +381,6 @@ pdfDocument = {
 		},
 		margin: [0,0,0,15],
 	},
- 
-		{
-		layout: 'panel',
-		
-		table: {
-			tableForm: true,
-			location: 'section3',
-			widths: ['*'],
-			body: [
-				[{text: 'Informação Adicional', style: 'tableHeader'}],
-				[{
-					table: {
-						tableForm: true,
-						widths: [
-							 
-								{BEGIN col_section3_0}
-								'*', 
-								{END col_section3_0}
-													],
-						body: [
-								
-					{BEGIN row_section3_0}
-				[
-												{BEGIN cellblock_section3_c1}
-{
-	cellId: 'c1',
-	col:0,
-	row:0,
-			style: 'cell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"stack": [
-		
-				
-			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel adm_usuarios info_inicial }","bold":true},{"text":{$info_inicial_pdfvalue}}],"margin":[0,0,0,15]},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-  },
-
-{END cellblock_section3_c1}
-											],
-				{END row_section3_0}
-									]
-					}
-				}]
-
-			]
-		},
-		margin: [0,0,0,15],
-	},
- 
-		{
-		layout: 'panel',
-		
-		table: {
-			tableForm: true,
-			location: 'section5',
-			widths: ['*'],
-			body: [
-				[{text: 'Meu Plano', style: 'tableHeader'}],
-				[{
-					table: {
-						tableForm: true,
-						widths: [
-							 
-								{BEGIN col_section5_0}
-								'*', 
-								{END col_section5_0}
-													],
-						body: [
-								
-					{BEGIN row_section5_0}
-				[
-												{BEGIN cellblock_section5_c3}
-{
-	cellId: 'c3',
-	col:0,
-	row:0,
-			style: 'cell',
-		
-		
-	//	dynamic colspan/rowspan
-
-		
-						
-	
-	
-	
-			"stack": [
-		
-				
-			 {BEGIN details_undefined}
-			{$displayDetailTable_undefined }
-		{END details_undefined},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-  },
-
-{END cellblock_section5_c3}
-											],
-				{END row_section5_0}
-									]
-					}
-				}]
-
-			]
-		},
-		margin: [0,0,0,15],
-	},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -574,10 +454,8 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":""},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'right',
   },

@@ -64,7 +64,7 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldLabelsadm_usuarios1["Portuguese(Brazil)"]["cpf"] = "Cpf";
 	$fieldToolTipsadm_usuarios1["Portuguese(Brazil)"]["cpf"] = "";
 	$placeHoldersadm_usuarios1["Portuguese(Brazil)"]["cpf"] = "";
-	$fieldLabelsadm_usuarios1["Portuguese(Brazil)"]["avatar"] = "Meu Cadastro";
+	$fieldLabelsadm_usuarios1["Portuguese(Brazil)"]["avatar"] = "Avatar";
 	$fieldToolTipsadm_usuarios1["Portuguese(Brazil)"]["avatar"] = "";
 	$placeHoldersadm_usuarios1["Portuguese(Brazil)"]["avatar"] = "";
 	$fieldLabelsadm_usuarios1["Portuguese(Brazil)"]["sexo"] = "Sexo";
@@ -223,7 +223,7 @@ $tdataadm_usuarios1[".rowHighlite"] = true;
 
 
 
-
+			
 
 $tdataadm_usuarios1[".ajaxCodeSnippetAdded"] = false;
 
@@ -2217,6 +2217,94 @@ $tdataadm_usuarios1[".hideMobileList"] = array();
 	$vdata["NumberOfChars"] = 80;
 
 	$fdata["ViewFormats"]["view"] = $vdata;
+	$vdata = array("ViewFormat" => "Document Download");
+
+	
+	
+	
+				$vdata["ShowThumbnail"] = true;
+						
+	
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["list"] = $vdata;
+	$vdata = array("ViewFormat" => "Document Download");
+
+	
+	
+	
+				$vdata["ShowThumbnail"] = true;
+						
+	
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["export"] = $vdata;
+	$vdata = array("ViewFormat" => "Document Download");
+
+	
+	
+	
+				$vdata["ShowThumbnail"] = true;
+						
+	
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["masterlist"] = $vdata;
+	$vdata = array("ViewFormat" => "Document Download");
+
+	
+	
+	
+				$vdata["ShowThumbnail"] = true;
+						
+	
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["masterprint"] = $vdata;
 //  End View Formats
 
 //	Begin Edit Formats
@@ -2270,10 +2358,106 @@ $tdataadm_usuarios1[".hideMobileList"] = array();
 	
 	
 	$fdata["EditFormats"]["edit"] = $edata;
+	$edata = array("EditFormat" => "Document upload");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+	//	End validation
+
+		$edata["CreateThumbnail"] = true;
+	$edata["StrThumbnail"] = "th";
+			$edata["ThumbnailSize"] = 150;
+
+			
+	
+	
+	
+	$fdata["EditFormats"]["add"] = $edata;
+	$edata = array("EditFormat" => "Document upload");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+	//	End validation
+
+		$edata["CreateThumbnail"] = true;
+	$edata["StrThumbnail"] = "th";
+			$edata["ThumbnailSize"] = 150;
+
+			
+	
+	
+	
+	$fdata["EditFormats"]["search"] = $edata;
 //	End Edit Formats
 
 
-	$fdata["isSeparate"] = false;
+	$fdata["isSeparate"] = true;
 
 
 
@@ -4767,21 +4951,21 @@ $detailsTablesData["adm_usuarios"] = array();
 				$detailsTablesData["adm_usuarios"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["adm_usuarios"][$dIndex]["detailKeys"][]="idUsuario";
-//	adm_pacientes
+//	adm_usuarios_dados_profissionais
 	
 	
 
 		$dIndex = 1;
 	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="adm_pacientes";
-		$detailsParam["dOriginalTable"] = "adm_pacientes";
+	$detailsParam["dDataSourceTable"]="adm_usuarios_dados_profissionais";
+		$detailsParam["dOriginalTable"] = "adm_usuarios_dados_profissionais";
 
 
 
 		
 		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "adm_pacientes1";
-	$detailsParam["dCaptionTable"] = GetTableCaption("adm_pacientes");
+	$detailsParam["dShortTable"] = "adm_usuarios_dados_profissionais1";
+	$detailsParam["dCaptionTable"] = GetTableCaption("adm_usuarios_dados_profissionais");
 	$detailsParam["masterKeys"] =array();
 	$detailsParam["detailKeys"] =array();
 
@@ -4796,37 +4980,7 @@ $detailsTablesData["adm_usuarios"] = array();
 
 				$detailsTablesData["adm_usuarios"][$dIndex]["detailKeys"] = array();
 
-	$detailsTablesData["adm_usuarios"][$dIndex]["detailKeys"][]="idProfissional";
-//	adm_tratamento
-	
-	
-
-		$dIndex = 2;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="adm_tratamento";
-		$detailsParam["dOriginalTable"] = "adm_tratamento";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "adm_tratamento1";
-	$detailsParam["dCaptionTable"] = GetTableCaption("adm_tratamento");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["adm_usuarios"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["adm_usuarios"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["adm_usuarios"][$dIndex]["masterKeys"][]="usu_id";
-
-				$detailsTablesData["adm_usuarios"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["adm_usuarios"][$dIndex]["detailKeys"][]="idProfissional";
+	$detailsTablesData["adm_usuarios"][$dIndex]["detailKeys"][]="udp_usu_id";
 
 // tables which are master tables for current table (detail)
 $masterTablesData["adm_usuarios"] = array();

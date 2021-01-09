@@ -1,0 +1,4 @@
+[06-Jan-2021 20:25:40 America/New_York] PHP Fatal error:  Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu.
+ in C:\Users\Rubens\Desktop\Iaper\output\connections\Connection.php on line 626

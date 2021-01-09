@@ -147,14 +147,6 @@
 				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section2{$pageid}">
 					Telefones				</a>
 			</li>
-										<li role="presentation" class="">
-				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section3{$pageid}">
-					Informação Adicional				</a>
-			</li>
-										<li role="presentation" class="">
-				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section5{$pageid}">
-					Meu Plano				</a>
-			</li>
 									</ul>
 	</div>
 	<div class="panel-body">
@@ -693,99 +685,6 @@
 			</tbody></table>
 {END section2_block}
 						</div>
-					<div role="tabpanel" class="tab-pane " id="tab_section3{$pageid}"> 
-			{BEGIN section3_block}
-
-
-
-
- 
-	 
-												<table 
-	data-body-align="center"
-	data-location="section3" id="form_section3_{$pageid}" data-makeup="small" {$form_section3} data-pageid="{$pageid}" 
-	class="r-edit-form" cellpadding="0" cellspacing="0" 
-	{$grid_hiddenattr} 
-		data-form-width="1"
-		
-		data-v-width="4"
-	>
-	<tbody>
-										<tr>
-										
-
-{BEGIN cellblock_section3_c1}
-<td
-	{$cell_section3_c1}
-	class=" r-ori-vert"
-	
-			data-single
-				data-fullwidth
-		
-			data-cellId="section3_c1" data-pageid="{$pageid}"
-		data-v-cell="4"
-		
->
-	<div edit-form-cell class="clearfix">
-				
-{BEGIN info_inicial_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_info_inicial}  r-vertical-field" 
-	data-fieldname="info_inicial" 
-	data-signal-error-for="info_inicial{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="info_inicial" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_info_inicial}">
-		{BEGIN info_inicial_label}{$label adm_usuarios info_inicial }{END info_inicial_label}
-	</label>
-	<div class="r-edit-field">
-		{$info_inicial_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="info_inicial">
-		<div class="text-muted" >
-		{$tooltip adm_usuarios info_inicial }		</div>
-	</div>
-</div>
-
-
-{END info_inicial_fieldblock}
-	
-								</td>
-			{END cellblock_section3_c1}
-								</tr>
-			</tbody></table>
-{END section3_block}
-						</div>
-					<div role="tabpanel" class="tab-pane " id="tab_section5{$pageid}"> 
-			{BEGIN section5_block}
-
-
-
-
- 
-	 
-												
-{BEGIN details_}
-<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" class="bs-details"> 
-	<div class="panel panel-info details-grid">
-		<div class="panel-heading">
-			<h4 class="panel-title">
-							{$caption meuplano }				
-							<span>
-					{$detailslButtons_}
-																				</span>
-			</h4>
-		</div>
-		<div class="panel-body">
-			{$displayDetailTable_}
-		</div>
-	</div>
-</div>
-{END details_}
-	
-				{END section5_block}
-						</div>
 				</div>
 	</div>
 </div>  	
@@ -832,23 +731,6 @@
 	data-cellId="below-grid_c2" data-pageid="{$pageid}"	{$cell_below-grid_c2}
 	class="r-align-right r-ori-vert			col-md-6
 	">
-	 
-		<span data-itemtype="hamburger" data-itemid="hamburger" {$item_hamburger} data-pageid="{$pageid}" data-small data-button-item>
-	<span class="dropdown dropup">
-		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
-							<span class="glyphicon glyphicon-menu-hamburger"></span>
-									<span class="caret"></span>
-		</button>
-		<ul class="dropdown-menu">
-								<li data-itemtype="edit_reset" data-itemid="edit_reset" {$item_edit_reset} data-pageid="{$pageid}" data-small >
-				<a  {$resetbutton_attrs}  title="" >
-				
-		Limpar		
-		</a>
-	</li>
-					</ul>
-	</span>
-</span>
 	</div>					</div>
 	</div>		
 {END below-grid_block}
