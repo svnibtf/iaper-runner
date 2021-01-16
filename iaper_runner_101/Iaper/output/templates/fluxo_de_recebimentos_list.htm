@@ -192,88 +192,6 @@
 {END breadcrumb}			</span>
 							 
 							 
-				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search" {$item_simple_search} data-topcell-item-type="simple_search" >
-				<span data-itemtype="simple_search" data-itemid="simple_search" {$item_simple_search} data-pageid="{$pageid}" class="form-group">
-
-<div  class="input-group">
-{BEGIN searchform_text}
-	<input type="search" class="form-control" {$searchfor_attrs} size="25">
-{END searchform_text}
-	<span class="input-group-btn">
-	{BEGIN searchform_showall}
-		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Mostrar Todos">
-			<span class="glyphicon glyphicon-remove"></span>
-		</button>
-	{END searchform_showall}
-	{BEGIN searchform_search}
-	<button {$searchbutton_attrs} class="btn btn-primary" >
-		<span class="glyphicon glyphicon-search"></span>
-	</button>
-	{END searchform_search}
-	</span>
-</div>
-		
-</span>			</span>
-		 
-				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
-				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
-	<span class="dropdown ">
-		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
-							<span class="glyphicon glyphicon-cog"></span>
-									<span class="caret"></span>
-		</button>
-		<ul class="dropdown-menu">
-							{BEGIN exportselected_link}
-	<li data-itemtype="export_selected" data-itemid="export_selected" {$item_export_selected} data-pageid="{$pageid}" data-small >
-				<a  href="#" {$exportselectedlink_attrs} {$exportselectedlink_span}  title="" >
-				
-		Exportação selecionada		
-		</a>
-	</li>
-{END exportselected_link}
-							<li role="separator" class="divider"></li>								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
-				<a   href="fluxo_de_recebimentos_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
-				
-		Busca Avancada		
-		</a>
-	</li>
-							{BEGIN searchPanelTopButtons}
-	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
-				<a  id="showOptPanel{$id}"  title="" >
-				
-		Mostrar painel de busca		
-		</a>
-	</li>
-{END searchPanelTopButtons}
-							{BEGIN searchPanelTopButtons}
-	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
-				<a  id="hideOptPanel{$id}"  title="" >
-				
-		Ocultar painel de busca		
-		</a>
-	</li>
-{END searchPanelTopButtons}
-							<li role="separator" class="divider"></li>							{BEGIN export_link}
-	<li data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small >
-				<a  href="#" {$exportlink_attrs}  title="" >
-				
-		Exportar os Resultados		
-		</a>
-	</li>
-{END export_link}
-							<li role="separator" class="divider"></li>							{BEGIN import_link}
-	<li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
-				<a  {$importlink_attrs} href="fluxo_de_recebimentos_import.php{$stateLink_full}"  title="" >
-				
-		Importar		
-		</a>
-	</li>
-{END import_link}
-					</ul>
-	</span>
-</span>
-			</span>
-		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
 				{BEGIN guestloginbutton}
 <span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
@@ -348,11 +266,43 @@
 			 
 				<div 
 	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
-	class=" r-ori-vert			col-md-6
+	class="			col-md-6
 	
 ">
 		{BEGIN firstAboveGridCell}
-				{END firstAboveGridCell}	
+		 
+		{BEGIN searchPanelTopButtons}
+<span data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="showOptPanel{$id}" >
+							Mostrar painel de busca			</a>
+</span>
+{END searchPanelTopButtons}
+	 
+		{BEGIN searchPanelTopButtons}
+<span data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="hideOptPanel{$id}" >
+							Ocultar painel de busca			</a>
+</span>
+{END searchPanelTopButtons}
+	 
+		{BEGIN export_link}
+<span data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" href="#" {$exportlink_attrs} >
+							Exportar os Resultados			</a>
+</span>
+{END export_link}
+	 
+		{BEGIN import_link}
+<span data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$importlink_attrs} href="fluxo_de_recebimentos_import.php{$stateLink_full}" >
+							Importar			</a>
+</span>
+{END import_link}
+			{END firstAboveGridCell}	
 	</div>			 
 				<div 
 	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}

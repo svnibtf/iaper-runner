@@ -198,6 +198,12 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_delete}"},
 				
+				
+			{"text":"","hidden":"{$item_hide_show_search_panel}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_hide_search_panel}"},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

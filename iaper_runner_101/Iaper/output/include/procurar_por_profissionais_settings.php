@@ -216,51 +216,14 @@ $tdataprocurar_por_profissionais[".allSearchFields"][] = "buscar_profissionais_L
 
 // good like search fields
 $tdataprocurar_por_profissionais[".googleLikeFields"] = array();
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_nome";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_nome_empresa";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_endereco_profissional_rua";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_pais_empresa";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_estado_empresa";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_municipio_empresa";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_usu_id";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_sobrenome";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_avatar";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_email_profissional";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_avaliacao_usuarios";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_sobre_profissional";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_resumo_formacao";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_diferencial_profissional";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_atendimento_presencial";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_atendimento_online";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_mini_curriculo";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_resumo_formacao_academica";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_resumo_formacao_cursos";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_curriculo_lattes";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_cnpj";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_ramo_empresa";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_tipo_empresa";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_cep_profissional";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_endereco_profissional_numero";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_endereco_profissional_complemento";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_endereco_profissional_longitude";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_data_in";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_endereco_profissional_latitude";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_Mapa";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_Logotipo";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_Foto_Fechada";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_endereco_profissional_bairro";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_Horarios_de_Atendimento";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_Sobre_a_Empresa";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_Lng";
-$tdataprocurar_por_profissionais[".googleLikeFields"][] = "buscar_profissionais_Lat";
 
 $tdataprocurar_por_profissionais[".dashElements"] = array();
 
 	$dbelement = array( "elementName" => "buscar_profissionais_map", "table" => "buscar_profissionais",
 		 "pageName" => "","type" => 6);
-	$dbelement["cellName"] = "cell_0_0";
+	$dbelement["cellName"] = "cell_1_0";
 
-			$dbelement["width"] = 600;
+			$dbelement["width"] = 400;
 		$dbelement["height"] = 600;
 		$dbelement["zoom"] = "auto";
 	$dbelement["addressF"] = "";
@@ -278,8 +241,8 @@ $tdataprocurar_por_profissionais[".dashElements"] = array();
 
 	$tdataprocurar_por_profissionais[".dashElements"][] = $dbelement;
 	$dbelement = array( "elementName" => "buscar_profissionais_list", "table" => "buscar_profissionais",
-		 "pageName" => "","type" => 0);
-	$dbelement["cellName"] = "cell_0_1";
+		 "pageName" => "list","type" => 0);
+	$dbelement["cellName"] = "cell_1_1";
 
 					$dbelement["inlineAdd"] = 0 > 0;
 	$dbelement["inlineEdit"] = 0 > 0;
@@ -292,6 +255,13 @@ $tdataprocurar_por_profissionais[".dashElements"] = array();
 
 	$dbelement["updateSelected"] = 0 > 0;
 
+
+	$tdataprocurar_por_profissionais[".dashElements"][] = $dbelement;
+	$dbelement = array( "elementName" => "buscar_profissionais_search", "table" => "buscar_profissionais",
+		 "pageName" => "search","type" => 4);
+	$dbelement["cellName"] = "cell_0_0";
+
+			
 
 	$tdataprocurar_por_profissionais[".dashElements"][] = $dbelement;
 
@@ -307,7 +277,7 @@ $tdataprocurar_por_profissionais[".hasEvents"] = false;
 $tdataprocurar_por_profissionais[".tableType"] = "dashboard";
 
 
-
+	
 $tdataprocurar_por_profissionais[".addPageEvents"] = false;
 
 $tdataprocurar_por_profissionais[".isUseAjaxSuggest"] = true;

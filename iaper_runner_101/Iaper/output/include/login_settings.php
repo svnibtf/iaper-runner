@@ -216,13 +216,13 @@ $tdatalogin[".allowShowHideFields"] = true; // temp fix #13449
 $tdatalogin[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdatalogin[".isUseAjaxSuggest"] = true;
+$tdatalogin[".isUseAjaxSuggest"] = false;
 
 $tdatalogin[".rowHighlite"] = true;
 
 
 
-
+			
 
 $tdatalogin[".ajaxCodeSnippetAdded"] = false;
 
@@ -344,7 +344,6 @@ $arrGPP[] = 100;
 $arrGPP[] = -1;
 $tdatalogin[".arrGroupsPerPage"] = $arrGPP;
 
-$tdatalogin[".highlightSearchResults"] = true;
 
 $tableKeyslogin = array();
 $tdatalogin[".Keys"] = $tableKeyslogin;

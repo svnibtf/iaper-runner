@@ -267,64 +267,6 @@
 {END breadcrumb}			</span>
 							 
 							 
-				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search" {$item_simple_search} data-topcell-item-type="simple_search" >
-				<span data-itemtype="simple_search" data-itemid="simple_search" {$item_simple_search} data-pageid="{$pageid}" class="form-group">
-
-<div  class="input-group">
-{BEGIN searchform_text}
-	<input type="search" class="form-control" {$searchfor_attrs} size="25">
-{END searchform_text}
-	<span class="input-group-btn">
-	{BEGIN searchform_showall}
-		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Mostrar Todos">
-			<span class="glyphicon glyphicon-remove"></span>
-		</button>
-	{END searchform_showall}
-	{BEGIN searchform_search}
-	<button {$searchbutton_attrs} class="btn btn-primary" >
-		<span class="glyphicon glyphicon-search"></span>
-	</button>
-	{END searchform_search}
-	</span>
-</div>
-		
-</span>			</span>
-		 
-				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
-				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
-	<span class="dropdown ">
-		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
-							<span class="glyphicon glyphicon-cog"></span>
-									<span class="caret"></span>
-		</button>
-		<ul class="dropdown-menu">
-								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
-				<a   href="adm_meuplano1_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
-				
-		Busca Avancada		
-		</a>
-	</li>
-							{BEGIN searchPanelTopButtons}
-	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
-				<a  id="showOptPanel{$id}"  title="" >
-				
-		Mostrar painel de busca		
-		</a>
-	</li>
-{END searchPanelTopButtons}
-							{BEGIN searchPanelTopButtons}
-	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
-				<a  id="hideOptPanel{$id}"  title="" >
-				
-		Ocultar painel de busca		
-		</a>
-	</li>
-{END searchPanelTopButtons}
-					</ul>
-	</span>
-</span>
-			</span>
-		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
 				{BEGIN guestloginbutton}
 <span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
@@ -398,20 +340,22 @@
 		<div class="row">
 			 
 				<div 
-	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
-	class="			col-md-6
+	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
+	class="r-align-right r-ori-vert			col-md-12
 	
 ">
 		{BEGIN firstAboveGridCell}
-		 
-		{BEGIN add_link}
-<span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-primary   
-	" {$addlink_attrs} href="adm_meuplano1_add.php{$stateLink_full}" data-popup >
-							Novo Plano			</a>
-</span>
-{END add_link}
+				{END firstAboveGridCell}	
+	</div>					</div>
 	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-6
+	
+">
+		 
 		{BEGIN inlineadd_link}
 <span data-itemtype="inline_add" data-itemid="inline_add" {$item_inline_add} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
@@ -419,46 +363,13 @@
 							Adicionar Novo			</a>
 </span>
 {END inlineadd_link}
-			{END firstAboveGridCell}	
-	</div>			 
+		</div>			 
 				<div 
-	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
-	class="r-align-right			col-md-6
+	data-cellId="above-grid_c" data-pageid="{$pageid}"	{$cell_above-grid_c}
+	class="r-align-right r-ori-vert			col-md-6
 	
 ">
-		 
-		<span data-itemtype="details_found" data-itemid="details_found" {$item_details_found} data-pageid="{$pageid}" data-small >
-{$details_found_labeldetails_found}
-</span>	 
-		<span data-itemtype="page_size" data-itemid="page_size" {$item_page_size} data-pageid="{$pageid}" >
-		{$recsPerPage}
-</span>	 
-		{BEGIN print_friendly}
-<span id="printpanelblock{$id}"  data-pageid="{$pageid}" {$printpanel_hiddenattr} data-itemtype="print_panel" data-itemid="print_panel" {$item_print_panel} data-pageid="{$pageid}">
-	<button title="Página Print-friendly" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-					<span class="glyphicon glyphicon-print"></span>
-				<span class="caret"></span>
-	</button>
-	<ul class="dropdown-menu pull-right">
-										 
-				 
-					<li class="container-fluid 
-										">
-									{BEGIN print_details}
-<div>
-	<label for="printDetailsToggler{$id}">
-		<input type="checkbox" id="printDetailsToggler{$id}">
-		Imprimir detalhes	</label>
-	<div  id="printdetailstables{$id}" style="display:none;">
-											</div>
-</div>
-{END print_details}
-				 
-					</li>
-															</ul>
-</span>
-{END print_friendly}
-		</div>					</div>
+			</div>					</div>
 	</div>		
 {END above-grid_block}
 						</div>
@@ -486,7 +397,7 @@
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table {$grid_classes}  r-flexgrid rnr-b-grid rnr-gridtable" 
 	cellpadding="0" 
-	data-body-height="2"
+	data-body-height="1"
 >
 						<thead>
 			{BEGIN grid_header}
@@ -514,23 +425,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_icons}
-				 
-					{BEGIN cellblock_grid_headcell_details}
-	<th
-	
-	{$cell_grid_headcell_details}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_headcell_details" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
-	
-	>
-
-	
-	</th>
-	{END cellblock_grid_headcell_details}
 				 
 					{BEGIN cellblock_grid_headcell_field}
 	<th
@@ -609,7 +503,6 @@
 							</tr>
 					 
 					 
-					 
 					
 					{END grid_header}
 			</thead>
@@ -659,41 +552,6 @@
 	
 	</td>
 	{END cellblock_grid_cell_icons}
-				 
-					{BEGIN cellblock_grid_cell_details}
-	<td
-	
-	{$cell_grid_cell_details}
-	{$recordattrs}
-	class="
-					"
-
-	
-	data-cellId="grid_cell_details" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="adm_meuplano1_list"		data-control-cell
-	
-	>
-
-	 
-			 
-		
-	{BEGIN dtables_link}
-				<span data-itemtype="grid_details_link" data-itemid="grid_details_link" {$item_grid_details_link} data-pageid="{$pageid}" data-record-id="{$recId}">
-		<a 
-			{$_link_attrs} 
-			class="{$dtables_link_class} details-badge badge _badge" 
-			title="Mostrar detalhes"
-		>
-							<span class="glyphicon glyphicon-th-list"></span>
-									<span class="{$_cntspan_class}" {$_childnumber_attr}>
-				{$_childnumber}				
-			</span>
-		</a>
-		</span>
-	{END dtables_link}
-
-	
-	</td>
-	{END cellblock_grid_cell_details}
 				 
 					{BEGIN cellblock_grid_cell_field}
 	<td
@@ -765,36 +623,6 @@
 	{END cellblock_grid_cell_field2}
 							</tr>
 					 
-						<tr {$rowattrs} {$row_grid_2} class="{$rowclass} 
-								
-							">
-				 
-					{BEGIN cellblock_grid_cell_dpreview}
-	<td
-	
-	{$cell_grid_cell_dpreview}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_cell_dpreview" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-			<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" data-record-id="{$recId}" 
-	data-orders=""
-			data-details-	>
-		<span data-details-inside data-short-table="">
-			</span>
-		<div data-details-preview>
-	</div>
-</div>
-	
-	</td>
-	{END cellblock_grid_cell_dpreview}
-							</tr>
-					 
 					
 											{END grid_row}
 					</tbody>
@@ -803,8 +631,7 @@
 		 
 					 
 					 
-					 
-						<tr {$rowattrs} {$row_grid_3} class="{$rowclass} 
+						<tr {$rowattrs} {$row_grid_2} class="{$rowclass} 
 									{$gridFooter_class}
 									
 								r-gridrow
@@ -825,22 +652,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_icons}
-				 
-					{BEGIN cellblock_grid_footcell_details}
-	<td
-	
-	{$cell_grid_footcell_details}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_details" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_details}
 				 
 					{BEGIN cellblock_grid_footcell_field}
 	<td

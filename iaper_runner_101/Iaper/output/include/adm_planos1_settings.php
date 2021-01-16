@@ -138,13 +138,13 @@ $tdataadm_planos1[".allowShowHideFields"] = true; // temp fix #13449
 $tdataadm_planos1[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdataadm_planos1[".isUseAjaxSuggest"] = true;
+$tdataadm_planos1[".isUseAjaxSuggest"] = false;
 
 $tdataadm_planos1[".rowHighlite"] = true;
 
 
 
-
+			
 
 $tdataadm_planos1[".ajaxCodeSnippetAdded"] = false;
 
@@ -205,7 +205,7 @@ $tdataadm_planos1[".orderindexes"] = array();
 
 
 $tdataadm_planos1[".sqlHead"] = "SELECT idPlano,  	Plano,  	Valor,  	Quantidade_Dia,    Plano  as Combo";
-$tdataadm_planos1[".sqlFrom"] = "FROM planos";
+$tdataadm_planos1[".sqlFrom"] = "FROM adm_planos";
 $tdataadm_planos1[".sqlWhereExpr"] = "";
 $tdataadm_planos1[".sqlTail"] = "";
 
@@ -240,7 +240,6 @@ $arrGPP[] = 100;
 $arrGPP[] = -1;
 $tdataadm_planos1[".arrGroupsPerPage"] = $arrGPP;
 
-$tdataadm_planos1[".highlightSearchResults"] = true;
 
 $tableKeysadm_planos1 = array();
 $tableKeysadm_planos1[] = "idPlano";
@@ -258,7 +257,7 @@ $tdataadm_planos1[".hideMobileList"] = array();
 	$fdata["Index"] = 1;
 	$fdata["strName"] = "idPlano";
 	$fdata["GoodName"] = "idPlano";
-	$fdata["ownerTable"] = "planos";
+	$fdata["ownerTable"] = "adm_planos";
 	$fdata["Label"] = GetFieldLabel("adm_planos","idPlano");
 	$fdata["FieldType"] = 3;
 
@@ -398,7 +397,7 @@ $tdataadm_planos1[".hideMobileList"] = array();
 	$fdata["Index"] = 2;
 	$fdata["strName"] = "Plano";
 	$fdata["GoodName"] = "Plano";
-	$fdata["ownerTable"] = "planos";
+	$fdata["ownerTable"] = "adm_planos";
 	$fdata["Label"] = GetFieldLabel("adm_planos","Plano");
 	$fdata["FieldType"] = 200;
 
@@ -535,7 +534,7 @@ $tdataadm_planos1[".hideMobileList"] = array();
 	$fdata["Index"] = 3;
 	$fdata["strName"] = "Valor";
 	$fdata["GoodName"] = "Valor";
-	$fdata["ownerTable"] = "planos";
+	$fdata["ownerTable"] = "adm_planos";
 	$fdata["Label"] = GetFieldLabel("adm_planos","Valor");
 	$fdata["FieldType"] = 14;
 
@@ -673,7 +672,7 @@ $tdataadm_planos1[".hideMobileList"] = array();
 	$fdata["Index"] = 4;
 	$fdata["strName"] = "Quantidade_Dia";
 	$fdata["GoodName"] = "Quantidade_Dia";
-	$fdata["ownerTable"] = "planos";
+	$fdata["ownerTable"] = "adm_planos";
 	$fdata["Label"] = GetFieldLabel("adm_planos","Quantidade_Dia");
 	$fdata["FieldType"] = 3;
 
@@ -810,7 +809,7 @@ $tdataadm_planos1[".hideMobileList"] = array();
 	$fdata["Index"] = 5;
 	$fdata["strName"] = "Combo";
 	$fdata["GoodName"] = "Combo";
-	$fdata["ownerTable"] = "planos";
+	$fdata["ownerTable"] = "adm_planos";
 	$fdata["Label"] = GetFieldLabel("adm_planos","Combo");
 	$fdata["FieldType"] = 200;
 
@@ -978,7 +977,7 @@ function createSqlQuery_adm_planos1()
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
 $proto0["m_strFieldList"] = "idPlano,  	Plano,  	Valor,  	Quantidade_Dia,    Plano  as Combo";
-$proto0["m_strFrom"] = "FROM planos";
+$proto0["m_strFrom"] = "FROM adm_planos";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
 	
@@ -1020,7 +1019,7 @@ $proto0["m_fieldlist"] = array();
 						$proto6=array();
 			$obj = new SQLField(array(
 	"m_strName" => "idPlano",
-	"m_strTable" => "planos",
+	"m_strTable" => "adm_planos",
 	"m_srcTableName" => "adm_planos"
 ));
 
@@ -1034,7 +1033,7 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto8=array();
 			$obj = new SQLField(array(
 	"m_strName" => "Plano",
-	"m_strTable" => "planos",
+	"m_strTable" => "adm_planos",
 	"m_srcTableName" => "adm_planos"
 ));
 
@@ -1048,7 +1047,7 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto10=array();
 			$obj = new SQLField(array(
 	"m_strName" => "Valor",
-	"m_strTable" => "planos",
+	"m_strTable" => "adm_planos",
 	"m_srcTableName" => "adm_planos"
 ));
 
@@ -1062,7 +1061,7 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto12=array();
 			$obj = new SQLField(array(
 	"m_strName" => "Quantidade_Dia",
-	"m_strTable" => "planos",
+	"m_strTable" => "adm_planos",
 	"m_srcTableName" => "adm_planos"
 ));
 
@@ -1076,7 +1075,7 @@ $proto0["m_fieldlist"][]=$obj;
 						$proto14=array();
 			$obj = new SQLField(array(
 	"m_strName" => "Plano",
-	"m_strTable" => "planos",
+	"m_strTable" => "adm_planos",
 	"m_srcTableName" => "adm_planos"
 ));
 
@@ -1091,7 +1090,7 @@ $proto0["m_fromlist"] = array();
 												$proto16=array();
 $proto16["m_link"] = "SQLL_MAIN";
 			$proto17=array();
-$proto17["m_strName"] = "planos";
+$proto17["m_strName"] = "adm_planos";
 $proto17["m_srcTableName"] = "adm_planos";
 $proto17["m_columns"] = array();
 $proto17["m_columns"][] = "idPlano";
@@ -1101,7 +1100,7 @@ $proto17["m_columns"][] = "Quantidade_Dia";
 $obj = new SQLTable($proto17);
 
 $proto16["m_table"] = $obj;
-$proto16["m_sql"] = "planos";
+$proto16["m_sql"] = "adm_planos";
 $proto16["m_alias"] = "";
 $proto16["m_srcTableName"] = "adm_planos";
 $proto18=array();

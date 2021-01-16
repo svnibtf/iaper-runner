@@ -104,55 +104,8 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"hidden":"{$item_hide_import_field1}","text":{$Nome_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_import_field2}","text":{$Email_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_import_field3}","text":{$Senha_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_import_field4}","text":{$Endereco_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_import_field5}","text":{$Bairro_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_import_field6}","text":{$Cidade_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_import_field7}","text":{$Estado_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_import_field8}","text":{$Cep_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_import_field9}","text":{$Celular_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_import_field10}","text":{$Tel_Residencial_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_import_field11}","text":{$Data_Inicio_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_import_field12}","text":{$Sexo_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_import_field13}","text":{$Sintomas_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_import_field14}","text":{$Tratamento_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_import_field}","text":{$CPF_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_import_field15}","text":{$RG_pdfvalue}},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
   },

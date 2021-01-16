@@ -150,13 +150,13 @@ $tdataadm_meuplano1[".allowShowHideFields"] = true; // temp fix #13449
 $tdataadm_meuplano1[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdataadm_meuplano1[".isUseAjaxSuggest"] = true;
+$tdataadm_meuplano1[".isUseAjaxSuggest"] = false;
 
 $tdataadm_meuplano1[".rowHighlite"] = true;
 
 
 
-
+						
 
 $tdataadm_meuplano1[".ajaxCodeSnippetAdded"] = false;
 
@@ -256,7 +256,6 @@ $arrGPP[] = 100;
 $arrGPP[] = -1;
 $tdataadm_meuplano1[".arrGroupsPerPage"] = $arrGPP;
 
-$tdataadm_meuplano1[".highlightSearchResults"] = true;
 
 $tableKeysadm_meuplano1 = array();
 $tableKeysadm_meuplano1[] = "idMeuPlano";
@@ -1552,36 +1551,6 @@ $page_titles["adm_meuplano"] = &$pageTitlesadm_meuplano1;
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
 $detailsTablesData["adm_meuplano"] = array();
-//	adm_usuarios_dados_profissionais
-	
-	
-
-		$dIndex = 0;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="adm_usuarios_dados_profissionais";
-		$detailsParam["dOriginalTable"] = "adm_usuarios_dados_profissionais";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "adm_usuarios_dados_profissionais1";
-	$detailsParam["dCaptionTable"] = GetTableCaption("adm_usuarios_dados_profissionais");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["adm_meuplano"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["adm_meuplano"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["adm_meuplano"][$dIndex]["masterKeys"][]="idMeuPlano";
-
-				$detailsTablesData["adm_meuplano"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["adm_meuplano"][$dIndex]["detailKeys"][]="idPlano";
 
 // tables which are master tables for current table (detail)
 $masterTablesData["adm_meuplano"] = array();

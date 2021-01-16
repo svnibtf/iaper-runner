@@ -1,7 +1,6 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
-'master' => array( 'adm_usuarios' => array( 'preview' => false ),
-'adm_pacientes' => array( 'preview' => false ) ),
+'master' => array( 'adm_pacientes' => array( 'preview' => false ) ),
 'fields' => array( 'gridFields' => array( 'idPaciente',
 'Data',
 'Confirmado',

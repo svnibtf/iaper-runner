@@ -1138,11 +1138,11 @@ function GetUserPermissionsStatic( $table )
 	$sUserGroup = @$_SESSION["GroupID"];
 	if( $table=="adm_usuarios" )
 	{
-		if( $sUserGroup=="1" )
+		if( $sUserGroup=="Empresa" )
 		{
 			return "AEDSPI".$extraPerm;
 		}
-		if( $sUserGroup=="Empresa" )
+		if( $sUserGroup=="1" )
 		{
 			return "AEDSPI".$extraPerm;
 		}
@@ -1151,11 +1151,11 @@ function GetUserPermissionsStatic( $table )
 	}
 	if( $table=="adm_usuarios_dados_profissionais" )
 	{
-		if( $sUserGroup=="1" )
+		if( $sUserGroup=="Empresa" )
 		{
 			return "AEDSPI".$extraPerm;
 		}
-		if( $sUserGroup=="Empresa" )
+		if( $sUserGroup=="1" )
 		{
 			return "AEDSPI".$extraPerm;
 		}
@@ -1164,11 +1164,11 @@ function GetUserPermissionsStatic( $table )
 	}
 	if( $table=="ibge_municipios" )
 	{
-		if( $sUserGroup=="1" )
+		if( $sUserGroup=="Empresa" )
 		{
 			return "".$extraPerm;
 		}
-		if( $sUserGroup=="Empresa" )
+		if( $sUserGroup=="1" )
 		{
 			return "".$extraPerm;
 		}
@@ -1177,11 +1177,11 @@ function GetUserPermissionsStatic( $table )
 	}
 	if( $table=="ibge_pais" )
 	{
-		if( $sUserGroup=="1" )
+		if( $sUserGroup=="Empresa" )
 		{
 			return "".$extraPerm;
 		}
-		if( $sUserGroup=="Empresa" )
+		if( $sUserGroup=="1" )
 		{
 			return "".$extraPerm;
 		}
@@ -1190,11 +1190,11 @@ function GetUserPermissionsStatic( $table )
 	}
 	if( $table=="adm_ramos" )
 	{
-		if( $sUserGroup=="1" )
+		if( $sUserGroup=="Empresa" )
 		{
 			return "".$extraPerm;
 		}
-		if( $sUserGroup=="Empresa" )
+		if( $sUserGroup=="1" )
 		{
 			return "".$extraPerm;
 		}
@@ -1203,11 +1203,11 @@ function GetUserPermissionsStatic( $table )
 	}
 	if( $table=="adm_tipousuario" )
 	{
-		if( $sUserGroup=="1" )
+		if( $sUserGroup=="Empresa" )
 		{
 			return "".$extraPerm;
 		}
-		if( $sUserGroup=="Empresa" )
+		if( $sUserGroup=="1" )
 		{
 			return "".$extraPerm;
 		}
@@ -1216,11 +1216,11 @@ function GetUserPermissionsStatic( $table )
 	}
 	if( $table=="adm_planos" )
 	{
-		if( $sUserGroup=="1" )
+		if( $sUserGroup=="Empresa" )
 		{
 			return "AEDSPI".$extraPerm;
 		}
-		if( $sUserGroup=="Empresa" )
+		if( $sUserGroup=="1" )
 		{
 			return "AEDSPI".$extraPerm;
 		}
@@ -1229,11 +1229,11 @@ function GetUserPermissionsStatic( $table )
 	}
 	if( $table=="adm_meuplano" )
 	{
-		if( $sUserGroup=="1" )
+		if( $sUserGroup=="Empresa" )
 		{
 			return "AEDSPI".$extraPerm;
 		}
-		if( $sUserGroup=="Empresa" )
+		if( $sUserGroup=="1" )
 		{
 			return "AEDSPI".$extraPerm;
 		}
@@ -1242,11 +1242,11 @@ function GetUserPermissionsStatic( $table )
 	}
 	if( $table=="login" )
 	{
-		if( $sUserGroup=="1" )
+		if( $sUserGroup=="Empresa" )
 		{
 			return "AEDSPI".$extraPerm;
 		}
-		if( $sUserGroup=="Empresa" )
+		if( $sUserGroup=="1" )
 		{
 			return "AEDSPI".$extraPerm;
 		}
@@ -1255,11 +1255,11 @@ function GetUserPermissionsStatic( $table )
 	}
 	if( $table=="buscar_profissionais" )
 	{
-		if( $sUserGroup=="1" )
+		if( $sUserGroup=="Empresa" )
 		{
 			return "AEDSPI".$extraPerm;
 		}
-		if( $sUserGroup=="Empresa" )
+		if( $sUserGroup=="1" )
 		{
 			return "AEDSPI".$extraPerm;
 		}
@@ -1268,11 +1268,11 @@ function GetUserPermissionsStatic( $table )
 	}
 	if( $table=="Procurar por Profissionais" )
 	{
-		if( $sUserGroup=="1" )
+		if( $sUserGroup=="Empresa" )
 		{
 			return "S".$extraPerm;
 		}
-		if( $sUserGroup=="Empresa" )
+		if( $sUserGroup=="1" )
 		{
 			return "S".$extraPerm;
 		}
@@ -1281,11 +1281,11 @@ function GetUserPermissionsStatic( $table )
 	}
 	if( $table=="Busca Profissional" )
 	{
-		if( $sUserGroup=="1" )
+		if( $sUserGroup=="Empresa" )
 		{
 			return "AEDSPI".$extraPerm;
 		}
-		if( $sUserGroup=="Empresa" )
+		if( $sUserGroup=="1" )
 		{
 			return "AEDSPI".$extraPerm;
 		}
@@ -1294,11 +1294,11 @@ function GetUserPermissionsStatic( $table )
 	}
 	if( $table=="adm_pacientes" )
 	{
-		if( $sUserGroup=="1" )
+		if( $sUserGroup=="Empresa" )
 		{
 			return "AEDSPI".$extraPerm;
 		}
-		if( $sUserGroup=="Empresa" )
+		if( $sUserGroup=="1" )
 		{
 			return "AEDSPI".$extraPerm;
 		}
@@ -1307,11 +1307,11 @@ function GetUserPermissionsStatic( $table )
 	}
 	if( $table=="adm_tratamento" )
 	{
-		if( $sUserGroup=="1" )
+		if( $sUserGroup=="Empresa" )
 		{
 			return "AEDSPI".$extraPerm;
 		}
-		if( $sUserGroup=="Empresa" )
+		if( $sUserGroup=="1" )
 		{
 			return "AEDSPI".$extraPerm;
 		}
@@ -1320,11 +1320,11 @@ function GetUserPermissionsStatic( $table )
 	}
 	if( $table=="Fluxo de Recebimentos" )
 	{
-		if( $sUserGroup=="1" )
+		if( $sUserGroup=="Empresa" )
 		{
 			return "AEDSPI".$extraPerm;
 		}
-		if( $sUserGroup=="Empresa" )
+		if( $sUserGroup=="1" )
 		{
 			return "AEDSPI".$extraPerm;
 		}

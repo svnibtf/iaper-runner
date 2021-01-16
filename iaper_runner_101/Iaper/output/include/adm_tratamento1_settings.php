@@ -162,13 +162,13 @@ $tdataadm_tratamento1[".allowShowHideFields"] = true; // temp fix #13449
 $tdataadm_tratamento1[".allowFieldsReordering"] = true; // temp fix #13449
 //
 
-$tdataadm_tratamento1[".isUseAjaxSuggest"] = true;
+$tdataadm_tratamento1[".isUseAjaxSuggest"] = false;
 
 $tdataadm_tratamento1[".rowHighlite"] = true;
 
 
 
-
+						
 
 $tdataadm_tratamento1[".ajaxCodeSnippetAdded"] = false;
 
@@ -272,7 +272,6 @@ $arrGPP[] = 100;
 $arrGPP[] = -1;
 $tdataadm_tratamento1[".arrGroupsPerPage"] = $arrGPP;
 
-$tdataadm_tratamento1[".highlightSearchResults"] = true;
 
 $tableKeysadm_tratamento1 = array();
 $tableKeysadm_tratamento1[] = "idTratamento";
@@ -2162,22 +2161,6 @@ $masterTablesData["adm_tratamento"] = array();
 
 
 	
-				$strOriginalDetailsTable="adm_usuarios";
-	$masterParams = array();
-	$masterParams["mDataSourceTable"]="adm_usuarios";
-	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
-	$masterParams["mShortTable"]= "adm_usuarios1";
-	$masterParams["masterKeys"]= array();
-	$masterParams["detailKeys"]= array();
-
-	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["adm_tratamento"][0] = $masterParams;
-				$masterTablesData["adm_tratamento"][0]["masterKeys"] = array();
-	$masterTablesData["adm_tratamento"][0]["masterKeys"][]="usu_id";
-				$masterTablesData["adm_tratamento"][0]["detailKeys"] = array();
-	$masterTablesData["adm_tratamento"][0]["detailKeys"][]="idProfissional";
-		
-	
 				$strOriginalDetailsTable="adm_pacientes";
 	$masterParams = array();
 	$masterParams["mDataSourceTable"]="adm_pacientes";
@@ -2187,11 +2170,11 @@ $masterTablesData["adm_tratamento"] = array();
 	$masterParams["detailKeys"]= array();
 
 	$masterParams["type"] = PAGE_LIST;
-					$masterTablesData["adm_tratamento"][1] = $masterParams;
-				$masterTablesData["adm_tratamento"][1]["masterKeys"] = array();
-	$masterTablesData["adm_tratamento"][1]["masterKeys"][]="idPaciente";
-				$masterTablesData["adm_tratamento"][1]["detailKeys"] = array();
-	$masterTablesData["adm_tratamento"][1]["detailKeys"][]="idPaciente";
+					$masterTablesData["adm_tratamento"][0] = $masterParams;
+				$masterTablesData["adm_tratamento"][0]["masterKeys"] = array();
+	$masterTablesData["adm_tratamento"][0]["masterKeys"][]="idPaciente";
+				$masterTablesData["adm_tratamento"][0]["detailKeys"] = array();
+	$masterTablesData["adm_tratamento"][0]["detailKeys"][]="idPaciente";
 		
 // -----------------end  prepare master-details data arrays ------------------------------//
 

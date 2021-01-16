@@ -125,7 +125,6 @@ pdfDocument = {
 		
 		widths: [
 								"*", 
-											"*", 
 					 ],	
 		
 	
@@ -133,34 +132,6 @@ pdfDocument = {
 				
 					[
 												{
-	cellId: 'c1',
-	col:0,
-	row:0,
-			style: 'cell',
-		
-		
-	//	static colspan/rowspan
-		
-			
-	
-	
-			"text": [
-		
-				
-			{"text":"","hidden":"{$item_hide_add}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_inline_add}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_delete}"},
-				
-		  ],
-  "border": [ false, false, false, false ],
-              "alignment": 'left',
-  },
-
-																			{
 	cellId: 'c2',
 	col:0,
 	row:0,
@@ -174,13 +145,8 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"Exibindo %first% - %last% de %total%","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
-				
-				
-			{"text":"","hidden":"{$item_hide_page_size}"},
-				
-		  ],
+				'',
+	  ],
   "border": [ false, false, false, false ],
               "alignment": 'right',
   },
@@ -268,13 +234,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"","hidden":"{$item_hide_grid_checkbox}"},
-				
-				
 			{"text":"","hidden":"{$item_hide_grid_edit}"},
-				
-				
-			{"text":"","hidden":"{$item_hide_grid_inline_cancel}"},
 				
 				
 			{"text":"","hidden":"{$item_hide_grid_view}"},
@@ -343,7 +303,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": '{$Logotipo_align}',
+              "alignment": 'left',
   },
 
 {END cellblock_grid_cell_field}
@@ -399,7 +359,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": '{$nome_empresa_align}',
+              "alignment": 'left',
   },
 
 {END cellblock_grid_cell_field1}
@@ -455,7 +415,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": '{$cnpj_align}',
+              "alignment": 'left',
   },
 
 {END cellblock_grid_cell_field2}
@@ -511,7 +471,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": '{$municipio_empresa_align}',
+              "alignment": 'left',
   },
 
 {END cellblock_grid_cell_field3}
@@ -567,7 +527,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": '{$endereco_profissional_bairro_align}',
+              "alignment": 'left',
   },
 
 {END cellblock_grid_cell_field4}

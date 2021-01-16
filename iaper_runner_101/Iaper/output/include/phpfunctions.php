@@ -924,7 +924,27 @@ function CustomExpression($value, $data, $field, $ptype, $table="")
 function fileCustomExpression($file, $data, $field, $ptype, $table )
 {
 	$value = "";
-				if($table=="adm_usuarios" && $field=="avatar")
+				if($table=="adm_usuarios" && $field=="avatar" && $ptype=="view")
+	{
+		;
+		return $value;
+	}
+				if($table=="adm_usuarios" && $field=="avatar" && $ptype=="list")
+	{
+		;
+		return $value;
+	}
+				if($table=="adm_usuarios" && $field=="avatar" && $ptype=="export")
+	{
+		;
+		return $value;
+	}
+				if($table=="adm_usuarios" && $field=="avatar" && $ptype=="masterlist")
+	{
+		;
+		return $value;
+	}
+				if($table=="adm_usuarios" && $field=="avatar" && $ptype=="masterprint")
 	{
 		;
 		return $value;
