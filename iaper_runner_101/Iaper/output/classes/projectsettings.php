@@ -3268,6 +3268,10 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "adm_tratamento1" ] = "adm_tratamento";
 	$projectEntities[ "Fluxo de Recebimentos" ] = array( "url" => "fluxo_de_recebimentos", "type" => 1 );
 	$projectEntitiesReverse[ "fluxo_de_recebimentos" ] = "Fluxo de Recebimentos";
+	$projectEntities[ "DashBoard" ] = array( "url" => "dashboard", "type" => 3 );
+	$projectEntitiesReverse[ "dashboard" ] = "DashBoard";
+	$projectEntities[ "VisaoGeral" ] = array( "url" => "visaogeral", "type" => 4 );
+	$projectEntitiesReverse[ "visaogeral" ] = "VisaoGeral";
 }
 
 function findTable( $table ) {

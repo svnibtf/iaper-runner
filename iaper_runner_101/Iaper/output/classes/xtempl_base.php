@@ -125,6 +125,11 @@ class XTempl_Base
 	
 		if( !$hideAddedCharts ) //#9607 1. Temporary fix
 		{
+			$this->assign_function("dashboard_chart","xt_showchart",
+			array(
+				"chartName"=>"dashboard",
+				"table"=>"DashBoard",
+				"ctype"=>"2DColumn"));
 		}
 		
 

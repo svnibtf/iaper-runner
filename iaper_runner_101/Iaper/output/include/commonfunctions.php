@@ -215,6 +215,10 @@ function checkTableName($shortTName )
 		return true;
 	if ("fluxo_de_recebimentos" == $shortTName )
 		return true;
+	if ("dashboard" == $shortTName )
+		return true;
+	if ("visaogeral" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -400,6 +404,24 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="Fluxo de Recebimentos";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("DashBoard");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="DashBoard";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("VisaoGeral");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="VisaoGeral";
+	}
 	return $arr;
 }
 
@@ -424,6 +446,8 @@ function GetTablesListWithoutSecurity()
 	$arr[]="adm_pacientes";
 	$arr[]="adm_tratamento";
 	$arr[]="Fluxo de Recebimentos";
+	$arr[]="DashBoard";
+	$arr[]="VisaoGeral";
 	return $arr;
 }
 
@@ -467,6 +491,8 @@ function GetFullFieldName($field, $table = "", $addAs = true, $connection = null
  */
 function GetChartType($shorttable)
 {
+	if($shorttable=="dashboard")
+		return "2DColumn";
 	return "";
 }
 
@@ -1330,6 +1356,32 @@ function GetUserPermissionsStatic( $table )
 		}
 //	default permissions
 		return "".$extraPerm;
+	}
+	if( $table=="DashBoard" )
+	{
+		if( $sUserGroup=="Empresa" )
+		{
+			return "S".$extraPerm;
+		}
+		if( $sUserGroup=="1" )
+		{
+			return "S".$extraPerm;
+		}
+//	default permissions
+		return "S".$extraPerm;
+	}
+	if( $table=="VisaoGeral" )
+	{
+		if( $sUserGroup=="Empresa" )
+		{
+			return "S".$extraPerm;
+		}
+		if( $sUserGroup=="1" )
+		{
+			return "S".$extraPerm;
+		}
+//	default permissions
+		return "S".$extraPerm;
 	}
 	// grant nothing by default
 	return "";

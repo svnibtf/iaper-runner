@@ -513,6 +513,10 @@ class Chart
 			return true;
 		if("adm_tratamento" == $this->chrt_array['tables'][0])
 			return true;
+		if("adm_tratamento" == $this->chrt_array['tables'][0])
+			return true;
+		if("" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 	

@@ -6,3 +6,5 @@
 [Sat Jan 16 09:35:08.613913 2021] [core:warn] [pid 3452:tid 184] AH00117: Ignoring deprecated use of DefaultType in line 21 of C:/Users/Rubens/Desktop/Iaper/tmp/webserver.conf.
 [Sat Jan 16 09:35:08.636915 2021] [core:warn] [pid 3452:tid 184] AH00117: Ignoring deprecated use of DefaultType in line 21 of C:/Users/Rubens/Desktop/Iaper/tmp/webserver.conf.
 [Sat Jan 16 09:35:08.746921 2021] [mpm_winnt:notice] [pid 3452:tid 184] AH00354: Child: Starting 64 worker threads.
+[Sat Jan 16 10:16:34.177795 2021] [:error] [pid 3452:tid 944] [client 127.0.0.1:55324] script 'C:/Users/Rubens/Desktop/Iaper/output/visaogeral_list.php' not found or unable to stat, referer: http://localhost:8086/menu.php
+[Sat Jan 16 10:16:39.784115 2021] [:error] [pid 3452:tid 928] [client 127.0.0.1:55325] script 'C:/Users/Rubens/Desktop/Iaper/output/visaogeral_list.php' not found or unable to stat, referer: http://localhost:8086/menu.php

@@ -362,6 +362,14 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="DashBoard")
+		{
+			return false;
+		}
+		if($table=="VisaoGeral")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -727,6 +735,14 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="Fluxo de Recebimentos")
+		{
+			return false;
+		}
+		if($table=="DashBoard")
+		{
+			return false;
+		}
+		if($table=="VisaoGeral")
 		{
 			return false;
 		}
