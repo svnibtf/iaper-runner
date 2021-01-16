@@ -111,84 +111,6 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "5";
-	$menuNode["name"] = "Configurar Agenda";
-	$menuNode["href"] = "https://iaper.com.br/page-agenda-config.html?num_cliente_id=1&num_usu_id=1&produto_id=1";
-	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "";
-	$menuNode["style"] = "";
-	$menuNode["params"] = "";
-	$menuNode["parent"] = "0";
-	$menuNode["nameType"] = "Text";
-	$menuNode["linkType"] = "External";
-	$menuNode["pageType"] = strtolower("");//
-	$menuNode["pageId"] = "list";
-	$menuNode["openType"] = "NewWindow";
-
-	$menuNode["icon"] = "";
-	$menuNode["iconType"] = "0";
-	$menuNode["iconShow"] = "1";
-
-		$menuNode["color"] = "";
-
-	$menuNode["title"] = "Configurar Agenda";
-
-
-
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
-	$menuNode = array();
-	$menuNode["id"] = "6";
-	$menuNode["name"] = "Marcar Consulta";
-	$menuNode["href"] = "https://iaper.com.br/page-agenda-config.html?page-agenda-profiss-id.html?produto_id=1&num_usu_id=1";
-	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "";
-	$menuNode["style"] = "";
-	$menuNode["params"] = "";
-	$menuNode["parent"] = "0";
-	$menuNode["nameType"] = "Text";
-	$menuNode["linkType"] = "External";
-	$menuNode["pageType"] = strtolower("");//
-	$menuNode["pageId"] = "list";
-	$menuNode["openType"] = "NewWindow";
-
-	$menuNode["icon"] = "";
-	$menuNode["iconType"] = "0";
-	$menuNode["iconShow"] = "1";
-
-		$menuNode["color"] = "";
-
-	$menuNode["title"] = "Marcar Consulta";
-
-
-
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
-	$menuNode = array();
-	$menuNode["id"] = "7";
-	$menuNode["name"] = "Gestão da Agenda";
-	$menuNode["href"] = "https://iaper.com.br/page-agenda-config.html?page-agenda-profissional-gestao.html";
-	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "";
-	$menuNode["style"] = "";
-	$menuNode["params"] = "";
-	$menuNode["parent"] = "0";
-	$menuNode["nameType"] = "Text";
-	$menuNode["linkType"] = "External";
-	$menuNode["pageType"] = strtolower("");//
-	$menuNode["pageId"] = "list";
-	$menuNode["openType"] = "NewWindow";
-
-	$menuNode["icon"] = "";
-	$menuNode["iconType"] = "0";
-	$menuNode["iconShow"] = "1";
-
-		$menuNode["color"] = "";
-
-	$menuNode["title"] = "Gestão da Agenda";
-
-
-
-	$menuNodesObject->menuNodes["main"][] = $menuNode;
-	$menuNode = array();
-	$menuNode["id"] = "8";
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
@@ -214,7 +136,7 @@ function getMenuNodes_main($menuNodesObject)
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "9";
+	$menuNode["id"] = "6";
 	$menuNode["name"] = "Quem Somos e Planos";
 	$menuNode["href"] = "http://site.sateh.com.br/#benefits-grid-images-left";
 	$menuNode["type"] = "Leaf";
