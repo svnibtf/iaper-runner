@@ -487,12 +487,6 @@ class Chart
 			return true;
 		if("adm_usuarios_dados_profissionais" == $this->chrt_array['tables'][0])
 			return true;
-		if("ibge_municipios" == $this->chrt_array['tables'][0])
-			return true;
-		if("ibge_pais" == $this->chrt_array['tables'][0])
-			return true;
-		if("adm_ramos" == $this->chrt_array['tables'][0])
-			return true;
 		if("adm_tipousuario" == $this->chrt_array['tables'][0])
 			return true;
 		if("adm_planos" == $this->chrt_array['tables'][0])
@@ -513,9 +507,17 @@ class Chart
 			return true;
 		if("adm_tratamento" == $this->chrt_array['tables'][0])
 			return true;
-		if("adm_tratamento" == $this->chrt_array['tables'][0])
-			return true;
 		if("" == $this->chrt_array['tables'][0])
+			return true;
+		if("adm_agenda_estrutura_1" == $this->chrt_array['tables'][0])
+			return true;
+		if("adm_agenda_config_1" == $this->chrt_array['tables'][0])
+			return true;
+		if("adm_agenda_1" == $this->chrt_array['tables'][0])
+			return true;
+		if("adm_agenda_tipos_recebimento" == $this->chrt_array['tables'][0])
+			return true;
+		if("adm_tipo_config" == $this->chrt_array['tables'][0])
 			return true;
 		return false;
 	}

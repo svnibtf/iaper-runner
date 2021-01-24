@@ -71,22 +71,19 @@ pdfDocument = {
 			{"text":"","background":"#dadada","hidden":"{$item_hide_welcome_item}"},
 				
 				
-			{"text":"","background":"#dadada","hidden":"{$item_hide_welcome_item2}"},
+			{"text":"","background":"#dadada","hidden":"{$item_hide_welcome_item3}"},
 				
 				
-			{"text":"","background":"#dadada","hidden":"{$item_hide_welcome_item7}"},
-				
-				
-			{"text":"","background":"#dadada","hidden":"{$item_hide_welcome_item8}"},
+			{"text":"","background":"#dadada","hidden":"{$item_hide_welcome_item4}"},
 				
 				
 			{"text":"","background":"#dadada","hidden":"{$item_hide_welcome_item6}"},
 				
 				
-			{"text":"","background":"#dadada","hidden":"{$item_hide_welcome_item3}"},
+			{"text":"","background":"#dadada","hidden":"{$item_hide_welcome_item2}"},
 				
 				
-			{"text":"","background":"#dadada","hidden":"{$item_hide_welcome_item4}"},
+			{"text":"","background":"#dadada","hidden":"{$item_hide_welcome_item7}"},
 				
 				
 			{"text":"","background":"#dadada","hidden":"{$item_hide_welcome_item1}"},

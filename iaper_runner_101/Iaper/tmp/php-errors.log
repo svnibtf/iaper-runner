@@ -1,4 +1,5 @@
-[06-Jan-2021 20:25:40 America/New_York] PHP Fatal error:  Uma tentativa de conexão falhou porque o componente conectado não respondeu
-corretamente após um período de tempo ou a conexão estabelecida falhou
-porque o host conectado não respondeu.
- in C:\Users\Rubens\Desktop\Iaper\output\connections\Connection.php on line 626
+[24-Feb-2021 10:56:38 America/New_York] PHP Warning:  require_once(C:\Users\Rubens\Desktop\Iaper\output\include\LocaleFunctions.php): failed to open stream: Permission denied in C:\Users\Rubens\Desktop\Iaper\output\include\locale.php on line 3
+[24-Feb-2021 10:56:38 America/New_York] PHP Fatal error:  require_once(): Failed opening required 'C:\Users\Rubens\Desktop\Iaper\output/include/LocaleFunctions.php' (include_path='.;C:\php\pear') in C:\Users\Rubens\Desktop\Iaper\output\include\locale.php on line 3
+[24-Feb-2021 10:56:40 America/New_York] PHP Warning:  include(C:\Users\Rubens\Desktop\Iaper\output\include\phpfunctions.php): failed to open stream: Permission denied in C:\Users\Rubens\Desktop\Iaper\output\include\dbcommon.php on line 37
+[24-Feb-2021 10:56:40 America/New_York] PHP Warning:  include(): Failed opening 'phpfunctions.php' for inclusion (include_path='.;C:\php\pear') in C:\Users\Rubens\Desktop\Iaper\output\include\dbcommon.php on line 37
+[24-Feb-2021 10:56:40 America/New_York] PHP Fatal error:  Call to undefined function getabspath() in C:\Users\Rubens\Desktop\Iaper\output\include\locale.php on line 3

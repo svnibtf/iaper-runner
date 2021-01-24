@@ -1,7 +1,5 @@
 <?php
 			$optionsArray = array( 'pdf' => array( 'pdfView' => false ),
-'details' => array( 'adm_tratamento' => array( 'displayPreview' => 2,
-'previewPageId' => '' ) ),
 'fields' => array( 'gridFields' => array( 'Nome',
 'Email',
 'Endereco',

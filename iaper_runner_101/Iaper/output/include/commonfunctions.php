@@ -189,12 +189,6 @@ function checkTableName($shortTName )
 		return true;
 	if ("adm_usuarios_dados_profissionais1" == $shortTName )
 		return true;
-	if ("ibge_municipios" == $shortTName )
-		return true;
-	if ("ibge_pais" == $shortTName )
-		return true;
-	if ("adm_ramos" == $shortTName )
-		return true;
 	if ("adm_tipousuario" == $shortTName )
 		return true;
 	if ("adm_planos1" == $shortTName )
@@ -211,13 +205,21 @@ function checkTableName($shortTName )
 		return true;
 	if ("adm_pacientes1" == $shortTName )
 		return true;
-	if ("adm_tratamento1" == $shortTName )
-		return true;
 	if ("fluxo_de_recebimentos" == $shortTName )
 		return true;
 	if ("dashboard" == $shortTName )
 		return true;
 	if ("visaogeral" == $shortTName )
+		return true;
+	if ("adm_agenda_estrutura_1" == $shortTName )
+		return true;
+	if ("adm_agenda_config_1" == $shortTName )
+		return true;
+	if ("adm_agenda_1" == $shortTName )
+		return true;
+	if ("adm_agenda_tipos_recebimento" == $shortTName )
+		return true;
+	if ("adm_tipo_config" == $shortTName )
 		return true;
 	return false;
 }
@@ -286,33 +288,6 @@ function GetTablesList($pdfMode = false)
 	}
 	if( $tableAvailable ) {
 		$arr[]="adm_usuarios_dados_profissionais";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("ibge_municipios");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="ibge_municipios";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("ibge_pais");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="ibge_pais";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("adm_ramos");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="adm_ramos";
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
@@ -388,15 +363,6 @@ function GetTablesList($pdfMode = false)
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("adm_tratamento");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="adm_tratamento";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
 		$strPerm = GetUserPermissions("Fluxo de Recebimentos");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
@@ -422,6 +388,51 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="VisaoGeral";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("adm_agenda_estrutura_1");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="adm_agenda_estrutura_1";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("adm_agenda_config_1");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="adm_agenda_config_1";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("adm_agenda_1");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="adm_agenda_1";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("adm_agenda_tipos_recebimento");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="adm_agenda_tipos_recebimento";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("adm_tipo_config");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="adm_tipo_config";
+	}
 	return $arr;
 }
 
@@ -433,9 +444,6 @@ function GetTablesListWithoutSecurity()
 	$arr = array();
 	$arr[]="adm_usuarios";
 	$arr[]="adm_usuarios_dados_profissionais";
-	$arr[]="ibge_municipios";
-	$arr[]="ibge_pais";
-	$arr[]="adm_ramos";
 	$arr[]="adm_tipousuario";
 	$arr[]="adm_planos";
 	$arr[]="adm_meuplano";
@@ -444,10 +452,14 @@ function GetTablesListWithoutSecurity()
 	$arr[]="Procurar por Profissionais";
 	$arr[]="Busca Profissional";
 	$arr[]="adm_pacientes";
-	$arr[]="adm_tratamento";
 	$arr[]="Fluxo de Recebimentos";
 	$arr[]="DashBoard";
 	$arr[]="VisaoGeral";
+	$arr[]="adm_agenda_estrutura_1";
+	$arr[]="adm_agenda_config_1";
+	$arr[]="adm_agenda_1";
+	$arr[]="adm_agenda_tipos_recebimento";
+	$arr[]="adm_tipo_config";
 	return $arr;
 }
 
@@ -1188,45 +1200,6 @@ function GetUserPermissionsStatic( $table )
 //	default permissions
 		return "".$extraPerm;
 	}
-	if( $table=="ibge_municipios" )
-	{
-		if( $sUserGroup=="Empresa" )
-		{
-			return "".$extraPerm;
-		}
-		if( $sUserGroup=="1" )
-		{
-			return "".$extraPerm;
-		}
-//	default permissions
-		return "".$extraPerm;
-	}
-	if( $table=="ibge_pais" )
-	{
-		if( $sUserGroup=="Empresa" )
-		{
-			return "".$extraPerm;
-		}
-		if( $sUserGroup=="1" )
-		{
-			return "".$extraPerm;
-		}
-//	default permissions
-		return "".$extraPerm;
-	}
-	if( $table=="adm_ramos" )
-	{
-		if( $sUserGroup=="Empresa" )
-		{
-			return "".$extraPerm;
-		}
-		if( $sUserGroup=="1" )
-		{
-			return "".$extraPerm;
-		}
-//	default permissions
-		return "".$extraPerm;
-	}
 	if( $table=="adm_tipousuario" )
 	{
 		if( $sUserGroup=="Empresa" )
@@ -1331,19 +1304,6 @@ function GetUserPermissionsStatic( $table )
 //	default permissions
 		return "".$extraPerm;
 	}
-	if( $table=="adm_tratamento" )
-	{
-		if( $sUserGroup=="Empresa" )
-		{
-			return "AEDSPI".$extraPerm;
-		}
-		if( $sUserGroup=="1" )
-		{
-			return "AEDSPI".$extraPerm;
-		}
-//	default permissions
-		return "AEDSPI".$extraPerm;
-	}
 	if( $table=="Fluxo de Recebimentos" )
 	{
 		if( $sUserGroup=="Empresa" )
@@ -1382,6 +1342,71 @@ function GetUserPermissionsStatic( $table )
 		}
 //	default permissions
 		return "S".$extraPerm;
+	}
+	if( $table=="adm_agenda_estrutura_1" )
+	{
+		if( $sUserGroup=="Empresa" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+		if( $sUserGroup=="1" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="adm_agenda_config_1" )
+	{
+		if( $sUserGroup=="Empresa" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+		if( $sUserGroup=="1" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="adm_agenda_1" )
+	{
+		if( $sUserGroup=="Empresa" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+		if( $sUserGroup=="1" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="adm_agenda_tipos_recebimento" )
+	{
+		if( $sUserGroup=="Empresa" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+		if( $sUserGroup=="1" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="adm_tipo_config" )
+	{
+		if( $sUserGroup=="Empresa" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+		if( $sUserGroup=="1" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
 	}
 	// grant nothing by default
 	return "";

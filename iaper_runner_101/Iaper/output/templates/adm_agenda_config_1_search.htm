@@ -1,0 +1,467 @@
+<!doctype html><p align=center><font size=+1 color=red></font></p>
+<p align=center><font size=+1 color=red></font></p>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel adm_agenda_config_1 search}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="6"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="6"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN agc_id_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_agc_id}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="agc_id" 
+	
+	data-signal-error-for="agc_id{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="agc_id" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_agc_id}">
+		{$label adm_agenda_config_1 agc_id }	</label>
+	<div class="r-search-option">
+		{$searchtype_agc_id}
+	</div>
+	<div class="r-search-field">
+		{$agc_id_editcontrol}	</div>
+	<div class="r-search-field">
+		{$agc_id_editcontrol1}
+	</div>
+	
+</div>
+
+{END agc_id_fieldblock}
+											
+{BEGIN agc_usu_pro_id_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_agc_usu_pro_id}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="agc_usu_pro_id" 
+	
+	data-signal-error-for="agc_usu_pro_id{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="agc_usu_pro_id" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_agc_usu_pro_id}">
+		{$label adm_agenda_config_1 agc_usu_pro_id }	</label>
+	<div class="r-search-option">
+		{$searchtype_agc_usu_pro_id}
+	</div>
+	<div class="r-search-field">
+		{$agc_usu_pro_id_editcontrol}	</div>
+	<div class="r-search-field">
+		{$agc_usu_pro_id_editcontrol1}
+	</div>
+	
+</div>
+
+{END agc_usu_pro_id_fieldblock}
+											
+{BEGIN agc_nome_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_agc_nome}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="agc_nome" 
+	
+	data-signal-error-for="agc_nome{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="agc_nome" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_agc_nome}">
+		{$label adm_agenda_config_1 agc_nome }	</label>
+	<div class="r-search-option">
+		{$searchtype_agc_nome}
+	</div>
+	<div class="r-search-field">
+		{$agc_nome_editcontrol}	</div>
+	<div class="r-search-field">
+		{$agc_nome_editcontrol1}
+	</div>
+	
+</div>
+
+{END agc_nome_fieldblock}
+											
+{BEGIN agc_tipo_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_agc_tipo}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="agc_tipo" 
+	
+	data-signal-error-for="agc_tipo{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="agc_tipo" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_agc_tipo}">
+		{$label adm_agenda_config_1 agc_tipo }	</label>
+	<div class="r-search-option">
+		{$searchtype_agc_tipo}
+	</div>
+	<div class="r-search-field">
+		{$agc_tipo_editcontrol}	</div>
+	<div class="r-search-field">
+		{$agc_tipo_editcontrol1}
+	</div>
+	
+</div>
+
+{END agc_tipo_fieldblock}
+											
+{BEGIN agc_item_pagamento_id_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_agc_item_pagamento_id}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="agc_item_pagamento_id" 
+	
+	data-signal-error-for="agc_item_pagamento_id{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="agc_item_pagamento_id" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_agc_item_pagamento_id}">
+		{$label adm_agenda_config_1 agc_item_pagamento_id }	</label>
+	<div class="r-search-option">
+		{$searchtype_agc_item_pagamento_id}
+	</div>
+	<div class="r-search-field">
+		{$agc_item_pagamento_id_editcontrol}	</div>
+	<div class="r-search-field">
+		{$agc_item_pagamento_id_editcontrol1}
+	</div>
+	
+</div>
+
+{END agc_item_pagamento_id_fieldblock}
+											
+{BEGIN agc_qtidade_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_agc_qtidade}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="agc_qtidade" 
+	
+	data-signal-error-for="agc_qtidade{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="agc_qtidade" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_agc_qtidade}">
+		{$label adm_agenda_config_1 agc_qtidade }	</label>
+	<div class="r-search-option">
+		{$searchtype_agc_qtidade}
+	</div>
+	<div class="r-search-field">
+		{$agc_qtidade_editcontrol}	</div>
+	<div class="r-search-field">
+		{$agc_qtidade_editcontrol1}
+	</div>
+	
+</div>
+
+{END agc_qtidade_fieldblock}
+											
+{BEGIN agc_duracao_media_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_agc_duracao_media}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="agc_duracao_media" 
+	
+	data-signal-error-for="agc_duracao_media{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="agc_duracao_media" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_agc_duracao_media}">
+		{$label adm_agenda_config_1 agc_duracao_media }	</label>
+	<div class="r-search-option">
+		{$searchtype_agc_duracao_media}
+	</div>
+	<div class="r-search-field">
+		{$agc_duracao_media_editcontrol}	</div>
+	<div class="r-search-field">
+		{$agc_duracao_media_editcontrol1}
+	</div>
+	
+</div>
+
+{END agc_duracao_media_fieldblock}
+											
+{BEGIN agc_email_automatico_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_agc_email_automatico}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="agc_email_automatico" 
+	
+	data-signal-error-for="agc_email_automatico{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="agc_email_automatico" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_agc_email_automatico}">
+		{$label adm_agenda_config_1 agc_email_automatico }	</label>
+	<div class="r-search-option">
+		{$searchtype_agc_email_automatico}
+	</div>
+	<div class="r-search-field">
+		{$agc_email_automatico_editcontrol}	</div>
+	<div class="r-search-field">
+		{$agc_email_automatico_editcontrol1}
+	</div>
+	
+</div>
+
+{END agc_email_automatico_fieldblock}
+											
+{BEGIN agc_tempo_min_antecedencia_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_agc_tempo_min_antecedencia}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="agc_tempo_min_antecedencia" 
+	
+	data-signal-error-for="agc_tempo_min_antecedencia{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field8" {$item_integrated_search_field8} data-pageid="{$pageid}" data-field="agc_tempo_min_antecedencia" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_agc_tempo_min_antecedencia}">
+		{$label adm_agenda_config_1 agc_tempo_min_antecedencia }	</label>
+	<div class="r-search-option">
+		{$searchtype_agc_tempo_min_antecedencia}
+	</div>
+	<div class="r-search-field">
+		{$agc_tempo_min_antecedencia_editcontrol}	</div>
+	<div class="r-search-field">
+		{$agc_tempo_min_antecedencia_editcontrol1}
+	</div>
+	
+</div>
+
+{END agc_tempo_min_antecedencia_fieldblock}
+											
+{BEGIN agc_email_agendamento_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_agc_email_agendamento}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="agc_email_agendamento" 
+	
+	data-signal-error-for="agc_email_agendamento{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field9" {$item_integrated_search_field9} data-pageid="{$pageid}" data-field="agc_email_agendamento" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_agc_email_agendamento}">
+		{$label adm_agenda_config_1 agc_email_agendamento }	</label>
+	<div class="r-search-option">
+		{$searchtype_agc_email_agendamento}
+	</div>
+	<div class="r-search-field">
+		{$agc_email_agendamento_editcontrol}	</div>
+	<div class="r-search-field">
+		{$agc_email_agendamento_editcontrol1}
+	</div>
+	
+</div>
+
+{END agc_email_agendamento_fieldblock}
+											
+{BEGIN agc_email_lembrete_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_agc_email_lembrete}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="agc_email_lembrete" 
+	
+	data-signal-error-for="agc_email_lembrete{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field10" {$item_integrated_search_field10} data-pageid="{$pageid}" data-field="agc_email_lembrete" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_agc_email_lembrete}">
+		{$label adm_agenda_config_1 agc_email_lembrete }	</label>
+	<div class="r-search-option">
+		{$searchtype_agc_email_lembrete}
+	</div>
+	<div class="r-search-field">
+		{$agc_email_lembrete_editcontrol}	</div>
+	<div class="r-search-field">
+		{$agc_email_lembrete_editcontrol1}
+	</div>
+	
+</div>
+
+{END agc_email_lembrete_fieldblock}
+											
+{BEGIN agc_email_cancelamento_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_agc_email_cancelamento}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="agc_email_cancelamento" 
+	
+	data-signal-error-for="agc_email_cancelamento{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field11" {$item_integrated_search_field11} data-pageid="{$pageid}" data-field="agc_email_cancelamento" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_agc_email_cancelamento}">
+		{$label adm_agenda_config_1 agc_email_cancelamento }	</label>
+	<div class="r-search-option">
+		{$searchtype_agc_email_cancelamento}
+	</div>
+	<div class="r-search-field">
+		{$agc_email_cancelamento_editcontrol}	</div>
+	<div class="r-search-field">
+		{$agc_email_cancelamento_editcontrol1}
+	</div>
+	
+</div>
+
+{END agc_email_cancelamento_fieldblock}
+											
+{BEGIN agc_deletado_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_agc_deletado}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="agc_deletado" 
+	
+	data-signal-error-for="agc_deletado{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field12" {$item_integrated_search_field12} data-pageid="{$pageid}" data-field="agc_deletado" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_agc_deletado}">
+		{$label adm_agenda_config_1 agc_deletado }	</label>
+	<div class="r-search-option">
+		{$searchtype_agc_deletado}
+	</div>
+	<div class="r-search-field">
+		{$agc_deletado_editcontrol}	</div>
+	<div class="r-search-field">
+		{$agc_deletado_editcontrol1}
+	</div>
+	
+</div>
+
+{END agc_deletado_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="search_search" data-itemid="search_search" {$item_search_search} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$searchbutton_attrs} >
+							Buscar			</a>
+</span>
+	 
+		<span data-itemtype="search_reset" data-itemid="search_reset" {$item_search_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$resetbutton_attrs} >
+							Limpar			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="search_back_list" data-itemid="search_back_list" {$item_search_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Voltar à Lista			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="search_cancel" data-itemid="search_cancel" {$item_search_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancela			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

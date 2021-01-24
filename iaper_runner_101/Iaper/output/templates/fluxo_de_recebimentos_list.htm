@@ -432,9 +432,11 @@
 
 	 
 		{BEGIN Data_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Data">
-	{$label Fluxo_de_Recebimentos Data }	</span>
+	{BEGIN Data_fieldheader}
+	<SPAN {$Data_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Data">
+	{$label Fluxo_de_Recebimentos Data }	{$arrow_icon_Data}
+	</SPAN>
+	{END Data_fieldheader}
 {END Data_fieldheadercolumn}
 
 	
@@ -457,9 +459,11 @@
 
 	 
 		{BEGIN Valor_a_Receber_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Valor_a_Receber">
-	{$label Fluxo_de_Recebimentos Valor_a_Receber }	</span>
+	{BEGIN Valor_a_Receber_fieldheader}
+	<SPAN {$Valor_a_Receber_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Valor_a_Receber">
+	{$label Fluxo_de_Recebimentos Valor_a_Receber }	{$arrow_icon_Valor_a_Receber}
+	</SPAN>
+	{END Valor_a_Receber_fieldheader}
 {END Valor_a_Receber_fieldheadercolumn}
 
 	

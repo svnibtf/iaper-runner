@@ -2804,36 +2804,6 @@ $page_titles["adm_pacientes"] = &$pageTitlesadm_pacientes1;
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
 $detailsTablesData["adm_pacientes"] = array();
-//	adm_tratamento
-	
-	
-
-		$dIndex = 0;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="adm_tratamento";
-		$detailsParam["dOriginalTable"] = "adm_tratamento";
-
-
-
-		
-		$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "adm_tratamento1";
-	$detailsParam["dCaptionTable"] = GetTableCaption("adm_tratamento");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-
-
-		
-	$detailsTablesData["adm_pacientes"][$dIndex] = $detailsParam;
-
-	
-		$detailsTablesData["adm_pacientes"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["adm_pacientes"][$dIndex]["masterKeys"][]="idPaciente";
-
-				$detailsTablesData["adm_pacientes"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["adm_pacientes"][$dIndex]["detailKeys"][]="idPaciente";
 
 // tables which are master tables for current table (detail)
 $masterTablesData["adm_pacientes"] = array();

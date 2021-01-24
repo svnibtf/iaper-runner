@@ -658,9 +658,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "141_1610802788";
+$projectBuildKey = "152_1614190516";
 $wizardBuildKey = "35870";
-$projectBuildNumber = "141";
+$projectBuildNumber = "152";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -683,9 +683,6 @@ $tableCaptions["Portuguese(Brazil)"] = array();
 $tableCaptions["Portuguese(Brazil)"][""] = "";
 $tableCaptions["Portuguese(Brazil)"]["adm_usuarios"] = "Cadastro";
 $tableCaptions["Portuguese(Brazil)"]["adm_usuarios_dados_profissionais"] = "Dados Profissionais";
-$tableCaptions["Portuguese(Brazil)"]["ibge_municipios"] = "Ibge";
-$tableCaptions["Portuguese(Brazil)"]["ibge_pais"] = "Ibge Pais";
-$tableCaptions["Portuguese(Brazil)"]["adm_ramos"] = "Adm Ramos";
 $tableCaptions["Portuguese(Brazil)"]["adm_tipousuario"] = "TipoUsuario";
 $tableCaptions["Portuguese(Brazil)"]["adm_planos"] = "Adm Planos";
 $tableCaptions["Portuguese(Brazil)"]["adm_meuplano"] = "Meu Plano";
@@ -695,10 +692,14 @@ $tableCaptions["Portuguese(Brazil)"]["Procurar_por_Profissionais"] = "Procurar p
 $tableCaptions["Portuguese(Brazil)"]["Busca_Profissional"] = "Busca Profissional";
 $tableCaptions["Portuguese(Brazil)"]["adm_pacientes"] = "Pacientes
 ";
-$tableCaptions["Portuguese(Brazil)"]["adm_tratamento"] = "Tratamentos";
 $tableCaptions["Portuguese(Brazil)"]["Fluxo_de_Recebimentos"] = "Administrativo";
 $tableCaptions["Portuguese(Brazil)"]["DashBoard"] = "Dash Board";
 $tableCaptions["Portuguese(Brazil)"]["VisaoGeral"] = "Visao Geral";
+$tableCaptions["Portuguese(Brazil)"]["adm_agenda_estrutura_1"] = "Configurar Datas";
+$tableCaptions["Portuguese(Brazil)"]["adm_agenda_config_1"] = "Configurar Agenda";
+$tableCaptions["Portuguese(Brazil)"]["adm_agenda_1"] = "Gerenciar Consultas";
+$tableCaptions["Portuguese(Brazil)"]["adm_agenda_tipos_recebimento"] = "Adm Agenda Tipos Recebimento";
+$tableCaptions["Portuguese(Brazil)"]["adm_tipo_config"] = "Adm Tipo Config";
 
 
 $globalEvents = new class_GlobalEvents;

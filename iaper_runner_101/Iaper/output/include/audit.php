@@ -310,18 +310,6 @@ class AuditTrailTable
 		{
 			return false;
 		}
-		if($table=="ibge_municipios")
-		{
-			return false;
-		}
-		if($table=="ibge_pais")
-		{
-			return false;
-		}
-		if($table=="adm_ramos")
-		{
-			return false;
-		}
 		if($table=="adm_tipousuario")
 		{
 			return false;
@@ -354,10 +342,6 @@ class AuditTrailTable
 		{
 			return false;
 		}
-		if($table=="adm_tratamento")
-		{
-			return false;
-		}
 		if($table=="Fluxo de Recebimentos")
 		{
 			return false;
@@ -367,6 +351,26 @@ class AuditTrailTable
 			return false;
 		}
 		if($table=="VisaoGeral")
+		{
+			return false;
+		}
+		if($table=="adm_agenda_estrutura_1")
+		{
+			return false;
+		}
+		if($table=="adm_agenda_config_1")
+		{
+			return false;
+		}
+		if($table=="adm_agenda_1")
+		{
+			return false;
+		}
+		if($table=="adm_agenda_tipos_recebimento")
+		{
+			return false;
+		}
+		if($table=="adm_tipo_config")
 		{
 			return false;
 		}
@@ -686,18 +690,6 @@ class AuditTrailFile
 		{
 			return false;
 		}
-		if($table=="ibge_municipios")
-		{
-			return false;
-		}
-		if($table=="ibge_pais")
-		{
-			return false;
-		}
-		if($table=="adm_ramos")
-		{
-			return false;
-		}
 		if($table=="adm_tipousuario")
 		{
 			return false;
@@ -730,10 +722,6 @@ class AuditTrailFile
 		{
 			return false;
 		}
-		if($table=="adm_tratamento")
-		{
-			return false;
-		}
 		if($table=="Fluxo de Recebimentos")
 		{
 			return false;
@@ -743,6 +731,26 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="VisaoGeral")
+		{
+			return false;
+		}
+		if($table=="adm_agenda_estrutura_1")
+		{
+			return false;
+		}
+		if($table=="adm_agenda_config_1")
+		{
+			return false;
+		}
+		if($table=="adm_agenda_1")
+		{
+			return false;
+		}
+		if($table=="adm_agenda_tipos_recebimento")
+		{
+			return false;
+		}
+		if($table=="adm_tipo_config")
 		{
 			return false;
 		}

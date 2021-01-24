@@ -47,11 +47,15 @@ function DBLookup($sql)
   */
 class tDAL
 {
+	var $tbliaperdbatrobb0254publiccloudco__adm_agenda_1;
+	var $tbliaperdbatrobb0254publiccloudco__adm_agenda_config_1;
+	var $tbliaperdbatrobb0254publiccloudco__adm_agenda_estrutura_1;
+	var $tbliaperdbatrobb0254publiccloudco__adm_agenda_tipos_recebimento;
 	var $tbliaperdbatrobb0254publiccloudco__adm_meuplano;
 	var $tbliaperdbatrobb0254publiccloudco__adm_pacientes;
 	var $tbliaperdbatrobb0254publiccloudco__adm_plano_profissional;
 	var $tbliaperdbatrobb0254publiccloudco__adm_planos;
-	var $tbliaperdbatrobb0254publiccloudco__adm_ramos;
+	var $tbliaperdbatrobb0254publiccloudco__adm_tipo_config;
 	var $tbliaperdbatrobb0254publiccloudco__adm_tipousuario;
 	var $tbliaperdbatrobb0254publiccloudco__adm_tratamento;
 	var $tbliaperdbatrobb0254publiccloudco__adm_usuarios;
@@ -67,11 +71,15 @@ class tDAL
 	{
 		if($this->lstTables)
 			return;
+		$this->lstTables[] = array("name" => "adm_agenda_1", "varname" => "iaperdbatrobb0254publiccloudco__adm_agenda_1", "altvarname" => "adm_agenda_1", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
+		$this->lstTables[] = array("name" => "adm_agenda_config_1", "varname" => "iaperdbatrobb0254publiccloudco__adm_agenda_config_1", "altvarname" => "adm_agenda_config_1", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
+		$this->lstTables[] = array("name" => "adm_agenda_estrutura_1", "varname" => "iaperdbatrobb0254publiccloudco__adm_agenda_estrutura_1", "altvarname" => "adm_agenda_estrutura_1", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
+		$this->lstTables[] = array("name" => "adm_agenda_tipos_recebimento", "varname" => "iaperdbatrobb0254publiccloudco__adm_agenda_tipos_recebimento", "altvarname" => "adm_agenda_tipos_recebimento", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
 		$this->lstTables[] = array("name" => "adm_meuplano", "varname" => "iaperdbatrobb0254publiccloudco__adm_meuplano", "altvarname" => "adm_meuplano", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
 		$this->lstTables[] = array("name" => "adm_pacientes", "varname" => "iaperdbatrobb0254publiccloudco__adm_pacientes", "altvarname" => "adm_pacientes", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
 		$this->lstTables[] = array("name" => "adm_plano_profissional", "varname" => "iaperdbatrobb0254publiccloudco__adm_plano_profissional", "altvarname" => "adm_plano_profissional", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
 		$this->lstTables[] = array("name" => "adm_planos", "varname" => "iaperdbatrobb0254publiccloudco__adm_planos", "altvarname" => "adm_planos", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
-		$this->lstTables[] = array("name" => "adm_ramos", "varname" => "iaperdbatrobb0254publiccloudco__adm_ramos", "altvarname" => "adm_ramos", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
+		$this->lstTables[] = array("name" => "adm_tipo_config", "varname" => "iaperdbatrobb0254publiccloudco__adm_tipo_config", "altvarname" => "adm_tipo_config", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
 		$this->lstTables[] = array("name" => "adm_tipousuario", "varname" => "iaperdbatrobb0254publiccloudco__adm_tipousuario", "altvarname" => "adm_tipousuario", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
 		$this->lstTables[] = array("name" => "adm_tratamento", "varname" => "iaperdbatrobb0254publiccloudco__adm_tratamento", "altvarname" => "adm_tratamento", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
 		$this->lstTables[] = array("name" => "adm_usuarios", "varname" => "iaperdbatrobb0254publiccloudco__adm_usuarios", "altvarname" => "adm_usuarios", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");

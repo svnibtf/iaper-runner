@@ -475,9 +475,6 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_grid_details_link}"},
 				
-				
-			{"text":"","hidden":"{$item_hide_grid_details_link1}"},
-				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
@@ -590,11 +587,6 @@ pdfDocument = {
 			 {BEGIN details_undefined}
 			{$displayDetailTable_undefined }
 		{END details_undefined},
-				
-				
-			 {BEGIN details_adm_tratamento1}
-			{$displayDetailTable_adm_tratamento1 }
-		{END details_adm_tratamento1},
 				
 		  ],
   "border": [ true, true, true, true ],

@@ -3242,12 +3242,6 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "adm_usuarios1" ] = "adm_usuarios";
 	$projectEntities[ "adm_usuarios_dados_profissionais" ] = array( "url" => "adm_usuarios_dados_profissionais1", "type" => 0 );
 	$projectEntitiesReverse[ "adm_usuarios_dados_profissionais1" ] = "adm_usuarios_dados_profissionais";
-	$projectEntities[ "ibge_municipios" ] = array( "url" => "ibge_municipios", "type" => 0 );
-	$projectEntitiesReverse[ "ibge_municipios" ] = "ibge_municipios";
-	$projectEntities[ "ibge_pais" ] = array( "url" => "ibge_pais", "type" => 0 );
-	$projectEntitiesReverse[ "ibge_pais" ] = "ibge_pais";
-	$projectEntities[ "adm_ramos" ] = array( "url" => "adm_ramos", "type" => 0 );
-	$projectEntitiesReverse[ "adm_ramos" ] = "adm_ramos";
 	$projectEntities[ "adm_tipousuario" ] = array( "url" => "adm_tipousuario", "type" => 0 );
 	$projectEntitiesReverse[ "adm_tipousuario" ] = "adm_tipousuario";
 	$projectEntities[ "adm_planos" ] = array( "url" => "adm_planos1", "type" => 0 );
@@ -3264,14 +3258,22 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "busca_profissional" ] = "Busca Profissional";
 	$projectEntities[ "adm_pacientes" ] = array( "url" => "adm_pacientes1", "type" => 0 );
 	$projectEntitiesReverse[ "adm_pacientes1" ] = "adm_pacientes";
-	$projectEntities[ "adm_tratamento" ] = array( "url" => "adm_tratamento1", "type" => 0 );
-	$projectEntitiesReverse[ "adm_tratamento1" ] = "adm_tratamento";
 	$projectEntities[ "Fluxo de Recebimentos" ] = array( "url" => "fluxo_de_recebimentos", "type" => 1 );
 	$projectEntitiesReverse[ "fluxo_de_recebimentos" ] = "Fluxo de Recebimentos";
 	$projectEntities[ "DashBoard" ] = array( "url" => "dashboard", "type" => 3 );
 	$projectEntitiesReverse[ "dashboard" ] = "DashBoard";
 	$projectEntities[ "VisaoGeral" ] = array( "url" => "visaogeral", "type" => 4 );
 	$projectEntitiesReverse[ "visaogeral" ] = "VisaoGeral";
+	$projectEntities[ "adm_agenda_estrutura_1" ] = array( "url" => "adm_agenda_estrutura_1", "type" => 0 );
+	$projectEntitiesReverse[ "adm_agenda_estrutura_1" ] = "adm_agenda_estrutura_1";
+	$projectEntities[ "adm_agenda_config_1" ] = array( "url" => "adm_agenda_config_1", "type" => 0 );
+	$projectEntitiesReverse[ "adm_agenda_config_1" ] = "adm_agenda_config_1";
+	$projectEntities[ "adm_agenda_1" ] = array( "url" => "adm_agenda_1", "type" => 0 );
+	$projectEntitiesReverse[ "adm_agenda_1" ] = "adm_agenda_1";
+	$projectEntities[ "adm_agenda_tipos_recebimento" ] = array( "url" => "adm_agenda_tipos_recebimento", "type" => 0 );
+	$projectEntitiesReverse[ "adm_agenda_tipos_recebimento" ] = "adm_agenda_tipos_recebimento";
+	$projectEntities[ "adm_tipo_config" ] = array( "url" => "adm_tipo_config", "type" => 0 );
+	$projectEntitiesReverse[ "adm_tipo_config" ] = "adm_tipo_config";
 }
 
 function findTable( $table ) {

@@ -2659,8 +2659,9 @@ $tdatabusca_profissional[".hideMobileList"] = array();
 	
 
 // Begin Lookup settings
-				$edata["LookupType"] = 2;
+				$edata["LookupType"] = 1;
 	$edata["LookupTable"] = "ibge_pais";
+	$edata["LookupConnId"] = "iaperdbatrobb0254publiccloudco";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 1;
@@ -2680,7 +2681,8 @@ $tdatabusca_profissional[".hideMobileList"] = array();
 	
 	
 	
-	
+		$edata["SimpleAdd"] = true;
+
 
 	
 	
@@ -2958,8 +2960,9 @@ $tdatabusca_profissional[".hideMobileList"] = array();
 	
 
 // Begin Lookup settings
-				$edata["LookupType"] = 2;
+				$edata["LookupType"] = 1;
 	$edata["LookupTable"] = "ibge_municipios";
+	$edata["LookupConnId"] = "iaperdbatrobb0254publiccloudco";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 1;
@@ -2979,7 +2982,8 @@ $tdatabusca_profissional[".hideMobileList"] = array();
 	
 	
 	
-	
+		$edata["SimpleAdd"] = true;
+
 
 	
 	

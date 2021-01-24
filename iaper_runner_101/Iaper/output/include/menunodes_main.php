@@ -20,8 +20,8 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNode["pageId"] = "";
 	$menuNode["openType"] = "None";
 
-	$menuNode["icon"] = "glyphicon-user";
-	$menuNode["iconType"] = "2";
+	$menuNode["icon"] = "";
+	$menuNode["iconType"] = "0";
 	$menuNode["iconShow"] = "2";
 
 		$menuNode["color"] = "";
@@ -46,8 +46,8 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNode["pageId"] = "";
 	$menuNode["openType"] = "None";
 
-	$menuNode["icon"] = "glyphicon-earphone";
-	$menuNode["iconType"] = "2";
+	$menuNode["icon"] = "";
+	$menuNode["iconType"] = "0";
 	$menuNode["iconShow"] = "2";
 
 		$menuNode["color"] = "";
@@ -72,8 +72,8 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNode["pageId"] = "";
 	$menuNode["openType"] = "None";
 
-	$menuNode["icon"] = "glyphicon-user";
-	$menuNode["iconType"] = "2";
+	$menuNode["icon"] = "";
+	$menuNode["iconType"] = "0";
 	$menuNode["iconShow"] = "2";
 
 		$menuNode["color"] = "";
@@ -85,96 +85,96 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "4";
-	$menuNode["name"] = "Minha Agenda";
-	$menuNode["href"] = "mypage.htm";
-	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "adm_tratamento";
+	$menuNode["name"] = "Agenda";
+	$menuNode["href"] = "";
+	$menuNode["type"] = "Group";
+	$menuNode["table"] = "";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
 	$menuNode["parent"] = "0";
 	$menuNode["nameType"] = "Text";
-	$menuNode["linkType"] = "Internal";
-	$menuNode["pageType"] = strtolower("List");//
+	$menuNode["linkType"] = "None";
+	$menuNode["pageType"] = strtolower("");//
 	$menuNode["pageId"] = "";
 	$menuNode["openType"] = "None";
 
-	$menuNode["icon"] = "glyphicon-hand-right";
-	$menuNode["iconType"] = "2";
-	$menuNode["iconShow"] = "2";
+	$menuNode["icon"] = "";
+	$menuNode["iconType"] = "0";
+	$menuNode["iconShow"] = "1";
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Minha Agenda";
+	$menuNode["title"] = "Agenda";
 
 
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "5";
-	$menuNode["name"] = "Configurar Agenda";
-	$menuNode["href"] = "https://iaper.com.br/page-agenda-config.html?num_cliente_id=1&num_usu_id=1&produto_id=1";
+	$menuNode["name"] = "Configuração da Agenda";
+	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "";
+	$menuNode["table"] = "adm_agenda_config_1";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "0";
+	$menuNode["parent"] = "4";
 	$menuNode["nameType"] = "Text";
-	$menuNode["linkType"] = "External";
-	$menuNode["pageType"] = strtolower("");//
-	$menuNode["pageId"] = "list";
-	$menuNode["openType"] = "NewWindow";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = strtolower("List");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
 
 	$menuNode["icon"] = "";
 	$menuNode["iconType"] = "0";
-	$menuNode["iconShow"] = "1";
+	$menuNode["iconShow"] = "2";
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Configurar Agenda";
+	$menuNode["title"] = "Configuração da Agenda";
 
 
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "6";
-	$menuNode["name"] = "Marcar Consulta";
-	$menuNode["href"] = "https://iaper.com.br/page-agenda-config.html?page-agenda-profiss-id.html?produto_id=1&num_usu_id=1";
+	$menuNode["name"] = "Configurar Datas";
+	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "";
+	$menuNode["table"] = "adm_agenda_estrutura_1";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "0";
+	$menuNode["parent"] = "4";
 	$menuNode["nameType"] = "Text";
-	$menuNode["linkType"] = "External";
-	$menuNode["pageType"] = strtolower("");//
-	$menuNode["pageId"] = "list";
-	$menuNode["openType"] = "NewWindow";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = strtolower("List");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
 
 	$menuNode["icon"] = "";
 	$menuNode["iconType"] = "0";
-	$menuNode["iconShow"] = "1";
+	$menuNode["iconShow"] = "2";
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Marcar Consulta";
+	$menuNode["title"] = "Configurar Datas";
 
 
 
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "7";
-	$menuNode["name"] = "Gestão da Agenda";
-	$menuNode["href"] = "https://iaper.com.br/page-agenda-config.html?page-agenda-profissional-gestao.html";
+	$menuNode["name"] = "Gerenciar Consultas";
+	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
-	$menuNode["table"] = "";
+	$menuNode["table"] = "adm_agenda_1";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
-	$menuNode["parent"] = "0";
+	$menuNode["parent"] = "4";
 	$menuNode["nameType"] = "Text";
-	$menuNode["linkType"] = "External";
-	$menuNode["pageType"] = strtolower("");//
-	$menuNode["pageId"] = "list";
-	$menuNode["openType"] = "NewWindow";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = strtolower("List");//
+	$menuNode["pageId"] = "";
+	$menuNode["openType"] = "None";
 
 	$menuNode["icon"] = "";
 	$menuNode["iconType"] = "0";
@@ -182,7 +182,7 @@ function getMenuNodes_main($menuNodesObject)
 
 		$menuNode["color"] = "";
 
-	$menuNode["title"] = "Gestão da Agenda";
+	$menuNode["title"] = "Gerenciar Consultas";
 
 
 

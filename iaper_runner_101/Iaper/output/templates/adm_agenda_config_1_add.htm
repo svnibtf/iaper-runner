@@ -1,0 +1,368 @@
+<!doctype html><p align=center><font size=+1 color=red></font></p>
+<p align=center><font size=+1 color=red></font></p>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="add_header" data-itemid="add_header" {$item_add_header} data-pageid="{$pageid}" >{$pagetitlelabel adm_agenda_config_1 add}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		{BEGIN message_block}
+<div data-itemtype="add_message" data-itemid="add_message" {$item_add_message} data-pageid="{$pageid}" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		
+	<button class="btn btn-sm btn-default" {$backbutton_attrs}>Voltar à Lista</button>
+	{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>Exibir</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>Editar</button>
+{END edit_page_button}
+</div>
+</div>
+{END message_block}	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN agc_nome_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_agc_nome}  r-vertical-field" 
+	data-fieldname="agc_nome" 
+	data-signal-error-for="agc_nome{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="agc_nome" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_agc_nome}">
+		{BEGIN agc_nome_label}{$label adm_agenda_config_1 agc_nome }{END agc_nome_label}
+	</label>
+	<div class="r-edit-field">
+		{$agc_nome_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="agc_nome">
+		<div class="text-muted" >
+		{$tooltip adm_agenda_config_1 agc_nome }		</div>
+	</div>
+</div>
+
+
+{END agc_nome_fieldblock}
+											
+{BEGIN agc_item_pagamento_id_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_agc_item_pagamento_id}  r-vertical-field" 
+	data-fieldname="agc_item_pagamento_id" 
+	data-signal-error-for="agc_item_pagamento_id{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="agc_item_pagamento_id" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_agc_item_pagamento_id}">
+		{BEGIN agc_item_pagamento_id_label}{$label adm_agenda_config_1 agc_item_pagamento_id }{END agc_item_pagamento_id_label}
+	</label>
+	<div class="r-edit-field">
+		{$agc_item_pagamento_id_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="agc_item_pagamento_id">
+		<div class="text-muted" >
+		{$tooltip adm_agenda_config_1 agc_item_pagamento_id }		</div>
+	</div>
+</div>
+
+
+{END agc_item_pagamento_id_fieldblock}
+											
+{BEGIN agc_qtidade_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_agc_qtidade}  r-vertical-field" 
+	data-fieldname="agc_qtidade" 
+	data-signal-error-for="agc_qtidade{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="agc_qtidade" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_agc_qtidade}">
+		{BEGIN agc_qtidade_label}{$label adm_agenda_config_1 agc_qtidade }{END agc_qtidade_label}
+	</label>
+	<div class="r-edit-field">
+		{$agc_qtidade_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="agc_qtidade">
+		<div class="text-muted" >
+		{$tooltip adm_agenda_config_1 agc_qtidade }		</div>
+	</div>
+</div>
+
+
+{END agc_qtidade_fieldblock}
+											
+{BEGIN agc_duracao_media_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_agc_duracao_media}  r-vertical-field" 
+	data-fieldname="agc_duracao_media" 
+	data-signal-error-for="agc_duracao_media{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="agc_duracao_media" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_agc_duracao_media}">
+		{BEGIN agc_duracao_media_label}{$label adm_agenda_config_1 agc_duracao_media }{END agc_duracao_media_label}
+	</label>
+	<div class="r-edit-field">
+		{$agc_duracao_media_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="agc_duracao_media">
+		<div class="text-muted" >
+		{$tooltip adm_agenda_config_1 agc_duracao_media }		</div>
+	</div>
+</div>
+
+
+{END agc_duracao_media_fieldblock}
+											
+{BEGIN agc_email_automatico_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_agc_email_automatico}  r-vertical-field" 
+	data-fieldname="agc_email_automatico" 
+	data-signal-error-for="agc_email_automatico{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="agc_email_automatico" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_agc_email_automatico}">
+		{BEGIN agc_email_automatico_label}{$label adm_agenda_config_1 agc_email_automatico }{END agc_email_automatico_label}
+	</label>
+	<div class="r-edit-field">
+		{$agc_email_automatico_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="agc_email_automatico">
+		<div class="text-muted" >
+		{$tooltip adm_agenda_config_1 agc_email_automatico }		</div>
+	</div>
+</div>
+
+
+{END agc_email_automatico_fieldblock}
+											
+{BEGIN agc_tempo_min_antecedencia_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_agc_tempo_min_antecedencia}  r-vertical-field" 
+	data-fieldname="agc_tempo_min_antecedencia" 
+	data-signal-error-for="agc_tempo_min_antecedencia{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="agc_tempo_min_antecedencia" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_agc_tempo_min_antecedencia}">
+		{BEGIN agc_tempo_min_antecedencia_label}{$label adm_agenda_config_1 agc_tempo_min_antecedencia }{END agc_tempo_min_antecedencia_label}
+	</label>
+	<div class="r-edit-field">
+		{$agc_tempo_min_antecedencia_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="agc_tempo_min_antecedencia">
+		<div class="text-muted" >
+		{$tooltip adm_agenda_config_1 agc_tempo_min_antecedencia }		</div>
+	</div>
+</div>
+
+
+{END agc_tempo_min_antecedencia_fieldblock}
+											
+{BEGIN agc_email_agendamento_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_agc_email_agendamento}  r-vertical-field" 
+	data-fieldname="agc_email_agendamento" 
+	data-signal-error-for="agc_email_agendamento{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="agc_email_agendamento" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_agc_email_agendamento}">
+		{BEGIN agc_email_agendamento_label}{$label adm_agenda_config_1 agc_email_agendamento }{END agc_email_agendamento_label}
+	</label>
+	<div class="r-edit-field">
+		{$agc_email_agendamento_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="agc_email_agendamento">
+		<div class="text-muted" >
+		{$tooltip adm_agenda_config_1 agc_email_agendamento }		</div>
+	</div>
+</div>
+
+
+{END agc_email_agendamento_fieldblock}
+											
+{BEGIN agc_email_lembrete_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_agc_email_lembrete}  r-vertical-field" 
+	data-fieldname="agc_email_lembrete" 
+	data-signal-error-for="agc_email_lembrete{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="agc_email_lembrete" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_agc_email_lembrete}">
+		{BEGIN agc_email_lembrete_label}{$label adm_agenda_config_1 agc_email_lembrete }{END agc_email_lembrete_label}
+	</label>
+	<div class="r-edit-field">
+		{$agc_email_lembrete_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="agc_email_lembrete">
+		<div class="text-muted" >
+		{$tooltip adm_agenda_config_1 agc_email_lembrete }		</div>
+	</div>
+</div>
+
+
+{END agc_email_lembrete_fieldblock}
+											
+{BEGIN agc_email_cancelamento_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_agc_email_cancelamento}  r-vertical-field" 
+	data-fieldname="agc_email_cancelamento" 
+	data-signal-error-for="agc_email_cancelamento{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="agc_email_cancelamento" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_agc_email_cancelamento}">
+		{BEGIN agc_email_cancelamento_label}{$label adm_agenda_config_1 agc_email_cancelamento }{END agc_email_cancelamento_label}
+	</label>
+	<div class="r-edit-field">
+		{$agc_email_cancelamento_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="agc_email_cancelamento">
+		<div class="text-muted" >
+		{$tooltip adm_agenda_config_1 agc_email_cancelamento }		</div>
+	</div>
+</div>
+
+
+{END agc_email_cancelamento_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="add_save" data-itemid="add_save" {$item_add_save} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$savebutton_attrs} >
+							Salvar			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="add_back_list" data-itemid="add_back_list" {$item_add_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="backButton{$id}" >
+							Voltar à Lista			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="add_cancel" data-itemid="add_cancel" {$item_add_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancela			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -215,6 +215,35 @@
 {END breadcrumb}			</span>
 							 
 							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
+				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+							<span class="glyphicon glyphicon-cog"></span>
+									<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="showOptPanel{$id}"  title="" >
+				
+		Mostrar painel de busca		
+		</a>
+	</li>
+{END searchPanelTopButtons}
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="hideOptPanel{$id}"  title="" >
+				
+		Ocultar painel de busca		
+		</a>
+	</li>
+{END searchPanelTopButtons}
+					</ul>
+	</span>
+</span>
+			</span>
+		 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
 				{BEGIN guestloginbutton}
 <span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
@@ -281,6 +310,29 @@
 		{BEGIN firstAboveGridCell}
 				{END firstAboveGridCell}	
 	</div>					</div>
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-6
+	
+">
+		 
+		{BEGIN add_link}
+<span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$addlink_attrs} href="adm_planos1_add.php{$stateLink_full}" data-popup >
+							Adicionar Novo			</a>
+</span>
+{END add_link}
+		</div>			 
+				<div 
+	data-cellId="above-grid_c" data-pageid="{$pageid}"	{$cell_above-grid_c}
+	class="r-align-right r-ori-vert			col-md-6
+	
+">
+			</div>					</div>
 	</div>		
 {END above-grid_block}
 						</div>
@@ -379,9 +431,11 @@
 
 	 
 		{BEGIN Plano_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Plano">
-	{$label adm_planos Plano }	</span>
+	{BEGIN Plano_fieldheader}
+	<SPAN {$Plano_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Plano">
+	{$label adm_planos Plano }	{$arrow_icon_Plano}
+	</SPAN>
+	{END Plano_fieldheader}
 {END Plano_fieldheadercolumn}
 
 	
@@ -404,9 +458,11 @@
 
 	 
 		{BEGIN Valor_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Valor">
-	{$label adm_planos Valor }	</span>
+	{BEGIN Valor_fieldheader}
+	<SPAN {$Valor_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Valor">
+	{$label adm_planos Valor }	{$arrow_icon_Valor}
+	</SPAN>
+	{END Valor_fieldheader}
 {END Valor_fieldheadercolumn}
 
 	
@@ -429,9 +485,11 @@
 
 	 
 		{BEGIN Quantidade_Dia_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Quantidade_Dia">
-	{$label adm_planos Quantidade_Dia }	</span>
+	{BEGIN Quantidade_Dia_fieldheader}
+	<SPAN {$Quantidade_Dia_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Quantidade_Dia">
+	{$label adm_planos Quantidade_Dia }	{$arrow_icon_Quantidade_Dia}
+	</SPAN>
+	{END Quantidade_Dia_fieldheader}
 {END Quantidade_Dia_fieldheadercolumn}
 
 	
@@ -454,9 +512,11 @@
 
 	 
 		{BEGIN Combo_fieldheadercolumn}
- 
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Combo">
-	{$label adm_planos Combo }	</span>
+	{BEGIN Combo_fieldheader}
+	<SPAN {$Combo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Combo">
+	{$label adm_planos Combo }	{$arrow_icon_Combo}
+	</SPAN>
+	{END Combo_fieldheader}
 {END Combo_fieldheadercolumn}
 
 	

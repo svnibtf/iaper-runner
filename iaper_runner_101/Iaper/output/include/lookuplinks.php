@@ -159,13 +159,62 @@ function InitLookupLinks()
 			$lookupTableLinks["adm_usuarios_dados_profissionais"]["busca_profissional.idEmpresa"] = array();
 		}
 		$lookupTableLinks["adm_usuarios_dados_profissionais"]["busca_profissional.idEmpresa"]["edit"] = array("table" => "Busca Profissional", "field" => "idEmpresa", "page" => "edit");
+		if( !isset( $lookupTableLinks["adm_agenda_config_1"] ) ) {
+			$lookupTableLinks["adm_agenda_config_1"] = array();
+		}
+		if( !isset( $lookupTableLinks["adm_agenda_config_1"]["adm_agenda_estrutura_1.agt_config_id"] )) {
+			$lookupTableLinks["adm_agenda_config_1"]["adm_agenda_estrutura_1.agt_config_id"] = array();
+		}
+		$lookupTableLinks["adm_agenda_config_1"]["adm_agenda_estrutura_1.agt_config_id"]["edit"] = array("table" => "adm_agenda_estrutura_1", "field" => "agt_config_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["adm_usuarios"] ) ) {
+			$lookupTableLinks["adm_usuarios"] = array();
+		}
+		if( !isset( $lookupTableLinks["adm_usuarios"]["adm_agenda_config_1.agc_usu_pro_id"] )) {
+			$lookupTableLinks["adm_usuarios"]["adm_agenda_config_1.agc_usu_pro_id"] = array();
+		}
+		$lookupTableLinks["adm_usuarios"]["adm_agenda_config_1.agc_usu_pro_id"]["edit"] = array("table" => "adm_agenda_config_1", "field" => "agc_usu_pro_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["adm_agenda_tipos_recebimento"] ) ) {
+			$lookupTableLinks["adm_agenda_tipos_recebimento"] = array();
+		}
+		if( !isset( $lookupTableLinks["adm_agenda_tipos_recebimento"]["adm_agenda_config_1.agc_item_pagamento_id"] )) {
+			$lookupTableLinks["adm_agenda_tipos_recebimento"]["adm_agenda_config_1.agc_item_pagamento_id"] = array();
+		}
+		$lookupTableLinks["adm_agenda_tipos_recebimento"]["adm_agenda_config_1.agc_item_pagamento_id"]["edit"] = array("table" => "adm_agenda_config_1", "field" => "agc_item_pagamento_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["adm_tipo_config"] ) ) {
+			$lookupTableLinks["adm_tipo_config"] = array();
+		}
+		if( !isset( $lookupTableLinks["adm_tipo_config"]["adm_agenda_config_1.agc_email_automatico"] )) {
+			$lookupTableLinks["adm_tipo_config"]["adm_agenda_config_1.agc_email_automatico"] = array();
+		}
+		$lookupTableLinks["adm_tipo_config"]["adm_agenda_config_1.agc_email_automatico"]["edit"] = array("table" => "adm_agenda_config_1", "field" => "agc_email_automatico", "page" => "edit");
+		if( !isset( $lookupTableLinks["adm_usuarios"] ) ) {
+			$lookupTableLinks["adm_usuarios"] = array();
+		}
+		if( !isset( $lookupTableLinks["adm_usuarios"]["adm_agenda_1.age_usu_id"] )) {
+			$lookupTableLinks["adm_usuarios"]["adm_agenda_1.age_usu_id"] = array();
+		}
+		$lookupTableLinks["adm_usuarios"]["adm_agenda_1.age_usu_id"]["edit"] = array("table" => "adm_agenda_1", "field" => "age_usu_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["adm_agenda_config_1"] ) ) {
+			$lookupTableLinks["adm_agenda_config_1"] = array();
+		}
+		if( !isset( $lookupTableLinks["adm_agenda_config_1"]["adm_agenda_1.age_config_id"] )) {
+			$lookupTableLinks["adm_agenda_config_1"]["adm_agenda_1.age_config_id"] = array();
+		}
+		$lookupTableLinks["adm_agenda_config_1"]["adm_agenda_1.age_config_id"]["edit"] = array("table" => "adm_agenda_1", "field" => "age_config_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["adm_agenda_tipos_recebimento"] ) ) {
+			$lookupTableLinks["adm_agenda_tipos_recebimento"] = array();
+		}
+		if( !isset( $lookupTableLinks["adm_agenda_tipos_recebimento"]["adm_agenda_1.age_tipo_pagamento"] )) {
+			$lookupTableLinks["adm_agenda_tipos_recebimento"]["adm_agenda_1.age_tipo_pagamento"] = array();
+		}
+		$lookupTableLinks["adm_agenda_tipos_recebimento"]["adm_agenda_1.age_tipo_pagamento"]["edit"] = array("table" => "adm_agenda_1", "field" => "age_tipo_pagamento", "page" => "edit");
 		if( !isset( $lookupTableLinks["adm_pacientes"] ) ) {
 			$lookupTableLinks["adm_pacientes"] = array();
 		}
-		if( !isset( $lookupTableLinks["adm_pacientes"]["adm_tratamento1.idPaciente"] )) {
-			$lookupTableLinks["adm_pacientes"]["adm_tratamento1.idPaciente"] = array();
+		if( !isset( $lookupTableLinks["adm_pacientes"]["adm_agenda_1.age_Paciente"] )) {
+			$lookupTableLinks["adm_pacientes"]["adm_agenda_1.age_Paciente"] = array();
 		}
-		$lookupTableLinks["adm_pacientes"]["adm_tratamento1.idPaciente"]["edit"] = array("table" => "adm_tratamento", "field" => "idPaciente", "page" => "edit");
+		$lookupTableLinks["adm_pacientes"]["adm_agenda_1.age_Paciente"]["edit"] = array("table" => "adm_agenda_1", "field" => "age_Paciente", "page" => "edit");
 }
 
 ?>
