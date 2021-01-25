@@ -300,7 +300,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": '{$age_data_att_align}',
+              "alignment": 'left',
   },
 
 {END cellblock_grid_cell_field}
@@ -356,7 +356,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": '{$age_time_att_align}',
+              "alignment": 'left',
   },
 
 {END cellblock_grid_cell_field1}
@@ -412,7 +412,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": '{$age_dia_sem_align}',
+              "alignment": 'left',
   },
 
 {END cellblock_grid_cell_field2}
@@ -468,7 +468,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": '{$age_config_id_align}',
+              "alignment": 'left',
   },
 
 {END cellblock_grid_cell_field3}
@@ -524,7 +524,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ false, false, false, false ],
-              "alignment": '{$age_Paciente_align}',
+              "alignment": 'left',
   },
 
 {END cellblock_grid_cell_field4}

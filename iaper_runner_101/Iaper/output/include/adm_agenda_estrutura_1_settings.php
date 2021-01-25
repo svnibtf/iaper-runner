@@ -40,7 +40,7 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldLabelsadm_agenda_estrutura_1["Portuguese(Brazil)"]["agt_dia_sem"] = "Dia Semana";
 	$fieldToolTipsadm_agenda_estrutura_1["Portuguese(Brazil)"]["agt_dia_sem"] = "";
 	$placeHoldersadm_agenda_estrutura_1["Portuguese(Brazil)"]["agt_dia_sem"] = "";
-	$fieldLabelsadm_agenda_estrutura_1["Portuguese(Brazil)"]["agt_time_inicio"] = "Hora Inicio";
+	$fieldLabelsadm_agenda_estrutura_1["Portuguese(Brazil)"]["agt_time_inicio"] = "Hora Início";
 	$fieldToolTipsadm_agenda_estrutura_1["Portuguese(Brazil)"]["agt_time_inicio"] = "";
 	$placeHoldersadm_agenda_estrutura_1["Portuguese(Brazil)"]["agt_time_inicio"] = "";
 	$fieldLabelsadm_agenda_estrutura_1["Portuguese(Brazil)"]["agt_time_fim"] = "Hora Fim";

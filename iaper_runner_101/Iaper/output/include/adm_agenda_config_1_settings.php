@@ -43,7 +43,7 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldLabelsadm_agenda_config_1["Portuguese(Brazil)"]["agc_qtidade"] = "Quantidade";
 	$fieldToolTipsadm_agenda_config_1["Portuguese(Brazil)"]["agc_qtidade"] = "";
 	$placeHoldersadm_agenda_config_1["Portuguese(Brazil)"]["agc_qtidade"] = "";
-	$fieldLabelsadm_agenda_config_1["Portuguese(Brazil)"]["agc_duracao_media"] = "Duracao Media";
+	$fieldLabelsadm_agenda_config_1["Portuguese(Brazil)"]["agc_duracao_media"] = "Duração Média";
 	$fieldToolTipsadm_agenda_config_1["Portuguese(Brazil)"]["agc_duracao_media"] = "";
 	$placeHoldersadm_agenda_config_1["Portuguese(Brazil)"]["agc_duracao_media"] = "";
 	$fieldLabelsadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_automatico"] = "Email Automatico";

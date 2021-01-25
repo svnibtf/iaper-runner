@@ -261,7 +261,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$agt_config_id_align}',
+              "alignment": 'left',
   },
 
 {END cellblock_grid_headcell_field}
@@ -287,7 +287,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$agt_dia_sem_align}',
+              "alignment": 'left',
   },
 
 {END cellblock_grid_headcell_field1}
@@ -313,7 +313,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$agt_time_inicio_align}',
+              "alignment": 'left',
   },
 
 {END cellblock_grid_headcell_field2}
@@ -339,7 +339,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$agt_time_fim_align}',
+              "alignment": 'left',
   },
 
 {END cellblock_grid_headcell_field3}
@@ -428,7 +428,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$agt_config_id_align}',
+              "alignment": 'left',
   },
 
 {END cellblock_grid_cell_field}
@@ -454,7 +454,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$agt_dia_sem_align}',
+              "alignment": 'left',
   },
 
 {END cellblock_grid_cell_field1}
@@ -480,7 +480,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$agt_time_inicio_align}',
+              "alignment": 'left',
   },
 
 {END cellblock_grid_cell_field2}
@@ -506,7 +506,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$agt_time_fim_align}',
+              "alignment": 'left',
   },
 
 {END cellblock_grid_cell_field3}
