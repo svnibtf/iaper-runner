@@ -117,13 +117,7 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_search_field}","text":{$agt_id_pdfvalue}},
-				
-				
 			{"hidden":"{$item_hide_integrated_search_field1}","text":{$agt_usu_pro_id_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_integrated_search_field2}","text":{$agt_config_id_pdfvalue}},
 				
 				
 			{"hidden":"{$item_hide_integrated_search_field3}","text":{$agt_data_excluir_pdfvalue}},

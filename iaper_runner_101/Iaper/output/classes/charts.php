@@ -519,6 +519,10 @@ class Chart
 			return true;
 		if("adm_tipo_config" == $this->chrt_array['tables'][0])
 			return true;
+		if("adm_parametros_config" == $this->chrt_array['tables'][0])
+			return true;
+		if("adm_horarios" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 	

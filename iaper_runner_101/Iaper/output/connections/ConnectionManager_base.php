@@ -227,6 +227,8 @@ class ConnectionManager_Base
 		$connectionsIds["adm_agenda_1"] = "iaperdbatrobb0254publiccloudco";
 		$connectionsIds["adm_agenda_tipos_recebimento"] = "iaperdbatrobb0254publiccloudco";
 		$connectionsIds["adm_tipo_config"] = "iaperdbatrobb0254publiccloudco";
+		$connectionsIds["adm_parametros_config"] = "iaperdbatrobb0254publiccloudco";
+		$connectionsIds["adm_horarios"] = "iaperdbatrobb0254publiccloudco";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

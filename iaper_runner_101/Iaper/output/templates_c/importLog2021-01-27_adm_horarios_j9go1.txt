@@ -1,0 +1,6 @@
+Importar para adm_horarios
+27/01/2021 12:13:35
+
+16 de 16 de registros processados com sucesso.
+14 de registros adicionados.
+2 de registros atualizados.

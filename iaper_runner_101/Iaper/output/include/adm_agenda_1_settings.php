@@ -46,7 +46,7 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldLabelsadm_agenda_1["Portuguese(Brazil)"]["age_data_in"] = "Data In";
 	$fieldToolTipsadm_agenda_1["Portuguese(Brazil)"]["age_data_in"] = "";
 	$placeHoldersadm_agenda_1["Portuguese(Brazil)"]["age_data_in"] = "";
-	$fieldLabelsadm_agenda_1["Portuguese(Brazil)"]["age_acao"] = "Acao";
+	$fieldLabelsadm_agenda_1["Portuguese(Brazil)"]["age_acao"] = "Ação";
 	$fieldToolTipsadm_agenda_1["Portuguese(Brazil)"]["age_acao"] = "";
 	$placeHoldersadm_agenda_1["Portuguese(Brazil)"]["age_acao"] = "";
 	$fieldLabelsadm_agenda_1["Portuguese(Brazil)"]["age_retorno_data_time"] = "Retorno ";
@@ -55,7 +55,7 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldLabelsadm_agenda_1["Portuguese(Brazil)"]["age_tipo_pagamento"] = "Tipo Pagamento";
 	$fieldToolTipsadm_agenda_1["Portuguese(Brazil)"]["age_tipo_pagamento"] = "";
 	$placeHoldersadm_agenda_1["Portuguese(Brazil)"]["age_tipo_pagamento"] = "";
-	$fieldLabelsadm_agenda_1["Portuguese(Brazil)"]["age_anotacoes"] = "Anotacoes";
+	$fieldLabelsadm_agenda_1["Portuguese(Brazil)"]["age_anotacoes"] = "Anotações";
 	$fieldToolTipsadm_agenda_1["Portuguese(Brazil)"]["age_anotacoes"] = "";
 	$placeHoldersadm_agenda_1["Portuguese(Brazil)"]["age_anotacoes"] = "";
 	$fieldLabelsadm_agenda_1["Portuguese(Brazil)"]["age_att_campo_1"] = "Att Campo 1";
@@ -200,22 +200,10 @@ $tdataadm_agenda_1[".filterFields"] = array();
 $tdataadm_agenda_1[".requiredSearchFields"] = array();
 
 $tdataadm_agenda_1[".googleLikeFields"] = array();
-$tdataadm_agenda_1[".googleLikeFields"][] = "age_id";
-$tdataadm_agenda_1[".googleLikeFields"][] = "age_usu_id";
-$tdataadm_agenda_1[".googleLikeFields"][] = "age_config_id";
 $tdataadm_agenda_1[".googleLikeFields"][] = "age_dia_sem";
 $tdataadm_agenda_1[".googleLikeFields"][] = "age_data_att";
 $tdataadm_agenda_1[".googleLikeFields"][] = "age_time_att";
 $tdataadm_agenda_1[".googleLikeFields"][] = "age_data_in";
-$tdataadm_agenda_1[".googleLikeFields"][] = "age_acao";
-$tdataadm_agenda_1[".googleLikeFields"][] = "age_retorno_data_time";
-$tdataadm_agenda_1[".googleLikeFields"][] = "age_tipo_pagamento";
-$tdataadm_agenda_1[".googleLikeFields"][] = "age_anotacoes";
-$tdataadm_agenda_1[".googleLikeFields"][] = "age_att_campo_1";
-$tdataadm_agenda_1[".googleLikeFields"][] = "age_att_campo_2";
-$tdataadm_agenda_1[".googleLikeFields"][] = "age_att_campo_3";
-$tdataadm_agenda_1[".googleLikeFields"][] = "age_att_campo_4";
-$tdataadm_agenda_1[".googleLikeFields"][] = "age_deletado";
 $tdataadm_agenda_1[".googleLikeFields"][] = "age_Paciente";
 
 
@@ -673,9 +661,10 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	$edata["LookupTable"] = "adm_agenda_config_1";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
+		$edata["LCType"] = 4;
 
-	
+		$edata["HorizontalLookup"] = true;
+
 			$edata["LookupUnique"] = true;
 
 	$edata["LinkField"] = "agc_id";
@@ -694,12 +683,12 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 
 	
 	
-		$edata["SelectSize"] = 1;
-
+	
 // End Lookup Settings
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -720,7 +709,8 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 	//	End validation
 
@@ -854,7 +844,8 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 // End Lookup Settings
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -875,7 +866,8 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 	//	End validation
 
@@ -979,7 +971,7 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	$edata = array("EditFormat" => "Date");
 
 	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -988,7 +980,8 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -999,7 +992,7 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 
 	
 	
-		$edata["DateEditType"] = 13;
+		$edata["DateEditType"] = 5;
 	$edata["InitialYearFactor"] = 100;
 	$edata["LastYearFactor"] = 10;
 
@@ -1012,7 +1005,8 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 	//	End validation
 
@@ -1115,12 +1109,99 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	$vdata["NumberOfChars"] = 80;
 
 	$fdata["ViewFormats"]["view"] = $vdata;
+	$vdata = array("ViewFormat" => "Time");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+		$vdata["timeFormatData"] = array(
+		"showSeconds" => false,
+		"showDaysInTotals" => false,
+		"timeFormat" => 0
+	);
+	$vdata["timeFormatData"]["showSeconds"] = true;
+	$vdata["timeFormatData"]["showDaysInTotals"] = true;
+
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["list"] = $vdata;
+	$vdata = array("ViewFormat" => "Time");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+		$vdata["timeFormatData"] = array(
+		"showSeconds" => false,
+		"showDaysInTotals" => false,
+		"timeFormat" => 0
+	);
+	$vdata["timeFormatData"]["showSeconds"] = true;
+	$vdata["timeFormatData"]["showDaysInTotals"] = true;
+
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["print"] = $vdata;
+	$vdata = array("ViewFormat" => "Time");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+		$vdata["timeFormatData"] = array(
+		"showSeconds" => false,
+		"showDaysInTotals" => false,
+		"timeFormat" => 0
+	);
+	$vdata["timeFormatData"]["showSeconds"] = true;
+	$vdata["timeFormatData"]["showDaysInTotals"] = true;
+
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["export"] = $vdata;
 //  End View Formats
 
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Time");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1130,6 +1211,35 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "adm_horarios";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 4;
+
+		$edata["HorizontalLookup"] = true;
+
+			$edata["LookupUnique"] = true;
+
+	$edata["LinkField"] = "Horario";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Horario";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "Horario";
+
+	
+	
+	
+	
+
+	
+	
+	
+// End Lookup Settings
 
 
 	
@@ -1146,8 +1256,7 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	
 	
 	
-		$edata["EditParams"] = "";
-		
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -1160,19 +1269,160 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 
 	
 			
-				$hours = 24;
-	$edata["FormatTimeAttrs"] = array("useTimePicker" => 1,
-									  "hours" => $hours,
-									  "minutes" => 1,
-									  "showSeconds" => 1);
-
+	
 	
 	
 	$fdata["EditFormats"]["edit"] = $edata;
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "adm_horarios";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 4;
+
+		$edata["HorizontalLookup"] = true;
+
+			$edata["LookupUnique"] = true;
+
+	$edata["LinkField"] = "Horario";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Horario";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "Horario";
+
+	
+	
+	
+	
+
+	
+	
+	
+// End Lookup Settings
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["add"] = $edata;
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "adm_horarios";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 4;
+
+		$edata["HorizontalLookup"] = true;
+
+			$edata["LookupUnique"] = true;
+
+	$edata["LinkField"] = "Horario";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Horario";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "Horario";
+
+	
+	
+	
+	
+
+	
+	
+	
+// End Lookup Settings
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["search"] = $edata;
 //	End Edit Formats
 
 
-	$fdata["isSeparate"] = false;
+	$fdata["isSeparate"] = true;
 
 
 
@@ -1263,7 +1513,7 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	$edata = array("EditFormat" => "Date");
 
 	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -1272,7 +1522,8 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -1283,7 +1534,7 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 
 	
 	
-		$edata["DateEditType"] = 13;
+		$edata["DateEditType"] = 5;
 	$edata["InitialYearFactor"] = 100;
 	$edata["LastYearFactor"] = 10;
 
@@ -1296,7 +1547,8 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 	//	End validation
 
@@ -1533,7 +1785,7 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1543,6 +1795,35 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "adm_parametros_config";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+			$edata["LookupUnique"] = true;
+
+	$edata["LinkField"] = "Chave";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Chave";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -1558,11 +1839,8 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=127";
-
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -1588,7 +1866,7 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1685,9 +1963,10 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	$edata["LookupTable"] = "adm_agenda_tipos_recebimento";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
+		$edata["LCType"] = 4;
 
-	
+		$edata["HorizontalLookup"] = true;
+
 			$edata["LookupUnique"] = true;
 
 	$edata["LinkField"] = "atr_id";
@@ -1706,8 +1985,7 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 
 	
 	
-		$edata["SelectSize"] = 1;
-
+	
 // End Lookup Settings
 
 
@@ -2690,7 +2968,8 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 // End Lookup Settings
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -2711,7 +2990,8 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 	//	End validation
 

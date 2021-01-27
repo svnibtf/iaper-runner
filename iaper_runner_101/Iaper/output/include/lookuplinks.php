@@ -166,6 +166,20 @@ function InitLookupLinks()
 			$lookupTableLinks["adm_agenda_config_1"]["adm_agenda_estrutura_1.agt_config_id"] = array();
 		}
 		$lookupTableLinks["adm_agenda_config_1"]["adm_agenda_estrutura_1.agt_config_id"]["edit"] = array("table" => "adm_agenda_estrutura_1", "field" => "agt_config_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["adm_horarios"] ) ) {
+			$lookupTableLinks["adm_horarios"] = array();
+		}
+		if( !isset( $lookupTableLinks["adm_horarios"]["adm_agenda_estrutura_1.agt_time_inicio"] )) {
+			$lookupTableLinks["adm_horarios"]["adm_agenda_estrutura_1.agt_time_inicio"] = array();
+		}
+		$lookupTableLinks["adm_horarios"]["adm_agenda_estrutura_1.agt_time_inicio"]["edit"] = array("table" => "adm_agenda_estrutura_1", "field" => "agt_time_inicio", "page" => "edit");
+		if( !isset( $lookupTableLinks["adm_horarios"] ) ) {
+			$lookupTableLinks["adm_horarios"] = array();
+		}
+		if( !isset( $lookupTableLinks["adm_horarios"]["adm_agenda_estrutura_1.agt_time_fim"] )) {
+			$lookupTableLinks["adm_horarios"]["adm_agenda_estrutura_1.agt_time_fim"] = array();
+		}
+		$lookupTableLinks["adm_horarios"]["adm_agenda_estrutura_1.agt_time_fim"]["edit"] = array("table" => "adm_agenda_estrutura_1", "field" => "agt_time_fim", "page" => "edit");
 		if( !isset( $lookupTableLinks["adm_usuarios"] ) ) {
 			$lookupTableLinks["adm_usuarios"] = array();
 		}
@@ -180,6 +194,20 @@ function InitLookupLinks()
 			$lookupTableLinks["adm_agenda_tipos_recebimento"]["adm_agenda_config_1.agc_item_pagamento_id"] = array();
 		}
 		$lookupTableLinks["adm_agenda_tipos_recebimento"]["adm_agenda_config_1.agc_item_pagamento_id"]["edit"] = array("table" => "adm_agenda_config_1", "field" => "agc_item_pagamento_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["adm_parametros_config"] ) ) {
+			$lookupTableLinks["adm_parametros_config"] = array();
+		}
+		if( !isset( $lookupTableLinks["adm_parametros_config"]["adm_agenda_config_1.agc_qtidade"] )) {
+			$lookupTableLinks["adm_parametros_config"]["adm_agenda_config_1.agc_qtidade"] = array();
+		}
+		$lookupTableLinks["adm_parametros_config"]["adm_agenda_config_1.agc_qtidade"]["edit"] = array("table" => "adm_agenda_config_1", "field" => "agc_qtidade", "page" => "edit");
+		if( !isset( $lookupTableLinks["adm_parametros_config"] ) ) {
+			$lookupTableLinks["adm_parametros_config"] = array();
+		}
+		if( !isset( $lookupTableLinks["adm_parametros_config"]["adm_agenda_config_1.agc_duracao_media"] )) {
+			$lookupTableLinks["adm_parametros_config"]["adm_agenda_config_1.agc_duracao_media"] = array();
+		}
+		$lookupTableLinks["adm_parametros_config"]["adm_agenda_config_1.agc_duracao_media"]["edit"] = array("table" => "adm_agenda_config_1", "field" => "agc_duracao_media", "page" => "edit");
 		if( !isset( $lookupTableLinks["adm_tipo_config"] ) ) {
 			$lookupTableLinks["adm_tipo_config"] = array();
 		}
@@ -187,6 +215,13 @@ function InitLookupLinks()
 			$lookupTableLinks["adm_tipo_config"]["adm_agenda_config_1.agc_email_automatico"] = array();
 		}
 		$lookupTableLinks["adm_tipo_config"]["adm_agenda_config_1.agc_email_automatico"]["edit"] = array("table" => "adm_agenda_config_1", "field" => "agc_email_automatico", "page" => "edit");
+		if( !isset( $lookupTableLinks["adm_parametros_config"] ) ) {
+			$lookupTableLinks["adm_parametros_config"] = array();
+		}
+		if( !isset( $lookupTableLinks["adm_parametros_config"]["adm_agenda_config_1.agc_tempo_min_antecedencia"] )) {
+			$lookupTableLinks["adm_parametros_config"]["adm_agenda_config_1.agc_tempo_min_antecedencia"] = array();
+		}
+		$lookupTableLinks["adm_parametros_config"]["adm_agenda_config_1.agc_tempo_min_antecedencia"]["edit"] = array("table" => "adm_agenda_config_1", "field" => "agc_tempo_min_antecedencia", "page" => "edit");
 		if( !isset( $lookupTableLinks["adm_usuarios"] ) ) {
 			$lookupTableLinks["adm_usuarios"] = array();
 		}
@@ -201,6 +236,34 @@ function InitLookupLinks()
 			$lookupTableLinks["adm_agenda_config_1"]["adm_agenda_1.age_config_id"] = array();
 		}
 		$lookupTableLinks["adm_agenda_config_1"]["adm_agenda_1.age_config_id"]["edit"] = array("table" => "adm_agenda_1", "field" => "age_config_id", "page" => "edit");
+		if( !isset( $lookupTableLinks["adm_horarios"] ) ) {
+			$lookupTableLinks["adm_horarios"] = array();
+		}
+		if( !isset( $lookupTableLinks["adm_horarios"]["adm_agenda_1.age_time_att"] )) {
+			$lookupTableLinks["adm_horarios"]["adm_agenda_1.age_time_att"] = array();
+		}
+		$lookupTableLinks["adm_horarios"]["adm_agenda_1.age_time_att"]["edit"] = array("table" => "adm_agenda_1", "field" => "age_time_att", "page" => "edit");
+		if( !isset( $lookupTableLinks["adm_horarios"] ) ) {
+			$lookupTableLinks["adm_horarios"] = array();
+		}
+		if( !isset( $lookupTableLinks["adm_horarios"]["adm_agenda_1.age_time_att"] )) {
+			$lookupTableLinks["adm_horarios"]["adm_agenda_1.age_time_att"] = array();
+		}
+		$lookupTableLinks["adm_horarios"]["adm_agenda_1.age_time_att"]["add"] = array("table" => "adm_agenda_1", "field" => "age_time_att", "page" => "add");
+		if( !isset( $lookupTableLinks["adm_horarios"] ) ) {
+			$lookupTableLinks["adm_horarios"] = array();
+		}
+		if( !isset( $lookupTableLinks["adm_horarios"]["adm_agenda_1.age_time_att"] )) {
+			$lookupTableLinks["adm_horarios"]["adm_agenda_1.age_time_att"] = array();
+		}
+		$lookupTableLinks["adm_horarios"]["adm_agenda_1.age_time_att"]["search"] = array("table" => "adm_agenda_1", "field" => "age_time_att", "page" => "search");
+		if( !isset( $lookupTableLinks["adm_parametros_config"] ) ) {
+			$lookupTableLinks["adm_parametros_config"] = array();
+		}
+		if( !isset( $lookupTableLinks["adm_parametros_config"]["adm_agenda_1.age_retorno_data_time"] )) {
+			$lookupTableLinks["adm_parametros_config"]["adm_agenda_1.age_retorno_data_time"] = array();
+		}
+		$lookupTableLinks["adm_parametros_config"]["adm_agenda_1.age_retorno_data_time"]["edit"] = array("table" => "adm_agenda_1", "field" => "age_retorno_data_time", "page" => "edit");
 		if( !isset( $lookupTableLinks["adm_agenda_tipos_recebimento"] ) ) {
 			$lookupTableLinks["adm_agenda_tipos_recebimento"] = array();
 		}

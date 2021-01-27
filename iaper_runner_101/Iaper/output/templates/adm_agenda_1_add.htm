@@ -76,9 +76,27 @@
 </div>
 </div>
 {END message_block}	</div>					</div>
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<ul class="nav nav-pills nav-justified" id="stepnav{$id}"  data-stepcontrol data-itemtype="step_nav" data-itemid="step_nav" {$item_step_nav} data-pageid="{$pageid}">
+			<li role="presentation" data-step="0">
+			<a href="#">Selecione a Data</a>
+		</li>
+			<li role="presentation" data-step="1">
+			<a href="#">Complete com os Dados</a>
+		</li>
+	</ul>	</div>					</div>
 	</div>		
 {END above-grid_block}
-									{BEGIN grid_block}
+									{BEGIN steps_block}
+			<div id="step_0_{$id}" class="stepFrame" data-step="0" >
+		{BEGIN grid_block}
 
 
 
@@ -107,6 +125,92 @@
 		
 			data-cellId="grid_c3" data-pageid="{$pageid}"
 		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN age_data_att_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_age_data_att}  r-vertical-field" 
+	data-fieldname="age_data_att" 
+	data-signal-error-for="age_data_att{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="age_data_att" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_age_data_att}">
+		{BEGIN age_data_att_label}{$label adm_agenda_1 age_data_att }{END age_data_att_label}
+	</label>
+	<div class="r-edit-field">
+		{$age_data_att_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="age_data_att">
+		<div class="text-muted" >
+		{$tooltip adm_agenda_1 age_data_att }		</div>
+	</div>
+</div>
+
+
+{END age_data_att_fieldblock}
+											
+{BEGIN age_time_att_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_age_time_att}  r-vertical-field" 
+	data-fieldname="age_time_att" 
+	data-signal-error-for="age_time_att{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="age_time_att" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_age_time_att}">
+		{BEGIN age_time_att_label}{$label adm_agenda_1 age_time_att }{END age_time_att_label}
+	</label>
+	<div class="r-edit-field">
+		{$age_time_att_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="age_time_att">
+		<div class="text-muted" >
+		{$tooltip adm_agenda_1 age_time_att }		</div>
+	</div>
+</div>
+
+
+{END age_time_att_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+</div>	
+				<div id="step_1_{$id}" class="stepFrame" data-step="1" style="display:none">
+		{BEGIN step2_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="step2" id="form_step2_{$pageid}" data-makeup="small" {$form_step2} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_step2_c1}
+<td
+	{$cell_step2_c1}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="step2_c1" data-pageid="{$pageid}"
+		data-v-cell=""
 		
 >
 	<div edit-form-cell class="clearfix">
@@ -157,121 +261,6 @@
 
 {END age_config_id_fieldblock}
 											
-{BEGIN age_dia_sem_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_age_dia_sem}  r-vertical-field" 
-	data-fieldname="age_dia_sem" 
-	data-signal-error-for="age_dia_sem{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="age_dia_sem" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_age_dia_sem}">
-		{BEGIN age_dia_sem_label}{$label adm_agenda_1 age_dia_sem }{END age_dia_sem_label}
-	</label>
-	<div class="r-edit-field">
-		{$age_dia_sem_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="age_dia_sem">
-		<div class="text-muted" >
-		{$tooltip adm_agenda_1 age_dia_sem }		</div>
-	</div>
-</div>
-
-
-{END age_dia_sem_fieldblock}
-											
-{BEGIN age_data_att_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_age_data_att}  r-vertical-field" 
-	data-fieldname="age_data_att" 
-	data-signal-error-for="age_data_att{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="age_data_att" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_age_data_att}">
-		{BEGIN age_data_att_label}{$label adm_agenda_1 age_data_att }{END age_data_att_label}
-	</label>
-	<div class="r-edit-field">
-		{$age_data_att_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="age_data_att">
-		<div class="text-muted" >
-		{$tooltip adm_agenda_1 age_data_att }		</div>
-	</div>
-</div>
-
-
-{END age_data_att_fieldblock}
-											
-{BEGIN age_time_att_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_age_time_att}  r-vertical-field" 
-	data-fieldname="age_time_att" 
-	data-signal-error-for="age_time_att{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="age_time_att" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_age_time_att}">
-		{BEGIN age_time_att_label}{$label adm_agenda_1 age_time_att }{END age_time_att_label}
-	</label>
-	<div class="r-edit-field">
-		{$age_time_att_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="age_time_att">
-		<div class="text-muted" >
-		{$tooltip adm_agenda_1 age_time_att }		</div>
-	</div>
-</div>
-
-
-{END age_time_att_fieldblock}
-											
-{BEGIN age_acao_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_age_acao}  r-vertical-field" 
-	data-fieldname="age_acao" 
-	data-signal-error-for="age_acao{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="age_acao" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_age_acao}">
-		{BEGIN age_acao_label}{$label adm_agenda_1 age_acao }{END age_acao_label}
-	</label>
-	<div class="r-edit-field">
-		{$age_acao_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="age_acao">
-		<div class="text-muted" >
-		{$tooltip adm_agenda_1 age_acao }		</div>
-	</div>
-</div>
-
-
-{END age_acao_fieldblock}
-											
-{BEGIN age_retorno_data_time_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_age_retorno_data_time}  r-vertical-field" 
-	data-fieldname="age_retorno_data_time" 
-	data-signal-error-for="age_retorno_data_time{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="age_retorno_data_time" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_age_retorno_data_time}">
-		{BEGIN age_retorno_data_time_label}{$label adm_agenda_1 age_retorno_data_time }{END age_retorno_data_time_label}
-	</label>
-	<div class="r-edit-field">
-		{$age_retorno_data_time_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="age_retorno_data_time">
-		<div class="text-muted" >
-		{$tooltip adm_agenda_1 age_retorno_data_time }		</div>
-	</div>
-</div>
-
-
-{END age_retorno_data_time_fieldblock}
-											
 {BEGIN age_tipo_pagamento_fieldblock}
 
 
@@ -317,105 +306,14 @@
 
 
 {END age_anotacoes_fieldblock}
-											
-{BEGIN age_att_campo_1_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_age_att_campo_1}  r-vertical-field" 
-	data-fieldname="age_att_campo_1" 
-	data-signal-error-for="age_att_campo_1{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="age_att_campo_1" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_age_att_campo_1}">
-		{BEGIN age_att_campo_1_label}{$label adm_agenda_1 age_att_campo_1 }{END age_att_campo_1_label}
-	</label>
-	<div class="r-edit-field">
-		{$age_att_campo_1_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="age_att_campo_1">
-		<div class="text-muted" >
-		{$tooltip adm_agenda_1 age_att_campo_1 }		</div>
-	</div>
-</div>
-
-
-{END age_att_campo_1_fieldblock}
-											
-{BEGIN age_att_campo_2_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_age_att_campo_2}  r-vertical-field" 
-	data-fieldname="age_att_campo_2" 
-	data-signal-error-for="age_att_campo_2{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field11" {$item_integrated_edit_field11} data-pageid="{$pageid}" data-field="age_att_campo_2" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_age_att_campo_2}">
-		{BEGIN age_att_campo_2_label}{$label adm_agenda_1 age_att_campo_2 }{END age_att_campo_2_label}
-	</label>
-	<div class="r-edit-field">
-		{$age_att_campo_2_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="age_att_campo_2">
-		<div class="text-muted" >
-		{$tooltip adm_agenda_1 age_att_campo_2 }		</div>
-	</div>
-</div>
-
-
-{END age_att_campo_2_fieldblock}
-											
-{BEGIN age_att_campo_3_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_age_att_campo_3}  r-vertical-field" 
-	data-fieldname="age_att_campo_3" 
-	data-signal-error-for="age_att_campo_3{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field12" {$item_integrated_edit_field12} data-pageid="{$pageid}" data-field="age_att_campo_3" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_age_att_campo_3}">
-		{BEGIN age_att_campo_3_label}{$label adm_agenda_1 age_att_campo_3 }{END age_att_campo_3_label}
-	</label>
-	<div class="r-edit-field">
-		{$age_att_campo_3_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="age_att_campo_3">
-		<div class="text-muted" >
-		{$tooltip adm_agenda_1 age_att_campo_3 }		</div>
-	</div>
-</div>
-
-
-{END age_att_campo_3_fieldblock}
-											
-{BEGIN age_att_campo_4_fieldblock}
-
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_age_att_campo_4}  r-vertical-field" 
-	data-fieldname="age_att_campo_4" 
-	data-signal-error-for="age_att_campo_4{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field13" {$item_integrated_edit_field13} data-pageid="{$pageid}" data-field="age_att_campo_4" >
-
-
-	<label class="r-edit-label control-label" for="{$labelfor_age_att_campo_4}">
-		{BEGIN age_att_campo_4_label}{$label adm_agenda_1 age_att_campo_4 }{END age_att_campo_4_label}
-	</label>
-	<div class="r-edit-field">
-		{$age_att_campo_4_editcontrol}	</div>
-	<div class="r-edit-tooltip" data-helpfor="age_att_campo_4">
-		<div class="text-muted" >
-		{$tooltip adm_agenda_1 age_att_campo_4 }		</div>
-	</div>
-</div>
-
-
-{END age_att_campo_4_fieldblock}
 	
 								</td>
-			{END cellblock_grid_c3}
+			{END cellblock_step2_c1}
 								</tr>
 			</tbody></table>
-{END grid_block}
-									{BEGIN below-grid_block}
+{END step2_block}
+</div>	
+	{END steps_block}									{BEGIN below-grid_block}
 <div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
 		data-v-width="4"
 	data-v-margin="1"
@@ -428,6 +326,14 @@
 	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
 	class="			col-md-12
 	">
+	 
+		{BEGIN nextStepButton}
+<span data-itemtype="next_step" data-itemid="next_step" {$item_next_step} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" href="#" id="nextstep{$id}" >
+							Próximo			</a>
+</span>
+{END nextStepButton}
 	 
 		<span data-itemtype="add_save" data-itemid="add_save" {$item_add_save} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   

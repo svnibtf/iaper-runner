@@ -155,6 +155,24 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_integrated_search_field12}","text":{$agc_deletado_pdfvalue}},
 				
+				
+			{"hidden":"{$item_hide_integrated_search_field13}","text":{$agc_email_agendamento_titulo_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field14}","text":{$agc_email_agendamento_assinatura_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field15}","text":{$agc_email_lembrete_titulo_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field16}","text":{$agc_email_lembrete_assinatura_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field17}","text":{$agc_email_cancelamento_titulo_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field18}","text":{$agc_email_cancelamento_assinatura_pdfvalue}},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

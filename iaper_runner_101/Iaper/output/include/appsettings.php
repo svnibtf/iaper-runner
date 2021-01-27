@@ -658,9 +658,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "153_1611574941";
+$projectBuildKey = "163_1611759371";
 $wizardBuildKey = "35870";
-$projectBuildNumber = "153";
+$projectBuildNumber = "163";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -700,6 +700,8 @@ $tableCaptions["Portuguese(Brazil)"]["adm_agenda_config_1"] = "Configurar Agenda
 $tableCaptions["Portuguese(Brazil)"]["adm_agenda_1"] = "Gerenciar Consultas";
 $tableCaptions["Portuguese(Brazil)"]["adm_agenda_tipos_recebimento"] = "Adm Agenda Tipos Recebimento";
 $tableCaptions["Portuguese(Brazil)"]["adm_tipo_config"] = "Adm Tipo Config";
+$tableCaptions["Portuguese(Brazil)"]["adm_parametros_config"] = "Adm Parametros Config";
+$tableCaptions["Portuguese(Brazil)"]["adm_horarios"] = "Adm Horarios";
 
 
 $globalEvents = new class_GlobalEvents;

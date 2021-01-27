@@ -13,6 +13,12 @@ $dalTableadm_agenda_config_1["agc_email_agendamento"] = array("type"=>200,"varna
 $dalTableadm_agenda_config_1["agc_email_lembrete"] = array("type"=>200,"varname"=>"agc_email_lembrete", "name" => "agc_email_lembrete");
 $dalTableadm_agenda_config_1["agc_email_cancelamento"] = array("type"=>200,"varname"=>"agc_email_cancelamento", "name" => "agc_email_cancelamento");
 $dalTableadm_agenda_config_1["agc_deletado"] = array("type"=>16,"varname"=>"agc_deletado", "name" => "agc_deletado");
+$dalTableadm_agenda_config_1["agc_email_agendamento_titulo"] = array("type"=>200,"varname"=>"agc_email_agendamento_titulo", "name" => "agc_email_agendamento_titulo");
+$dalTableadm_agenda_config_1["agc_email_agendamento_assinatura"] = array("type"=>200,"varname"=>"agc_email_agendamento_assinatura", "name" => "agc_email_agendamento_assinatura");
+$dalTableadm_agenda_config_1["agc_email_lembrete_titulo"] = array("type"=>200,"varname"=>"agc_email_lembrete_titulo", "name" => "agc_email_lembrete_titulo");
+$dalTableadm_agenda_config_1["agc_email_lembrete_assinatura"] = array("type"=>200,"varname"=>"agc_email_lembrete_assinatura", "name" => "agc_email_lembrete_assinatura");
+$dalTableadm_agenda_config_1["agc_email_cancelamento_titulo"] = array("type"=>200,"varname"=>"agc_email_cancelamento_titulo", "name" => "agc_email_cancelamento_titulo");
+$dalTableadm_agenda_config_1["agc_email_cancelamento_assinatura"] = array("type"=>200,"varname"=>"agc_email_cancelamento_assinatura", "name" => "agc_email_cancelamento_assinatura");
 	$dalTableadm_agenda_config_1["agc_id"]["key"]=true;
 
 $dal_info["iaperdbatrobb0254publiccloudco__adm_agenda_config_1"] = &$dalTableadm_agenda_config_1;

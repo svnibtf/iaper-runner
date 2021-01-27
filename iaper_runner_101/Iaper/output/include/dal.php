@@ -51,8 +51,10 @@ class tDAL
 	var $tbliaperdbatrobb0254publiccloudco__adm_agenda_config_1;
 	var $tbliaperdbatrobb0254publiccloudco__adm_agenda_estrutura_1;
 	var $tbliaperdbatrobb0254publiccloudco__adm_agenda_tipos_recebimento;
+	var $tbliaperdbatrobb0254publiccloudco__adm_horarios;
 	var $tbliaperdbatrobb0254publiccloudco__adm_meuplano;
 	var $tbliaperdbatrobb0254publiccloudco__adm_pacientes;
+	var $tbliaperdbatrobb0254publiccloudco__adm_parametros_config;
 	var $tbliaperdbatrobb0254publiccloudco__adm_plano_profissional;
 	var $tbliaperdbatrobb0254publiccloudco__adm_planos;
 	var $tbliaperdbatrobb0254publiccloudco__adm_tipo_config;
@@ -61,6 +63,7 @@ class tDAL
 	var $tbliaperdbatrobb0254publiccloudco__adm_usuarios;
 	var $tbliaperdbatrobb0254publiccloudco__adm_usuarios_dados_profissionais;
 	var $tbliaperdbatrobb0254publiccloudco__buscar_profissionais;
+	var $tbliaperdbatrobb0254publiccloudco__Iaper_settings;
 	var $tbliaperdbatrobb0254publiccloudco__ibge_municipios;
 	var $tbliaperdbatrobb0254publiccloudco__ibge_pais;
 	var $tbliaperdbatrobb0254publiccloudco__login;
@@ -75,8 +78,10 @@ class tDAL
 		$this->lstTables[] = array("name" => "adm_agenda_config_1", "varname" => "iaperdbatrobb0254publiccloudco__adm_agenda_config_1", "altvarname" => "adm_agenda_config_1", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
 		$this->lstTables[] = array("name" => "adm_agenda_estrutura_1", "varname" => "iaperdbatrobb0254publiccloudco__adm_agenda_estrutura_1", "altvarname" => "adm_agenda_estrutura_1", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
 		$this->lstTables[] = array("name" => "adm_agenda_tipos_recebimento", "varname" => "iaperdbatrobb0254publiccloudco__adm_agenda_tipos_recebimento", "altvarname" => "adm_agenda_tipos_recebimento", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
+		$this->lstTables[] = array("name" => "adm_horarios", "varname" => "iaperdbatrobb0254publiccloudco__adm_horarios", "altvarname" => "adm_horarios", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
 		$this->lstTables[] = array("name" => "adm_meuplano", "varname" => "iaperdbatrobb0254publiccloudco__adm_meuplano", "altvarname" => "adm_meuplano", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
 		$this->lstTables[] = array("name" => "adm_pacientes", "varname" => "iaperdbatrobb0254publiccloudco__adm_pacientes", "altvarname" => "adm_pacientes", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
+		$this->lstTables[] = array("name" => "adm_parametros_config", "varname" => "iaperdbatrobb0254publiccloudco__adm_parametros_config", "altvarname" => "adm_parametros_config", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
 		$this->lstTables[] = array("name" => "adm_plano_profissional", "varname" => "iaperdbatrobb0254publiccloudco__adm_plano_profissional", "altvarname" => "adm_plano_profissional", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
 		$this->lstTables[] = array("name" => "adm_planos", "varname" => "iaperdbatrobb0254publiccloudco__adm_planos", "altvarname" => "adm_planos", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
 		$this->lstTables[] = array("name" => "adm_tipo_config", "varname" => "iaperdbatrobb0254publiccloudco__adm_tipo_config", "altvarname" => "adm_tipo_config", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
@@ -85,6 +90,7 @@ class tDAL
 		$this->lstTables[] = array("name" => "adm_usuarios", "varname" => "iaperdbatrobb0254publiccloudco__adm_usuarios", "altvarname" => "adm_usuarios", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
 		$this->lstTables[] = array("name" => "adm_usuarios_dados_profissionais", "varname" => "iaperdbatrobb0254publiccloudco__adm_usuarios_dados_profissionais", "altvarname" => "adm_usuarios_dados_profissionais", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
 		$this->lstTables[] = array("name" => "buscar_profissionais", "varname" => "iaperdbatrobb0254publiccloudco__buscar_profissionais", "altvarname" => "buscar_profissionais", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
+		$this->lstTables[] = array("name" => "Iaper_settings", "varname" => "iaperdbatrobb0254publiccloudco__Iaper_settings", "altvarname" => "Iaper_settings", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
 		$this->lstTables[] = array("name" => "ibge_municipios", "varname" => "iaperdbatrobb0254publiccloudco__ibge_municipios", "altvarname" => "ibge_municipios", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
 		$this->lstTables[] = array("name" => "ibge_pais", "varname" => "iaperdbatrobb0254publiccloudco__ibge_pais", "altvarname" => "ibge_pais", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");
 		$this->lstTables[] = array("name" => "login", "varname" => "iaperdbatrobb0254publiccloudco__login", "altvarname" => "login", "connId" => "iaperdbatrobb0254publiccloudco", "schema" => "", "connName" => "iaper_db at robb0254.publicclo");

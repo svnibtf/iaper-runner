@@ -117,52 +117,13 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_search_field}","text":{$age_id_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_integrated_search_field1}","text":{$age_usu_id_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_integrated_search_field2}","text":{$age_config_id_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_integrated_search_field3}","text":{$age_dia_sem_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_integrated_search_field4}","text":{$age_data_att_pdfvalue}},
+			{"hidden":"{$item_hide_integrated_search_field6}","text":{$age_data_in_pdfvalue}},
 				
 				
 			{"hidden":"{$item_hide_integrated_search_field5}","text":{$age_time_att_pdfvalue}},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field6}","text":{$age_data_in_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_integrated_search_field7}","text":{$age_acao_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_integrated_search_field8}","text":{$age_retorno_data_time_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_integrated_search_field9}","text":{$age_tipo_pagamento_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_integrated_search_field10}","text":{$age_anotacoes_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_integrated_search_field11}","text":{$age_att_campo_1_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_integrated_search_field12}","text":{$age_att_campo_2_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_integrated_search_field13}","text":{$age_att_campo_3_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_integrated_search_field14}","text":{$age_att_campo_4_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_integrated_search_field15}","text":{$age_deletado_pdfvalue}},
+			{"hidden":"{$item_hide_integrated_search_field3}","text":{$age_dia_sem_pdfvalue}},
 				
 				
 			{"hidden":"{$item_hide_integrated_search_field16}","text":{$age_Paciente_pdfvalue}},

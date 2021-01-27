@@ -34,7 +34,7 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldLabelsadm_agenda_estrutura_1["Portuguese(Brazil)"]["agt_config_id"] = "Tipo Agenda";
 	$fieldToolTipsadm_agenda_estrutura_1["Portuguese(Brazil)"]["agt_config_id"] = "";
 	$placeHoldersadm_agenda_estrutura_1["Portuguese(Brazil)"]["agt_config_id"] = "";
-	$fieldLabelsadm_agenda_estrutura_1["Portuguese(Brazil)"]["agt_data_excluir"] = "Data Excluir";
+	$fieldLabelsadm_agenda_estrutura_1["Portuguese(Brazil)"]["agt_data_excluir"] = "Data ";
 	$fieldToolTipsadm_agenda_estrutura_1["Portuguese(Brazil)"]["agt_data_excluir"] = "";
 	$placeHoldersadm_agenda_estrutura_1["Portuguese(Brazil)"]["agt_data_excluir"] = "";
 	$fieldLabelsadm_agenda_estrutura_1["Portuguese(Brazil)"]["agt_dia_sem"] = "Dia Semana";
@@ -1054,7 +1054,7 @@ $tdataadm_agenda_estrutura_1[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Time");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1064,6 +1064,34 @@ $tdataadm_agenda_estrutura_1[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "adm_horarios";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 4;
+
+		$edata["HorizontalLookup"] = true;
+
+		
+	$edata["LinkField"] = "Horario";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Horario";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+	
+// End Lookup Settings
 
 
 	
@@ -1080,8 +1108,7 @@ $tdataadm_agenda_estrutura_1[".hideMobileList"] = array();
 	
 	
 	
-		$edata["EditParams"] = "";
-		
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -1094,12 +1121,7 @@ $tdataadm_agenda_estrutura_1[".hideMobileList"] = array();
 
 	
 			
-				$hours = 24;
-	$edata["FormatTimeAttrs"] = array("useTimePicker" => 0,
-									  "hours" => $hours,
-									  "minutes" => 1,
-									  "showSeconds" => 0);
-
+	
 	
 	
 	$fdata["EditFormats"]["edit"] = $edata;
@@ -1201,7 +1223,7 @@ $tdataadm_agenda_estrutura_1[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Time");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1211,6 +1233,34 @@ $tdataadm_agenda_estrutura_1[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "adm_horarios";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 4;
+
+		$edata["HorizontalLookup"] = true;
+
+		
+	$edata["LinkField"] = "Horario";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "Horario";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+	
+// End Lookup Settings
 
 
 	
@@ -1227,8 +1277,7 @@ $tdataadm_agenda_estrutura_1[".hideMobileList"] = array();
 	
 	
 	
-		$edata["EditParams"] = "";
-		
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -1241,12 +1290,7 @@ $tdataadm_agenda_estrutura_1[".hideMobileList"] = array();
 
 	
 			
-				$hours = 24;
-	$edata["FormatTimeAttrs"] = array("useTimePicker" => 0,
-									  "hours" => $hours,
-									  "minutes" => 1,
-									  "showSeconds" => 0);
-
+	
 	
 	
 	$fdata["EditFormats"]["edit"] = $edata;

@@ -374,6 +374,14 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="adm_parametros_config")
+		{
+			return false;
+		}
+		if($table=="adm_horarios")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -751,6 +759,14 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="adm_tipo_config")
+		{
+			return false;
+		}
+		if($table=="adm_parametros_config")
+		{
+			return false;
+		}
+		if($table=="adm_horarios")
 		{
 			return false;
 		}

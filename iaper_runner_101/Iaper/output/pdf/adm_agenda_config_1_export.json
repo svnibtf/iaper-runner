@@ -131,6 +131,24 @@ pdfDocument = {
 				
 			{"hidden":"{$item_hide_export_field11}","text":{$agc_email_cancelamento_pdfvalue}},
 				
+				
+			{"hidden":"{$item_hide_export_field}","text":{$agc_email_agendamento_titulo_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field1}","text":{$agc_email_agendamento_assinatura_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field3}","text":{$agc_email_lembrete_titulo_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field12}","text":{$agc_email_lembrete_assinatura_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field13}","text":{$agc_email_cancelamento_titulo_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field14}","text":{$agc_email_cancelamento_assinatura_pdfvalue}},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',

@@ -221,6 +221,10 @@ function checkTableName($shortTName )
 		return true;
 	if ("adm_tipo_config" == $shortTName )
 		return true;
+	if ("adm_parametros_config" == $shortTName )
+		return true;
+	if ("adm_horarios" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -433,6 +437,24 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="adm_tipo_config";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("adm_parametros_config");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="adm_parametros_config";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("adm_horarios");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="adm_horarios";
+	}
 	return $arr;
 }
 
@@ -460,6 +482,8 @@ function GetTablesListWithoutSecurity()
 	$arr[]="adm_agenda_1";
 	$arr[]="adm_agenda_tipos_recebimento";
 	$arr[]="adm_tipo_config";
+	$arr[]="adm_parametros_config";
+	$arr[]="adm_horarios";
 	return $arr;
 }
 
@@ -1396,6 +1420,32 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="adm_tipo_config" )
+	{
+		if( $sUserGroup=="Empresa" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+		if( $sUserGroup=="1" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="adm_parametros_config" )
+	{
+		if( $sUserGroup=="Empresa" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+		if( $sUserGroup=="1" )
+		{
+			return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="adm_horarios" )
 	{
 		if( $sUserGroup=="Empresa" )
 		{

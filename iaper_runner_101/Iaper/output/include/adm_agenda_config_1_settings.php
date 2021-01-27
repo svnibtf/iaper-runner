@@ -46,24 +46,42 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldLabelsadm_agenda_config_1["Portuguese(Brazil)"]["agc_duracao_media"] = "Duração Média";
 	$fieldToolTipsadm_agenda_config_1["Portuguese(Brazil)"]["agc_duracao_media"] = "";
 	$placeHoldersadm_agenda_config_1["Portuguese(Brazil)"]["agc_duracao_media"] = "";
-	$fieldLabelsadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_automatico"] = "Email Automatico";
+	$fieldLabelsadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_automatico"] = "Email Automático";
 	$fieldToolTipsadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_automatico"] = "";
 	$placeHoldersadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_automatico"] = "";
-	$fieldLabelsadm_agenda_config_1["Portuguese(Brazil)"]["agc_tempo_min_antecedencia"] = "Tempo Min Antecedencia";
+	$fieldLabelsadm_agenda_config_1["Portuguese(Brazil)"]["agc_tempo_min_antecedencia"] = "Tempo Min Antecedência";
 	$fieldToolTipsadm_agenda_config_1["Portuguese(Brazil)"]["agc_tempo_min_antecedencia"] = "";
 	$placeHoldersadm_agenda_config_1["Portuguese(Brazil)"]["agc_tempo_min_antecedencia"] = "";
-	$fieldLabelsadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_agendamento"] = "Email Agendamento";
+	$fieldLabelsadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_agendamento"] = "Email ";
 	$fieldToolTipsadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_agendamento"] = "";
 	$placeHoldersadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_agendamento"] = "";
-	$fieldLabelsadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_lembrete"] = "Email Lembrete";
+	$fieldLabelsadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_lembrete"] = "Email ";
 	$fieldToolTipsadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_lembrete"] = "";
 	$placeHoldersadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_lembrete"] = "";
-	$fieldLabelsadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_cancelamento"] = "Email Cancelamento";
+	$fieldLabelsadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_cancelamento"] = "Email ";
 	$fieldToolTipsadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_cancelamento"] = "";
 	$placeHoldersadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_cancelamento"] = "";
 	$fieldLabelsadm_agenda_config_1["Portuguese(Brazil)"]["agc_deletado"] = "Agc Deletado";
 	$fieldToolTipsadm_agenda_config_1["Portuguese(Brazil)"]["agc_deletado"] = "";
 	$placeHoldersadm_agenda_config_1["Portuguese(Brazil)"]["agc_deletado"] = "";
+	$fieldLabelsadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_agendamento_titulo"] = "Título";
+	$fieldToolTipsadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_agendamento_titulo"] = "";
+	$placeHoldersadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_agendamento_titulo"] = "";
+	$fieldLabelsadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_agendamento_assinatura"] = "Assinatura";
+	$fieldToolTipsadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_agendamento_assinatura"] = "";
+	$placeHoldersadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_agendamento_assinatura"] = "";
+	$fieldLabelsadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_lembrete_titulo"] = "Título";
+	$fieldToolTipsadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_lembrete_titulo"] = "";
+	$placeHoldersadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_lembrete_titulo"] = "";
+	$fieldLabelsadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_lembrete_assinatura"] = "Assinatura";
+	$fieldToolTipsadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_lembrete_assinatura"] = "";
+	$placeHoldersadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_lembrete_assinatura"] = "";
+	$fieldLabelsadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_cancelamento_titulo"] = "Título";
+	$fieldToolTipsadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_cancelamento_titulo"] = "";
+	$placeHoldersadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_cancelamento_titulo"] = "";
+	$fieldLabelsadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_cancelamento_assinatura"] = "Assinatura";
+	$fieldToolTipsadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_cancelamento_assinatura"] = "";
+	$placeHoldersadm_agenda_config_1["Portuguese(Brazil)"]["agc_email_cancelamento_assinatura"] = "";
 	if (count($fieldToolTipsadm_agenda_config_1["Portuguese(Brazil)"]))
 		$tdataadm_agenda_config_1[".isUseToolTips"] = true;
 }
@@ -201,6 +219,12 @@ $tdataadm_agenda_config_1[".googleLikeFields"][] = "agc_email_agendamento";
 $tdataadm_agenda_config_1[".googleLikeFields"][] = "agc_email_lembrete";
 $tdataadm_agenda_config_1[".googleLikeFields"][] = "agc_email_cancelamento";
 $tdataadm_agenda_config_1[".googleLikeFields"][] = "agc_deletado";
+$tdataadm_agenda_config_1[".googleLikeFields"][] = "agc_email_agendamento_titulo";
+$tdataadm_agenda_config_1[".googleLikeFields"][] = "agc_email_agendamento_assinatura";
+$tdataadm_agenda_config_1[".googleLikeFields"][] = "agc_email_lembrete_titulo";
+$tdataadm_agenda_config_1[".googleLikeFields"][] = "agc_email_lembrete_assinatura";
+$tdataadm_agenda_config_1[".googleLikeFields"][] = "agc_email_cancelamento_titulo";
+$tdataadm_agenda_config_1[".googleLikeFields"][] = "agc_email_cancelamento_assinatura";
 
 
 
@@ -236,7 +260,7 @@ $tdataadm_agenda_config_1[".strOrderBy"] = $tstrOrderBy;
 $tdataadm_agenda_config_1[".orderindexes"] = array();
 
 
-$tdataadm_agenda_config_1[".sqlHead"] = "SELECT agc_id,  	agc_usu_pro_id,  	agc_nome,  	agc_tipo,  	agc_item_pagamento_id,  	agc_qtidade,  	agc_duracao_media,  	agc_email_automatico,  	agc_tempo_min_antecedencia,  	agc_email_agendamento,  	agc_email_lembrete,  	agc_email_cancelamento,  	agc_deletado";
+$tdataadm_agenda_config_1[".sqlHead"] = "SELECT agc_id,  	agc_usu_pro_id,  	agc_nome,  	agc_tipo,  	agc_item_pagamento_id,  	agc_qtidade,  	agc_duracao_media,  	agc_email_automatico,  	agc_tempo_min_antecedencia,  	agc_email_agendamento,  	agc_email_lembrete,  	agc_email_cancelamento,  	agc_deletado,  	agc_email_agendamento_titulo,  	agc_email_agendamento_assinatura,  	agc_email_lembrete_titulo,  	agc_email_lembrete_assinatura,  	agc_email_cancelamento_titulo,  	agc_email_cancelamento_assinatura";
 $tdataadm_agenda_config_1[".sqlFrom"] = "FROM adm_agenda_config_1";
 $tdataadm_agenda_config_1[".sqlWhereExpr"] = "";
 $tdataadm_agenda_config_1[".sqlTail"] = "";
@@ -654,7 +678,8 @@ $tdataadm_agenda_config_1[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -678,14 +703,18 @@ $tdataadm_agenda_config_1[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+			$edata["validateAs"]["basicValidate"][] = "DenyDuplicated";
+	$edata["validateAs"]["customMessages"]["DenyDuplicated"] = array("message" => "Nome já existe.", "messageType" => "Text");
+
 	
 	//	End validation
 
 	
 			
 	
-	
+		$edata["denyDuplicates"] = true;
+
 	
 	$fdata["EditFormats"]["edit"] = $edata;
 //	End Edit Formats
@@ -931,9 +960,10 @@ $tdataadm_agenda_config_1[".hideMobileList"] = array();
 	$edata["LookupTable"] = "adm_agenda_tipos_recebimento";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
+		$edata["LCType"] = 4;
 
-	
+		$edata["HorizontalLookup"] = true;
+
 		
 	$edata["LinkField"] = "atr_id";
 	$edata["LinkFieldType"] = 0;
@@ -951,12 +981,12 @@ $tdataadm_agenda_config_1[".hideMobileList"] = array();
 
 	
 	
-		$edata["SelectSize"] = 1;
-
+	
 // End Lookup Settings
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -977,7 +1007,8 @@ $tdataadm_agenda_config_1[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-							
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 	//	End validation
 
@@ -1078,7 +1109,7 @@ $tdataadm_agenda_config_1[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1088,6 +1119,35 @@ $tdataadm_agenda_config_1[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "adm_parametros_config";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+			$edata["LookupUnique"] = true;
+
+	$edata["LinkField"] = "idParametros";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "idParametros";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -1103,17 +1163,14 @@ $tdataadm_agenda_config_1[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 							
 	
 	//	End validation
@@ -1133,7 +1190,7 @@ $tdataadm_agenda_config_1[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1215,7 +1272,7 @@ $tdataadm_agenda_config_1[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1225,6 +1282,35 @@ $tdataadm_agenda_config_1[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "adm_parametros_config";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+			$edata["LookupUnique"] = true;
+
+	$edata["LinkField"] = "idParametros";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "idParametros";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -1240,17 +1326,14 @@ $tdataadm_agenda_config_1[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 							
 	
 	//	End validation
@@ -1270,7 +1353,7 @@ $tdataadm_agenda_config_1[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1369,7 +1452,8 @@ $tdataadm_agenda_config_1[".hideMobileList"] = array();
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 4;
 
-	
+		$edata["HorizontalLookup"] = true;
+
 			$edata["LookupUnique"] = true;
 
 	$edata["LinkField"] = "ID0";
@@ -1514,7 +1598,7 @@ $tdataadm_agenda_config_1[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -1524,6 +1608,35 @@ $tdataadm_agenda_config_1[".hideMobileList"] = array();
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "adm_parametros_config";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+			$edata["LookupUnique"] = true;
+
+	$edata["LinkField"] = "idParametros";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "idParametros";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
 
 
 	
@@ -1539,17 +1652,14 @@ $tdataadm_agenda_config_1[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 							
 	
 	//	End validation
@@ -1569,7 +1679,7 @@ $tdataadm_agenda_config_1[".hideMobileList"] = array();
 
 
 // the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
+		$fdata["defaultSearchOption"] = "Equals";
 
 			// the default search options list
 				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
@@ -1624,7 +1734,7 @@ $tdataadm_agenda_config_1[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "HTML");
 
 	
 	
@@ -1639,8 +1749,7 @@ $tdataadm_agenda_config_1[".hideMobileList"] = array();
 	
 		
 	
-		$vdata["NeedEncode"] = true;
-
+	
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
@@ -1665,7 +1774,8 @@ $tdataadm_agenda_config_1[".hideMobileList"] = array();
 
 	
 	
-	
+		$edata["UseRTE"] = true;
+
 	
 			$edata["acceptFileTypes"] = ".+$";
 		$edata["acceptFileTypesHtml"] = "";
@@ -1760,7 +1870,7 @@ $tdataadm_agenda_config_1[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "HTML");
 
 	
 	
@@ -1775,8 +1885,7 @@ $tdataadm_agenda_config_1[".hideMobileList"] = array();
 	
 		
 	
-		$vdata["NeedEncode"] = true;
-
+	
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
@@ -1801,7 +1910,8 @@ $tdataadm_agenda_config_1[".hideMobileList"] = array();
 
 	
 	
-	
+		$edata["UseRTE"] = true;
+
 	
 			$edata["acceptFileTypes"] = ".+$";
 		$edata["acceptFileTypesHtml"] = "";
@@ -1896,7 +2006,7 @@ $tdataadm_agenda_config_1[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "HTML");
 
 	
 	
@@ -1911,8 +2021,7 @@ $tdataadm_agenda_config_1[".hideMobileList"] = array();
 	
 		
 	
-		$vdata["NeedEncode"] = true;
-
+	
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
@@ -1937,7 +2046,8 @@ $tdataadm_agenda_config_1[".hideMobileList"] = array();
 
 	
 	
-	
+		$edata["UseRTE"] = true;
+
 	
 			$edata["acceptFileTypes"] = ".+$";
 		$edata["acceptFileTypesHtml"] = "";
@@ -2141,6 +2251,822 @@ $tdataadm_agenda_config_1[".hideMobileList"] = array();
 
 	$tdataadm_agenda_config_1["agc_deletado"] = $fdata;
 		$tdataadm_agenda_config_1[".searchableFields"][] = "agc_deletado";
+//	agc_email_agendamento_titulo
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 14;
+	$fdata["strName"] = "agc_email_agendamento_titulo";
+	$fdata["GoodName"] = "agc_email_agendamento_titulo";
+	$fdata["ownerTable"] = "adm_agenda_config_1";
+	$fdata["Label"] = GetFieldLabel("adm_agenda_config_1","agc_email_agendamento_titulo");
+	$fdata["FieldType"] = 200;
+
+	
+	
+	
+			
+
+		$fdata["strField"] = "agc_email_agendamento_titulo";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "agc_email_agendamento_titulo";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text area");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+				$edata["nRows"] = 100;
+			$edata["nCols"] = 200;
+
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataadm_agenda_config_1["agc_email_agendamento_titulo"] = $fdata;
+		$tdataadm_agenda_config_1[".searchableFields"][] = "agc_email_agendamento_titulo";
+//	agc_email_agendamento_assinatura
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 15;
+	$fdata["strName"] = "agc_email_agendamento_assinatura";
+	$fdata["GoodName"] = "agc_email_agendamento_assinatura";
+	$fdata["ownerTable"] = "adm_agenda_config_1";
+	$fdata["Label"] = GetFieldLabel("adm_agenda_config_1","agc_email_agendamento_assinatura");
+	$fdata["FieldType"] = 200;
+
+	
+	
+	
+			
+
+		$fdata["strField"] = "agc_email_agendamento_assinatura";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "agc_email_agendamento_assinatura";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text area");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+				$edata["nRows"] = 100;
+			$edata["nCols"] = 200;
+
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataadm_agenda_config_1["agc_email_agendamento_assinatura"] = $fdata;
+		$tdataadm_agenda_config_1[".searchableFields"][] = "agc_email_agendamento_assinatura";
+//	agc_email_lembrete_titulo
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 16;
+	$fdata["strName"] = "agc_email_lembrete_titulo";
+	$fdata["GoodName"] = "agc_email_lembrete_titulo";
+	$fdata["ownerTable"] = "adm_agenda_config_1";
+	$fdata["Label"] = GetFieldLabel("adm_agenda_config_1","agc_email_lembrete_titulo");
+	$fdata["FieldType"] = 200;
+
+	
+	
+	
+			
+
+		$fdata["strField"] = "agc_email_lembrete_titulo";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "agc_email_lembrete_titulo";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text area");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+				$edata["nRows"] = 100;
+			$edata["nCols"] = 200;
+
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataadm_agenda_config_1["agc_email_lembrete_titulo"] = $fdata;
+		$tdataadm_agenda_config_1[".searchableFields"][] = "agc_email_lembrete_titulo";
+//	agc_email_lembrete_assinatura
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 17;
+	$fdata["strName"] = "agc_email_lembrete_assinatura";
+	$fdata["GoodName"] = "agc_email_lembrete_assinatura";
+	$fdata["ownerTable"] = "adm_agenda_config_1";
+	$fdata["Label"] = GetFieldLabel("adm_agenda_config_1","agc_email_lembrete_assinatura");
+	$fdata["FieldType"] = 200;
+
+	
+	
+	
+			
+
+		$fdata["strField"] = "agc_email_lembrete_assinatura";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "agc_email_lembrete_assinatura";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text area");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+				$edata["nRows"] = 100;
+			$edata["nCols"] = 200;
+
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataadm_agenda_config_1["agc_email_lembrete_assinatura"] = $fdata;
+		$tdataadm_agenda_config_1[".searchableFields"][] = "agc_email_lembrete_assinatura";
+//	agc_email_cancelamento_titulo
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 18;
+	$fdata["strName"] = "agc_email_cancelamento_titulo";
+	$fdata["GoodName"] = "agc_email_cancelamento_titulo";
+	$fdata["ownerTable"] = "adm_agenda_config_1";
+	$fdata["Label"] = GetFieldLabel("adm_agenda_config_1","agc_email_cancelamento_titulo");
+	$fdata["FieldType"] = 200;
+
+	
+	
+	
+			
+
+		$fdata["strField"] = "agc_email_cancelamento_titulo";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "agc_email_cancelamento_titulo";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text area");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+				$edata["nRows"] = 100;
+			$edata["nCols"] = 200;
+
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataadm_agenda_config_1["agc_email_cancelamento_titulo"] = $fdata;
+		$tdataadm_agenda_config_1[".searchableFields"][] = "agc_email_cancelamento_titulo";
+//	agc_email_cancelamento_assinatura
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 19;
+	$fdata["strName"] = "agc_email_cancelamento_assinatura";
+	$fdata["GoodName"] = "agc_email_cancelamento_assinatura";
+	$fdata["ownerTable"] = "adm_agenda_config_1";
+	$fdata["Label"] = GetFieldLabel("adm_agenda_config_1","agc_email_cancelamento_assinatura");
+	$fdata["FieldType"] = 200;
+
+	
+	
+	
+			
+
+		$fdata["strField"] = "agc_email_cancelamento_assinatura";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "agc_email_cancelamento_assinatura";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text area");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+				$edata["nRows"] = 100;
+			$edata["nCols"] = 200;
+
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataadm_agenda_config_1["agc_email_cancelamento_assinatura"] = $fdata;
+		$tdataadm_agenda_config_1[".searchableFields"][] = "agc_email_cancelamento_assinatura";
 
 
 $tables_data["adm_agenda_config_1"]=&$tdataadm_agenda_config_1;
@@ -2178,7 +3104,7 @@ function createSqlQuery_adm_agenda_config_1()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "agc_id,  	agc_usu_pro_id,  	agc_nome,  	agc_tipo,  	agc_item_pagamento_id,  	agc_qtidade,  	agc_duracao_media,  	agc_email_automatico,  	agc_tempo_min_antecedencia,  	agc_email_agendamento,  	agc_email_lembrete,  	agc_email_cancelamento,  	agc_deletado";
+$proto0["m_strFieldList"] = "agc_id,  	agc_usu_pro_id,  	agc_nome,  	agc_tipo,  	agc_item_pagamento_id,  	agc_qtidade,  	agc_duracao_media,  	agc_email_automatico,  	agc_tempo_min_antecedencia,  	agc_email_agendamento,  	agc_email_lembrete,  	agc_email_cancelamento,  	agc_deletado,  	agc_email_agendamento_titulo,  	agc_email_agendamento_assinatura,  	agc_email_lembrete_titulo,  	agc_email_lembrete_assinatura,  	agc_email_cancelamento_titulo,  	agc_email_cancelamento_assinatura";
 $proto0["m_strFrom"] = "FROM adm_agenda_config_1";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -2400,49 +3326,139 @@ $proto30["m_alias"] = "";
 $obj = new SQLFieldListItem($proto30);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto32=array();
-$proto32["m_link"] = "SQLL_MAIN";
-			$proto33=array();
-$proto33["m_strName"] = "adm_agenda_config_1";
-$proto33["m_srcTableName"] = "adm_agenda_config_1";
-$proto33["m_columns"] = array();
-$proto33["m_columns"][] = "agc_id";
-$proto33["m_columns"][] = "agc_usu_pro_id";
-$proto33["m_columns"][] = "agc_nome";
-$proto33["m_columns"][] = "agc_tipo";
-$proto33["m_columns"][] = "agc_item_pagamento_id";
-$proto33["m_columns"][] = "agc_qtidade";
-$proto33["m_columns"][] = "agc_duracao_media";
-$proto33["m_columns"][] = "agc_email_automatico";
-$proto33["m_columns"][] = "agc_tempo_min_antecedencia";
-$proto33["m_columns"][] = "agc_email_agendamento";
-$proto33["m_columns"][] = "agc_email_lembrete";
-$proto33["m_columns"][] = "agc_email_cancelamento";
-$proto33["m_columns"][] = "agc_deletado";
-$obj = new SQLTable($proto33);
+						$proto32=array();
+			$obj = new SQLField(array(
+	"m_strName" => "agc_email_agendamento_titulo",
+	"m_strTable" => "adm_agenda_config_1",
+	"m_srcTableName" => "adm_agenda_config_1"
+));
 
-$proto32["m_table"] = $obj;
-$proto32["m_sql"] = "adm_agenda_config_1";
-$proto32["m_alias"] = "";
+$proto32["m_sql"] = "agc_email_agendamento_titulo";
 $proto32["m_srcTableName"] = "adm_agenda_config_1";
-$proto34=array();
-$proto34["m_sql"] = "";
-$proto34["m_uniontype"] = "SQLL_UNKNOWN";
+$proto32["m_expr"]=$obj;
+$proto32["m_alias"] = "";
+$obj = new SQLFieldListItem($proto32);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto34=array();
+			$obj = new SQLField(array(
+	"m_strName" => "agc_email_agendamento_assinatura",
+	"m_strTable" => "adm_agenda_config_1",
+	"m_srcTableName" => "adm_agenda_config_1"
+));
+
+$proto34["m_sql"] = "agc_email_agendamento_assinatura";
+$proto34["m_srcTableName"] = "adm_agenda_config_1";
+$proto34["m_expr"]=$obj;
+$proto34["m_alias"] = "";
+$obj = new SQLFieldListItem($proto34);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto36=array();
+			$obj = new SQLField(array(
+	"m_strName" => "agc_email_lembrete_titulo",
+	"m_strTable" => "adm_agenda_config_1",
+	"m_srcTableName" => "adm_agenda_config_1"
+));
+
+$proto36["m_sql"] = "agc_email_lembrete_titulo";
+$proto36["m_srcTableName"] = "adm_agenda_config_1";
+$proto36["m_expr"]=$obj;
+$proto36["m_alias"] = "";
+$obj = new SQLFieldListItem($proto36);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto38=array();
+			$obj = new SQLField(array(
+	"m_strName" => "agc_email_lembrete_assinatura",
+	"m_strTable" => "adm_agenda_config_1",
+	"m_srcTableName" => "adm_agenda_config_1"
+));
+
+$proto38["m_sql"] = "agc_email_lembrete_assinatura";
+$proto38["m_srcTableName"] = "adm_agenda_config_1";
+$proto38["m_expr"]=$obj;
+$proto38["m_alias"] = "";
+$obj = new SQLFieldListItem($proto38);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto40=array();
+			$obj = new SQLField(array(
+	"m_strName" => "agc_email_cancelamento_titulo",
+	"m_strTable" => "adm_agenda_config_1",
+	"m_srcTableName" => "adm_agenda_config_1"
+));
+
+$proto40["m_sql"] = "agc_email_cancelamento_titulo";
+$proto40["m_srcTableName"] = "adm_agenda_config_1";
+$proto40["m_expr"]=$obj;
+$proto40["m_alias"] = "";
+$obj = new SQLFieldListItem($proto40);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto42=array();
+			$obj = new SQLField(array(
+	"m_strName" => "agc_email_cancelamento_assinatura",
+	"m_strTable" => "adm_agenda_config_1",
+	"m_srcTableName" => "adm_agenda_config_1"
+));
+
+$proto42["m_sql"] = "agc_email_cancelamento_assinatura";
+$proto42["m_srcTableName"] = "adm_agenda_config_1";
+$proto42["m_expr"]=$obj;
+$proto42["m_alias"] = "";
+$obj = new SQLFieldListItem($proto42);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto44=array();
+$proto44["m_link"] = "SQLL_MAIN";
+			$proto45=array();
+$proto45["m_strName"] = "adm_agenda_config_1";
+$proto45["m_srcTableName"] = "adm_agenda_config_1";
+$proto45["m_columns"] = array();
+$proto45["m_columns"][] = "agc_id";
+$proto45["m_columns"][] = "agc_usu_pro_id";
+$proto45["m_columns"][] = "agc_nome";
+$proto45["m_columns"][] = "agc_tipo";
+$proto45["m_columns"][] = "agc_item_pagamento_id";
+$proto45["m_columns"][] = "agc_qtidade";
+$proto45["m_columns"][] = "agc_duracao_media";
+$proto45["m_columns"][] = "agc_email_automatico";
+$proto45["m_columns"][] = "agc_tempo_min_antecedencia";
+$proto45["m_columns"][] = "agc_email_agendamento";
+$proto45["m_columns"][] = "agc_email_lembrete";
+$proto45["m_columns"][] = "agc_email_cancelamento";
+$proto45["m_columns"][] = "agc_deletado";
+$proto45["m_columns"][] = "agc_email_agendamento_titulo";
+$proto45["m_columns"][] = "agc_email_agendamento_assinatura";
+$proto45["m_columns"][] = "agc_email_lembrete_titulo";
+$proto45["m_columns"][] = "agc_email_lembrete_assinatura";
+$proto45["m_columns"][] = "agc_email_cancelamento_titulo";
+$proto45["m_columns"][] = "agc_email_cancelamento_assinatura";
+$obj = new SQLTable($proto45);
+
+$proto44["m_table"] = $obj;
+$proto44["m_sql"] = "adm_agenda_config_1";
+$proto44["m_alias"] = "";
+$proto44["m_srcTableName"] = "adm_agenda_config_1";
+$proto46=array();
+$proto46["m_sql"] = "";
+$proto46["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto34["m_column"]=$obj;
-$proto34["m_contained"] = array();
-$proto34["m_strCase"] = "";
-$proto34["m_havingmode"] = false;
-$proto34["m_inBrackets"] = false;
-$proto34["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto34);
+$proto46["m_column"]=$obj;
+$proto46["m_contained"] = array();
+$proto46["m_strCase"] = "";
+$proto46["m_havingmode"] = false;
+$proto46["m_inBrackets"] = false;
+$proto46["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto46);
 
-$proto32["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto32);
+$proto44["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto44);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -2458,7 +3474,7 @@ $queryData_adm_agenda_config_1 = createSqlQuery_adm_agenda_config_1();
 	
 		;
 
-													
+																			
 
 $tdataadm_agenda_config_1[".sqlquery"] = $queryData_adm_agenda_config_1;
 

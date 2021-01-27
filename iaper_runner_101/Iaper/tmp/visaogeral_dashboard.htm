@@ -40,14 +40,18 @@
 <BUTTON data-pageid="1" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target="[data-mobile-controlled]">	<SPAN class="sr-only">Toggle navigation</span>	<SPAN class="icon-bar"></span>	</button>	</div>
 <DIV data-cellId="left_c1" data-pageid="1" class="clearfix r-ori-vert" data-itemtype="menu" data-itemid="menu" data-pageid="1">
 <UL class="nav navbar-nav">
-<LI class><a href="#"><SPAN class="menu-icon glyphicon glyphicon-user"></span>Completar Cadastro</a></li>
-<LI class><a href="#"><SPAN class="menu-icon glyphicon glyphicon-earphone"></span>Buscar Profissional</a></li>
-<LI class><a href="#"><SPAN class="menu-icon glyphicon glyphicon-user"></span>Meus Pacientes</a></li>
-<LI class><a href="#"><SPAN class="menu-icon glyphicon glyphicon-hand-right"></span>Minha Agenda</a></li>
-<LI class><a href="#">Configurar Agenda</a></li>
-<LI class><a href="#">Marcar Consulta</a></li>
-<LI class><a href="#">Gestão da Agenda</a></li>
-<LI class="active"><a href="#">Visao Geral</a></li>
+<LI class><a href="#">Completar Cadastro</a></li>
+<LI class><a href="#">Buscar Profissional</a></li>
+<LI class><a href="#">Meus Pacientes</a></li>
+<LI class="dropdown">
+<A class="dropdown-toggle" data-toggle="nested-dropdown" aria-haspopup="true" aria-expanded="false" href="#">Agenda<SPAN class="caret"></span></a>
+<UL class="dropdown-menu">
+<LI class><a href="#">Configuração da Agenda</a></li>
+<LI class><a href="#">Configurar Datas</a></li>
+<LI class><a href="#">Gerenciar Consultas</a></li>
+</ul>
+</li>
+<LI class="active"><a href="#">Visão Geral</a></li>
 <LI class><a href="#">Quem Somos e Planos</a></li>
 </ul>	</div>
 <!--END left_block-->
@@ -67,48 +71,14 @@
 <A href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Visao Geral
 <SPAN class="caret"></span>
 <UL class="dropdown-menu">
-<li><a href="#">Cadastro</a></li><li><a href="#">Dados Profissionais</a></li><li><a href="#">Ibge</a></li><li><a href="#">Ibge Pais</a></li><li><a href="#">Adm Ramos</a></li><li><a href="#">TipoUsuario</a></li><li><a href="#">Adm Planos</a></li><li><a href="#">Meu Plano</a></li><li><a href="#">Login</a></li><li><a href="#">Buscar Empresas</a></li><li><a href="#">Procurar pela Localização</a></li><li><a href="#">Busca Profissional</a></li><li><a href="#">Pacientes
-</a></li><li><a href="#">Tratamentos</a></li><li><a href="#">Administrativo</a></li><li><a href="#">Dash Board</a></li><li><a href="#">Visao Geral</a></li>
+<li><a href="#">Cadastro</a></li><li><a href="#">Dados Profissionais</a></li><li><a href="#">TipoUsuario</a></li><li><a href="#">Adm Planos</a></li><li><a href="#">Meu Plano</a></li><li><a href="#">Login</a></li><li><a href="#">Buscar Empresas</a></li><li><a href="#">Procurar pela Localização</a></li><li><a href="#">Busca Profissional</a></li><li><a href="#">Pacientes
+</a></li><li><a href="#">Administrativo</a></li><li><a href="#">Dash Board</a></li><li><a href="#">Visao Geral</a></li><li><a href="#">Configurar Datas</a></li><li><a href="#">Configurar Agenda</a></li><li><a href="#">Gerenciar Consultas</a></li><li><a href="#">Adm Agenda Tipos Recebimento</a></li><li><a href="#">Adm Tipo Config</a></li><li><a href="#">Adm Parametros Config</a></li><li><a href="#">Adm Horarios</a></li>
 </ul>
 </a>
 </li>
 </ol>
 </span>
-<SPAN class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="1" data-itemid="simple_search" data-topcell-item-type="simple_search">
-<SPAN data-itemtype="simple_search" data-itemid="simple_search" data-pageid="1" class="form-group">
-<DIV class="input-group">
-<!--BEGIN searchform_text-->
-<INPUT type="search" class="form-control" placeholder="search" size="25" size="25">
-<!--END searchform_text-->
-<SPAN class="input-group-btn">
-<!--BEGIN searchform_showall-->
-<BUTTON class="btn btn-default" title="Mostrar Todos">
-<SPAN class="glyphicon glyphicon-remove"></span>
-</button>
-<!--END searchform_showall-->
-<!--BEGIN searchform_search-->
-<BUTTON class="btn btn-primary">
-<SPAN class="glyphicon glyphicon-search"></span>
-</button>
-<!--END searchform_search-->
-</span>
-</div>
-</span>	</span>
-<SPAN class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="1" data-itemid="list_options" data-topcell-item-type="list_options">
-<span data-itemtype="list_options" data-itemid="list_options"  data-pageid="1" data-small data-button-item>
-<SPAN class="dropdown">
-<BUTTON type="button" title class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">	<SPAN class="glyphicon glyphicon-cog"></span>
-<SPAN class="caret"></span>
-</button>
-<UL class="dropdown-menu">
-<li data-itemtype="advsearch_link" data-itemid="advsearch_link"  data-pageid="1" data-small >
-<a   href="visaogeral_search.php"   title="" >	Busca Avancada	</a>
-</li>
-</ul>
-</span>
-</span>
-</span>
-<SPAN class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="1" data-itemid="username_button" data-topcell-item-type="username_button">
+<SPAN class="navbar-form r-align-right r-ori-vert navbar-collapse" data-cellId="supertop_c2" data-pageid="1" data-itemid="username_button" data-topcell-item-type="username_button">
 <!--BEGIN loggedas_message-->
 <span data-itemtype="username_button" data-itemid="username_button"  data-pageid="1" data-small data-button-item>
 <SPAN class="dropdown">

@@ -157,9 +157,6 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel adm_agenda_estrutura_1 agt_config_id }","bold":true},{"text":{$agt_config_id_pdfvalue}}],"margin":[0,0,0,15]},
-				
-				
 			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel adm_agenda_estrutura_1 agt_data_excluir }","bold":true},{"text":{$agt_data_excluir_pdfvalue}}],"margin":[0,0,0,15]},
 				
 				

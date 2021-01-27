@@ -3274,6 +3274,10 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "adm_agenda_tipos_recebimento" ] = "adm_agenda_tipos_recebimento";
 	$projectEntities[ "adm_tipo_config" ] = array( "url" => "adm_tipo_config", "type" => 0 );
 	$projectEntitiesReverse[ "adm_tipo_config" ] = "adm_tipo_config";
+	$projectEntities[ "adm_parametros_config" ] = array( "url" => "adm_parametros_config", "type" => 0 );
+	$projectEntitiesReverse[ "adm_parametros_config" ] = "adm_parametros_config";
+	$projectEntities[ "adm_horarios" ] = array( "url" => "adm_horarios", "type" => 0 );
+	$projectEntitiesReverse[ "adm_horarios" ] = "adm_horarios";
 }
 
 function findTable( $table ) {

@@ -108,9 +108,6 @@ pdfDocument = {
 			{"hidden":"{$item_hide_import_field2}","text":{$age_config_id_pdfvalue}},
 				
 				
-			{"hidden":"{$item_hide_import_field3}","text":{$age_dia_sem_pdfvalue}},
-				
-				
 			{"hidden":"{$item_hide_import_field4}","text":{$age_data_att_pdfvalue}},
 				
 				
@@ -127,18 +124,6 @@ pdfDocument = {
 				
 				
 			{"hidden":"{$item_hide_import_field10}","text":{$age_anotacoes_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_import_field11}","text":{$age_att_campo_1_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_import_field12}","text":{$age_att_campo_2_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_import_field13}","text":{$age_att_campo_3_pdfvalue}},
-				
-				
-			{"hidden":"{$item_hide_import_field14}","text":{$age_att_campo_4_pdfvalue}},
 				
 				
 			{"hidden":"{$item_hide_import_field}","text":{$age_Paciente_pdfvalue}},
