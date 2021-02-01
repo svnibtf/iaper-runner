@@ -1,0 +1,533 @@
+<!doctype html><p align=center><font size=+1 color=red></font></p>
+<p align=center><font size=+1 color=red></font></p>
+<html  {$html_attrs}>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <base href="{$projectPath}">
+    <link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-view" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      {$locking}
+      <DIV class="r-small-page" data-body-align="center" data-body-width="standard">
+
+        <center>
+          <img src="https://blob.contato.io/machine-user-images/LOGO-SATEH-RETANGULO-img-802475-20200707112921.png" width=400>
+        </center>
+
+
+        {BEGIN top_block}
+          <DIV class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}" data-v-width="2" data-v-margin="0">
+            <DIV class="row">
+              <DIV data-cellId="top_c1" data-pageid="{$pageid}" {$cell_top_c1} class="r-ori-vert col-md-12">
+                <h2 data-itemtype="view_header" data-itemid="view_header" {$item_view_header} data-pageid="{$pageid}" >
+                  {$pagetitlelabel buscar_profissionais view}
+                </h2>
+              </div>
+            </div>
+          </div>
+        {END top_block}
+        {BEGIN above-grid_block}
+          <DIV class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}" data-v-width="2" data-v-margin="0">
+          </div>
+        {END above-grid_block}
+        {BEGIN grid_block}
+          <DIV class="panel panel-default form-section" data-itemtype="section" data-itemid="section" {$item_section} data-pageid="{$pageid}">
+            <DIV class="panel-heading" role="tab" {$section_section1_headattrs} data-toggle="collapse" href="#section1{$pageid}" aria-expanded="true" aria-controls="section1">
+              <H4 class="panel-title">
+                <a role="button" >
+                  Empresa
+                </a>
+              </h4>
+            </div>
+            <DIV class="panel-collapse collapse in {$section_section1_xtrclass}" role="tabpanel" {$section_section1_attrs} id="section1{$pageid}">
+              <DIV class="panel-body">
+                {BEGIN section_block}
+                  <TABLE data-body-align="center" data-location="section" id="form_section_{$pageid}" data-makeup="small" {$form_section} data-pageid="{$pageid}" class="r-edit-form" cellpadding="0" cellspacing="0" {$grid_hiddenattr} data-form-width="1" data-v-width="4">
+                    <tbody>
+                      <tr>
+                        {BEGIN cellblock_section_c1}
+                          <TD {$cell_section_c1} class="r-ori-vert" data-fullwidth data-cellId="section_c1" data-pageid="{$pageid}" data-v-cell="4">
+                            <DIV edit-form-cell class="clearfix">
+                              {BEGIN Logotipo_fieldblock}
+                                <DIV class="r-integrated-field form-group clearfix {$fielddispclass_Logotipo} r-vertical-field" data-fieldname="Logotipo" data-signal-error-for="Logotipo{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="Logotipo">
+                                  <LABEL class="col-md-offset-3 col-md-6" for="{$labelfor_Logotipo}">
+                                    {BEGIN Logotipo_label}
+                                      {$label buscar_profissionais Logotipo}
+                                    {END Logotipo_label}
+                                  </label>
+                                  <DIV class="col-md-offset-3 col-md-6">
+                                    {$Logotipo_value}
+                                  </div>
+                                </div>
+                              {END Logotipo_fieldblock}
+                              {BEGIN Foto_Fechada_fieldblock}
+                                <DIV class="r-integrated-field form-group clearfix {$fielddispclass_Foto_Fechada} r-vertical-field" data-fieldname="Foto_Fechada" data-signal-error-for="Foto_Fechada{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field15" {$item_integrated_edit_field15} data-pageid="{$pageid}" data-field="Foto_Fechada">
+                                  <LABEL class="col-md-offset-3 col-md-6" for="{$labelfor_Foto_Fechada}">
+                                    {BEGIN Foto_Fechada_label}
+                                      {$label buscar_profissionais Foto_Fechada}
+                                    {END Foto_Fechada_label}
+                                  </label>
+                                  <DIV class="col-md-offset-3 col-md-6">
+                                    {$Foto_Fechada_value}
+                                  </div>
+                                </div>
+                              {END Foto_Fechada_fieldblock}
+                              {BEGIN nome_empresa_fieldblock}
+                                <DIV class="r-integrated-field form-group clearfix {$fielddispclass_nome_empresa} r-vertical-field" data-fieldname="nome_empresa" data-signal-error-for="nome_empresa{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field16" {$item_integrated_edit_field16} data-pageid="{$pageid}" data-page="buscar_profissionais_view" data-field="nome_empresa">
+                                  <LABEL class="col-md-offset-3 col-md-6" for="{$labelfor_nome_empresa}">
+                                    {BEGIN nome_empresa_label}
+                                      {$label buscar_profissionais nome_empresa}
+                                    {END nome_empresa_label}
+                                  </label>
+                                  <DIV class="col-md-offset-3 col-md-6">
+                                    {$nome_empresa_value}
+                                  </div>
+                                </div>
+                              {END nome_empresa_fieldblock}
+                          </td>
+                        {END cellblock_section_c1}
+                      </tr>
+                    </tbody>
+                  </table>
+                {END section_block}
+              </div>
+            </div>
+          </div>
+          <DIV class="panel panel-default form-section" data-itemtype="section" data-itemid="section1" {$item_section1} data-pageid="{$pageid}">
+            <DIV class="panel-heading" role="tab" {$section_section2_headattrs} data-toggle="collapse" href="#section2{$pageid}" aria-expanded="true" aria-controls="section2">
+              <H4 class="panel-title">
+                <a role="button" >
+                  Profissional
+                </a>
+              </h4>
+            </div>
+            <DIV class="panel-collapse collapse in {$section_section2_xtrclass}" role="tabpanel" {$section_section2_attrs} id="section2{$pageid}">
+              <DIV class="panel-body">
+                {BEGIN section1_block}
+                  <TABLE data-body-align="center" data-location="section1" id="form_section1_{$pageid}" data-makeup="small" {$form_section1} data-pageid="{$pageid}" class="r-edit-form" cellpadding="0" cellspacing="0" {$grid_hiddenattr} data-form-width="1" data-v-width="4">
+                    <tbody>
+                      <tr>
+                        {BEGIN cellblock_section1_c1}
+                          <TD {$cell_section1_c1} class="r-ori-vert" data-fullwidth data-cellId="section1_c1" data-pageid="{$pageid}" data-v-cell="4">
+                            <DIV edit-form-cell class="clearfix">
+                              {BEGIN avatar_fieldblock}
+                                <DIV class="r-integrated-field form-group clearfix {$fielddispclass_avatar} r-vertical-field" data-fieldname="avatar" data-signal-error-for="avatar{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="avatar">
+                                  <LABEL class="col-md-offset-3 col-md-6" for="{$labelfor_avatar}">
+                                    {BEGIN avatar_label}
+                                      {$label buscar_profissionais avatar}
+                                    {END avatar_label}
+                                  </label>
+                                  <DIV class="col-md-offset-3 col-md-6">
+                                    {$avatar_value}
+                                  </div>
+                                </div>
+                              {END avatar_fieldblock}
+                              {BEGIN nome_fieldblock}
+                                <DIV class="r-integrated-field form-group clearfix {$fielddispclass_nome} r-vertical-field" data-fieldname="nome" data-signal-error-for="nome{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="nome">
+                                  <LABEL class="col-md-offset-3 col-md-6" for="{$labelfor_nome}">
+                                    {BEGIN nome_label}
+                                      {$label buscar_profissionais nome}
+                                    {END nome_label}
+                                  </label>
+                                  <DIV class="col-md-offset-3 col-md-6">
+                                    {$nome_value}
+                                  </div>
+                                </div>
+                              {END nome_fieldblock}
+                              {BEGIN sobre_profissional_fieldblock}
+                                <DIV class="r-integrated-field form-group clearfix {$fielddispclass_sobre_profissional} r-vertical-field" data-fieldname="sobre_profissional" data-signal-error-for="sobre_profissional{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="sobre_profissional">
+                                  <LABEL class="col-md-offset-3 col-md-6" for="{$labelfor_sobre_profissional}">
+                                    {BEGIN sobre_profissional_label}
+                                      {$label buscar_profissionais sobre_profissional}
+                                    {END sobre_profissional_label}
+                                  </label>
+                                  <DIV class="col-md-offset-3 col-md-6">
+                                    {$sobre_profissional_value}
+                                  </div>
+                                </div>
+                              {END sobre_profissional_fieldblock}
+                              {BEGIN avaliacao_usuarios_fieldblock}
+                                <DIV class="r-integrated-field form-group clearfix {$fielddispclass_avaliacao_usuarios} r-vertical-field" data-fieldname="avaliacao_usuarios" data-signal-error-for="avaliacao_usuarios{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="avaliacao_usuarios">
+                                  <LABEL class="col-md-offset-3 col-md-6" for="{$labelfor_avaliacao_usuarios}">
+                                    {BEGIN avaliacao_usuarios_label}
+                                      {$label buscar_profissionais avaliacao_usuarios}
+                                    {END avaliacao_usuarios_label}
+                                  </label>
+                                  <DIV class="col-md-offset-3 col-md-6">
+                                    {$avaliacao_usuarios_value}
+                                  </div>
+                                </div>
+                              {END avaliacao_usuarios_fieldblock}
+                              {BEGIN email_profissional_fieldblock}
+                                <DIV class="r-integrated-field form-group clearfix {$fielddispclass_email_profissional} r-vertical-field" data-fieldname="email_profissional" data-signal-error-for="email_profissional{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="email_profissional">
+                                  <LABEL class="col-md-offset-3 col-md-6" for="{$labelfor_email_profissional}">
+                                    {BEGIN email_profissional_label}
+                                      {$label buscar_profissionais email_profissional}
+                                    {END email_profissional_label}
+                                  </label>
+                                  <DIV class="col-md-offset-3 col-md-6">
+                                    {$email_profissional_value}
+                                  </div>
+                                </div>
+                              {END email_profissional_fieldblock}
+                              {BEGIN mini_curriculo_fieldblock}
+                                <DIV class="r-integrated-field form-group clearfix {$fielddispclass_mini_curriculo} r-vertical-field" data-fieldname="mini_curriculo" data-signal-error-for="mini_curriculo{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field12" {$item_integrated_edit_field12} data-pageid="{$pageid}" data-field="mini_curriculo">
+                                  <LABEL class="col-md-offset-3 col-md-6" for="{$labelfor_mini_curriculo}">
+                                    {BEGIN mini_curriculo_label}
+                                      {$label buscar_profissionais mini_curriculo}
+                                    {END mini_curriculo_label}
+                                  </label>
+                                  <DIV class="col-md-offset-3 col-md-6">
+                                    {$mini_curriculo_value}
+                                  </div>
+                                </div>
+                              {END mini_curriculo_fieldblock}
+                              {BEGIN resumo_formacao_academica_fieldblock}
+                                <DIV class="r-integrated-field form-group clearfix {$fielddispclass_resumo_formacao_academica} r-vertical-field" data-fieldname="resumo_formacao_academica" data-signal-error-for="resumo_formacao_academica{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field13" {$item_integrated_edit_field13} data-pageid="{$pageid}" data-field="resumo_formacao_academica">
+                                  <LABEL class="col-md-offset-3 col-md-6" for="{$labelfor_resumo_formacao_academica}">
+                                    {BEGIN resumo_formacao_academica_label}
+                                      {$label buscar_profissionais resumo_formacao_academica}
+                                    {END resumo_formacao_academica_label}
+                                  </label>
+                                  <DIV class="col-md-offset-3 col-md-6">
+                                    {$resumo_formacao_academica_value}
+                                  </div>
+                                </div>
+                              {END resumo_formacao_academica_fieldblock}
+                              {BEGIN resumo_formacao_fieldblock}
+                                <DIV class="r-integrated-field form-group clearfix {$fielddispclass_resumo_formacao} r-vertical-field" data-fieldname="resumo_formacao" data-signal-error-for="resumo_formacao{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="resumo_formacao">
+                                  <LABEL class="col-md-offset-3 col-md-6" for="{$labelfor_resumo_formacao}">
+                                    {BEGIN resumo_formacao_label}
+                                      {$label buscar_profissionais resumo_formacao}
+                                    {END resumo_formacao_label}
+                                  </label>
+                                  <DIV class="col-md-offset-3 col-md-6">
+                                    {$resumo_formacao_value}
+                                  </div>
+                                </div>
+                              {END resumo_formacao_fieldblock}
+                              {BEGIN resumo_formacao_cursos_fieldblock}
+                                <DIV class="r-integrated-field form-group clearfix {$fielddispclass_resumo_formacao_cursos} r-vertical-field" data-fieldname="resumo_formacao_cursos" data-signal-error-for="resumo_formacao_cursos{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field14" {$item_integrated_edit_field14} data-pageid="{$pageid}" data-field="resumo_formacao_cursos">
+                                  <LABEL class="col-md-offset-3 col-md-6" for="{$labelfor_resumo_formacao_cursos}">
+                                    {BEGIN resumo_formacao_cursos_label}
+                                      {$label buscar_profissionais resumo_formacao_cursos}
+                                    {END resumo_formacao_cursos_label}
+                                  </label>
+                                  <DIV class="col-md-offset-3 col-md-6">
+                                    {$resumo_formacao_cursos_value}
+                                  </div>
+                                </div>
+                              {END resumo_formacao_cursos_fieldblock}
+                          </td>
+                        {END cellblock_section1_c1}
+                      </tr>
+                    </tbody>
+                  </table>
+                {END section1_block}
+              </div>
+            </div>
+          </div>
+          <DIV class="panel panel-default form-section" data-itemtype="section" data-itemid="section3" {$item_section3} data-pageid="{$pageid}">
+            <DIV class="panel-heading" role="tab" {$section_section3_headattrs} data-toggle="collapse" href="#section3{$pageid}" aria-expanded="true" aria-controls="section3">
+              <H4 class="panel-title">
+                <a role="button" >
+                  Sobre Nós
+                </a>
+              </h4>
+            </div>
+            <DIV class="panel-collapse collapse in {$section_section3_xtrclass}" role="tabpanel" {$section_section3_attrs} id="section3{$pageid}">
+              <DIV class="panel-body">
+                {BEGIN section3_block}
+                  <TABLE data-body-align="center" data-location="section3" id="form_section3_{$pageid}" data-makeup="small" {$form_section3} data-pageid="{$pageid}" class="r-edit-form" cellpadding="0" cellspacing="0" {$grid_hiddenattr} data-form-width="1" data-v-width="4">
+                    <tbody>
+                      <tr>
+                        {BEGIN cellblock_section3_c1}
+                          <TD {$cell_section3_c1} class="r-ori-vert" data-fullwidth data-cellId="section3_c1" data-pageid="{$pageid}" data-v-cell="4">
+                            <DIV edit-form-cell class="clearfix">
+                              {BEGIN ramo_empresa_fieldblock}
+                                <DIV class="r-integrated-field form-group clearfix {$fielddispclass_ramo_empresa} r-vertical-field" data-fieldname="ramo_empresa" data-signal-error-for="ramo_empresa{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field18" {$item_integrated_edit_field18} data-pageid="{$pageid}" data-field="ramo_empresa">
+                                  <LABEL class="col-md-offset-3 col-md-6" for="{$labelfor_ramo_empresa}">
+                                    {BEGIN ramo_empresa_label}
+                                      {$label buscar_profissionais ramo_empresa}
+                                    {END ramo_empresa_label}
+                                  </label>
+                                  <DIV class="col-md-offset-3 col-md-6">
+                                    {$ramo_empresa_value}
+                                  </div>
+                                </div>
+                              {END ramo_empresa_fieldblock}
+                              {BEGIN Sobre_a_Empresa_fieldblock}
+                                <DIV class="r-integrated-field form-group clearfix {$fielddispclass_Sobre_a_Empresa} r-vertical-field" data-fieldname="Sobre_a_Empresa" data-signal-error-for="Sobre_a_Empresa{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field19" {$item_integrated_edit_field19} data-pageid="{$pageid}" data-field="Sobre_a_Empresa">
+                                  <LABEL class="col-md-offset-3 col-md-6" for="{$labelfor_Sobre_a_Empresa}">
+                                    {BEGIN Sobre_a_Empresa_label}
+                                      {$label buscar_profissionais Sobre_a_Empresa}
+                                    {END Sobre_a_Empresa_label}
+                                  </label>
+                                  <DIV class="col-md-offset-3 col-md-6">
+                                    {$Sobre_a_Empresa_value}
+                                  </div>
+                                </div>
+                              {END Sobre_a_Empresa_fieldblock}
+                              {BEGIN atendimento_online_fieldblock}
+                                <DIV class="r-integrated-field form-group clearfix {$fielddispclass_atendimento_online} r-vertical-field" data-fieldname="atendimento_online" data-signal-error-for="atendimento_online{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field11" {$item_integrated_edit_field11} data-pageid="{$pageid}" data-field="atendimento_online">
+                                  <LABEL class="col-md-offset-3 col-md-6" for="{$labelfor_atendimento_online}">
+                                    {BEGIN atendimento_online_label}
+                                      {$label buscar_profissionais atendimento_online}
+                                    {END atendimento_online_label}
+                                  </label>
+                                  <DIV class="col-md-offset-3 col-md-6">
+                                    {$atendimento_online_value}
+                                  </div>
+                                </div>
+                              {END atendimento_online_fieldblock}
+                              {BEGIN atendimento_presencial_fieldblock}
+                                <DIV class="r-integrated-field form-group clearfix {$fielddispclass_atendimento_presencial} r-vertical-field" data-fieldname="atendimento_presencial" data-signal-error-for="atendimento_presencial{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="atendimento_presencial">
+                                  <LABEL class="col-md-offset-3 col-md-6" for="{$labelfor_atendimento_presencial}">
+                                    {BEGIN atendimento_presencial_label}
+                                      {$label buscar_profissionais atendimento_presencial}
+                                    {END atendimento_presencial_label}
+                                  </label>
+                                  <DIV class="col-md-offset-3 col-md-6">
+                                    {$atendimento_presencial_value}
+                                  </div>
+                                </div>
+                              {END atendimento_presencial_fieldblock}
+                              {BEGIN diferencial_profissional_fieldblock}
+                                <DIV class="r-integrated-field form-group clearfix {$fielddispclass_diferencial_profissional} r-vertical-field" data-fieldname="diferencial_profissional" data-signal-error-for="diferencial_profissional{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="diferencial_profissional">
+                                  <LABEL class="col-md-offset-3 col-md-6" for="{$labelfor_diferencial_profissional}">
+                                    {BEGIN diferencial_profissional_label}
+                                      {$label buscar_profissionais diferencial_profissional}
+                                    {END diferencial_profissional_label}
+                                  </label>
+                                  <DIV class="col-md-offset-3 col-md-6">
+                                    {$diferencial_profissional_value}
+                                  </div>
+                                </div>
+                              {END diferencial_profissional_fieldblock}
+                          </td>
+                        {END cellblock_section3_c1}
+                      </tr>
+                    </tbody>
+                  </table>
+                {END section3_block}
+              </div>
+            </div>
+          </div>
+          <DIV class="panel panel-default form-section" data-itemtype="section" data-itemid="section2" {$item_section2} data-pageid="{$pageid}">
+            <DIV class="panel-heading" role="tab" {$section_section4_headattrs} data-toggle="collapse" href="#section4{$pageid}" aria-expanded="true" aria-controls="section4">
+              <H4 class="panel-title">
+                <a role="button" >
+                  Localização
+                </a>
+              </h4>
+            </div>
+            <DIV class="panel-collapse collapse in {$section_section4_xtrclass}" role="tabpanel" {$section_section4_attrs} id="section4{$pageid}">
+              <DIV class="panel-body">
+                {BEGIN section2_block}
+                  <TABLE data-body-align="center" data-location="section2" id="form_section2_{$pageid}" data-makeup="small" {$form_section2} data-pageid="{$pageid}" class="r-edit-form" cellpadding="0" cellspacing="0" {$grid_hiddenattr} data-form-width="1" data-v-width="4">
+                    <tbody>
+                      <tr>
+                        {BEGIN cellblock_section2_c1}
+                          <TD {$cell_section2_c1} class="r-ori-vert" data-fullwidth data-cellId="section2_c1" data-pageid="{$pageid}" data-v-cell="4">
+                            <DIV edit-form-cell class="clearfix">
+                              {BEGIN endereco_profissional_rua_fieldblock}
+                                <DIV class="r-integrated-field form-group clearfix {$fielddispclass_endereco_profissional_rua} r-vertical-field" data-fieldname="endereco_profissional_rua" data-signal-error-for="endereco_profissional_rua{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field21" {$item_integrated_edit_field21} data-pageid="{$pageid}" data-field="endereco_profissional_rua">
+                                  <LABEL class="col-md-offset-3 col-md-6" for="{$labelfor_endereco_profissional_rua}">
+                                    {BEGIN endereco_profissional_rua_label}
+                                      {$label buscar_profissionais endereco_profissional_rua}
+                                    {END endereco_profissional_rua_label}
+                                  </label>
+                                  <DIV class="col-md-offset-3 col-md-6">
+                                    {$endereco_profissional_rua_value}
+                                  </div>
+                                </div>
+                              {END endereco_profissional_rua_fieldblock}
+                              {BEGIN endereco_profissional_numero_fieldblock}
+                                <DIV class="r-integrated-field form-group clearfix {$fielddispclass_endereco_profissional_numero} r-vertical-field" data-fieldname="endereco_profissional_numero" data-signal-error-for="endereco_profissional_numero{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field22" {$item_integrated_edit_field22} data-pageid="{$pageid}" data-field="endereco_profissional_numero">
+                                  <LABEL class="col-md-offset-3 col-md-6" for="{$labelfor_endereco_profissional_numero}">
+                                    {BEGIN endereco_profissional_numero_label}
+                                      {$label buscar_profissionais endereco_profissional_numero}
+                                    {END endereco_profissional_numero_label}
+                                  </label>
+                                  <DIV class="col-md-offset-3 col-md-6">
+                                    {$endereco_profissional_numero_value}
+                                  </div>
+                                </div>
+                              {END endereco_profissional_numero_fieldblock}
+                              {BEGIN endereco_profissional_complemento_fieldblock}
+                                <DIV class="r-integrated-field form-group clearfix {$fielddispclass_endereco_profissional_complemento} r-vertical-field" data-fieldname="endereco_profissional_complemento" data-signal-error-for="endereco_profissional_complemento{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field23" {$item_integrated_edit_field23} data-pageid="{$pageid}" data-field="endereco_profissional_complemento">
+                                  <LABEL class="col-md-offset-3 col-md-6" for="{$labelfor_endereco_profissional_complemento}">
+                                    {BEGIN endereco_profissional_complemento_label}
+                                      {$label buscar_profissionais endereco_profissional_complemento}
+                                    {END endereco_profissional_complemento_label}
+                                  </label>
+                                  <DIV class="col-md-offset-3 col-md-6">
+                                    {$endereco_profissional_complemento_value}
+                                  </div>
+                                </div>
+                              {END endereco_profissional_complemento_fieldblock}
+                              {BEGIN endereco_profissional_bairro_fieldblock}
+                                <DIV class="r-integrated-field form-group clearfix {$fielddispclass_endereco_profissional_bairro} r-vertical-field" data-fieldname="endereco_profissional_bairro" data-signal-error-for="endereco_profissional_bairro{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="endereco_profissional_bairro">
+                                  <LABEL class="col-md-offset-3 col-md-6" for="{$labelfor_endereco_profissional_bairro}">
+                                    {BEGIN endereco_profissional_bairro_label}
+                                      {$label buscar_profissionais endereco_profissional_bairro}
+                                    {END endereco_profissional_bairro_label}
+                                  </label>
+                                  <DIV class="col-md-offset-3 col-md-6">
+                                    {$endereco_profissional_bairro_value}
+                                  </div>
+                                </div>
+                              {END endereco_profissional_bairro_fieldblock}
+                              {BEGIN municipio_empresa_fieldblock}
+                                <DIV class="r-integrated-field form-group clearfix {$fielddispclass_municipio_empresa} r-vertical-field" data-fieldname="municipio_empresa" data-signal-error-for="municipio_empresa{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field27" {$item_integrated_edit_field27} data-pageid="{$pageid}" data-field="municipio_empresa">
+                                  <LABEL class="col-md-offset-3 col-md-6" for="{$labelfor_municipio_empresa}">
+                                    {BEGIN municipio_empresa_label}
+                                      {$label buscar_profissionais municipio_empresa}
+                                    {END municipio_empresa_label}
+                                  </label>
+                                  <DIV class="col-md-offset-3 col-md-6">
+                                    {$municipio_empresa_value}
+                                  </div>
+                                </div>
+                              {END municipio_empresa_fieldblock}
+                              {BEGIN estado_empresa_fieldblock}
+                                <DIV class="r-integrated-field form-group clearfix {$fielddispclass_estado_empresa} r-vertical-field" data-fieldname="estado_empresa" data-signal-error-for="estado_empresa{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field26" {$item_integrated_edit_field26} data-pageid="{$pageid}" data-field="estado_empresa">
+                                  <LABEL class="col-md-offset-3 col-md-6" for="{$labelfor_estado_empresa}">
+                                    {BEGIN estado_empresa_label}
+                                      {$label buscar_profissionais estado_empresa}
+                                    {END estado_empresa_label}
+                                  </label>
+                                  <DIV class="col-md-offset-3 col-md-6">
+                                    {$estado_empresa_value}
+                                  </div>
+                                </div>
+                              {END estado_empresa_fieldblock}
+                              {BEGIN cep_profissional_fieldblock}
+                                <DIV class="r-integrated-field form-group clearfix {$fielddispclass_cep_profissional} r-vertical-field" data-fieldname="cep_profissional" data-signal-error-for="cep_profissional{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field20" {$item_integrated_edit_field20} data-pageid="{$pageid}" data-field="cep_profissional">
+                                  <LABEL class="col-md-offset-3 col-md-6" for="{$labelfor_cep_profissional}">
+                                    {BEGIN cep_profissional_label}
+                                      {$label buscar_profissionais cep_profissional}
+                                    {END cep_profissional_label}
+                                  </label>
+                                  <DIV class="col-md-offset-3 col-md-6">
+                                    {$cep_profissional_value}
+                                  </div>
+                                </div>
+                              {END cep_profissional_fieldblock}
+                              {BEGIN pais_empresa_fieldblock}
+                                <DIV class="r-integrated-field form-group clearfix {$fielddispclass_pais_empresa} r-vertical-field" data-fieldname="pais_empresa" data-signal-error-for="pais_empresa{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field25" {$item_integrated_edit_field25} data-pageid="{$pageid}" data-field="pais_empresa">
+                                  <LABEL class="col-md-offset-3 col-md-6" for="{$labelfor_pais_empresa}">
+                                    {BEGIN pais_empresa_label}
+                                      {$label buscar_profissionais pais_empresa}
+                                    {END pais_empresa_label}
+                                  </label>
+                                  <DIV class="col-md-offset-3 col-md-6">
+                                    {$pais_empresa_value}
+                                  </div>
+                                </div>
+                              {END pais_empresa_fieldblock}
+                              {BEGIN Mapa_fieldblock}
+                                <DIV class="r-integrated-field form-group clearfix {$fielddispclass_Mapa} r-vertical-field" data-fieldname="Mapa" data-signal-error-for="Mapa{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="Mapa">
+                                  <LABEL class="col-md-offset-3 col-md-6" for="{$labelfor_Mapa}">
+                                    {BEGIN Mapa_label}
+                                      {$label buscar_profissionais Mapa}
+                                    {END Mapa_label}
+                                  </label>
+                                  <DIV class="col-md-offset-3 col-md-6">
+                                    {$Mapa_value}
+                                  </div>
+                                </div>
+                              {END Mapa_fieldblock}
+                          </td>
+                        {END cellblock_section2_c1}
+                      </tr>
+                    </tbody>
+                  </table>
+                {END section2_block}
+              </div>
+            </div>
+          </div>
+          <DIV class="panel panel-default form-section" data-itemtype="section" data-itemid="section4" {$item_section4} data-pageid="{$pageid}">
+            <DIV class="panel-heading" role="tab" {$section_section5_headattrs} data-toggle="collapse" href="#section5{$pageid}" aria-expanded="true" aria-controls="section5">
+              <H4 class="panel-title">
+                <a role="button" >
+                  Horário de Atendimento
+                </a>
+              </h4>
+            </div>
+            <DIV class="panel-collapse collapse in {$section_section5_xtrclass}" role="tabpanel" {$section_section5_attrs} id="section5{$pageid}">
+              <DIV class="panel-body">
+                {BEGIN section4_block}
+                  <TABLE data-body-align="center" data-location="section4" id="form_section4_{$pageid}" data-makeup="small" {$form_section4} data-pageid="{$pageid}" class="r-edit-form" cellpadding="0" cellspacing="0" {$grid_hiddenattr} data-form-width="1" data-v-width="4">
+                    <tbody>
+                      <tr>
+                        {BEGIN cellblock_section4_c1}
+                          <TD {$cell_section4_c1} class="r-ori-vert" data-single data-fullwidth data-cellId="section4_c1" data-pageid="{$pageid}" data-v-cell="4">
+                            <DIV edit-form-cell class="clearfix">
+                              {BEGIN Horarios_de_Atendimento_fieldblock}
+                                <DIV class="r-integrated-field form-group clearfix {$fielddispclass_Horarios_de_Atendimento} r-vertical-field" data-fieldname="Horarios_de_Atendimento" data-signal-error-for="Horarios_de_Atendimento{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field17" {$item_integrated_edit_field17} data-pageid="{$pageid}" data-field="Horarios_de_Atendimento">
+                                  <LABEL class="col-md-offset-3 col-md-6" for="{$labelfor_Horarios_de_Atendimento}">
+                                    {BEGIN Horarios_de_Atendimento_label}
+                                      {$label buscar_profissionais Horarios_de_Atendimento}
+                                    {END Horarios_de_Atendimento_label}
+                                  </label>
+                                  <DIV class="col-md-offset-3 col-md-6">
+                                    {$Horarios_de_Atendimento_value}
+                                  </div>
+                                </div>
+                              {END Horarios_de_Atendimento_fieldblock}
+                          </td>
+                        {END cellblock_section4_c1}
+                      </tr>
+                    </tbody>
+                  </table>
+                {END section4_block}
+              </div>
+            </div>
+          </div>
+        {END grid_block}
+        {BEGIN below-grid_block}
+          <DIV class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}" data-v-width="2" data-v-margin="0">
+            <DIV class="row">
+              <DIV data-cellId="below-grid_c1" data-pageid="{$pageid}" {$cell_below-grid_c1} class="col-md-6">
+                {BEGIN back_button}
+                  <span data-itemtype="view_back_list" data-itemid="view_back_list" {$item_view_back_list} data-pageid="{$pageid}" data-small data-button-item>
+                    <A type="button" title class="btn btn-default" {$backbutton_attrs}>
+                      Voltar à Lista
+                    </a>
+                  </span>
+                {END back_button}
+                {BEGIN close_button}
+                  <span data-itemtype="view_close" data-itemid="view_close" {$item_view_close} data-pageid="{$pageid}" data-small data-button-item>
+                    <A type="button" title class="btn btn-default" href="#" {$closebutton_attrs}>
+                      Fechar Janela
+                    </a>
+                  </span>
+                {END close_button}
+              </div>
+              <DIV data-cellId="below-grid_c2" data-pageid="{$pageid}" {$cell_below-grid_c2} class="r-align-right r-ori-vert col-md-6">
+              </div>
+            </div>
+          </div>
+        {END below-grid_block}
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

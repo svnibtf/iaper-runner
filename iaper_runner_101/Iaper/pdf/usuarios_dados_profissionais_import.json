@@ -1,0 +1,177 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+					[
+												{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel usuarios_dados_profissionais import}","hidden":"{$item_hide_import_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+  },
+
+											],
+					]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+					[
+												{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_import_field4}","text":{$sobre_profissional_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field5}","text":{$resumo_formacao_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field7}","text":{$diferencial_profissional_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field8}","text":{$atendimento_presencial_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field9}","text":{$atendimento_online_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field10}","text":{$mini_curriculo_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field11}","text":{$resumo_formacao_academica_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field12}","text":{$resumo_formacao_cursos_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field14}","text":{$nome_empresa_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field15}","text":{$cnpj_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field16}","text":{$ramo_empresa_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field17}","text":{$tipo_empresa_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field18}","text":{$cep_profissional_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field19}","text":{$endereco_profissional_rua_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field20}","text":{$endereco_profissional_numero_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field21}","text":{$endereco_profissional_complemento_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field24}","text":{$pais_empresa_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field25}","text":{$estado_empresa_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field26}","text":{$municipio_empresa_pdfvalue}},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+  },
+
+											],
+					]
+	}
+}
+,
+		
+					]
+}
+  
