@@ -1,0 +1,14 @@
+[data-page="adm_usuarios1_list"][data-itemid="text"] {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Put  your custom CSS code here */
+
+[data-page="adm_usuarios1_list"][data-itemid="simple_grid_field13"] {
+  color: red;
+}
+
+:img    {
+    border-radius: 50%;
+}

@@ -1,0 +1,6 @@
+Importar para adm_parametros_config
+27/01/2021 12:15:08
+
+43 de 43 de registros processados com sucesso.
+43 de registros adicionados.
+0 de registros atualizados.

@@ -1,0 +1,8 @@
+[Tue Feb 02 10:01:07.988365 2021] [core:warn] [pid 2796:tid 172] AH00117: Ignoring deprecated use of DefaultType in line 21 of C:/Users/Rubens/Desktop/Sateh_Menu/tmp/webserver.conf.
+[Tue Feb 02 10:01:11.779172 2021] [mpm_winnt:notice] [pid 2796:tid 172] AH00455: Apache/2.4.37 (Win32) PHP/5.6.40 configured -- resuming normal operations
+[Tue Feb 02 10:01:11.779172 2021] [mpm_winnt:notice] [pid 2796:tid 172] AH00456: Apache Lounge VC11 Server built: Oct 22 2018 14:14:30
+[Tue Feb 02 10:01:11.779172 2021] [core:notice] [pid 2796:tid 172] AH00094: Command line: 'C:\\Program Files\\PHPRunner10.4\\EmbeddedServer\\bin\\httpd.exe -d C:/Program Files/PHPRunner10.4/EmbeddedServer -d C:\\Program Files\\PHPRunner10.4\\EmbeddedServer -f C:\\Users\\Rubens\\Desktop\\Sateh_Menu\\tmp\\webserver.conf'
+[Tue Feb 02 10:01:11.794772 2021] [mpm_winnt:notice] [pid 2796:tid 172] AH00418: Parent: Created child process 2772
+[Tue Feb 02 10:01:12.215973 2021] [core:warn] [pid 2772:tid 184] AH00117: Ignoring deprecated use of DefaultType in line 21 of C:/Users/Rubens/Desktop/Sateh_Menu/tmp/webserver.conf.
+[Tue Feb 02 10:01:12.262773 2021] [core:warn] [pid 2772:tid 184] AH00117: Ignoring deprecated use of DefaultType in line 21 of C:/Users/Rubens/Desktop/Sateh_Menu/tmp/webserver.conf.
+[Tue Feb 02 10:01:12.325173 2021] [mpm_winnt:notice] [pid 2772:tid 184] AH00354: Child: Starting 64 worker threads.

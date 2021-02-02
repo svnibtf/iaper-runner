@@ -1,0 +1,1059 @@
+<!doctype html><p align=center><font size=+1 color=red></font></p>
+<p align=center><font size=+1 color=red></font></p>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-list" {$bodyattrs}>
+	{BEGIN body}
+		<style>
+		{$containerCss}
+		</style>
+		<div class="r-vbar-page">
+			<div data-width="" data-fixed class="r-left clearfix {$leftbar_class}" >
+								<div data-location="left" id="form_left_{$pageid}" data-makeup="leftbar" {$form_left} data-pageid="{$pageid}">
+{BEGIN left_block}
+ 
+     
+         
+
+			<div data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell class="clearfix " data-itemid="logo1" {$item_logo1}>
+				{BEGIN logo_block}
+	<A data-itemtype="logo" data-itemid="logo1" {$item_logo1} data-pageid="{$pageid}" class="navbar-brand" href="{$home_link}" data-pageid="{$pageid}" {$logo_hiddenattr}>
+		{$logo}
+	</A>
+{END logo_block}
+				<button data-pageid="1" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target="[data-mobile-controlled]">	
+					<span class="sr-only">Toggle navigation</span>	
+					<span class="icon-bar"></span>					
+				</button>				
+			</div>
+		
+ 
+
+			<div class="clearfix " data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell data-itemid="expand_button" {$item_expand_button} data-topcell-item-type="expand_button" >
+				<span data-itemtype="expand_button" data-itemid="expand_button" {$item_expand_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Expand" class="btn btn-link   
+	" href="#" >
+					<span class="glyphicon glyphicon-triangle-right"></span>
+										</a>
+</span>
+			</div>
+		
+     
+     
+         
+
+			<div data-cellId="left_c1" data-pageid="{$pageid}" class="clearfix  r-ori-vert " data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
+				{$menu main}			</div>
+		
+ 
+
+			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="search_panel" {$item_search_panel} data-topcell-item-type="search_panel" >
+				<!-- Begin Search panel content -->
+<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}" >
+
+	<div class="panel-heading">
+		<div class="btn-group" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Buscar em			<span class="caret"></span>
+			</button>
+		</div>
+
+
+		<div class="btn-group searchpanel-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Mostrar opções</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>todas as condições</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>qualquer condição</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>ocultar</a></li>
+			</ul>
+		</div>
+
+
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+																		{BEGIN searchCtrlBlock_udp_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_udp_id}" {$filterRow_attrs_udp_id}>
+			<label>{$label usuarios_dados_profissionais udp_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_udp_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_udp_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_udp_id}</span>
+						</div>
+		{END searchCtrlBlock_udp_id}
+																{BEGIN searchCtrlBlock_idPlano}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_idPlano}" {$filterRow_attrs_idPlano}>
+			<label>{$label usuarios_dados_profissionais idPlano }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_idPlano}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_idPlano}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_idPlano}</span>
+						</div>
+		{END searchCtrlBlock_idPlano}
+																{BEGIN searchCtrlBlock_Lng}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Lng}" {$filterRow_attrs_Lng}>
+			<label>{$label usuarios_dados_profissionais Lng }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Lng}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Lng}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Lng}</span>
+						</div>
+		{END searchCtrlBlock_Lng}
+																{BEGIN searchCtrlBlock_Lat}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Lat}" {$filterRow_attrs_Lat}>
+			<label>{$label usuarios_dados_profissionais Lat }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Lat}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Lat}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Lat}</span>
+						</div>
+		{END searchCtrlBlock_Lat}
+																{BEGIN searchCtrlBlock_Sobre_a_Empresa}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Sobre_a_Empresa}" {$filterRow_attrs_Sobre_a_Empresa}>
+			<label>{$label usuarios_dados_profissionais Sobre_a_Empresa }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Sobre_a_Empresa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Sobre_a_Empresa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Sobre_a_Empresa}</span>
+						</div>
+		{END searchCtrlBlock_Sobre_a_Empresa}
+																{BEGIN searchCtrlBlock_Horarios_de_Atendimento}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Horarios_de_Atendimento}" {$filterRow_attrs_Horarios_de_Atendimento}>
+			<label>{$label usuarios_dados_profissionais Horarios_de_Atendimento }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Horarios_de_Atendimento}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Horarios_de_Atendimento}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Horarios_de_Atendimento}</span>
+						</div>
+		{END searchCtrlBlock_Horarios_de_Atendimento}
+																{BEGIN searchCtrlBlock_endereco_profissional_bairro}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_endereco_profissional_bairro}" {$filterRow_attrs_endereco_profissional_bairro}>
+			<label>{$label usuarios_dados_profissionais endereco_profissional_bairro }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_endereco_profissional_bairro}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_endereco_profissional_bairro}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_endereco_profissional_bairro}</span>
+						</div>
+		{END searchCtrlBlock_endereco_profissional_bairro}
+																{BEGIN searchCtrlBlock_Mapa}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Mapa}" {$filterRow_attrs_Mapa}>
+			<label>{$label usuarios_dados_profissionais Mapa }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Mapa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Mapa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Mapa}</span>
+						</div>
+		{END searchCtrlBlock_Mapa}
+																{BEGIN searchCtrlBlock_Logotipo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Logotipo}" {$filterRow_attrs_Logotipo}>
+			<label>{$label usuarios_dados_profissionais Logotipo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Logotipo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Logotipo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Logotipo}</span>
+						</div>
+		{END searchCtrlBlock_Logotipo}
+																{BEGIN searchCtrlBlock_Foto_Fechada}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Foto_Fechada}" {$filterRow_attrs_Foto_Fechada}>
+			<label>{$label usuarios_dados_profissionais Foto_Fechada }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Foto_Fechada}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Foto_Fechada}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Foto_Fechada}</span>
+						</div>
+		{END searchCtrlBlock_Foto_Fechada}
+																{BEGIN searchCtrlBlock_municipio_empresa}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_municipio_empresa}" {$filterRow_attrs_municipio_empresa}>
+			<label>{$label usuarios_dados_profissionais municipio_empresa }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_municipio_empresa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_municipio_empresa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_municipio_empresa}</span>
+						</div>
+		{END searchCtrlBlock_municipio_empresa}
+																{BEGIN searchCtrlBlock_estado_empresa}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_estado_empresa}" {$filterRow_attrs_estado_empresa}>
+			<label>{$label usuarios_dados_profissionais estado_empresa }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_estado_empresa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_estado_empresa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_estado_empresa}</span>
+						</div>
+		{END searchCtrlBlock_estado_empresa}
+																{BEGIN searchCtrlBlock_pais_empresa}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_pais_empresa}" {$filterRow_attrs_pais_empresa}>
+			<label>{$label usuarios_dados_profissionais pais_empresa }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_pais_empresa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_pais_empresa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_pais_empresa}</span>
+						</div>
+		{END searchCtrlBlock_pais_empresa}
+																{BEGIN searchCtrlBlock_endereco_profissional_longitude}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_endereco_profissional_longitude}" {$filterRow_attrs_endereco_profissional_longitude}>
+			<label>{$label usuarios_dados_profissionais endereco_profissional_longitude }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_endereco_profissional_longitude}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_endereco_profissional_longitude}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_endereco_profissional_longitude}</span>
+						</div>
+		{END searchCtrlBlock_endereco_profissional_longitude}
+																{BEGIN searchCtrlBlock_endereco_profissional_latitude}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_endereco_profissional_latitude}" {$filterRow_attrs_endereco_profissional_latitude}>
+			<label>{$label usuarios_dados_profissionais endereco_profissional_latitude }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_endereco_profissional_latitude}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_endereco_profissional_latitude}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_endereco_profissional_latitude}</span>
+						</div>
+		{END searchCtrlBlock_endereco_profissional_latitude}
+																{BEGIN searchCtrlBlock_endereco_profissional_complemento}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_endereco_profissional_complemento}" {$filterRow_attrs_endereco_profissional_complemento}>
+			<label>{$label usuarios_dados_profissionais endereco_profissional_complemento }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_endereco_profissional_complemento}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_endereco_profissional_complemento}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_endereco_profissional_complemento}</span>
+						</div>
+		{END searchCtrlBlock_endereco_profissional_complemento}
+																{BEGIN searchCtrlBlock_endereco_profissional_numero}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_endereco_profissional_numero}" {$filterRow_attrs_endereco_profissional_numero}>
+			<label>{$label usuarios_dados_profissionais endereco_profissional_numero }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_endereco_profissional_numero}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_endereco_profissional_numero}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_endereco_profissional_numero}</span>
+						</div>
+		{END searchCtrlBlock_endereco_profissional_numero}
+																{BEGIN searchCtrlBlock_endereco_profissional_rua}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_endereco_profissional_rua}" {$filterRow_attrs_endereco_profissional_rua}>
+			<label>{$label usuarios_dados_profissionais endereco_profissional_rua }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_endereco_profissional_rua}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_endereco_profissional_rua}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_endereco_profissional_rua}</span>
+						</div>
+		{END searchCtrlBlock_endereco_profissional_rua}
+																{BEGIN searchCtrlBlock_cep_profissional}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_cep_profissional}" {$filterRow_attrs_cep_profissional}>
+			<label>{$label usuarios_dados_profissionais cep_profissional }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_cep_profissional}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_cep_profissional}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_cep_profissional}</span>
+						</div>
+		{END searchCtrlBlock_cep_profissional}
+																{BEGIN searchCtrlBlock_ramo_empresa}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_ramo_empresa}" {$filterRow_attrs_ramo_empresa}>
+			<label>{$label usuarios_dados_profissionais ramo_empresa }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_ramo_empresa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_ramo_empresa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_ramo_empresa}</span>
+						</div>
+		{END searchCtrlBlock_ramo_empresa}
+																{BEGIN searchCtrlBlock_cnpj}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_cnpj}" {$filterRow_attrs_cnpj}>
+			<label>{$label usuarios_dados_profissionais cnpj }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_cnpj}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_cnpj}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_cnpj}</span>
+						</div>
+		{END searchCtrlBlock_cnpj}
+																{BEGIN searchCtrlBlock_nome_empresa}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_nome_empresa}" {$filterRow_attrs_nome_empresa}>
+			<label>{$label usuarios_dados_profissionais nome_empresa }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_nome_empresa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_nome_empresa}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_nome_empresa}</span>
+						</div>
+		{END searchCtrlBlock_nome_empresa}
+																{BEGIN searchCtrlBlock_resumo_formacao_cursos}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_resumo_formacao_cursos}" {$filterRow_attrs_resumo_formacao_cursos}>
+			<label>{$label usuarios_dados_profissionais resumo_formacao_cursos }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_resumo_formacao_cursos}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_resumo_formacao_cursos}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_resumo_formacao_cursos}</span>
+						</div>
+		{END searchCtrlBlock_resumo_formacao_cursos}
+																{BEGIN searchCtrlBlock_resumo_formacao_academica}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_resumo_formacao_academica}" {$filterRow_attrs_resumo_formacao_academica}>
+			<label>{$label usuarios_dados_profissionais resumo_formacao_academica }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_resumo_formacao_academica}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_resumo_formacao_academica}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_resumo_formacao_academica}</span>
+						</div>
+		{END searchCtrlBlock_resumo_formacao_academica}
+																{BEGIN searchCtrlBlock_mini_curriculo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_mini_curriculo}" {$filterRow_attrs_mini_curriculo}>
+			<label>{$label usuarios_dados_profissionais mini_curriculo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_mini_curriculo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_mini_curriculo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_mini_curriculo}</span>
+						</div>
+		{END searchCtrlBlock_mini_curriculo}
+																{BEGIN searchCtrlBlock_atendimento_online}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_atendimento_online}" {$filterRow_attrs_atendimento_online}>
+			<label>{$label usuarios_dados_profissionais atendimento_online }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_atendimento_online}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_atendimento_online}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_atendimento_online}</span>
+						</div>
+		{END searchCtrlBlock_atendimento_online}
+																{BEGIN searchCtrlBlock_atendimento_presencial}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_atendimento_presencial}" {$filterRow_attrs_atendimento_presencial}>
+			<label>{$label usuarios_dados_profissionais atendimento_presencial }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_atendimento_presencial}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_atendimento_presencial}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_atendimento_presencial}</span>
+						</div>
+		{END searchCtrlBlock_atendimento_presencial}
+																{BEGIN searchCtrlBlock_diferencial_profissional}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_diferencial_profissional}" {$filterRow_attrs_diferencial_profissional}>
+			<label>{$label usuarios_dados_profissionais diferencial_profissional }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_diferencial_profissional}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_diferencial_profissional}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_diferencial_profissional}</span>
+						</div>
+		{END searchCtrlBlock_diferencial_profissional}
+																{BEGIN searchCtrlBlock_resumo_formacao}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_resumo_formacao}" {$filterRow_attrs_resumo_formacao}>
+			<label>{$label usuarios_dados_profissionais resumo_formacao }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_resumo_formacao}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_resumo_formacao}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_resumo_formacao}</span>
+						</div>
+		{END searchCtrlBlock_resumo_formacao}
+																{BEGIN searchCtrlBlock_sobre_profissional}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_sobre_profissional}" {$filterRow_attrs_sobre_profissional}>
+			<label>{$label usuarios_dados_profissionais sobre_profissional }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_sobre_profissional}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_sobre_profissional}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_sobre_profissional}</span>
+						</div>
+		{END searchCtrlBlock_sobre_profissional}
+																{BEGIN searchCtrlBlock_avaliacao_usuarios}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_avaliacao_usuarios}" {$filterRow_attrs_avaliacao_usuarios}>
+			<label>{$label usuarios_dados_profissionais avaliacao_usuarios }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_avaliacao_usuarios}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_avaliacao_usuarios}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_avaliacao_usuarios}</span>
+						</div>
+		{END searchCtrlBlock_avaliacao_usuarios}
+																{BEGIN searchCtrlBlock_email_profissional}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_email_profissional}" {$filterRow_attrs_email_profissional}>
+			<label>{$label usuarios_dados_profissionais email_profissional }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_email_profissional}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_email_profissional}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_email_profissional}</span>
+						</div>
+		{END searchCtrlBlock_email_profissional}
+																{BEGIN searchCtrlBlock_udp_usu_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_udp_usu_id}" {$filterRow_attrs_udp_usu_id}>
+			<label>{$label usuarios_dados_profissionais udp_usu_id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_udp_usu_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_udp_usu_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_udp_usu_id}</span>
+						</div>
+		{END searchCtrlBlock_udp_usu_id}
+		
+
+	</div>
+
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary" id="searchButton{$id}" {$searchbutton_attrs}>Buscar</button>
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>Mostrar Todos</button>
+	</div>
+</div>
+<!-- End Search panel content -->
+			</div>
+		
+    {END left_block}
+</div>				</div>	
+			<div class="r-content-col" data-resize-left="leftbar">
+				<div  class="r-topheader" data-resize-name="topbar">
+									{BEGIN supertop_block}
+<nav class="navbar navbar-default" 
+	data-location="supertop" id="form_supertop_{$pageid}" data-makeup="leftbar" {$form_supertop} data-pageid="{$pageid}" >
+			 
+							 
+				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button" >
+				<span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Collapse" class="btn-link   
+	 glyphicon glyphicon-triangle-left" href="#" >		
+				
+								</a>
+</span>
+			</span>
+		 
+				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="breadcrumb" {$item_breadcrumb} data-topcell-item-type="breadcrumb" >
+				{BEGIN breadcrumb}
+<ol class="breadcrumb" data-itemtype="breadcrumb" data-itemid="breadcrumb" {$item_breadcrumb} data-pageid="{$pageid}">
+<li ><a href="{$crumb_home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumb}			</span>
+							 
+							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search" {$item_simple_search} data-topcell-item-type="simple_search" >
+				<span data-itemtype="simple_search" data-itemid="simple_search" {$item_simple_search} data-pageid="{$pageid}" class="form-group">
+
+<div  class="input-group">
+{BEGIN searchform_text}
+	<input type="search" class="form-control" {$searchfor_attrs} size="25">
+{END searchform_text}
+	<span class="input-group-btn">
+	{BEGIN searchform_showall}
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Mostrar Todos">
+			<span class="glyphicon glyphicon-remove"></span>
+		</button>
+	{END searchform_showall}
+	{BEGIN searchform_search}
+	<button {$searchbutton_attrs} class="btn btn-primary" >
+		<span class="glyphicon glyphicon-search"></span>
+	</button>
+	{END searchform_search}
+	</span>
+</div>
+		
+</span>			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
+				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+							<span class="glyphicon glyphicon-cog"></span>
+									<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN deleteselected_link}
+	<li data-itemtype="delete_selected" data-itemid="delete_selected" {$item_delete_selected} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}  title="" >
+				
+		Elimina Selecionados		
+		</a>
+	</li>
+{END deleteselected_link}
+							<li role="separator" class="divider"></li>								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
+				<a   href="usuarios_dados_profissionais_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
+				
+		Busca Avancada		
+		</a>
+	</li>
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="showOptPanel{$id}"  title="" >
+				
+		Mostrar painel de busca		
+		</a>
+	</li>
+{END searchPanelTopButtons}
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="hideOptPanel{$id}"  title="" >
+				
+		Ocultar painel de busca		
+		</a>
+	</li>
+{END searchPanelTopButtons}
+					</ul>
+	</span>
+</span>
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
+				{BEGIN guestloginbutton}
+<span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" href="#" {$guestloginlink_attrs} >
+							Login			</a>
+</span>
+{END guestloginbutton}
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="username_button" {$item_username_button} data-topcell-item-type="username_button" >
+				{BEGIN loggedas_message}
+<span data-itemtype="username_button" data-itemid="username_button" {$item_username_button} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+							<span class="glyphicon glyphicon-user"></span>
+						{$username}			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN logoutbutton}
+	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$logoutlink_attrs}  title="" >
+				
+		Log Out		
+		</a>
+	</li>
+{END logoutbutton}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$changepwdlink_attrs}  title="" >
+				
+		Mudar senha		
+		</a>
+	</li>
+{END changepwd_link}
+					</ul>
+	</span>
+</span>
+{END loggedas_message}
+			</span>
+								</nav>
+{END supertop_block}
+						{$locking}
+				</div>	
+				<div class="r-body" data-resize-top="topbar" data-body-width="standard">
+					{$header}
+					<div class="r-top">
+									{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="leftbar" {$form_top} data-pageid="{$pageid}" >		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c2" data-pageid="{$pageid}"	{$cell_top_c2}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN mastertable_block}
+<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
+	{$showmasterfile}
+</div>
+{END mastertable_block}		</div>					</div>
+	</div>		
+{END top_block}
+						</div>
+					<div class="r-above">
+										{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="leftbar" {$form_above-grid} data-pageid="{$pageid}" >		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class="			col-md-6
+	
+">
+		{BEGIN firstAboveGridCell}
+		 
+		{BEGIN add_link}
+<span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$addlink_attrs} href="usuarios_dados_profissionais_add.php{$stateLink_full}" data-popup >
+							Meus Dados Profissionais			</a>
+</span>
+{END add_link}
+	 
+		{BEGIN inlineadd_link}
+<span data-itemtype="inline_add" data-itemid="inline_add" {$item_inline_add} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$inlineaddlink_attrs} >
+							Adicionar Novo			</a>
+</span>
+{END inlineadd_link}
+	 
+		{BEGIN deleteselected_link}
+<span data-itemtype="delete" data-itemid="delete" {$item_delete} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled >
+							Elimina Selecionados			</a>
+</span>
+{END deleteselected_link}
+			{END firstAboveGridCell}	
+	</div>			 
+				<div 
+	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
+	class="r-align-right			col-md-6
+	
+">
+		 
+		<span data-itemtype="details_found" data-itemid="details_found" {$item_details_found} data-pageid="{$pageid}" data-small >
+{$details_found_labeldetails_found}
+</span>	 
+		<span data-itemtype="page_size" data-itemid="page_size" {$item_page_size} data-pageid="{$pageid}" >
+		{$recsPerPage}
+</span>		</div>					</div>
+	</div>		
+{END above-grid_block}
+						</div>
+					<div class="r-grid">
+										
+{BEGIN grid_tabs}
+  <ul class="nav nav-tabs bsgrid_tabs">
+	{$grid_tabs_content}
+  </ul>
+{END grid_tabs}
+{BEGIN message_block}
+<div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
+{END message_block}{BEGIN grid_block}
+<div data-vcolumns=1 class="r-fluid r-grid-vertical bs-grid-vertical" data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" >
+{BEGIN grid_row}
+	{BEGIN grid_record}
+	{BEGIN grid_vrecord}
+	<div class="r-record-body {$rowclass}" {$rowattrs} {$rowstyle}>
+		<div class="panel panel-default" {$recordattrs}>
+											{BEGIN grid_recordheader}
+			<div class="panel-heading">
+					
+	
+				<table data-width="2" class="header-table">
+				 
+										<tr>
+						 
+							<td 
+	class="			"
+	colspan="2"		 
+	data-cellId="grid_cell_top" data-pageid="{$pageid}" data-record-id="{$recId}">
+ 
+{BEGIN checkbox_column}
+<span data-itemtype="grid_checkbox" data-itemid="grid_checkbox" {$item_grid_checkbox} data-pageid="{$pageid}" data-record-id="{$recId}" >
+	<input type="checkbox" {$checkbox_attrs}>
+</span>	
+{END checkbox_column}
+ 
+{BEGIN edit_column}
+{BEGIN edit_link}
+<span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
+	<a type="button" title="Editar" class="btn-link   
+	 glyphicon glyphicon-pencil" href="usuarios_dados_profissionais_edit.php?{$editlink}" {$editlink_attrs} title="Editar" data-popup >		
+				
+								</a>
+</span>
+{END edit_link}
+{END edit_column}
+ 
+{BEGIN inline_cancel}
+<span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
+	<a type="button" title="Cancela" class="btn-link   
+	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="Cancela" >		
+				
+								</a>
+</span>
+{END inline_cancel}
+ 
+{BEGIN view_column}
+{BEGIN view_link}
+<span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
+	<a type="button" title="Exibir Registro" class="btn-link   
+	 glyphicon glyphicon-search" href="usuarios_dados_profissionais_view.php?{$editlink}" {$viewlink_attrs} title="Exibir" data-popup >		
+				
+								</a>
+</span>
+{END view_link}
+{END view_column}
+</td>
+											</tr>
+									 
+									 
+									 
+									 
+									 
+									 
+													</table>
+
+					</div>
+		{END grid_recordheader}
+									
+			<div class="panel-body">					
+					
+	
+				<table data-width="2" >
+				 
+									 
+										<tr>
+						 
+							<td 
+	class="r-align-right r-ori-vert				{$Logotipo_class}
+			"
+			 
+		data-field=""
+	 
+	data-cellId="grid_cell_label" data-pageid="{$pageid}" data-record-id="{$recId}" data-label-col>
+ 
+{BEGIN Logotipo_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="grid_field1" {$item_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Logotipo">
+	{$label usuarios_dados_profissionais Logotipo }	</span>
+{END Logotipo_fieldheadercolumn}
+
+</td>
+						 
+							<td 
+	class=" r-ori-vert				{$Logotipo_class}
+			"
+			 
+		data-field=""
+	 
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-value-col>
+ 
+{BEGIN Logotipo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="grid_field" {$item_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Logotipo" data-default-width >
+{$Logotipo_value}
+</span>
+{END Logotipo_fieldcolumn}</td>
+											</tr>
+									 
+										<tr>
+						 
+							<td 
+	class="r-align-right r-ori-vert				{$nome_empresa_class}
+			"
+			 
+		data-field=""
+	 
+	data-cellId="grid_cell_label1" data-pageid="{$pageid}" data-record-id="{$recId}" data-label-col>
+ 
+{BEGIN nome_empresa_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nome_empresa">
+	{$label usuarios_dados_profissionais nome_empresa }	</span>
+{END nome_empresa_fieldheadercolumn}
+
+</td>
+						 
+							<td 
+	class=" r-ori-vert				{$nome_empresa_class}
+			"
+			 
+		data-field=""
+	 
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-value-col>
+ 
+{BEGIN nome_empresa_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="nome_empresa" data-default-width >
+{$nome_empresa_value}
+</span>
+{END nome_empresa_fieldcolumn}</td>
+											</tr>
+									 
+										<tr>
+						 
+							<td 
+	class="r-align-right r-ori-vert				{$cnpj_class}
+			"
+			 
+		data-field=""
+	 
+	data-cellId="grid_cell_label2" data-pageid="{$pageid}" data-record-id="{$recId}" data-label-col>
+ 
+{BEGIN cnpj_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="cnpj">
+	{$label usuarios_dados_profissionais cnpj }	</span>
+{END cnpj_fieldheadercolumn}
+
+</td>
+						 
+							<td 
+	class=" r-ori-vert				{$cnpj_class}
+			"
+			 
+		data-field=""
+	 
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-value-col>
+ 
+{BEGIN cnpj_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="cnpj" data-default-width >
+{$cnpj_value}
+</span>
+{END cnpj_fieldcolumn}</td>
+											</tr>
+									 
+										<tr>
+						 
+							<td 
+	class="r-align-right r-ori-vert				{$municipio_empresa_class}
+			"
+			 
+		data-field=""
+	 
+	data-cellId="grid_cell_label3" data-pageid="{$pageid}" data-record-id="{$recId}" data-label-col>
+ 
+{BEGIN municipio_empresa_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="municipio_empresa">
+	{$label usuarios_dados_profissionais municipio_empresa }	</span>
+{END municipio_empresa_fieldheadercolumn}
+
+</td>
+						 
+							<td 
+	class=" r-ori-vert				{$municipio_empresa_class}
+			"
+			 
+		data-field=""
+	 
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-value-col>
+ 
+{BEGIN municipio_empresa_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field26" {$item_simple_grid_field26} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="municipio_empresa" data-default-width >
+{$municipio_empresa_value}
+</span>
+{END municipio_empresa_fieldcolumn}</td>
+											</tr>
+									 
+										<tr>
+						 
+							<td 
+	class="r-align-right r-ori-vert				{$endereco_profissional_bairro_class}
+			"
+			 
+		data-field=""
+	 
+	data-cellId="grid_cell_label4" data-pageid="{$pageid}" data-record-id="{$recId}" data-label-col>
+ 
+{BEGIN endereco_profissional_bairro_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="endereco_profissional_bairro">
+	{$label usuarios_dados_profissionais endereco_profissional_bairro }	</span>
+{END endereco_profissional_bairro_fieldheadercolumn}
+
+</td>
+						 
+							<td 
+	class=" r-ori-vert				{$endereco_profissional_bairro_class}
+			"
+			 
+		data-field=""
+	 
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-value-col>
+ 
+{BEGIN endereco_profissional_bairro_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="endereco_profissional_bairro" data-default-width >
+{$endereco_profissional_bairro_value}
+</span>
+{END endereco_profissional_bairro_fieldcolumn}</td>
+											</tr>
+									 
+													</table>
+
+				
+			</div>				
+									
+		</div>
+</div>
+		
+
+ 
+			{END grid_vrecord}
+	{END grid_record}
+{END grid_row}
+</div>
+{END grid_block}
+						</div>
+					<div class="r-below">
+										{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="leftbar" {$form_below-grid} data-pageid="{$pageid}" >		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="r-align-center r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN pagination_block}
+<span data-itemtype="pagination" data-itemid="pagination" {$item_pagination} data-pageid="{$pageid}" >
+{$pagination}
+</span>
+{END pagination_block}
+		</div>					</div>
+	</div>		
+{END below-grid_block}
+						</div>
+					{$footer}
+				</div>	
+			</div>	
+		</div>
+	{END body}
+	</body>
+</html>
