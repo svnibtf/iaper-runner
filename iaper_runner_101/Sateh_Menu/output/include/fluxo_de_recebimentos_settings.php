@@ -135,7 +135,7 @@ $tdatafluxo_de_recebimentos[".rowHighlite"] = true;
 
 
 
-			
+						
 
 $tdatafluxo_de_recebimentos[".ajaxCodeSnippetAdded"] = false;
 

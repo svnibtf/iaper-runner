@@ -203,9 +203,6 @@ pdfDocument = {
 				
 			{"text":"","hidden":"{$item_hide_add}"},
 				
-				
-			{"text":"","hidden":"{$item_hide_inline_add}"},
-				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
@@ -292,7 +289,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$idPlano_align}',
+              "alignment": 'left',
   },
 
 {END cellblock_grid_headcell_field}
@@ -318,7 +315,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Data_Inicial_align}',
+              "alignment": 'left',
   },
 
 {END cellblock_grid_headcell_field1}
@@ -344,7 +341,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Valor_align}',
+              "alignment": 'left',
   },
 
 {END cellblock_grid_headcell_field2}
@@ -373,9 +370,6 @@ pdfDocument = {
 	
 			"text": [
 		
-				
-			{"text":"","hidden":"{$item_hide_grid_inline_cancel}"},
-				
 				
 			{"text":"","hidden":"{$item_hide_grid_view}"},
 				
@@ -407,7 +401,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$idPlano_align}',
+              "alignment": 'left',
   },
 
 {END cellblock_grid_cell_field}
@@ -433,7 +427,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Data_Inicial_align}',
+              "alignment": 'left',
   },
 
 {END cellblock_grid_cell_field1}
@@ -459,7 +453,7 @@ pdfDocument = {
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Valor_align}',
+              "alignment": 'left',
   },
 
 {END cellblock_grid_cell_field2}

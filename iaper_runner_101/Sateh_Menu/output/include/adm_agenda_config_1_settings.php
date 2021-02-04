@@ -189,7 +189,7 @@ $tdataadm_agenda_config_1[".rowHighlite"] = true;
 
 
 
-			
+						
 
 $tdataadm_agenda_config_1[".ajaxCodeSnippetAdded"] = false;
 

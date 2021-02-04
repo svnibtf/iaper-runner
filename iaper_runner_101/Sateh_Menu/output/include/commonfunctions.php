@@ -1358,105 +1358,105 @@ function GetUserPermissionsStatic( $table )
 	{
 		if( $sUserGroup=="Empresa" )
 		{
-			return "ADESPI".$extraPerm;
+			return "AEDSPI".$extraPerm;
 		}
 		if( $sUserGroup=="1" )
 		{
-			return "ADESPI".$extraPerm;
+			return "AEDSPI".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="adm_agenda_config_1" )
 	{
 		if( $sUserGroup=="Empresa" )
 		{
-			return "ADESPI".$extraPerm;
+			return "AEDSPI".$extraPerm;
 		}
 		if( $sUserGroup=="1" )
 		{
-			return "ADESPI".$extraPerm;
+			return "AEDSPI".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="adm_agenda_1" )
 	{
 		if( $sUserGroup=="Empresa" )
 		{
-			return "ADESPI".$extraPerm;
+			return "AEDSPI".$extraPerm;
 		}
 		if( $sUserGroup=="1" )
 		{
-			return "ADESPI".$extraPerm;
+			return "AEDSPI".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="adm_agenda_tipos_recebimento" )
 	{
 		if( $sUserGroup=="Empresa" )
 		{
-			return "ADESPI".$extraPerm;
+			return "".$extraPerm;
 		}
 		if( $sUserGroup=="1" )
 		{
-			return "ADESPI".$extraPerm;
+			return "".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "".$extraPerm;
 	}
 	if( $table=="adm_tipo_config" )
 	{
 		if( $sUserGroup=="Empresa" )
 		{
-			return "ADESPI".$extraPerm;
+			return "".$extraPerm;
 		}
 		if( $sUserGroup=="1" )
 		{
-			return "ADESPI".$extraPerm;
+			return "".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "".$extraPerm;
 	}
 	if( $table=="adm_parametros_config" )
 	{
 		if( $sUserGroup=="Empresa" )
 		{
-			return "ADESPI".$extraPerm;
+			return "".$extraPerm;
 		}
 		if( $sUserGroup=="1" )
 		{
-			return "ADESPI".$extraPerm;
+			return "".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "".$extraPerm;
 	}
 	if( $table=="adm_horarios" )
 	{
 		if( $sUserGroup=="Empresa" )
 		{
-			return "ADESPI".$extraPerm;
+			return "AEDSPI".$extraPerm;
 		}
 		if( $sUserGroup=="1" )
 		{
-			return "ADESPI".$extraPerm;
+			return "AEDSPI".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="adm_datas" )
 	{
 		if( $sUserGroup=="Empresa" )
 		{
-			return "ADESPI".$extraPerm;
+			return "".$extraPerm;
 		}
 		if( $sUserGroup=="1" )
 		{
-			return "ADESPI".$extraPerm;
+			return "".$extraPerm;
 		}
 //	default permissions
-		return "ADESPI".$extraPerm;
+		return "".$extraPerm;
 	}
 	// grant nothing by default
 	return "";

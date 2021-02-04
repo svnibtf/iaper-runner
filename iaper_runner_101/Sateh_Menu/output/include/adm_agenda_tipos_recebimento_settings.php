@@ -135,7 +135,7 @@ $tdataadm_agenda_tipos_recebimento[".rowHighlite"] = true;
 
 
 
-			
+						
 
 $tdataadm_agenda_tipos_recebimento[".ajaxCodeSnippetAdded"] = false;
 

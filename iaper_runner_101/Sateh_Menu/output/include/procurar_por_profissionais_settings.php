@@ -277,7 +277,7 @@ $tdataprocurar_por_profissionais[".hasEvents"] = false;
 $tdataprocurar_por_profissionais[".tableType"] = "dashboard";
 
 
-	
+		
 $tdataprocurar_por_profissionais[".addPageEvents"] = false;
 
 $tdataprocurar_por_profissionais[".isUseAjaxSuggest"] = true;

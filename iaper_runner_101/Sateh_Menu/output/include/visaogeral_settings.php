@@ -83,7 +83,7 @@ $tdatavisaogeral[".hasEvents"] = false;
 $tdatavisaogeral[".tableType"] = "dashboard";
 
 
-	
+		
 $tdatavisaogeral[".addPageEvents"] = false;
 
 $tdatavisaogeral[".isUseAjaxSuggest"] = true;

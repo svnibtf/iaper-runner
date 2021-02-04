@@ -24,12 +24,6 @@
       </style>
       {$locking}
       <DIV class="r-small-page" data-body-align="center" data-body-width="standard">
-
-        <center>
-          <img src="https://blob.contato.io/machine-user-images/LOGO-SATEH-RETANGULO-img-802475-20200707112921.png" width=400>
-        </center>
-
-
         {BEGIN top_block}
           <DIV class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}" data-v-width="4" data-v-margin="1">
             <DIV class="row">
@@ -41,7 +35,6 @@
             </div>
           </div>
         {END top_block}
-
         {BEGIN above-grid_block}
           <DIV class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}" data-v-width="4" data-v-margin="1">
             <DIV class="row">
@@ -79,6 +72,23 @@
                           </div>
                         </div>
                       {END nome_fieldblock}
+                      {BEGIN sobrenome_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_sobrenome} r-vertical-field" data-fieldname="sobrenome" data-signal-error-for="sobrenome{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="sobrenome">
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_sobrenome}">
+                            {BEGIN sobrenome_label}
+                              {$label login sobrenome}
+                            {END sobrenome_label}
+                          </label>
+                          <DIV class="r-edit-field">
+                            {$sobrenome_editcontrol}
+                          </div>
+                          <DIV class="r-edit-tooltip" data-helpfor="sobrenome">
+                            <DIV class="text-muted">
+                              {$tooltip login sobrenome}
+                            </div>
+                          </div>
+                        </div>
+                      {END sobrenome_fieldblock}
                       {BEGIN email_fieldblock}
                         <DIV class="r-integrated-field form-group clearfix {$fielddispclass_email} r-vertical-field" data-fieldname="email" data-signal-error-for="email{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="email">
                           <LABEL class="r-edit-label control-label" for="{$labelfor_email}">
@@ -96,6 +106,23 @@
                           </div>
                         </div>
                       {END email_fieldblock}
+                      {BEGIN telefone_celular_principal_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_telefone_celular_principal} r-vertical-field" data-fieldname="telefone_celular_principal" data-signal-error-for="telefone_celular_principal{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="telefone_celular_principal">
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_telefone_celular_principal}">
+                            {BEGIN telefone_celular_principal_label}
+                              {$label login telefone_celular_principal}
+                            {END telefone_celular_principal_label}
+                          </label>
+                          <DIV class="r-edit-field">
+                            {$telefone_celular_principal_editcontrol}
+                          </div>
+                          <DIV class="r-edit-tooltip" data-helpfor="telefone_celular_principal">
+                            <DIV class="text-muted">
+                              {$tooltip login telefone_celular_principal}
+                            </div>
+                          </div>
+                        </div>
+                      {END telefone_celular_principal_fieldblock}
                       {BEGIN senha_fieldblock}
                         <DIV class="r-integrated-field form-group clearfix {$fielddispclass_senha} r-vertical-field" data-fieldname="senha" data-signal-error-for="senha{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="senha">
                           <LABEL class="r-edit-label control-label" for="{$labelfor_senha}">
@@ -113,6 +140,40 @@
                           </div>
                         </div>
                       {END senha_fieldblock}
+                      {BEGIN Confirma_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_Confirma} r-vertical-field" data-fieldname="Confirma" data-signal-error-for="Confirma{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="Confirma">
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_Confirma}">
+                            {BEGIN Confirma_label}
+                              {$label login Confirma}
+                            {END Confirma_label}
+                          </label>
+                          <DIV class="r-edit-field">
+                            {$Confirma_editcontrol}
+                          </div>
+                          <DIV class="r-edit-tooltip" data-helpfor="Confirma">
+                            <DIV class="text-muted">
+                              {$tooltip login Confirma}
+                            </div>
+                          </div>
+                        </div>
+                      {END Confirma_fieldblock}
+                      {BEGIN tipo_usuario_fieldblock}
+                        <DIV class="r-integrated-field form-group clearfix {$fielddispclass_tipo_usuario} r-vertical-field" data-fieldname="tipo_usuario" data-signal-error-for="tipo_usuario{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="tipo_usuario">
+                          <LABEL class="r-edit-label control-label" for="{$labelfor_tipo_usuario}">
+                            {BEGIN tipo_usuario_label}
+                              {$label login tipo_usuario}
+                            {END tipo_usuario_label}
+                          </label>
+                          <DIV class="r-edit-field">
+                            {$tipo_usuario_editcontrol}
+                          </div>
+                          <DIV class="r-edit-tooltip" data-helpfor="tipo_usuario">
+                            <DIV class="text-muted">
+                              {$tooltip login tipo_usuario}
+                            </div>
+                          </div>
+                        </div>
+                      {END tipo_usuario_fieldblock}
                   </td>
                 {END cellblock_grid_c3}
               </tr>
@@ -138,6 +199,9 @@
                 <span data-itemtype="register_reset" data-itemid="register_reset" {$item_register_reset} data-pageid="{$pageid}" data-small data-button-item>
                   <A type="button" title class="btn btn-default" {$resetbutton_attrs}>
                     Limpar
+                  </a>
+                  <A type="button" title class="btn btn-default" href="javascript:window.history.back();">
+                    Voltar
                   </a>
                 </span>
               </div>

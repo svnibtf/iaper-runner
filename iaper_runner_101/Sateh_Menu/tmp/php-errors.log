@@ -1,0 +1,1 @@
+[04-Feb-2021 05:39:46 America/New_York] PHP Fatal error:  php_network_getaddresses: getaddrinfo failed: O nome solicitado é válido, mas não foram encontrados dados do tipo solicitado.  in C:\Users\Rubens\Desktop\Sateh_Menu\output\connections\Connection.php on line 626
