@@ -1,4 +1,0 @@
-
-//	AJAX snippets
-
-// fields events

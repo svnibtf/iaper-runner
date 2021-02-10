@@ -1,6 +1,0 @@
-Importar para adm_datas
-27/01/2021 15:10:37
-
-296 de 296 de registros processados com sucesso.
-296 de registros adicionados.
-0 de registros atualizados.
