@@ -1,0 +1,10 @@
+[data-page="dashboard_chart"][data-itemid="chart"] {
+  width: 100%;
+  height: 530px;
+}
+[data-page="dashboard_chart"][data-itemid="text"] {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+

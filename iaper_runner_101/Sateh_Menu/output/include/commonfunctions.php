@@ -189,8 +189,6 @@ function checkTableName($shortTName )
 		return true;
 	if ("adm_usuarios_dados_profissionais1" == $shortTName )
 		return true;
-	if ("adm_tipousuario" == $shortTName )
-		return true;
 	if ("adm_meuplano1" == $shortTName )
 		return true;
 	if ("login" == $shortTName )
@@ -216,14 +214,6 @@ function checkTableName($shortTName )
 	if ("adm_agenda_1" == $shortTName )
 		return true;
 	if ("adm_agenda_tipos_recebimento" == $shortTName )
-		return true;
-	if ("adm_tipo_config" == $shortTName )
-		return true;
-	if ("adm_parametros_config" == $shortTName )
-		return true;
-	if ("adm_horarios" == $shortTName )
-		return true;
-	if ("adm_datas" == $shortTName )
 		return true;
 	return false;
 }
@@ -292,15 +282,6 @@ function GetTablesList($pdfMode = false)
 	}
 	if( $tableAvailable ) {
 		$arr[]="adm_usuarios_dados_profissionais";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("adm_tipousuario");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="adm_tipousuario";
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
@@ -419,42 +400,6 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="adm_agenda_tipos_recebimento";
 	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("adm_tipo_config");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="adm_tipo_config";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("adm_parametros_config");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="adm_parametros_config";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("adm_horarios");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="adm_horarios";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("adm_datas");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="adm_datas";
-	}
 	return $arr;
 }
 
@@ -466,7 +411,6 @@ function GetTablesListWithoutSecurity()
 	$arr = array();
 	$arr[]="adm_usuarios";
 	$arr[]="adm_usuarios_dados_profissionais";
-	$arr[]="adm_tipousuario";
 	$arr[]="adm_meuplano";
 	$arr[]="login";
 	$arr[]="buscar_profissionais";
@@ -480,10 +424,6 @@ function GetTablesListWithoutSecurity()
 	$arr[]="adm_agenda_config_1";
 	$arr[]="adm_agenda_1";
 	$arr[]="adm_agenda_tipos_recebimento";
-	$arr[]="adm_tipo_config";
-	$arr[]="adm_parametros_config";
-	$arr[]="adm_horarios";
-	$arr[]="adm_datas";
 	return $arr;
 }
 
@@ -1224,19 +1164,6 @@ function GetUserPermissionsStatic( $table )
 //	default permissions
 		return "".$extraPerm;
 	}
-	if( $table=="adm_tipousuario" )
-	{
-		if( $sUserGroup=="Empresa" )
-		{
-			return "".$extraPerm;
-		}
-		if( $sUserGroup=="1" )
-		{
-			return "".$extraPerm;
-		}
-//	default permissions
-		return "".$extraPerm;
-	}
 	if( $table=="adm_meuplano" )
 	{
 		if( $sUserGroup=="Empresa" )
@@ -1394,58 +1321,6 @@ function GetUserPermissionsStatic( $table )
 		return "AEDSPI".$extraPerm;
 	}
 	if( $table=="adm_agenda_tipos_recebimento" )
-	{
-		if( $sUserGroup=="Empresa" )
-		{
-			return "".$extraPerm;
-		}
-		if( $sUserGroup=="1" )
-		{
-			return "".$extraPerm;
-		}
-//	default permissions
-		return "".$extraPerm;
-	}
-	if( $table=="adm_tipo_config" )
-	{
-		if( $sUserGroup=="Empresa" )
-		{
-			return "".$extraPerm;
-		}
-		if( $sUserGroup=="1" )
-		{
-			return "".$extraPerm;
-		}
-//	default permissions
-		return "".$extraPerm;
-	}
-	if( $table=="adm_parametros_config" )
-	{
-		if( $sUserGroup=="Empresa" )
-		{
-			return "".$extraPerm;
-		}
-		if( $sUserGroup=="1" )
-		{
-			return "".$extraPerm;
-		}
-//	default permissions
-		return "".$extraPerm;
-	}
-	if( $table=="adm_horarios" )
-	{
-		if( $sUserGroup=="Empresa" )
-		{
-			return "AEDSPI".$extraPerm;
-		}
-		if( $sUserGroup=="1" )
-		{
-			return "AEDSPI".$extraPerm;
-		}
-//	default permissions
-		return "AEDSPI".$extraPerm;
-	}
-	if( $table=="adm_datas" )
 	{
 		if( $sUserGroup=="Empresa" )
 		{

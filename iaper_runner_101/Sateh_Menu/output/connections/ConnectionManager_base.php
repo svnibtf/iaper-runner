@@ -213,7 +213,6 @@ class ConnectionManager_Base
 		$connectionsIds = array();
 		$connectionsIds["adm_usuarios"] = "iaperdbatrobb0254publiccloudco";
 		$connectionsIds["adm_usuarios_dados_profissionais"] = "iaperdbatrobb0254publiccloudco";
-		$connectionsIds["adm_tipousuario"] = "iaperdbatrobb0254publiccloudco";
 		$connectionsIds["adm_meuplano"] = "iaperdbatrobb0254publiccloudco";
 		$connectionsIds["login"] = "iaperdbatrobb0254publiccloudco";
 		$connectionsIds["buscar_profissionais"] = "iaperdbatrobb0254publiccloudco";
@@ -225,10 +224,6 @@ class ConnectionManager_Base
 		$connectionsIds["adm_agenda_config_1"] = "iaperdbatrobb0254publiccloudco";
 		$connectionsIds["adm_agenda_1"] = "iaperdbatrobb0254publiccloudco";
 		$connectionsIds["adm_agenda_tipos_recebimento"] = "iaperdbatrobb0254publiccloudco";
-		$connectionsIds["adm_tipo_config"] = "iaperdbatrobb0254publiccloudco";
-		$connectionsIds["adm_parametros_config"] = "iaperdbatrobb0254publiccloudco";
-		$connectionsIds["adm_horarios"] = "iaperdbatrobb0254publiccloudco";
-		$connectionsIds["adm_datas"] = "iaperdbatrobb0254publiccloudco";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

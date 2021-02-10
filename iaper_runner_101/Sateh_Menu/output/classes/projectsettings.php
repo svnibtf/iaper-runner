@@ -3242,8 +3242,6 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "adm_usuarios1" ] = "adm_usuarios";
 	$projectEntities[ "adm_usuarios_dados_profissionais" ] = array( "url" => "adm_usuarios_dados_profissionais1", "type" => 0 );
 	$projectEntitiesReverse[ "adm_usuarios_dados_profissionais1" ] = "adm_usuarios_dados_profissionais";
-	$projectEntities[ "adm_tipousuario" ] = array( "url" => "adm_tipousuario", "type" => 0 );
-	$projectEntitiesReverse[ "adm_tipousuario" ] = "adm_tipousuario";
 	$projectEntities[ "adm_meuplano" ] = array( "url" => "adm_meuplano1", "type" => 0 );
 	$projectEntitiesReverse[ "adm_meuplano1" ] = "adm_meuplano";
 	$projectEntities[ "login" ] = array( "url" => "login", "type" => 0 );
@@ -3270,14 +3268,6 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "adm_agenda_1" ] = "adm_agenda_1";
 	$projectEntities[ "adm_agenda_tipos_recebimento" ] = array( "url" => "adm_agenda_tipos_recebimento", "type" => 0 );
 	$projectEntitiesReverse[ "adm_agenda_tipos_recebimento" ] = "adm_agenda_tipos_recebimento";
-	$projectEntities[ "adm_tipo_config" ] = array( "url" => "adm_tipo_config", "type" => 0 );
-	$projectEntitiesReverse[ "adm_tipo_config" ] = "adm_tipo_config";
-	$projectEntities[ "adm_parametros_config" ] = array( "url" => "adm_parametros_config", "type" => 0 );
-	$projectEntitiesReverse[ "adm_parametros_config" ] = "adm_parametros_config";
-	$projectEntities[ "adm_horarios" ] = array( "url" => "adm_horarios", "type" => 0 );
-	$projectEntitiesReverse[ "adm_horarios" ] = "adm_horarios";
-	$projectEntities[ "adm_datas" ] = array( "url" => "adm_datas", "type" => 0 );
-	$projectEntitiesReverse[ "adm_datas" ] = "adm_datas";
 }
 
 function findTable( $table ) {

@@ -1,0 +1,14 @@
+[Wed Feb 10 15:37:28.459419 2021] [core:warn] [pid 1700:tid 172] AH00117: Ignoring deprecated use of DefaultType in line 21 of Z:/Desktop/Sateh/Sateh_Menu/tmp/webserver.conf.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using ::1. Set the 'ServerName' directive globally to suppress this message
+[Wed Feb 10 15:37:30.378222 2021] [mpm_winnt:notice] [pid 1700:tid 172] AH00455: Apache/2.4.37 (Win32) PHP/5.6.40 configured -- resuming normal operations
+[Wed Feb 10 15:37:30.378222 2021] [mpm_winnt:notice] [pid 1700:tid 172] AH00456: Apache Lounge VC11 Server built: Oct 22 2018 14:14:30
+[Wed Feb 10 15:37:30.378222 2021] [core:notice] [pid 1700:tid 172] AH00094: Command line: 'C:\\Program Files\\PHPRunner10.4\\EmbeddedServer\\bin\\httpd.exe -d C:/Program Files/PHPRunner10.4/EmbeddedServer -d C:\\Program Files\\PHPRunner10.4\\EmbeddedServer -f Z:\\Desktop\\Sateh\\Sateh_Menu\\tmp\\webserver.conf'
+[Wed Feb 10 15:37:30.378222 2021] [mpm_winnt:notice] [pid 1700:tid 172] AH00418: Parent: Created child process 7512
+[Wed Feb 10 15:37:30.752623 2021] [core:warn] [pid 7512:tid 184] AH00117: Ignoring deprecated use of DefaultType in line 21 of Z:/Desktop/Sateh/Sateh_Menu/tmp/webserver.conf.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using ::1. Set the 'ServerName' directive globally to suppress this message
+[Wed Feb 10 15:37:30.861823 2021] [core:warn] [pid 7512:tid 184] AH00117: Ignoring deprecated use of DefaultType in line 21 of Z:/Desktop/Sateh/Sateh_Menu/tmp/webserver.conf.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using ::1. Set the 'ServerName' directive globally to suppress this message
+[Wed Feb 10 15:37:31.002223 2021] [mpm_winnt:notice] [pid 7512:tid 184] AH00354: Child: Starting 64 worker threads.
+[Wed Feb 10 15:42:09.574511 2021] [mpm_winnt:notice] [pid 1700:tid 172] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Wed Feb 10 15:42:11.602514 2021] [mpm_winnt:notice] [pid 7512:tid 184] AH00364: Child: All worker threads have exited.
+[Wed Feb 10 15:42:11.633714 2021] [mpm_winnt:notice] [pid 1700:tid 172] AH00430: Parent: Child process 7512 exited successfully.

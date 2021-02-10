@@ -619,7 +619,7 @@ $globalSettings["CaptchaSettings"]["secretKey"] = "";
 $globalSettings["CaptchaSettings"]["captchaPassesCount"] = "5";
 
 
-$bsProjectTheme = "cerulean";
+$bsProjectTheme = "sandstone";
 $bsProjectSize = "small";
 
 $wr_pagestylepath = "OfficeOffice";
@@ -658,9 +658,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "185_1612433047";
+$projectBuildKey = "8_1612433047";
 $wizardBuildKey = "35870";
-$projectBuildNumber = "185";
+$projectBuildNumber = "8";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -683,7 +683,6 @@ $tableCaptions["Portuguese(Brazil)"] = array();
 $tableCaptions["Portuguese(Brazil)"][""] = "";
 $tableCaptions["Portuguese(Brazil)"]["adm_usuarios"] = "Cadastro";
 $tableCaptions["Portuguese(Brazil)"]["adm_usuarios_dados_profissionais"] = "Dados Profissionais";
-$tableCaptions["Portuguese(Brazil)"]["adm_tipousuario"] = "TipoUsuario";
 $tableCaptions["Portuguese(Brazil)"]["adm_meuplano"] = "Meu Plano";
 $tableCaptions["Portuguese(Brazil)"]["login"] = "Login";
 $tableCaptions["Portuguese(Brazil)"]["buscar_profissionais"] = "Buscar Empresas";
@@ -698,10 +697,6 @@ $tableCaptions["Portuguese(Brazil)"]["adm_agenda_estrutura_1"] = "Configurar Dat
 $tableCaptions["Portuguese(Brazil)"]["adm_agenda_config_1"] = "Configurar Agenda";
 $tableCaptions["Portuguese(Brazil)"]["adm_agenda_1"] = "Gerenciar Consultas";
 $tableCaptions["Portuguese(Brazil)"]["adm_agenda_tipos_recebimento"] = "Adm Agenda Tipos Recebimento";
-$tableCaptions["Portuguese(Brazil)"]["adm_tipo_config"] = "Adm Tipo Config";
-$tableCaptions["Portuguese(Brazil)"]["adm_parametros_config"] = "Adm Parametros Config";
-$tableCaptions["Portuguese(Brazil)"]["adm_horarios"] = "Adm Horarios";
-$tableCaptions["Portuguese(Brazil)"]["adm_datas"] = "Adm Datas";
 
 
 $globalEvents = new class_GlobalEvents;

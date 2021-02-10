@@ -1,0 +1,43 @@
+<?php
+$dalTableadm_usuarios_dados_profissionais = array();
+$dalTableadm_usuarios_dados_profissionais["udp_id"] = array("type"=>3,"varname"=>"udp_id", "name" => "udp_id");
+$dalTableadm_usuarios_dados_profissionais["udp_usu_id"] = array("type"=>3,"varname"=>"udp_usu_id", "name" => "udp_usu_id");
+$dalTableadm_usuarios_dados_profissionais["email_profissional"] = array("type"=>200,"varname"=>"email_profissional", "name" => "email_profissional");
+$dalTableadm_usuarios_dados_profissionais["avaliacao_usuarios"] = array("type"=>3,"varname"=>"avaliacao_usuarios", "name" => "avaliacao_usuarios");
+$dalTableadm_usuarios_dados_profissionais["sobre_profissional"] = array("type"=>200,"varname"=>"sobre_profissional", "name" => "sobre_profissional");
+$dalTableadm_usuarios_dados_profissionais["resumo_formacao"] = array("type"=>200,"varname"=>"resumo_formacao", "name" => "resumo_formacao");
+$dalTableadm_usuarios_dados_profissionais["yt_code_apresentacao"] = array("type"=>200,"varname"=>"yt_code_apresentacao", "name" => "yt_code_apresentacao");
+$dalTableadm_usuarios_dados_profissionais["diferencial_profissional"] = array("type"=>200,"varname"=>"diferencial_profissional", "name" => "diferencial_profissional");
+$dalTableadm_usuarios_dados_profissionais["atendimento_presencial"] = array("type"=>200,"varname"=>"atendimento_presencial", "name" => "atendimento_presencial");
+$dalTableadm_usuarios_dados_profissionais["atendimento_online"] = array("type"=>200,"varname"=>"atendimento_online", "name" => "atendimento_online");
+$dalTableadm_usuarios_dados_profissionais["mini_curriculo"] = array("type"=>201,"varname"=>"mini_curriculo", "name" => "mini_curriculo");
+$dalTableadm_usuarios_dados_profissionais["resumo_formacao_academica"] = array("type"=>201,"varname"=>"resumo_formacao_academica", "name" => "resumo_formacao_academica");
+$dalTableadm_usuarios_dados_profissionais["resumo_formacao_cursos"] = array("type"=>201,"varname"=>"resumo_formacao_cursos", "name" => "resumo_formacao_cursos");
+$dalTableadm_usuarios_dados_profissionais["curriculo_lattes"] = array("type"=>201,"varname"=>"curriculo_lattes", "name" => "curriculo_lattes");
+$dalTableadm_usuarios_dados_profissionais["nome_empresa"] = array("type"=>200,"varname"=>"nome_empresa", "name" => "nome_empresa");
+$dalTableadm_usuarios_dados_profissionais["cnpj"] = array("type"=>3,"varname"=>"cnpj", "name" => "cnpj");
+$dalTableadm_usuarios_dados_profissionais["ramo_empresa"] = array("type"=>200,"varname"=>"ramo_empresa", "name" => "ramo_empresa");
+$dalTableadm_usuarios_dados_profissionais["tipo_empresa"] = array("type"=>3,"varname"=>"tipo_empresa", "name" => "tipo_empresa");
+$dalTableadm_usuarios_dados_profissionais["cep_profissional"] = array("type"=>3,"varname"=>"cep_profissional", "name" => "cep_profissional");
+$dalTableadm_usuarios_dados_profissionais["endereco_profissional_rua"] = array("type"=>200,"varname"=>"endereco_profissional_rua", "name" => "endereco_profissional_rua");
+$dalTableadm_usuarios_dados_profissionais["endereco_profissional_numero"] = array("type"=>200,"varname"=>"endereco_profissional_numero", "name" => "endereco_profissional_numero");
+$dalTableadm_usuarios_dados_profissionais["endereco_profissional_complemento"] = array("type"=>200,"varname"=>"endereco_profissional_complemento", "name" => "endereco_profissional_complemento");
+$dalTableadm_usuarios_dados_profissionais["endereco_profissional_latitude"] = array("type"=>3,"varname"=>"endereco_profissional_latitude", "name" => "endereco_profissional_latitude");
+$dalTableadm_usuarios_dados_profissionais["endereco_profissional_longitude"] = array("type"=>3,"varname"=>"endereco_profissional_longitude", "name" => "endereco_profissional_longitude");
+$dalTableadm_usuarios_dados_profissionais["pais_empresa"] = array("type"=>200,"varname"=>"pais_empresa", "name" => "pais_empresa");
+$dalTableadm_usuarios_dados_profissionais["estado_empresa"] = array("type"=>200,"varname"=>"estado_empresa", "name" => "estado_empresa");
+$dalTableadm_usuarios_dados_profissionais["municipio_empresa"] = array("type"=>200,"varname"=>"municipio_empresa", "name" => "municipio_empresa");
+$dalTableadm_usuarios_dados_profissionais["udp_deletado"] = array("type"=>3,"varname"=>"udp_deletado", "name" => "udp_deletado");
+$dalTableadm_usuarios_dados_profissionais["Foto_Fechada"] = array("type"=>200,"varname"=>"Foto_Fechada", "name" => "Foto_Fechada");
+$dalTableadm_usuarios_dados_profissionais["Logotipo"] = array("type"=>200,"varname"=>"Logotipo", "name" => "Logotipo");
+$dalTableadm_usuarios_dados_profissionais["Mapa"] = array("type"=>200,"varname"=>"Mapa", "name" => "Mapa");
+$dalTableadm_usuarios_dados_profissionais["endereco_profissional_bairro"] = array("type"=>200,"varname"=>"endereco_profissional_bairro", "name" => "endereco_profissional_bairro");
+$dalTableadm_usuarios_dados_profissionais["Horarios_de_Atendimento"] = array("type"=>201,"varname"=>"Horarios_de_Atendimento", "name" => "Horarios_de_Atendimento");
+$dalTableadm_usuarios_dados_profissionais["Sobre_a_Empresa"] = array("type"=>201,"varname"=>"Sobre_a_Empresa", "name" => "Sobre_a_Empresa");
+$dalTableadm_usuarios_dados_profissionais["Lat"] = array("type"=>14,"varname"=>"Lat", "name" => "Lat");
+$dalTableadm_usuarios_dados_profissionais["Lng"] = array("type"=>14,"varname"=>"Lng", "name" => "Lng");
+$dalTableadm_usuarios_dados_profissionais["idPlano"] = array("type"=>3,"varname"=>"idPlano", "name" => "idPlano");
+	$dalTableadm_usuarios_dados_profissionais["udp_id"]["key"]=true;
+
+$dal_info["iaperdbatrobb0254publiccloudco__adm_usuarios_dados_profissionais"] = &$dalTableadm_usuarios_dados_profissionais;
+?>

@@ -487,8 +487,6 @@ class Chart
 			return true;
 		if("adm_usuarios_dados_profissionais" == $this->chrt_array['tables'][0])
 			return true;
-		if("adm_tipousuario" == $this->chrt_array['tables'][0])
-			return true;
 		if("adm_meuplano" == $this->chrt_array['tables'][0])
 			return true;
 		if("login" == $this->chrt_array['tables'][0])
@@ -514,14 +512,6 @@ class Chart
 		if("adm_agenda_1" == $this->chrt_array['tables'][0])
 			return true;
 		if("adm_agenda_tipos_recebimento" == $this->chrt_array['tables'][0])
-			return true;
-		if("adm_tipo_config" == $this->chrt_array['tables'][0])
-			return true;
-		if("adm_parametros_config" == $this->chrt_array['tables'][0])
-			return true;
-		if("adm_horarios" == $this->chrt_array['tables'][0])
-			return true;
-		if("adm_datas" == $this->chrt_array['tables'][0])
 			return true;
 		return false;
 	}

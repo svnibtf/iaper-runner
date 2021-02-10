@@ -310,10 +310,6 @@ class AuditTrailTable
 		{
 			return false;
 		}
-		if($table=="adm_tipousuario")
-		{
-			return false;
-		}
 		if($table=="adm_meuplano")
 		{
 			return false;
@@ -363,22 +359,6 @@ class AuditTrailTable
 			return false;
 		}
 		if($table=="adm_agenda_tipos_recebimento")
-		{
-			return false;
-		}
-		if($table=="adm_tipo_config")
-		{
-			return false;
-		}
-		if($table=="adm_parametros_config")
-		{
-			return false;
-		}
-		if($table=="adm_horarios")
-		{
-			return false;
-		}
-		if($table=="adm_datas")
 		{
 			return false;
 		}
@@ -698,10 +678,6 @@ class AuditTrailFile
 		{
 			return false;
 		}
-		if($table=="adm_tipousuario")
-		{
-			return false;
-		}
 		if($table=="adm_meuplano")
 		{
 			return false;
@@ -751,22 +727,6 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="adm_agenda_tipos_recebimento")
-		{
-			return false;
-		}
-		if($table=="adm_tipo_config")
-		{
-			return false;
-		}
-		if($table=="adm_parametros_config")
-		{
-			return false;
-		}
-		if($table=="adm_horarios")
-		{
-			return false;
-		}
-		if($table=="adm_datas")
 		{
 			return false;
 		}

@@ -1216,8 +1216,9 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	
 
 // Begin Lookup settings
-				$edata["LookupType"] = 2;
+				$edata["LookupType"] = 1;
 	$edata["LookupTable"] = "adm_horarios";
+	$edata["LookupConnId"] = "iaperdbatrobb0254publiccloudco";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 4;
@@ -1227,7 +1228,7 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 			$edata["LookupUnique"] = true;
 
 	$edata["LinkField"] = "Horario";
-	$edata["LinkFieldType"] = 0;
+	$edata["LinkFieldType"] = 134;
 	$edata["DisplayField"] = "Horario";
 
 	
@@ -1238,7 +1239,8 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	
 	
 	
-	
+		$edata["SimpleAdd"] = true;
+
 
 	
 	
@@ -1288,8 +1290,9 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	
 
 // Begin Lookup settings
-				$edata["LookupType"] = 2;
+				$edata["LookupType"] = 1;
 	$edata["LookupTable"] = "adm_horarios";
+	$edata["LookupConnId"] = "iaperdbatrobb0254publiccloudco";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 4;
@@ -1299,7 +1302,7 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 			$edata["LookupUnique"] = true;
 
 	$edata["LinkField"] = "Horario";
-	$edata["LinkFieldType"] = 0;
+	$edata["LinkFieldType"] = 134;
 	$edata["DisplayField"] = "Horario";
 
 	
@@ -1310,7 +1313,8 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	
 	
 	
-	
+		$edata["SimpleAdd"] = true;
+
 
 	
 	
@@ -1362,8 +1366,9 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	
 
 // Begin Lookup settings
-				$edata["LookupType"] = 2;
+				$edata["LookupType"] = 1;
 	$edata["LookupTable"] = "adm_horarios";
+	$edata["LookupConnId"] = "iaperdbatrobb0254publiccloudco";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 4;
@@ -1373,7 +1378,7 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 			$edata["LookupUnique"] = true;
 
 	$edata["LinkField"] = "Horario";
-	$edata["LinkFieldType"] = 0;
+	$edata["LinkFieldType"] = 134;
 	$edata["DisplayField"] = "Horario";
 
 	
@@ -1384,7 +1389,8 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	
 	
 	
-	
+		$edata["SimpleAdd"] = true;
+
 
 	
 	
@@ -1800,8 +1806,9 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	
 
 // Begin Lookup settings
-				$edata["LookupType"] = 2;
+				$edata["LookupType"] = 1;
 	$edata["LookupTable"] = "adm_parametros_config";
+	$edata["LookupConnId"] = "iaperdbatrobb0254publiccloudco";
 			$edata["autoCompleteFieldsOnEdit"] = 0;
 	$edata["autoCompleteFields"] = array();
 		$edata["LCType"] = 0;
@@ -1810,7 +1817,7 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 			$edata["LookupUnique"] = true;
 
 	$edata["LinkField"] = "Chave";
-	$edata["LinkFieldType"] = 0;
+	$edata["LinkFieldType"] = 200;
 	$edata["DisplayField"] = "Chave";
 
 	
@@ -1821,7 +1828,8 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	
 	
 	
-	
+		$edata["SimpleAdd"] = true;
+
 
 	
 	

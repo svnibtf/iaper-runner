@@ -1,354 +1,653 @@
-<!doctype html><p align=center><font size=+1 color=red></font></p>
-<p align=center><font size=+1 color=red></font></p>
+<!doctype html><p align=center><font size=+1 color=red>This website was created by evaluation version of PHPRunner Trial.</font></p>
+<p align=center><font size=+1 color=red>This warning message will not appear on website created by a paid-for version of PHPRunner Trial.</font></p>
 <html  {$html_attrs}>
-  <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-      {$pagetitle}
-    </title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <base href="{$projectPath}">
-    <link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
-    {BEGIN rtlCSS}
-      <link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
-    {END rtlCSS}
-    {BEGIN styleCSSFiles}
-      <link REL="stylesheet" href="{$stylepath}" type="text/css">
-    {END styleCSSFiles}
-  </head>
-  <BODY class="{$stylename} function-list" {$bodyattrs}>
-    {BEGIN body}
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+	</head>
 
-   <DIV class="r-panel-page">
+	<body class="{$stylename} function-list" {$bodyattrs}>
+	{BEGIN body}
+		<style>
+		{$containerCss}
+		</style>
+		<div class="r-vbar-page">
+			<div data-width="" data-fixed class="r-left clearfix {$leftbar_class}" >
+								<div data-location="left" id="form_left_{$pageid}" data-makeup="leftbar" {$form_left} data-pageid="{$pageid}">
+{BEGIN left_block}
+ 
+     
+         
 
+			<div data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell class="clearfix  r-ori-vert" data-itemid="logo1" {$item_logo1}>
+				{BEGIN logo_block}
+	<A data-itemtype="logo" data-itemid="logo1" {$item_logo1} data-pageid="{$pageid}" class="navbar-brand" href="{$home_link}" data-pageid="{$pageid}" {$logo_hiddenattr}>
+		{$logo}
+	</A>
+{END logo_block}
+				<button data-pageid="1" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target="[data-mobile-controlled]">	
+					<span class="sr-only">Toggle navigation</span>	
+					<span class="icon-bar"></span>					
+				</button>				
+			</div>
+		
+     
+     
+         
 
+			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="search_panel" {$item_search_panel} data-topcell-item-type="search_panel" >
+				<!-- Begin Search panel content -->
+<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}" >
 
-      <style>
-        {$containerCss}
-      </style>
-      <DIV class="r-content-col" data-resize-left="leftbar">
-        <DIV class="r-topheader" data-resize-name="topbar">
-          {BEGIN supertop_block}
-            <NAV class="navbar navbar-default" data-location="supertop" id="form_supertop_{$pageid}" data-makeup="leftbar" {$form_supertop} data-pageid="{$pageid}">
-              <SPAN class="navbar-form navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="collapse_button" {$item_collapse_button} data-topcell-item-type="collapse_button">
-                <span data-itemtype="collapse_button" data-itemid="collapse_button" {$item_collapse_button} data-pageid="{$pageid}" data-small data-button-item>
-                  <A type="button" title="Collapse" class="btn-link glyphicon glyphicon-triangle-left" href="#">
-                  </a>
-                </span>
-              </span>
-              <SPAN class="navbar-form navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="breadcrumb" {$item_breadcrumb} data-topcell-item-type="breadcrumb">
-                {BEGIN breadcrumb}
-                  <OL class="breadcrumb" data-itemtype="breadcrumb" data-itemid="breadcrumb" {$item_breadcrumb} data-pageid="{$pageid}">
-                    <li >
-                      <a href="{$crumb_home_link}">
-                        <SPAN class="glyphicon glyphicon-home">
-                        </span>
-                      </a>
-                      {$crumb_dropdown}
-                    </li>
-                    {BEGIN crumb}
-                      <LI class="{$crumb_item_class}">
-                        {BEGIN crumb_title_link}
-                          <a {$crumb_attrs}>
-                            {$crumb_title}
-                          </a>
-                        {END crumb_title_link}
-                        {BEGIN crumb_title_span}
-                          <span {$crumb_attrs}>
-                            {$crumb_title}
-                          </span>
-                        {END crumb_title_span}
-                        {$crumb_dropdown}
-                      </li>
-                    {END crumb}
-                  </ol>
-                {END breadcrumb}
-              </span>
-              <SPAN class="navbar-form navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="custom_button" {$item_custom_button} data-topcell-item-type="custom_button">
-                <span data-itemtype="custom_button" data-itemid="custom_button" {$item_custom_button} data-pageid="{$pageid}" data-small data-button-item>
-                  <A type="button" title class="btn btn-default" id="Voltar" href="javascript:void(0)" typeid="ib">
-                    Voltar
-                  </a>
-                </span>
-              </span>
-              <SPAN class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options">
-                <span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
-                  <SPAN class="dropdown">
-                    <BUTTON type="button" title class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <SPAN class="glyphicon glyphicon-cog">
-                      </span>
-                      <SPAN class="caret">
-                      </span>
-                    </button>
-                    <UL class="dropdown-menu">
-                      {BEGIN searchPanelTopButtons}
-                        <li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
-                          <a  id="showOptPanel{$id}"  title="" >
-                            Mostrar painel de busca
-                          </a>
-                        </li>
-                      {END searchPanelTopButtons}
-                      {BEGIN searchPanelTopButtons}
-                        <li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
-                          <a  id="hideOptPanel{$id}"  title="" >
-                            Ocultar painel de busca
-                          </a>
-                        </li>
-                      {END searchPanelTopButtons}
-                    </ul>
-                  </span>
-                </span>
-              </span>
-              <SPAN class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login">
-                {BEGIN guestloginbutton}
-                  <span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
-                    <A type="button" title class="btn btn-primary" href="#" {$guestloginlink_attrs}>
-                      Login
-                    </a>
-                  </span>
-                {END guestloginbutton}
-              </span>
-              <SPAN class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="username_button" {$item_username_button} data-topcell-item-type="username_button">
-                {BEGIN loggedas_message}
-                  <span data-itemtype="username_button" data-itemid="username_button" {$item_username_button} data-pageid="{$pageid}" data-small data-button-item>
-                    <SPAN class="dropdown">
-                      <BUTTON type="button" title class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <SPAN class="glyphicon glyphicon-user">
-                        </span>
-                        {$username}
-                        <SPAN class="caret">
-                        </span>
-                      </button>
-                      <UL class="dropdown-menu">
-                        {BEGIN logoutbutton}
-                          <li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
-                            <a  href="#" {$logoutlink_attrs}  title="" >
-                              Log Out
-                            </a>
-                          </li>
-                        {END logoutbutton}
-                        {BEGIN changepwd_link}
-                          <li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
-                            <a  href="#" {$changepwdlink_attrs}  title="" >
-                              Mudar senha
-                            </a>
-                          </li>
-                        {END changepwd_link}
-                      </ul>
-                    </span>
-                  </span>
-                {END loggedas_message}
-              </span>
-            </nav>
-          {END supertop_block}
-          {$locking}
-        </div>
-        <DIV class="r-body" data-resize-top="topbar" data-body-width="standard">
-          {$header}
-          <DIV class="r-top">
-            {BEGIN top_block}
-              <DIV class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="leftbar" {$form_top} data-pageid="{$pageid}">
-                <DIV class="row">
-                  <DIV data-cellId="top_c2" data-pageid="{$pageid}" {$cell_top_c2} class="r-ori-vert col-md-12">
-                    {BEGIN mastertable_block}
-                      <div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
-                        {$showmasterfile}
-                      </div>
-                    {END mastertable_block}
-                  </div>
-                </div>
-              </div>
-            {END top_block}
-          </div>
-          <DIV class="r-above">
-            {BEGIN above-grid_block}
-              <DIV class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="leftbar" {$form_above-grid} data-pageid="{$pageid}">
-                <DIV class="row">
-                  <DIV data-cellId="above-grid_c2" data-pageid="{$pageid}" {$cell_above-grid_c2} class="r-align-right r-ori-vert col-md-12">
-                    {BEGIN firstAboveGridCell}
-                    {END firstAboveGridCell}
-                  </div>
-                </div>
-                <DIV class="row">
-                  <DIV data-cellId="above-grid_c1" data-pageid="{$pageid}" {$cell_above-grid_c1} class="r-ori-vert col-md-6">
-                    {BEGIN add_link}
-                      <span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
-                        <A type="button" title class="btn btn-primary" {$addlink_attrs} href="adm_meuplano1_add.php{$stateLink_full}" data-popup>
-                          Adicionar Novo
-                        </a>
-                      </span>
-                    {END add_link}
-                  </div>
-                  <DIV data-cellId="above-grid_c" data-pageid="{$pageid}" {$cell_above-grid_c} class="r-align-right r-ori-vert col-md-6">
-                  </div>
-                </div>
-              </div>
-            {END above-grid_block}
-          </div>
-          <DIV class="r-grid">
-            {BEGIN grid_block}
-              {BEGIN grid_tabs}
-                <UL class="nav nav-tabs bsgrid_tabs">
-                  {$grid_tabs_content}
-                </ul>
-              {END grid_tabs}
-              {BEGIN message_block}
-                <DIV data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>
-                  {$message}
-                </div>
-              {END message_block}
-              <style>
-                @media screen and (max-width: 767px) {
-                [data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="idPlano"]:before {
-                content: "{$label adm_meuplano idPlano}";
-                }
-                [data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Data_Inicial"]:before {
-                content: "{$label adm_meuplano Data_Inicial}";
-                }
-                [data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Valor"]:before {
-                content: "{$label adm_meuplano Valor}";
-                }
-                }
-              </style>
-              <TABLE data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class="table {$grid_classes} r-flexgrid rnr-b-grid rnr-gridtable" cellpadding="0" data-body-height="1">
-                <thead>
-                  {BEGIN grid_header}
-                    <TR {$rowattrs} {$row_grid_0} class="{$rowclass} {$gridHeader_class} r-gridrow">
-                      {BEGIN cellblock_grid_headcell_icons}
-                        <TH {$cell_grid_headcell_icons} {$recordattrs} class="r-ori-vert" data-cellId="grid_headcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="adm_meuplano1_list" data-control-cell>
-                        </th>
-                      {END cellblock_grid_headcell_icons}
-                      {BEGIN cellblock_grid_headcell_field}
-                        <TH {$cell_grid_headcell_field} {$recordattrs} class="r-ori-vert {$idPlano_class}" data-field="idPlano" data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}">
-                          {BEGIN idPlano_fieldheadercolumn}
-                            {BEGIN idPlano_fieldheader}
-                              <SPAN {$idPlano_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="idPlano">
-                                {$label adm_meuplano idPlano}
-                                {$arrow_icon_idPlano}
-                              </SPAN>
-                            {END idPlano_fieldheader}
-                          {END idPlano_fieldheadercolumn}
-                        </th>
-                      {END cellblock_grid_headcell_field}
-                      {BEGIN cellblock_grid_headcell_field1}
-                        <TH {$cell_grid_headcell_field1} {$recordattrs} class="r-ori-vert {$Data_Inicial_class}" data-field="Data_Inicial" data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}">
-                          {BEGIN Data_Inicial_fieldheadercolumn}
-                            {BEGIN Data_Inicial_fieldheader}
-                              <SPAN {$Data_Inicial_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Data_Inicial">
-                                {$label adm_meuplano Data_Inicial}
-                                {$arrow_icon_Data_Inicial}
-                              </SPAN>
-                            {END Data_Inicial_fieldheader}
-                          {END Data_Inicial_fieldheadercolumn}
-                        </th>
-                      {END cellblock_grid_headcell_field1}
-                      {BEGIN cellblock_grid_headcell_field2}
-                        <TH {$cell_grid_headcell_field2} {$recordattrs} class="r-ori-vert {$Valor_class}" data-field="Valor" data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}">
-                          {BEGIN Valor_fieldheadercolumn}
-                            {BEGIN Valor_fieldheader}
-                              <SPAN {$Valor_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Valor">
-                                {$label adm_meuplano Valor}
-                                {$arrow_icon_Valor}
-                              </SPAN>
-                            {END Valor_fieldheader}
-                          {END Valor_fieldheadercolumn}
-                        </th>
-                      {END cellblock_grid_headcell_field2}
-                    </tr>
-                  {END grid_header}
-                </thead>
-                <tbody>
-                  {BEGIN grid_row}
-                    <TR {$rowattrs} {$row_grid_1} class="{$rowclass} r-gridrow">
-                      {BEGIN cellblock_grid_cell_icons}
-                        <TD {$cell_grid_cell_icons} {$recordattrs} class="r-ori-vert" data-cellId="grid_cell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="adm_meuplano1_list" data-control-cell>
-                          {BEGIN view_column}
-                            {BEGIN view_link}
-                              <span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
-                                <A type="button" title="Exibir Registro" class="btn-link glyphicon glyphicon-search" href="adm_meuplano1_view.php?{$editlink}" {$viewlink_attrs} title="Exibir" data-popup>
-                                </a>
-                              </span>
-                            {END view_link}
-                          {END view_column}
-                        </td>
-                      {END cellblock_grid_cell_icons}
-                      {BEGIN cellblock_grid_cell_field}
-                        <TD {$cell_grid_cell_field} {$recordattrs} class="r-ori-vert {$idPlano_class}" data-field="idPlano" data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}">
-                          {BEGIN idPlano_fieldcolumn}
-                            <span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="idPlano" data-default-width >
-                              {$idPlano_value}
-                            </span>
-                          {END idPlano_fieldcolumn}
-                        </td>
-                      {END cellblock_grid_cell_field}
-                      {BEGIN cellblock_grid_cell_field1}
-                        <TD {$cell_grid_cell_field1} {$recordattrs} class="r-ori-vert {$Data_Inicial_class}" data-field="Data_Inicial" data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}">
-                          {BEGIN Data_Inicial_fieldcolumn}
-                            <span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Data_Inicial" data-default-width >
-                              {$Data_Inicial_value}
-                            </span>
-                          {END Data_Inicial_fieldcolumn}
-                        </td>
-                      {END cellblock_grid_cell_field1}
-                      {BEGIN cellblock_grid_cell_field2}
-                        <TD {$cell_grid_cell_field2} {$recordattrs} class="r-ori-vert {$Valor_class}" data-field="Valor" data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}">
-                          {BEGIN Valor_fieldcolumn}
-                            <span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Valor" data-default-width >
-                              {$Valor_value}
-                            </span>
-                          {END Valor_fieldcolumn}
-                        </td>
-                      {END cellblock_grid_cell_field2}
-                    </tr>
-                  {END grid_row}
-                </tbody>
-                <tfoot>
-                  <TR {$rowattrs} {$row_grid_2} class="{$rowclass} {$gridFooter_class} r-gridrow">
-                    {BEGIN cellblock_grid_footcell_icons}
-                      <TD {$cell_grid_footcell_icons} {$recordattrs} class="r-ori-vert" data-cellId="grid_footcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}">
-                      </td>
-                    {END cellblock_grid_footcell_icons}
-                    {BEGIN cellblock_grid_footcell_field}
-                      <TD {$cell_grid_footcell_field} {$recordattrs} class="r-ori-vert {$idPlano_class}" data-field="idPlano" data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="adm_meuplano1_list">
-                      </td>
-                    {END cellblock_grid_footcell_field}
-                    {BEGIN cellblock_grid_footcell_field1}
-                      <TD {$cell_grid_footcell_field1} {$recordattrs} class="r-ori-vert {$Data_Inicial_class}" data-field="Data_Inicial" data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="adm_meuplano1_list">
-                      </td>
-                    {END cellblock_grid_footcell_field1}
-                    {BEGIN cellblock_grid_footcell_field2}
-                      <TD {$cell_grid_footcell_field2} {$recordattrs} class="r-ori-vert {$Valor_class}" data-field="Valor" data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="adm_meuplano1_list">
-                      </td>
-                    {END cellblock_grid_footcell_field2}
-                  </tr>
-                </tfoot>
-              </table>
-            {END grid_block}
-          </div>
-          <DIV class="r-below">
-            {BEGIN below-grid_block}
-              <DIV class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="leftbar" {$form_below-grid} data-pageid="{$pageid}">
-                <DIV class="row">
-                  <DIV data-cellId="below-grid_c1" data-pageid="{$pageid}" {$cell_below-grid_c1} class="r-align-center r-ori-vert col-md-12">
-                    {BEGIN pagination_block}
-                      <span data-itemtype="pagination" data-itemid="pagination" {$item_pagination} data-pageid="{$pageid}" >
-                        {$pagination}
-                      </span>
-                    {END pagination_block}
-                  </div>
-                </div>
-              </div>
-            {END below-grid_block}
-          </div>
-          {$footer}
-        </div>
-      </div>
-      </div>
-    {END body}
+	<div class="panel-heading">
+		<div class="btn-group" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Buscar em			<span class="caret"></span>
+			</button>
+		</div>
 
 
+		<div class="btn-group searchpanel-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Mostrar opções</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>todas as condições</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>qualquer condição</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>ocultar</a></li>
+			</ul>
+		</div>
+
+
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+																		{BEGIN searchCtrlBlock_Data_Inicial}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_Data_Inicial}" {$filterRow_attrs_Data_Inicial}>
+			<label>{$label adm_meuplano Data_Inicial }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_Data_Inicial}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_Data_Inicial}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_Data_Inicial}</span>
+						</div>
+		{END searchCtrlBlock_Data_Inicial}
+																{BEGIN searchCtrlBlock_idPlano}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_idPlano}" {$filterRow_attrs_idPlano}>
+			<label>{$label adm_meuplano idPlano }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_idPlano}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_idPlano}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_idPlano}</span>
+						</div>
+		{END searchCtrlBlock_idPlano}
+		
+
+	</div>
+
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary" id="searchButton{$id}" {$searchbutton_attrs}>Buscar</button>
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>Mostrar Todos</button>
+	</div>
 </div>
+<!-- End Search panel content -->
+			</div>
+		
+    {END left_block}
+</div>				</div>	
+			<div class="r-content-col" data-resize-left="leftbar">
+				<div  class="r-topheader" data-resize-name="topbar">
+									{BEGIN supertop_block}
+<nav class="navbar navbar-default" 
+	data-location="supertop" id="form_supertop_{$pageid}" data-makeup="leftbar" {$form_supertop} data-pageid="{$pageid}" >
+			 
+							 
+				<span class="navbar-form  r-ori-vert navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="custom_button" {$item_custom_button} data-topcell-item-type="custom_button" >
+				<span data-itemtype="custom_button" data-itemid="custom_button" {$item_custom_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="Voltar" href="javascript:void(0)" typeid="ib" >
+							Voltar			</a>
+</span>
+			</span>
+							 
+							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
+				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+							<span class="glyphicon glyphicon-cog"></span>
+									<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="showOptPanel{$id}"  title="" >
+				
+		Mostrar painel de busca		
+		</a>
+	</li>
+{END searchPanelTopButtons}
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="hideOptPanel{$id}"  title="" >
+				
+		Ocultar painel de busca		
+		</a>
+	</li>
+{END searchPanelTopButtons}
+					</ul>
+	</span>
+</span>
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
+				{BEGIN guestloginbutton}
+<span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" href="#" {$guestloginlink_attrs} >
+							Login			</a>
+</span>
+{END guestloginbutton}
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="username_button" {$item_username_button} data-topcell-item-type="username_button" >
+				{BEGIN loggedas_message}
+<span data-itemtype="username_button" data-itemid="username_button" {$item_username_button} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+							<span class="glyphicon glyphicon-user"></span>
+						{$username}			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN logoutbutton}
+	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$logoutlink_attrs}  title="" >
+				
+		Log Out		
+		</a>
+	</li>
+{END logoutbutton}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$changepwdlink_attrs}  title="" >
+				
+		Mudar senha		
+		</a>
+	</li>
+{END changepwd_link}
+					</ul>
+	</span>
+</span>
+{END loggedas_message}
+			</span>
+								</nav>
+{END supertop_block}
+						{$locking}
+				</div>	
+				<div class="r-body" data-resize-top="topbar" data-body-width="standard">
+					{$header}
+					<div class="r-top">
+									{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="leftbar" {$form_top} data-pageid="{$pageid}" >		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c2" data-pageid="{$pageid}"	{$cell_top_c2}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN mastertable_block}
+<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
+	{$showmasterfile}
+</div>
+{END mastertable_block}		</div>					</div>
+	</div>		
+{END top_block}
+						</div>
+					<div class="r-above">
+										{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="leftbar" {$form_above-grid} data-pageid="{$pageid}" >		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
+	class="r-align-right r-ori-vert			col-md-12
+	
+">
+		{BEGIN firstAboveGridCell}
+				{END firstAboveGridCell}	
+	</div>					</div>
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class="			col-md-6
+	
+">
+		 
+		{BEGIN add_link}
+<span data-itemtype="add" data-itemid="add" {$item_add} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$addlink_attrs} href="adm_meuplano1_add.php{$stateLink_full}" data-popup >
+							Adicionar Novo			</a>
+</span>
+{END add_link}
+	 
+		{BEGIN inlineadd_link}
+<span data-itemtype="inline_add" data-itemid="inline_add" {$item_inline_add} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$inlineaddlink_attrs} >
+							Adicionar Novo			</a>
+</span>
+{END inlineadd_link}
+		</div>			 
+				<div 
+	data-cellId="above-grid_c" data-pageid="{$pageid}"	{$cell_above-grid_c}
+	class="r-align-right r-ori-vert			col-md-6
+	
+">
+			</div>					</div>
+	</div>		
+{END above-grid_block}
+						</div>
+					<div class="r-grid">
+										{BEGIN grid_block}
+{BEGIN grid_tabs}
+  <ul class="nav nav-tabs bsgrid_tabs">
+	{$grid_tabs_content}
+  </ul>
+{END grid_tabs}
+{BEGIN message_block}
+<div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
+{END message_block}	<style>
+@media screen and (max-width: 767px) {
+				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="idPlano"]:before {
+		content: "{$label adm_meuplano idPlano}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Data_Inicial"]:before {
+		content: "{$label adm_meuplano Data_Inicial}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="Valor"]:before {
+		content: "{$label adm_meuplano Valor}";
+	}
+					}
+</style>
+<table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table {$grid_classes}  r-flexgrid rnr-b-grid rnr-gridtable" 
+	cellpadding="0" 
+	data-body-height="1"
+>
+						<thead>
+			{BEGIN grid_header}
+					
+		 
+						<tr {$rowattrs} {$row_grid_0} class="{$rowclass} 
+									{$gridHeader_class}
+									
+								r-gridrow
+							">
+				 
+					{BEGIN cellblock_grid_headcell_icons}
+	<th
+	
+	{$cell_grid_headcell_icons}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
 
-  </body>
+	
+	data-cellId="grid_headcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="adm_meuplano1_list"		data-control-cell
+	
+	>
+
+	
+	</th>
+	{END cellblock_grid_headcell_icons}
+				 
+					{BEGIN cellblock_grid_headcell_field}
+	<th
+	
+	{$cell_grid_headcell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$idPlano_class}
+			"
+
+			data-field="idPlano"
+	
+	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN idPlano_fieldheadercolumn}
+	{BEGIN idPlano_fieldheader}
+	<SPAN {$idPlano_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="idPlano">
+	{$label adm_meuplano idPlano }	{$arrow_icon_idPlano}
+	</SPAN>
+	{END idPlano_fieldheader}
+{END idPlano_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field}
+				 
+					{BEGIN cellblock_grid_headcell_field1}
+	<th
+	
+	{$cell_grid_headcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Data_Inicial_class}
+			"
+
+			data-field="Data_Inicial"
+	
+	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Data_Inicial_fieldheadercolumn}
+	{BEGIN Data_Inicial_fieldheader}
+	<SPAN {$Data_Inicial_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Data_Inicial">
+	{$label adm_meuplano Data_Inicial }	{$arrow_icon_Data_Inicial}
+	</SPAN>
+	{END Data_Inicial_fieldheader}
+{END Data_Inicial_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field1}
+				 
+					{BEGIN cellblock_grid_headcell_field2}
+	<th
+	
+	{$cell_grid_headcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Valor_class}
+			"
+
+			data-field="Valor"
+	
+	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Valor_fieldheadercolumn}
+	{BEGIN Valor_fieldheader}
+	<SPAN {$Valor_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Valor">
+	{$label adm_meuplano Valor }	{$arrow_icon_Valor}
+	</SPAN>
+	{END Valor_fieldheader}
+{END Valor_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field2}
+							</tr>
+					 
+					 
+					
+					{END grid_header}
+			</thead>
+															<tbody>
+					{BEGIN grid_row}
+									
+		 
+					 
+						<tr {$rowattrs} {$row_grid_1} class="{$rowclass} 
+								
+								r-gridrow
+							">
+				 
+					{BEGIN cellblock_grid_cell_icons}
+	<td
+	
+	{$cell_grid_cell_icons}
+	{$recordattrs}
+	class="
+					"
+
+	
+	data-cellId="grid_cell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="adm_meuplano1_list"		data-control-cell
+	
+	>
+
+	 
+		{BEGIN inline_cancel}
+<span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
+	<a type="button" title="Cancela" class="btn-link   
+	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="Cancela" >		
+				
+								</a>
+</span>
+{END inline_cancel}
+	 
+		{BEGIN view_column}
+{BEGIN view_link}
+<span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
+	<a type="button" title="Exibir Registro" class="btn-link   
+	 glyphicon glyphicon-search" href="adm_meuplano1_view.php?{$editlink}" {$viewlink_attrs} title="Exibir" data-popup >		
+				
+								</a>
+</span>
+{END view_link}
+{END view_column}
+	
+	</td>
+	{END cellblock_grid_cell_icons}
+				 
+					{BEGIN cellblock_grid_cell_field}
+	<td
+	
+	{$cell_grid_cell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$idPlano_class}
+			"
+
+			data-field="idPlano"
+	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN idPlano_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="idPlano" data-default-width >
+{$idPlano_value}
+</span>
+{END idPlano_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field}
+				 
+					{BEGIN cellblock_grid_cell_field1}
+	<td
+	
+	{$cell_grid_cell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Data_Inicial_class}
+			"
+
+			data-field="Data_Inicial"
+	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Data_Inicial_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Data_Inicial" data-default-width >
+{$Data_Inicial_value}
+</span>
+{END Data_Inicial_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field1}
+				 
+					{BEGIN cellblock_grid_cell_field2}
+	<td
+	
+	{$cell_grid_cell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Valor_class}
+			"
+
+			data-field="Valor"
+	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Valor_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Valor" data-default-width >
+{$Valor_value}
+</span>
+{END Valor_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field2}
+							</tr>
+					 
+					
+											{END grid_row}
+					</tbody>
+													<tfoot>
+					
+		 
+					 
+					 
+						<tr {$rowattrs} {$row_grid_2} class="{$rowclass} 
+									{$gridFooter_class}
+									
+								r-gridrow
+							">
+				 
+					{BEGIN cellblock_grid_footcell_icons}
+	<td
+	
+	{$cell_grid_footcell_icons}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_icons}
+				 
+					{BEGIN cellblock_grid_footcell_field}
+	<td
+	
+	{$cell_grid_footcell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="adm_meuplano1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field}
+				 
+					{BEGIN cellblock_grid_footcell_field1}
+	<td
+	
+	{$cell_grid_footcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="adm_meuplano1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field1}
+				 
+					{BEGIN cellblock_grid_footcell_field2}
+	<td
+	
+	{$cell_grid_footcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="adm_meuplano1_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field2}
+							</tr>
+					
+					</tfoot>
+				</table>
+{END grid_block}
+						</div>
+					<div class="r-below">
+										{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="leftbar" {$form_below-grid} data-pageid="{$pageid}" >		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="r-align-center r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN pagination_block}
+<span data-itemtype="pagination" data-itemid="pagination" {$item_pagination} data-pageid="{$pageid}" >
+{$pagination}
+</span>
+{END pagination_block}
+		</div>					</div>
+	</div>		
+{END below-grid_block}
+						</div>
+					{$footer}
+				</div>	
+			</div>	
+		</div>
+	{END body}
+	</body>
 </html>
