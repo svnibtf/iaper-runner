@@ -254,21 +254,6 @@ class FilterIntervalList extends FilterControl
 		}
 		
 		return FilterIntervalList::getOrdinaryIntervalCondition( $fName, $intervalData, $pSet );	
-	}
-	
-	/**
-	 * @deprecated
-	 * Stub for search suggest
-	 * Get a filter's SQL where clause condition
-	 *
-	 * @param String fName
-	 * @param Array intervalData
-	 * @param Object pSet
-	 * @param Object cipherer
-	 * @param String tableName
-	 * @return String
-	 */
-	static function getIntervalFilterWhere($fName, $intervalData, $pSet, $cipherer, $tableName, $connection, $sqlFieldName = "") {
 	}	
 }
 ?>

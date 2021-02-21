@@ -202,6 +202,13 @@ class ExportPage extends RunnerPage
 		$this->exportTo( $this->exportType, $rs , $pageSize );
 	}
 
+	public function getSubsetDataCommand( $ignoreFilterField = "" ) {
+		$dc = parent::getSubsetDataCommand( $ignoreFilterField );
+		
+		$this->reoderCommandForReoderedRows( $this->getListPSet(), $dc );
+		return $dc;
+	}
+	
 	/**
 	 * @param String type
 	 * @param Mixed rs

@@ -115,7 +115,7 @@ class MSSQLSrvConnection extends Connection
 	 */
 	public function getInsertedId($key = null, $table = null , $oraSequenceName = false)
 	{
-		$qResult = $this->query( "select @@IDENTITY as indent" );
+		$qResult = $this->query( "select SCOPE_IDENTITY() as indent" );
 		if( $qResult )
 		{
 			$row = $qResult->fetchAssoc();

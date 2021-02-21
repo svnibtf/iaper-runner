@@ -39,12 +39,11 @@ pdfDocument = {
 	
 		body: [
 				
-					[
-												{
+				[
+																{
 	cellId: 'c1',
 	col:0,
 	row:0,
-			style: 'cell',
 		
 		
 	//	static colspan/rowspan
@@ -63,7 +62,8 @@ pdfDocument = {
   },
 
 											],
-					]
+		
+		]
 	}
 }
 ,
@@ -89,12 +89,11 @@ pdfDocument = {
 	
 		body: [
 				
-					[
-												{
+				[
+																{
 	cellId: 'c1',
 	col:0,
 	row:0,
-			style: 'cell',
 		
 		
 	//	static colspan/rowspan
@@ -105,10 +104,10 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_export_field3}","text":{$Data_pdfvalue}},
+			{"text":{$Data_pdfvalue},"hidden":"{$item_hide_export_field3}"},
 				
 				
-			{"hidden":"{$item_hide_export_field}","text":{$Valor_a_Receber_pdfvalue}},
+			{"text":{$Valor_a_Receber_pdfvalue},"hidden":"{$item_hide_export_field}"},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -116,7 +115,8 @@ pdfDocument = {
   },
 
 											],
-					]
+		
+		]
 	}
 }
 ,

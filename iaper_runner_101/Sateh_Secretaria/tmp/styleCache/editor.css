@@ -355,3 +355,8 @@ td font[color] div.field_black, .rnr-ff-container .rnr-ff-cwrap[style~="color:"]
 	font-weight: bold;
     font-size: 1.2em;
 }
+
+div.r-left.clearfix {
+	overflow-y: auto;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+}

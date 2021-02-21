@@ -3,30 +3,27 @@ require_once("include/dbcommon.php");
 require_once('classes/menupage.php');
 
 
-if( !isLogged() || isLoggedAsGuest() ) 
+if( !isLogged() || Security::isGuest() ) 
 {
 	Security::tryRelogin();
 }
 
-if( !isLogged() )
+if( !isLogged() || Security::isGuest() )
 {
 	return;
 }
 
-$duration = postvalue( "duration" );
-if( !$duration ) {
-	$duration = 30;
-}
+$duration = 30;
 $url =  postvalue( "url" );
 if( !$url ) {
 	return;
 }
 
-// todo 
-// add url matching, so only allowed URLs are processed
-
 $payload = array( 
 	"username" => Security::getUserName(),
+	"host" => hostFromUrl( $url ),
+	"external" => true,
+	"origin" => projectUrl()
 );
 $jwt = jwt_encode( $payload, $duration );
 if( strpos( $url, '?' ) !== false ) {

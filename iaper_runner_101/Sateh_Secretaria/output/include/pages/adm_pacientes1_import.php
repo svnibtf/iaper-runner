@@ -18,7 +18,8 @@
 'itemsByType' => array( 'import_header' => array( 'import_header' ) ),
 'cellMaps' => array(  ) ),
 'loginForm' => array( 'loginForm' => 3 ),
-'page' => array( 'labeledButtons' => array( 'update_records' => array(  ),
+'page' => array( 'verticalBar' => false,
+'labeledButtons' => array( 'update_records' => array(  ),
 'print_pages' => array(  ),
 'register_activate_message' => array(  ),
 'details_found' => array(  ) ),
@@ -64,5 +65,5 @@
 'recsPerRow' => 1 ) ),
 'items' => array( 'import_header' => array( 'type' => 'import_header' ) ),
 'dbProps' => array(  ),
-'version' => 4 );
+'version' => 7 );
 		?>

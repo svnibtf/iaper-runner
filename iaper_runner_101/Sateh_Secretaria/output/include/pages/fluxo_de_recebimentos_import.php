@@ -24,7 +24,8 @@
 'import_field' ) ),
 'cellMaps' => array(  ) ),
 'loginForm' => array( 'loginForm' => 3 ),
-'page' => array( 'labeledButtons' => array( 'update_records' => array(  ),
+'page' => array( 'verticalBar' => false,
+'labeledButtons' => array( 'update_records' => array(  ),
 'print_pages' => array(  ),
 'register_activate_message' => array(  ),
 'details_found' => array(  ) ),
@@ -75,5 +76,5 @@
 'import_field' => array( 'field' => 'Valor_a_Receber',
 'type' => 'import_field' ) ),
 'dbProps' => array(  ),
-'version' => 4 );
+'version' => 7 );
 		?>

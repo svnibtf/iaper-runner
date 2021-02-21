@@ -65,6 +65,7 @@ define('PAGE_MENU',"menu");
 define('PAGE_LOGIN',"login");
 define('PAGE_REGISTER',"register");
 define('PAGE_REMIND',"remind");
+define('PAGE_REMIND_SUCCESS',"remind_success");
 define('PAGE_CHANGEPASS',"changepwd");
 define('PAGE_SEARCH',"search");
 define('PAGE_REPORT',"report");
@@ -83,6 +84,7 @@ define('PAGE_DASHMAP', "map");
 define('PAGE_ADMIN_RIGHTS', "admin_rights_list");
 define('PAGE_ADMIN_MEMBERS', "admin_members_list");
 define('PAGE_ADMIN_ADMEMBERS', "admin_admembers_list");
+define('PAGE_USERINFO',"userinfo");
 
 define('ADMIN_USERS',"admin_users");
 
@@ -155,6 +157,7 @@ define("MODE_EXPORT",8);
 
 define("LOGIN_HARDCODED",0);
 define("LOGIN_TABLE",1);
+define("LOGIN_AD",2);
 
 define("SECURITY_NONE",-1);
 define("SECURITY_HARDCODED", 0);
@@ -223,6 +226,12 @@ define("EXPORT_RAW", 0);
 define("EXPORT_FORMATTED", 1);
 define("EXPORT_BOTH", 2);
 
+
+define("CHANGEPASS_SIMPLE", 0);
+define("CHANGEPASS_POPUP", 1);
+
+define("USERINFO_SIMPLE", 0 );
+define("USERINFO_2FACTOR", 1 );
 
 define("titTABLE",0);
 define("titVIEW",1);
@@ -427,6 +436,8 @@ define("PDF_PAGE_HEIGHT", 1060);
 define("GOOGLE_MAPS", 0);
 define("OPEN_STREET_MAPS", 1);
 define("BING_MAPS", 2);
+define("HERE_MAPS", 3);
+define("MAPQUEST_MAPS", 4);
 
 /* Defined captcha type */
 define("FLASH_CAPTCHA", 0);
@@ -478,7 +489,7 @@ define('CONTEXT_PAGE', 1);		//	page where pageObject is available
 define('CONTEXT_BUTTON', 2);	// 	button or other AJAX event
 define('CONTEXT_LOOKUP', 3);	//	dependent lookup
 define('CONTEXT_ROW', 4);		// 	processing grid row on multiple-records page (list)
-define('CONTEXT_COMMAND', 5);	// 	DataCommand context
+define('CONTEXT_COMMAND', 5);	// 	DsCommand context
 define('CONTEXT_SEARCH', 6);	// 	Search object context
 define('CONTEXT_MASTER', 7);	// 	Master-details context
 
@@ -506,6 +517,16 @@ define('REST_OAUTH', 4);
 define("TIME_FORMAT_TIME_OF_DAY", 0);
 define("TIME_FORMAT_DURATION", 1);
 
+// user session levels
+define("LOGGED_NONE", 0 );
+//	logged in
+define("LOGGED_FULL", 1 );
+//	user has entered username & password, has to do 2factor authentication
+define("LOGGED_2F_PENDING", 2 );
+//	user has logged in, must setup 2factor authentication
+define("LOGGED_2FSETUP_PENDING", 3 );
+//	user has logged in, acount not activated, must confirm email address
+define("LOGGED_ACTIVATION_PENDING", 4 );
 
 
 $globalSettings = array();
@@ -519,16 +540,15 @@ $twilioAuth = "";
 $twilioNumber = "";
 $globalSettings["bTwoFactorAuth"] = false;
 
+/**
+ * An option to be added to the wizard
+ * Controls 'Remeber me' option
+ */
+$globalSettings["keepLoggedIn"] = true;
 
 
 
 
-$globalSettings["popupPagesLayoutNames"] = array();
-					
-;
-$globalSettings["popupPagesLayoutNames"]["login"] = "login";
-			;
-$globalSettings["popupPagesLayoutNames"]["register"] = "login";
 
 //mail settings
 $globalSettings["useBuiltInMailer"] = false;
@@ -568,6 +588,8 @@ $globalSettings["userGroupCount"] = 3;
 
 
 $globalSettings["apiGoogleMapsCode"] = "AIzaSyA_vMPvnIDcrFEAdCssJrsLnSQApQ8774w";
+
+$globalSettings["useEmbedMapsAPI"] = 1 != 0;
 
 $globalSettings["SpUserIdField"] = "";
 
@@ -609,8 +631,15 @@ $globalSettings["override"] = array();
 
 $styleOverrides = array();
 
+$styleOverrides["adm_pacientes_list"] = array(
+	"theme" => "sandstone",
+	"size" => "small",
+	"path" => "",
+);
 
 $globalSettings["mapProvider"]=0;
+//$globalSettings["mapProvider"] = HERE_MAPS;
+//$globalSettings["mapProvider"] = MAPQUEST_MAPS;
 
 $globalSettings["CaptchaSettings"] = array();
 $globalSettings["CaptchaSettings"]["type"] = 0;
@@ -632,8 +661,11 @@ $cUserNameField	= "email";
 $cPasswordField	= "senha";
 $cUserGroupField = "tipo_usuario";
 $cEmailField = "email";
+$cUserpicField = "";
+$cKeyFields = array();
 $globalSettings["usersTableInProject"] = true;
 $globalSettings["usersDatasourceTable"] = "login";
+
 
 $globalSettings["jwtSecret"] = "59g022prYpvbfbxN8ZfP";
 
@@ -652,15 +684,18 @@ $arrCustomPages = array();
 						$cEmailFieldType = 200;
 																																																																																																																																																																																																																																										
 
+//	-1 - undetermined, 0 - nah, 1 - yep
+$gGuestHasPermissions = -1;
+
 $useAJAX = true;
 $suggestAllContent = true;
 
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "10_1612433047";
-$wizardBuildKey = "35870";
-$projectBuildNumber = "10";
+$projectBuildKey = "29_1613930735";
+$wizardBuildKey = "36714";
+$projectBuildNumber = "29";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -668,12 +703,14 @@ $mlang_charsets = array();
 
 $projectMenus = array();
 $projectMenus[] = "main";
+$projectMenus[] = "secondary";
 
 
 $menuTreelikeFlags = array();
 $menuTreelikeFlags["main"] = 1;
 
 
+$menuTreelikeFlags["secondary"] = 1;
 
 
 
@@ -682,13 +719,21 @@ $tableCaptions = array();
 $tableCaptions["Portuguese(Brazil)"] = array();
 $tableCaptions["Portuguese(Brazil)"][""] = "";
 $tableCaptions["Portuguese(Brazil)"]["login"] = "Login";
-$tableCaptions["Portuguese(Brazil)"]["Procurar_por_Profissionais"] = "Procurar pela Localização";
 $tableCaptions["Portuguese(Brazil)"]["adm_pacientes"] = "Pacientes
 ";
 $tableCaptions["Portuguese(Brazil)"]["Fluxo_de_Recebimentos"] = "Administrativo";
 $tableCaptions["Portuguese(Brazil)"]["DashBoard"] = "Dash Board";
 $tableCaptions["Portuguese(Brazil)"]["VisaoGeral"] = "Visao Geral";
-$tableCaptions["Portuguese(Brazil)"]["adm_agenda_1"] = "Gerenciar Consultas";
+$tableCaptions["Portuguese(Brazil)"]["adm_agenda_1"] = "Consultas";
+$tableCaptions["Portuguese(Brazil)"]["adm_pacientes_documentos"] = "Documentos";
+$tableCaptions["Portuguese(Brazil)"]["adm_tipo_documentos"] = "Tipo de Documentos";
+$tableCaptions["Portuguese(Brazil)"]["adm_pagamento_avulso"] = "\$\$\$";
+$tableCaptions["Portuguese(Brazil)"]["adm_campos_adicionais"] = "Campos de Anamnese";
+$tableCaptions["Portuguese(Brazil)"]["adm_campos_paciente"] = "Anamnese";
+$tableCaptions["Portuguese(Brazil)"]["adm_splits"] = "Contas Bancárias";
+$tableCaptions["Portuguese(Brazil)"]["adm_eventos"] = "Eventos";
+$tableCaptions["Portuguese(Brazil)"]["adm_lista_variavel"] = "Parametros";
+$tableCaptions["Portuguese(Brazil)"]["adm_inscricoes"] = "Inscrições";
 
 
 $globalEvents = new class_GlobalEvents;
@@ -714,6 +759,29 @@ require_once(getabspath("classes/cipherer.php"));
 require_once( getabspath('classes/wheretabs.php') );
 require_once( getabspath('classes/datasource/datacontext.php') );
 
+$pageTypesForView = array();
+$pageTypesForView[] = "list";
+$pageTypesForView[] = "view";
+$pageTypesForView[] = "export";
+$pageTypesForView[] = "print";
+$pageTypesForView[] = "report";
+$pageTypesForView[] = "rprint";
+$pageTypesForView[] = "chart";
+
+$pageTypesForEdit = array();
+$pageTypesForEdit[] = "add";
+$pageTypesForEdit[] = "edit";
+$pageTypesForEdit[] = "search";
+$pageTypesForEdit[] = "register";
+
+
+$projectEntities = array();
+$projectEntitiesReverse = array();
+$tablesByGoodName = array();
+$tablesByUpperCase = array();
+$tablesByUpperGoodname = array();
+
+
 $contextStack = new RunnerContext;
 
 $cman = new ConnectionManager();
@@ -736,7 +804,7 @@ $mediaType = $mediaType ? $mediaType : 0;
 
 
 
-$page_titles[".global"] = array();
+$page_titles[GLOBAL_PAGES_SHORT] = array();
 if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 {
 }
@@ -767,11 +835,8 @@ if( $_COOKIE["password"] ) {
 
 
 $logoutPerformed = false;
-$scriptname = getFileNameFromURL();
-	if(!isLogged() && $scriptname!="login.php" && $scriptname!="remind.php" && $scriptname!="register.php" && $scriptname!="checkduplicates.php")
-{
-	Security::doGuestLogin();
-}
+Security::autoLoginAsGuest();
+
 
 
 $isGroupSecurity = true;

@@ -82,7 +82,8 @@
 'fixedAtClient' => false ) ),
 'width' => 1,
 'height' => 1 ) ) ),
-'page' => array( 'labeledButtons' => array( 'update_records' => array(  ),
+'page' => array( 'verticalBar' => false,
+'labeledButtons' => array( 'update_records' => array(  ),
 'print_pages' => array(  ),
 'register_activate_message' => array(  ),
 'details_found' => array(  ) ),
@@ -190,5 +191,5 @@ array( 'cell' => 'c2' ) ),
 'type' => 'integrated_edit_field',
 'orientation' => 0 ) ),
 'dbProps' => array(  ),
-'version' => 4 );
+'version' => 7 );
 		?>

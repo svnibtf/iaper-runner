@@ -49,12 +49,11 @@ pdfDocument = {
 	
 		body: [
 				
-					[
-												{
+				[
+																{
 	cellId: 'c1',
 	col:0,
 	row:0,
-			style: 'cell',
 		
 		
 	//	static colspan/rowspan
@@ -65,13 +64,34 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"","background":"#dadada","hidden":"{$item_hide_welcome_item3}"},
+			{"text":"","hidden":"{$item_hide_welcome_item3}"},
 				
 				
-			{"text":"","background":"#dadada","hidden":"{$item_hide_welcome_item4}"},
+			{"text":"","hidden":"{$item_hide_welcome_item4}"},
 				
 				
-			{"text":"","background":"#dadada","hidden":"{$item_hide_welcome_item7}"},
+			{"text":"","hidden":"{$item_hide_welcome_item7}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_welcome_item}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_welcome_item1}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_welcome_item2}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_welcome_item5}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_welcome_item6}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_welcome_item8}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_welcome_item10}"},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -79,7 +99,8 @@ pdfDocument = {
   },
 
 											],
-					]
+		
+		]
 	}
 }
 ,

@@ -122,7 +122,7 @@ class MembersPage extends ListPage_Simple
 					}
 				}
 				
-				if( $groupId == -1 && ( $_SESSION["UserID"] == $username || $securityId && $securityId == $_SESSION["UserID"] ) ) {
+				if( $groupId == -1 && ( Security::getUserName() == $username || $securityId && $securityId == Security::getUserName() ) ) {
 					$checked = 3;
 				}
 				

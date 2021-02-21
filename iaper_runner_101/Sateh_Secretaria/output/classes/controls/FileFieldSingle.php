@@ -53,23 +53,23 @@ class FileFieldSingle extends EditControl
 		}
 		$this->upload_handler->tkeys = "&" . implode("&", $keyParams);
 
-		if( $this->pageObject->pageType == PAGE_SEARCH || $this->pageObject->pageType == PAGE_LIST )
+		if( $mode == MODE_SEARCH  )
 		{
+			$this->format = "";
+			
 			$classString = "";
 			if( $this->pageObject->isBootstrap() )
 				$classString = " class=\"form-control\"";
+			
 			echo '<input id="'.$this->cfield.'" '.$classString.$this->inputStyle.' type="text" '
-				.($mode == MODE_SEARCH ? 'autocomplete="off" ' : '')
-				.(($mode==MODE_INLINE_EDIT || $mode==MODE_INLINE_ADD) && $this->is508==true ? 'alt="'.$this->strLabel.'" ' : '')
+				.('autocomplete="off" ')
+				.( $this->is508 == true ? 'alt="'.$this->strLabel.'" ' : '' )
 				.'name="'.$this->cfield.'" '.$this->pageObject->pSetEdit->getEditParams($this->field).' value="'
 				.runner_htmlspecialchars($value).'">';
 
 			$this->buildControlEnd($validate, $mode);
 			return;
 		}
-
-		if( $mode == MODE_SEARCH )
-			$this->format = "";
 
 		$disp = "";
 		$strfilename = "";

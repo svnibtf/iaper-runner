@@ -72,14 +72,27 @@ class DataSourceTable extends DataSource {
 		return $dc->_cache["having"];
 	}
 
-	protected function getOrderClause( $dc ) {
+	/**
+	 * @param Boolean $forceColumnNames - when true always use column or field names instead if indices
+	 */
+	protected function getOrderClause( $dc, $forceColumnNames = false ) {
 		if( isset( $dc->_cache["order"] ) ) {
 			return $dc->_cache["order"];
 		}
+		$columns = null;
 		$orderby = array();
 		foreach( $dc->order as $of ) {
 			if( $of["index"] ) {
-				$orderby[] = $of["index"] . " " . $of["dir"];
+				if( !$forceColumnNames ) {
+					$orderby[] = $of["index"] . " " . $of["dir"];
+				} else {
+					if( !$columns )
+						$columns = $this->getColumnList();
+					$column = $columns[ (int)$of["index"] - 1 ];
+					if( $column ) {
+						$orderby[] = $this->wrap( $column ) . " " . $of["dir"];
+					}
+				}
 			} else if( $of["column"] ) {
 				$extraColumn = $dc->findExtraColumn( $of["column"] );
 				if( $extraColumn ) {
@@ -230,35 +243,32 @@ class DataSourceTable extends DataSource {
 			$caseInsensitive = dsCASE_DEFAULT;
 		}
 
-		// todo check time field value in PostgreSQL
-
-
 		//	encryption stuff
 		//	either field must be decrypted or value operand encrypted
 		$encryptValue = $this->valueNeedsEncrypted( $field );
 		if( $operandType == dsotFIELD )
 			$fieldExpr = $this->fieldExpression( $field, $modifier );
-		else if( $operandType == dsotSQL )
+		else if( $operandType == dsotSQL ) {
 			$fieldExpr = $field;
+			$fieldType = 0;
+		}
 
 		if( $context->useSubquery ) {
+			//	original query is wrapped in a subquery, use column names instead of underlying expressions
 			$fieldExpr = $this->connection->addFieldWrappers( $field );
 			$encryptValue = false;
 		}
 
 		//	process $field->joinData, apply criteria to a field from another table, like searching by Display field
-		if( !$encryptValue && $dCondition->operands[0]->joinData ) {
-			$joinData = $dCondition->operands[0]->joinData;
-			
+
+		$joinData = $dCondition->operands[0]->joinData;
+		if( $joinData ) {
 			if( $joinData->dataSource->tableBased() ) {
-				$newExpression = $this->createJoinedExpression( $field, $fieldExpr, $dCondition->operands[0], $context );
-				$fieldExpr = $newExpression ? $newExpression : $fieldExpr;
-				$fieldType = $joinData->dataSource->getFieldType( $joinData->displayField );
-				if( !$fieldType ) {
-					$fieldType = 200;
-				}
+				return $this->createJoinedSearchClause( $field, $fieldExpr, $dCondition );
 			}
+			return "";
 		}
+
 
 		// forced conversion to char
 		if( ( $dCondition->operands[0]->tochar) && !IsCharType( $fieldType ) ) {
@@ -303,6 +313,8 @@ class DataSourceTable extends DataSource {
 			return $this->sqlExpressionBetween( $fieldType, $fieldExpr, $dCondition->operands[ 1 ]->value, $dCondition->operands[ 2 ]->value, $caseInsensitive );
 		} else if( $op == dsopSOME_IN_LIST || $op == dsopALL_IN_LIST ) {
 			return $this->sqlExpressionInList( $fieldType, $fieldExpr, $dCondition->operands[ 1 ]->value, $op == dsopALL_IN_LIST );
+		} else if( $op == dsopIN ) {
+		return $this->sqlExpressionIn( $fieldType, $fieldExpr, $dCondition->operands[ 1 ]->value , $caseInsensitive  );
 		}
 		return "";
 	}
@@ -321,6 +333,11 @@ class DataSourceTable extends DataSource {
 			//	don't check operand type, all is converted to string
 			return true;
 		}
+		if( $op == dsopIN  ) {
+			return true;
+		}
+		
+		//	probably for searching??
 		for( $i = 1; $i < $opCount; ++$i ) {
 			if( $this->prepareSQLValue($fieldType, $operands[$i]->value ) === null ) {
 				return false;
@@ -394,6 +411,21 @@ class DataSourceTable extends DataSource {
 		return implode( $all ? ' AND ' : ' OR ', $conditions );
 	}
 
+	protected function sqlExpressionIn( $fieldType, $fieldExpr, $values, $caseInsensitive ) {
+
+		$sqlValues = array();
+		$uppercase = IsCharType( $fieldType ) && $caseInsensitive == dsCASE_INSENSITIVE;
+		foreach( $values as $v ) {
+			$sqlValues[] = $uppercase 
+				? $this->connection->upper( $this->prepareSQLValue( $fieldType, $v ) )
+				: $this->prepareSQLValue( $fieldType, $v );
+		}
+		if( $uppercase )
+			$fieldExpr = $this->connection->upper( $fieldExpr );
+		return $fieldExpr . ' IN ( '. implode( ', ', $sqlValues ) . ' )';
+	}
+
+
 	protected function sqlExpressionMore( $fieldType, $fieldExpr, $value, $caseInsensitive, $more ) {
 		$operation = $more ? ' > ' : ' < ';
 		$valueExpression = $this->prepareSQLValue( $fieldType, $value );
@@ -466,6 +498,7 @@ class DataSourceTable extends DataSource {
 
 	/**
 	 * add proper quotes, escape, convert to number etc
+	 * return null for incorrect values
 	 */
 	protected function prepareSQLValue( $type, $value ) {
 		if( IsNumberType( $type ) ) {
@@ -482,17 +515,27 @@ class DataSourceTable extends DataSource {
 			$delim = "(-|".preg_quote($locale_info["LOCALE_SDATE"], "/").")";
 			$reg = "/".$d.$delim.$m.$delim.$y."|".$m.$delim.$d.$delim.$y."|".$y.$delim.$m.$delim.$d."/";
 			if( !preg_match($reg, $value, $matches) )
-				return "null";
+				return null;
 
 			return $this->connection->addDateQuotes( $value );
 		}
+
 		if( IsBinaryType($type) )
 			return $this->connection->addSlashesBinary( $value );
+
 		if( IsGuid( $type ) ) {
 			if( !IsGuidString($value) ) {
 				return null;
 			}
 		}
+
+		// check time field value in PostgreSQL
+		if( IsTimeType( $type )
+			&& $this->connection->dbType == nDATABASE_PostgreSQL 
+			&& !validTimeValue( localtime2db( $value ) ) ) {
+			return null;
+		}
+
 		return $this->connection->prepareString( $value );
 	}
 
@@ -586,10 +629,29 @@ class DataSourceTable extends DataSource {
 	 * @return String
 	 */
 	protected function extraColumnExpression( $column ) {
-		$expression = $column->sql;
-		if( !$expression ) {
-			$expression = $this->fieldExpression( $column->field, $column->modifier );
+		
+		
+		if( $column->sql ) 
+		{
+			$expression = $column->sql;
+		} 
+		else 
+		{
+			//	use $column->field
+			$columnExpression = $this->fieldExpression( $column->field, $column->modifier );
+			if( $column->joinData ) 
+			{
+				$expression = $this->getJoinedSubquery( $column->joinData, $columnExpression, $this->getFieldType( $column->field ), null, "", true );
+			}
+			if( $expression != '' ) {
+				// brace the subquery
+				$expression = "( " . $expression . " )";
+			} else {
+				//	no joinData specified or not supported
+				$expression = $columnExpression;
+			}
 		}
+		
 		if( $column->alias ) {
 			return $expression . ' AS ' . $this->connection->addFieldWrappers( $column->alias );
 		} else {
@@ -751,6 +813,7 @@ class DataSourceTable extends DataSource {
 
 		if( $total["total"] == "distinct" ) {
 			//	substitute original field with the joined display field
+			//	it happens with search suggest
 			$context = $dc->_cache["context"];
 			if( $context ) {
 				if( isset( $context->joinedAliases[ $total[ "field" ] ] ) ) {
@@ -939,6 +1002,8 @@ class DataSourceTable extends DataSource {
 	}
 
 	/**
+	 * probably deprecated
+	 * 
 	 * @param String fieldExpression - original field expression
 	 * @param DsOperand fieldOperand - parameter dsotFIELD type operand with non-empty joinData
 	 * @param DsFilterBuildContext context
@@ -946,15 +1011,9 @@ class DataSourceTable extends DataSource {
 	 */
 	protected function createJoinedExpression( $field, $fieldExpr, $fieldOperand, $context ) {
 		$jd = $fieldOperand->joinData;
-		if( !$jd->dataSource->tableBased() || $jd->dataSource->getConnectionId() !== $this->getConnectionId() ) {
+		if( !$this->acceptJoinData( $jd ) ) {
 			return false;
 		}
-		if( $this->connection->dbType == nDATABASE_Access ) {
-			//	Access requires both columns in JOIN ON expression have table names:
-			//	JOIN ... ON table.field = alias.column
-			return false;
-		}
-
 		$joinQuery = $jd->dataSource->getJoinedQuery( $fieldExpr, $fieldOperand, $this->getFieldType( $field ) );
 		if( !$joinQuery ) {
 			return false;
@@ -967,11 +1026,147 @@ class DataSourceTable extends DataSource {
 		return $joinQuery["column"];
 	}
 
+	/**
+	 * Returns false when the join data can not be processed in this datasource
+	 * @param DsJoinData jd
+	 * @return Boolean
+	 */
+	protected function acceptJoinData( $jd ) {
+		if( !$jd->dataSource->tableBased() || $jd->dataSource->getConnectionId() !== $this->getConnectionId() ) {
+			return false;
+		}
+		if( $this->connection->dbType == nDATABASE_Access ) {
+			//	just leave it
+			return false;
+		}
+		if ( $jd->longList && !$this->connection->checkIfJoinSubqueriesOptimized() ) {
+			//	too slow
+			return false;
+		}
+		return true;
+	}
+
+
+	/**
+	 * returns subquery with isolated field names
+	 * SELECT displayAlias FROM (
+	 *   SELECT <link field> as linkAlias, <display field> as displayAlias from (original joined SQL query) b
+	 * ) a WHERE linkAlias=<fieldExpression> AND $condition
+	 * 
+	 * @param DsJoinData $jd
+	 * @param String $mainFieldExpr - SQL expression for the main field the link field should be linked against.
+	 * @param DsCondition $condition - additional filter condition, to be glued to link expression with AND
+	 * @param String $tableAlias - second query alias. Autogenerated if not specified
+	 * @param Boolean $oneRow - forces subquery to return exactly one row, so it can be used in the select list: 
+	 * 							SELECT (subquery) as alias
+	 * @return string
+	 */
+	protected function getJoinedSubquery( $jd, $mainFieldExpr, $mainFieldType, $condition = null, $tableAlias = "", $oneRow = false ) {
+		if( !$this->acceptJoinData( $jd ) ) {
+			return "";
+		}
+
+		//	prepare inner tier, the original SQL with display field expression added if needed
+		$innerDc = new DsCommand;
+		if( $jd->displayExpression ) {
+			$displayColumn = generateAlias();
+			$innerDc->extraColumns[] = new DsFieldData( $jd->displayExpression, $displayColumn, "" );
+		} else {
+			$displayColumn = $jd->displayField;
+		}
+		$innerSQL = $jd->dataSource->buildSQL( $innerDc, false );
+
+		//	prepare second tier, isolate inner field names from outer ones
+		$linkAlias =  generateAlias();
+		$secondSQL = "SELECT " 
+			. $this->wrap( $jd->linkField ) . " AS " . $this->wrap( $linkAlias ) . ", "
+			. $this->wrap( $displayColumn ) . " AS " . $this->wrap( $jd->displayAlias ) 
+			. " FROM ( ". $innerSQL . " ) a ";
+
+		if( $linkFieldExpr == "" ) {
+			$linkFieldExpr = $this->fieldExpression( $jd->linkField );
+		}
+		
+		//	prepare tables link condition
+		$linkFieldType = $jd->dataSource->getFieldType( $jd->linkField );
+		$linkFieldExpr = $this->wrap( $linkAlias );
+		//	convert both to char if different types
+		if( IsCharType( $linkFieldType ) != IsCharType( $mainFieldType ) ) {
+			if( IsCharType( $linkFieldType ) ) {
+				$mainFieldExpr = $this->connection->field2char( $mainFieldExpr );
+			} else {
+				$linkFieldExpr = $this->connection->field2char( $linkFieldExpr );
+			}
+		}
+		$fullCondition = DataCondition::_And( array( 
+			$condition, 
+			DataCondition::SQLCondition( $linkFieldExpr . " = " . $mainFieldExpr )
+		));
+
+		$sqlCondition = $jd->dataSource->conditionToSQL( $fullCondition, new DsFilterBuildContext );
+
+		$tableAlias = $tableAlias == ""
+			? generateAlias()
+			: $tableAlias;
+
+		$returnExpression = $this->wrap( $jd->displayAlias );
+		if( $oneRow ) {
+			$returnExpression = "MIN( " . $returnExpression . " )";
+		}
+			
+		$thirdSQL = "SELECT " . $returnExpression . " FROM "
+			. "( " . $secondSQL ." ) ". $this->wrap( $tableAlias )
+			. " WHERE " . $sqlCondition;
+		
+		return $thirdSQL;
+	}
+
+	/**
+	 * Creates SQL expression in the form 
+	 * EXISTS( SELECT displayAlias FROM (
+	 *   SELECT <link field> as linkAlias, <display field> as displayAlias from (original joined SQL query) b
+	 * ) a WHERE linkAlias=<fieldExpression> and displayAlias<filterExpression>)
+	 * The second subquery tier is needed to isolate link and display field names from 
+	 * @param String fieldExpression - original field expression
+
+	 * @return String - SQL logical expression to be included into search
+	 */
+	protected function createJoinedSearchClause( $field, $fieldExpr, $dCondition ) {
+		$fieldOperand = $dCondition->operands[0];
+		$valueOperand = $dCondition->operands[1];
+		$jd = $fieldOperand->joinData;
+		if( !$this->acceptJoinData( $jd ) ) {
+			return "";
+		}
+
+		//	prepare  filtering condition
+		$tableAlias = generateAlias();
+		$displayOperand = new DsOperand( 
+			dsotSQL, 
+			$this->wrap( $tableAlias ) . '.' . $this->wrap( $jd->displayAlias ),
+			0,
+			null,
+			null,
+			true	//	tochar. Assume we won't get here unless the display field is searched as a char
+		);
+		$jCondition = new DsCondition( 
+			array( $displayOperand, $valueOperand ), 
+			$dCondition->operation, 
+			$dCondition->caseInsensitive );
+		
+		//	gnerate SQL query
+		$subQuery = $this->getJoinedSubquery( $jd, $fieldExpr, $this->getFieldType( $field ), $jCondition, $tableAlias );
+		return "EXISTS( " . $subQuery . " )";
+		
+	}
+
 	public function tableBased() {
 		return true;
 	}
 
 	/**
+	 * probably deprecated
+	 * 
 	 * @param String fieldExpression - original field expression
 	 * @param DsOperand fieldOperand - parameter dsotFIELD type operand with non-empty joinData
 	 * @param Integer fieldType - database type of $fieldExpr
@@ -983,10 +1178,6 @@ class DataSourceTable extends DataSource {
 	protected function getJoinedQuery( $fieldExpr, $fieldOperand, $fieldType ) {
 
 		$jd = $fieldOperand->joinData;
-		if( $jd->longList && !$this->connection->checkIfJoinSubqueriesOptimized() ) {
-			//	too slow
-			return false;
-		}
 		$dc = new DsCommand;
 
 		$tableAlias = generateAlias();
@@ -1056,6 +1247,84 @@ class DataSourceTable extends DataSource {
 	protected function encryptField( $field, $value ) {
 		return $value;
 	}
+
+	public function wrap( $str ) {
+		return $this->connection->addFieldWrappers( $str );
+	}
+	
+	public function updateRowNumberAvailable( $dc ) {
+		return $this->connection->dbType == nDATABASE_MSSQLServer && $dc->order 
+			|| $this->connection->dbType == nDATABASE_MySQL
+			|| $this->connection->dbType == nDATABASE_PostgreSQL
+			|| $this->connection->dbType == nDATABASE_Oracle && $dc->order ;
+	}
+	
+	public function updateRowNumber( $dc, $startNumber = 0 ) {
+		$orderByClause = $this->getOrderClause( $dc, true );
+		$queryAlias = $this->wrap( generateAlias() );
+		$rownoAlias = $this->wrap( generateAlias() );
+		
+		$table = $this->connection->addTableWrappers( $this->dbTableName() );
+		$keys = array_keys( $dc->advValues );
+		$orderField = $this->wrap( $keys[0] );
+		
+		$orderWhere = $this->getWhereClause( $dc );
+		$orderWhere = $orderWhere ? " WHERE ". $orderWhere : "";		
+		
+		if( $this->connection->dbType == nDATABASE_MSSQLServer ) {
+			$overClause = "OVER( ". $orderByClause . ")";
+				
+			$sql = "UPDATE " . $queryAlias . " SET " . $queryAlias . "." . $orderField . " = " . $queryAlias . "." . $rownoAlias ."+". $startNumber
+				. " FROM ( SELECT " . $orderField . ", ROW_NUMBER() " . $overClause . " AS ". $rownoAlias 
+				. " FROM " . $table . $orderWhere ." ) " . $queryAlias;
+			$this->connection->exec( $sql );
+
+		} else if( $this->connection->dbType == nDATABASE_MySQL ) {
+			$sqls[] = "SET @rowno:=". $startNumber .";";
+			$sqls[] = "UPDATE " . $table . " SET " . $orderField . " = @rowno := @rowno + 1 " . $orderWhere . ' ' . $orderByClause . ";";
+			$this->connection->execMultiple( $sqls );
+
+		} else if( $this->connection->dbType == nDATABASE_Oracle ) {	
+			$overClause = "OVER( ". $orderByClause . ")";
+			
+			$keyFieldsWhere = array();
+			foreach( $this->getKeyFields() as $i => $k ) {
+				$keyName = $this->wrap( $k );
+				$keysFields[] = $keyName;
+				$keyFieldsWhere[] = $queryAlias.".".$keyName."=".$table.".".$keyName;
+			}			
+	
+			$sql = "UPDATE ".$table." SET ". $orderField."=( SELECT " . $rownoAlias ." + ". $startNumber." FROM ( select ".
+				implode(', ', $keysFields).", ROW_NUMBER() ".$overClause." AS " . $rownoAlias ." FROM "
+				. $table ." ". $orderWhere." ) ".$queryAlias." WHERE ". implode('AND ', $keyFieldsWhere).") ". $orderWhere;		
+			
+			$this->connection->exec( $sql );	
+		} else if( $this->connection->dbType == nDATABASE_PostgreSQL ) {
+			$overClause = $orderByClause
+				? "OVER( ". $orderByClause . ")"
+				: "OVER()";
+				
+			$keyFieldsWhere = array();
+			foreach( $this->getKeyFields() as $i => $k ) {
+				$keyName = $this->wrap( $k );
+				$keysFields[] = $keyName;
+				$keyFieldsWhere[] = $queryAlias.".".$keyName."=".$table.".".$keyName;
+			}
+	
+			$sql = "UPDATE ".$table." SET ". $orderField ." = ". $queryAlias .".". $rownoAlias ."+". $startNumber
+				. " FROM ( SELECT ". implode(', ', $keysFields).",". $orderField . ", ROW_NUMBER() " . $overClause . " AS ". $rownoAlias
+				." FROM " . $table . $orderWhere. " ) " . $queryAlias." WHERE ". implode('AND ', $keyFieldsWhere);
+			
+			$this->connection->exec( $sql );
+		}
+	}
+
+	//	virtual
+	protected function getColumnList() {
+		return array();
+	}
+
+
 }
 
 class DsFilterBuildContext {

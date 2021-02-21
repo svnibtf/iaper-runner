@@ -106,7 +106,7 @@ class SearchPageDash extends SearchPage
 	function fillFieldSettings()
 	{		
 		$arrFields = $this->pSet->getAllSearchFields();
-		$this->addFieldsSettings($arrFields, null, true, $this->pageType);
+		$this->addFieldsSettings($arrFields, null, $this->pageType);
 	}
     
 	function locateDashFieldByOriginal( $table, $field )
@@ -124,7 +124,7 @@ class SearchPageDash extends SearchPage
 	}
 	
 	
-	function addFieldsSettings($arrFields, $pSet, $pageBased, $pageType)
+	function addFieldsSettings($arrFields, $pSet, $pageType)
 	{
 		$dashSearchFields = $this->pSet->getDashboardSearchFields();
 		$tableSettingsFilled = array();

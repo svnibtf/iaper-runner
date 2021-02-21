@@ -100,12 +100,11 @@ pdfDocument = {
 	
 		body: [
 				
-					[
-												{
+				[
+																{
 	cellId: 'c1',
 	col:0,
 	row:0,
-			style: 'cell',
 		
 		
 	//	static colspan/rowspan
@@ -127,7 +126,8 @@ pdfDocument = {
   },
 
 											],
-					]
+		
+		]
 	}
 }
 ,
@@ -143,9 +143,9 @@ pdfDocument = {
 																	
 
 				
-					{BEGIN row_grid_0}
+				{BEGIN row_grid_0}
 				[
-												{BEGIN cellblock_grid_headcell_field}
+																{BEGIN cellblock_grid_headcell_field}
 {
 	cellId: 'headcell_field',
 	col:0,
@@ -163,23 +163,24 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_simple_grid_field1}","text":"{$jslabel adm_pacientes Whats }","bold":true},
+			{"text":"{$jslabel adm_pacientes Nome }","hidden":"{$item_hide_simple_grid_field1}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Whats_align}',
+              "alignment": '{$Nome_align}',
   },
 
 {END cellblock_grid_headcell_field}
 											],
 				{END row_grid_0}
-								
+		
+			
 		{BEGIN grid_row}
 	{BEGIN grid_record}
 				
-						{BEGIN row_grid_1}
+				{BEGIN row_grid_1}
 				[
-												{BEGIN cellblock_grid_cell_field}
+																{BEGIN cellblock_grid_cell_field}
 {
 	cellId: 'cell_field',
 	col:0,
@@ -197,23 +198,24 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_simple_grid_field}","text":{$Whats_pdfvalue}},
+			{"text":{$Nome_pdfvalue},"hidden":"{$item_hide_simple_grid_field}"},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$Whats_align}',
+              "alignment": '{$Nome_align}',
   },
 
 {END cellblock_grid_cell_field}
 											],
 				{END row_grid_1}
-						{END grid_record}
+		
+		{END grid_record}
 	{END grid_row}
 			
 					
-							{BEGIN row_grid_2}
+				{BEGIN row_grid_2}
 				[
-												{BEGIN cellblock_grid_footcell_field}
+																{BEGIN cellblock_grid_footcell_field}
 {
 	cellId: 'footcell_field',
 	col:0,
@@ -239,7 +241,8 @@ pdfDocument = {
 {END cellblock_grid_footcell_field}
 											],
 				{END row_grid_2}
-							
+		
+				
 									]
 			
 			}

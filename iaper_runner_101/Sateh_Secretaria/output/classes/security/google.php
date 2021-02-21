@@ -1,5 +1,7 @@
 <?php
 
+include_once(getabspath("classes/security.php"));
+
 class SecurityPluginGoogle extends SecurityPlugin {
 
 	/**
@@ -48,35 +50,22 @@ class SecurityPluginGoogle extends SecurityPlugin {
 		return $ret;
 	}
 
-	public function verifyIdToken( $id_token ) {
-		$certPath = getabspath('include/cacert.pem');
-
-		$headers = array();
-		$headers["User-Agent"] = "PHPRunner app";
-		$headers["Accept-Charset"] = "utf-8";
-
-		$params = array( "id_token" => $id_token );
-
-
-		$url = "https://oauth2.googleapis.com/tokeninfo";
-
-		$response = runner_http_request( prepareUrl( $url, $params ),
-			"",
-			"GET",
-			$headers,
-			$certPath);
-
-		if( $response["error"] ) {
-			$this->error = $response["error"];
+	/**
+	 * Verify token and get parsed paylod
+	 * @param String token
+	 * @return Array|false
+	 */
+	public function verifyIdToken( $token ) {
+		//	OpenId standard verification routine
+		$wellKnown = Security::getOpenIdCongiguration( "https://accounts.google.com/.well-known/openid-configuration" );
+		$jwk = Security::getOpenIdJWK( $token, $wellKnown );
+		
+		$verifiedTokenData = Security::openIdVerifyToken( $token, $jwk );
+		if( !$verifiedTokenData ) 
 			return false;
-		}
+		
+		$payload = $verifiedTokenData["payload"];
 
-		$payload = my_json_decode( $response["content"] );
-		if( !$payload ) {
-			// payload is not valid JSON
-			$this->error = $response["content"];
-			return false;
-		}
 		$domain = GetGlobalData("GoogleDomain", "");
 		if( $domain ) {
 			if( $payload["hd"] != $domain ) {

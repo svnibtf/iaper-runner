@@ -107,7 +107,7 @@ class ViewDatabaseImageField extends ViewImageDownloadField
 	 * @param Boolean hasThumbnail
 	 * @return String
 	 */
-	protected function getSmallThumbnailStyle( $imageSrc, $hasThumbnail )
+	protected function getSmallThumbnailStyle( $imageSrc = false, $hasThumbnail = true )
 	{
 		$styles = array();
 

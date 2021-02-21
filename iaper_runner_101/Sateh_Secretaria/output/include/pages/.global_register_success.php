@@ -21,7 +21,8 @@
 'register_success_header' => array( 'register_success_header' ),
 'register_close' => array( 'register_close' ) ),
 'cellMaps' => array(  ) ),
-'page' => array( 'labeledButtons' => array( 'update_records' => array(  ),
+'page' => array( 'verticalBar' => false,
+'labeledButtons' => array( 'update_records' => array(  ),
 'print_pages' => array(  ),
 'register_activate_message' => array(  ),
 'details_found' => array(  ) ),
@@ -86,5 +87,5 @@ array( 'cell' => 'c2' ) ),
 'register_success_header' => array( 'type' => 'register_success_header' ),
 'register_close' => array( 'type' => 'register_close' ) ),
 'dbProps' => array(  ),
-'version' => 4 );
+'version' => 7 );
 		?>

@@ -61,11 +61,6 @@ $tdatadashboard[".showEditInPopup"] = false;
 
 $tdatadashboard[".showViewInPopup"] = false;
 
-//page's base css files names
-$popupPagesLayoutNames = array();
-$tdatadashboard[".popupPagesLayoutNames"] = $popupPagesLayoutNames;
-
-
 $tdatadashboard[".listAjax"] = false;
 //	temporary
 //$tdatadashboard[".listAjax"] = false;
@@ -247,7 +242,7 @@ $tdatadashboard[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("DashBoard","Data");
 	$fdata["FieldType"] = 135;
 
-	
+
 	
 	
 			
@@ -384,7 +379,7 @@ $tdatadashboard[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("DashBoard","Valor_a_Receber");
 	$fdata["FieldType"] = 14;
 
-	
+
 	
 	
 			
@@ -590,7 +585,11 @@ $page_titles["DashBoard"] = &$pageTitlesdashboard;
 
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
+
+//if !@TABLE.bReportCrossTab
+
 $detailsTablesData["DashBoard"] = array();
+//endif
 
 // tables which are master tables for current table (detail)
 $masterTablesData["DashBoard"] = array();

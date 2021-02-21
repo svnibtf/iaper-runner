@@ -755,9 +755,7 @@ class PrintPage extends RunnerPage
 	function createMap( &$params )
 	{
 		$provider = getMapProvider();
-		if ( $provider !== GOOGLE_MAPS && $provider !== OPEN_STREET_MAPS && $provider !== BING_MAPS )
-			return;
-
+		
 		$mapId = $params['mapId'];
 
 		$apiKey = $this->googleMapCfg["APIcode"];
@@ -825,6 +823,26 @@ class PrintPage extends RunnerPage
 					if( $zoom )
 						$src.= '&zoomLevel='.$zoom;
 				}
+			break;
+			case HERE_MAPS:
+				$src = 'https://image.maps.ls.hereapi.com/mia/1.6/mapview?'
+					.'apiKey='.$apiKey
+					.'&w='.$width
+					.'&h='.$height
+					.'&poi='.rawurlencode( implode( ',', $locations ) );
+
+				if( $zoom )
+					$src.= '&z='.$zoom;
+
+			case MAPQUEST_MAPS:
+				$src = 'https://www.mapquestapi.com/staticmap/v5/map?'
+					.'key='.$apiKey
+					.'&locations='.rawurlencode( implode( '||', $locations ) )
+					.'&size='.$width.','.$height;
+
+				if( $zoom )
+					$src.= '&zoom='.$zoom;		
+				
 			break;
 			default:
 				$src = '';
@@ -1125,9 +1143,12 @@ class PrintPage extends RunnerPage
 
 	}
 
-	public function getSubsetDataCommand() {
+	public function getSubsetDataCommand( $ignoreFilterField = "" ) {
 
-		$dc = parent::getSubsetDataCommand();
+		$dc = parent::getSubsetDataCommand( $ignoreFilterField );
+		
+		$this->reoderCommandForReoderedRows( $this->getListPSet(), $dc );
+		
 		if( !$this->allPagesMode ) {
 			$dc->reccount = $this->queryPageSize;
 			$dc->startRecord = $this->queryPageSize * ( $this->queryPageNo - 1 );

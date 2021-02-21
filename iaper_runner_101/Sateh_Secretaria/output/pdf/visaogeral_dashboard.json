@@ -39,12 +39,11 @@ pdfDocument = {
 	
 		body: [
 				
-					[
-												{
+				[
+																{
 	cellId: 'c4',
 	col:0,
 	row:0,
-			style: 'cell',
 		
 		
 	//	static colspan/rowspan
@@ -61,7 +60,8 @@ pdfDocument = {
   },
 
 											],
-					]
+		
+		]
 	}
 }
 ,

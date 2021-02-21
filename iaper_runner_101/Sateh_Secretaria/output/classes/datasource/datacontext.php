@@ -19,6 +19,7 @@ define( 'dsotLIST', 2 );	//	list of constants, array of values
 define( 'dsotCONDITION', 3 );
 define( 'dsotSQL', 4 ); 	// User-provided SQL expression.
 define( 'dsotNULL', 5 );	//	NULL in SQL sense
+define( 'dsotROWNO', 6 );	//	row_number in an SQL query. Currently only used in the initial update of reorderRows feature 
 
 class DsOperand {
 	public $type;
@@ -64,7 +65,7 @@ define( 'dsopMORE', '>' );
 define( 'dsopLESS', '<' );
 define( 'dsopEQUAL', '=' );
 define( 'dsopEMPTY', 'null' );
-define( 'dsopIN', 'in' );
+define( 'dsopIN', 'in' );	//not implemented yet
 define( 'dsopAND', 'and' );
 define( 'dsopOR', 'or' );
 define( 'dsopNOT', 'not' );
@@ -203,9 +204,17 @@ class DsCommand {
 
 	/**
 	 * Associative array of field values for Insert and Update operations
+	 * See $advValues
 	 */
 	public $values = array();
 
+	/**
+	 * @var Array of DsOperand
+	 * Advanced version of $values
+	 * Associative array of field values for Insert and Update operations
+	 * For each field $advValues[<field>] is used if not empty, otherwise $values[<field>] or nothing
+	 */
+	public $advValues = array();
 
 	/* Datasource-specific flags */
 
@@ -324,6 +333,19 @@ class DsCommand {
 		}
 		return $this->filter->findFieldValue( $field );
 	}
+
+	public function invertOrder() {
+		//	array is copied explicitly for ASP.NET conversion
+		$order = array();
+		foreach( $this->order as $o ) {
+			$newO = $o;
+			$newO["dir"] = $newO["dir"] == "DESC"
+				? "ASC"
+				: "DESC";
+			$order[] = $newO;
+		}
+		$this->order = $order;
+	}
 }
 
 
@@ -380,7 +402,7 @@ class DataCondition {
 
 	/**
 	 * @param String field name
-	 * @param Integer operation - either dsopSOME_IN_LIST or dsopALL_IN_LIST
+	 * @param Integer operation - dsopSOME_IN_LIST, or dsopALL_IN_LIST
 	 * @param Array array of values
 	 */
 	static function FieldHasList( $fieldname, $operation, $values ) {
@@ -389,6 +411,20 @@ class DataCondition {
 				new DsOperand( dsotLIST, $values )
 				),
 				$operation,
+				false
+			);
+	}
+
+	/**
+	 * @param String field name
+	 * @param Array array of values
+	 */
+	static function FieldInList( $fieldname, $values, $caseInsensitive = dsCASE_DEFAULT ) {
+		return new DsCondition( array(
+				new DsOperand( dsotFIELD, $fieldname ),
+				new DsOperand( dsotLIST, $values )
+				),
+				dsopIN,
 				false
 			);
 	}
@@ -479,8 +515,9 @@ class DataCondition {
  * Describres additional column that shall be added to the SQL
  * SELECT ..., <expression> AS <alias>
  *
- * expression is either $sql or $field with $modifier
- * if $sql is empty, $field should be used instead
+ * expression is either $sql or $field 
+ * only one of the two should be specified
+ * $modifier and $joinData should only be used with $field
  */
 class DsFieldData {
 	/**
@@ -492,6 +529,13 @@ class DsFieldData {
 	 *  field name  and modifier
 	 */
 	var $field;
+
+	/**
+	 * Should be used only together with $field
+	 * @var DsJoinData
+	 */
+	var $joinData;
+
 	/**
 	 * See DsOperand::modifier
 	 */
@@ -502,11 +546,12 @@ class DsFieldData {
 	 */
 	var $alias;
 
-	function __construct( $sql, $alias, $field, $modifier = 0 ) {
+	function __construct( $sql, $alias, $field, $modifier = 0, $joinData = null ) {
 		$this->sql = $sql;
 		$this->alias = $alias;
 		$this->field = $field;
 		$this->modifier = $modifier;
+		$this->joinData = $joinData;
 
 	}
 

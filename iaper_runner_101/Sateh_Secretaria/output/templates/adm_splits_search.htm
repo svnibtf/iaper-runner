@@ -1,0 +1,326 @@
+<!doctype html>
+
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel adm_splits search}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="6"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="6"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN idsplit_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_idsplit}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="idsplit{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="idsplit" data-fieldname="idsplit" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_idsplit}">
+		{$label adm_splits idsplit }	</label>
+	<div class="r-search-option">
+		{$searchtype_idsplit}
+	</div>
+	<div class="r-search-field">
+		{$idsplit_editcontrol}	</div>
+	<div class="r-search-field">
+		{$idsplit_editcontrol1}
+	</div>
+	
+</div>
+
+{END idsplit_fieldblock}
+											
+{BEGIN Nome_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Nome}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Nome{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="Nome" data-fieldname="Nome" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Nome}">
+		{$label adm_splits Nome }	</label>
+	<div class="r-search-option">
+		{$searchtype_Nome}
+	</div>
+	<div class="r-search-field">
+		{$Nome_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Nome_editcontrol1}
+	</div>
+	
+</div>
+
+{END Nome_fieldblock}
+											
+{BEGIN NroBanco_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_NroBanco}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="NroBanco{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="NroBanco" data-fieldname="NroBanco" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_NroBanco}">
+		{$label adm_splits NroBanco }	</label>
+	<div class="r-search-option">
+		{$searchtype_NroBanco}
+	</div>
+	<div class="r-search-field">
+		{$NroBanco_editcontrol}	</div>
+	<div class="r-search-field">
+		{$NroBanco_editcontrol1}
+	</div>
+	
+</div>
+
+{END NroBanco_fieldblock}
+											
+{BEGIN Agencia_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Agencia}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Agencia{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="Agencia" data-fieldname="Agencia" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Agencia}">
+		{$label adm_splits Agencia }	</label>
+	<div class="r-search-option">
+		{$searchtype_Agencia}
+	</div>
+	<div class="r-search-field">
+		{$Agencia_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Agencia_editcontrol1}
+	</div>
+	
+</div>
+
+{END Agencia_fieldblock}
+											
+{BEGIN Conta_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Conta}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Conta{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="Conta" data-fieldname="Conta" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Conta}">
+		{$label adm_splits Conta }	</label>
+	<div class="r-search-option">
+		{$searchtype_Conta}
+	</div>
+	<div class="r-search-field">
+		{$Conta_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Conta_editcontrol1}
+	</div>
+	
+</div>
+
+{END Conta_fieldblock}
+											
+{BEGIN CPF_CNPJ_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_CPF_CNPJ}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="CPF_CNPJ{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="CPF_CNPJ" data-fieldname="CPF_CNPJ" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_CPF_CNPJ}">
+		{$label adm_splits CPF_CNPJ }	</label>
+	<div class="r-search-option">
+		{$searchtype_CPF_CNPJ}
+	</div>
+	<div class="r-search-field">
+		{$CPF_CNPJ_editcontrol}	</div>
+	<div class="r-search-field">
+		{$CPF_CNPJ_editcontrol1}
+	</div>
+	
+</div>
+
+{END CPF_CNPJ_fieldblock}
+											
+{BEGIN Titulas_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Titulas}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Titulas{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="Titulas" data-fieldname="Titulas" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Titulas}">
+		{$label adm_splits Titulas }	</label>
+	<div class="r-search-option">
+		{$searchtype_Titulas}
+	</div>
+	<div class="r-search-field">
+		{$Titulas_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Titulas_editcontrol1}
+	</div>
+	
+</div>
+
+{END Titulas_fieldblock}
+											
+{BEGIN Porcentagem_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Porcentagem}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="Porcentagem{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="Porcentagem" data-fieldname="Porcentagem" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Porcentagem}">
+		{$label adm_splits Porcentagem }	</label>
+	<div class="r-search-option">
+		{$searchtype_Porcentagem}
+	</div>
+	<div class="r-search-field">
+		{$Porcentagem_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Porcentagem_editcontrol1}
+	</div>
+	
+</div>
+
+{END Porcentagem_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="search_search" data-itemid="search_search" {$item_search_search} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$searchbutton_attrs} >
+							Buscar			</a>
+</span>
+	 
+		<span data-itemtype="search_reset" data-itemid="search_reset" {$item_search_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$resetbutton_attrs} >
+							Limpar			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="search_back_list" data-itemid="search_back_list" {$item_search_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Voltar à Lista			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="search_cancel" data-itemid="search_cancel" {$item_search_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancela			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

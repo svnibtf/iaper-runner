@@ -105,7 +105,7 @@ class CrossTableReport
 
 		$this->xFName = $this->getGroupFieldByParam( "x", $params["x"] );
 		$this->yFName = $this->getGroupFieldByParam( "y", $params["y"], $this->xFName );
-		$this->dataField = $params["data"];
+		$this->dataField = $this->getDataFieldByParam( $params["data"] );
 
 		$this->dataFieldSettings = $params["totals"][ $this->dataField ];
 		$this->dataGroupFunction = $this->getDataGroupFunction( $params["operation"] );
@@ -175,9 +175,7 @@ class CrossTableReport
 			$newColSummary[] =& $this->col_summary["data"][$i];
 		}
 		$this->col_summary["data"] =& $newColSummary;
-		//	sort y groups
-//		$group_sort_y = $group_y;
-//		SortForCrosstable($sort_y);
+
 
 		$this->rowinfo = $this->getBasicRowsData( $group_y, $group_x, $sort_indices, $arrdata, $dataClass );
 
@@ -192,11 +190,36 @@ class CrossTableReport
 			$this->group_header["data"][ $key_x ]["gr_x_class"] = $headerClass;
 		}
 
+		$arravgsum = $this->sortAvgTotalsData( $arravgsum, $sort_indices );
+		$arravgcount = $this->sortAvgTotalsData( $arravgcount, $sort_indices );
+		
 		$this->setSummariesData( $arravgsum, $arravgcount, $avgsumx, $avgcountx );
 
 		$this->updateRecordsDisplayedFields();
 	}
-
+	
+	/**
+	 * Update x axis indices in avg totals data
+	 * @param Array data
+	 * @param Array sort_indices
+	 * @return Array
+	 */
+	protected function sortAvgTotalsData( $data, $sort_x ) {
+		$sorted = array();
+		
+		foreach( $data as $key_y => $value_y ) {
+			$sorted[ $key_y ] = array();
+			
+			foreach( $sort_x as $display_x => $key_x ) {
+				if( array_key_exists( $key_x, $value_y ) ) {
+					$sorted[ $key_y ][ $display_x ] = $value_y[ $key_x ];
+				}
+			}
+		}
+		
+		return $sorted;
+	}
+	
 	public function groupSort( $i1, $i2 ) {
 		$a = $this->sort_groups[ $i1 ];
 		$b = $this->sort_groups[ $i2 ];
@@ -220,7 +243,6 @@ class CrossTableReport
 
 		foreach( $group_y as $key_y => $value_y )
 		{
-
 			$crossRowsData[ $key_y ]["row_summary"] = $space;
 			$crossRowsData[ $key_y ]["group_y"] = $this->pageObject->formatGroupValue( $this->yFName, $this->yIntervalType, $value_y );
 			$crossRowsData[ $key_y ]["id_row_summary"] = "total_y_".$key_y;
@@ -389,34 +411,26 @@ class CrossTableReport
 
 	/**
 	 * Get view value basing on 'view as'
+	 * @param String|Number value
+	 * @return String|Number
 	 */
-	function getViewValue( $value, $useTimeFormat = true )
-	{
-		$strViewFormat = $this->pSet->getViewFormat( $this->dataField );
-		if( $strViewFormat == FORMAT_TIME && is_numeric($value) )
-		{
-			$d = intval($value / 86400);
-			$h = intval(($value % 86400) / 3600);
-			$m = intval((($value % 86400) % 3600) / 60);
-			$s = (($value % 86400) % 3600) % 60;
+	function getViewValue( $value ) {		
+		if( $this->pSet->getViewFormat( $this->dataField ) == FORMAT_TIME && is_numeric( $value ) ) {			
+			if( $this->dataGroupFunction == "avg" )
+				$value = round( $value, 0 );			
 
-			$value = $d > 0 ? $d . 'd ' : '';
-
-			if( $useTimeFormat )
-				$value .= str_format_time( array(0, 0, 0, $h, $m, $s) );
-			else
-				$value .= date( "H:i:s", strtotime($h.":".$m.":".$s) );
-
-			if( $this->pdfJsonMode() )
-				$value = "'" . jsreplace( $value ) . "'";
-		}
-		else
-		{
-			$controlData = array( $this->dataField => $value );
-			$value = $this->showDBValue( $this->dataField, $controlData );
-		}
-
-		return $value;
+			include_once getabspath('classes/controls/ViewTimeField.php');		
+			return ViewTimeField::getFormattedTotals( 
+				$this->dataField, 
+				$value, 
+				$this->pSet, 
+				$this->pdfJsonMode(), 
+				$this->dataGroupFunction == "sum" 
+			);
+		} 
+		
+		$controlData = array( $this->dataField => $value );
+		return $this->showDBValue( $this->dataField, $controlData );
 	}
 
 	/**
@@ -441,13 +455,13 @@ class CrossTableReport
 
 			if( $data["row_summary"] != $space )
 			{
-				$this->rowinfo[ $key_y ]["row_summary"] = $this->getViewValue( $data["row_summary"], false);
+				$this->rowinfo[ $key_y ]["row_summary"] = $this->getViewValue( $data["row_summary"] );
 			}
 		}
 
 		if( $this->total_summary != $space )
 		{
-			$this->total_summary = $this->getViewValue($this->total_summary, false);
+			$this->total_summary = $this->getViewValue( $this->total_summary );
 		}
 
 		foreach($this->col_summary["data"] as $key => $summaryData)
@@ -455,7 +469,7 @@ class CrossTableReport
 			if( $summaryData["col_summary"] == $space )
 				continue;
 
-			$this->col_summary["data"][ $key ]["col_summary"] = $this->getViewValue( $summaryData["col_summary"], false );
+			$this->col_summary["data"][ $key ]["col_summary"] = $this->getViewValue( $summaryData["col_summary"] );
 		}
 	}
 
@@ -532,6 +546,18 @@ class CrossTableReport
 		return 0;
 	}
 
+	protected function getDataFieldByParam( $paramField ) 
+	{
+		if( $this->fieldsTotalsData[ $paramField ] ) {
+			return $paramField;
+		}
+		$dataFields = array_keys( $this->fieldsTotalsData );
+		if( count( $dataFields ) ) {
+			return $dataFields[0];
+		}
+		return "";
+	}
+
 	protected function getGroupFieldByParam( $axis, $paramField, $otherField = "" )
 	{
 		$firstField = "";
@@ -575,7 +601,8 @@ class CrossTableReport
 			$dc->totals[] = array(
 				"field" => $this->dataField,
 				"alias" => "avg_sum",
-				"total" => "sum"
+				"total" => "sum",
+				"timeToSec" => $this->pSet->getViewFormat( $this->dataField ) == FORMAT_TIME || IsTimeType($ftype)
 			);
 
 			$dc->totals[] = array(

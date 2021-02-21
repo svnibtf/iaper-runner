@@ -22,7 +22,7 @@ if(@$_SERVER["REQUEST_URI"])
 }
 
 //	isolate sessions for projects running on the same site
-@session_name( "etZBmhUArm4TgT6uYfa1" );
+@session_name( "petZBmhUArm4TgT6uYfa1" );
 
 // Setting the cache limiter to '' will turn off automatic sending of cache headers entirely
 @session_cache_limiter("");
@@ -30,7 +30,7 @@ if(@$_SERVER["REQUEST_URI"])
 
 
 //E_STRICT has become a part of E_ALL since php 5.4 only
-error_reporting( (E_ALL | E_STRICT) & ~E_STRICT & ~E_NOTICE & ~E_DEPRECATED);
+error_reporting( (E_ALL | E_STRICT) & ~E_STRICT & ~E_NOTICE & ~E_DEPRECATED & ~E_WARNING);
 
 /// include php specific code
 //include("timing.php");
@@ -50,7 +50,7 @@ $projectPath = '';
 header("Content-Type: text/html; charset=".$cCharset);
 
 // json support
-$useUTF8 = true;
+$useUTF8 = "utf-8" == "utf-8";
 
 //	JSON_PARTIAL_OUTPUT_ON_ERROR flag was introduced in PHP 5.5
 if( !function_exists('json_encode') || !$useUTF8 || version_compare( PHP_VERSION ,"5.5.0") < 0 )

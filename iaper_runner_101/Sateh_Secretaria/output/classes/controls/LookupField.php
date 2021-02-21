@@ -77,8 +77,7 @@ class LookupField extends EditControl
 	protected $searchByDisplayedFieldIsAllowed = null;
 
 	protected $lookupDataSource;
-
-
+	
 	function __construct($field, $pageObject, $id, $connection)
 	{
 		parent::__construct($field, $pageObject, $id, $connection);
@@ -97,7 +96,7 @@ class LookupField extends EditControl
 		$this->lookupTable = $this->pageObject->pSetEdit->getLookupTable($this->field);
 		$this->lookupType = $this->pageObject->pSetEdit->getLookupType($this->field);
 		$this->lookupDataSource = getLookupDataSource( $this->field, $this->pageObject->pSetEdit );
-
+		
 		if($this->lookupType == LT_QUERY) {
 			$this->lookupPSet = new ProjectSettings($this->lookupTable);
 		}
@@ -175,6 +174,7 @@ class LookupField extends EditControl
 	{
 		parent::buildControl($value, $mode, $fieldNum, $validate, $additionalCtrlParams, $data);
 
+		
 		$this->alt = ($mode == MODE_INLINE_EDIT || $mode == MODE_INLINE_ADD) && $this->is508 ? ' alt="'.runner_htmlspecialchars($this->strLabel).'" ' : "";
 
 		$suffix = "_".GoodFieldName($this->field)."_".$this->id;
@@ -216,7 +216,10 @@ class LookupField extends EditControl
 		}
 		else
 		{
-			// build a table-based lookup
+			if( !$this->lookupDataSource ) {
+				return;
+			}
+				// build a table-based lookup
 			if( $this->ciphererLookup )
 				$this->isDisplayFieldEncrypted = $this->ciphererLookup->isFieldPHPEncrypted( $this->displayFieldName );
 
@@ -993,24 +996,6 @@ class LookupField extends EditControl
 	}
 
 	/**
-	 * Get an extra HAVING clause condtion
-	 * that helps to retrieve a field's search suggest value
-	 * @param String searchOpt
-	 * @param String searchFor
-	 * @param Boolean isAggregateField (optional)
-	 * @return String
-	 */
-	public function getSuggestHaving($searchOpt, $searchFor, $isAggregateField = true)
-	{
-		if( !$this->isSearchByDispalyedFieldAllowed() )
-			return parent::getSuggestHaving($searchOpt, $searchFor, $isAggregateField);
-
-		$this->initializeLookupTableAliases();
-
-		return $isAggregateField ? $this->lookupTableAliases[ $this->id ].".".$this->linkFieldAliases[ $this->id ]." is not NULL" : "";
-	}
-
-	/**
 	 * Get the substitute columns list for the SELECT Clause and the FORM clause part
 	 * that will be joined to the basic page's FROM clause
 	 * @param String searchFor
@@ -1389,23 +1374,45 @@ class LookupField extends EditControl
 		return null;
 	}
 
+	
 	public function singleValueCondition( $searchFor, $strSearchOption, $searchFor2 = "" ) {
 		$cond = parent::getBasicFieldCondition( $searchFor, $strSearchOption, $searchFor2 );
+		
+		if( $this->displayFieldSearch( $strSearchOption ) ) {
+			$cond->operands[0]->joinData = $this->createJoinData();
+		}
+		return $cond;
+	}
 
-		if( $strSearchOption !== CONTAINS && $strSearchOption !== STARTS_WITH ) {
+	/**
+	 * Returns true when searching by display field makes sense.
+	 * It only takes in account field Edit settings.
+	 * Database and other limitations are handled by the datasource
+	 * @return Boolean
+	 */
+	protected function displayFieldSearch( $searchOption ) 
+	{
+		if( $searchOption !== CONTAINS && $searchOption !== STARTS_WITH ) {
 			//	basic search, no display field substitution
-			return $cond;
+			return false;
 		}
 		if( $this->linkAndDisplaySame || $this->lookupType == LT_LISTOFVALUES ) {
 			//	no lookup display field
-			return $cond;
+			return false;
 		}
 
 		if( $this->multiselect && $this->pageObject->pSetEdit->multiSelectLookupEdit( $this->field )) {
 			// multiselect everywhere
-			return $cond;
+			return false;
 		}
+		return true;
 
+	}
+
+	/**
+	 * @return DsJoinData
+	 */
+	protected function createJoinData() {
 		$jd = new DsJoinData;
 		$jd->dataSource = $this->lookupDataSource;
 		$jd->linkField = $this->linkFieldName;
@@ -1413,12 +1420,11 @@ class LookupField extends EditControl
 			$jd->displayExpression = $this->displayFieldName;
 		else
 			$jd->displayField = $this->displayFieldName;
-		//	assume AJAX and list page lookups have rather many values
+		
+		//	we assume here that 'AJAX' and 'List page' lookups are choosen when the lookup table is rather long
 		$jd->longList = ( $this->LCType == LCT_AJAX || $this->LCType == LCT_LIST );
 		$jd->displayAlias = generateAlias();
-
-		$cond->operands[0]->joinData = $jd;
-		return $cond;
+		return $jd;
 	}
 
 	/**
@@ -1482,6 +1488,13 @@ class LookupField extends EditControl
 		if( $orderField ) {
 			$dir = $pSet->isLookupDesc( $field ) ? 'DESC' : 'ASC';
 			$dc->order[] = array( "column" => $orderField, "dir" => $dir );
+		} else {
+			$lookupType = $pSet->getLookupType( $field );
+			if( $lookupType == LT_QUERY ) {
+				require_once( getabspath('classes/orderclause.php') );
+				$lookupTable = $pSet->getLookupTable( $field );
+				$dc->order = OrderClause::originalOrderFields( new ProjectSettings( $lookupTable ) );
+			}
 		}
 
 		//	custom display field
@@ -1578,5 +1591,25 @@ class LookupField extends EditControl
 		return DataCondition::_Or( $conditions );
 	}
 
+	public function getSuggestCommand( $searchFor, $searchOpt, $numberOfSuggests ) 
+	{
+		$dc = parent::getSuggestCommand( $searchFor, $searchOpt, $numberOfSuggests );
+	
+		//	add extra field and replace totals
+		if( $this->displayFieldSearch( $searchOpt ) ) {
+			
+			$displayAlias = generateAlias();
+			$dc->extraColumns[] = new DsFieldData( "", $displayAlias, $this->field, 0, $this->createJoinData() );
+
+			$dc->totals = array( 
+				array(
+					"field" => $displayAlias,
+					"total" => "distinct"
+				) 
+			);
+		}
+
+		return $dc;
+	}
 }
 ?>

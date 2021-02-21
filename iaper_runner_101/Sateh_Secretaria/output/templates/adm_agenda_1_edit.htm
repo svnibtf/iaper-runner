@@ -1,5 +1,5 @@
-<!doctype html><p align=center><font size=+1 color=red>This website was created by evaluation version of PHPRunner Trial.</font></p>
-<p align=center><font size=+1 color=red>This warning message will not appear on website created by a paid-for version of PHPRunner Trial.</font></p>
+<!doctype html>
+
 <html  {$html_attrs}>
 	<head>
 				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -80,7 +80,11 @@
 
  
 	 
-												<table 
+												{BEGIN mastertable_block}
+<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
+	{$showmasterfile}
+</div>
+{END mastertable_block}											<table 
 	data-body-align="center"
 	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
 	class="r-edit-form" cellpadding="0" cellspacing="0" 
@@ -110,10 +114,8 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_age_Paciente}  r-vertical-field" 
-	data-fieldname="age_Paciente" 
 	data-signal-error-for="age_Paciente{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="age_Paciente" >
-
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="age_Paciente" data-fieldname="age_Paciente" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_age_Paciente}">
 		{BEGIN age_Paciente_label}{$label adm_agenda_1 age_Paciente }{END age_Paciente_label}
@@ -133,10 +135,8 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_age_config_id}  r-vertical-field" 
-	data-fieldname="age_config_id" 
 	data-signal-error-for="age_config_id{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="age_config_id" >
-
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="age_config_id" data-fieldname="age_config_id" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_age_config_id}">
 		{BEGIN age_config_id_label}{$label adm_agenda_1 age_config_id }{END age_config_id_label}
@@ -156,10 +156,8 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_age_data_att}  r-vertical-field" 
-	data-fieldname="age_data_att" 
 	data-signal-error-for="age_data_att{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="age_data_att" >
-
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="age_data_att" data-fieldname="age_data_att" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_age_data_att}">
 		{BEGIN age_data_att_label}{$label adm_agenda_1 age_data_att }{END age_data_att_label}
@@ -179,10 +177,8 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_age_time_att}  r-vertical-field" 
-	data-fieldname="age_time_att" 
 	data-signal-error-for="age_time_att{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="age_time_att" >
-
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="age_time_att" data-fieldname="age_time_att" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_age_time_att}">
 		{BEGIN age_time_att_label}{$label adm_agenda_1 age_time_att }{END age_time_att_label}
@@ -202,10 +198,8 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_age_tipo_pagamento}  r-vertical-field" 
-	data-fieldname="age_tipo_pagamento" 
 	data-signal-error-for="age_tipo_pagamento{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="age_tipo_pagamento" >
-
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="age_tipo_pagamento" data-fieldname="age_tipo_pagamento" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_age_tipo_pagamento}">
 		{BEGIN age_tipo_pagamento_label}{$label adm_agenda_1 age_tipo_pagamento }{END age_tipo_pagamento_label}
@@ -225,10 +219,8 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_age_anotacoes}  r-vertical-field" 
-	data-fieldname="age_anotacoes" 
 	data-signal-error-for="age_anotacoes{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="age_anotacoes" >
-
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="age_anotacoes" data-fieldname="age_anotacoes" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_age_anotacoes}">
 		{BEGIN age_anotacoes_label}{$label adm_agenda_1 age_anotacoes }{END age_anotacoes_label}
@@ -248,10 +240,8 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_age_Link}  r-vertical-field" 
-	data-fieldname="age_Link" 
 	data-signal-error-for="age_Link{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="age_Link" >
-
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="age_Link" data-fieldname="age_Link" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_age_Link}">
 		{BEGIN age_Link_label}{$label adm_agenda_1 age_Link }{END age_Link_label}
@@ -266,6 +256,95 @@
 
 
 {END age_Link_fieldblock}
+										</td>
+			{END cellblock_grid_c3}
+										</tr>
+										</tbody></table>
+				
+{BEGIN details_adm_pagamento_avulso}
+<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" class="bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+							{$caption adm_pagamento_avulso }				
+							<span>
+					{$detailslButtons_adm_pagamento_avulso}
+																				</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_adm_pagamento_avulso}
+		</div>
+	</div>
+</div>
+{END details_adm_pagamento_avulso}
+											<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN age_Valor_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_age_Valor}  r-vertical-field" 
+	data-signal-error-for="age_Valor{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="age_Valor" data-fieldname="age_Valor" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_age_Valor}">
+		{BEGIN age_Valor_label}{$label adm_agenda_1 age_Valor }{END age_Valor_label}
+	</label>
+	<div class="r-edit-field">
+		{$age_Valor_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="age_Valor">
+		<div class="text-muted" >
+		{$tooltip adm_agenda_1 age_Valor }		</div>
+	</div>
+</div>
+
+
+{END age_Valor_fieldblock}
+											
+{BEGIN age_Status_Recebimento_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_age_Status_Recebimento}  r-vertical-field" 
+	data-signal-error-for="age_Status_Recebimento{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="age_Status_Recebimento" data-fieldname="age_Status_Recebimento" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_age_Status_Recebimento}">
+		{BEGIN age_Status_Recebimento_label}{$label adm_agenda_1 age_Status_Recebimento }{END age_Status_Recebimento_label}
+	</label>
+	<div class="r-edit-field">
+		{$age_Status_Recebimento_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="age_Status_Recebimento">
+		<div class="text-muted" >
+		{$tooltip adm_agenda_1 age_Status_Recebimento }		</div>
+	</div>
+</div>
+
+
+{END age_Status_Recebimento_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}
@@ -318,8 +397,8 @@
 		<span data-itemtype="hamburger" data-itemid="hamburger" {$item_hamburger} data-pageid="{$pageid}" data-small data-button-item>
 	<span class="dropdown dropup">
 		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
-							<span class="glyphicon glyphicon-menu-hamburger"></span>
-									<span class="caret"></span>
+										<span class="glyphicon glyphicon-menu-hamburger"></span>
+												<span class="caret"></span>
 		</button>
 		<ul class="dropdown-menu">
 								<li data-itemtype="edit_reset" data-itemid="edit_reset" {$item_edit_reset} data-pageid="{$pageid}" data-small >

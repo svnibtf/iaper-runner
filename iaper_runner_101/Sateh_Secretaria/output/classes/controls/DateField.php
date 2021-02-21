@@ -46,7 +46,9 @@ class DateField extends DateTimeControl
 		if( $this->pageObject->isBootstrap() )
 		{
 			//	search panel control
-			if( ( $this->pageObject->pageType == PAGE_LIST || $this->pageObject->pageType == PAGE_CHART || $this->pageObject->pageType == PAGE_REPORT) || $this->pageObject->pageType == PAGE_SEARCH && $this->pageObject->mode == SEARCH_LOAD_CONTROL)
+			if( !$this->forSpreadsheetGrid 
+				&& ( ( $this->pageObject->pageType == PAGE_LIST || $this->pageObject->pageType == PAGE_CHART || $this->pageObject->pageType == PAGE_REPORT) 
+				|| $this->pageObject->pageType == PAGE_SEARCH && $this->pageObject->mode == SEARCH_LOAD_CONTROL) )
 			{
 				if( $dateEditType == EDIT_DATE_DD )
 					return EDIT_DATE_SIMPLE;

@@ -75,7 +75,70 @@ class HttpRequest {
 		}
 		return $this->getUrl();
 	}
+	
+	/**
+	 *
+	 */
+	public function prepareRequestBody() {
+		if( $this->body !== null ) {
+			return $this->body;
+		}
+		if( !$this->postPayload ) {
+			return "";
+		}
+		$contentType = $this->headers["Content-Type"];
+		$cTypeParts = explode( ";", $contentType );
+		$type = "";
+		if( count( $cTypeParts ) > 0 ) {
+			$type = strtolower( trim( $cTypeParts[0] ) );
+		}
+		if( !$type || $type == "application/x-www-form-urlencoded" ) {
+			if( !$type )
+				$this->headers["Content-Type"] = "application/x-www-form-urlencoded";
+			return prepareUrlQuery( $this->postPayload );
+		}
+		if( $type == "application/json" ) {
+			return my_json_encode( $this->postPayload );
+		}
+		if( $type == "multipart/form-data" ) {
+			//	ignore specified boundary and generate a new one
+			$boundary = generatePassword( 40 );
+			$this->headers["Content-Type"] = $type . ";boundary=" . $boundary;
+			$bodyParts = array();
+			foreach( $this->postPayload as $name => $value ) {
+				$bodyParts[] = "--" . $boundary . "\r\nContent-disposition: form-data; name=\"" . $name . "\"\r\n\r\n". $value . "\r\n";
+			}
+			$bodyParts[] = "--" . $boundary . "--\r\n";
+			return implode( "", $bodyParts );
+		}
+		return "";
+	}
+	
+	
+	/**
+	 * @return Array( 
+	 *  	header => string
+	 *  	error? => string
+	 *  	content? => string
+	 *  	responseCode ? => number )
+	 */
+	public function run() {
+		$url = prepareUrl( $this->url, $this->urlParams );
+		
+		$body = $this->prepareRequestBody();
+		$bodyLength = strlen_bin( $body );
+		if( $bodyLength ) {
+			$this->headers["Content-Length"] = $bodyLength;
+		}
+		
+		$ret = runner_http_request( $this->url, $body, $this->method, $this->headers );
 
+		if( $ret["responseCode"] < 200 || $ret["responseCode"] >= 300 ) {
+			$ret["error"] = true;
+		}
+		
+		return $ret;		
+	}
 }
 
 ?>

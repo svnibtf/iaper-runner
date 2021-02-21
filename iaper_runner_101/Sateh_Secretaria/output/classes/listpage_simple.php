@@ -265,7 +265,7 @@ class ListPage_Simple extends ListPage
 		
 		for($i=0; $i<count($allSearchFields); $i++)
 		{
-			if( !$this->matchWithDetailKeys($allSearchFields[$i]) )
+			if( !$this->detailsKeyField( $allSearchFields[$i] ) )
 				$panelSearchFields[] = $allSearchFields[$i];
 		}
 				

@@ -188,7 +188,8 @@ class RestConnection {
 			echo "</pre>";
 		}
 		$url = prepareUrl( $request->url, $request->urlParams );
-		$body = $this->prepareRequestBody( $request );
+		//$body = $this->prepareRequestBody( $request );
+		$body = $request->prepareRequestBody();
 		$bodyLength = strlen_bin( $body );
 		if( $bodyLength ) {
 			$request->headers["Content-Length"] = $bodyLength;
@@ -203,41 +204,6 @@ class RestConnection {
 			return false;
 		}
 		return $ret;
-	}
-
-	public function prepareRequestBody( $request ) {
-		if( $request->body !== null ) {
-			return $request->body;
-		}
-		if( !$request->postPayload ) {
-			return "";
-		}
-		$contentType = $request->headers["Content-Type"];
-		$cTypeParts = explode( ";", $contentType );
-		$type = "";
-		if( count( $cTypeParts ) > 0 ) {
-			$type = strtolower( trim( $cTypeParts[0] ) );
-		}
-		if( !$type || $type == "application/x-www-form-urlencoded" ) {
-			if( !$type )
-				$request->headers["Content-Type"] = "application/x-www-form-urlencoded";
-			return prepareUrlQuery( $request->postPayload );
-		}
-		if( $type == "application/json" ) {
-			return my_json_encode( $request->postPayload );
-		}
-		if( $type == "multipart/form-data" ) {
-			//	ignore specified boundary and generate a new one
-			$boundary = generatePassword( 40 );
-			$request->headers["Content-Type"] = $type . ";boundary=" . $boundary;
-			$bodyParts = array();
-			foreach( $request->postPayload as $name => $value ) {
-				$bodyParts[] = "--" . $boundary . "\r\nContent-disposition: form-data; name=\"" . $name . "\"\r\n\r\n". $value . "\r\n";
-			}
-			$bodyParts[] = "--" . $boundary . "--\r\n";
-			return implode( "", $bodyParts );
-		}
-		return "";
 	}
 
 	/**

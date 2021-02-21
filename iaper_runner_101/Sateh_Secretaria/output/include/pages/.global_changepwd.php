@@ -39,7 +39,8 @@
 'changepwd_back' => array( 'changepwd_back' ),
 'changepwd_header' => array( 'changepwd_header' ) ),
 'cellMaps' => array(  ) ),
-'page' => array( 'labeledButtons' => array( 'update_records' => array(  ),
+'page' => array( 'verticalBar' => false,
+'labeledButtons' => array( 'update_records' => array(  ),
 'print_pages' => array(  ),
 'register_activate_message' => array(  ),
 'details_found' => array(  ) ),
@@ -147,5 +148,5 @@ array( 'cell' => 'c6' ) ),
 'changepwd_back' => array( 'type' => 'changepwd_back' ),
 'changepwd_header' => array( 'type' => 'changepwd_header' ) ),
 'dbProps' => array(  ),
-'version' => 4 );
+'version' => 7 );
 		?>

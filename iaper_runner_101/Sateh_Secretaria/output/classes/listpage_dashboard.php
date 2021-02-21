@@ -105,21 +105,12 @@ class ListPage_Dashboard extends ListPage_Embed
 		//	do nothing
 	}
 	
-	public function getSubsetDataCommand() {
+	public function getSubsetDataCommand( $ignoreFilterField = "" ) {
 		$dc = parent::getSubsetDataCommand();
 	
 		if( $this->showNoData ) {
 			$dc->filter = DataCondition::_False();
-			return $dc;
 		}
-		
-		if( $this->mode == LIST_DASHBOARD && $this->hasMainDashMapElem() && $this->mapRefresh ) {
-			$dc->filter = DataCondition::_And( array(
-				$dc->filter,
-				$this->getMapCondition()
-			));
-		}
-		
 		return $dc;
 	}
 
@@ -376,5 +367,22 @@ class ListPage_Dashboard extends ListPage_Embed
 		$this->pageData["tabId"] = $this->getCurrentTabId();
 	}
 	*/
+	
+	public function setGoogleMapsParams( $params ) {
+		parent::setGoogleMapsParams( $params );
+		$this->googleMapCfg['isUseMainMaps'] = false;
+	}
+	
+	function addCenterLink(&$value, $fName) {
+		return $value;
+	}
+
+	function inDashboardMode() {
+		return true;
+	}
+	function dependsOnDashMap() {
+		return $this->hasMainDashMapElem() && $this->mapRefresh;
+	}
+
 }
 ?>

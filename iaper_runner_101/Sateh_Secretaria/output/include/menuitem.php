@@ -650,8 +650,9 @@ class MenuItem
 	public function getMenuItemAttributes( $showSubmenu = true )
 	{
 		$attrs = array();
-		if( $this->isBootstrap() && $this->isShowAsGroup() && $showSubmenu )
+		if( $this->isShowAsGroup() && $showSubmenu )
 		{
+			//$attrs["class"] = "r-menugroup";
 			if( $this->isTreelike() )
 			{
 				$attrs["data-toggle"] = "menu-collapse";
@@ -659,7 +660,7 @@ class MenuItem
 			}
 			else
 			{
-				$attrs["class"] = "dropdown-toggle";
+				//$attrs["class"] .= " dropdown-toggle";
 				$attrs["data-toggle"] = "nested-dropdown";
 				$attrs["aria-haspopup"] = "true";
 				$attrs["aria-expanded"] = "false";
@@ -727,6 +728,8 @@ class MenuItem
 			$arrowIcon = "glyphicon-triangle-left";
 		if( $this->isBootstrap() && $this->isShowAsGroup() && !$this->isWelcome() )
 		{
+			$xt->assign("item".$this->id."_expand_icon", true );
+			/*
 			if( !$this->isTreelike() )
 			{
 				if( $showSubmenu )
@@ -738,6 +741,7 @@ class MenuItem
 			{
 					$title = '<span class="menu-triangle glyphicon '.$arrowIcon.'"></span> ' . $title;
 			}
+			*/
 		}
 		$icon = $this->getIconHTML();
 		if( $icon ) {

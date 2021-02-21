@@ -116,6 +116,17 @@ class ConnectionManager_Base
 	}
 
 	/**
+	 * Get the default db connection id
+	 * @return String
+	 */
+	public function getDefaultConnId()
+	{
+		return "iaperdbatrobb0254publiccloudco";
+	}
+
+
+
+	/**
 	 * Get the users table db connection
 	 * @return Connection
 	 */
@@ -164,18 +175,35 @@ class ConnectionManager_Base
 	 */
 	public function getForSavedSearches()
 	{
-		return $this->byId( "iaperdbatrobb0254publiccloudco" );
+		return $this->byId( $this->getSavedSearchesConnId() );
 	}
+	
+	/**
+	 * Get the saved searches table db connection
+	 * @return Connection
+	 */
+	public function getSavedSearchesConnId()
+	{
+		return "iaperdbatrobb0254publiccloudco";
+	}	
 
 	/**
 	 * Get the webreports tables db connection
 	 * @return Connection
 	 */
-	public function getForWebReports()
+	public function getForWebReports() 
 	{
-		return $this->getDefault();
+		return $this->byId( $this->getSavedSearchesConnId() );
 	}
 
+	/**
+	 * Get the webreports tables db connection id
+	 * @return String
+	 */
+	public function getWebReportsConnId() {
+		return "iaperdbatrobb0254publiccloudco";
+	}	
+	
 	/**
 	 * @param String connId
 	 * @return Connection
@@ -216,6 +244,15 @@ class ConnectionManager_Base
 		$connectionsIds["Fluxo de Recebimentos"] = "iaperdbatrobb0254publiccloudco";
 		$connectionsIds["DashBoard"] = "iaperdbatrobb0254publiccloudco";
 		$connectionsIds["adm_agenda_1"] = "iaperdbatrobb0254publiccloudco";
+		$connectionsIds["adm_pacientes_documentos"] = "iaperdbatrobb0254publiccloudco";
+		$connectionsIds["adm_tipo_documentos"] = "iaperdbatrobb0254publiccloudco";
+		$connectionsIds["adm_pagamento_avulso"] = "iaperdbatrobb0254publiccloudco";
+		$connectionsIds["adm_campos_adicionais"] = "iaperdbatrobb0254publiccloudco";
+		$connectionsIds["adm_campos_paciente"] = "iaperdbatrobb0254publiccloudco";
+		$connectionsIds["adm_splits"] = "iaperdbatrobb0254publiccloudco";
+		$connectionsIds["adm_eventos"] = "iaperdbatrobb0254publiccloudco";
+		$connectionsIds["adm_lista_variavel"] = "iaperdbatrobb0254publiccloudco";
+		$connectionsIds["adm_inscricoes"] = "iaperdbatrobb0254publiccloudco";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

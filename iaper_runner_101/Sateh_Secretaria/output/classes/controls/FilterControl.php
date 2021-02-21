@@ -413,7 +413,7 @@ class FilterControl
 		{
 			$showValue = $this->getControlCaption( $value );
 			$delButtonHtml = $this->getDelButtonHtml($this->gfName, $this->id, $value);
-			$filterControl = $delButtonHtml.'<span dir="LTR">'.$showValue.'</span>';
+			$filterControl = '<span>'.$delButtonHtml.$showValue.'</span>';
 			$parentFiltersData = $this->getParentFiltersDataForFilteredBlock($value);
 			$classes = 'filter-ready-value'.( $this->multiSelect == FM_ON_DEMAND ? ' ondemand' : '' );
 			$filterCtrlBlocks[] = $this->getFilterBlockStructure($filterControl, $classes, $value, $parentFiltersData);
@@ -475,25 +475,27 @@ class FilterControl
 						
 			$checkBox = '<input type="checkbox" '.$checkedAttr.' name="f[]" value="'.$encodeDataValue.'" '
 				.$extraDataAttrs.' class="multifilter-checkbox filter_'.$this->gfName.'_'.$this->id.'" '.$style.'>';	
-			$filterControl.= $checkBox.'&nbsp;';
 		}
 				
+		$href = "javascript:void(0)";
 		if($this->multiSelect != FM_ALWAYS) 
 		{
 			$href = GetTableLink( GetTableURL($this->tName), $pageType, 'f=('.runner_htmlspecialchars( rawurlencode( $this->fName ) ).
-				$separator.$encodeDataValue.')' );
-				
-			$label = '<a href="'.$href.'" '.$dataValueAttr.' '.$extraDataAttrs.' class="'.$this->gfName.'-filter-value">'.$showValue.'</a>';
+			$separator.$encodeDataValue.')' );
+			$label = $checkBox . ' ' .$showValue;
 		} 
 		else
 		{
-			$label = '<span>'.$showValue.'</span>';
+			$label = $checkBox . ' <span>'.$showValue.'</span>';
 		}
 			
 		if($this->useTotals && $totalValue != "")
-			$label .= '<span>&nbsp;('.$totalValue.')</span>';
+			$label .= ' <span dir="LTR">('.$totalValue.')</span>';
+
+		$label = '<a href="'.$href.'" '.$dataValueAttr.' '.$extraDataAttrs.' class="'.$this->gfName.'-filter-value">' . $label . "</a>";
 		
-		$filterControl.= '<span dir="LTR">'.$label.'</span>';
+		$filterControl.= $label;
+//		$filterControl.= '<span>'.$label.'</span>';
 		
 		return $filterControl;		
 	}

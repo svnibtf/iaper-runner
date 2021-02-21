@@ -39,12 +39,11 @@ pdfDocument = {
 	
 		body: [
 				
-					[
-												{
+				[
+																{
 	cellId: 'c1',
 	col:0,
 	row:0,
-			style: 'cell',
 		
 		
 	//	static colspan/rowspan
@@ -63,7 +62,8 @@ pdfDocument = {
   },
 
 											],
-					]
+		
+		]
 	}
 }
 ,
@@ -97,14 +97,13 @@ pdfDocument = {
 	
 		body: [
 				
-					{BEGIN row_grid_0}
+				{BEGIN row_grid_0}
 				[
-												{BEGIN cellblock_grid_c3}
+																{BEGIN cellblock_grid_c3}
 {
 	cellId: 'c3',
 	col:0,
 	row:0,
-			style: 'cell',
 		
 		
 	//	dynamic colspan/rowspan
@@ -117,97 +116,97 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_search_field}","text":{$usu_id_pdfvalue}},
+			{"text":{$usu_id_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field1}","text":{$nome_pdfvalue}},
+			{"text":{$nome_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field2}","text":{$sobrenome_pdfvalue}},
+			{"text":{$sobrenome_pdfvalue},"hidden":"{$item_hide_integrated_search_field2}"},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field3}","text":{$senha_pdfvalue}},
+			{"text":{$senha_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field4}","text":{$email_pdfvalue}},
+			{"text":{$email_pdfvalue},"hidden":"{$item_hide_integrated_search_field4}"},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field5}","text":{$email_validado_pdfvalue}},
+			{"text":{$email_validado_pdfvalue},"hidden":"{$item_hide_integrated_search_field5}"},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field6}","text":{$permissao_pdfvalue}},
+			{"text":{$permissao_pdfvalue},"hidden":"{$item_hide_integrated_search_field6}"},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field7}","text":{$tipo_usuario_pdfvalue}},
+			{"text":{$tipo_usuario_pdfvalue},"hidden":"{$item_hide_integrated_search_field7}"},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field8}","text":{$plano_tipo_pdfvalue}},
+			{"text":{$plano_tipo_pdfvalue},"hidden":"{$item_hide_integrated_search_field8}"},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field9}","text":{$data_in_pdfvalue}},
+			{"text":{$data_in_pdfvalue},"hidden":"{$item_hide_integrated_search_field9}"},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field10}","text":{$data_primeiro_acesso_pdfvalue}},
+			{"text":{$data_primeiro_acesso_pdfvalue},"hidden":"{$item_hide_integrated_search_field10}"},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field11}","text":{$data_ultimo_acesso_pdfvalue}},
+			{"text":{$data_ultimo_acesso_pdfvalue},"hidden":"{$item_hide_integrated_search_field11}"},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field12}","text":{$cpf_pdfvalue}},
+			{"text":{$cpf_pdfvalue},"hidden":"{$item_hide_integrated_search_field12}"},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field13}","text":{$avatar_pdfvalue}},
+			{"text":{$avatar_pdfvalue},"hidden":"{$item_hide_integrated_search_field13}"},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field14}","text":{$sexo_pdfvalue}},
+			{"text":{$sexo_pdfvalue},"hidden":"{$item_hide_integrated_search_field14}"},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field15}","text":{$info_inicial_pdfvalue}},
+			{"text":{$info_inicial_pdfvalue},"hidden":"{$item_hide_integrated_search_field15}"},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field16}","text":{$pais_pdfvalue}},
+			{"text":{$pais_pdfvalue},"hidden":"{$item_hide_integrated_search_field16}"},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field17}","text":{$estado_pdfvalue}},
+			{"text":{$estado_pdfvalue},"hidden":"{$item_hide_integrated_search_field17}"},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field18}","text":{$municipio_pdfvalue}},
+			{"text":{$municipio_pdfvalue},"hidden":"{$item_hide_integrated_search_field18}"},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field19}","text":{$cep_pdfvalue}},
+			{"text":{$cep_pdfvalue},"hidden":"{$item_hide_integrated_search_field19}"},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field20}","text":{$rua_pdfvalue}},
+			{"text":{$rua_pdfvalue},"hidden":"{$item_hide_integrated_search_field20}"},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field21}","text":{$numero_pdfvalue}},
+			{"text":{$numero_pdfvalue},"hidden":"{$item_hide_integrated_search_field21}"},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field22}","text":{$complemento_pdfvalue}},
+			{"text":{$complemento_pdfvalue},"hidden":"{$item_hide_integrated_search_field22}"},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field23}","text":{$telefone_celular_principal_pdfvalue}},
+			{"text":{$telefone_celular_principal_pdfvalue},"hidden":"{$item_hide_integrated_search_field23}"},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field24}","text":{$telefone_celular_secundario_pdfvalue}},
+			{"text":{$telefone_celular_secundario_pdfvalue},"hidden":"{$item_hide_integrated_search_field24}"},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field25}","text":{$telefone_residencial_pdfvalue}},
+			{"text":{$telefone_residencial_pdfvalue},"hidden":"{$item_hide_integrated_search_field25}"},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field26}","text":{$telefone_comercial_pdfvalue}},
+			{"text":{$telefone_comercial_pdfvalue},"hidden":"{$item_hide_integrated_search_field26}"},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field27}","text":{$code_trocar_senha_pdfvalue}},
+			{"text":{$code_trocar_senha_pdfvalue},"hidden":"{$item_hide_integrated_search_field27}"},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field28}","text":{$deletado_pdfvalue}},
+			{"text":{$deletado_pdfvalue},"hidden":"{$item_hide_integrated_search_field28}"},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field29}","text":{$idEmpresa_pdfvalue}},
+			{"text":{$idEmpresa_pdfvalue},"hidden":"{$item_hide_integrated_search_field29}"},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field30}","text":{$Confirma_pdfvalue}},
+			{"text":{$Confirma_pdfvalue},"hidden":"{$item_hide_integrated_search_field30}"},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -217,7 +216,8 @@ pdfDocument = {
 {END cellblock_grid_c3}
 											],
 				{END row_grid_0}
-					]
+		
+		]
 	}
 }
 ,
@@ -237,12 +237,11 @@ pdfDocument = {
 	
 		body: [
 				
-					[
-												{
+				[
+																{
 	cellId: 'c1',
 	col:0,
 	row:0,
-			style: 'cell',
 		
 		
 	//	static colspan/rowspan
@@ -270,7 +269,8 @@ pdfDocument = {
   },
 
 											],
-					]
+		
+		]
 	}
 }
 ,

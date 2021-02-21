@@ -60,20 +60,6 @@ class MySQLFunctions extends DBFunctions
 
 
 	/**
-	 * adds wrappers to field name if required
-	 * @param String strName
-	 * @return String
-	 */
-	public function addFieldWrappers( $strName )
-	{		
-		if( substr($strName, 0, 1) == $this->strLeftWrapper )
-			return $strName;
-			
-		return $this->strLeftWrapper.$strName.$this->strRightWrapper;
-	}
-	
-
-	/**
 	 * @param String dbval
 	 * @return String	 
 	 */

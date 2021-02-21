@@ -1,5 +1,5 @@
-<!doctype html><p align=center><font size=+1 color=red>This website was created by evaluation version of PHPRunner Trial.</font></p>
-<p align=center><font size=+1 color=red>This warning message will not appear on website created by a paid-for version of PHPRunner Trial.</font></p>
+<!doctype html>
+
 <html  {$html_attrs}>
 	<head>
 				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -100,9 +100,9 @@
 									{BEGIN grid_block}
 {BEGIN message_block}
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
-{END message_block}<table data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" class=" table {$grid_classes}  rnr-b-grid rnr-gridtable" 
+{END message_block}<table data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" class=" table {$grid_classes} r-horizontal-grid  rnr-b-grid rnr-gridtable" 
 	cellpadding="0" 
-	data-body-height="1"
+	data-body-height="2"
 >
 						<thead>
 			{BEGIN grid_header}
@@ -131,7 +131,7 @@
 	 
 		{BEGIN age_Paciente_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_Paciente">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_Paciente" data-fieldname="age_Paciente">
 	{$label adm_agenda_1 age_Paciente }	</span>
 {END age_Paciente_fieldheadercolumn}
 
@@ -156,7 +156,7 @@
 	 
 		{BEGIN age_config_id_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_config_id">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_config_id" data-fieldname="age_config_id">
 	{$label adm_agenda_1 age_config_id }	</span>
 {END age_config_id_fieldheadercolumn}
 
@@ -181,7 +181,7 @@
 	 
 		{BEGIN age_data_att_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_data_att">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_data_att" data-fieldname="age_data_att">
 	{$label adm_agenda_1 age_data_att }	</span>
 {END age_data_att_fieldheadercolumn}
 
@@ -206,7 +206,7 @@
 	 
 		{BEGIN age_time_att_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_time_att">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_time_att" data-fieldname="age_time_att">
 	{$label adm_agenda_1 age_time_att }	</span>
 {END age_time_att_fieldheadercolumn}
 
@@ -231,7 +231,7 @@
 	 
 		{BEGIN age_acao_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_acao">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_acao" data-fieldname="age_acao">
 	{$label adm_agenda_1 age_acao }	</span>
 {END age_acao_fieldheadercolumn}
 
@@ -256,7 +256,7 @@
 	 
 		{BEGIN age_retorno_data_time_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_retorno_data_time">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_retorno_data_time" data-fieldname="age_retorno_data_time">
 	{$label adm_agenda_1 age_retorno_data_time }	</span>
 {END age_retorno_data_time_fieldheadercolumn}
 
@@ -281,7 +281,7 @@
 	 
 		{BEGIN age_tipo_pagamento_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_tipo_pagamento">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_tipo_pagamento" data-fieldname="age_tipo_pagamento">
 	{$label adm_agenda_1 age_tipo_pagamento }	</span>
 {END age_tipo_pagamento_fieldheadercolumn}
 
@@ -306,7 +306,7 @@
 	 
 		{BEGIN age_anotacoes_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_anotacoes">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_anotacoes" data-fieldname="age_anotacoes">
 	{$label adm_agenda_1 age_anotacoes }	</span>
 {END age_anotacoes_fieldheadercolumn}
 
@@ -331,14 +331,65 @@
 	 
 		{BEGIN age_Link_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_Link">
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_Link" data-fieldname="age_Link">
 	{$label adm_agenda_1 age_Link }	</span>
 {END age_Link_fieldheadercolumn}
 
 	
 	</th>
 	{END cellblock_grid_headcell_field8}
+				 
+					{BEGIN cellblock_grid_headcell_field9}
+	<th
+	
+	{$cell_grid_headcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$age_Valor_class}
+			"
+
+			data-field="age_Valor"
+	
+	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN age_Valor_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_Valor" data-fieldname="age_Valor">
+	{$label adm_agenda_1 age_Valor }	</span>
+{END age_Valor_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field9}
+				 
+					{BEGIN cellblock_grid_headcell_field10}
+	<th
+	
+	{$cell_grid_headcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$age_Status_Recebimento_class}
+			"
+
+			data-field="age_Status_Recebimento"
+	
+	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN age_Status_Recebimento_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_Status_Recebimento" data-fieldname="age_Status_Recebimento">
+	{$label adm_agenda_1 age_Status_Recebimento }	</span>
+{END age_Status_Recebimento_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field10}
 							</tr>
+					 
 					 
 					 
 					
@@ -370,7 +421,7 @@
 
 	 
 		{BEGIN age_Paciente_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_Paciente" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_Paciente" data-fieldname="age_Paciente" data-default-width >
 {$age_Paciente_value}
 </span>
 {END age_Paciente_fieldcolumn}	
@@ -393,7 +444,7 @@
 
 	 
 		{BEGIN age_config_id_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_config_id" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_config_id" data-fieldname="age_config_id" data-default-width >
 {$age_config_id_value}
 </span>
 {END age_config_id_fieldcolumn}	
@@ -416,7 +467,7 @@
 
 	 
 		{BEGIN age_data_att_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_data_att" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_data_att" data-fieldname="age_data_att" data-default-width >
 {$age_data_att_value}
 </span>
 {END age_data_att_fieldcolumn}	
@@ -439,7 +490,7 @@
 
 	 
 		{BEGIN age_time_att_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_time_att" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_time_att" data-fieldname="age_time_att" data-default-width >
 {$age_time_att_value}
 </span>
 {END age_time_att_fieldcolumn}	
@@ -462,7 +513,7 @@
 
 	 
 		{BEGIN age_acao_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_acao" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_acao" data-fieldname="age_acao" data-default-width >
 {$age_acao_value}
 </span>
 {END age_acao_fieldcolumn}	
@@ -485,7 +536,7 @@
 
 	 
 		{BEGIN age_retorno_data_time_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_retorno_data_time" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_retorno_data_time" data-fieldname="age_retorno_data_time" data-default-width >
 {$age_retorno_data_time_value}
 </span>
 {END age_retorno_data_time_fieldcolumn}	
@@ -508,7 +559,7 @@
 
 	 
 		{BEGIN age_tipo_pagamento_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_tipo_pagamento" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_tipo_pagamento" data-fieldname="age_tipo_pagamento" data-default-width >
 {$age_tipo_pagamento_value}
 </span>
 {END age_tipo_pagamento_fieldcolumn}	
@@ -531,7 +582,7 @@
 
 	 
 		{BEGIN age_anotacoes_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_anotacoes" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_anotacoes" data-fieldname="age_anotacoes" data-default-width >
 {$age_anotacoes_value}
 </span>
 {END age_anotacoes_fieldcolumn}	
@@ -554,12 +605,83 @@
 
 	 
 		{BEGIN age_Link_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_Link" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_Link" data-fieldname="age_Link" data-default-width >
 {$age_Link_value}
 </span>
 {END age_Link_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field8}
+				 
+					{BEGIN cellblock_grid_cell_field9}
+	<td
+	
+	{$cell_grid_cell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$age_Valor_class}
+			"
+
+			data-field="age_Valor"
+	
+	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN age_Valor_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_Valor" data-fieldname="age_Valor" data-default-width >
+{$age_Valor_value}
+</span>
+{END age_Valor_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field9}
+				 
+					{BEGIN cellblock_grid_cell_field10}
+	<td
+	
+	{$cell_grid_cell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$age_Status_Recebimento_class}
+			"
+
+			data-field="age_Status_Recebimento"
+	
+	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN age_Status_Recebimento_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="age_Status_Recebimento" data-fieldname="age_Status_Recebimento" data-default-width >
+{$age_Status_Recebimento_value}
+</span>
+{END age_Status_Recebimento_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field10}
+							</tr>
+					 
+						<tr {$rowattrs} {$row_grid_2} class="{$rowclass} 
+								
+							">
+				 
+					{BEGIN cellblock_grid_cell_dpreview}
+	<td
+	
+	{$cell_grid_cell_dpreview}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_cell_dpreview" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN details_adm_pagamento_avulso}
+{$displayDetailTable_adm_pagamento_avulso}
+{END details_adm_pagamento_avulso}
+	
+	</td>
+	{END cellblock_grid_cell_dpreview}
 							</tr>
 					 
 					
@@ -570,7 +692,8 @@
 		 
 					 
 					 
-						<tr {$rowattrs} {$row_grid_2} class="{$rowclass} 
+					 
+						<tr {$rowattrs} {$row_grid_3} class="{$rowclass} 
 									{$gridFooter_class}
 									
 								r-gridrow
@@ -719,6 +842,38 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field8}
+				 
+					{BEGIN cellblock_grid_footcell_field9}
+	<td
+	
+	{$cell_grid_footcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="adm_agenda_1_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field9}
+				 
+					{BEGIN cellblock_grid_footcell_field10}
+	<td
+	
+	{$cell_grid_footcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="adm_agenda_1_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field10}
 							</tr>
 					
 					</tfoot>

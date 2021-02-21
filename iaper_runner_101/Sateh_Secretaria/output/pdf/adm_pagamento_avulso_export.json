@@ -1,0 +1,165 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel adm_pagamento_avulso export}","hidden":"{$item_hide_export_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+  },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":{$Item1_pdfvalue},"hidden":"{$item_hide_export_field1}"},
+				
+				
+			{"text":{$Valor1_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+				
+				
+			{"text":{$Item2_pdfvalue},"hidden":"{$item_hide_export_field3}"},
+				
+				
+			{"text":{$Valor2_pdfvalue},"hidden":"{$item_hide_export_field4}"},
+				
+				
+			{"text":{$Item3_pdfvalue},"hidden":"{$item_hide_export_field5}"},
+				
+				
+			{"text":{$Valor3_pdfvalue},"hidden":"{$item_hide_export_field6}"},
+				
+				
+			{"text":{$Item4_pdfvalue},"hidden":"{$item_hide_export_field7}"},
+				
+				
+			{"text":{$Valor4_pdfvalue},"hidden":"{$item_hide_export_field8}"},
+				
+				
+			{"text":{$Valor_TOTAL_pdfvalue},"hidden":"{$item_hide_export_field9}"},
+				
+				
+			{"text":{$Link_pdfvalue},"hidden":"{$item_hide_export_field10}"},
+				
+				
+			{"text":{$Data_pdfvalue},"hidden":"{$item_hide_export_field11}"},
+				
+				
+			{"text":{$Fatura_pdfvalue},"hidden":"{$item_hide_export_field12}"},
+				
+				
+			{"text":{$Status_pdfvalue},"hidden":"{$item_hide_export_field13}"},
+				
+				
+			{"text":{$Forma_Pagamento_pdfvalue},"hidden":"{$item_hide_export_field14}"},
+				
+				
+			{"text":{$Observacao_pdfvalue},"hidden":"{$item_hide_export_field15}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+  },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+}
+  

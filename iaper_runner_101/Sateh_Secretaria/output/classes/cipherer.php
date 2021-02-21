@@ -151,38 +151,6 @@ class RunnerCipherer
 		return $this->EncryptValueByDB( $field, add_db_quotes($field, $this->EncryptField($field, $value), $this->strTableName) );
 	}
 	
-	/**
-	 *
-	 */
-	public function GetLikeClause($field, $value)
-	{
-		global $ajaxSearchStartsWith;
-		if( $this->connection->isEncryptionByPHPEnabled() && $this->isFieldEncrypted($field) )
-			return "=".$this->connection->prepareString( $this->EncryptField($field, $value) );
-		
-		if( $ajaxSearchStartsWith )
-			$searchPattern = $value."%";
-		else
-			$searchPattern = "%".$value."%";
-		return " LIKE ".$this->connection->prepareString( $searchPattern );
-	}
-	
-	/**
-	 * GetLookupFieldName
-	 * Add to lookup and autofil field name decryption function if master field is encrypted by database 
-	 * @param {string} field name
-	 * @param {string} master field name
-	 * @param {string} alias of field name
-	 * @param {bool} shows if 'as' construction needed
-	 * @return {string}
-	 */
-	public function GetLookupFieldName($field, $fieldForCheck, $alias = null, $addAs = false)
-	{			
-		if( $this->connection->isEncryptionByPHPEnabled() || !$this->isFieldEncrypted($fieldForCheck) )
-			return $field;
-
-		return $this->GetEncryptedFieldName($field, $alias, $addAs);
-	}
 	
 	/**
 	 * GetFieldName

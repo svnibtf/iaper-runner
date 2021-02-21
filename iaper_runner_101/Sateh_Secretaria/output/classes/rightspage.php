@@ -260,7 +260,7 @@ class RightsPage extends ListPage
 		// The user might rewrite $_SESSION["UserName"] value with HTML code in an event, so no encoding will be performed while printing this value.
 		$this->xt->assign("username", $_SESSION["UserName"]);
 		if ($this->createLoginPage)
-			$this->xt->assign("userid", runner_htmlspecialchars($_SESSION["UserID"]));
+			$this->xt->assign("userid", runner_htmlspecialchars( Security::getUserName() ));
 
 		$this->hideElement("message");
 	}

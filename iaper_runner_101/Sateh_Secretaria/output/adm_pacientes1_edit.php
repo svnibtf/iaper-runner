@@ -85,6 +85,8 @@ if(( $pageMode == EDIT_POPUP || $pageMode == EDIT_INLINE ) && postvalue("dashTNa
 	$params["dashElementName"] = postvalue("dashelement");
 }
 
+$params["forSpreadsheetGrid"] = postvalue("spreadsheetGrid");
+$params["hostPageName"] = postvalue("hostPageName");
 
 $pageObject = EditPage::EditPageFactory($params);
 

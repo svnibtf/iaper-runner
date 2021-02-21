@@ -27,7 +27,7 @@
 {END grid_tabs}
 {BEGIN message_block}
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
-{END message_block}<table data-location="grid" id="form_grid_{$pageid}" data-makeup="panel-only" {$form_grid} data-pageid="{$pageid}" class=" table {$grid_classes}  rnr-b-grid rnr-gridtable" 
+{END message_block}<table data-location="grid" id="form_grid_{$pageid}" data-makeup="panel-only" {$form_grid} data-pageid="{$pageid}" class=" table {$grid_classes} r-horizontal-grid  rnr-b-grid rnr-gridtable" 
 	cellpadding="0" 
 	data-body-height="1"
 >
@@ -47,20 +47,20 @@
 	{$cell_grid_headcell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$Whats_class}
+		 r-ori-vert				{$Nome_class}
 			"
 
-			data-field="Whats"
+			data-field="Nome"
 	
 	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Whats_fieldheadercolumn}
+		{BEGIN Nome_fieldheadercolumn}
  
-	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Whats">
-	{$label adm_pacientes Whats }	</span>
-{END Whats_fieldheadercolumn}
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Nome" data-fieldname="Nome">
+	{$label adm_pacientes Nome }	</span>
+{END Nome_fieldheadercolumn}
 
 	
 	</th>
@@ -87,20 +87,20 @@
 	{$cell_grid_cell_field}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$Whats_class}
+		 r-ori-vert				{$Nome_class}
 			"
 
-			data-field="Whats"
+			data-field="Nome"
 	
 	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN Whats_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Whats" data-default-width >
-{$Whats_value}
+		{BEGIN Nome_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Nome" data-fieldname="Nome" data-default-width >
+{$Nome_value}
 </span>
-{END Whats_fieldcolumn}	
+{END Nome_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field}
 							</tr>

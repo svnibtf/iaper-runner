@@ -40,12 +40,11 @@ pdfDocument = {
 	
 		body: [
 				
-					[
-												{
+				[
+																{
 	cellId: 'c1',
 	col:0,
 	row:0,
-			style: 'cell',
 		
 		
 	//	static colspan/rowspan
@@ -63,11 +62,10 @@ pdfDocument = {
               "alignment": 'left',
   },
 
-																			{
+																							{
 	cellId: 'c2',
 	col:0,
 	row:0,
-			style: 'cell',
 		
 		
 	//	static colspan/rowspan
@@ -84,7 +82,8 @@ pdfDocument = {
   },
 
 											],
-					]
+		
+		]
 	}
 }
 ,
@@ -104,12 +103,11 @@ pdfDocument = {
 	
 		body: [
 				
-					[
-												{
+				[
+																{
 	cellId: 'c1',
 	col:0,
 	row:0,
-			style: 'cell',
 		
 		
 	//	static colspan/rowspan
@@ -128,7 +126,8 @@ pdfDocument = {
   },
 
 											],
-					]
+		
+		]
 	}
 }
 ,
@@ -160,12 +159,11 @@ pdfDocument = {
 	
 		body: [
 				
-					[
-												{
+				[
+																{
 	cellId: 'c1',
 	col:0,
 	row:0,
-			style: 'cell',
 		
 		
 	//	static colspan/rowspan
@@ -183,11 +181,10 @@ pdfDocument = {
               "alignment": 'right',
   },
 
-																			{
+																							{
 	cellId: 'c2',
 	col:0,
 	row:0,
-			style: 'cell',
 		
 		
 	//	static colspan/rowspan
@@ -206,12 +203,11 @@ pdfDocument = {
   },
 
 											],
-								[
-												{
+						[
+																{
 	cellId: 'c3',
 	col:0,
 	row:0,
-			style: 'cell',
 		
 		
 	//	static colspan/rowspan
@@ -229,11 +225,10 @@ pdfDocument = {
               "alignment": 'right',
   },
 
-																			{
+																							{
 	cellId: 'c4',
 	col:0,
 	row:0,
-			style: 'cell',
 		
 		
 	//	static colspan/rowspan
@@ -252,12 +247,11 @@ pdfDocument = {
   },
 
 											],
-								[
-												{
+						[
+																{
 	cellId: 'c9',
 	col:0,
 	row:0,
-			style: 'cell',
 		
 		
 	//	static colspan/rowspan
@@ -273,11 +267,10 @@ pdfDocument = {
               "alignment": 'left',
   },
 
-																			{
+																							{
 	cellId: 'c10',
 	col:0,
 	row:0,
-			style: 'cell',
 		
 		
 	//	static colspan/rowspan
@@ -285,7 +278,7 @@ pdfDocument = {
 			
 	
 	
-			"text": [
+			"stack": [
 		
 				
 			{"text":"","hidden":"{$item_hide_remember_password}"},
@@ -296,7 +289,8 @@ pdfDocument = {
   },
 
 											],
-					]
+		
+		]
 	}
 }
 ,

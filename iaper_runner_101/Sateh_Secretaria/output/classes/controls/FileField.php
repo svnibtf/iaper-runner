@@ -19,20 +19,9 @@ class FileField extends EditControl
 		$this->format = EDIT_FORMAT_FILE;
 	}
 
-	function addJSFiles()
-	{
-		if($this->pageObject->pageType == PAGE_ADD
-			|| $this->pageObject->pageType == PAGE_EDIT
-			|| $this->pageObject->pageType == PAGE_REGISTER){
+	function addJSFiles() {
+		if ( $this->format = EDIT_FORMAT_FILE ) {
 			$this->pageObject->AddJSFile("include/mupload.js");
-		}
-	}
-
-	function addCSSFiles()
-	{
-		if($this->pageObject->pageType == PAGE_ADD
-			|| $this->pageObject->pageType == PAGE_EDIT
-			|| $this->pageObject->pageType == PAGE_REGISTER){
 		}
 	}
 
@@ -40,22 +29,22 @@ class FileField extends EditControl
 	{
 		parent::buildControl($value, $mode, $fieldNum, $validate, $additionalCtrlParams, $data);
 
-		if($this->pageObject->pageType == PAGE_SEARCH || $this->pageObject->pageType == PAGE_LIST)
-		{
+		if( $mode == MODE_SEARCH ) {
+			$this->format = "";
+			
 			$classString = "";
 			if( $this->pageObject->isBootstrap() )
 				$classString = " class=\"form-control\"";
+			
 			echo '<input id="'.$this->cfield.'" '.$classString.$this->inputStyle.' type="text" '
-				.($mode == MODE_SEARCH ? 'autocomplete="off" ' : '')
-				.(($mode==MODE_INLINE_EDIT || $mode==MODE_INLINE_ADD) && $this->is508==true ? 'alt="'.$this->strLabel.'" ' : '')
+				.('autocomplete="off" ')
+				.( $this->is508==true ? 'alt="'.$this->strLabel.'" ' : '')
 				.'name="'.$this->cfield.'" '.$this->pageObject->pSetEdit->getEditParams($this->field).' value="'
 				.runner_htmlspecialchars($value).'">';
+			
 			$this->buildControlEnd($validate, $mode);
 			return;
 		}
-
-		if($mode == MODE_SEARCH)
-			$this->format = "";
 
 		$this->formStamp = generatePassword(15);
 
@@ -381,70 +370,6 @@ class FileField extends EditControl
 			}
 		}
 		return $imageValue;
-	}
-
-	function SQLWhere($SearchFor, $strSearchOption, $SearchFor2, $etype, $isSuggest)
-	{
-		$baseResult = $this->baseSQLWhere($strSearchOption);
-
-		if( $baseResult === false )
-			return "";
-
-		if( $baseResult != "" )
-			return $baseResult;
-
-		if( IsCharType($this->type) )
-		{
-			$gstrField = $this->getFieldSQLDecrypt();
-
-			if( !$this->btexttype && !$this->pageObject->cipherer->isFieldPHPEncrypted($this->field) && $this->pageObject->pSetEdit->getNCSearch() )
-			{
-				// search is case-insensitive
-				$gstrField = $this->connection->upper( $gstrField );
-			}
-		}
-		elseif( $strSearchOption == "Contains" || $strSearchOption == "Starts with" )
-		{
-			$gstrField = $this->connection->field2char($this->getFieldSQLDecrypt(), $this->type);
-		}
-		else
-		{
-			$gstrField = $this->getFieldSQLDecrypt();
-		}
-
-		if( $strSearchOption == "Contains" || $strSearchOption == "Starts with" )
-			$SearchFor = $this->connection->escapeLIKEpattern( $SearchFor );
-
-		if( $strSearchOption == "Contains" )
-			$SearchFor = "%".$SearchFor."%";
-		else if( $strSearchOption == "Starts with" )
-			$SearchFor = $SearchFor."%";
-
-		if( $strSearchOption=="Contains" || $strSearchOption=="Starts with" || $strSearchOption == "Equals" )
-			return $this->buildWhere($gstrField, $SearchFor, $strSearchOption == "Equals");
-
-		return "";
-	}
-
-	function buildWhere($gstrField, $value, $equals = false)
-	{
-		$likeVal = $this->connection->prepareString('%searchStr":"'.$value.':sStrEnd"%');
-		$notLikeVal = $this->connection->prepareString($value);
-
-		if( !$this->btexttype && IsCharType($this->type) && $this->pageObject->pSetEdit->getNCSearch() )
-		{
-			// search is case-insensitive
-			$likeVal = $this->connection->upper( $likeVal );
-			$notLikeVal = $this->connection->upper( $notLikeVal);
-		}
-
-		if( $this->connection->dbType == nDATABASE_Access )
-			$testSymbols = "'_{%}_'";
-		else
-			$testSymbols = "'[{%'";
-
-		return "((".$gstrField." ".$this->like." ".$testSymbols." and ".$gstrField." ".$this->like." ".$likeVal.") or (".
-			$gstrField." not ".$this->like." ".$testSymbols." and ".$gstrField." ".($equals ? "=" : $this->like)." ".$notLikeVal."))";
 	}
 
 	/**

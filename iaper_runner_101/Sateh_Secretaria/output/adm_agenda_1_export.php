@@ -27,9 +27,6 @@ $params["tName"] = $strTableName;
 $params["pageType"] = PAGE_EXPORT;
 $params["pageName"] = postvalue("page");
 
-if( !$eventObj->exists("ListGetRowCount") && !$eventObj->exists("ListQuery") )
-	$params["needSearchClauseObj"] = false;
-
 $params["selectedFields"] = postvalue("exportFields");
 $params["exportType"] = postvalue("type");
 

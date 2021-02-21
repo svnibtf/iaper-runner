@@ -61,6 +61,8 @@ if( $forDashboardSimpleSearch )
 		}		
 	}
 	
+	$result = array();
+	
 	foreach( $sfdata as $table => $fields )
 	{
 		if ( $numberOfSuggests <= count( $result ) ) 
@@ -161,7 +163,7 @@ foreach( $searchClauseObj->getFilteredFields() as $filteredField )
 }
 
 $parentCtrlsData = my_json_decode( postvalue('parentCtrlsData') );
-if( $forLookupPage && count( $parentCtrlsData ) ) 
+if( $forLookupPage && $parentCtrlsData ) 
 {
 	$mainField = postvalue("mainField");
 	$mainTable = postvalue("mainTable");

@@ -1,5 +1,5 @@
-<!doctype html><p align=center><font size=+1 color=red>This website was created by evaluation version of PHPRunner Trial.</font></p>
-<p align=center><font size=+1 color=red>This warning message will not appear on website created by a paid-for version of PHPRunner Trial.</font></p>
+<!doctype html>
+
 <html  {$html_attrs}>
 	<head>
 				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -15,23 +15,27 @@
 	<link REL="stylesheet" href="{$stylepath}" type="text/css">
 	{END styleCSSFiles}
 	</head>
-
 	<body class="{$stylename} function-list" {$bodyattrs}>
 	{BEGIN body}
+		{$header}
 		<style>
-		{$containerCss}
+			{$containerCss}
 		</style>
-		<div class="r-vbar-page">
-			<div data-width="" data-fixed class="r-left clearfix {$leftbar_class}" >
-								<div data-location="left" id="form_left_{$pageid}" data-makeup="leftbar" {$form_left} data-pageid="{$pageid}">
-{BEGIN left_block}
- 
-     
-         
-
-			<div data-cellId="left_c0" data-pageid="{$pageid}" data-logo-cell class="clearfix  r-ori-vert" data-itemid="logo1" {$item_logo1}>
+		<div class="r-topbar-page">
+			<div data-menu-width="compact" 
+				data-fixed 
+				class="r-topheader" 
+				data-resize-name="topbar"
+				data-body-align="center"
+			>
+								{BEGIN supertop_block}
+<nav class="navbar navbar-default" 
+	data-location="supertop" id="form_supertop_{$pageid}" data-makeup="topbar" {$form_supertop} data-pageid="{$pageid}" >
+			 
+							 
+				<span data-cellId="supertop_c1" data-pageid="{$pageid}" class="r-align-left navbar-header" data-itemid="logo" {$item_logo}>
 				{BEGIN logo_block}
-	<A data-itemtype="logo" data-itemid="logo1" {$item_logo1} data-pageid="{$pageid}" class="navbar-brand" href="{$home_link}" data-pageid="{$pageid}" {$logo_hiddenattr}>
+	<A data-itemtype="logo" data-itemid="logo" {$item_logo} data-pageid="{$pageid}" class="navbar-brand" href="{$home_link}" data-pageid="{$pageid}" {$logo_hiddenattr}>
 		{$logo}
 	</A>
 {END logo_block}
@@ -39,129 +43,25 @@
 					<span class="sr-only">Toggle navigation</span>	
 					<span class="icon-bar"></span>					
 				</button>				
-			</div>
-		
-     
-     
-         
-
-			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="search_panel" {$item_search_panel} data-topcell-item-type="search_panel" >
-				<!-- Begin Search panel content -->
-<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}" >
-
-	<div class="panel-heading">
-		<div class="btn-group" id="addSearchFieldButton{$id}">
-			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			Buscar em			<span class="caret"></span>
-			</button>
-		</div>
-
-
-		<div class="btn-group searchpanel-options" id="searchPanelOptions{$id}">
-			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
-			</button>
-			<ul class="dropdown-menu dropdown-left">
-				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Mostrar opções</a></li>
-				<li role="separator" class="divider"></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>todas as condições</label></a></li>
-				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>qualquer condição</label></a></li>
-				<li role="separator" class="divider"></li>
-				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>ocultar</a></li>
-			</ul>
-		</div>
-
-
-		</div>
-	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
-
-
-		
-		{BEGIN searchCtrlBlock}
-		<div class="srchPanelRow form-group" {$filterRow_attrs}>
-			<label>{$fLabel}</label>	{$delCtrlButt}
-				<span class="rnr-searchtype">{$searchtype}</span>
-				<span class="rnr-searchcontrol">{$searchcontrol}</span>
-				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
-		</div>
-		{END searchCtrlBlock}
-																		{BEGIN searchCtrlBlock_Data}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Data}" {$filterRow_attrs_Data}>
-			<label>{$label Fluxo_de_Recebimentos Data }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Data}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Data}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Data}</span>
-						</div>
-		{END searchCtrlBlock_Data}
-																{BEGIN searchCtrlBlock_Valor_a_Receber}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_Valor_a_Receber}" {$filterRow_attrs_Valor_a_Receber}>
-			<label>{$label Fluxo_de_Recebimentos Valor_a_Receber }</label>
-
-							{$delCtrlButt}
-			
-								<span class="rnr-searchtype">{$searchtype_Valor_a_Receber}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_Valor_a_Receber}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_Valor_a_Receber}</span>
-						</div>
-		{END searchCtrlBlock_Valor_a_Receber}
-		
-
-	</div>
-
-	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
-		<button class="btn btn-primary" id="searchButton{$id}" {$searchbutton_attrs}>Buscar</button>
-		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>Mostrar Todos</button>
-	</div>
-</div>
-<!-- End Search panel content -->
-			</div>
-		
- 
-
-			<div class="clearfix  r-ori-vert" data-cellId="left_c1" data-pageid="{$pageid}" data-itemid="filter_panel" {$item_filter_panel} data-topcell-item-type="filter_panel" >
-				<div data-itemtype="filter_panel" data-itemid="filter_panel" {$item_filter_panel} data-pageid="{$pageid}">
-<!--
-	<button type="button" class="btn btn-info bs-togglebutton bottom-margin collapsed" data-runner-toggle="collapse" data-target=".filterPanelContainer">	
-		<span class="glyphicon glyphicon-filter"><span> Filter	
-	</button>
--->	
-	<div class="filterPanelContainer {$filterPanelStateClass}">
-
-
-
-	</div>
-</div>			</div>
-		
-    {END left_block}
-</div>				</div>	
-			<div class="r-content-col" data-resize-left="leftbar">
-				<div  class="r-topheader" data-resize-name="topbar">
-									{BEGIN supertop_block}
-<nav class="navbar navbar-default" 
-	data-location="supertop" id="form_supertop_{$pageid}" data-makeup="leftbar" {$form_supertop} data-pageid="{$pageid}" >
-			 
+			</span>
+		 
+				<span data-cellId="supertop_c1" data-pageid="{$pageid}" class="r-align-left navbar-collapse" data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
+				{$menu main horizontal}			</span>
 							 
-				<span class="navbar-form  navbar-header" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="custom_button" {$item_custom_button} data-topcell-item-type="custom_button" >
-				<span data-itemtype="custom_button" data-itemid="custom_button" {$item_custom_button} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-default   
-	" id="Voltar" href="javascript:void(0)" typeid="ib" >
-							Voltar			</a>
+							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
+				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+										<span class="glyphicon glyphicon-cog"></span>
+												<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							<li role="separator" class="divider"></li>					</ul>
+	</span>
 </span>
 			</span>
 		 
-				<span class="navbar-form  navbar-collapse" data-cellId="supertop_c1" data-pageid="{$pageid}" data-itemid="text" {$item_text} data-topcell-item-type="text" >
-				<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-page="fluxo_de_recebimentos_list" data-small > 
-	Administração</span>
-			</span>
-							 
-							 
 				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
 				{BEGIN guestloginbutton}
 <span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
@@ -177,10 +77,18 @@
 <span data-itemtype="username_button" data-itemid="username_button" {$item_username_button} data-pageid="{$pageid}" data-small data-button-item>
 	<span class="dropdown ">
 		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
-							<span class="glyphicon glyphicon-user"></span>
-						{$username}			<span class="caret"></span>
+			{BEGIN userbutton_icon}							<span class="glyphicon glyphicon-user"></span>
+						{END userbutton_icon}{$userbutton_image}			{$username}			<span class="caret"></span>
 		</button>
 		<ul class="dropdown-menu">
+							{BEGIN logoutbutton}
+	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
+				<a  href="userinfo.php"  title="" >
+				
+		Perfil de usuário		
+		</a>
+	</li>
+{END logoutbutton}
 							{BEGIN logoutbutton}
 	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
 				<a  href="#" {$logoutlink_attrs}  title="" >
@@ -191,7 +99,7 @@
 {END logoutbutton}
 							{BEGIN changepwd_link}
 	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
-				<a  href="#" {$changepwdlink_attrs}  title="" >
+				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
 				
 		Mudar senha		
 		</a>
@@ -204,18 +112,17 @@
 			</span>
 								</nav>
 {END supertop_block}
-						{$locking}
-				</div>	
-				<div class="r-body" data-resize-top="topbar" data-body-width="standard">
-					{$header}
-					<div class="r-top">
-									{BEGIN top_block}
-<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="leftbar" {$form_top} data-pageid="{$pageid}" >		
+					{$locking}
+			</div>	
+			<div data-body-align="center"  data-body-width="compact" class="r-body" data-resize-top="topbar" >
+				<div class="r-top">
+								{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="topbar" {$form_top} data-pageid="{$pageid}" >		
 	 
 		<div class="row">
 			 
 				<div 
-	data-cellId="top_c2" data-pageid="{$pageid}"	{$cell_top_c2}
+	data-cellId="top_c3" data-pageid="{$pageid}"	{$cell_top_c3}
 	class=" r-ori-vert			col-md-12
 	
 ">
@@ -227,10 +134,38 @@
 {END mastertable_block}		</div>					</div>
 	</div>		
 {END top_block}
+					</div>
+				<div class="r-content">
+										<div class="r-left" {$blockattr_left} {$form_left} >
+										{BEGIN left_block}
+<table class="r-fluid r-form" data-location="left" id="form_left_{$pageid}" data-makeup="topbar" {$form_left} data-pageid="{$pageid}" >
+						<tbody>
+			
+								<tr>
+									<td 
+	class=" r-ori-vert			"
+			 
+	data-cellId="left_c2" data-pageid="{$pageid}">
+ 
+<div data-itemtype="filter_panel" data-itemid="filter_panel" {$item_filter_panel} data-pageid="{$pageid}">
+	<div class="filterPanelContainer {$filterPanelStateClass}">
+	<!-- Begin Filter panel content -->
+
+
+
+	<!-- End Filter panel content -->
+	</div>
+</div></td>
+							</tr>
+					
+					</tbody>
+				</table>
+{END left_block}
 						</div>
-					<div class="r-above">
+										<div class="r-data-block" data-body-width="compact" >
+						
 										{BEGIN above-grid_block}
-<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="leftbar" {$form_above-grid} data-pageid="{$pageid}" >		
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="topbar" {$form_above-grid} data-pageid="{$pageid}" >		
 	 
 		<div class="row">
 			 
@@ -241,22 +176,6 @@
 ">
 		{BEGIN firstAboveGridCell}
 		 
-		{BEGIN searchPanelTopButtons}
-<span data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-default   
-	" id="showOptPanel{$id}" >
-							Mostrar painel de busca			</a>
-</span>
-{END searchPanelTopButtons}
-	 
-		{BEGIN searchPanelTopButtons}
-<span data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small data-button-item>
-	<a type="button" title="" class="btn btn-default   
-	" id="hideOptPanel{$id}" >
-							Ocultar painel de busca			</a>
-</span>
-{END searchPanelTopButtons}
-	 
 		{BEGIN export_link}
 <span data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-default   
@@ -302,15 +221,16 @@
 		<div class="col-md-4">
 			Escopo		</div>
 
+			 
 		{BEGIN print_friendly_all}
 		<div class="col-md-8">
 			<label for="printAll{$id}">
-				<input type="radio" id="printAll{$id}" data-href="fluxo_de_recebimentos_print.php?all=1&amp;{$crosstable_attrs}" name="printScope">
+				<input type="radio" id="printAll{$id}" data-href="fluxo_de_recebimentos_print.php?all=1&amp;{$crosstable_attrs}" name="printScope" >
 									Imprimir todas as páginas							</label>
 		</div>
 		{END print_friendly_all}
-	</div>
-	<div class="row">
+		</div>
+		<div class="row">
 		<div class="col-md-4">&nbsp;</div>
 		<div class="col-md-8">
 			<label for="printPage{$id}">
@@ -318,8 +238,9 @@
 				Imprimir esta página			</label>
 		</div>
 	</div>
-	
-	</div>				 
+		
+	</div>
+				 
 					</li>
 											<li class="divider" role="separator"></li>
 																				 
@@ -355,10 +276,19 @@
 			 
 				<div 
 	data-cellId="above-grid_c3" data-pageid="{$pageid}"	{$cell_above-grid_c3}
-	class=" r-ori-vert			col-md-6
+	class="			col-md-6
 	
 ">
-			</div>			 
+		 
+		<span data-itemtype="text" data-itemid="text" {$item_text} data-pageid="{$pageid}" data-page="fluxo_de_recebimentos_list" data-small > 
+	Administração</span>
+	 
+		<span data-itemtype="custom_button" data-itemid="custom_button" {$item_custom_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="Voltar" href="javascript:void(0)" typeid="ib" >
+							Voltar			</a>
+</span>
+		</div>			 
 				<div 
 	data-cellId="above-grid_c4" data-pageid="{$pageid}"	{$cell_above-grid_c4}
 	class="r-align-right r-ori-vert			col-md-6
@@ -367,8 +297,8 @@
 			</div>					</div>
 	</div>		
 {END above-grid_block}
-						</div>
-					<div class="r-grid">
+							
+						<div class="r-grid">
 										{BEGIN grid_block}
 {BEGIN grid_tabs}
   <ul class="nav nav-tabs bsgrid_tabs">
@@ -387,7 +317,7 @@
 	}
 	}
 </style>
-<table data-location="grid" id="form_grid_{$pageid}" data-makeup="leftbar" {$form_grid} data-pageid="{$pageid}" class=" table {$grid_classes}  r-flexgrid rnr-b-grid rnr-gridtable" 
+<table data-location="grid" id="form_grid_{$pageid}" data-makeup="topbar" {$form_grid} data-pageid="{$pageid}" class=" table {$grid_classes} r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable" 
 	cellpadding="0" 
 	data-body-height="1"
 >
@@ -418,7 +348,7 @@
 	 
 		{BEGIN Data_fieldheadercolumn}
 	{BEGIN Data_fieldheader}
-	<SPAN {$Data_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Data">
+	<SPAN {$Data_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Data" data-fieldname="Data">
 	{$label Fluxo_de_Recebimentos Data }	{$arrow_icon_Data}
 	</SPAN>
 	{END Data_fieldheader}
@@ -445,7 +375,7 @@
 	 
 		{BEGIN Valor_a_Receber_fieldheadercolumn}
 	{BEGIN Valor_a_Receber_fieldheader}
-	<SPAN {$Valor_a_Receber_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Valor_a_Receber">
+	<SPAN {$Valor_a_Receber_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Valor_a_Receber" data-fieldname="Valor_a_Receber">
 	{$label Fluxo_de_Recebimentos Valor_a_Receber }	{$arrow_icon_Valor_a_Receber}
 	</SPAN>
 	{END Valor_a_Receber_fieldheader}
@@ -486,7 +416,7 @@
 
 	 
 		{BEGIN Data_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Data" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Data" data-fieldname="Data" data-default-width >
 {$Data_value}
 </span>
 {END Data_fieldcolumn}	
@@ -509,7 +439,7 @@
 
 	 
 		{BEGIN Valor_a_Receber_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Valor_a_Receber" data-default-width >
+<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Valor_a_Receber" data-fieldname="Valor_a_Receber" data-default-width >
 {$Valor_a_Receber_value}
 </span>
 {END Valor_a_Receber_fieldcolumn}	
@@ -567,10 +497,10 @@
 					</tfoot>
 				</table>
 {END grid_block}
-						</div>
-					<div class="r-below">
+							</div>
+						
 										{BEGIN below-grid_block}
-<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="leftbar" {$form_below-grid} data-pageid="{$pageid}" >		
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="topbar" {$form_below-grid} data-pageid="{$pageid}" >		
 	 
 		<div class="row">
 			 
@@ -588,11 +518,12 @@
 		</div>					</div>
 	</div>		
 {END below-grid_block}
-						</div>
-					{$footer}
-				</div>	
-			</div>	
+							
+					</div>
+				</div>
+			</div>
 		</div>
+		{$footer}
 	{END body}
 	</body>
 </html>

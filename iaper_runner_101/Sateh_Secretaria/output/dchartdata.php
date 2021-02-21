@@ -119,8 +119,6 @@
 		$param["cname"] = postvalue("chartname");
 	}
 		
-	if( !$webchart )
-		$param["gstrOrderBy"] = $gstrOrderBy;
 	
 	if( $chrt_array["chart_type"]["type"] == "candle" )
         $chrt_array["chart_type"]["type"] = "candlestick";

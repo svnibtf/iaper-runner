@@ -8,7 +8,7 @@ require_once('classes/menupage.php');
 
 
 Security::processLogoutRequest();
-if( !isLogged() || isLoggedAsGuest() ) 
+if( !isLogged() || Security::isGuest() ) 
 {
 	Security::tryRelogin();
 }
@@ -20,7 +20,7 @@ if( !isLogged() )
 }
 
 
-if (($_SESSION["MyURL"] == "") || (!isLoggedAsGuest())) {
+if (($_SESSION["MyURL"] == "") || (!Security::isGuest())) {
 	Security::saveRedirectURL();
 }
 

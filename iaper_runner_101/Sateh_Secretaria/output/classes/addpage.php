@@ -97,6 +97,10 @@ class AddPage extends RunnerPage
 	 */
 	public $fromDashboard = "";
 
+	public $forSpreadsheetGrid = false;
+	public $hostPageName = "";
+	public $newRowId;
+	
 	/**
 	 * @constructor
 	 */
@@ -201,7 +205,8 @@ class AddPage extends RunnerPage
 	 */
 	protected function assignSessionPrefix()
 	{
-		if( $this->mode == ADD_DASHBOARD || $this->mode == ADD_MASTER_DASH || ($this->mode == ADD_POPUP || $this->mode == ADD_INLINE || $this->fromDashboard != "" ) && $this->dashTName)
+		if( $this->mode == ADD_DASHBOARD || $this->mode == ADD_MASTER_DASH 
+			|| ($this->mode == ADD_POPUP || $this->mode == ADD_INLINE || $this->fromDashboard != "" ) && $this->dashTName )
 		{
 			$this->sessionPrefix = $this->dashTName."_".$this->tName;
 			return;
@@ -487,6 +492,18 @@ class AddPage extends RunnerPage
 			$avalues[ $fileFName ] = $value;
 		}
 
+		//	calculate order for the reorderRows feature
+		$listPSet = $this->getListPSet();
+		if( $listPSet->reorderRows() ) {
+			$order = postvalue("order"); 
+			if( $order ) {
+				$order = $this->getUniqueOrder( $listPSet, $order );
+			} else {
+				$order = $this->getMaxOrderValue( $listPSet ) + 1;
+			}
+			$avalues[ $listPSet->reorderRowsField() ] = $order;
+		}
+
 		$this->newRecordData = $avalues;
 		$this->newRecordBlobFields = $blobfields;
 	}
@@ -546,18 +563,7 @@ class AddPage extends RunnerPage
 		if( CheckTablePermissions($this->tName, "A") )
 			return true;
 
-		if( isLoggedAsGuest() || !isLogged() )
-		{
-			$this->setMessage( "Sua sessão expirou."
-				. "<a href='#' id='loginButtonContinue" . $this->id . "'>" . "Login" . "</a>"
-				. "para salvar dados." );
-		}
-		else
-		{
-			$this->setMessage( 'You have no permissions to complete this action.' );
-		}
-
-		return false;
+		return parent::recheckUserPermissions();
 	}
 
 	/**
@@ -687,7 +693,7 @@ class AddPage extends RunnerPage
 		else
 			$infoMessage = "<strong><<< "."Registro foi adicionado"." >>></strong>";
 
-		if( $this->mode != ADD_SIMPLE && $this->mode != ADD_MASTER || !count($this->keys) )
+		if( $this->mode != ADD_SIMPLE && $this->mode != ADD_MASTER || !$this->keys )
 		{
 			$this->setMessage( $infoMessage );
 			return;
@@ -738,7 +744,7 @@ class AddPage extends RunnerPage
 	{
 		global $globalEvents;
 		$returnJSON = array();
-
+		
 		if( $this->action != "added" || $this->mode == ADD_SIMPLE )
 			return $returnJSON;
 
@@ -755,6 +761,7 @@ class AddPage extends RunnerPage
 			if( isset($_SESSION["count_passes_captcha"]) || $_SESSION["count_passes_captcha"] > 0 || $_SESSION["count_passes_captcha"] < 5 )
 				$returnJSON['hideCaptcha'] = true;
 		}
+
 
 		if( !$this->insertedSuccessfully )
 			return $returnJSON;
@@ -802,11 +809,15 @@ class AddPage extends RunnerPage
 		$showValues = array();
 		$showFields = array();
 		$showRawValues = array();
+
+		$listPSet = $this->getListPSet();
+
 		$listViewControls = new ViewControlsContainer( 
-			new ProjectSettings( $this->tName, PAGE_LIST ), 
+			$listPSet,
 			$this->pageType, 
 			$this 
 		);
+
 		foreach( $this->pSet->getFieldsList() as $f )
 		{
 			$control = $listViewControls->getControl( $f );
@@ -819,6 +830,11 @@ class AddPage extends RunnerPage
 				$showRawValues[ $f ] = runner_substr($data[ $f ], 0, 100);
 		}
 
+		//	reorderRows stuff
+		if( $listPSet->reorderRows() ) {
+			$returnJSON['order'] = $data[ $listPSet->reorderRowsField() ];
+		}
+
 		$returnJSON['keys'] = $jsKeys;
 		$returnJSON['vals'] = $showValues;
 		$returnJSON['fields'] = $showFields;
@@ -826,15 +842,43 @@ class AddPage extends RunnerPage
 		$returnJSON['detKeys'] = $this->getShowDetailKeys( $data );
 
 		$dmapIconsData = $this->getDashMapsIconsData( $data );
-		if( count( $dmapIconsData ) )
+		if( !!$dmapIconsData )
 			$returnJSON['mapIconsData'] = $dmapIconsData;
 
 		$fieldsIconsData = $this->getFieldMapIconsData( $data );
-		if( count( $fieldsIconsData ) )
+		if( !!$fieldsIconsData )
 			$returnJSON['fieldsMapIconsData'] = $fieldsIconsData;
 
-		if( $this->mode == ADD_INLINE || $this->mode == ADD_POPUP || $this->mode == ADD_DASHBOARD )
-		{
+		
+		if( $this->forSpreadsheetGrid && $haveData ) {
+			//  new added grid row id	
+			$newRowId = $this->newRowId ? $this->newRowId : $this->id;
+			$editPage = $this->getRelatedInlineEditPage( $this->hostPageName, $this->keys, $newRowId );
+
+			$returnJSON["editFields"] = $listPSet->getInlineEditFields();
+			
+			// use "htmlControls" key no to interfire with dash html data
+			$returnJSON["htmlControls"] = array();
+			foreach( $listPSet->getInlineEditFields() as $fName ) {
+				$controls = $editPage->getContolMapData( $fName, $newRowId, $data, $editPage->editFields );
+				// set edit page controlsMap
+				$editPage->fillControlsMap( $controls );
+				
+				if( $editPage->getEditFormat( $fName ) == EDIT_FORMAT_READONLY )
+					$editPage->readOnlyFields[ $fName ] = $this->showDBValue( $fName, $data );
+				
+				$returnJSON["htmlControls"][ $fName ] = $editPage->getSpreadsheetControlMarkup( $fName, $newRowId, $data );
+			}
+			
+			$returnJSON["pageId"] = $newRowId;
+			
+			$editPage->fillSetCntrlMaps();
+			// contols map for spreadsheet inline edit controls
+			$returnJSON["spreadControlsMap"] = $editPage->controlsHTMLMap;
+		}
+		
+		
+		if( $this->mode == ADD_INLINE || $this->mode == ADD_POPUP || $this->mode == ADD_DASHBOARD ) {	
 			$returnJSON['noKeys'] = !$haveData;
 			$returnJSON['keyFields'] = $keyFields;
 			$returnJSON['rawVals'] = $showRawValues;
@@ -859,7 +903,8 @@ class AddPage extends RunnerPage
 		{
 			$_SESSION["message_add"] = $this->message ? $this->message : "";
 			$returnJSON['afterAddId'] = $this->afterAdd_id;
-			$returnJSON['mKeys'] = $this->getDetailTablesMasterKeys();
+			$tData = array();
+			$returnJSON['mKeys'] = $this->getDetailTablesMasterKeys( $tData );
 
 			if( $this->mode == ADD_MASTER_POPUP || $this->mode == ADD_MASTER_DASH )
 			{
@@ -909,7 +954,7 @@ class AddPage extends RunnerPage
 	/**
 	 * @return Array
 	 */
-	protected function getDetailTablesMasterKeys()
+	protected function getDetailTablesMasterKeys( $data )
 	{
 		if( !$this->isShowDetailTables || $this->mobileTemplateMode() )
 			return array();
@@ -1064,7 +1109,7 @@ class AddPage extends RunnerPage
 	public function getCurrentRecord()
 	{
 		$data = array();
-		if ( $this->masterTable && count($this->masterKeysReq) > 0 )
+		if ( $this->masterTable && !!$this->masterKeysReq )
 		{
 			foreach ($this->detailKeysByM  as $key => $detKey )
 			{
@@ -1267,96 +1312,109 @@ class AddPage extends RunnerPage
 	{
 		$controlFields = $this->addFields;
 
-		if( $this->mode == ADD_INLINE ) //#9069
-			$controlFields = $this->removeHiddenColumnsFromInlineFields( $controlFields, $this->screenWidth, $this->screenHeight, $this->orientation );
+		if( $this->mode == ADD_INLINE ) { //#9069
+			$controlFields = $this->removeHiddenColumnsFromInlineFields( 
+				$controlFields, 
+				$this->screenWidth, 
+				$this->screenHeight, 
+				$this->orientation 
+			);
+		}
 
-		$control = array();
-
-		foreach($controlFields as $fName)
-		{
-			$gfName = GoodFieldName($fName);
-			$isDetKeyField = in_array($fName, $this->detailKeysByM);
-
-
-			$controls = array();
-			$controls["controls"] = array();
-			$controls["controls"]["id"] = $this->id;
-			$controls["controls"]["ctrlInd"] = 0;
-			$controls["controls"]["fieldName"] = $fName;
-
-			if ( in_array($fName, $this->errorFields))
-			{
-				$controls["controls"]["isInvalid"] = true;
-			}
-
-			$parameters = array();
-			$parameters["id"] = $this->id;
-			$parameters["ptype"] = PAGE_ADD;
-			$parameters["field"] = $fName;
-			$parameters["value"] = @$this->defvalues[ $fName ];
-			$parameters["pageObj"] = $this;
-
-			if( !$isDetKeyField )
-			{
-				$parameters["validate"] = $this->pSet->getValidation($fName);
-
-				if( $this->pSet->isUseRTE($fName) )
-					$_SESSION[ $this->sessionPrefix."_".$fName."_rte" ] = @$this->defvalues[ $fName ];
-			}
-
-			//if richEditor for field
-			if( $this->pSet->isUseRTE($fName) )
-			{
-				$parameters["mode"] = "add";
-				$controls["controls"]["mode"] = "add";
-			}
-			else
-			{
-				$controlMode = $this->mode == ADD_INLINE ? "inline_add" : "add";
-				$parameters["mode"] = $controlMode;
-				$controls["controls"]["mode"] = $controlMode;
-			}
-
-			if( $isDetKeyField && $fName )
-			{
-				$controls["controls"]["value"] = @$this->defvalues[ $fName ];
-
-				$parameters["extraParams"] = array();
-				$parameters["extraParams"]["getDetKeyReadOnlyCtrl"] = true;
-
+		foreach( $controlFields as $fName ) {
+			$isDetKeyField = in_array( $fName, $this->detailKeysByM );
+			if( $isDetKeyField ) {
 				// to the ReadOnly control show the detail key control's value
-				$this->readOnlyFields[ $fName ] = $this->showDBValue($fName, $this->defvalues);
+				$this->readOnlyFields[ $fName ] = $this->showDBValue( $fName, $this->defvalues );
 			}
 
-			if ( $this->isBootstrap() )
-			{
-				$firstElementId = $this->getControl($fName, $this->id)->getFirstElementId();
-				if ( $firstElementId )
-				{
-					$this->xt->assign("labelfor_" . goodFieldName($fName), $firstElementId);
-				}
+			if( $this->isBootstrap() ) {
+				$firstElementId = $this->getControl( $fName, $this->id )->getFirstElementId();
+				if( $firstElementId )
+					$this->xt->assign( "labelfor_" . GoodFieldName( $fName ), $firstElementId );
 			}
+			
+			$parameters = $this->getEditContolParams( $fName, $this->id, $this->defvalues );
+			$this->xt->assign_function( GoodFieldName( $fName )."_editcontrol", "xt_buildeditcontrol", $parameters );
 
-			$this->xt->assign_function( $gfName."_editcontrol", "xt_buildeditcontrol", $parameters );
-
-			$preload = $this->fillPreload($fName, $controlFields, $this->defvalues);
-			if( $preload !== false )
-			{
-				$controls["controls"]["preloadData"] = $preload;
-				if( !@$this->defvalues[ $fName ] && count($preload["vals"]) > 0 )
-					$this->defvalues[ $fName ] = $preload["vals"][0];
-			}
-
+			$controls = $this->getContolMapData( $fName, $this->id, $this->defvalues, $controlFields );	
+			if ( in_array( $fName, $this->errorFields ) )
+				$controls["controls"]["isInvalid"] = true;
+			
 			$this->fillControlsMap( $controls );
+			
 			$this->fillFieldToolTips( $fName );
 			$this->fillControlFlags( $fName );
 
 			// fill special settings for a time picker
 			if( $this->pSet->getEditFormat($fName) == "Time" )
-				$this->fillTimePickSettings( $fName, @$this->defvalues[$fName] );
+				$this->fillTimePickSettings( $fName, @$this->defvalues[ $fName ] );
 		}
+	}	
+
+	public function getContolMapData( $fName, $recId, &$data, $pageFields ) {
+		$controls = array();
+		$controls["controls"] = array();
+		$controls["controls"]["id"] = $recId;
+		$controls["controls"]["ctrlInd"] = 0;
+		$controls["controls"]["fieldName"] = $fName;
+
+		//if richEditor for field
+		if( $this->pSet->isUseRTE( $fName ) )
+			$controls["controls"]["mode"] = "add";
+		else
+			$controls["controls"]["mode"] = $this->mode == ADD_INLINE ? "inline_add" : "add";
+
+		$isDetKeyField = in_array( $fName, $this->detailKeysByM );
+		if( $isDetKeyField  )
+			$controls["controls"]["value"] = $data[ $fName ];
+		
+		$preload = $this->fillPreload( $fName, $pageFields, $data );
+		if( $preload !== false ) {
+			$controls["controls"]["preloadData"] = $preload;
+			if( !$data[ $fName ] && $preload["vals"] )
+				$data[ $fName ] = $preload["vals"][0];
+		}
+		
+		return $controls;
+	}
+	
+	/**
+	 *
+	 */
+	public function getEditContolParams( $fName, $recId, &$data ) {		
+		$parameters = array();
+		$parameters["id"] = $recId;
+		$parameters["ptype"] = PAGE_ADD;
+		$parameters["field"] = $fName;
+		$parameters["value"] = $data[ $fName ];
+		$parameters["pageObj"] = $this;
+
+		if( $this->getEditFormat( $fName ) !== EDIT_FORMAT_READONLY ) {
+			$parameters["validate"] = $this->pSet->getValidation( $fName );
+
+			if( $this->pSet->isUseRTE($fName) )
+				$_SESSION[ $this->sessionPrefix."_".$fName."_rte" ] = $data[ $fName ];
+		} 
+
+		//if richEditor for field
+		if( $this->pSet->isUseRTE( $fName ) )
+			$parameters["mode"] = "add";
+		else
+			$parameters["mode"] = $this->mode == ADD_INLINE ? "inline_add" : "add";
+
+		return $parameters;	
 	}
 
+	public function getEditFormat( $field ) {
+		$isDetKeyField = in_array( $field, $this->detailKeysByM );
+		if( $isDetKeyField ) {
+			return EDIT_FORMAT_READONLY;
+		}
+		return parent::getEditFormat( $field );
+	}
+
+	
 	/**
 	 * Set details preview on the add master page
 	 */
@@ -1371,10 +1429,10 @@ class AddPage extends RunnerPage
 
 		$dpParams = $this->getDetailsParams( $this->id );
 
-		$this->jsSettings['tableSettings'][ $this->tName ]['isShowDetails'] = count( $dpParams ) > 0;
+		$this->jsSettings['tableSettings'][ $this->tName ]['isShowDetails'] = !!$dpParams;
 		$this->jsSettings['tableSettings'][ $this->tName ]['dpParams'] = array('tableNames' => $dpParams['strTableNames'], 'ids' => $dpParams['ids']);
 
-		if( !count($dpParams['ids']) )
+		if( !$dpParams['ids'] )
 			return;
 
 		$this->xt->assign("detail_tables", true);
@@ -1452,14 +1510,17 @@ class AddPage extends RunnerPage
 			$this->xt->assign("flybody", true);
 		}
 
-		if( $this->mode == ADD_ONTHEFLY /*|| $this->mode == ADD_MASTER*/ || $this->mode == ADD_POPUP || $this->mode == ADD_DASHBOARD || $this->mode == ADD_MASTER_DASH )
+		if( $this->mode == ADD_ONTHEFLY 
+		  /*|| $this->mode == ADD_MASTER*/ 
+			|| $this->mode == ADD_POPUP 
+			|| $this->mode == ADD_DASHBOARD 
+			|| $this->mode == ADD_MASTER_DASH )
 		{
 			$this->xt->assign("body", true);
 			$this->xt->assign("footer", false);
 			$this->xt->assign("header", false);
 			$this->xt->assign("flybody", $this->body);
 		}
-
 	}
 
 	/**
@@ -1489,7 +1550,8 @@ class AddPage extends RunnerPage
 		if( $this->eventsObject->exists("BeforeShowAdd") )
 			$this->eventsObject->BeforeShowAdd($this->xt, $templatefile, $this);
 
-		$this->displayMasterTableInfo();
+		if( $this->mode != ADD_INLINE && $this->mode != ADD_ONTHEFLY )
+			$this->displayMasterTableInfo();
 		// invoked after displayMasterTableInfo to add master viewcontrols maps
 		$this->fillSetCntrlMaps();
 
@@ -1511,11 +1573,17 @@ class AddPage extends RunnerPage
 
 			$this->xt->load_template( $templatefile );
 
-			$returnJSON["html"] = array();
-			foreach($this->addFields as $fName)
-			{
-				$returnJSON["html"][ $fName ] = $this->xt->fetchVar(GoodFieldName($fName)."_editcontrol");
+			$returnJSON["htmlControls"] = array();
+			foreach( $this->addFields as $fName ) {
+				$returnJSON["htmlControls"][ $fName ] = $this->xt->fetchVar( GoodFieldName($fName)."_editcontrol" );
 			}
+
+			$listPSet = $this->getListPSet();
+			if( $listPSet->reorderRows() ) {
+				//	provisional order value, to be adjusted at the time of saving
+				$returnJSON['order'] = $this->getMaxOrderValue( $listPSet ) + 1;
+			}
+
 
 			global $pagesData;
 			$returnJSON["pagesData"] = $pagesData;
@@ -1620,7 +1688,8 @@ class AddPage extends RunnerPage
 	 */
 	public function checkIfToAddOwnerIdValue( $ownerField, $currentValue )
 	{
-		return $this->pSet->getOriginalTableName() == $this->pSet->getOwnerTable( $ownerField ) && !$this->isAutoincPrimaryKey( $ownerField )
+		return originalTableField( $ownerField, $this->pSet ) // legacy
+			&& !$this->isAutoincPrimaryKey( $ownerField )
 			&& ( !CheckTablePermissions($this->tName, 'M') || !strlen($currentValue) );
 	}
 
@@ -1633,16 +1702,6 @@ class AddPage extends RunnerPage
 	{
 		$keyFields = $this->pSet->getTableKeys();
 		return count($keyFields) == 1 && in_array($field, $keyFields) && $this->pSet->isAutoincField( $field );
-	}
-
-
-	/**
-	 * Set the page's message
-	 * @param String message
-	 */
-	public function setMessage( $message )
-	{
-		$this->message = $message;
 	}
 
 	/**
@@ -1725,7 +1784,7 @@ class AddPage extends RunnerPage
 
 		// The user is logged in but lacks necessary permissions
 		// redirect to List page or Menu.
-		if( isLogged() && !isLoggedAsGuest() )
+		if( isLogged() && !Security::isGuest() )
 		{
 			Security::redirectToList( $table );
 			return false;
@@ -1822,6 +1881,13 @@ class AddPage extends RunnerPage
 		$dc->filter = $this->getSecurityCondition();
 
 		return $dc;
+	}
+
+	protected function getListPSet() {
+		if( !$this->listPagePSet )  {
+			$this->listPagePSet = new ProjectSettings( $this->tName, PAGE_LIST, $this->hostPageName, $this->pageTable );
+		}
+		return $this->listPagePSet;
 	}
 }
 ?>

@@ -103,6 +103,62 @@ function InitLookupLinks()
 			$lookupTableLinks["adm_pacientes"]["adm_agenda_1.age_Paciente"] = array();
 		}
 		$lookupTableLinks["adm_pacientes"]["adm_agenda_1.age_Paciente"]["edit"] = array("table" => "adm_agenda_1", "field" => "age_Paciente", "page" => "edit");
+		if( !isset( $lookupTableLinks["adm_pacientes"] ) ) {
+			$lookupTableLinks["adm_pacientes"] = array();
+		}
+		if( !isset( $lookupTableLinks["adm_pacientes"]["adm_pacientes_documentos.Paciente"] )) {
+			$lookupTableLinks["adm_pacientes"]["adm_pacientes_documentos.Paciente"] = array();
+		}
+		$lookupTableLinks["adm_pacientes"]["adm_pacientes_documentos.Paciente"]["edit"] = array("table" => "adm_pacientes_documentos", "field" => "Paciente", "page" => "edit");
+		if( !isset( $lookupTableLinks["adm_tipo_documentos"] ) ) {
+			$lookupTableLinks["adm_tipo_documentos"] = array();
+		}
+		if( !isset( $lookupTableLinks["adm_tipo_documentos"]["adm_pacientes_documentos.Tipo_Documento"] )) {
+			$lookupTableLinks["adm_tipo_documentos"]["adm_pacientes_documentos.Tipo_Documento"] = array();
+		}
+		$lookupTableLinks["adm_tipo_documentos"]["adm_pacientes_documentos.Tipo_Documento"]["edit"] = array("table" => "adm_pacientes_documentos", "field" => "Tipo_Documento", "page" => "edit");
+		if( !isset( $lookupTableLinks["adm_campos_adicionais"] ) ) {
+			$lookupTableLinks["adm_campos_adicionais"] = array();
+		}
+		if( !isset( $lookupTableLinks["adm_campos_adicionais"]["adm_campos_paciente.Campo"] )) {
+			$lookupTableLinks["adm_campos_adicionais"]["adm_campos_paciente.Campo"] = array();
+		}
+		$lookupTableLinks["adm_campos_adicionais"]["adm_campos_paciente.Campo"]["edit"] = array("table" => "adm_campos_paciente", "field" => "Campo", "page" => "edit");
+		if( !isset( $lookupTableLinks["adm_pacientes"] ) ) {
+			$lookupTableLinks["adm_pacientes"] = array();
+		}
+		if( !isset( $lookupTableLinks["adm_pacientes"]["adm_campos_paciente.Paciente"] )) {
+			$lookupTableLinks["adm_pacientes"]["adm_campos_paciente.Paciente"] = array();
+		}
+		$lookupTableLinks["adm_pacientes"]["adm_campos_paciente.Paciente"]["edit"] = array("table" => "adm_campos_paciente", "field" => "Paciente", "page" => "edit");
+		if( !isset( $lookupTableLinks["adm_campos_adicionais"] ) ) {
+			$lookupTableLinks["adm_campos_adicionais"] = array();
+		}
+		if( !isset( $lookupTableLinks["adm_campos_adicionais"]["adm_lista_variavel.idCampo"] )) {
+			$lookupTableLinks["adm_campos_adicionais"]["adm_lista_variavel.idCampo"] = array();
+		}
+		$lookupTableLinks["adm_campos_adicionais"]["adm_lista_variavel.idCampo"]["edit"] = array("table" => "adm_lista_variavel", "field" => "idCampo", "page" => "edit");
+		if( !isset( $lookupTableLinks["adm_eventos"] ) ) {
+			$lookupTableLinks["adm_eventos"] = array();
+		}
+		if( !isset( $lookupTableLinks["adm_eventos"]["adm_lista_variavel.Lista"] )) {
+			$lookupTableLinks["adm_eventos"]["adm_lista_variavel.Lista"] = array();
+		}
+		$lookupTableLinks["adm_eventos"]["adm_lista_variavel.Lista"]["edit"] = array("table" => "adm_lista_variavel", "field" => "Lista", "page" => "edit");
+		if( !isset( $lookupTableLinks["adm_pacientes"] ) ) {
+			$lookupTableLinks["adm_pacientes"] = array();
+		}
+		if( !isset( $lookupTableLinks["adm_pacientes"]["adm_inscricoes.idPaciente"] )) {
+			$lookupTableLinks["adm_pacientes"]["adm_inscricoes.idPaciente"] = array();
+		}
+		$lookupTableLinks["adm_pacientes"]["adm_inscricoes.idPaciente"]["edit"] = array("table" => "adm_inscricoes", "field" => "idPaciente", "page" => "edit");
+		if( !isset( $lookupTableLinks["adm_eventos"] ) ) {
+			$lookupTableLinks["adm_eventos"] = array();
+		}
+		if( !isset( $lookupTableLinks["adm_eventos"]["adm_inscricoes.idEvento"] )) {
+			$lookupTableLinks["adm_eventos"]["adm_inscricoes.idEvento"] = array();
+		}
+		$lookupTableLinks["adm_eventos"]["adm_inscricoes.idEvento"]["edit"] = array("table" => "adm_inscricoes", "field" => "idEvento", "page" => "edit");
 }
 
 ?>

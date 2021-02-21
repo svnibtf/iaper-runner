@@ -31,9 +31,9 @@ function GetImageFromDB( $params )
 
 	$field = $params["field"];
 	$connection = $cman->byTable( $table );
-	
+
 	$dc = new DsCommand();
-	$dc->keys = $params["keys"];		
+	$dc->keys = $params["keys"];
 	$dc->filter = Security::SelectCondition( "S", $pSet );
 	$dataSource = getDataSource( $table, $pSet, $connection );
 	$data = $dataSource->getSingle( $dc )->fetchAssoc();
@@ -187,8 +187,6 @@ function checkTableName($shortTName )
 
 	if ("login" == $shortTName )
 		return true;
-	if ("procurar_por_profissionais" == $shortTName )
-		return true;
 	if ("adm_pacientes1" == $shortTName )
 		return true;
 	if ("fluxo_de_recebimentos" == $shortTName )
@@ -198,6 +196,24 @@ function checkTableName($shortTName )
 	if ("visaogeral" == $shortTName )
 		return true;
 	if ("adm_agenda_1" == $shortTName )
+		return true;
+	if ("adm_pacientes_documentos" == $shortTName )
+		return true;
+	if ("adm_tipo_documentos" == $shortTName )
+		return true;
+	if ("adm_pagamento_avulso" == $shortTName )
+		return true;
+	if ("adm_campos_adicionais" == $shortTName )
+		return true;
+	if ("adm_campos_paciente" == $shortTName )
+		return true;
+	if ("adm_splits" == $shortTName )
+		return true;
+	if ("adm_eventos1" == $shortTName )
+		return true;
+	if ("adm_lista_variavel" == $shortTName )
+		return true;
+	if ("adm_inscricoes" == $shortTName )
 		return true;
 	return false;
 }
@@ -260,15 +276,6 @@ function GetTablesList($pdfMode = false)
 	}
 	$tableAvailable = true;
 	if( $checkPermissions ) {
-		$strPerm = GetUserPermissions("Procurar por Profissionais");
-		$tableAvailable = ( strpos($strPerm, "P") !== false
-			|| $pdfMode && strpos($strPerm, "S") !== false );
-	}
-	if( $tableAvailable ) {
-		$arr[]="Procurar por Profissionais";
-	}
-	$tableAvailable = true;
-	if( $checkPermissions ) {
 		$strPerm = GetUserPermissions("adm_pacientes");
 		$tableAvailable = ( strpos($strPerm, "P") !== false
 			|| $pdfMode && strpos($strPerm, "S") !== false );
@@ -312,6 +319,87 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="adm_agenda_1";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("adm_pacientes_documentos");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="adm_pacientes_documentos";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("adm_tipo_documentos");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="adm_tipo_documentos";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("adm_pagamento_avulso");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="adm_pagamento_avulso";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("adm_campos_adicionais");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="adm_campos_adicionais";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("adm_campos_paciente");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="adm_campos_paciente";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("adm_splits");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="adm_splits";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("adm_eventos");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="adm_eventos";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("adm_lista_variavel");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="adm_lista_variavel";
+	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("adm_inscricoes");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="adm_inscricoes";
+	}
 	return $arr;
 }
 
@@ -322,12 +410,20 @@ function GetTablesListWithoutSecurity()
 {
 	$arr = array();
 	$arr[]="login";
-	$arr[]="Procurar por Profissionais";
 	$arr[]="adm_pacientes";
 	$arr[]="Fluxo de Recebimentos";
 	$arr[]="DashBoard";
 	$arr[]="VisaoGeral";
 	$arr[]="adm_agenda_1";
+	$arr[]="adm_pacientes_documentos";
+	$arr[]="adm_tipo_documentos";
+	$arr[]="adm_pagamento_avulso";
+	$arr[]="adm_campos_adicionais";
+	$arr[]="adm_campos_paciente";
+	$arr[]="adm_splits";
+	$arr[]="adm_eventos";
+	$arr[]="adm_lista_variavel";
+	$arr[]="adm_inscricoes";
 	return $arr;
 }
 
@@ -418,27 +514,39 @@ function GetTotalsForTime($value)
  * @intellisense
  */
 function GetTotals( $field, $value, $stype, $iNumberOfRows, $sFormat, $ptype, $pSet, $useRawValue , $pageObject )
-{		
+{
 	if( $stype == "AVERAGE" )
 	{
 		if( !$iNumberOfRows )
 			return "";
-		
+
 		if( $sFormat == FORMAT_TIME ) {
 			if( $value ) {
 				include_once getabspath('classes/controls/ViewTimeField.php');
-				$value = ViewTimeField::getFormattedTotals( $field, round($value/$iNumberOfRows, 0), $pSet, $pageObject->pdfJsonMode() );
+				$value = ViewTimeField::getFormattedTotals( 
+					$field, 
+					round($value/$iNumberOfRows, 0), 
+					$pSet, 
+					$pageObject->pdfJsonMode(), 
+					false 
+				);
 			}
 		} else {
 			$value = round($value/$iNumberOfRows, 2);
 		}
 	}
-	
+
 	if( $stype == "TOTAL" || $stype == "SUM" )
 	{
 		if( $sFormat == FORMAT_TIME ) {
 			include_once getabspath('classes/controls/ViewTimeField.php');
-			$value = ViewTimeField::getFormattedTotals( $field, $value, $pSet, $pageObject->pdfJsonMode() );
+			$value = ViewTimeField::getFormattedTotals( 
+				$field, 
+				$value, 
+				$pSet, 
+				$pageObject->pdfJsonMode(), 
+				true 
+			);
 		}
 	}
 
@@ -911,124 +1019,20 @@ function IsBigInt($type)
 	return false;
 }
 
-function ReadUserPermissions($userID = "")
-{
-	global $gPermissionsRead, $gPermissionsRefreshTime, $caseInsensitiveUsername, $cman;
-
-	if (!strlen($userID))
-		$userID = $_SESSION["UserID"];
-
-	$needreload = false;
-	if( !isset( $_SESSION["UserRights"] ) )
-		$needreload = true;
-	elseif( !isset( $_SESSION["UserRights"][ $userID ] ) )
-		$needreload = true;
-
-	if(!$needreload && ($gPermissionsRead || time()-@$_SESSION["LastReadRights"]<=$gPermissionsRefreshTime))
-		return;
-
-	$groups = array();
-	$bIsAdmin = false;
-	$gConn = $cman->getForUserGroups();
-	$userGroups = array();
-
-	if($userID != "Guest")
-	{
-		$dataSource = Security::getUgMembersDatasource();
-		
-		$dc = new DsCommand();
-		// $userID may contain username or security plugin user id
-		$dc->filter = DataCondition::FieldEquals( 
-			"", 
-			$userID, 
-			0, 
-			$caseInsensitiveUsername ? dsCASE_INSENSITIVE : dsCASE_STRICT);
-		$qResult = $dataSource->getList( $dc );
-		
-		while( $data = $qResult->fetchAssoc() ) {
-			$groups[] = $data[""];
-		}		
-		if( !count($groups) )
-			$groups[] = -2;
-	}
-	else
-		$groups[] = -3;
-
-
-	$groupstr = "";
-	foreach($groups as $g)
-	{
-		if($groupstr != "")
-			$groupstr.= ",";
-		$groupstr.= $g;
-		if($g == -1)
-			$bIsAdmin = true;
-	}
-	$rights = array();
-
-	$sql = "select ". $gConn->addFieldWrappers( "" )
-		.", ". $gConn->addFieldWrappers( "" )
-		.", ". $gConn->addFieldWrappers( "" )
-		." from ". $gConn->addTableWrappers( "ugrights" )
-		." where ". $gConn->addFieldWrappers( "" ) ." in (".$groupstr.")";
-
-	$qResult = $gConn->query( $sql );
-	while( $data = $qResult->fetchNumeric() )
-	{
-		$table = $data[0];
-		$mask = $data[1];
-		$restrictedPages = my_json_decode( $data[2] );
-		if( !is_array( $restrictedPages )) {
-			$restrictedPages = array();
-		}
-		if(!array_key_exists( $table, $rights))
-		{
-			$rights[ $table ] = array( "mask" => $mask, "pages" => $restrictedPages );
-			continue;
-		}
-		$currentMask = $rights[ $table ]["mask"];
-		$currentPages = &$rights[ $table ]["pages"];
-		for($i = 0; $i < strlen($mask); $i++)
-		{
-			$perm = substr($mask, $i, 1);
-			if( strpos($currentMask, $perm ) === false )
-				$rights[ $table ]["mask"] .= $perm;
-		}
-		foreach( $restrictedPages as $page => $dummy ) {
-			$currentPages[$page] = true;
-		}
-	}
-
-	if(!array_key_exists("UserRights", $_SESSION))
-		$_SESSION["UserRights"] = array();
-
-	if($bIsAdmin)
-		$rights[".IsAdmin"] = true;
-	$rights[".Groups"] = $groups;
-	$_SESSION["UserRights"][ $userID ] = &$rights;
-	$_SESSION["LastReadRights"] = time();
-
-	$gPermissionsRead = true;
-}
-
-
 /**
  * @intellisense
  */
-function GetUserPermissionsDynamic($table="")
+function GetUserPermissionsDynamic( $table )
 {
 	if( !isLogged() )
 		return "";
-	global $strTableName,$gPermissionsRefreshTime,$gPermissionsRead;
-	if(!$table)
-		$table=$strTableName;
-
-	ReadUserPermissions();
-	if(IsAdmin())
+	global $gPermissionsRefreshTime,$gPermissionsRead;
+	if( Security::isAdmin() )
 	{
 	}
 
-	return @$_SESSION["UserRights"][$_SESSION["UserID"]][$table]["mask"];
+	$userRights = &Security::dynamicUserRights();
+	return $userRights[ $table ][ "mask" ];
 }
 
 
@@ -1040,43 +1044,30 @@ function GetUserPermissionsStatic( $table )
 	if( !isLogged() )
 		return "";
 
-	$extraPerm = $_SESSION["AccessLevel"] == ACCESS_LEVEL_ADMINGROUP ? 'M' : '';
-	$sUserGroup = @$_SESSION["GroupID"];
+	$sUserGroup = storageGet( "GroupID" );
+	$extraPerm = "";
 	if( $table=="login" )
 	{
 		if( $sUserGroup=="Empresa" )
 		{
-			return "AEDSPI".$extraPerm;
+						return "AEDSPI".$extraPerm;
 		}
 		if( $sUserGroup=="1" )
 		{
-			return "AEDSPI".$extraPerm;
+						return "AEDSPI".$extraPerm;
 		}
 //	default permissions
 		return "AEDSPI".$extraPerm;
-	}
-	if( $table=="Procurar por Profissionais" )
-	{
-		if( $sUserGroup=="Empresa" )
-		{
-			return "S".$extraPerm;
-		}
-		if( $sUserGroup=="1" )
-		{
-			return "S".$extraPerm;
-		}
-//	default permissions
-		return "S".$extraPerm;
 	}
 	if( $table=="adm_pacientes" )
 	{
 		if( $sUserGroup=="Empresa" )
 		{
-			return "AEDSPI".$extraPerm;
+						return "AEDSPI".$extraPerm;
 		}
 		if( $sUserGroup=="1" )
 		{
-			return "AEDSPI".$extraPerm;
+						return "AEDSPI".$extraPerm;
 		}
 //	default permissions
 		return "".$extraPerm;
@@ -1085,11 +1076,11 @@ function GetUserPermissionsStatic( $table )
 	{
 		if( $sUserGroup=="Empresa" )
 		{
-			return "AEDSPI".$extraPerm;
+						return "AEDSPI".$extraPerm;
 		}
 		if( $sUserGroup=="1" )
 		{
-			return "AEDSPI".$extraPerm;
+						return "AEDSPI".$extraPerm;
 		}
 //	default permissions
 		return "".$extraPerm;
@@ -1098,11 +1089,11 @@ function GetUserPermissionsStatic( $table )
 	{
 		if( $sUserGroup=="Empresa" )
 		{
-			return "S".$extraPerm;
+						return "S".$extraPerm;
 		}
 		if( $sUserGroup=="1" )
 		{
-			return "S".$extraPerm;
+						return "S".$extraPerm;
 		}
 //	default permissions
 		return "S".$extraPerm;
@@ -1111,11 +1102,11 @@ function GetUserPermissionsStatic( $table )
 	{
 		if( $sUserGroup=="Empresa" )
 		{
-			return "S".$extraPerm;
+						return "S".$extraPerm;
 		}
 		if( $sUserGroup=="1" )
 		{
-			return "S".$extraPerm;
+						return "S".$extraPerm;
 		}
 //	default permissions
 		return "S".$extraPerm;
@@ -1124,34 +1115,145 @@ function GetUserPermissionsStatic( $table )
 	{
 		if( $sUserGroup=="Empresa" )
 		{
-			return "AEDSPI".$extraPerm;
+						return "AEDSPI".$extraPerm;
 		}
 		if( $sUserGroup=="1" )
 		{
-			return "AEDSPI".$extraPerm;
+						return "AEDSPI".$extraPerm;
 		}
 //	default permissions
 		return "AEDSPI".$extraPerm;
+	}
+	if( $table=="adm_pacientes_documentos" )
+	{
+		if( $sUserGroup=="Empresa" )
+		{
+						return "ADESPI".$extraPerm;
+		}
+		if( $sUserGroup=="1" )
+		{
+						return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="adm_tipo_documentos" )
+	{
+		if( $sUserGroup=="Empresa" )
+		{
+						return "ADESPI".$extraPerm;
+		}
+		if( $sUserGroup=="1" )
+		{
+						return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="adm_pagamento_avulso" )
+	{
+		if( $sUserGroup=="Empresa" )
+		{
+						return "ADESPI".$extraPerm;
+		}
+		if( $sUserGroup=="1" )
+		{
+						return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="adm_campos_adicionais" )
+	{
+		if( $sUserGroup=="Empresa" )
+		{
+						return "ADESPI".$extraPerm;
+		}
+		if( $sUserGroup=="1" )
+		{
+						return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="adm_campos_paciente" )
+	{
+		if( $sUserGroup=="Empresa" )
+		{
+						return "ADESPI".$extraPerm;
+		}
+		if( $sUserGroup=="1" )
+		{
+						return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="adm_splits" )
+	{
+		if( $sUserGroup=="Empresa" )
+		{
+						return "ADESPI".$extraPerm;
+		}
+		if( $sUserGroup=="1" )
+		{
+						return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="adm_eventos" )
+	{
+		if( $sUserGroup=="Empresa" )
+		{
+						return "ADESPI".$extraPerm;
+		}
+		if( $sUserGroup=="1" )
+		{
+						return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="adm_lista_variavel" )
+	{
+		if( $sUserGroup=="Empresa" )
+		{
+						return "ADESPI".$extraPerm;
+		}
+		if( $sUserGroup=="1" )
+		{
+						return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="adm_inscricoes" )
+	{
+		if( $sUserGroup=="Empresa" )
+		{
+						return "ADESPI".$extraPerm;
+		}
+		if( $sUserGroup=="1" )
+		{
+						return "ADESPI".$extraPerm;
+		}
+//	default permissions
+		return "ADESPI".$extraPerm;
 	}
 	// grant nothing by default
 	return "";
 }
 
 /**
-* Check if the current user is admin user
+ * DEPRECATED
+ *	Check if the current user is Dynamic Permissions admin user
  * @return Boolean
  * @intellisense
  */
 function IsAdmin()
 {
-	if( !isLogged() )
-		return false;
-	if( !Security::dynamicPermissions() ) {
-		return false;
-	}
-	global $gPermissionsRefreshTime, $gPermissionsRead, $caseInsensitiveUsername;
-	ReadUserPermissions();
-	return array_key_exists(".IsAdmin", @$_SESSION["UserRights"][ $_SESSION["UserID"] ]);
+	return Security::isAdmin();
 }
 
 /**
@@ -1165,7 +1267,7 @@ function IsAdmin()
  * @return String
  * @intellisense
  */
-function GetUserPermissions($table="")
+function GetUserPermissions( $table = "" )
 {
 	global $strTableName, $globalEvents;
 	if(!$table)
@@ -1211,24 +1313,11 @@ function isLogged()
 		return true;
 	}
 
-	//	CSRF attack prevention
-	//	POST requests must come from the same site only
-	global $csrfProtectionOff;
-	if( !inRestApi() && !$csrfProtectionOff && isPostRequest() ) {
-		
-		//	cookie with SameSite=strict check
-		if( !$_SESSION["runnerSession"]  || $_SESSION["runnerSession"] !== $_COOKIE["runnerSession"] ) {
-			return false;
-		}
-		//	additional Referer header check for IE
-		if( strtoupper( hostFromUrl( $_SERVER["HTTP_REFERER"] ) ) !== strtoupper( projectHost() ) ) {
-			return false;
-		}
+	if( !Security::verifySafeCSRF() ) {
+		return false;
 	}
-	if( @$_SESSION["UserID"] )
-		return true;
 
-	return false;
+	return !!Security::getUserName();
 }
 
 
@@ -1237,19 +1326,19 @@ function isLogged()
  */
 function guestHasPermissions()
 {
-	$tables = GetTablesListWithoutSecurity();
-	if( Security::dynamicPermissions() ) {
-		ReadUserPermissions("Guest");
-		if(!count($_SESSION["UserRights"]["Guest"]))
-			return false;
-		foreach($tables as $t) {
-			if(array_key_exists( $t ,$_SESSION["UserRights"]["Guest"]))
-				return true;
+	global $gGuestHasPermissions;
+	if( $gGuestHasPermissions === -1 ) {
+		if( Security::dynamicPermissions() ) {
+			$gGuestHasPermissions = Security::guestHasDynamicPermissions()
+				? 1
+				: 0;
+		} else {
+			$gGuestHasPermissions = Security::guestHasStaticPermissions()
+				? 1
+				: 0;
 		}
-		return false;
-	} else {
-		return false;
 	}
+	return $gGuestHasPermissions === 1;
 }
 
 /**
@@ -1266,10 +1355,7 @@ function SetAuthSessionData($pUsername, &$data, $password, &$pageObject = null, 
 		$_SESSION["GroupID"] = "";
 	}
 
-
-		$_SESSION["OwnerID"] = $data["usu_id"];
-	$_SESSION["_adm_pacientes_OwnerID"] = $data["usu_id"];
-		$_SESSION["_adm_agenda_1_OwnerID"] = $data["usu_id"];
+	Security::fillTablesOwnerId( $data );
 
 	$_SESSION["UserData"] = $data;
 
@@ -1282,7 +1368,7 @@ function SetAuthSessionData($pUsername, &$data, $password, &$pageObject = null, 
 /**
  * @intellisense
  */
-function DoLogin($callAfterLoginEvent = false, $userID = "Guest", $userName = "", $groupID = "<Guest>", $accessLevel = ACCESS_LEVEL_GUEST, $password = "", &$pageObject = null)
+function DoLogin($callAfterLoginEvent = false, $userID = "Guest", $userName = "", $groupID = "<Guest>", $accessLevel = ACCESS_LEVEL_GUEST, $password = "", $pageObject = null)
 {
 	global $globalEvents;
 
@@ -1317,53 +1403,6 @@ function DoLogin($callAfterLoginEvent = false, $userID = "Guest", $userName = ""
 /**
  * @intellisense
  */
-function CheckSecurity($strValue, $strAction, $table = "")
-{
-	if( !Security::hasLogin() ) {
-		return true;
-	}
-
-	global $cAdvSecurityMethod, $strTableName;
-	if( $table == "" )
-		$table = $strTableName;
-	$pSet = new ProjectSettings($table);
-
-	if($_SESSION["AccessLevel"]==ACCESS_LEVEL_ADMIN)
-		return true;
-
-	$strPerm = GetUserPermissions();
-	if( strpos($strPerm, "M") === false )
-	{
-		if($table=="adm_pacientes")
-		{
-
-				if(( $strAction=="Edit" || $strAction=="Delete") && !($pSet->getCaseSensitiveUsername((string)$_SESSION["_".$table."_OwnerID"])===$pSet->getCaseSensitiveUsername((string)$strValue)))
-				return false;
-		}
-		if($table=="adm_agenda_1")
-		{
-
-				if(!($pSet->getCaseSensitiveUsername((string)$_SESSION["_".$table."_OwnerID"])===$pSet->getCaseSensitiveUsername((string)$strValue)))
-				return false;
-		}
-	}
-	if( Security::permissionsAvailable() )
-	{
-//	 check user group permissions
-		$localAction = strtolower($strAction);
-		return ( $localAction == "add" && strpos($strPerm, "A") !== false ||
-			$localAction == "edit" && strpos($strPerm, "E") !== false ||
-			$localAction == "delete" && strpos($strPerm, "D") !== false ||
-			$localAction == "search" && strpos($strPerm, "S") !== false ||
-			$localAction == "import" && strpos($strPerm, "I") !== false ||
-			$localAction == "export" && strpos($strPerm, "P") !== false );
-	}
-	return true;
-}
-
-/**
- * @intellisense
- */
 function CheckTablePermissions($strTableName, $permission)
 {
 	if( strpos(GetUserPermissions($strTableName), $permission) === false )
@@ -1393,7 +1432,8 @@ function pagetypeToPermissions($pageType)
 }
 
 /**
- * Add security WHERE clause to SELECT SQL command
+ * DEPRECATED
+ * Used in webreports obnly!
  * @intellisense
  */
 function SecuritySQL($strAction, $table, $strPerm="")
@@ -1407,8 +1447,6 @@ function SecuritySQL($strAction, $table, $strPerm="")
 
    	$ownerid = @$_SESSION["_".$table."_OwnerID"];
 	$ret="";
-	if(@$_SESSION["AccessLevel"]==ACCESS_LEVEL_ADMIN)
-		return "";
 
 	$ret="";
 	if(!strlen($strPerm))
@@ -1670,8 +1708,8 @@ function DeleteUploadedFiles($pSet, $deleted_values)
 	}
 }
 
-/**	
- * combine values omiting empty and duplicate ones 
+/**
+ * combine values omiting empty and duplicate ones
 */
 function combineLookupValues( $arr )
 {
@@ -2330,57 +2368,6 @@ function showDetailTable($params)
 	$strTableName = $oldTableName;
 }
 
-
-/**
- * update record on Edit page
- * @intellisense
- */
-function DoUpdateRecordSQL( $pageObject )
-{
-	$table = $pageObject->pSet->getOriginalTableName();
-	$strWhereClause = $pageObject->getKeysWhereClause( true );
-	$evalues = $pageObject->getNewRecordData();
-	$blobfields = $pageObject->getBlobFields();
-
-	if(!count($evalues))
-		return true;
-
-	$strSQL = "update ".$pageObject->connection->addTableWrappers($table)." set ";
-	$blobs = PrepareBlobs($evalues, $blobfields, $pageObject);
-	//	construct SQL string
-	foreach($evalues as $ekey=>$value)
-	{
-		if ( $pageObject->pSet->insertNull($ekey) && trim($value) === "" )
-		{
-			$strValue = "NULL";
-		}
-		else if(in_array($ekey,$blobfields))
-			$strValue = $value;
-		else
-		{
-			if( is_null( $pageObject->cipherer ) )
-				$strValue = add_db_quotes( $ekey, $value );
-			else
-				$strValue = $pageObject->cipherer->AddDBQuotes( $ekey, $value );
-		}
-		$strSQL .= $pageObject->getTableField($ekey)."=".$strValue.", ";
-	}
-	$strSQL = substr( $strSQL, 0, strlen($strSQL) - 2 );
-	if($strWhereClause === "")
-	{
-		$strWhereClause = " (1=1) ";
-	}
-	$strSQL.=" where ".$strWhereClause;
-
-	if(SecuritySQL("Edit", $pageObject->tName))
-		$strSQL .= " and (".SecuritySQL("Edit", $pageObject->tName).")";
-
-	if( !ExecuteUpdate($pageObject, $strSQL, $blobs) )
-		return false;
-
-	return true;
-}
-
 /**
  * insert record on Add & Register pages
  * @intellisense
@@ -2425,59 +2412,7 @@ function DoInsertRecordSQL($table, &$avalues, &$blobfields, &$pageObject)
 	return true;
 }
 
-/**
- * insert record on Add page
- * @param RunnerPage &pageObject
- * @intellisense
- */
-function DoInsertRecordSQLOnAdd( &$pageObject )
-{
-	$table = $pageObject->pSet->getOriginalTableName();
-	$avalues = $pageObject->getNewRecordData();
-	$blobfields = $pageObject->getBlobFields();
-
-	//	make SQL string
-	$strSQL = "insert into ".$pageObject->connection->addTableWrappers($table)." ";
-
-	$strFields="(";
-	$strValues="(";
-	$blobs = PrepareBlobs( $avalues, $blobfields, $pageObject );
-
-	foreach($avalues as $akey => $value)
-	{
-		$strFields.= $pageObject->getTableField($akey).", ";
-
-		if ( $pageObject->pSet->insertNull($akey) && trim($value) === "" )
-		{
-			$strValues .= "NULL, ";
-		}
-		else if( in_array($akey, $blobfields) )
-			$strValues.= $value.", ";
-		else
-		{
-			if( is_null( $pageObject->cipherer ) )
-				$strValues.= add_db_quotes($akey, $value).", ";
-			else
-				$strValues.= $pageObject->cipherer->AddDBQuotes($akey, $value).", ";
-		}
-	}
-
-	if( substr($strFields, -2) == ", ")
-		$strFields = substr($strFields, 0, strlen($strFields) - 2);
-
-	if( substr($strValues, -2) == ", ")
-		$strValues = substr($strValues, 0, strlen($strValues) - 2);
-
-	$strSQL.= $strFields.") values ".$strValues.")";
-
-	if( !ExecuteUpdate($pageObject, $strSQL, $blobs) )
-		return false;
-
-	return true;
-}
-
-
-function &getEventObject($table)
+function getEventObject($table)
 {
 	global $tableEvents;
 	$ret = null;
@@ -2711,7 +2646,7 @@ function & GetPageLayout($table, $page, $suffixName = '')
 	// try open old layout first
 	$layoutName = ($shortTableName != '' ? $shortTableName.'_' : '').$page.($suffixName != '' ? '_'.$suffixName : '');
 	$oldLayoutName = $layoutName;
-	if( $shortTableName == ".global" )
+	if( $shortTableName == GLOBAL_PAGES_SHORT )
 		$oldLayoutName = $page;
 	if( $arrCustomPages[ $oldLayoutName . ".htm" ] /*||  isAdminPage( $shortTableName ) */) {
 		$layout = $page_layouts[ $oldLayoutName ];
@@ -2737,6 +2672,7 @@ function & GetPageLayout($table, $page, $suffixName = '')
 
 	global $bsProjectTheme, $bsProjectSize, $styleOverrides;
 
+	$stylepath = "";
 	$theme = $bsProjectTheme;
 	$size = $bsProjectSize;
 	$customSettings = false;
@@ -2747,6 +2683,7 @@ function & GetPageLayout($table, $page, $suffixName = '')
 	if( $override ) {
 		$theme = $override["theme"];
 		$size = $override["size"];
+		$stylepath = $override["path"];
 		$customSettings = true;
 	}
 	$layout  = new PDLayout(
@@ -2754,6 +2691,7 @@ function & GetPageLayout($table, $page, $suffixName = '')
 			$pd_pages[ $table ][ $page ],
 			$theme,
 			$size,
+			$stylepath,
 			$customSettings );
 	$all_page_layouts[ $shortTableName."_".$page ] = $layout;
 	return $layout;
@@ -2992,67 +2930,88 @@ function getLatLngByAddr($addr)
 	$apiKey = $globalSettings["apiGoogleMapsCode"];
 
 	switch( getMapProvider() ){
-		case GOOGLE_MAPS:	$url = 'https://maps.googleapis.com/maps/api/geocode/json?address='.rawurlencode($addr).'&sensor=false&key=' . $apiKey;
-				$result = my_json_decode(myurl_get_contents($url));
-				if($result['status'] == 'OK')
-				{
-					return $result['results'][0]['geometry']['location'];
-				}
-				break;
-		case OPEN_STREET_MAPS: $url = 'https://nominatim.openstreetmap.org/search/'.rawurlencode($addr).'?format=json&addressdetails=1&limit=1';
-				$result = my_json_decode(myurl_get_contents($url));
-				if($result)
-				{
-					$lat = $result[0]['lat'];
-					if( !$lat )
-						$lat = 0;
-					$lng = $result[0]['lon'];
-					if( !$lng )
-						$lng = 0;
-					return array("lat"=>$lat,"lng"=>$lng);
-				}
-				break;
-		case BING_MAPS:
-				if( !$apiKey || !$addr )
-					return false;
+		case GOOGLE_MAPS:
+			$url = 'https://maps.googleapis.com/maps/api/geocode/json?address='.rawurlencode($addr).'&sensor=false&key=' . $apiKey;
+			$result = my_json_decode(myurl_get_contents($url));
+			if( $result['status'] == 'OK' ) {
+				return $result['results'][0]['geometry']['location'];
+			}
+			break;
 
-				$url = 'https://dev.virtualearth.net/REST/v1/Locations?query='.rawurlencode( $addr ).'&output=json&key='.$apiKey;
-				$result = my_json_decode(myurl_get_contents($url));
-				if($result)
-				{
-					$lat = $result["resourceSets"][0]["resources"][0]["geocodePoints"][0]["coordinates"][0];
-					if( !$lat )
-						$lat = 0;
-					$lng = $result["resourceSets"][0]["resources"][0]["geocodePoints"][0]["coordinates"][1];
-					if( !$lng )
-						$lng = 0;
-					return array("lat"=>$lat,"lng"=>$lng);
-				}
-				break;
+		case OPEN_STREET_MAPS:
+			$url = 'https://nominatim.openstreetmap.org/search/'.rawurlencode($addr).'?format=json&addressdetails=1&limit=1';
+			$result = my_json_decode(myurl_get_contents($url));
+			if( $result ) {
+				$lat = $result[0]['lat'];
+				if( !$lat )
+					$lat = 0;
+				$lng = $result[0]['lon'];
+				if( !$lng )
+					$lng = 0;
+				return array("lat"=>$lat,"lng"=>$lng);
+			}
+			break;
+
+		case BING_MAPS:
+			if( !$apiKey || !$addr )
+				return false;
+
+			$url = 'https://dev.virtualearth.net/REST/v1/Locations?query='.rawurlencode( $addr ).'&output=json&key='.$apiKey;
+			$result = my_json_decode(myurl_get_contents($url));
+			if( $result ) {
+				$lat = $result["resourceSets"][0]["resources"][0]["geocodePoints"][0]["coordinates"][0];
+				if( !$lat )
+					$lat = 0;
+				$lng = $result["resourceSets"][0]["resources"][0]["geocodePoints"][0]["coordinates"][1];
+				if( !$lng )
+					$lng = 0;
+				return array("lat"=>$lat,"lng"=>$lng);
+			}
+			break;
+
+		case HERE_MAPS:
+			$request = new HttpRequest(
+				"https://geocode.search.hereapi.com/v1/geocode?apiKey=".$apiKey."&q=".rawurlencode( $addr ),
+				"GET"
+			);
+
+			$ret = $request->run();
+			if( !$ret["erorr"] && $ret["content"] ) {
+				$data = my_json_decode( $ret["content"] );
+				return array(
+					"lat" => $data["items"][0]["position"]["lat"],
+					"lng" => $data["items"][0]["position"]["lng"]
+				);
+			}
+			break;
+
+		case MAPQUEST_MAPS:
+			$request = new HttpRequest(
+				"http://www.mapquestapi.com/geocoding/v1/address?key=".$apiKey."&location=".rawurlencode( $addr ),
+				"GET"
+			);
+
+			$ret = $request->run();
+			if( !$ret["erorr"] && $ret["content"] ) {
+				$data = my_json_decode( $ret["content"] );
+				return array(
+					"lat" => $data["results"][0]["locations"][0]["latLng"]["lat"],
+					"lng" => $data["results"][0]["locations"][0]["latLng"]["lng"]
+				);
+			}
+			break;
 	}
 	return false;
 }
 
 /**
- * @intellisense
+ * deprecated. Used in some business templates only
  */
 function isLoggedAsGuest()
 {
 	return Security::isGuest();
 }
 
-/**
- * Check if the "Login as Guest" option is turned on
- * @return Boolean
- */
-function isGuestLoginAvailable()
-{
-	if( Security::dynamicPermissions() ) {
-		return guestHasPermissions();
-	}
-
-	return false;
-}
 
 /**
  * @intellisense
@@ -3263,7 +3222,7 @@ function initArray(&$array, $key)
  * @param {array} $arr array of inserting values
  * @param {bool} $searchId - find last inserted id or not
  * @return {array} array of keys and their values
- * @deprecated 
+ * @deprecated
  */
 function GetKeysArray($arr, $pageObject, $searchId = false)
 {
@@ -3290,15 +3249,46 @@ function GetBaseScriptsForPage($isDisplayLoading, $additionalScripts = "", $cust
 {
 	global $projectBuildKey;
 	$result = "";
-	$result .= "<script type=\"text/javascript\" src=\"".GetRootPathForResources("include/loadfirst.js?35870")."\"></script>";
+	$result .= "<script type=\"text/javascript\" src=\"".GetRootPathForResources("include/loadfirst.js?36714")."\"></script>";
 
 
 	$result .= $additionalScripts;
-	$result .= "<script type=\"text/javascript\" src=\"".GetRootPathForResources("include/lang/".getLangFileName(mlang_getcurrentlang()).".js?35870")."\"></script>";
+	$result .= "<script type=\"text/javascript\" src=\"".GetRootPathForResources("include/lang/".getLangFileName(mlang_getcurrentlang()).".js?36714")."\"></script>";
+
+
 
 	if( getMapProvider() == BING_MAPS )
 	{
 		$result .= "<script type=\"text/javascript\" src=\"https://www.bing.com/api/maps/mapcontrol?&setMkt=".getBingMapsLang()."\"></script>";
+	}
+
+	if( getMapProvider() == HERE_MAPS ) {
+		// ui infoBubble styles
+		$result .= '<link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />';
+		$result .= '<script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>';
+		$result .= '<script src="https://js.api.here.com/v3/3.1/mapsjs-core-legacy.js" type="text/javascript" charset="utf-8"></script>';
+		$result .= '<script src="https://js.api.here.com/v3/3.1/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>';
+		$result .= '<script src="https://js.api.here.com/v3/3.1/mapsjs-service-legacy.js" type="text/javascript" charset="utf-8"></script>';
+		$result .= '<script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js" type="text/javascript" charset="utf-8"></script>';
+		// ui infoBubble
+		$result .= '<script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>';
+		// clustered map
+		$result .= '<script src="https://js.api.here.com/v3/3.1/mapsjs-clustering.js" type="text/javascript" charset="utf-8"></script>';
+		// heat map
+		$result .= '<script src="https://js.api.here.com/v3/3.1/mapsjs-data.js" type="text/javascript" charset="utf-8"></script>';
+	}
+
+	if( getMapProvider() == MAPQUEST_MAPS ) {
+		$result .= '<link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>';
+		$result .= '<script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>';
+
+		// clustered map
+		$result .= '<script src="https://unpkg.com/leaflet.markercluster@1.0.6/dist/leaflet.markercluster.js"></script>';
+		$result .= '<link type="text/css" rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.0.6/dist/MarkerCluster.css"/>';
+		$result .= '<link type="text/css" rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.0.6/dist/MarkerCluster.Default.css"/>';
+
+		//heat map
+		$result .= '<script src="https://leaflet.github.io/Leaflet.heat/dist/leaflet-heat.js"></script>';
 	}
 
 	if($isDisplayLoading)
@@ -3399,6 +3389,21 @@ function getFileExtension($fileName)
 }
 
 /**
+ * Get the filename without extension
+ * @param String fileName
+ * @return String
+ */
+function getFileWoExtension($fileName)
+{
+	$pos = strrpos($fileName, ".");
+	if( $pos === FALSE )
+		return $fileName;
+
+	return substr($fileName, 0, $pos );
+}
+
+
+/**
  * Get the default db connection object
  * @return Connection
  */
@@ -3449,7 +3454,7 @@ function getBingMapsLang()
 
 function getDefaultLanguage()
 {
-	if( strlen($_SESSION["language"]) == 0 && $_SERVER['HTTP_ACCEPT_LANGUAGE'] )
+	if( strlen(@$_SESSION["language"]) == 0 && $_SERVER['HTTP_ACCEPT_LANGUAGE'] )
 	{
 		$arrWizardLang = array();
 		$arrWizardLang[] = "Portuguese(Brazil)";
@@ -3534,7 +3539,7 @@ function xt_showchart($params)
 	$chartParams['refreshTime'] = $refresh;
 	$chartParams['xmlFile'] = GetTableLink("dchartdata") . '?chartname=' . $params["chartName"] . $chartPreview .
 		'&ctype=' . $params["ctype"] .
-		'&showDetails=' . $showDetails . 
+		'&showDetails=' . $showDetails .
 		'&' . $params["stateLink"];
 
 	if( isset( $params["dash"] ) && $params["dash"] )
@@ -3754,15 +3759,15 @@ function xt_buildeditcontrol(&$params)
 		$id = $params["id"];
 
 	$validate = array();
-	if(count(@$params["validate"]))
+	if( $params["validate"] )
 		$validate = @$params["validate"];
 
 	$additionalCtrlParams = array();
-	if(count(@$params["additionalCtrlParams"]))
+	if( $params["additionalCtrlParams"] )
 		$additionalCtrlParams = @$params["additionalCtrlParams"];
 
 	$extraParams = array();
-	if( count(@$params["extraParams"]) )
+	if( $params["extraParams"] )
 		$extraParams = @$params["extraParams"];
 
 	$pageObj->getControl($field, $id, $extraParams)->buildControl(@$params["value"], $mode, $fieldNum, $validate, $additionalCtrlParams, $data);
@@ -3973,7 +3978,7 @@ function getListOfSuggests( $sfields, $table, $numberOfSuggests, $searchOpt, $se
 	{
 		// filter fields by type
 		$fType = $pSet->getFieldType( $f );
-		
+
 		//	Dates???
 		if( !IsCharType( $fType ) && !IsNumberType( $fType ) && !IsGuid( $fType )	|| in_array( $f, $detailKeys ) )
 			continue;
@@ -3982,19 +3987,9 @@ function getListOfSuggests( $sfields, $table, $numberOfSuggests, $searchOpt, $se
 			continue;
 
 		$fieldControl = $controls->getControl( $f, 1 );
-		$dc = new DsCommand();
-		$dc->filter = DataCondition::_And( array( 
-			$fieldControl->getSearchCondition( $searchFor, $searchOpt ),
-			Security::SelectCondition( "S", $pSet )
-		));
-		$dc->totals[] = array(
-			"field" => $f,
-			"total" => "distinct"
-		);
-		$dc->skipAggregated = true;
-		$dc->reccount = $numberOfSuggests;
+		$dc = $fieldControl->getSuggestCommand( $searchFor, $searchOpt, $numberOfSuggests );
 		$qResult = $dataSource->getTotals( $dc );
-	
+
 		// fill $response array with the field's suggest value
 		while( ( $row = $qResult->fetchNumeric() ) && count($response) < $numberOfSuggests )
 		{
@@ -4213,7 +4208,7 @@ function addToAssocArray( $assocArray, $arr ) {
 }
 
 function postvalue_number( $key ) {
-	return 0 + postvalue($key);
+	return (int)postvalue($key);
 }
 
 /**
@@ -4307,7 +4302,8 @@ function pageTypeShowsData( $pageType ) {
 	  || $pageType == "print"
 	  || $pageType == "rprint"
 	  || $pageType == "masterlist"
-	  || $pageType == "masterprint";
+	  || $pageType == "masterprint"
+	  || $pageType == "userinfo";
 }
 
 /**
@@ -4318,7 +4314,8 @@ function pageTypeInputsData( $pageType ) {
 	  || $pageType == "edit"
 	  || $pageType == "search"
 	  || $pageType == "register"
-	  || $pageType == "login";
+	  || $pageType == "login"
+	  || $pageType == "userinfo";
 }
 
 function base64_encode_url( $str ) {
@@ -4369,8 +4366,15 @@ function jwt_verify_decode( $jwt ) {
 	$ret = my_json_decode( base64_decode_url( $parts[1] ) );
 	if( !is_array( $ret ) )
 		return false;
+
+	//	verify expiration
 	if( !$ret[ "exp" ] || $ret[ "exp" ] <= time() )
 		return false;
+
+	// verify target host
+	if( !$ret[ "host" ] || strtoupper( $ret[ "host" ] ) !== strtoupper( projectHost() ) )
+		return false;
+
 	return $ret;
 }
 
@@ -4395,7 +4399,7 @@ function projectURL() {
 
 function projectHost() {
 	$host = $_SERVER['HTTP_X_FORWARDED_HOST'];
-	if( !$host ) 
+	if( !$host )
 		$host = $_SERVER['HTTP_HOST'];
 	return $host;
 }
@@ -4490,12 +4494,12 @@ function ldap_DN2Domain($dn)
 }
 
 function ldap_factory() {
-	return new RunnerLdap( 
-		GetGlobalData( "ADDomain", "" ), 
-		GetGlobalData( "ADServer", null ), 
-		GetGlobalData( "customLDAP", false ), 
+	return new RunnerLdap(
+		GetGlobalData( "ADDomain", "" ),
+		GetGlobalData( "ADServer", null ),
+		GetGlobalData( "customLDAP", false ),
 		GetGlobalData( "ADBaseDN", "" ),
-		GetGlobalData( "ADFollowRefs",false ) 
+		GetGlobalData( "ADFollowRefs",false )
 	);
 }
 
@@ -4508,8 +4512,8 @@ function ldap_factory() {
 function getLookupDataSource( $field, $pSet )
 {
 	global $cman;
-		
-	$lookupTable = $pSet->getLookupTable($field);		
+
+	$lookupTable = $pSet->getLookupTable($field);
 	$lookupType = $pSet->getLookupType($field);
 	if( !$lookupTable ) {
 		return NULL;
@@ -4518,7 +4522,7 @@ function getLookupDataSource( $field, $pSet )
 	if( $lookupType == LT_QUERY )
 	{
 		global $cman;
-		$connId = $cman->byTable( $lookupTable )->connId;	
+		$connId = $cman->byTable( $lookupTable )->connId;
 	} else {
 		$connId = $pSet->getNotProjectLookupTableConnId( $field );
 	}
@@ -4527,7 +4531,7 @@ function getLookupDataSource( $field, $pSet )
 
 /**
  * Get DataSource for a users table
- * @return DataSource 
+ * @return DataSource
  */
 function getLoginDataSource()
 {
@@ -4538,7 +4542,7 @@ function getLoginDataSource()
 /**
  * @table
  * @return DataSource
- * returns datasource for a database table or project entity 
+ * returns datasource for a database table or project entity
  */
 function getTableDataSource( $table, $connId ) {
 	global $cman;
@@ -4549,12 +4553,42 @@ function getTableDataSource( $table, $connId ) {
 		$pSet = new ProjectSettings( $table );
 		return getDataSource( $table, $pSet, $connection );
 	}
+	return getDbTableDataSource( $table, $connId );
+}
+
+/**
+ * @table
+ * @return DataSource
+ * returns datasource for a database table
+ */
+function getDbTableDataSource( $table, $connId ) {
 	$dbTableInfo = DB::_getTableInfo( $table, $connId );
+	global $cman;
 	if( $dbTableInfo ) {
-		return new DataSourceDbTable( $table, $connection, $dbTableInfo );
+		return new DataSourceDbTable( $table, $cman->byId( $connId ), $dbTableInfo );
 	}
 	return null;
 }
+
+function getWebDataSource( &$report ) {
+	require_once( getabspath( 'classes/datasource/datasource.php') );
+
+	$table_type = $report["table_type"];
+	$table = $report['tables'][0];
+	global $cman;
+	$connId = $cman->getDefaultConnId();
+	$connection = $cman->getDefault();
+	if( $report["table_type"] == "db" ) {
+		$dbTableInfo = DB::_getTableInfo( $table, $connId );
+		if( $dbTableInfo ) {
+			return new DataSourceWebTable( $table, $connection, $report, $dbTableInfo );
+		}
+	} else if( $report["table_type"] == "custom" ) {
+		return new DataSourceWebSQL( $connection, $report );
+	}
+	return null;
+}
+
 
 /**
  * Returns datasource for a project entity
@@ -4570,7 +4604,7 @@ function getDataSource( $table, $pSet = null, $connection = null ) {
 		global $cman;
 		$connection = $cman->byId( $pSet->getConnId() );
 	}
-	
+
 	$type = $pSet->getEntityType();
 	if( $type == titTABLE || $type == titVIEW || $type == titCHART || $type == titREPORT ) {
 		return new DataSourceProjectTable( $table, $pSet, $connection  );
@@ -4598,7 +4632,7 @@ function getRestConnection( $pSet ) {
 /**
  * Tells whether the request is REST API call
  * For use within events
- * @return Boolean 
+ * @return Boolean
  */
 function inRestApi() {
 	global $restApiCall;
@@ -4629,7 +4663,7 @@ function prepareUrl( $url, $params ) {
 		return $url;
 	}
 	$body = prepareUrlQuery( $params );
-	$glue = strpos( $url, "?" ) !== false 
+	$glue = strpos( $url, "?" ) !== false
 		? '&'
 		: '?';
 	$lastSymbol = substr( $url, strlen( $url ) - 1, 1 );
@@ -4716,6 +4750,22 @@ function storageExists( $key ) {
 	}
 }
 
+function & storageFindOrCreate( $key, $defaultValue = array() ) {
+	if( !inRestApi() ) {
+		if( !isset( $_SESSION[ $key ] ) ) {
+			$_SESSION[ $key ] = $defaultValue;
+		}
+		return $_SESSION[ $key ];
+	} else {
+		global $restStorage;
+		if( !isset( $restStorage[ $key ] ) ) {
+			$restStorage[ $key ] = $defaultValue;
+		}
+		return $restStorage[ $key ];
+	}
+}
+
+
 function requestMethod() {
 	return $_SERVER['REQUEST_METHOD'];
 }
@@ -4727,7 +4777,7 @@ function isPostRequest() {
 function runner_setcookie( $name, $value = "", $expires = 0, $path = "", $domain = "", $secure = false, $httpOnly = false, $sameSiteStrict = false ) {
 
 	//	setcookie( $name, $value, $expires, $path, $domain, $secure, $httpOnly );
-	
+
 	$options = array();
 	$options[] = $name . "=" . rawurlencode( $value ) . ";";
 	$options[] = "Path=" . $path. ";";
@@ -4784,6 +4834,146 @@ function sendEmailTemplate($toEmail, $templateFile, $data )
 	return runner_mail( array('to' => $toEmail, 'subject' => $subject, 'body' => $body, "charset" => $cCharset) );
 }
 
-	
+function base32symbols() {
+	return array(
+		'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
+		'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
+		'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X',
+		'Y', 'Z', '2', '3', '4', '5', '6', '7');
+}
+
+function generateTotpSecret() {
+	$table =& base32symbols();
+	$ret = "";
+	for( $i=0; $i < 16; ++$i ) {
+		$ret .= $table[ rand(0,31) ];
+	}
+	return $ret;
+}
+
+/**
+ * Tells whether the string is a valid TOTP secret
+ * @return Boolean
+ */
+function validateTotpSecret( $str ) {
+	if( strlen( $str ) != 16 ) {
+		return false;
+	}
+	$table =& base32symbols();
+	for( $i=0; $i < 16; ++$i ) {
+		if( array_search( $str[$i], $table ) === false ) {
+			return false;
+		}
+	}
+	return true;
+}
+
+/**
+ * Considers 'a@b' the shortest valid email address.
+ * Not technically true, but will work for most real life applications
+ * @return Boolean
+ */
+function validateEmail( $address ) {
+	return strlen( $address ) >= 3 && strpos( $address, '@' ) !== false;
+}
+
+function normalizePhoneNumber( $number ) {
+	$number = preg_replace("/[^\+\d]/", "", $number);
+
+	if( $number[0] == "+" && strlen( $number ) > 10 )
+		return $number;
+	return GetGlobalData("strCounryCode", "") . $number;
+}
+
+function maskPhoneNumber( $number )
+{
+	$smsMaskLength = GetGlobalData("smsMaskLength", 4);
+
+	$astrixStringLength = strlen( $number ) - $smsMaskLength;
+	$number = preg_replace( "/[^+]/", "*", substr($number, 0, $astrixStringLength) ).substr($number, $astrixStringLength);
+
+	return $number;
+}
+
+function maskEmailAddress( $address )
+{
+	return $address;
+}
+
+function runner_show_error($errinfo)
+{
+	// show error htm
+	require_once(getabspath("include/xtempl.php"));
+
+	$xt = new Xtempl();
+
+	if(isset($errinfo['debugRows']))
+	{
+		$xt->assign_loopsection('debugRow', $errinfo['debugRows']);
+		unset($errinfo['debugRows']);
+	}
+	$xt->bulk_assign($errinfo);
+
+	$xt->displayPartial( GetTemplateName("", "error") );
+	exit(0);
+}
+
+/**
+ * Return assoc array made from $values where $keys are new array keys
+ * [ "id", "name" ], [ 10, "Homer" ] => array( "id" => 10, "name" => "Homer" )
+ * @param Array keys
+ * @param Array values
+ */
+function numericToAssoc( $keys, $values ) {
+	$ret = array();
+	foreach( $keys as $i => $k ) {
+		$ret[ $k ] = $values[ $i ];
+	}
+	return $ret;
+}
+
+/**
+ * find element in array where value is an array itself
+  */
+function findArrayInArray( $arr, $valueArr ) {
+	foreach( $arr as $key => $value ) {
+		if( count( $value ) != count( $valueArr ) ) {
+			continue;
+		}
+
+		//	find out if $valueArr == $value
+		$equal = true;
+		foreach( $value as $k => $v ) {
+			if( $valueArr[ $k ] != $v ) {
+				$equal = false;
+				break;
+			}
+		}
+
+		if( $equal ) {
+			return $key;
+		}
+	}
+	return false;
+}
+
+/**
+ * LEGACY
+ * Tells if the field comes from the original main table
+ * This function helps automatically exclude joined and calculated fields from Update/Insert queries.
+ * We don't do that anymore, it only supports legacy logic.
+ * Should return true in all dubious cases
+ * @return Boolean
+ */
+function originalTableField( $field, $pSet ) {
+	$entityType = $pSet->getEntityType();
+	if( $entityType != titTABLE && $entityType != titVIEW ) {
+		return true;
+	}
+	$fieldTable = $pSet->getOwnerTable( $field );
+	return $fieldTable == $pSet->getStrOriginalTableName();
+	//	the alternative could involve reading table info with DB::_getTableInfo and checking against field list.
+	//	However that will not work well with aliases & small/large letters in the field names
+}
 
 ?>

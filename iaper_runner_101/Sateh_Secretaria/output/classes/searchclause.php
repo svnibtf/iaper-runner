@@ -27,7 +27,7 @@ class SearchClause extends SearchClauseBase
 	 * Array of fields for basic search
 	 * @var array
 	 */
-	protected $searchFieldsArr = array();
+	public $searchFieldsArr = array();
 
 	protected $googleLikeFields = array();
 
@@ -192,275 +192,12 @@ class SearchClause extends SearchClauseBase
 	}
 
 	/**
-	 * Build where for united search
-	 * Params are common for advanced search and search panel on list
-	 * Use in new projects
-	 *
-	 * @param Array fieldsArr	An array of table field names
-	 * @public
-	 * @return string
-	 */
-	public function buildItegratedWhere($fieldsArr, $editControls = null)
-	{
-		if( !count($fieldsArr) )
-			return '';
-
-		if( !$editControls )
-			$editControls = $this->getLocalEditControls();
-
-		$resWhere = '';
-		if( !$this->haveAggregateFields || !$this->advancedSearchActive ) //#5083
-			$resWhere = $this->getSimpleSearchWhere($fieldsArr, $editControls);
-
-
-		$srchCriteriaCombineType = $this->getCriteriaCombineType();
-		$srchFields = &$this->_where["_srchFields" ];
-
-		// if there are fields for build advanced where
-		$sWhere = '';
-		if( count($srchFields) )
-		{
-			// prepare vars
-			$sWhere = $srchCriteriaCombineType=="and" ? "(1=1" : "(1=0";
-			$prevSrchFieldName = '';
-
-			// build where
-			foreach ($srchFields as $ind => $srchF)
-			{
-				if( in_array($srchF['fName'], $fieldsArr) && !isset( $this->customFieldSQLConditions[ $srchF['fName'] ] ) )
-				{
-					$control = $editControls->getControl($srchF['fName'], SEARCHID_PANEL + $ind);
-					$where = $control->getSearchWhere($srchF['value1'], $srchF['opt'], $srchF['value2'], $srchF['eType']);
-
-					if($where)
-					{
-						// add not
-						if($srchF['not'])
-						{
-							$where="not (".$where.")";
-						}
-						// and|or depends on search type
-						if($srchCriteriaCombineType=="and")
-						{
-							// add ( if we add new clause block for same field name
-							$sWhere .= ($prevSrchFieldName != $srchF['fName'] ? ") and (" : " or ").$where;
-						}
-						else
-						{
-							$sWhere .= " or ".$where;
-						}
-					}
-					$prevSrchFieldName = $srchF['fName'];
-				}
-			}
-			// add ) to final field block clause
-			$sWhere .= ')';
-		}
-
-		$resWhere = whereAdd($resWhere, $sWhere);
-
-		foreach( $this->customFieldSQLConditions as $field => $sql )
-		{
-			if( !strlen( $resWhere ) )
-				$resWhere =  "(". $sql .")";
-			else
-			{
-				if( $srchCriteriaCombineType == "and" )
-					$resWhere.= " and (". $sql .")";
-				else
-					$resWhere.= " or (". $sql .")";
-
-			}
-		}
-
-		return $resWhere;
-	}
-
-	/**
-	 *
-	 */
-	protected function getSimpleSearchWhere($fieldsArr, $editControls)
-	{
-		$simpleSrch = $this->_where["_simpleSrch" ];
-		if( trim($simpleSrch) === '%' )
-			$simpleSrch = '['.$simpleSrch.']';
-
-		$simpleSrchOption = $this->_where["simpleSrchTypeComboOpt" ];
-
-		if( ( $simpleSrch == null || !strlen($simpleSrch) ) && $simpleSrchOption != "Empty" )
-			return "";
-
-		// build where for any field contains search
-
-		$simpleSrchField = $this->_where["simpleSrchFieldsComboOpt" ];
-		if( $simpleSrch != null && strlen($simpleSrchField) && !isset( $this->customFieldSQLConditions[ $simpleSrchField  ] ) )
-		{
-			if( !in_array($simpleSrchField, $fieldsArr)	)
-				return "";
-
-			$where = $editControls->getControl( $simpleSrchField, SEARCHID_SIMPLE )->getSearchWhere($simpleSrch, $simpleSrchOption, "", "");
-			if( $where && $this->_where["simpleSrchTypeComboNot" ] )
-				$where = "not (". $where .")";
-
-			return $where;
-		}
-
-		if( $this->isShowSimpleSrchOpt )
-			$simpleSrchArr = array( $simpleSrch );
-		else
-			$simpleSrchArr = $this->googleLikeParseString( $simpleSrch );
-
-		$resWhereArr = array();
-		$specLookupFields = array();
-		foreach($simpleSrchArr as $ind => $simpleSrchItem)
-		{
-			$sWhere = '';
-			for($i = 0; $i < count($this->searchFieldsArr); $i++)
-			{
-				if( isset( $this->customFieldSQLConditions[ $this->searchFieldsArr[$i] ] ) )
-					continue;
-
-				if( in_array($this->searchFieldsArr[$i], $fieldsArr) && in_array($this->searchFieldsArr[$i], $this->googleLikeFields ) )
-				{
-					if( in_array( $this->searchFieldsArr[$i], $specLookupFields ) )
-						$control = $editControls->getControl($this->searchFieldsArr[$i], SEARCHID_ALL); // $ind = 0
-					else
-						$control = $editControls->getControl($this->searchFieldsArr[$i], SEARCHID_ALL + $ind);
-
-					$where = $control->getSearchWhere($simpleSrchItem, $simpleSrchOption, "", "");
-
-					if( $control->checkIfDisplayFieldSearch( $simpleSrchOption ) )
-						$specLookupFields[] = $this->searchFieldsArr[$i];
-
-					// add not
-					if(trim($where) != "" && $this->_where["simpleSrchTypeComboNot"])
-					{
-						$where ="not (".$where.")";
-					}
-					if(trim($where) != "")
-					{
-						if($sWhere)
-							$sWhere.= " or ";
-						$sWhere.= $where;
-					}
-				}
-			}
-
-			if( count($simpleSrchArr) == 1 )
-				$resWhereArr[] = $sWhere;
-			elseif( $sWhere )
-				$resWhereArr[] = "(".$sWhere.")";
-		}
-
-		return implode(" and ", $resWhereArr);
-	}
-
-	/**
 	 *
 	 */
 	protected function getLocalEditControls()
 	{
 		include_once getabspath("classes/controls/EditControlsContainer.php");
 		return new EditControlsContainer(null, $this->pSetSearch, PAGE_SEARCH, $this->cipherer);
-	}
-
-
-	/**
-	 * return where clause
-	 *
-	 * @return string
-	 */
-	public function getWhere($fieldsArr, $editControls = null)
-	{
-		switch ($this->srchType)
-		{
-			case 'showall' :
-				$sWhere = '';
-				break;
-			case 'integrated' :
-				$sWhere = $this->buildItegratedWhere($fieldsArr, $editControls);
-				break;
-			default:
-				$sWhere = '';
-		}
-		return $sWhere;
-	}
-
-	/**
-	 * Get the controls' 'INNER JOIN' clauses combined in a one space separated string
-	 * @param Object editControls		An instance of the EditControlsContainer class
-	 * @return String
-	 */
-	function getCommonJoinFromParts($editControls)
-	{
-		$joinParts = $this->getJoinFromPartsArrayBasingOnSimpleSearch($editControls);
-
-		$srchFields = &$this->_where["_srchFields" ];
-		if( !$srchFields )
-			$srchFields = array();
-
-		// add to an array of the simple search control's clauses the searh fields control's INNER JOIN clauses
-		foreach($srchFields as $ind => $srchF)
-		{
-			if( $srchF['opt'] != "Contains" && $srchF['opt'] != "Starts with" )
-				continue;
-
-			$control = $editControls->getControl($srchF['fName'], SEARCHID_PANEL + $ind);
-			$clausesData = $control->getSelectColumnsAndJoinFromPart( $srchF['value1'], $srchF['opt'], false);
-			$joinParts[] = $clausesData["joinFromPart"];
-		}
-
-		return implode(" ", $joinParts);
-	}
-
-	/**
-	 * Get an array of the simle search controls' 'INNER JOIN' clauses
-	 * @param Object editControls		An instance of the EditControlsContainer class
-	 * @return Array
-	 */
-	protected function getJoinFromPartsArrayBasingOnSimpleSearch($editControls)
-	{
-		$joinParts = array();
-		$simpleSrch = $this->_where["_simpleSrch"];
-		$simpleSrchOpt = $this->_where["simpleSrchTypeComboOpt"];
-
-		if( $this->haveAggregateFields && $this->advancedSearchActive || !strlen($simpleSrch) || $simpleSrchOpt != "Contains" && $simpleSrchOpt != "Starts with" )
-			return array();
-
-		$simleSrchField = $this->_where["simpleSrchFieldsComboOpt"];
-
-		if( strlen($simleSrchField) )
-		{
-			$control = $editControls->getControl( $simleSrchField, SEARCHID_SIMPLE );
-			$clausesData = $control->getSelectColumnsAndJoinFromPart( $simpleSrch, $simpleSrchOpt, false);
-			return array( $clausesData["joinFromPart"] );
-		}
-
-		if( $this->isShowSimpleSrchOpt )
-			$simpleSrchArr = array($simpleSrch);
-		else
-			$simpleSrchArr = $this->googleLikeParseString($simpleSrch);
-
-		$joinParts = array();
-		$skipFields = array();
-		foreach($simpleSrchArr as $ind => $simpleSrchItem)
-		{
-			foreach( $this->searchFieldsArr as $sField )
-			{
-				if( in_array($sField, $this->googleLikeFields) && !in_array($sField, $skipFields) )
-				{
-					$control = $editControls->getControl($sField, SEARCHID_ALL + $ind);
-					$clausesData = $control->getSelectColumnsAndJoinFromPart( $simpleSrchItem, $simpleSrchOpt, false );
-
-					if( $control->checkIfDisplayFieldSearch( $simpleSrchOpt ) )
-						$skipFields[] = $sField;
-
-					$joinParts[] = $clausesData["joinFromPart"];
-				}
-			}
-		}
-
-		return $joinParts;
 	}
 
 	/**
@@ -496,113 +233,6 @@ class SearchClause extends SearchClauseBase
 			$unescapedValues[] = str_replace( '\\|', '|', substr($fValue, $start, $valueLength - $start) );
 
 		return $unescapedValues;
-	}
-
-	/**
-	* Get filter's WHERE clause condition basing on the filter's type
-	*
-	* @param String filterType		A string representing the filter's type
-	* @param String fName
-	* @param String fValue
-	* @param String dbType
-	* @return String
-	*/
-	function getFilterWhereByType($filterType, $fName, $fValue, $sValue, $parentValues, $connection)
-	{
-		$fullFieldName = RunnerPage::_getFieldSQLDecrypt( $fName, $connection, $this->pSetSearch, $this->cipherer );
-
-		$fieldType = $this->pSetSearch->getFieldType($fName);
-		$dateField = IsDateFieldType($fieldType);
-		$timeField = IsTimeType($fieldType);
-
-		include_once getabspath("classes/controls/FilterControl.php");
-		include_once getabspath("classes/controls/FilterValuesList.php");
-		include_once getabspath("classes/controls/FilterIntervalSlider.php");
-		include_once getabspath("classes/controls/FilterIntervalDateSlider.php");
-
-		switch($filterType)
-		{
-			case 'interval':
-				$intervalData = $this->pSetSearch->getFilterIntervalDatabyIndex($fName, $fValue);
-				if( !count($intervalData) )
-					return "";
-
-				include_once getabspath("classes/controls/FilterControl.php");
-				include_once getabspath("classes/controls/FilterIntervalList.php");
-				return FilterIntervalList::getIntervalFilterWhere($fName, $intervalData, $this->pSetSearch, $this->cipherer, $this->tName, $connection);
-
-			case 'equals':
-				$filterWhere = FilterValuesList::getFilterWhere( $fName, $fValue, $this->pSetSearch, $fullFieldName, $this->cipherer, $connection );
-				if( !count($parentValues) )
-					return $filterWhere;
-//				return $fullFieldName."=".$this->cipherer->MakeDBValue($fName, $fValue, "", true);
-
-				$wheres = array();
-				$wheres[] = $filterWhere;
-				$parentFiltersNames = FilterValuesList::getParentFilterFields( $fName, $this->pSetSearch );
-
-				foreach( $parentFiltersNames as $key => $parentName )
-				{
-
-					$wheres[] = FilterValuesList::getFilterWhere(
-						$parentName,
-						$parentValues[$key],
-						$this->pSetSearch,
-						RunnerPage::_getFieldSQLDecrypt($parentName, $connection, $this->pSetSearch, $this->cipherer),
-						$this->cipherer,
-						$connection );
-				}
-
-				return "(".implode(" AND ", $wheres).")";
-
-			case 'checked':
-				if($fValue != "on" && $fValue != "off")
-					return "";
-
-				$bNeedQuotes = NeedQuotes($fieldType);
-
-				include_once getabspath("classes/controls/Control.php");
-				include_once getabspath("classes/controls/CheckboxField.php");
-				return CheckboxField::constructFieldWhere($fullFieldName, $bNeedQuotes, $fValue == "on", $this->pSetSearch->getFieldType($fName), $connection->dbType);
-
-			case 'slider':
-				if($dateField)
-					return FilterIntervalDateSlider::getDateSliderWhere($fName, $this->pSetSearch, $this->cipherer, $this->tName, $fValue, $sValue, $filterType, $fullFieldName);
-
-				if($timeField)
-				{
-					include_once getabspath("classes/controls/FilterIntervalTimeSlider.php");
-					return FilterIntervalTimeSlider::getTimeSliderWhere($fName, $this->pSetSearch, $this->cipherer, $this->tName, $fValue, $sValue, $filterType, $fullFieldName);
-				}
-
-				return $this->cipherer->MakeDBValue($fName, $fValue, "", true)."<=".$fullFieldName." AND ".$fullFieldName."<=".$this->cipherer->MakeDBValue($fName, $sValue, "", true);
-
-			case 'moreequal':
-				if($dateField)
-					return FilterIntervalDateSlider::getDateSliderWhere($fName, $this->pSetSearch, $this->cipherer, $this->tName, $fValue, $sValue, $filterType, $fullFieldName);
-
-				if($timeField)
-				{
-					include_once getabspath("classes/controls/FilterIntervalTimeSlider.php");
-					return FilterIntervalTimeSlider::getTimeSliderWhere($fName, $this->pSetSearch, $this->cipherer, $this->tName, $fValue, $sValue, $filterType, $fullFieldName);
-				}
-				return $this->cipherer->MakeDBValue($fName, $fValue, "", true)."<=".$fullFieldName;
-
-			case 'lessequal':
-				if($dateField)
-					return FilterIntervalDateSlider::getDateSliderWhere($fName, $this->pSetSearch, $this->cipherer, $this->tName, $fValue, $sValue, $filterType, $fullFieldName);
-
-				if($timeField)
-				{
-					include_once getabspath("classes/controls/FilterIntervalTimeSlider.php");
-					return FilterIntervalTimeSlider::getTimeSliderWhere($fName, $this->pSetSearch, $this->cipherer, $this->tName, $fValue, $sValue, $filterType, $fullFieldName);
-				}
-				return $fullFieldName."<=".$this->cipherer->MakeDBValue($fName, $fValue, "", true);
-
-
-			default:
-				return "";
-		}
 	}
 
 	/**
@@ -1051,7 +681,7 @@ class SearchClause extends SearchClauseBase
 		if( @$_REQUEST["goto"] || @$_REQUEST["orderby"] || @$_REQUEST["pagesize"] )
 			return true;
 
-		if( !count($this->searchParams) )
+		if( !$this->searchParams )
 			return false;
 
 		if( @$_REQUEST["q"] != $this->searchParams["q"] || @$_REQUEST["qs"] != $this->searchParams["qs"] || @$_REQUEST["f"] != $this->searchParams["f"])
@@ -1152,7 +782,7 @@ class SearchClause extends SearchClauseBase
 	 */
 	public function getSrchPanelAttrs()
 	{
-		return array('srchOptShowStatus' => ($this->_where["_srchOptShowStatus"] || count($this->panelSearchFields)),
+		return array('srchOptShowStatus' => ($this->_where["_srchOptShowStatus"] || $this->panelSearchFields ),
 					 'ctrlTypeComboStatus' => $this->_where["_ctrlTypeComboStatus"],
 					 'srchWinShowStatus' => $this->_where["srchWinShowStatus"]
 		);
@@ -1182,7 +812,7 @@ class SearchClause extends SearchClauseBase
 	 */
 	public function isSearchFunctionalityActivated()
 	{
-		return $this->bIsUsedSrch || $this->filtersActivated || count( $this->getSearchFields() ) > 0;
+		return $this->bIsUsedSrch || $this->filtersActivated || !!$this->getSearchFields();
 	}
 
 	/**
@@ -1197,7 +827,7 @@ class SearchClause extends SearchClauseBase
 			return false;
 		}
 
-		if(count($this->pSetSearch)){
+		if( $this->pSetSearch ){
 			$requiredSearchFields = $this->pSetSearch->getSearchRequiredFields();
 			foreach($requiredSearchFields as $fName)
 			{
@@ -1235,7 +865,7 @@ class SearchClause extends SearchClauseBase
 		else
 			$simpleSearch['value'] = $this->googleLikeParseString($this->_where["_simpleSrch"]);
 
-		if( isset($simpleSearch['value']) && count($simpleSearch['value']) && (!$simpleSearch['fname'] || $simpleSearch['fname'] == $fname) )
+		if( isset($simpleSearch['value']) && !!$simpleSearch['value'] && (!$simpleSearch['fname'] || $simpleSearch['fname'] == $fname) )
 		{
 			foreach($simpleSearch['value'] as $simpleSearchValue)
 			{
@@ -1352,7 +982,7 @@ class SearchClause extends SearchClauseBase
 			}
 		}
 
-		if(count($searchWordArr))
+		if( !!$searchWordArr )
 		{
 			return array("searchWords" => $searchWordArr, "searchOpt" => $searchOpt);
 		}
@@ -1418,7 +1048,7 @@ class SearchClause extends SearchClauseBase
 		if( $this->_where["_srchCriteriaCombineType"] == "or" )
 			return "or";
 
-		if( $this->simpleSearchActive && !count($this->_where["_srchFields"]) )
+		if( $this->simpleSearchActive && !$this->_where["_srchFields"] )
 			return "or";
 
 		return "and";
@@ -1469,7 +1099,7 @@ class SearchClause extends SearchClauseBase
 	{
 		$fieldsData = array();
 
-		if(count($this->_where["_srchFields" ])>0){ //for asp
+		if( $this->_where["_srchFields" ] ) { //for asp
 			foreach( $this->_where["_srchFields" ] as $ind => $sfData )
 			{
 				if( !$fieldsData[ $sfData['fName'] ] )
@@ -1524,7 +1154,7 @@ class SearchClause extends SearchClauseBase
 	 */
 	public function isSearchPanelByUserApiRun()
 	{
-		if ( !count( $this->_where["_srchFields" ] ) )
+		if ( !$this->_where["_srchFields" ] )
 			return false;
 
 		foreach( $this->_where["_srchFields" ] as $ind => $sfData )
@@ -1710,7 +1340,7 @@ class SearchClause extends SearchClauseBase
 		if( !$opt )
 			$opt =  $this->getDefaultSearchTypeOption($field, $this->pSetSearch);
 
-		if( !count( $this->_where["_srchFields" ] ) )
+		if( !$this->_where["_srchFields" ] )
 			$this->_where["_srchFields" ] = array();
 
 		$srchFields = &$this->_where["_srchFields" ];
@@ -1798,7 +1428,7 @@ class SearchClause extends SearchClauseBase
 			&& !$this->searchFieldsArr 
 			||  $this->_where["simpleSrchFieldsComboOpt" ] == $field )
 			&& $this->_where["_simpleSrch" ] == '' 
-			&& ( $id == SEARCHID_SIMPLE || !count($srchFields) && is_null($id) ) )
+			&& ( $id == SEARCHID_SIMPLE || !$srchFields && is_null($id) ) )
 		{
 			$this->_where["simpleSrchFieldsComboOpt" ] = $field;
 			$this->_where["_simpleSrch" ] = $value;
@@ -1903,7 +1533,7 @@ class SearchClause extends SearchClauseBase
 		$srchFields = &$this->_where["_srchFields" ];
 
 		if( $this->isShowSimpleSrchOpt && ( !strlen( $this->_where["simpleSrchFieldsComboOpt" ] ) ||  $this->_where["simpleSrchFieldsComboOpt" ] == $field )
-			&& ( $id == SEARCHID_SIMPLE || !count($srchFields) && is_null($id) ) )
+			&& ( $id == SEARCHID_SIMPLE || !$srchFields && is_null($id) ) )
 		{
 			$this->_where["simpleSrchFieldsComboOpt" ] = $field;
 			$simpleSrchOption = $this->_where["simpleSrchTypeComboOpt" ] = $opt;
@@ -1967,8 +1597,15 @@ class SearchClause extends SearchClauseBase
 	 *
 	 * @return SearchClause
 	 */
-	public static function getSearchObject( $tName = "", $dashTName = "", $sessionPrefix = "", $cipherer = null,
-		$searchSavingEnabled = false, $pSet = null, $useCurrPageSettings = false )
+	public static function getSearchObject( 
+		$tName = "", 
+		$dashTName = "", 
+		$sessionPrefix = "", 
+		$cipherer = null,
+		$searchSavingEnabled = false, 
+		$pSet = null, 
+		$useCurrPageSettings = false 
+	)
 	{
 		global $strTableName, $_cachedSeachClauses;
 
@@ -2013,7 +1650,7 @@ class SearchClause extends SearchClauseBase
 				$params['searchFieldsArr'] = $pSet->getSearchableFields();
 			}
 
-			$params['haveAggregateFields'] = count( $pSet->getListOfFieldsByExprType( true ) ) > 0;
+			$params['haveAggregateFields'] = !!$pSet->getListOfFieldsByExprType( true );
 
 			$searchClauseObj = new SearchClause( $params );
 		}
@@ -2113,7 +1750,7 @@ class SearchClause extends SearchClauseBase
 		{
 			case 'equals':
 				$self = FilterValuesList::getFilterCondition( $fName, $fValue, $this->pSetSearch );
-				if( !count($parentValues) )
+				if( !$parentValues )
 					return $self;
 				$conditions = array( $self );
 

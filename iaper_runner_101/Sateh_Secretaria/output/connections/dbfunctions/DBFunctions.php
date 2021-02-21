@@ -164,8 +164,11 @@ class DBFunctions
 	 */		
 	public function addFieldWrappers( $strName )
 	{
-		if( substr($strName, 0, 1) == $this->strLeftWrapper )
-			return $strName;
+		$strName = str_replace( 
+			array( $this->strLeftWrapper, $this->strRightWrapper ),
+			'',
+			$strName
+		);
 		return $this->strLeftWrapper.$strName.$this->strRightWrapper;
 	}
 

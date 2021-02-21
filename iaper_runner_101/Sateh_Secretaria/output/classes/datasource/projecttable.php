@@ -110,8 +110,9 @@ class DataSourceProjectTable extends DataSourceTable {
 
 	/**
 	 * Returns SQL substitution if the field is BLOB and needs special processing.
+	 * @return String or null
 	 */
-	protected function prepareBlob( $field, &$values, &$blobs, &$blobTypes ) {
+	protected function prepareBlob( $field, &$value, &$blobs, &$blobTypes ) {
 		if( !IsBinaryType( $this->getFieldType( $field ) ) )
 			return false;
 
@@ -126,40 +127,42 @@ class DataSourceProjectTable extends DataSourceTable {
 				if( $this->connection->dbType == nDATABASE_Oracle ) {
 					$blobKey = $this->getUpdateFieldSQL( $field );
 				}
-				$blobs[ $blobKey ] = $values[ $field ];
+				$blobs[ $blobKey ] = $value;
 				$blobTypes[ $blobKey ] = $this->getFieldType( $field );
 
 				$blobExpression = $this->connection->dbType == nDATABASE_Oracle
 					? "EMPTY_BLOB()"
 					: "?";
-				$values[ $field ] = $blobExpression;
-				return true;
+				return $blobExpression;
 			}
 		} else if( $projectLanguage == "aspx" ) {
 			if( $this->connection->dbType == nDATABASE_Oracle
 				|| $this->connection->dbType == nDATABASE_SQLite3 ) {
 
-				$blobKey = "bnd" . ( count( $blobs ) + 1 );
-				$blobs[ $blobKey ] = $values[ $field ];
+				$blobAlias = "bnd" . ( count( $blobs ) + 1 );
+				$blobKey = $blobAlias;
+				if( $this->connection->dbType == nDATABASE_Oracle ) {
+					$blobKey = $this->getUpdateFieldSQL( $field );
+				}
+				$blobs[ $blobKey ] = $value;
 				$blobTypes[ $blobKey ] = $this->getFieldType( $field );
 
 				$blobExpression = $this->connection->dbType == nDATABASE_Oracle
-					? ":" . $blobKey
-					: "@" . $blobKey;
-				$values[ $field ] = $blobExpression;
-				return true;
+					? ":" . $blobAlias
+					: "@" . $blobAlias;
+				return $blobExpression;
 			}
 		} else {
 			//	nothing for ASP?
 		}
-		return false;
+		return null;
 	}
 
 	public function updateMany( $keys, $values ) {
 
 	}
 
-	protected function getUpdateFieldSQL($field)
+	protected function getUpdateFieldSQL( $field )
 	{
 		$strField = $this->pSet->getStrField($field);
 
@@ -175,6 +178,7 @@ class DataSourceProjectTable extends DataSourceTable {
 		return $fname;
 	}
 
+
 	/**
 	 * save prepared SQL parts into
 	 * $dc->_cache["sqlValues"]
@@ -186,19 +190,29 @@ class DataSourceProjectTable extends DataSourceTable {
 		$sqlValues = array();
 		$blobs = array();
 		$blobTypes = array();
-		foreach( $values as $field => $value)
+		$this->makeAdvancedValues( $dc );
+		foreach( $dc->advValues as $field => $valueOp)
 		{
 			$sqlField = $this->getUpdateFieldSQL( $field );
-			if ( $this->pSet->insertNull( $field ) && trim( $value ) === "" )
-			{
-				$sqlValues[ $sqlField ] = "NULL";
-			} else if( $this->prepareBlob( $field, $values, $blobs, $blobTypes ) ) {
-				$sqlValues[ $sqlField ] = $values[ $field ];
-			} else
-			{
-				$sqlValues[ $sqlField ] = $this->cipherer->AddDBQuotes( $field, $value );
+			if( $valueOp->type === dsotCONST ) {
+				if ( $this->pSet->insertNull( $field ) && trim( $valueOp->value ) === "" )
+				{
+					$sqlValues[ $sqlField ] = "NULL";
+				} else if( $sqlValue = $this->prepareBlob( $field, $valueOp->value, $blobs, $blobTypes ) ) {
+					$sqlValues[ $sqlField ] = $sqlValue;
+				} else
+				{
+					$sqlValues[ $sqlField ] = $this->cipherer->AddDBQuotes( $field, $valueOp->value );
+				}
+			} else if( $valueOp->type === dsotSQL ) {
+				$sqlValues[ $sqlField ] = $valueOp->value;
+			} else if( $valueOp->type === dsotFIELD ) {
+				//	probably not the best way
+				//	currently used for reorderRowsField only
+				$sqlValues[ $sqlField ] = $this->getUpdateFieldSQL( $valueOp->value );
 			}
 		}
+
 		$dc->_cache["sqlValues"] = &$sqlValues;
 		$dc->_cache["blobs"] = &$blobs;
 		$dc->_cache["blobTypes"] = &$blobTypes;
@@ -209,7 +223,7 @@ class DataSourceProjectTable extends DataSourceTable {
 	 * @return Boolean - success or not
 	 */
 	public function updateSingle( $dc, $requireKeys = true ) {
-		if( !count($dc->values) || ( !count($dc->keys) && $requireKeys ) )
+		if( !count($dc->values) && !count($dc->advValues) || ( !count($dc->keys) && $requireKeys ) )
 			return true;
 
 		$this->prepareInsertValues( $dc );
@@ -273,9 +287,26 @@ class DataSourceProjectTable extends DataSourceTable {
 		return $this->pSet->getFieldCount();
 	}
 
+	protected function getColumnList() {
+		return $this->pSet->getFieldsList();
+	}
+
 	protected function encryptField( $field, $value ) {
 		return $this->cipherer->EncryptField( $field, $value );
 	}
+
+	public function & decryptRecord( &$data ) {
+		return $this->cipherer->DecryptFetchedArray( $data );
+	}
+
+	protected function getOrderClause( $dc, $forceColumnNames = false ) {
+		if( $dc->order ) {
+			return parent::getOrderClause( $dc, $forceColumnNames );
+		}
+		//	use the original ORDER BY clause 
+		return $this->pSet->getStrOrderBy();
+	}
+
 
 }
 

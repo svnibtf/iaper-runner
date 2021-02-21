@@ -2,8 +2,8 @@
 class oLocking
 {
 	var $lockTableName = "";
-	var $ConfirmTime=250;
-	var $UnlockTime=300;
+	var $ConfirmTime=15;
+	var $UnlockTime=30;
 	var $ConfirmAdmin;
 	var $ConfirmUser;
 	var $LockAdmin;
@@ -29,10 +29,7 @@ class oLocking
 		
 		$this->connection = $cman->getForLocking();	
 		
-		if(isset($_SESSION["UserID"]) && !is_null($_SESSION["UserID"]))
-			$this->UserID = $_SESSION["UserID"];
-		else
-			$this->UserID = "Guest";
+		$this->UserID = Security::getUserName();
 	}
 
 	function LockRecord($strtable,$keys)

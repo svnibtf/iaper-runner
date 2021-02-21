@@ -1,5 +1,5 @@
-<!doctype html><p align=center><font size=+1 color=red>This website was created by evaluation version of PHPRunner Trial.</font></p>
-<p align=center><font size=+1 color=red>This warning message will not appear on website created by a paid-for version of PHPRunner Trial.</font></p>
+<!doctype html>
+
 <html  {$html_attrs}>
 	<head>
 				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -83,7 +83,7 @@
 									{BEGIN grid_block}
 {BEGIN message_block}
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
-{END message_block}<table data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" class=" table {$grid_classes}  rnr-b-grid rnr-gridtable" 
+{END message_block}<table data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" class=" table {$grid_classes} r-horizontal-grid  rnr-b-grid rnr-gridtable" 
 	cellpadding="0" 
 	data-body-height="2"
 >
@@ -136,6 +136,14 @@
 		{BEGIN details_adm_agenda_1}
 {$displayDetailTable_adm_agenda_1}
 {END details_adm_agenda_1}
+	 
+		{BEGIN details_adm_pacientes_documentos}
+{$displayDetailTable_adm_pacientes_documentos}
+{END details_adm_pacientes_documentos}
+	 
+		{BEGIN details_adm_pagamento_avulso}
+{$displayDetailTable_adm_pagamento_avulso}
+{END details_adm_pagamento_avulso}
 	
 	</td>
 	{END cellblock_grid_cell_dpreview}

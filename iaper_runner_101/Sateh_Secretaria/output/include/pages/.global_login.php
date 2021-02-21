@@ -45,7 +45,8 @@
 'continue_login_button' => array( 'continue_login_button' ),
 'loginform_register_link' => array( 'loginform_register_link' ) ),
 'cellMaps' => array(  ) ),
-'page' => array( 'labeledButtons' => array( 'update_records' => array(  ),
+'page' => array( 'verticalBar' => false,
+'labeledButtons' => array( 'update_records' => array(  ),
 'print_pages' => array(  ),
 'register_activate_message' => array(  ),
 'details_found' => array(  ) ),
@@ -177,5 +178,5 @@ array( 'cell' => 'c2' ) ),
 'continue_login_button' => array( 'type' => 'continue_login_button' ),
 'loginform_register_link' => array( 'type' => 'loginform_register_link' ) ),
 'dbProps' => array(  ),
-'version' => 4 );
+'version' => 7 );
 		?>

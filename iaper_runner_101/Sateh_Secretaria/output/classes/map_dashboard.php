@@ -17,7 +17,7 @@ class MapPage_Dashboard extends ListPage_Dashboard
 		$this->gridBased = !$this->dashElementData["updateMoved"] && $this->hasTableDashGridElement();
 	}
 	
-	public function getSubsetDataCommand() {
+	public function getSubsetDataCommand( $ignoreFilterField = "" ) {
 		$dc = parent::getSubsetDataCommand();
 	
 		if( $this->mapRefresh ) {

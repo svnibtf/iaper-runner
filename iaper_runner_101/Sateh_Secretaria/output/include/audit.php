@@ -14,6 +14,7 @@ class AuditTrailTable
 	var $strAccess="access";
 	var $strKeysHeader="---Keys";
 	var $strFieldsHeader="---Fields";
+	var $strUserinfo="change userinfo";
 	var $columnDate="Date";
 	var $columnTime="Time";
 	var $columnIP="IP";
@@ -40,8 +41,8 @@ class AuditTrailTable
 
 		$this->connection = $cman->getForAudit();
 		$userid="";
-		if(@$_SESSION["UserID"])
-			$userid=$_SESSION["UserID"];
+		if( Security::getUserName())
+			$userid = Security::getUserName();
 
 		$this->params=array($_SERVER["REMOTE_ADDR"],$userid);
 
@@ -107,9 +108,62 @@ class AuditTrailTable
 			$this->insert(now(), $this->params[0], $this->params[1], $str_table, $this->strAdd, $str);
 		}
 		return $retval;
-    }
+	}
+	
+	/**
+	* not used yet 
+	* format audit values as a string
+	 * @param Array $newValues
+	 * @param Array $oldValues
+	 * @param Array include - list of fields to include into return value
+	 * @return String
+	 */
+	function formatChangedValues( $pSet, $newValues, $oldValues, $include = null ) {
+		
+		$strings = array();
+		foreach($newValues as $kefieldy => $value )
+		{
+			if( $include ) {
+				//	ASP
+				if( !isset( $include[ $field ] ) ) {
+					continue;
+				}
+			}
 
-    function LogEdit($str_table,$newvalues,$oldvalues,$keys)
+			$type = $pSet->getFieldType( $field );
+			if( IsBinaryType($type) )
+				continue;
+			
+			if( IsDateFieldType($type) ) {
+				$newValue = format_datetime_custom(db2time( $newValues[$field] ),"yyyy-MM-dd HH:mm:ss");
+				$oldValue = format_datetime_custom(db2time( $oldValues[$field] ),"yyyy-MM-dd HH:mm:ss");
+			} else {
+				$newValue = $newValues[$field];
+				$oldValue = $oldValues[$field];
+			}
+			
+			if( $newValue == $oldValue ) {
+				continue;
+			}
+			
+			$strOld = $field . " [old]: " . $this->formatValue( $type, $oldValue );
+			$strNew = $field . " [new]: " . $this->formatValue( $type, $newValue );
+			$string[] = $strOld . "\r\n" . $strNew;
+
+		}
+		return implode( "\r\n", $strings );
+	}
+
+	function formatValue( $type, $value ) {
+		if(IsBinaryType($type)) {
+			return "<binary value>"; 
+		} else {
+			$value = str_replace(array("\r\n","\n","\t")," ", $value );
+			return $this->getMaxLengthSubstr( $value );
+		}
+	}
+
+    function LogEdit($str_table,$newvalues,$oldvalues, $keys )
     {
 		global $globalEvents;
 		$retval=true;
@@ -306,10 +360,6 @@ class AuditTrailTable
 		{
 			return false;
 		}
-		if($table=="Procurar por Profissionais")
-		{
-			return false;
-		}
 		if($table=="adm_pacientes")
 		{
 			return false;
@@ -327,6 +377,42 @@ class AuditTrailTable
 			return false;
 		}
 		if($table=="adm_agenda_1")
+		{
+			return false;
+		}
+		if($table=="adm_pacientes_documentos")
+		{
+			return false;
+		}
+		if($table=="adm_tipo_documentos")
+		{
+			return false;
+		}
+		if($table=="adm_pagamento_avulso")
+		{
+			return false;
+		}
+		if($table=="adm_campos_adicionais")
+		{
+			return false;
+		}
+		if($table=="adm_campos_paciente")
+		{
+			return false;
+		}
+		if($table=="adm_splits")
+		{
+			return false;
+		}
+		if($table=="adm_eventos")
+		{
+			return false;
+		}
+		if($table=="adm_lista_variavel")
+		{
+			return false;
+		}
+		if($table=="adm_inscricoes")
 		{
 			return false;
 		}
@@ -392,8 +478,8 @@ class AuditTrailFile
 		global $auditMaxFieldLength;
 
 		$userid = "";
-		if(@$_SESSION["UserID"])
-			$userid = $_SESSION["UserID"];
+		if(@Security::getUserName())
+			$userid = Security::getUserName();
 
 		$this->params = array($_SERVER["REMOTE_ADDR"], $userid);
 
@@ -642,10 +728,6 @@ class AuditTrailFile
 		{
 			return false;
 		}
-		if($table=="Procurar por Profissionais")
-		{
-			return false;
-		}
 		if($table=="adm_pacientes")
 		{
 			return false;
@@ -663,6 +745,42 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="adm_agenda_1")
+		{
+			return false;
+		}
+		if($table=="adm_pacientes_documentos")
+		{
+			return false;
+		}
+		if($table=="adm_tipo_documentos")
+		{
+			return false;
+		}
+		if($table=="adm_pagamento_avulso")
+		{
+			return false;
+		}
+		if($table=="adm_campos_adicionais")
+		{
+			return false;
+		}
+		if($table=="adm_campos_paciente")
+		{
+			return false;
+		}
+		if($table=="adm_splits")
+		{
+			return false;
+		}
+		if($table=="adm_eventos")
+		{
+			return false;
+		}
+		if($table=="adm_lista_variavel")
+		{
+			return false;
+		}
+		if($table=="adm_inscricoes")
 		{
 			return false;
 		}

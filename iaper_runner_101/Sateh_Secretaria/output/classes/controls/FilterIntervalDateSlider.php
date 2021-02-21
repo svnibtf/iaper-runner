@@ -769,12 +769,5 @@ class FilterIntervalDateSlider extends FilterIntervalSlider
 		
 		$pageObj->controlsMap["filters"]["controls"][] = $ctrlsMap;	
 	}
-
-	/**
-	 * @deprecated
-	 * stub for search suggest
-	 */
-	static function getDateSliderWhere($fName, $pSet, $cipherer, $table, $SearchFor, $SearchFor2, $strSearchOption, $fullFieldName) {
-	}
 }
 ?>

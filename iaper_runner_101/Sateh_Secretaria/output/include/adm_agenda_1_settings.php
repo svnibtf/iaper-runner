@@ -6,11 +6,11 @@ $tdataadm_agenda_1[".OwnerID"] = "age_usu_id";
 $tdataadm_agenda_1[".OriginalTable"] = "adm_agenda_1";
 
 
-$tdataadm_agenda_1[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
+$tdataadm_agenda_1[".pagesByType"] = my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" );
 $tdataadm_agenda_1[".originalPagesByType"] = $tdataadm_agenda_1[".pagesByType"];
-$tdataadm_agenda_1[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
+$tdataadm_agenda_1[".pages"] = types2pages( my_json_decode( "{\"add\":[\"add\"],\"edit\":[\"edit\"],\"export\":[\"export\"],\"import\":[\"import\"],\"list\":[\"list\"],\"masterlist\":[\"masterlist\"],\"masterprint\":[\"masterprint\"],\"print\":[\"print\"],\"search\":[\"search\"],\"view\":[\"view\"]}" ) );
 $tdataadm_agenda_1[".originalPages"] = $tdataadm_agenda_1[".pages"];
-$tdataadm_agenda_1[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
+$tdataadm_agenda_1[".defaultPages"] = my_json_decode( "{\"add\":\"add\",\"edit\":\"edit\",\"export\":\"export\",\"import\":\"import\",\"list\":\"list\",\"masterlist\":\"masterlist\",\"masterprint\":\"masterprint\",\"print\":\"print\",\"search\":\"search\",\"view\":\"view\"}" );
 $tdataadm_agenda_1[".originalDefaultPages"] = $tdataadm_agenda_1[".defaultPages"];
 
 //	field labels
@@ -79,6 +79,12 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldLabelsadm_agenda_1["Portuguese(Brazil)"]["age_Link"] = "Link Consulta";
 	$fieldToolTipsadm_agenda_1["Portuguese(Brazil)"]["age_Link"] = "";
 	$placeHoldersadm_agenda_1["Portuguese(Brazil)"]["age_Link"] = "";
+	$fieldLabelsadm_agenda_1["Portuguese(Brazil)"]["age_Valor"] = "Valor";
+	$fieldToolTipsadm_agenda_1["Portuguese(Brazil)"]["age_Valor"] = "";
+	$placeHoldersadm_agenda_1["Portuguese(Brazil)"]["age_Valor"] = "";
+	$fieldLabelsadm_agenda_1["Portuguese(Brazil)"]["age_Status_Recebimento"] = "Status Recebimento";
+	$fieldToolTipsadm_agenda_1["Portuguese(Brazil)"]["age_Status_Recebimento"] = "";
+	$placeHoldersadm_agenda_1["Portuguese(Brazil)"]["age_Status_Recebimento"] = "";
 	if (count($fieldToolTipsadm_agenda_1["Portuguese(Brazil)"]))
 		$tdataadm_agenda_1[".isUseToolTips"] = true;
 }
@@ -107,11 +113,6 @@ $tdataadm_agenda_1[".showAddInPopup"] = false;
 $tdataadm_agenda_1[".showEditInPopup"] = false;
 
 $tdataadm_agenda_1[".showViewInPopup"] = false;
-
-//page's base css files names
-$popupPagesLayoutNames = array();
-$tdataadm_agenda_1[".popupPagesLayoutNames"] = $popupPagesLayoutNames;
-
 
 $tdataadm_agenda_1[".listAjax"] = false;
 //	temporary
@@ -195,7 +196,7 @@ $tdataadm_agenda_1[".addPageEvents"] = false;
 $tdataadm_agenda_1[".isUseTimeForSearch"] = true;
 
 
-$tdataadm_agenda_1[".badgeColor"] = "b22222";
+$tdataadm_agenda_1[".badgeColor"] = "c0c0c0";
 
 
 $tdataadm_agenda_1[".allSearchFields"] = array();
@@ -209,6 +210,8 @@ $tdataadm_agenda_1[".googleLikeFields"][] = "age_time_att";
 $tdataadm_agenda_1[".googleLikeFields"][] = "age_data_in";
 $tdataadm_agenda_1[".googleLikeFields"][] = "age_Paciente";
 $tdataadm_agenda_1[".googleLikeFields"][] = "age_Link";
+$tdataadm_agenda_1[".googleLikeFields"][] = "age_Valor";
+$tdataadm_agenda_1[".googleLikeFields"][] = "age_Status_Recebimento";
 
 
 
@@ -244,7 +247,7 @@ $tdataadm_agenda_1[".strOrderBy"] = $tstrOrderBy;
 $tdataadm_agenda_1[".orderindexes"] = array();
 
 
-$tdataadm_agenda_1[".sqlHead"] = "SELECT age_id,  	age_usu_id,  	age_config_id,  	age_dia_sem,  	age_data_att,  	age_time_att,  	age_data_in,  	age_acao,  	age_retorno_data_time,  	age_tipo_pagamento,  	age_anotacoes,  	age_att_campo_1,  	age_att_campo_2,  	age_att_campo_3,  	age_att_campo_4,  	age_deletado,  	age_Paciente,  	age_Link";
+$tdataadm_agenda_1[".sqlHead"] = "SELECT age_id,  	age_usu_id,  	age_config_id,  	age_dia_sem,  	age_data_att,  	age_time_att,  	age_data_in,  	age_acao,  	age_retorno_data_time,  	age_tipo_pagamento,  	age_anotacoes,  	age_att_campo_1,  	age_att_campo_2,  	age_att_campo_3,  	age_att_campo_4,  	age_deletado,  	age_Paciente,  	age_Link,  	age_Valor,  	age_Status_Recebimento";
 $tdataadm_agenda_1[".sqlFrom"] = "FROM adm_agenda_1";
 $tdataadm_agenda_1[".sqlWhereExpr"] = "";
 $tdataadm_agenda_1[".sqlTail"] = "";
@@ -302,7 +305,7 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("adm_agenda_1","age_id");
 	$fdata["FieldType"] = 3;
 
-	
+
 		$fdata["AutoInc"] = true;
 
 	
@@ -442,7 +445,7 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("adm_agenda_1","age_usu_id");
 	$fdata["FieldType"] = 3;
 
-	
+
 	
 	
 			
@@ -607,7 +610,7 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("adm_agenda_1","age_config_id");
 	$fdata["FieldType"] = 3;
 
-	
+
 	
 	
 			
@@ -774,7 +777,7 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("adm_agenda_1","age_dia_sem");
 	$fdata["FieldType"] = 200;
 
-	
+
 	
 	
 			
@@ -931,7 +934,7 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("adm_agenda_1","age_data_att");
 	$fdata["FieldType"] = 7;
 
-	
+
 	
 	
 			
@@ -1070,7 +1073,7 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("adm_agenda_1","age_time_att");
 	$fdata["FieldType"] = 134;
 
-	
+
 	
 	
 			
@@ -1479,7 +1482,7 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("adm_agenda_1","age_data_in");
 	$fdata["FieldType"] = 135;
 
-	
+
 	
 	
 			
@@ -1618,7 +1621,7 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("adm_agenda_1","age_acao");
 	$fdata["FieldType"] = 200;
 
-	
+
 	
 	
 			
@@ -1754,7 +1757,7 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("adm_agenda_1","age_retorno_data_time");
 	$fdata["FieldType"] = 200;
 
-	
+
 	
 	
 			
@@ -1919,7 +1922,7 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("adm_agenda_1","age_tipo_pagamento");
 	$fdata["FieldType"] = 200;
 
-	
+
 	
 	
 			
@@ -2084,7 +2087,7 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("adm_agenda_1","age_anotacoes");
 	$fdata["FieldType"] = 200;
 
-	
+
 	
 	
 			
@@ -2220,7 +2223,7 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("adm_agenda_1","age_att_campo_1");
 	$fdata["FieldType"] = 200;
 
-	
+
 	
 	
 			
@@ -2356,7 +2359,7 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("adm_agenda_1","age_att_campo_2");
 	$fdata["FieldType"] = 200;
 
-	
+
 	
 	
 			
@@ -2492,7 +2495,7 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("adm_agenda_1","age_att_campo_3");
 	$fdata["FieldType"] = 200;
 
-	
+
 	
 	
 			
@@ -2628,7 +2631,7 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("adm_agenda_1","age_att_campo_4");
 	$fdata["FieldType"] = 200;
 
-	
+
 	
 	
 			
@@ -2764,7 +2767,7 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("adm_agenda_1","age_deletado");
 	$fdata["FieldType"] = 16;
 
-	
+
 	
 	
 			
@@ -2901,7 +2904,7 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("adm_agenda_1","age_Paciente");
 	$fdata["FieldType"] = 3;
 
-	
+
 	
 	
 			
@@ -3065,7 +3068,7 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("adm_agenda_1","age_Link");
 	$fdata["FieldType"] = 200;
 
-	
+
 	
 	
 			
@@ -3196,6 +3199,283 @@ $tdataadm_agenda_1[".hideMobileList"] = array();
 
 	$tdataadm_agenda_1["age_Link"] = $fdata;
 		$tdataadm_agenda_1[".searchableFields"][] = "age_Link";
+//	age_Valor
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 19;
+	$fdata["strName"] = "age_Valor";
+	$fdata["GoodName"] = "age_Valor";
+	$fdata["ownerTable"] = "adm_agenda_1";
+	$fdata["Label"] = GetFieldLabel("adm_agenda_1","age_Valor");
+	$fdata["FieldType"] = 14;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "age_Valor";
+
+		$fdata["sourceSingle"] = "age_Valor";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "age_Valor";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "Number");
+
+	
+	
+	
+	
+	
+	
+		$vdata["DecimalDigits"] = 2;
+
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+							
+	
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataadm_agenda_1["age_Valor"] = $fdata;
+		$tdataadm_agenda_1[".searchableFields"][] = "age_Valor";
+//	age_Status_Recebimento
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 20;
+	$fdata["strName"] = "age_Status_Recebimento";
+	$fdata["GoodName"] = "age_Status_Recebimento";
+	$fdata["ownerTable"] = "adm_agenda_1";
+	$fdata["Label"] = GetFieldLabel("adm_agenda_1","age_Status_Recebimento");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "age_Status_Recebimento";
+
+		$fdata["sourceSingle"] = "age_Status_Recebimento";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "age_Status_Recebimento";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=50";
+
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataadm_agenda_1["age_Status_Recebimento"] = $fdata;
+		$tdataadm_agenda_1[".searchableFields"][] = "age_Status_Recebimento";
 
 
 $tables_data["adm_agenda_1"]=&$tdataadm_agenda_1;
@@ -3206,7 +3486,41 @@ $page_titles["adm_agenda_1"] = &$pageTitlesadm_agenda_1;
 
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
+
+//if !@TABLE.bReportCrossTab
+
 $detailsTablesData["adm_agenda_1"] = array();
+//	adm_pagamento_avulso
+	
+	
+
+		$dIndex = 0;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="adm_pagamento_avulso";
+		$detailsParam["dOriginalTable"] = "adm_pagamento_avulso";
+
+
+
+		
+		$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "adm_pagamento_avulso";
+	$detailsParam["dCaptionTable"] = GetTableCaption("adm_pagamento_avulso");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+
+		
+	$detailsTablesData["adm_agenda_1"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["adm_agenda_1"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["adm_agenda_1"][$dIndex]["masterKeys"][]="age_id";
+
+				$detailsTablesData["adm_agenda_1"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["adm_agenda_1"][$dIndex]["detailKeys"][]="idConsulta";
+//endif
 
 // tables which are master tables for current table (detail)
 $masterTablesData["adm_agenda_1"] = array();
@@ -3214,7 +3528,8 @@ $masterTablesData["adm_agenda_1"] = array();
 
 
 	
-				$strOriginalDetailsTable="adm_pacientes";
+	//if !@t.bReportCrossTab
+			$strOriginalDetailsTable="adm_pacientes";
 	$masterParams = array();
 	$masterParams["mDataSourceTable"]="adm_pacientes";
 	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
@@ -3229,6 +3544,7 @@ $masterTablesData["adm_agenda_1"] = array();
 				$masterTablesData["adm_agenda_1"][0]["detailKeys"] = array();
 	$masterTablesData["adm_agenda_1"][0]["detailKeys"][]="age_Paciente";
 		
+	//endif
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 
@@ -3249,7 +3565,7 @@ function createSqlQuery_adm_agenda_1()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "age_id,  	age_usu_id,  	age_config_id,  	age_dia_sem,  	age_data_att,  	age_time_att,  	age_data_in,  	age_acao,  	age_retorno_data_time,  	age_tipo_pagamento,  	age_anotacoes,  	age_att_campo_1,  	age_att_campo_2,  	age_att_campo_3,  	age_att_campo_4,  	age_deletado,  	age_Paciente,  	age_Link";
+$proto0["m_strFieldList"] = "age_id,  	age_usu_id,  	age_config_id,  	age_dia_sem,  	age_data_att,  	age_time_att,  	age_data_in,  	age_acao,  	age_retorno_data_time,  	age_tipo_pagamento,  	age_anotacoes,  	age_att_campo_1,  	age_att_campo_2,  	age_att_campo_3,  	age_att_campo_4,  	age_deletado,  	age_Paciente,  	age_Link,  	age_Valor,  	age_Status_Recebimento";
 $proto0["m_strFrom"] = "FROM adm_agenda_1";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -3541,54 +3857,84 @@ $proto40["m_alias"] = "";
 $obj = new SQLFieldListItem($proto40);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto42=array();
-$proto42["m_link"] = "SQLL_MAIN";
-			$proto43=array();
-$proto43["m_strName"] = "adm_agenda_1";
-$proto43["m_srcTableName"] = "adm_agenda_1";
-$proto43["m_columns"] = array();
-$proto43["m_columns"][] = "age_id";
-$proto43["m_columns"][] = "age_usu_id";
-$proto43["m_columns"][] = "age_config_id";
-$proto43["m_columns"][] = "age_dia_sem";
-$proto43["m_columns"][] = "age_data_att";
-$proto43["m_columns"][] = "age_time_att";
-$proto43["m_columns"][] = "age_data_in";
-$proto43["m_columns"][] = "age_acao";
-$proto43["m_columns"][] = "age_retorno_data_time";
-$proto43["m_columns"][] = "age_tipo_pagamento";
-$proto43["m_columns"][] = "age_anotacoes";
-$proto43["m_columns"][] = "age_att_campo_1";
-$proto43["m_columns"][] = "age_att_campo_2";
-$proto43["m_columns"][] = "age_att_campo_3";
-$proto43["m_columns"][] = "age_att_campo_4";
-$proto43["m_columns"][] = "age_deletado";
-$proto43["m_columns"][] = "age_Paciente";
-$proto43["m_columns"][] = "age_Link";
-$obj = new SQLTable($proto43);
+						$proto42=array();
+			$obj = new SQLField(array(
+	"m_strName" => "age_Valor",
+	"m_strTable" => "adm_agenda_1",
+	"m_srcTableName" => "adm_agenda_1"
+));
 
-$proto42["m_table"] = $obj;
-$proto42["m_sql"] = "adm_agenda_1";
-$proto42["m_alias"] = "";
+$proto42["m_sql"] = "age_Valor";
 $proto42["m_srcTableName"] = "adm_agenda_1";
-$proto44=array();
-$proto44["m_sql"] = "";
-$proto44["m_uniontype"] = "SQLL_UNKNOWN";
+$proto42["m_expr"]=$obj;
+$proto42["m_alias"] = "";
+$obj = new SQLFieldListItem($proto42);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto44=array();
+			$obj = new SQLField(array(
+	"m_strName" => "age_Status_Recebimento",
+	"m_strTable" => "adm_agenda_1",
+	"m_srcTableName" => "adm_agenda_1"
+));
+
+$proto44["m_sql"] = "age_Status_Recebimento";
+$proto44["m_srcTableName"] = "adm_agenda_1";
+$proto44["m_expr"]=$obj;
+$proto44["m_alias"] = "";
+$obj = new SQLFieldListItem($proto44);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto46=array();
+$proto46["m_link"] = "SQLL_MAIN";
+			$proto47=array();
+$proto47["m_strName"] = "adm_agenda_1";
+$proto47["m_srcTableName"] = "adm_agenda_1";
+$proto47["m_columns"] = array();
+$proto47["m_columns"][] = "age_id";
+$proto47["m_columns"][] = "age_usu_id";
+$proto47["m_columns"][] = "age_config_id";
+$proto47["m_columns"][] = "age_dia_sem";
+$proto47["m_columns"][] = "age_data_att";
+$proto47["m_columns"][] = "age_time_att";
+$proto47["m_columns"][] = "age_data_in";
+$proto47["m_columns"][] = "age_acao";
+$proto47["m_columns"][] = "age_retorno_data_time";
+$proto47["m_columns"][] = "age_tipo_pagamento";
+$proto47["m_columns"][] = "age_anotacoes";
+$proto47["m_columns"][] = "age_att_campo_1";
+$proto47["m_columns"][] = "age_att_campo_2";
+$proto47["m_columns"][] = "age_att_campo_3";
+$proto47["m_columns"][] = "age_att_campo_4";
+$proto47["m_columns"][] = "age_deletado";
+$proto47["m_columns"][] = "age_Paciente";
+$proto47["m_columns"][] = "age_Link";
+$proto47["m_columns"][] = "age_Valor";
+$proto47["m_columns"][] = "age_Status_Recebimento";
+$obj = new SQLTable($proto47);
+
+$proto46["m_table"] = $obj;
+$proto46["m_sql"] = "adm_agenda_1";
+$proto46["m_alias"] = "";
+$proto46["m_srcTableName"] = "adm_agenda_1";
+$proto48=array();
+$proto48["m_sql"] = "";
+$proto48["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto44["m_column"]=$obj;
-$proto44["m_contained"] = array();
-$proto44["m_strCase"] = "";
-$proto44["m_havingmode"] = false;
-$proto44["m_inBrackets"] = false;
-$proto44["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto44);
+$proto48["m_column"]=$obj;
+$proto48["m_contained"] = array();
+$proto48["m_strCase"] = "";
+$proto48["m_havingmode"] = false;
+$proto48["m_inBrackets"] = false;
+$proto48["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto48);
 
-$proto42["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto42);
+$proto46["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto46);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -3604,7 +3950,7 @@ $queryData_adm_agenda_1 = createSqlQuery_adm_agenda_1();
 	
 		;
 
-																		
+																				
 
 $tdataadm_agenda_1[".sqlquery"] = $queryData_adm_agenda_1;
 

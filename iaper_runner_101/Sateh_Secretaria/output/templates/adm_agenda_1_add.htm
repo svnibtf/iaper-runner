@@ -1,5 +1,5 @@
-<!doctype html><p align=center><font size=+1 color=red>This website was created by evaluation version of PHPRunner Trial.</font></p>
-<p align=center><font size=+1 color=red>This warning message will not appear on website created by a paid-for version of PHPRunner Trial.</font></p>
+<!doctype html>
+
 <html  {$html_attrs}>
 	<head>
 				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -15,50 +15,126 @@
 	<link REL="stylesheet" href="{$stylepath}" type="text/css">
 	{END styleCSSFiles}
 	</head>
-
 	<body class="{$stylename} function-add" {$bodyattrs}>
 	{BEGIN body}
 		{$header}
 		<style>
 			{$containerCss}
 		</style>
-		{$locking}
-		<div class="r-small-page" 
-			data-body-align="center"
-			data-body-width="standard"
-		>
-							{BEGIN top_block}
-<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
-		data-v-width="4"
-	data-v-margin="1"
-	
->		
+		<div class="r-topbar-page">
+			<div data-menu-width="full" 
+				data-fixed 
+				class="r-topheader" 
+				data-resize-name="topbar"
+				data-body-align="left"
+			>
+								{BEGIN supertop_block}
+<nav class="navbar navbar-default" 
+	data-location="supertop" id="form_supertop_{$pageid}" data-makeup="topbar" {$form_supertop} data-pageid="{$pageid}" >
+			 
+							 
+				<span data-cellId="supertop_c1" data-pageid="{$pageid}" class=" r-ori-vert navbar-header" data-itemid="logo" {$item_logo}>
+				{BEGIN logo_block}
+	<A data-itemtype="logo" data-itemid="logo" {$item_logo} data-pageid="{$pageid}" class="navbar-brand" href="{$home_link}" data-pageid="{$pageid}" {$logo_hiddenattr}>
+		{$logo}
+	</A>
+{END logo_block}
+				<button data-pageid="1" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target="[data-mobile-controlled]">	
+					<span class="sr-only">Toggle navigation</span>	
+					<span class="icon-bar"></span>					
+				</button>				
+			</span>
+							 
+							 
+				<span data-cellId="supertop_c2" data-pageid="{$pageid}" class=" r-ori-vert navbar-collapse" data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
+				{$menu main horizontal}			</span>
+							 
+							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c3" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
+				{BEGIN guestloginbutton}
+<span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" href="#" {$guestloginlink_attrs} >
+							Login			</a>
+</span>
+{END guestloginbutton}
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c3" data-pageid="{$pageid}" data-itemid="username_button" {$item_username_button} data-topcell-item-type="username_button" >
+				{BEGIN loggedas_message}
+<span data-itemtype="username_button" data-itemid="username_button" {$item_username_button} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+			{BEGIN userbutton_icon}							<span class="glyphicon glyphicon-user"></span>
+						{END userbutton_icon}{$userbutton_image}			{$username}			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN logoutbutton}
+	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
+				<a  href="userinfo.php"  title="" >
+				
+		Perfil de usuário		
+		</a>
+	</li>
+{END logoutbutton}
+							{BEGIN logoutbutton}
+	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$logoutlink_attrs}  title="" >
+				
+		Log Out		
+		</a>
+	</li>
+{END logoutbutton}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
+				
+		Mudar senha		
+		</a>
+	</li>
+{END changepwd_link}
+					</ul>
+	</span>
+</span>
+{END loggedas_message}
+			</span>
+								</nav>
+{END supertop_block}
+					{$locking}
+			</div>	
+			<div data-body-align="left"  data-body-width="standard" class="r-body" data-resize-top="topbar" >
+				<div class="r-top">
+								{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="topbar" {$form_top} data-pageid="{$pageid}" >		
 	 
 		<div class="row">
 			 
 				<div 
 	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
 	class=" r-ori-vert			col-md-12
-	">
-	 
+	
+">
+		 
 		<h2 data-itemtype="add_header" data-itemid="add_header" {$item_add_header} data-pageid="{$pageid}" >{$pagetitlelabel adm_agenda_1 add}</h2>
-	</div>					</div>
+		</div>					</div>
 	</div>		
 {END top_block}
-									{BEGIN above-grid_block}
-<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
-		data-v-width="4"
-	data-v-margin="1"
-	
->		
+					</div>
+				<div class="r-content">
+										<div class="r-data-block" data-body-width="standard" >
+						
+										{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="topbar" {$form_above-grid} data-pageid="{$pageid}" >		
 	 
 		<div class="row">
 			 
 				<div 
 	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
 	class=" r-ori-vert			col-md-12
-	">
-	 
+	
+">
+		{BEGIN firstAboveGridCell}
+		 
 		{BEGIN message_block}
 <div data-itemtype="add_message" data-itemid="add_message" {$item_add_message} data-pageid="{$pageid}" class="alert {$message_class}" role="alert">
 <h5>{$message}</h5>
@@ -75,15 +151,17 @@
 {END edit_page_button}
 </div>
 </div>
-{END message_block}	</div>					</div>
+{END message_block}			{END firstAboveGridCell}	
+	</div>					</div>
 	 
 		<div class="row">
 			 
 				<div 
 	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
 	class=" r-ori-vert			col-md-12
-	">
-	 
+	
+">
+		 
 		<ul class="nav nav-pills nav-justified" id="stepnav{$id}"  data-stepcontrol data-itemtype="step_nav" data-itemid="step_nav" {$item_step_nav} data-pageid="{$pageid}">
 			<li role="presentation" data-step="0">
 			<a href="#">Selecione a Data</a>
@@ -91,10 +169,12 @@
 			<li role="presentation" data-step="1">
 			<a href="#">Complete com os Dados</a>
 		</li>
-	</ul>	</div>					</div>
+	</ul>		</div>					</div>
 	</div>		
 {END above-grid_block}
-									{BEGIN steps_block}
+							
+						<div class="r-grid">
+										{BEGIN steps_block}
 			<div id="step_0_{$id}" class="stepFrame" data-step="0" >
 		{BEGIN grid_block}
 
@@ -103,9 +183,13 @@
 
  
 	 
-												<table 
-	data-body-align="center"
-	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+												{BEGIN mastertable_block}
+<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
+	{$showmasterfile}
+</div>
+{END mastertable_block}											<table 
+	data-body-align="left"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="topbar" {$form_grid} data-pageid="{$pageid}" 
 	class="r-edit-form" cellpadding="0" cellspacing="0" 
 	{$grid_hiddenattr} 
 		data-form-width="1"
@@ -133,10 +217,8 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_age_data_att}  r-vertical-field" 
-	data-fieldname="age_data_att" 
 	data-signal-error-for="age_data_att{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="age_data_att" >
-
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="age_data_att" data-fieldname="age_data_att" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_age_data_att}">
 		{BEGIN age_data_att_label}{$label adm_agenda_1 age_data_att }{END age_data_att_label}
@@ -156,10 +238,8 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_age_time_att}  r-vertical-field" 
-	data-fieldname="age_time_att" 
 	data-signal-error-for="age_time_att{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="age_time_att" >
-
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="age_time_att" data-fieldname="age_time_att" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_age_time_att}">
 		{BEGIN age_time_att_label}{$label adm_agenda_1 age_time_att }{END age_time_att_label}
@@ -179,10 +259,8 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_age_Link}  r-vertical-field" 
-	data-fieldname="age_Link" 
 	data-signal-error-for="age_Link{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="age_Link" >
-
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="age_Link" data-fieldname="age_Link" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_age_Link}">
 		{BEGIN age_Link_label}{$label adm_agenda_1 age_Link }{END age_Link_label}
@@ -197,6 +275,95 @@
 
 
 {END age_Link_fieldblock}
+										</td>
+			{END cellblock_grid_c3}
+										</tr>
+										</tbody></table>
+				
+{BEGIN details_adm_pagamento_avulso}
+<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" class="bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+							{$caption adm_pagamento_avulso }				
+							<span>
+					{$detailslButtons_adm_pagamento_avulso}
+																				</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_adm_pagamento_avulso}
+		</div>
+	</div>
+</div>
+{END details_adm_pagamento_avulso}
+											<table 
+	data-body-align="left"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="topbar" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN age_Valor_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_age_Valor}  r-vertical-field" 
+	data-signal-error-for="age_Valor{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="age_Valor" data-fieldname="age_Valor" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_age_Valor}">
+		{BEGIN age_Valor_label}{$label adm_agenda_1 age_Valor }{END age_Valor_label}
+	</label>
+	<div class="r-edit-field">
+		{$age_Valor_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="age_Valor">
+		<div class="text-muted" >
+		{$tooltip adm_agenda_1 age_Valor }		</div>
+	</div>
+</div>
+
+
+{END age_Valor_fieldblock}
+											
+{BEGIN age_Status_Recebimento_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_age_Status_Recebimento}  r-vertical-field" 
+	data-signal-error-for="age_Status_Recebimento{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="age_Status_Recebimento" data-fieldname="age_Status_Recebimento" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_age_Status_Recebimento}">
+		{BEGIN age_Status_Recebimento_label}{$label adm_agenda_1 age_Status_Recebimento }{END age_Status_Recebimento_label}
+	</label>
+	<div class="r-edit-field">
+		{$age_Status_Recebimento_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="age_Status_Recebimento">
+		<div class="text-muted" >
+		{$tooltip adm_agenda_1 age_Status_Recebimento }		</div>
+	</div>
+</div>
+
+
+{END age_Status_Recebimento_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}
@@ -213,8 +380,8 @@
  
 	 
 												<table 
-	data-body-align="center"
-	data-location="step2" id="form_step2_{$pageid}" data-makeup="small" {$form_step2} data-pageid="{$pageid}" 
+	data-body-align="left"
+	data-location="step2" id="form_step2_{$pageid}" data-makeup="topbar" {$form_step2} data-pageid="{$pageid}" 
 	class="r-edit-form" cellpadding="0" cellspacing="0" 
 	{$grid_hiddenattr} 
 		data-form-width="1"
@@ -242,10 +409,8 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_age_Paciente}  r-vertical-field" 
-	data-fieldname="age_Paciente" 
 	data-signal-error-for="age_Paciente{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="age_Paciente" >
-
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="age_Paciente" data-fieldname="age_Paciente" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_age_Paciente}">
 		{BEGIN age_Paciente_label}{$label adm_agenda_1 age_Paciente }{END age_Paciente_label}
@@ -265,10 +430,8 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_age_config_id}  r-vertical-field" 
-	data-fieldname="age_config_id" 
 	data-signal-error-for="age_config_id{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="age_config_id" >
-
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="age_config_id" data-fieldname="age_config_id" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_age_config_id}">
 		{BEGIN age_config_id_label}{$label adm_agenda_1 age_config_id }{END age_config_id_label}
@@ -288,10 +451,8 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_age_tipo_pagamento}  r-vertical-field" 
-	data-fieldname="age_tipo_pagamento" 
 	data-signal-error-for="age_tipo_pagamento{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="age_tipo_pagamento" >
-
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="age_tipo_pagamento" data-fieldname="age_tipo_pagamento" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_age_tipo_pagamento}">
 		{BEGIN age_tipo_pagamento_label}{$label adm_agenda_1 age_tipo_pagamento }{END age_tipo_pagamento_label}
@@ -311,10 +472,8 @@
 
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_age_anotacoes}  r-vertical-field" 
-	data-fieldname="age_anotacoes" 
 	data-signal-error-for="age_anotacoes{$id}" 
-	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="age_anotacoes" >
-
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="age_anotacoes" data-fieldname="age_anotacoes" >
 
 	<label class="r-edit-label control-label" for="{$labelfor_age_anotacoes}">
 		{BEGIN age_anotacoes_label}{$label adm_agenda_1 age_anotacoes }{END age_anotacoes_label}
@@ -336,20 +495,19 @@
 			</tbody></table>
 {END step2_block}
 </div>	
-	{END steps_block}									{BEGIN below-grid_block}
-<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
-		data-v-width="4"
-	data-v-margin="1"
-	
->		
+	{END steps_block}							</div>
+						
+										{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="topbar" {$form_below-grid} data-pageid="{$pageid}" >		
 	 
 		<div class="row">
 			 
 				<div 
 	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
 	class="			col-md-12
-	">
-	 
+	
+">
+		 
 		{BEGIN nextStepButton}
 <span data-itemtype="next_step" data-itemid="next_step" {$item_next_step} data-pageid="{$pageid}" data-small data-button-item>
 	<a type="button" title="" class="btn btn-primary   
@@ -379,10 +537,14 @@
 							Cancela			</a>
 </span>
 {END cancel_button}
-	</div>					</div>
+		</div>					</div>
 	</div>		
 {END below-grid_block}
+							
+					</div>
+				</div>
 			</div>
+		</div>
 		{$footer}
 	{END body}
 	</body>

@@ -239,15 +239,17 @@ class ReportPage extends RunnerPage
 		foreach( $reportFields as $field )
 		{			
 			$operation = "";
-			if( $this->pSet->getFieldData($field, 'isTotalMax') )
-				$operation = "max";
-			else if( $this->pSet->getFieldData($field, 'isTotalMin') )
-				$operation = "min";
-			else if( $this->pSet->getFieldData($field, 'isTotalAvg') )
-				$operation = "avg";
-			else if( $this->pSet->getFieldData($field, 'isTotalSum') )
-				$operation = "sum";				
-					
+			$fieldInfo = $this->pSet->reportFieldInfo( $field );
+			if( $fieldInfo ) {
+				if( $fieldInfo["max"] )
+					$operation = "max";
+				else if( $fieldInfo["min"] )
+					$operation = "min";
+				else if( $fieldInfo["avg"] )
+					$operation = "avg";
+				else if( $fieldInfo["sum"] )
+					$operation = "sum";
+			}
 			if( $operation )
 			{			
 				$dataField = $field;
@@ -693,7 +695,7 @@ class ReportPage extends RunnerPage
 			$this->xt->assign($key, $value);
 		}			
 		
-		if( count($this->arrReport['list']) > 0 )
+		if( !!$this->arrReport['list'] )
 			$this->xt->assign('grid_row', array('data' => $this->arrReport['list']));
 		else
 			$this->noRecordsFound = true;
@@ -711,7 +713,7 @@ class ReportPage extends RunnerPage
 			$this->xt->assign("print_friendly_all", $this->printAvailable() && $this->arrReport['countRows'] > 0);
 		}
 
-		if( $this->mode == REPORT_SIMPLE && $allow_search && count($this->arrGroupsPerPage) )
+		if( $this->mode == REPORT_SIMPLE && $allow_search && !!$this->arrGroupsPerPage )
 		{
 			$this->xt->assign("recordspp_block", true);
 			$this->createPerPage();
@@ -843,6 +845,9 @@ class ReportPage extends RunnerPage
 	{
 		if( $this->mode == REPORT_DASHBOARD )
 			return;
+		
+		//	no details in reports currently
+		return;
 			
 		// set detail links 	
 		foreach( $this->allDetailsTablesArr as $detailTableData )
@@ -870,6 +875,8 @@ class ReportPage extends RunnerPage
 			//Add the connection with containing row. It's important for vertical layout's multiple records per row mode
 			$this->controlsMap['gridRows'][$gridRowInd]['keyFields'] = array();
 			$this->controlsMap['gridRows'][$gridRowInd]['keys'] = array();
+			
+			//	???
 			for($i = 0; $i < count($tKeys); $i ++) {
 				$this->controlsMap['gridRows'][$gridRowInd]['keyFields'][$i] = $tKeys[$i];
 				$this->controlsMap['gridRows'][$gridRowInd]['keys'][$i] = $data[$tKeys[$i].'_value'];
@@ -966,10 +973,13 @@ class ReportPage extends RunnerPage
 			$fieldArr['viewFormat'] = $this->pSet->getViewFormat( $field );
 			$fieldArr['editFormat'] = $this->pSet->getEditFormat( $field );
 		
-			$fieldArr['totalMax'] = $this->pSet->getFieldData($field, 'isTotalMax');
-			$fieldArr['totalMin'] = $this->pSet->getFieldData($field, 'isTotalMin');
-			$fieldArr['totalAvg'] = $this->pSet->getFieldData($field, 'isTotalAvg');
-			$fieldArr['totalSum'] = $this->pSet->getFieldData($field, 'isTotalSum');							
+			$fieldInfo = $this->pSet->reportFieldInfo( $field );
+			if( $fieldInfo ) {
+				$fieldArr['totalMax'] = !!$fieldInfo["max"];
+				$fieldArr['totalMin'] = !!$fieldInfo["min"];
+				$fieldArr['totalAvg'] = !!$fieldInfo["avg"];
+				$fieldArr['totalSum'] = !!$fieldInfo["sum"];
+			}
 			$paramfieldArr[] = $fieldArr;		
 		}
 		
@@ -1072,6 +1082,14 @@ class ReportPage extends RunnerPage
 			}
 			$this->showNoRecordsMessage();
 		}
+
+		foreach( $this->pSet->getPageFields() as $f )
+		{
+			$gf = GoodFieldName($f);
+			$this->xt->assign( $gf . "_class", $this->fieldClass( $f ));
+			$this->xt->assign( $gf . "_align", $this->fieldAlign( $f ));
+		}
+
 	}
 	
 	/**
@@ -1440,7 +1458,7 @@ class ReportPage extends RunnerPage
 		return $this->pdfJson;
 	}	
 
-	public function getSubsetDataCommand() {
+	public function getSubsetDataCommand( $ignoreFilterField = "" ) {
 
 		$dc = parent::getSubsetDataCommand();
 

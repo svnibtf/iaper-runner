@@ -52,10 +52,10 @@ class FilterValuesList extends FilterControl
 		$this->numberOfVisibleItems = $this->pSet->getNumberOfVisibleFilterItems($fName);
 
 		$this->parentFilterName = $this->pSet->getParentFilterName($fName);
-		$this->dependent = $this->parentFilterName != "";
+		$this->dependent = !!$this->parentFilterName;
 
 		$this->assignDependentFiltersData();
-		$this->hasDependent = $this->dependentFilterName != "";
+		$this->hasDependent = !!$this->dependentFilterName;
 
 
 		$this->assignParentFiltersData();
@@ -65,7 +65,7 @@ class FilterValuesList extends FilterControl
 	}
 
 	/**
-	 * Assign 'parentFiltersNames', 'parentFiltersNamesData' properties to
+	 * Assign 'parentFiltersNames' properties to
 	 * the corresponding data if the current filter is dependent
 	 */
 	protected function assignParentFiltersData()
@@ -74,20 +74,7 @@ class FilterValuesList extends FilterControl
 			return;
 
 		$this->parentFiltersNames = FilterValuesList::getParentFilterFields( $this->fName, $this->pSet );
-		$parentFiltersData = array();
 
-		foreach($this->parentFiltersNames as $parentName)
-		{
-			$dbName = $this->getDbFieldName($parentName);
-			$hasAlias = $dbName != $this->connection->addFieldWrappers($parentName);
-			$rsName = $hasAlias ? $this->connection->addFieldWrappers($parentName) : $dbName;
-
-			$parentFiltersData[$parentName]['dbName'] = $dbName;
-			$parentFiltersData[$parentName]['rsName'] = $rsName;
-			$parentFiltersData[$parentName]['hasAlias'] = $hasAlias;
-		}
-
-		$this->parentFiltersNamesData = $parentFiltersData;
 	}
 
 	public static function getParentFilterFields( $field, $pSet ) {
@@ -110,7 +97,6 @@ class FilterValuesList extends FilterControl
 	public function hasDependentFilter() {
 		return !!$this->dependentFilterName;
 	}
-
 
 	protected function findDependentFilters( $field, &$filterFields, &$dependents ) {
 		foreach( $filterFields as $f ) {
@@ -178,7 +164,7 @@ class FilterValuesList extends FilterControl
 			$direction = $this->pSet->isFilterSortOrderDescending($this->fName)
 				? "DESC"
 				: "ASC";
-			
+
 			if( $sortingType == SORT_BY_GR_VALUE && $totalsType ) {
 				$dc->totals[ 1 ][ "direction" ] = $direction;
 			} else {
@@ -742,10 +728,6 @@ class FilterValuesList extends FilterControl
 
 	public static function getFilterCondition( $fName, $value, $pSet ) {
 		return DataCondition::FieldEquals( $fName, $value, $pSet->getFilterByInterval($fName) );
-	}
-
-	public static function getFilterWhere($fName, $fValue, $pSet, $fullFieldName, $cipherer, $connection) {
-
 	}
 }
 ?>

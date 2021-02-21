@@ -72,7 +72,11 @@ class ListPage_DPInline extends ListPage_Embed
 		$this->jsSettings['tableSettings'][$this->tName]['firstTime'] = $this->firstTime;
 		$this->jsSettings['tableSettings'][$this->tName]['strKey'] = $this->getStrMasterKey();
 		$this->addRawFieldValues = true;
-	
+		
+		if( $this->masterPageType == PAGE_ADD && parent::spreadsheetGridApplicable() ) {
+			$this->pageData['spreadsheetOnList'] = true;
+			$this->jsSettings['tableSettings'][ $this->tName ]['autoAddNewRecord'] = $this->pSet->addNewRecordAutomatically();
+		}		
 	}
 	
 	/**
@@ -211,7 +215,8 @@ class ListPage_DPInline extends ListPage_Embed
 		if( $this->masterPageType != PAGE_VIEW  )
 		{
 			//inline edit column
-			$this->xt->assign("inlineedit_column", $this->inlineEditAvailable() && $this->permis[ $this->tName ]['edit']);
+			$this->xt->assign("inlineedit_column", 
+				$this->inlineEditAvailable() && $this->permis[ $this->tName ]['edit'] && !$this->spreadsheetGridApplicable() );
 			
 			//for list icons instead of list links
 			$this->assignListIconsColumn();
@@ -715,6 +720,11 @@ class ListPage_DPInline extends ListPage_Embed
 	function pdfJsonMode() 
 	{
 		return $this->mode == LIST_PDFJSON;
+	}
+	
+	protected function spreadsheetGridApplicable() {
+		return $this->masterPageType != PAGE_ADD 
+			&& parent::spreadsheetGridApplicable();
 	}
 }
 ?>

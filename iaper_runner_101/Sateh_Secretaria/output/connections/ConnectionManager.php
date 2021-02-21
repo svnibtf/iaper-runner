@@ -136,6 +136,9 @@ class ConnectionManager extends ConnectionManager_Base
 		$data["DBPath"] = "db"; //currently unused
 		$data["useServerMapPath"] = 1; //currently unused
 
+		
+		//	Don't change any of these lines manually!
+		//	Use 'Server database connections' feature on the Output screen in PHPRunner instead.
 		$data["connInfo"][0] = "robb0254.publiccloud.com.br";
 		$data["connInfo"][1] = "iaper_db";
 		$data["connInfo"][2] = "Iaper@qwe@69";

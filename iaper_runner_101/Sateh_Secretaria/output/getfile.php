@@ -21,15 +21,6 @@ if( !Security::userHasFieldPermissions( $table, $field, PAGE_LIST, $pageName, fa
 	return;
 
 $pSet = new ProjectSettings( $table, PAGE_LIST, $pageName );
-/*$gQuery = $pSet->getSQLQuery();
-
-if( !$gQuery->HasGroupBy() )
-{
-	// Do not select any fields except current (file) field.
-	// If query has 'group by' clause then other fields are used in it and we may not simply cut 'em off.
-	// Just don't do anything in that case.
-	$gQuery->RemoveAllFieldsExcept( $pSet->getFieldIndex($field) );
-}*/
 
 $_connection = $cman->byTable( $table );
 

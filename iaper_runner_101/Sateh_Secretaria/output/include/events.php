@@ -46,7 +46,7 @@ class class_GlobalEvents extends eventsBase
 		
 		
 				// After successful registration
-function AfterSuccessfulRegistration(&$userdata, &$pageObject)
+function AfterSuccessfulRegistration(&$userdata, $pageObject)
 {
 
 		
@@ -82,6 +82,10 @@ DB::Insert("usuarios_dados_profissionais", $data );
 		
 		
 		
+		
+		
+		
+		
 
 		
 		
@@ -89,7 +93,7 @@ DB::Insert("usuarios_dados_profissionais", $data );
 		
 		
 				// Before login
-function BeforeLogin(&$username, &$password, &$message, &$pageObject, &$values)
+function BeforeLogin(&$username, &$password, &$message, $pageObject, &$values)
 {
 
 		
@@ -102,6 +106,10 @@ return true;
 ;		
 } // function BeforeLogin
 
+		
+		
+		
+		
 		
 		
 		

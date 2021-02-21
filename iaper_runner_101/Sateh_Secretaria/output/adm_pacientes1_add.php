@@ -38,6 +38,9 @@ $params["action"] = postvalue("a");
 $params["needSearchClauseObj"] = false;
 $params["afterAdd_id"] = postvalue("afteradd");
 
+$params["hostPageName"] = postvalue("hostPageName");
+$params["newRowId"] = postvalue("newRowId");
+
 $params["masterTable"] = postvalue("mastertable");
 if( $params["masterTable"] )
 	$params["masterKeysReq"] = RunnerPage::readMasterKeysFromRequest();
@@ -50,6 +53,8 @@ $params["captchaValue"] = postvalue("value_captcha_1209xre_" . $id);
 $params["dashElementName"] = postvalue("dashelement");
 $params["fromDashboard"] = postvalue("fromDashboard");
 $params["dashTName"] = $params["fromDashboard"] ? $params["fromDashboard"] : postvalue("dashTName");
+
+$params["forSpreadsheetGrid"] = postvalue("spreadsheetGrid");
 
 if( $pageMode == ADD_INLINE )
 {

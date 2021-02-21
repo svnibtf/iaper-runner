@@ -7,7 +7,7 @@ class RunnerContextItem
  * define('CONTEXT_BUTTON', 2);	// 	button or other AJAX event
  * define('CONTEXT_LOOKUP', 3);	//	dependent lookup
  * define('CONTEXT_ROW', 4);		// 	processing grid row on multiple-records page (list)
- * define('CONTEXT_COMMAND', 5);	// 	DataCommand context
+ * define('CONTEXT_COMMAND', 5);	// 	DsCommand context
  * define('CONTEXT_SEARCH', 6);	// 	Search object context
  * define('CONTEXT_MASTER', 7);	// 	Search object context
  */
@@ -108,6 +108,9 @@ class RunnerContextItem
 		}
 		if( $key == "record_count" ) {
 			return $this->dc->reccount;
+		}
+		if( $key == "record_offset" ) {
+			return $this->dc->startRecord;
 		}
 	}
 
@@ -374,6 +377,9 @@ class RunnerContext
 		return $ctx->getValues();
 	}
 
+	/**
+	 * @return String
+	 */
 	public static function PrepareRest( $str, $urlenc = true ) {
 		$context = RunnerContext::current();
 		$tokens = DB::scanTokenString($str);

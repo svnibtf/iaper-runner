@@ -60,11 +60,6 @@ $tdatafluxo_de_recebimentos[".showEditInPopup"] = false;
 
 $tdatafluxo_de_recebimentos[".showViewInPopup"] = false;
 
-//page's base css files names
-$popupPagesLayoutNames = array();
-$tdatafluxo_de_recebimentos[".popupPagesLayoutNames"] = $popupPagesLayoutNames;
-
-
 $tdatafluxo_de_recebimentos[".listAjax"] = false;
 //	temporary
 //$tdatafluxo_de_recebimentos[".listAjax"] = false;
@@ -248,7 +243,7 @@ $tdatafluxo_de_recebimentos[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("Fluxo_de_Recebimentos","Data");
 	$fdata["FieldType"] = 135;
 
-	
+
 	
 	
 			
@@ -385,7 +380,7 @@ $tdatafluxo_de_recebimentos[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("Fluxo_de_Recebimentos","Valor_a_Receber");
 	$fdata["FieldType"] = 14;
 
-	
+
 	
 	
 			
@@ -525,7 +520,11 @@ $page_titles["Fluxo_de_Recebimentos"] = &$pageTitlesfluxo_de_recebimentos;
 
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
+
+//if !@TABLE.bReportCrossTab
+
 $detailsTablesData["Fluxo de Recebimentos"] = array();
+//endif
 
 // tables which are master tables for current table (detail)
 $masterTablesData["Fluxo de Recebimentos"] = array();

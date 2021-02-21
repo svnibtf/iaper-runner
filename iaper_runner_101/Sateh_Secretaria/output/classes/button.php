@@ -59,14 +59,14 @@ class Button
 	 */
 	function modifyKeys()
 	{
-		global $gSettings;
+		$pSet = new ProjectSettings( $this->table, "", $this->page );
 		
 		$keys = array();
 		
 		// if array of keys exists
-		if(count($this->keys))
+		if( $this->keys )
 		{
-			$tKeysNamesArr = $gSettings->getTableKeys();
+			$tKeysNamesArr = $pSet->getTableKeys();
 			if($this->isManyKeys)
 			{
 				foreach ($this->keys as $ind => $value)

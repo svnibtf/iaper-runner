@@ -298,8 +298,8 @@ class EditSelectedPage extends EditPage
 				$dkeys[ "masterkey".($idx + 1) ] = $data[ $mk ];
 			}
 			$returnJSON['detKeys'][ $dt['dDataSourceTable'] ] = $dkeys;
-		}
-
+		}	
+		
 		//	prepare field values
 		//	keys
 		$keyParams = array();
@@ -312,17 +312,27 @@ class EditSelectedPage extends EditPage
 		//	values
 		$values = array();
 		$rawValues = array();
-		$fields = $this->pSet->getFieldsList();
-		foreach( $fields as $f )
+		$controlValues = array();
+		
+		$listPSet = new ProjectSettings( $this->tName, PAGE_LIST, $this->hostPageName, $this->pageTable );
+		//	override viewControls so that field values are built for the host List page and not for the Edit
+		$this->viewControls = new ViewControlsContainer( $listPSet, PAGE_LIST, $this );
+		
+		
+		foreach( $this->pSet->getFieldsList() as $f )
 		{
 			$value = $this->showDBValue( $f, $data, $keylink );
 			$values[ $f ] = $value;
-			if( IsBinaryType( $this->pSet->getFieldType( $f ) ) )
+			if( IsBinaryType( $this->pSet->getFieldType( $f ) ) ) {
 				$rawValues[ $f ] = "";
-			else
+			} else {
 				$rawValues[ $f ] = runner_substr($data[ $f ], 0, 100);
+				$controlValues[ $f ] = $data[ $f ];
+			}
 		}
 
+		$returnJSON['controlValues'] = $controlValues;		
+		
 		$returnJSON['keys'] = $this->jsKeys;
 		$returnJSON['masterKeys'] = $this->getDetailTablesMasterKeys($data);
 		$returnJSON['keyFields'] = $this->pSet->getTableKeys();
@@ -335,7 +345,7 @@ class EditSelectedPage extends EditPage
 		}
 
 		$returnJSON['vals'] = $values;
-		$returnJSON['fields'] = $fields;
+		$returnJSON['fields'] = $this->pSet->getFieldsList();
 		$returnJSON['rawVals'] = $rawValues;
 		$returnJSON['hrefs'] = $this->buildDetailGridLinks( $returnJSON['detKeys'] );
 
@@ -350,6 +360,11 @@ class EditSelectedPage extends EditPage
 		$fieldsIconsData = $this->getFieldMapIconsData( $data );
 		if( count( $fieldsIconsData ) )
 			$returnJSON['fieldsMapIconsData'] = $fieldsIconsData;
+			
+		$returnJSON['editFields'] = $this->editFields;
+		if( $this->forSpreadsheetGrid ) {
+			$returnJSON['editFields'] = $listPSet->getInlineEditFields();
+		}			
 			
 		return $returnJSON;
 	}
@@ -428,15 +443,11 @@ class EditSelectedPage extends EditPage
 	
 	protected function getSingleRecordWhereClause( $keys ) 
 	{
-		$strWhereClause = KeyWhere($keys, $this->tName );
-		
-		if( $this->pSet->getAdvancedSecurityType() != ADVSECURITY_ALL )
-		{
-			// select only owned records
-			$strWhereClause = whereAdd($strWhereClause, SecuritySQL("Edit", $this->tName));
-		}
-		
-		return $strWhereClause;
+		$dc = new DsCommand;
+		$dc->keys = $keys;
+		$dc->filter = $this->getSecurityCondition();
+		$sql = $this->dataSource->prepareSQL($dc );
+		return $sql["where"];
 	}
 	
 	/**
@@ -670,8 +681,9 @@ class EditSelectedPage extends EditPage
 			$this->auditLogEdit( $s );
 			$this->callAfterEditEvent();
 			
-			if( $this->isPopupMode() )
+			if( $this->isPopupMode() ) {
 				$this->inlineReportData[ $this->rowIds[ $idx ] ] = $this->getRowSaveStatusJSON( $s );
+			}
 		}
 	
 		$this->updatedSuccessfully = ($this->nUpdated > 0);
@@ -888,7 +900,7 @@ class EditSelectedPage extends EditPage
 	/**
 	 *
 	 */
-	public function getSubsetDataCommand() {
+	public function getSubsetDataCommand( $ignoreFilterField = "" ) {
 		$dc = new DsCommand();
 		
 		$conditions = array();

@@ -18,6 +18,19 @@ $dalTableadm_pacientes["Tratamento"] = array("type"=>201,"varname"=>"Tratamento"
 $dalTableadm_pacientes["idProfissional"] = array("type"=>3,"varname"=>"idProfissional", "name" => "idProfissional");
 $dalTableadm_pacientes["CPF"] = array("type"=>200,"varname"=>"CPF", "name" => "CPF");
 $dalTableadm_pacientes["RG"] = array("type"=>200,"varname"=>"RG", "name" => "RG");
+$dalTableadm_pacientes["Foto"] = array("type"=>128,"varname"=>"Foto", "name" => "Foto");
+$dalTableadm_pacientes["Estado_Civil"] = array("type"=>200,"varname"=>"Estado_Civil", "name" => "Estado_Civil");
+$dalTableadm_pacientes["Procedencia"] = array("type"=>200,"varname"=>"Procedencia", "name" => "Procedencia");
+$dalTableadm_pacientes["Responsavel"] = array("type"=>200,"varname"=>"Responsavel", "name" => "Responsavel");
+$dalTableadm_pacientes["Peso"] = array("type"=>200,"varname"=>"Peso", "name" => "Peso");
+$dalTableadm_pacientes["Altura"] = array("type"=>200,"varname"=>"Altura", "name" => "Altura");
+$dalTableadm_pacientes["IMC"] = array("type"=>200,"varname"=>"IMC", "name" => "IMC");
+$dalTableadm_pacientes["Tipo_Sangue"] = array("type"=>200,"varname"=>"Tipo_Sangue", "name" => "Tipo_Sangue");
+$dalTableadm_pacientes["Pressao"] = array("type"=>200,"varname"=>"Pressao", "name" => "Pressao");
+$dalTableadm_pacientes["Nascimento"] = array("type"=>7,"varname"=>"Nascimento", "name" => "Nascimento");
+$dalTableadm_pacientes["Profissao"] = array("type"=>200,"varname"=>"Profissao", "name" => "Profissao");
+$dalTableadm_pacientes["Convenio"] = array("type"=>200,"varname"=>"Convenio", "name" => "Convenio");
+$dalTableadm_pacientes["Observacoes"] = array("type"=>201,"varname"=>"Observacoes", "name" => "Observacoes");
 	$dalTableadm_pacientes["idPaciente"]["key"]=true;
 
 $dal_info["iaperdbatrobb0254publiccloudco__adm_pacientes"] = &$dalTableadm_pacientes;

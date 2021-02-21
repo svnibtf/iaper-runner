@@ -100,12 +100,11 @@ pdfDocument = {
 	
 		body: [
 				
-					[
-												{
+				[
+																{
 	cellId: 'c2',
 	col:0,
 	row:0,
-			style: 'cell',
 		
 		
 	//	static colspan/rowspan
@@ -127,12 +126,11 @@ pdfDocument = {
   },
 
 											],
-								[
-												{
+						[
+																{
 	cellId: 'c4',
 	col:0,
 	row:0,
-			style: 'cell',
 		
 		
 	//	static colspan/rowspan
@@ -153,7 +151,8 @@ pdfDocument = {
   },
 
 											],
-					]
+		
+		]
 	}
 }
 ,
@@ -173,12 +172,11 @@ pdfDocument = {
 	
 		body: [
 				
-					[
-												{
+				[
+																{
 	cellId: 'c1',
 	col:0,
 	row:0,
-			style: 'cell',
 		
 		
 	//	static colspan/rowspan
@@ -197,7 +195,8 @@ pdfDocument = {
   },
 
 											],
-					]
+		
+		]
 	}
 }
 ,
@@ -209,21 +208,22 @@ pdfDocument = {
 																	
 
 				
-					{BEGIN row_grid_0}
+				{BEGIN row_grid_0}
 				[
 				],
 				{END row_grid_0}
-									
+		
+			
 		{BEGIN grid_row}
 	{BEGIN grid_record}
 				
-						{BEGIN row_grid_1}
+				{BEGIN row_grid_1}
 				[
 				],
 				{END row_grid_1}
-								{BEGIN row_grid_2}
+						{BEGIN row_grid_2}
 				[
-												{BEGIN cellblock_grid_cell_dpreview}
+																{BEGIN cellblock_grid_cell_dpreview}
 {
 	cellId: 'cell_dpreview',
 	col:0,
@@ -250,6 +250,16 @@ pdfDocument = {
 			{$displayDetailTable_adm_agenda_1 }
 		{END details_adm_agenda_1},
 				
+				
+			 {BEGIN details_adm_pacientes_documentos}
+			{$displayDetailTable_adm_pacientes_documentos }
+		{END details_adm_pacientes_documentos},
+				
+				
+			 {BEGIN details_adm_pagamento_avulso}
+			{$displayDetailTable_adm_pagamento_avulso }
+		{END details_adm_pagamento_avulso},
+				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": 'left',
@@ -258,15 +268,17 @@ pdfDocument = {
 {END cellblock_grid_cell_dpreview}
 											],
 				{END row_grid_2}
-						{END grid_record}
+		
+		{END grid_record}
 	{END grid_row}
 			
 					
-								{BEGIN row_grid_3}
+				{BEGIN row_grid_3}
 				[
 				],
 				{END row_grid_3}
-							
+		
+				
 									]
 			
 			}

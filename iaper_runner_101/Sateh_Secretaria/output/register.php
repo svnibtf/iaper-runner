@@ -21,6 +21,7 @@ $params['xt'] = &$xt;
 $params["tName"] = $strTableName;
 $params["pageTable"] = GLOBAL_PAGES;
 $params["pageType"] = PAGE_REGISTER;
+$params["pageName"] = postvalue("page"); 
 $params["needSearchClauseObj"] = false;
 $params["captchaValue"] = postvalue("value__register_captcha_" . $id);
 

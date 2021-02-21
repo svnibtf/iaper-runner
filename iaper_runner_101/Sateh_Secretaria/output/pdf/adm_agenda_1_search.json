@@ -39,12 +39,11 @@ pdfDocument = {
 	
 		body: [
 				
-					[
-												{
+				[
+																{
 	cellId: 'c1',
 	col:0,
 	row:0,
-			style: 'cell',
 		
 		
 	//	static colspan/rowspan
@@ -63,7 +62,8 @@ pdfDocument = {
   },
 
 											],
-					]
+		
+		]
 	}
 }
 ,
@@ -97,14 +97,13 @@ pdfDocument = {
 	
 		body: [
 				
-					{BEGIN row_grid_0}
+				{BEGIN row_grid_0}
 				[
-												{BEGIN cellblock_grid_c3}
+																{BEGIN cellblock_grid_c3}
 {
 	cellId: 'c3',
 	col:0,
 	row:0,
-			style: 'cell',
 		
 		
 	//	dynamic colspan/rowspan
@@ -117,19 +116,25 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"hidden":"{$item_hide_integrated_search_field6}","text":{$age_data_in_pdfvalue}},
+			{"text":{$age_data_in_pdfvalue},"hidden":"{$item_hide_integrated_search_field6}"},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field5}","text":{$age_time_att_pdfvalue}},
+			{"text":{$age_time_att_pdfvalue},"hidden":"{$item_hide_integrated_search_field5}"},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field3}","text":{$age_dia_sem_pdfvalue}},
+			{"text":{$age_dia_sem_pdfvalue},"hidden":"{$item_hide_integrated_search_field3}"},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field16}","text":{$age_Paciente_pdfvalue}},
+			{"text":{$age_Paciente_pdfvalue},"hidden":"{$item_hide_integrated_search_field16}"},
 				
 				
-			{"hidden":"{$item_hide_integrated_search_field}","text":{$age_Link_pdfvalue}},
+			{"text":{$age_Link_pdfvalue},"hidden":"{$item_hide_integrated_search_field}"},
+				
+				
+			{"text":{$age_Valor_pdfvalue},"hidden":"{$item_hide_integrated_search_field1}"},
+				
+				
+			{"text":{$age_Status_Recebimento_pdfvalue},"hidden":"{$item_hide_integrated_search_field2}"},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -139,7 +144,8 @@ pdfDocument = {
 {END cellblock_grid_c3}
 											],
 				{END row_grid_0}
-					]
+		
+		]
 	}
 }
 ,
@@ -159,12 +165,11 @@ pdfDocument = {
 	
 		body: [
 				
-					[
-												{
+				[
+																{
 	cellId: 'c1',
 	col:0,
 	row:0,
-			style: 'cell',
 		
 		
 	//	static colspan/rowspan
@@ -192,7 +197,8 @@ pdfDocument = {
   },
 
 											],
-					]
+		
+		]
 	}
 }
 ,

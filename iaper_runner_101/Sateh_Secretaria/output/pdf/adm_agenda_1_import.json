@@ -39,12 +39,11 @@ pdfDocument = {
 	
 		body: [
 				
-					[
-												{
+				[
+																{
 	cellId: 'c1',
 	col:0,
 	row:0,
-			style: 'cell',
 		
 		
 	//	static colspan/rowspan
@@ -63,7 +62,8 @@ pdfDocument = {
   },
 
 											],
-					]
+		
+		]
 	}
 }
 ,
@@ -89,12 +89,11 @@ pdfDocument = {
 	
 		body: [
 				
-					[
-												{
+				[
+																{
 	cellId: 'c1',
 	col:0,
 	row:0,
-			style: 'cell',
 		
 		
 	//	static colspan/rowspan
@@ -105,31 +104,37 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"hidden":"{$item_hide_import_field2}","text":{$age_config_id_pdfvalue}},
+			{"text":{$age_config_id_pdfvalue},"hidden":"{$item_hide_import_field2}"},
 				
 				
-			{"hidden":"{$item_hide_import_field4}","text":{$age_data_att_pdfvalue}},
+			{"text":{$age_data_att_pdfvalue},"hidden":"{$item_hide_import_field4}"},
 				
 				
-			{"hidden":"{$item_hide_import_field5}","text":{$age_time_att_pdfvalue}},
+			{"text":{$age_time_att_pdfvalue},"hidden":"{$item_hide_import_field5}"},
 				
 				
-			{"hidden":"{$item_hide_import_field7}","text":{$age_acao_pdfvalue}},
+			{"text":{$age_acao_pdfvalue},"hidden":"{$item_hide_import_field7}"},
 				
 				
-			{"hidden":"{$item_hide_import_field8}","text":{$age_retorno_data_time_pdfvalue}},
+			{"text":{$age_retorno_data_time_pdfvalue},"hidden":"{$item_hide_import_field8}"},
 				
 				
-			{"hidden":"{$item_hide_import_field9}","text":{$age_tipo_pagamento_pdfvalue}},
+			{"text":{$age_tipo_pagamento_pdfvalue},"hidden":"{$item_hide_import_field9}"},
 				
 				
-			{"hidden":"{$item_hide_import_field10}","text":{$age_anotacoes_pdfvalue}},
+			{"text":{$age_anotacoes_pdfvalue},"hidden":"{$item_hide_import_field10}"},
 				
 				
-			{"hidden":"{$item_hide_import_field}","text":{$age_Paciente_pdfvalue}},
+			{"text":{$age_Paciente_pdfvalue},"hidden":"{$item_hide_import_field}"},
 				
 				
-			{"hidden":"{$item_hide_import_field1}","text":{$age_Link_pdfvalue}},
+			{"text":{$age_Link_pdfvalue},"hidden":"{$item_hide_import_field1}"},
+				
+				
+			{"text":{$age_Valor_pdfvalue},"hidden":"{$item_hide_import_field3}"},
+				
+				
+			{"text":{$age_Status_Recebimento_pdfvalue},"hidden":"{$item_hide_import_field6}"},
 				
 		  ],
   "border": [ false, false, false, false ],
@@ -137,7 +142,8 @@ pdfDocument = {
   },
 
 											],
-					]
+		
+		]
 	}
 }
 ,

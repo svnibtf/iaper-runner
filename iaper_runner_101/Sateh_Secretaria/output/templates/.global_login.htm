@@ -1,5 +1,5 @@
-<!doctype html><p align=center><font size=+1 color=red>This website was created by evaluation version of PHPRunner Trial.</font></p>
-<p align=center><font size=+1 color=red>This warning message will not appear on website created by a paid-for version of PHPRunner Trial.</font></p>
+<!doctype html>
+
 <html  {$html_attrs}>
 	<head>
 				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -160,8 +160,7 @@
 			<div edit-form-cell class="clearfix">
 								<div class="checkbox r-edit-field" data-itemtype="remember_password" data-itemid="remember_password" {$item_remember_password} data-pageid="{$pageid}" >
 	<label>
-		<input type="checkbox" {$rememberbox_attrs}> {BEGIN remember_password_label}<span>Lembre-me</span>{END remember_password_label}
-	</label>
+		<input type="checkbox" id="remember_password{$id}" name="remember_password" value="1" {$rememberbox_attrs}> Lembre-me	</label>
 </div>					</div>
 		</td>
 				<td class="col-md-2"></td>

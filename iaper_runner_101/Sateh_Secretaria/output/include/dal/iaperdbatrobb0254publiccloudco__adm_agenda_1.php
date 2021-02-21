@@ -18,6 +18,8 @@ $dalTableadm_agenda_1["age_att_campo_4"] = array("type"=>200,"varname"=>"age_att
 $dalTableadm_agenda_1["age_deletado"] = array("type"=>16,"varname"=>"age_deletado", "name" => "age_deletado");
 $dalTableadm_agenda_1["age_Paciente"] = array("type"=>3,"varname"=>"age_Paciente", "name" => "age_Paciente");
 $dalTableadm_agenda_1["age_Link"] = array("type"=>200,"varname"=>"age_Link", "name" => "age_Link");
+$dalTableadm_agenda_1["age_Valor"] = array("type"=>14,"varname"=>"age_Valor", "name" => "age_Valor");
+$dalTableadm_agenda_1["age_Status_Recebimento"] = array("type"=>200,"varname"=>"age_Status_Recebimento", "name" => "age_Status_Recebimento");
 	$dalTableadm_agenda_1["age_id"]["key"]=true;
 
 $dal_info["iaperdbatrobb0254publiccloudco__adm_agenda_1"] = &$dalTableadm_agenda_1;

@@ -59,7 +59,7 @@ class ViewPage extends RunnerPage
 		$pageMode = ViewPage::readViewModeFromRequest();
 		$messageLink = "";
 
-		if( !isLogged() || isLoggedAsGuest() )
+		if( !isLogged() || Security::isGuest() )
 			$messageLink = " <a href='#' id='loginButtonContinue'>". "Login" . "</a>";
 
 		if( !Security::processPageSecurity( $table, "S", $pageMode != VIEW_SIMPLE, $messageLink) )
@@ -126,7 +126,7 @@ class ViewPage extends RunnerPage
 		if( !is_null( $this->data ) )
 			return $this->data;
 
-		$dc = $this->getSubsetDataCommand();
+		$dc = $this->getSingleRecordCommand();
 
 		if( $this->eventsObject->exists("BeforeQueryView") )
 		{
@@ -380,9 +380,14 @@ class ViewPage extends RunnerPage
 			else
 			{
 				$this->xt->assign("details_". $dpParams['shorTNames'][ $d ], true);
-				$dpTablesParams[] = array("tName" => $dpParams['strTableNames'][ $d ], "id" => $dpParams['ids'][ $d ], "pType" => $dpParams['type'][ $d ]);
-				$this->xt->assign("displayDetailTable_". goodFieldName( $dpParams['strTableNames'][ $d ] ), "<div id='dp_".goodFieldName( $this->tName )
-					."_".$this->pageType."_". $dpParams['ids'][ $d ]."'></div>");
+				
+				$dpTablesParams[] = array(
+					"tName" => $dpParams['strTableNames'][ $d ], 
+					"id" => $dpParams['ids'][ $d ], 
+					"pType" => $dpParams['type'][ $d ]
+				);
+				$this->xt->assign("displayDetailTable_" . $dpParams['shorTNames'][ $d ], 
+					"<div id='dp_".goodFieldName( $this->tName )."_".$this->pageType."_". $dpParams['ids'][ $d ]."'></div>");
 			}
 		}
 
@@ -592,19 +597,13 @@ class ViewPage extends RunnerPage
 		return $this->mode == VIEW_PDFJSON;
 	}
 
-	public function getSubsetDataCommand() {
+	public function getSingleRecordCommand() {
 		if( $this->checkKeysSet() ) {
 			$dc = new DsCommand();
 			$dc->filter = $this->getSecurityCondition();
 			$dc->keys = $this->keys;
-
 		} else {
-			$dc = parent::getSubsetDataCommand();
-
-			$dc->filter = DataCondition::_And( array(
-				$dc->filter,
-				$this->getSecurityCondition()
-			));
+			return $this->getSubsetDataCommand();
 		}
 		return $dc;
 	}
@@ -612,5 +611,10 @@ class ViewPage extends RunnerPage
 	public function getSecurityCondition() {
 		return Security::SelectCondition( "S", $this->pSet );
 	}
+
+	function inDashboardMode() {
+		return $this->mode == VIEW_DASHBOARD;
+	}
+
 }
 ?>

@@ -25,7 +25,7 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldToolTipslogin["Portuguese(Brazil)"] = array();
 	$placeHolderslogin["Portuguese(Brazil)"] = array();
 	$pageTitleslogin["Portuguese(Brazil)"] = array();
-	$fieldLabelslogin["Portuguese(Brazil)"]["usu_id"] = "Usu Id";
+	$fieldLabelslogin["Portuguese(Brazil)"]["usu_id"] = "Id";
 	$fieldToolTipslogin["Portuguese(Brazil)"]["usu_id"] = "";
 	$placeHolderslogin["Portuguese(Brazil)"]["usu_id"] = "";
 	$fieldLabelslogin["Portuguese(Brazil)"]["nome"] = "Nome";
@@ -112,7 +112,7 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldLabelslogin["Portuguese(Brazil)"]["deletado"] = "Deletado";
 	$fieldToolTipslogin["Portuguese(Brazil)"]["deletado"] = "";
 	$placeHolderslogin["Portuguese(Brazil)"]["deletado"] = "";
-	$fieldLabelslogin["Portuguese(Brazil)"]["idEmpresa"] = "Id Empresa";
+	$fieldLabelslogin["Portuguese(Brazil)"]["idEmpresa"] = "Empresa";
 	$fieldToolTipslogin["Portuguese(Brazil)"]["idEmpresa"] = "";
 	$placeHolderslogin["Portuguese(Brazil)"]["idEmpresa"] = "";
 	$fieldLabelslogin["Portuguese(Brazil)"]["Confirma"] = "Confirma";
@@ -146,11 +146,6 @@ $tdatalogin[".showAddInPopup"] = false;
 $tdatalogin[".showEditInPopup"] = false;
 
 $tdatalogin[".showViewInPopup"] = false;
-
-//page's base css files names
-$popupPagesLayoutNames = array();
-$tdatalogin[".popupPagesLayoutNames"] = $popupPagesLayoutNames;
-
 
 $tdatalogin[".listAjax"] = false;
 //	temporary
@@ -364,7 +359,7 @@ $tdatalogin[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("login","usu_id");
 	$fdata["FieldType"] = 3;
 
-	
+
 	
 	
 			
@@ -501,7 +496,7 @@ $tdatalogin[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("login","nome");
 	$fdata["FieldType"] = 200;
 
-	
+
 	
 	
 			
@@ -640,7 +635,7 @@ $tdatalogin[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("login","sobrenome");
 	$fdata["FieldType"] = 200;
 
-	
+
 	
 	
 			
@@ -779,7 +774,7 @@ $tdatalogin[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("login","senha");
 	$fdata["FieldType"] = 200;
 
-	
+
 	
 	
 			
@@ -919,7 +914,7 @@ $tdatalogin[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("login","email");
 	$fdata["FieldType"] = 200;
 
-	
+
 	
 	
 			
@@ -1066,7 +1061,7 @@ $tdatalogin[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("login","email_validado");
 	$fdata["FieldType"] = 16;
 
-	
+
 	
 	
 			
@@ -1203,7 +1198,7 @@ $tdatalogin[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("login","permissao");
 	$fdata["FieldType"] = 3;
 
-	
+
 	
 	
 			
@@ -1340,7 +1335,7 @@ $tdatalogin[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("login","tipo_usuario");
 	$fdata["FieldType"] = 16;
 
-	
+
 	
 	
 			
@@ -1505,7 +1500,7 @@ $tdatalogin[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("login","plano_tipo");
 	$fdata["FieldType"] = 3;
 
-	
+
 	
 	
 			
@@ -1642,7 +1637,7 @@ $tdatalogin[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("login","data_in");
 	$fdata["FieldType"] = 135;
 
-	
+
 	
 	
 			
@@ -1779,7 +1774,7 @@ $tdatalogin[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("login","data_primeiro_acesso");
 	$fdata["FieldType"] = 135;
 
-	
+
 	
 	
 			
@@ -1916,7 +1911,7 @@ $tdatalogin[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("login","data_ultimo_acesso");
 	$fdata["FieldType"] = 135;
 
-	
+
 	
 	
 			
@@ -2053,7 +2048,7 @@ $tdatalogin[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("login","cpf");
 	$fdata["FieldType"] = 200;
 
-	
+
 	
 	
 			
@@ -2190,7 +2185,7 @@ $tdatalogin[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("login","avatar");
 	$fdata["FieldType"] = 200;
 
-	
+
 	
 	
 			
@@ -2327,7 +2322,7 @@ $tdatalogin[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("login","sexo");
 	$fdata["FieldType"] = 200;
 
-	
+
 	
 	
 			
@@ -2464,7 +2459,7 @@ $tdatalogin[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("login","info_inicial");
 	$fdata["FieldType"] = 201;
 
-	
+
 	
 	
 			
@@ -2603,7 +2598,7 @@ $tdatalogin[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("login","pais");
 	$fdata["FieldType"] = 200;
 
-	
+
 	
 	
 			
@@ -2740,7 +2735,7 @@ $tdatalogin[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("login","estado");
 	$fdata["FieldType"] = 200;
 
-	
+
 	
 	
 			
@@ -2877,7 +2872,7 @@ $tdatalogin[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("login","municipio");
 	$fdata["FieldType"] = 200;
 
-	
+
 	
 	
 			
@@ -3014,7 +3009,7 @@ $tdatalogin[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("login","cep");
 	$fdata["FieldType"] = 3;
 
-	
+
 	
 	
 			
@@ -3151,7 +3146,7 @@ $tdatalogin[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("login","rua");
 	$fdata["FieldType"] = 200;
 
-	
+
 	
 	
 			
@@ -3288,7 +3283,7 @@ $tdatalogin[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("login","numero");
 	$fdata["FieldType"] = 200;
 
-	
+
 	
 	
 			
@@ -3425,7 +3420,7 @@ $tdatalogin[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("login","complemento");
 	$fdata["FieldType"] = 200;
 
-	
+
 	
 	
 			
@@ -3562,7 +3557,7 @@ $tdatalogin[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("login","telefone_celular_principal");
 	$fdata["FieldType"] = 200;
 
-	
+
 	
 	
 			
@@ -3704,7 +3699,7 @@ $tdatalogin[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("login","telefone_celular_secundario");
 	$fdata["FieldType"] = 200;
 
-	
+
 	
 	
 			
@@ -3841,7 +3836,7 @@ $tdatalogin[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("login","telefone_residencial");
 	$fdata["FieldType"] = 200;
 
-	
+
 	
 	
 			
@@ -3978,7 +3973,7 @@ $tdatalogin[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("login","telefone_comercial");
 	$fdata["FieldType"] = 200;
 
-	
+
 	
 	
 			
@@ -4115,7 +4110,7 @@ $tdatalogin[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("login","code_trocar_senha");
 	$fdata["FieldType"] = 200;
 
-	
+
 	
 	
 			
@@ -4252,7 +4247,7 @@ $tdatalogin[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("login","deletado");
 	$fdata["FieldType"] = 3;
 
-	
+
 	
 	
 			
@@ -4389,7 +4384,7 @@ $tdatalogin[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("login","idEmpresa");
 	$fdata["FieldType"] = 3;
 
-	
+
 	
 	
 			
@@ -4526,7 +4521,7 @@ $tdatalogin[".hideMobileList"] = array();
 	$fdata["Label"] = GetFieldLabel("login","Confirma");
 	$fdata["FieldType"] = 200;
 
-	
+
 	
 	
 			
@@ -4664,7 +4659,11 @@ $page_titles["login"] = &$pageTitleslogin;
 
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
+
+//if !@TABLE.bReportCrossTab
+
 $detailsTablesData["login"] = array();
+//endif
 
 // tables which are master tables for current table (detail)
 $masterTablesData["login"] = array();

@@ -401,6 +401,18 @@ function localdate2db($strdate)
 }
 
 /**
+ * verifies if the value represents a valid time of day
+ * @param String $value in format "HH:MM:SS"
+ * @return Boolean
+ */
+function validTimeValue( $value ) {
+	$timeArr = explode( ":", $value );
+	return $timeArr[0] >=0 && $timeArr[0] < 24
+		&& $timeArr[1] >=0 && $timeArr[1] < 60
+		&& $timeArr[2] >=0 && $timeArr[2] < 60;
+}
+
+/**
  * @intellisense
  */
 function localtime2db($strtime)

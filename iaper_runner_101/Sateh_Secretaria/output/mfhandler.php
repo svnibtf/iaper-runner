@@ -21,18 +21,35 @@ $thumb = postvalue( "thumb" );
 $pageType = postvalue("pageType");
 $outputAsAttachment = postvalue("nodisp") != 1;
 $pageName = postvalue("page");
+$userpicMode = false;
 
-if (!GetTableURL($table))
-{
-	exit(0);
+if( postvalue("userpic") ) {
+	if( !Security::showUserPic() )
+		exit();
+	$userData =& Security::currentUserData();
+	global $cUserpicField;
+	$value =& $userData[ $cUserpicField ];
+	$ftype = SupposeImageType($value);
+	if( !$ftype ) {
+		$ftype = "image/png";		
+	}
+	header("Cache-Control: max-age=0");
+	header("Content-Type: ".$ftype);
+	echoBinary( $value );
+	exit();
 }
 
-$requestAction = $_REQUEST['_action'];
+if( !$userpicMode ) {
+	if ( !GetTableURL($table) ) {
+		exit(0);
+	}
 
-if( !Security::userHasFieldPermissions( $table, $field, $pageType, $pageName, $requestAction == "POST" || postvalue("fkey") ) ) {
-	exit(0);
+	$requestAction = $_REQUEST['_action'];
+	$showField = $requestAction == "POST" || postvalue("fkey") || $requestAction == "DELETE";
+	if( !Security::userHasFieldPermissions( $table, $field, $pageType, $pageName, $showField ) ) {
+		exit(0);
+	}
 }
-
 
 
 global $cman;	
@@ -72,7 +89,12 @@ switch ($requestAction) {
 		$isDBFile = postvalue("filename") != ""; 
 		$fileName = postvalue("file") != "" ? postvalue("file") : postvalue("filename");
 		$formStamp = postvalue("fkey");
-    	if($fileName == "")
+		
+		if( postvalue("userpic") ) {
+			$isDBFile = true;
+		}
+		
+		if($fileName == "")
     		exit();
     	
 		$sessionFile = null;
@@ -89,28 +111,12 @@ switch ($requestAction) {
 			}
 
 			$dc = new DsCommand();
-			$dc->filter = Security::SelectCondition( "S", $pSet );
-			$dc->keys = $keys;			
-			
-			/*$queryObj = $pSet->getSQLQuery()->CloneObject();
-			
-			$imgFieldIndices = array( $pSet->getFieldIndex($field) );
-
-			if( $thumb ) {
-				$thumbField = $pSet->getStrThumbnail( $field );
-				$thumbIdx = $pSet->getFieldIndex( $thumbField );
-				$imgFieldIndices[] = $thumbIdx;
+			if( Security::fieldIsUserpic( $table, $field ) ) {
+				$dc->filter = Security::usernameCondition();
+			} else {
+				$dc->filter = Security::SelectCondition( "S", $pSet );
+				$dc->keys = $keys;			
 			}
-
-			if( !$queryObj->HasGroupBy() )
-			{
-				// Do not select any fields except current (file) field.
-				// If query has 'group by' clause then other fields are used in it and we may not simply cut 'em off.
-				// Just don't do anything in that case.
-				$queryObj->RemoveAllFieldsExceptList( $imgFieldIndices );
-			}
-			
-			$qResult = $_connection->query( $queryObj->gSQLWhere($strWhereClause) );*/
 			
 			$dataSource = getDataSource( $table, $pSet, $_connection );
 			$qResult = $dataSource->getSingle( $dc );

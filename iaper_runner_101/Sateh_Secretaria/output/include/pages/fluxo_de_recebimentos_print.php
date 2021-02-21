@@ -90,7 +90,8 @@
 'width' => 2,
 'height' => 3 ) ) ),
 'loginForm' => array( 'loginForm' => 3 ),
-'page' => array( 'labeledButtons' => array( 'update_records' => array(  ),
+'page' => array( 'verticalBar' => false,
+'labeledButtons' => array( 'update_records' => array(  ),
 'print_pages' => array( 'print_pages' => array( 'tag' => 'PRINT_PAGES',
 'type' => 2 ) ),
 'register_activate_message' => array(  ),
@@ -190,5 +191,5 @@ array( 'cell' => 'footcell_field1' ) ) ) ),
 'simple_grid_field1' => array( 'type' => 'grid_field_label',
 'field' => 'Valor_a_Receber' ) ),
 'dbProps' => array(  ),
-'version' => 4 );
+'version' => 7 );
 		?>

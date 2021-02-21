@@ -108,7 +108,7 @@ class ListPage_Lookup extends ListPage_Embed
 	 */
 	function initLookupParams()
 	{
-		if( $this->mainPageType != PAGE_ADD && $this->mainPageType != PAGE_EDIT )
+		if( $this->mainPageType != PAGE_ADD && $this->mainPageType != PAGE_EDIT && $this->mainPageType != PAGE_REGISTER)
 			$this->mainPageType = PAGE_SEARCH;
 
 		$this->mainPSet = new ProjectSettings($this->mainTable, $this->mainPageType);
@@ -179,9 +179,7 @@ class ListPage_Lookup extends ListPage_Embed
 
 		$this->addControlsJSAndCSS();
 		$this->addButtonHandlers();
-		
-		if( $this->isUseAjaxSuggest )
-			$this->AddJSFile("include/ajaxsuggest.js");		
+	
 	}
 
 	/**
@@ -238,7 +236,7 @@ class ListPage_Lookup extends ListPage_Embed
 		return DataCondition::_And( $conditions );
 	}
 
-	public function getSubsetDataCommand() {
+	public function getSubsetDataCommand( $ignoreFilterField = "" ) {
 
 		$dc = parent::getSubsetDataCommand();
 		if ($this->dispFieldAlias)
@@ -439,8 +437,9 @@ class ListPage_Lookup extends ListPage_Embed
 	}
 
 	/**
-	 *
+	 *	delete after #15573
 	 */
+	/*
 	function SecuritySQL( $strAction )
 	{
 		$strPerm = GetUserPermissions( $this->tName );
@@ -449,6 +448,7 @@ class ListPage_Lookup extends ListPage_Embed
 
 		return SecuritySQL($strAction, $this->tName, $strPerm);
 	}
+	*/
 
 	function displayTabsInPage()
 	{
@@ -513,6 +513,18 @@ class ListPage_Lookup extends ListPage_Embed
 	function updateSelectedAvailable()
 	{
 		return false;
+	}
+
+	function getSecurityCondition() {
+		global $cLoginTable;
+
+		if( $this->mainPageType == PAGE_REGISTER && $this->mainTable == $cLoginTable ) {
+			$registerPset = new ProjectSettings( $cLoginTable, PAGE_REGISTER, "", GLOBAL_PAGES);
+			if ( $registerPset->appearOnPage( $this->mainField ) )
+				return null;
+		}
+
+		return parent::getSecurityCondition();
 	}
 }
 ?>

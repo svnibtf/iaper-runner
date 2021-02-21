@@ -21,6 +21,10 @@ class DataSourceDbTable extends DataSourceTable {
 		return count( $this->tableInfo["fields"] );
 	}
 
+	protected function getColumnList() {
+		return array_keys( $this->tableInfo["fields"] );
+	}
+
 	protected function getSQLComponents() {
 		return array(
 			"head" => "SELECT * ",
@@ -78,6 +82,33 @@ class DataSourceDbTable extends DataSourceTable {
 		}
 		
 		return $dc->values;
-	}	
+	}
+
+	public function updateSingle( $dc, $requireKeys = true  ) {
+		if( !count($dc->values) || ( !count($dc->keys) && $requireKeys ) )
+			return true;
+
+		$fieldList = array();
+		foreach( $dc -> values as $field => $value ) {
+			$fieldList[] = $this->connection->addFieldWrappers( $field )
+				. '=' . $this->connection->prepareString( $value );
+		}
+
+		$sql = "UPDATE "
+			. $this->connection->addTableWrappers( $this->tableInfo["fullName"] )
+			. " SET "
+			. implode( ",\n ", $fieldList )
+			. " WHERE "
+			. $this->getWhereClause( $dc );
+
+
+
+		if( $this->connection->exec( $sql ) ) {
+			return true;
+		}
+		
+		$this->setError( $this->connection->lastError() );
+		return false;
+	}
 }
 ?>

@@ -94,7 +94,7 @@ $xt = new Xtempl( $mode != LIST_SIMPLE ); //#9607 1. Temporary fix
 $options["pageName"] = postvalue("page");
 $options["pageType"] = PAGE_LIST;
 $options["id"] = postvalue_number("id") ? postvalue_number("id") : 1;
-$options["flyId"] = postvalue("recordId") + 0;
+$options["flyId"] = (int)postvalue("recordId");
 $options["mode"] = $mode;
 $options["xt"] = &$xt;
 $options["firstTime"] = postvalue("firstTime");
@@ -130,9 +130,9 @@ $pageObject = ListPage::createListPage($strTableName, $options);
 if( $pageObject->processSaveSearch() )
 	exit();
 
-if( $gQuery ) {
-	$gQuery->ReplaceFieldsWithDummies( $pageObject->getNotListBlobFieldsIndices() );
-}
+if( $pageObject->updateRowOrder() )
+	exit();
+
 
 
 if( $mode != LIST_DETAILS && $mode != MAP_DASHBOARD && $mode != LIST_DASHBOARD ) 
